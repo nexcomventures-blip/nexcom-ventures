@@ -28,7 +28,7 @@ const ALL_PRODUCTS = [
     category: "new business featured",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&q=80"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/dell-pro/pc14250/media-gallery/notebook-dell-pro-pc14250-hd-fhd-bk-gallery-2.psd?fmt=png-alpha&pscan=auto&scl=1&hei=804&wid=1328&qlt=100,1&resMode=sharp2&size=1328,804&chrss=full"
   },
   {
     id: "featured-hp-probook460g11-u7",
@@ -39,7 +39,7 @@ const ALL_PRODUCTS = [
     category: "new business featured",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80"
+    img: "https://m.media-amazon.com/images/I/61cojcv858L.jpg"
   },
   {
     id: "featured-lenovo-tb14g9-c5",
@@ -50,7 +50,7 @@ const ALL_PRODUCTS = [
     category: "new business featured",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80"
+    img: "https://p4-ofp.static.pub//fes/cms/2025/11/11/828luka54hx4a0z8k7r0msiasnxwkn648449.png?width=328&height=328"
   },
   {
     id: "featured-asus-rog-g14",
@@ -61,7 +61,7 @@ const ALL_PRODUCTS = [
     category: "new gaming featured",
     badge: "new",
     source: "stock",
-    img: "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?w=400&q=80"
+    img: "https://dlcdnwebimgs.asus.com/gain/A1433BAB-3BC8-40BF-965C-B3E95E59BC61/w1000/h732"
   },
   {
     id: "featured-macbook-air-m2",
@@ -72,7 +72,7 @@ const ALL_PRODUCTS = [
     category: "new featured",
     badge: "new",
     source: "stock",
-    img: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=400&q=80"
+    img: "https://www.apple.com/newsroom/images/product/mac/standard/Apple-MacBook-Air-M2-availability-July-2022-hero_big.jpg.large.jpg"
   },
   {
     id: "featured-hp-omen-16",
@@ -83,7 +83,7 @@ const ALL_PRODUCTS = [
     category: "new gaming featured",
     badge: "hot",
     source: "stock",
-    img: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400&q=80"
+    img: "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-16-intel/ImageMain22x.png"
   },
   {
     id: "featured-dell-t160-tower",
@@ -94,7 +94,7 @@ const ALL_PRODUCTS = [
     category: "server tower featured",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png"
   },
   {
     id: "featured-exuk-t490",
@@ -105,7 +105,7 @@ const ALL_PRODUCTS = [
     category: "exuk business featured",
     badge: "exuk",
     source: "whatsapp",
-    img: "https://images.unsplash.com/photo-1541806757478-4ce07f5020d7?w=400&q=80"
+    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8Nzg4OTN8aW1hZ2UvcG5nfGg5Ni9oYTcvMTA2NzMyMDYyNjM4MzgucG5nfDllOTUyNGM1OGYxNjkxNGU2ZTMxNWQxMTE1NDQ0MGZkNDU4ZWYwOWExZWZjMDJkMDRiZTIwYjc0OGE5NGUwMzA/lenovo-laptop-thinkpad-t490-hero-1126.png"
   },
 
   /* ==========================================
