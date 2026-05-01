@@ -694,16 +694,30 @@ const BADGE_LABELS = {
   server: "Server"
 };
 
-// Render all products
-function renderProducts(filter = "all") {
+let currentLimit = 12;
+let currentFilter = "featured";
+
+// Render products with limit
+function renderProducts(filter = "featured", append = false) {
   const grid = document.getElementById("productsGrid");
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
   if (!grid) return;
+
+  if (filter !== currentFilter) {
+    currentLimit = 12;
+    currentFilter = filter;
+  }
 
   const filtered = filter === "all"
     ? ALL_PRODUCTS
+    : filter === "featured"
+    ? ALL_PRODUCTS.filter(p => p.category.includes("featured"))
     : ALL_PRODUCTS.filter(p => p.category.includes(filter));
 
-  grid.innerHTML = filtered.map(p => {
+  const totalFiltered = filtered.length;
+  const toShow = filtered.slice(0, currentLimit);
+
+  const html = toShow.map(p => {
     const isServer = p.category.includes('server') || p.name.toLowerCase().includes('server');
     const currency = isServer ? 'USD' : 'KES';
     const symbol = isServer ? '$' : 'KES';
@@ -735,11 +749,28 @@ function renderProducts(filter = "all") {
     `;
   }).join("");
 
+  grid.innerHTML = html;
+
+  // Show/Hide Load More
+  if (loadMoreBtn) {
+    if (currentLimit >= totalFiltered) {
+      loadMoreBtn.style.display = "none";
+    } else {
+      loadMoreBtn.style.display = "inline-block";
+    }
+  }
+
   // Re-attach scroll animations
   document.querySelectorAll(".product-card").forEach(el => {
     el.classList.add("fade-in");
     observer.observe(el);
   });
+}
+
+// Load more handler
+function loadMoreProducts() {
+  currentLimit += 12;
+  renderProducts(currentFilter);
 }
 
 // Override filterProducts to use new render
@@ -751,9 +782,5 @@ function filterProducts(category, btn) {
 
 // Init on DOM ready
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.location.pathname.includes('shop.html')) {
-    renderProducts("all");
-  } else {
-    renderProducts("featured");
-  }
+  renderProducts("featured");
 });
