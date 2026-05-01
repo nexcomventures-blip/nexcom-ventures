@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nexcom Ventures | Laptops & Accessories in Nairobi</title>
+  <meta name="description" content="Nairobi's #1 laptop store. Buy new & refurbished laptops, accessories. Sell your old or broken laptop for instant cash. Located at Norwich Union House, Mama Ngina Street."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- ===== PRELOADER ===== -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="logo-anim">N<span>X</span></div>
+    <div class="preloader-bar"><div class="preloader-fill"></div></div>
+  </div>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#" class="nav-logo">NEXCOM<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#sell">Sell Your Laptop</a></li>
+      <li><a href="#accessories">Accessories</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" onclick="toggleCart()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <a href="tel:0722816001" class="cta-nav">Call Now</a>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#shop" onclick="toggleMenu()">Shop</a>
+  <a href="#sell" onclick="toggleMenu()">Sell Your Laptop</a>
+  <a href="#accessories" onclick="toggleMenu()">Accessories</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-orb orb1"></div>
+    <div class="hero-orb orb2"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">🇰🇪 Nairobi's #1 Laptop Store</div>
+    <h1>Power Your<br/><span class="gradient-text">Ambition.</span></h1>
+    <p class="hero-sub">New laptops. Refurbished deals. Instant cash for your old device.<br/>Nairobi's most trusted tech destination.</p>
+    <div class="hero-btns">
+      <a href="#shop" class="btn-primary">Shop Now</a>
+      <a href="#sell" class="btn-secondary">Sell Your Laptop →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span>500+</span><p>Happy Customers</p></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span>50+</span><p>Laptops in Stock</p></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span>5★</span><p>Rated in Nairobi</p></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="laptop-card floating">
+      <div class="laptop-img-wrap">
+        <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&q=80" alt="Laptop" onerror="this.src='https://via.placeholder.com/500x350/1a1a2e/00d4ff?text=Premium+Laptops'"/>
+      </div>
+      <div class="laptop-badge-price">From KES 35,000</div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-dot"></div>
+    <p>Scroll to explore</p>
+  </div>
+</section>
+
+<!-- ===== TRUST BAR ===== -->
+<section class="trust-bar">
+  <div class="trust-container">
+    <div class="trust-item"><span>✅</span> Genuine Products</div>
+    <div class="trust-item"><span>⚡</span> Same Day Delivery</div>
+    <div class="trust-item"><span>💰</span> Best Prices in CBD</div>
+    <div class="trust-item"><span>🔧</span> 6-Month Warranty</div>
+    <div class="trust-item"><span>💳</span> M-Pesa Accepted</div>
+  </div>
+</section>
+
+<!-- ===== SHOP SECTION ===== -->
+<section id="shop">
+  <div class="section-header">
+    <div class="section-tag">— Our Full Catalogue —</div>
+    <h2>Laptops, Servers & Accessories</h2>
+    <p>New • Ex-UK • Refurbished • Servers • Accessories. Every device tested & verified.</p>
+  </div>
+
+  <!-- Filter Tabs -->
+  <div class="filter-tabs">
+    <button class="filter-btn active" onclick="filterProducts('all', this)">All</button>
+    <button class="filter-btn" onclick="filterProducts('new', this)">New</button>
+    <button class="filter-btn" onclick="filterProducts('exuk', this)">🇬🇧 Ex-UK</button>
+    <button class="filter-btn" onclick="filterProducts('refurbished', this)">Refurbished</button>
+    <button class="filter-btn" onclick="filterProducts('gaming', this)">Gaming</button>
+    <button class="filter-btn" onclick="filterProducts('business', this)">Business</button>
+    <button class="filter-btn" onclick="filterProducts('server', this)">🖥️ Servers</button>
+    <button class="filter-btn" onclick="filterProducts('accessories', this)">Accessories</button>
+  </div>
+
+  <div class="products-grid" id="productsGrid">
+    <!-- Dynamically rendered by products.js -->
+  </div>
+  <div class="view-all-wrap">
+    <a href="#contact" class="btn-outline">View Full Catalogue →</a>
+  </div>
+</section>
+
+<!-- ===== SELL SECTION ===== -->
+<section id="sell">
+  <div class="sell-container">
+    <div class="sell-visual">
+      <div class="sell-card">
+        <div class="sell-icon">💻</div>
+        <h3>We Buy Your Laptop</h3>
+        <ul>
+          <li>✅ Working laptops</li>
+          <li>✅ Old/outdated models</li>
+          <li>✅ Broken screens</li>
+          <li>✅ Faulty keyboards</li>
+          <li>✅ Water-damaged</li>
+          <li>✅ Won't power on</li>
+        </ul>
+        <div class="sell-highlight">
+          <span>💰 INSTANT CASH PAYMENT</span>
+        </div>
+      </div>
+    </div>
+    <div class="sell-content">
+      <div class="section-tag">— Buy Back Program —</div>
+      <h2>Turn Your Outdated Laptop<br/><span class="gradient-text">Into Cash Today.</span></h2>
+      <p class="sell-desc">Don't let that broken or outdated laptop collect dust. Whether it works perfectly or is completely "dead" — we'll buy it (Core i3/i5/i7 4th Gen+). <a href="evaluation.html" style="color:var(--primary); text-decoration:underline;">See our evaluation policy & process</a>.</p>
+      <div class="sell-steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-text">
+            <h4>WhatsApp Us</h4>
+            <p>Send photos & specs of your laptop via WhatsApp</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-text">
+            <h4>Get a Quote</h4>
+            <p>We'll send you our best offer within minutes</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-text">
+            <h4>Get Paid</h4>
+            <p>Bring it in. We inspect, you get paid. Same day.</p>
+          </div>
+        </div>
+      </div>
+      <div class="sell-actions">
+        <a href="https://wa.me/254722816001?text=Hi%20Nexcom!%20I%20want%20to%20sell%20my%20laptop" target="_blank" class="btn-whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us Now
+        </a>
+        <a href="tel:0722816001" class="btn-call">📞 0722 816 001</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACCESSORIES ===== -->
+<section id="accessories">
+  <div class="section-header">
+    <div class="section-tag">— Accessories —</div>
+    <h2>Complete Your Setup</h2>
+    <p>Everything you need to work, game, and create.</p>
+  </div>
+  <div class="accessories-grid">
+    <div class="acc-card" onclick="addToCart('Laptop Bag (15.6 inch)', 2500)">
+      <div class="acc-icon">🎒</div>
+      <h3>Laptop Bags</h3>
+      <p>From KES 1,500</p>
+      <span class="acc-tag">Add to Cart</span>
+    </div>
+    <div class="acc-card" onclick="addToCart('Wireless Mouse', 1800)">
+      <div class="acc-icon">🖱️</div>
+      <h3>Wireless Mice</h3>
+      <p>From KES 800</p>
+      <span class="acc-tag">Add to Cart</span>
+    </div>
+    <div class="acc-card" onclick="addToCart('USB-C Hub 7-in-1', 4500)">
+      <div class="acc-icon">🔌</div>
+      <h3>USB-C Hubs</h3>
+      <p>From KES 2,500</p>
+      <span class="acc-tag">Add to Cart</span>
+    </div>
+    <div class="acc-card" onclick="addToCart('Laptop Charger Universal', 3500)">
+      <div class="acc-icon">⚡</div>
+      <h3>Chargers</h3>
+      <p>From KES 2,000</p>
+      <span class="acc-tag">Add to Cart</span>
+    </div>
+    <div class="acc-card" onclick="addToCart('External SSD 1TB', 12000)">
+      <div class="acc-icon">💾</div>
+      <h3>External SSDs</h3>
+      <p>From KES 5,500</p>
+      <span class="acc-tag">Add to Cart</span>
+    </div>
+    <div class="acc-card" onclick="addToCart('Laptop Stand Adjustable', 3200)">
+      <div class="acc-icon">🖥️</div>
+      <h3>Laptop Stands</h3>
+      <p>From KES 1,800</p>
+      <span class="acc-tag">Add to Cart</span>
+    </div>
+    <div class="acc-card" onclick="addToCart('Mechanical Keyboard', 7500)">
+      <div class="acc-icon">⌨️</div>
+      <h3>Keyboards</h3>
+      <p>From KES 3,000</p>
+      <span class="acc-tag">Add to Cart</span>
+    </div>
+    <div class="acc-card" onclick="addToCart('Screen Privacy Filter', 2800)">
+      <div class="acc-icon">🔒</div>
+      <h3>Screen Filters</h3>
+      <p>From KES 1,200</p>
+      <span class="acc-tag">Add to Cart</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY NEXCOM ===== -->
+<section id="about">
+  <div class="why-container">
+    <div class="why-content">
+      <div class="section-tag">— Why Nexcom —</div>
+      <h2>Nairobi's Most Trusted<br/><span class="gradient-text">Tech Partner.</span></h2>
+      <p>Since day one, Nexcom Ventures has been committed to giving Nairobi access to world-class tech at fair prices. No hidden fees. No fake specs. No compromises.</p>
+      <div class="why-features">
+        <div class="feature">
+          <div class="feature-icon">🛡️</div>
+          <div>
+            <h4>All Products Certified</h4>
+            <p>Every laptop tested and verified before it hits our shelves.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📍</div>
+          <div>
+            <h4>Prime CBD Location</h4>
+            <p>Norwich Union House, Mama Ngina Street — easy to find, easy to reach.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">💳</div>
+          <div>
+            <h4>Flexible Payment</h4>
+            <p>M-Pesa, bank transfer, or cash. We work with your budget.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🤝</div>
+          <div>
+            <h4>After-Sale Support</h4>
+            <p>We don't disappear after the sale. Your satisfaction is our business.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual">
+      <div class="review-stack">
+        <div class="review-card">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p>"Got a great ThinkPad at an unbeatable price. The team was super helpful. Highly recommend!"</p>
+          <div class="reviewer">— James M., Westlands</div>
+        </div>
+        <div class="review-card r2">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p>"Sold my broken laptop and got cash on the spot. Professional and honest."</p>
+          <div class="reviewer">— Amina W., Kilimani</div>
+        </div>
+        <div class="review-card r3">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p>"Best laptop store in Nairobi CBD. Fast service, genuine products."</p>
+          <div class="reviewer">— Kevin O., CBD</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="section-header">
+    <div class="section-tag">— Get In Touch —</div>
+    <h2>Ready to Buy or Sell?</h2>
+    <p>We're right here in the CBD. Walk in, call, or WhatsApp us.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <h3>Visit Us</h3>
+        <p>Norwich Union House<br/>Mama Ngina Street, Nairobi CBD</p>
+        <a href="https://maps.google.com/?q=Norwich+Union+House+Mama+Ngina+Street+Nairobi" target="_blank" class="map-link">Open in Google Maps →</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <h3>Call or WhatsApp</h3>
+        <p>0722 816 001</p>
+        <div class="contact-btns">
+          <a href="tel:0722816001" class="btn-sm-call">Call</a>
+          <a href="https://wa.me/254722816001" target="_blank" class="btn-sm-wa">WhatsApp</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">🕐</div>
+        <h3>Working Hours</h3>
+        <p>Mon – Sat: 8:00 AM – 7:00 PM<br/>Sun: Closed</p>
+      </div>
+    </div>
+    <div class="contact-form-wrap">
+      <form class="contact-form" onsubmit="submitForm(event)">
+        <h3>Send Us a Message</h3>
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required id="fname"/>
+          <input type="tel" placeholder="Phone Number" required id="fphone"/>
+        </div>
+        <select id="fservice" required>
+          <option value="" disabled selected>What are you looking for?</option>
+          <option>Buy a Laptop</option>
+          <option>Buy Accessories</option>
+          <option>Sell My Laptop</option>
+          <option>Get a Price Quote</option>
+          <option>Other</option>
+        </select>
+        <textarea placeholder="Tell us more..." rows="4" id="fmessage"></textarea>
+        <button type="submit" class="btn-primary full-width">Send Message 🚀</button>
+        <p class="form-note">We typically respond within 30 minutes during business hours.</p>
+      </form>
+    </div>
+  </div>
+  <!-- MAP EMBED -->
+  <div class="map-wrap">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8175!2d36.8219!3d-1.2833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d3b5dfb8b7%3A0x7e0b9d5e4e2!2sMama%20Ngina%20Street%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1700000000000"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Nexcom Location">
+    </iframe>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="footer-logo">NEXCOM<span>.</span></div>
+      <p>Nairobi's trusted tech partner. New laptops, refurbished deals, and instant cash for your old device.</p>
+      <div class="footer-social">
+        <a href="https://wa.me/254722816001" target="_blank" title="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#shop">Shop Laptops</a>
+      <a href="#sell">Sell Your Laptop</a>
+      <a href="#accessories">Accessories</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+    <div class="footer-links">
+      <h4>Top Brands</h4>
+      <a href="#shop">Dell</a>
+      <a href="#shop">HP</a>
+      <a href="#shop">Lenovo</a>
+      <a href="#shop">Apple</a>
+      <a href="#shop">ASUS</a>
+      <a href="#shop">Acer</a>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>📍 Norwich Union House<br/>Mama Ngina St, Nairobi</p>
+      <p>📞 <a href="tel:0722816001">0722 816 001</a></p>
+      <p>💬 <a href="https://wa.me/254722816001">WhatsApp Us</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Nexcom Ventures. All rights reserved. | Nairobi, Kenya 🇰🇪</p>
+  </div>
+</footer>
+
+<!-- ===== CART SIDEBAR ===== -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3>Your Cart 🛒</h3>
+    <button onclick="toggleCart()" class="cart-close">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <div style="font-size:3rem">🛒</div>
+      <p>Your cart is empty</p>
+      <a href="#shop" onclick="toggleCart()" class="btn-outline">Start Shopping</a>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total">Total: <strong id="cartTotal">KES 0</strong></div>
+    <a id="checkoutWhatsApp" href="#" target="_blank" class="btn-whatsapp full-width">Checkout via WhatsApp</a>
+    <p style="text-align:center;font-size:0.75rem;color:var(--gray);margin-top:0.5rem">We'll confirm your order and arrange delivery/pickup</p>
+  </div>
+</div>
+
+<!-- ===== PRODUCT MODAL ===== -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+<div class="product-modal" id="productModal">
+  <button class="modal-close" onclick="closeModal()">✕</button>
+  <div class="modal-body">
+    <div class="modal-img">
+      <img id="modalImg" src="" alt=""/>
+    </div>
+    <div class="modal-info">
+      <h2 id="modalName"></h2>
+      <div class="modal-price" id="modalPrice"></div>
+      <p id="modalSpecs"></p>
+      <ul class="modal-features">
+        <li>✅ Tested & Certified</li>
+        <li>✅ 6-Month Warranty</li>
+        <li>✅ M-Pesa Accepted</li>
+        <li>✅ Same-Day Available</li>
+      </ul>
+      <div class="modal-actions">
+        <button class="btn-primary" id="modalAddCart">Add to Cart</button>
+        <a id="modalWhatsApp" href="#" target="_blank" class="btn-whatsapp">Enquire on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FLOATING WA BUTTON ===== -->
+<a href="https://wa.me/254722816001?text=Hi%20Nexcom!%20I%27m%20interested%20in%20your%20laptops." target="_blank" class="float-wa" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ===== TOAST ===== -->
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script src="js/products.js"></script>
+</body>
+</html>
