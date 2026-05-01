@@ -77,13 +77,13 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="laptop-card floating">
+      <div class="laptop-card floating" id="heroCard">
         <div class="laptop-img-wrap">
-          <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80" alt="Premium Laptop" onerror="this.src='https://via.placeholder.com/500x350/000000/ff4d4d?text=Premium+Laptops'"/>
+          <img id="heroImage" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80" alt="Premium Laptop" onerror="this.src='https://via.placeholder.com/500x350/000000/ff4d4d?text=Premium+Laptops'"/>
         </div>
         <div class="price-tag-badge">
-          <span class="price-from">Starting from</span>
-          <span class="price-amount">KES 35,000</span>
+          <span class="price-from" id="heroLabel">Starting from</span>
+          <span class="price-amount" id="heroPrice">KES 35,000</span>
         </div>
       </div>
     </div>
@@ -518,6 +518,67 @@
 
 <!-- ===== TOAST ===== -->
 <div class="toast" id="toast"></div>
+
+<!-- Hero Rotation Script -->
+<script>
+const heroData = [
+  {
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80",
+    label: "Starting from",
+    price: "KES 35,000"
+  },
+  {
+    img: "https://p1-ofp.static.pub/fes/cms/2022/08/30/msaao41w0gtezia32qqu1atrok9lfx644573.png",
+    label: "Student Laptops from",
+    price: "KES 18,000"
+  },
+  {
+    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8Nzg4OTN8aW1hZ2UvcG5nfGg5Ni9oYTcvMTA2NzMyMDYyNjM4MzgucG5nfDllOTUyNGM1OGYxNjkxNGU2ZTMxNWQxMTE1NDQ0MGZkNDU4ZWYwOWExZWZjMDJkMDRiZTIwYjc0OGE5NGUwMzA/lenovo-laptop-thinkpad-t490-hero-1126.png",
+    label: "Business Laptops from",
+    price: "KES 29,999"
+  },
+  {
+    img: "https://dlcdnwebimgs.asus.com/gain/A1433BAB-3BC8-40BF-965C-B3E95E59BC61/w1000/h732",
+    label: "Gaming Laptops from",
+    price: "KES 145,000"
+  },
+  {
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    label: "High Performance",
+    price: "Servers & Tech"
+  }
+];
+
+let currentIndex = 0;
+const heroImage = document.getElementById('heroImage');
+const heroLabel = document.getElementById('heroLabel');
+const heroPrice = document.getElementById('heroPrice');
+const heroCard = document.getElementById('heroCard');
+
+function rotateHero() {
+  if (!heroCard || !heroImage) return;
+  
+  currentIndex = (currentIndex + 1) % heroData.length;
+  const data = heroData[currentIndex];
+  
+  heroCard.style.opacity = '0';
+  heroCard.style.transform = 'translateY(10px)';
+  
+  setTimeout(() => {
+    heroImage.src = data.img;
+    heroLabel.textContent = data.label;
+    heroPrice.textContent = data.price;
+    
+    heroCard.style.opacity = '1';
+    heroCard.style.transform = 'translateY(0)';
+  }, 500);
+}
+
+if(heroCard) {
+  heroCard.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  setInterval(rotateHero, 5000);
+}
+</script>
 
 <script src="js/main.js"></script>
 <script src="js/products.js"></script>
