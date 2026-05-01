@@ -767,6 +767,61 @@ function renderProducts(filter = "featured", append = false) {
   });
 }
 
+// Search products function
+function searchProducts() {
+  const query = document.getElementById("productSearch").value.toLowerCase();
+  const grid = document.getElementById("productsGrid");
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
+  
+  if (!query) {
+    renderProducts(currentFilter);
+    return;
+  }
+
+  // Filter all products by query
+  const filtered = ALL_PRODUCTS.filter(p => 
+    p.name.toLowerCase().includes(query) || 
+    p.brand.toLowerCase().includes(query) || 
+    p.specs.toLowerCase().includes(query) ||
+    p.category.toLowerCase().includes(query)
+  );
+
+  const html = filtered.map(p => {
+    const isServer = p.category.includes('server') || p.name.toLowerCase().includes('server');
+    const currency = isServer ? 'USD' : 'KES';
+    const symbol = isServer ? '$' : 'KES';
+    const priceVal = isServer ? Math.round(p.price / USD_RATE) : p.price;
+    const priceDisplay = `${symbol} ${priceVal.toLocaleString()}`;
+
+    return `
+      <div class="product-card fade-in" data-category="${p.category}" data-name="${p.name}" data-price="${p.price}">
+        <div class="product-badge" style="background:${BADGE_COLORS[p.badge] || '#10b981'}">${BADGE_LABELS[p.badge] || p.badge}</div>
+        <div class="product-img">
+          <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200/1a1a2e/00d4ff?text=${encodeURIComponent(p.brand)}'"/>
+          <div class="product-overlay">
+            <button class="quick-view-btn" onclick='openModal("${p.name.replace(/"/g,"&quot;")}", "${priceDisplay}", "${p.specs.replace(/"/g,"&quot;")}", "${p.img}", ${priceVal})'>Quick View</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-brand">${p.brand}</div>
+          <h3>${p.name}</h3>
+          <p>${p.specs}</p>
+          <div class="product-footer">
+            <div class="price-container">
+              <span class="price">${priceDisplay}</span>
+              <span class="vat-tag">Excl. VAT</span>
+            </div>
+            <button class="add-cart" onclick="addToCart('${p.name.replace(/'/g,"\\'")}', ${priceVal}, '${currency}')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  grid.innerHTML = html || `<div class="no-results">No products found matching "${query}"</div>`;
+  if (loadMoreBtn) loadMoreBtn.style.display = "none";
+}
+
 // Load more handler
 function loadMoreProducts() {
   currentLimit += 12;
