@@ -28,7 +28,7 @@ const ALL_PRODUCTS = [
     category: "new business featured",
     badge: "new",
     source: "mitsumi",
-    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/dell-pro/pc14250/media-gallery/notebook-dell-pro-pc14250-hd-fhd-bk-gallery-2.psd?fmt=png-alpha&pscan=auto&scl=1&hei=804&wid=1328&qlt=100,1&resMode=sharp2&size=1328,804&chrss=full"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/dell-pro/pc14250/media-gallery/notebook-dell-pro-pc14250-hd-fhd-bk-gallery-2.psd?fmt=png-alpha&wid=600"
   },
   {
     id: "featured-hp-probook460g11-u7",
@@ -120,7 +120,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&q=80"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=600"
   },
   {
     id: "dell-pro14-u5",
@@ -131,7 +131,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&q=80"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=600"
   },
   {
     id: "dell-pro14-u7",
@@ -142,7 +142,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&q=80"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=600"
   },
 
   /* ==========================================
@@ -157,7 +157,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
   },
   {
     id: "hp-probook460g11-u7",
@@ -168,7 +168,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
   },
   {
     id: "hp-probook460g11-u5",
@@ -179,7 +179,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
   },
 
   /* ==========================================
@@ -194,7 +194,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80"
+    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
   },
   {
     id: "lenovo-tb14g9-c7",
@@ -205,7 +205,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80"
+    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
   },
   {
     id: "lenovo-x13-u7",
@@ -216,7 +216,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80"
+    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
   },
 
   /* ==========================================
@@ -231,7 +231,7 @@ const ALL_PRODUCTS = [
     category: "server tower",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png"
   },
   {
     id: "hpe-dl380-gen11-32c",
@@ -242,7 +242,7 @@ const ALL_PRODUCTS = [
     category: "server rack",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png"
   },
   {
     id: "hpe-dl380-gen11-64c",
@@ -253,7 +253,7 @@ const ALL_PRODUCTS = [
     category: "server rack",
     badge: "hot",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png"
   },
 
   /* ==========================================
@@ -268,7 +268,7 @@ const ALL_PRODUCTS = [
     category: "server tower",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png"
   },
   {
     id: "dell-r360-rack",
@@ -279,7 +279,7 @@ const ALL_PRODUCTS = [
     category: "server rack",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png"
   },
   {
     id: "dell-r660xs-rack",
@@ -290,7 +290,7 @@ const ALL_PRODUCTS = [
     category: "server rack",
     badge: "hot",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png"
   },
 
   /* ==========================================
@@ -305,7 +305,7 @@ const ALL_PRODUCTS = [
     category: "server tower",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png"
   },
   {
     id: "lenovo-sr630v3",
@@ -316,7 +316,7 @@ const ALL_PRODUCTS = [
     category: "server rack",
     badge: "new",
     source: "mitsumi",
-    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png"
   },
 
   /* ==========================================
@@ -332,7 +332,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
   },
   {
     id: "exuk-hp840g7-i5",
@@ -343,7 +343,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
   },
   {
     id: "exuk-hp840g6-i7",
@@ -354,7 +354,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
   },
   {
     id: "exuk-hp840g6-i5",
@@ -365,7 +365,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
   },
   {
     id: "exuk-hp830g8-i5-touch",
@@ -376,7 +376,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
   },
   {
     id: "exuk-hp1040g6-touch",
@@ -387,7 +387,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
   },
   {
     id: "exuk-hp1030g2",
@@ -398,7 +398,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
   },
   {
     id: "exuk-hp820g3",
@@ -409,7 +409,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
   },
   {
     id: "exuk-lenovo-x1carbon",
@@ -420,7 +420,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80"
+    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
   },
   {
     id: "exuk-lenovo-x390",
@@ -431,7 +431,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80"
+    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
   },
   {
     id: "exuk-lenovo-yoga390-i7",
@@ -442,7 +442,7 @@ const ALL_PRODUCTS = [
     category: "refurbished gaming exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80"
+    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
   },
   {
     id: "exuk-lenovo-t490s-i7",
@@ -453,7 +453,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80"
+    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
   },
   {
     id: "exuk-lenovo-x280",
@@ -464,7 +464,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80"
+    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
   },
   {
     id: "exuk-dell5300-i7-touch",
@@ -475,7 +475,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&q=80"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=600"
   },
   {
     id: "exuk-dell7300-i5",
@@ -486,7 +486,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&q=80"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=600"
   },
   {
     id: "exuk-macbook-air-m1",
@@ -497,7 +497,7 @@ const ALL_PRODUCTS = [
     category: "refurbished exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=400&q=80"
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
   },
   {
     id: "exuk-hp-zbook-i7",
@@ -508,7 +508,7 @@ const ALL_PRODUCTS = [
     category: "refurbished gaming exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400&q=80"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
   },
   {
     id: "exuk-hp-omnibook5",
@@ -519,7 +519,7 @@ const ALL_PRODUCTS = [
     category: "new gaming",
     badge: "new",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400&q=80"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
   },
   {
     id: "exuk-hp-spectre-x360",
@@ -530,7 +530,7 @@ const ALL_PRODUCTS = [
     category: "refurbished gaming exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400&q=80"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
   },
 
   /* ==========================================
@@ -545,7 +545,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&q=80"
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
   },
   {
     id: "acc-cooling-pad-638b",
@@ -556,7 +556,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&q=80"
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
   },
   {
     id: "acc-cooling-pad-b9",
@@ -567,7 +567,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&q=80"
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
   },
   {
     id: "acc-stand-aluminium",
@@ -578,7 +578,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&q=80"
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
   },
   {
     id: "acc-keyboard-x98",
@@ -589,7 +589,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&q=80"
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
   },
   {
     id: "acc-keyboard-b033",
@@ -600,7 +600,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&q=80"
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
   },
   {
     id: "acc-mifi-cudy-mf4",
@@ -611,7 +611,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&q=80"
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
   },
   {
     id: "acc-flashdrive-dahua-128",
@@ -622,7 +622,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&q=80"
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
   },
   {
     id: "acc-microsd-dahua-128",
@@ -633,7 +633,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&q=80"
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
   },
 
   /* ==========================================
@@ -648,7 +648,7 @@ const ALL_PRODUCTS = [
     category: "new gaming",
     badge: "new",
     source: "stock",
-    img: "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?w=400&q=80"
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
   },
   {
     id: "macbook-air-m2",
@@ -659,7 +659,7 @@ const ALL_PRODUCTS = [
     category: "new",
     badge: "new",
     source: "stock",
-    img: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=400&q=80"
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
   },
   {
     id: "hp-omen-16",
@@ -670,7 +670,7 @@ const ALL_PRODUCTS = [
     category: "new gaming",
     badge: "hot",
     source: "stock",
-    img: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400&q=80"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
   }
 ];
 
