@@ -148,11 +148,25 @@ function requestMpesaPrompt() {
 
   showToast("🚀 Initiating M-Pesa Prompt...");
   
-  // This is where you would call your backend API to trigger STK Push
-  // Example: fetch('https://your-api.com/mpesa/stk', { method: 'POST', body: ... })
+  // Build WhatsApp payment confirmation message
+  const itemsList = cart.map(i => `• ${i.name} x${i.qty}`).join('%0A');
+  const totals = cart.reduce((acc, i) => {
+    acc[i.currency] = (acc[i.currency] || 0) + (i.price * i.qty);
+    return acc;
+  }, {});
+  const deliverySelect = document.getElementById('deliveryOption');
+  const deliveryFee = parseInt(deliverySelect?.value || '0');
+  if (deliveryFee > 0) totals['KES'] = (totals['KES'] || 0) + deliveryFee;
+  const totalStrings = Object.entries(totals).map(([curr, val]) => {
+    return curr === 'USD' ? `$ ${val.toLocaleString()}` : `KES ${val.toLocaleString()}`;
+  });
+  const totalsMsg = totalStrings.join(' %26 ');
+  
+  const paymentMsg = `Hi Nexcom! 👋%0A%0AI have just initiated an M-Pesa payment for my order:%0A%0A${itemsList}%0A%0A*Total Paid: ${totalsMsg}*%0A*Phone Number: ${phone}*%0A%0APlease confirm on your end and process my order. Thank you!`;
   
   setTimeout(() => {
-    alert(`M-Pesa STK Push has been sent to ${phone}.\n\nPlease enter your PIN on your phone to complete the payment.\n\n(Demo: Integration with Daraja API required for real transactions)`);
+    alert(`M-Pesa STK Push has been sent to ${phone}.\n\nPlease enter your PIN on your phone to complete the payment.\n\nOnce paid, you will be redirected to WhatsApp to send your payment confirmation.`);
+    window.open(`https://wa.me/254722816001?text=${paymentMsg}`, '_blank');
     showToast("✅ Prompt sent! Check your phone.");
   }, 1500);
 }
