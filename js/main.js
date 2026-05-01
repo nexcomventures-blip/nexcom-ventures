@@ -127,10 +127,11 @@ function updateCartUI() {
     if (cartTotal) cartTotal.innerHTML = totalStrings.join('<br>') + (totalStrings.length === 1 ? '<br><small style="font-size:0.5em;opacity:0.8;display:block">(Excl. VAT, Incl. Delivery)</small>' : '');
 
     // Build WhatsApp checkout message
+    const orderId = 'NX-' + Math.floor(1000 + Math.random() * 9000);
     const itemsList = cart.map(i => `• ${i.name} x${i.qty} = ${i.currency === 'USD' ? '$' : 'KES'} ${(i.price * i.qty).toLocaleString()}`).join('%0A');
     const totalsMsg = totalStrings.join(' %26 ');
     const podNote = "%0A%0A*I'd prefer Pay on Delivery* 🤝";
-    const waMessage = `Hi Nexcom! 👋 I'd like to order:%0A%0A${itemsList}%0A%0A*Delivery: ${deliveryName}*%0A*Total: ${totalsMsg} (Excl. VAT)*${podNote}%0A%0AKindly confirm availability. Thank you!`;
+    const waMessage = `*NEW ORDER: ${orderId}*%0A%0AHi Nexcom! 👋 I'd like to order:%0A%0A${itemsList}%0A%0A*Delivery: ${deliveryName}*%0A*Total: ${totalsMsg} (Excl. VAT)*${podNote}%0A%0AKindly confirm availability. Thank you!`;
     if (checkoutWA) checkoutWA.href = `https://wa.me/254722816001?text=${waMessage}`;
   }
 }
@@ -150,6 +151,7 @@ function requestMpesaPrompt() {
   showToast("🚀 Initiating M-Pesa Prompt...");
   
   // Build WhatsApp payment confirmation message
+  const orderId = 'NX-' + Math.floor(1000 + Math.random() * 9000);
   const itemsList = cart.map(i => `• ${i.name} x${i.qty}`).join('%0A');
   const totals = cart.reduce((acc, i) => {
     acc[i.currency] = (acc[i.currency] || 0) + (i.price * i.qty);
@@ -163,7 +165,7 @@ function requestMpesaPrompt() {
   });
   const totalsMsg = totalStrings.join(' %26 ');
   
-  const paymentMsg = `Hi Nexcom! 👋%0A%0AI have just initiated an M-Pesa payment for my order:%0A%0A${itemsList}%0A%0A*Total Paid: ${totalsMsg}*%0A*Phone Number: ${phone}*%0A%0APlease confirm on your end and process my order. Thank you!`;
+  const paymentMsg = `*PAYMENT NOTIFICATION: ${orderId}*%0A%0AHi Nexcom! 👋%0A%0AI have just initiated an M-Pesa payment for my order:%0A%0A${itemsList}%0A%0A*Total Paid: ${totalsMsg}*%0A*Phone Number: ${phone}*%0A%0APlease confirm on your end and process my order. Thank you!`;
   
   setTimeout(() => {
     alert(`M-Pesa STK Push has been sent to ${phone}.\n\nPlease enter your PIN on your phone to complete the payment.\n\nOnce paid, you will be redirected to WhatsApp to send your payment confirmation.`);
