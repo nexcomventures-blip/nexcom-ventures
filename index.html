@@ -4,10 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nexcom ventures Ltd | Laptops & Accessories in Nairobi</title>
-  <meta name="description" content="Nairobi's #1 laptop store. Buy new & refurbished laptops, accessories. Sell your old or broken laptop for instant cash. Located at Norwich Union House, Mama Ngina Street."/>
+  <meta name="description" content="Nairobi's #1 laptop store at Norwich Union House. Buy new & refurbished laptops (HP, Dell, Lenovo, Apple), servers, and accessories. Sell your old or broken laptop for instant cash. Pay on delivery countrywide."/>
+  <meta name="keywords" content="Laptops Nairobi, Refurbished Laptops Kenya, Sell Laptop Nairobi, HP Laptops Nairobi, Dell Laptops Nairobi, Laptop Repairs Nairobi CBD, Nexcom Ventures, Ex-UK Laptops Kenya"/>
+  <meta name="author" content="Nexcom Ventures Ltd"/>
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://nexcomventures-blip.github.io/nexcom-ventures/"/>
+  <meta property="og:title" content="Nexcom Ventures Ltd | Laptops & Accessories in Nairobi"/>
+  <meta property="og:description" content="Nairobi's most trusted hub for laptops, servers, and tech solutions. Buy, Sell, or Repair today."/>
+  <meta property="og:image" content="https://nexcomventures-blip.github.io/nexcom-ventures/images/og-image.jpg"/>
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image"/>
+  <meta property="twitter:url" content="https://nexcomventures-blip.github.io/nexcom-ventures/"/>
+  <meta property="twitter:title" content="Nexcom Ventures Ltd | Laptops & Accessories in Nairobi"/>
+  <meta property="twitter:description" content="Nairobi's most trusted hub for laptops, servers, and tech solutions. Buy, Sell, or Repair today."/>
+  <meta property="twitter:image" content="https://nexcomventures-blip.github.io/nexcom-ventures/images/og-image.jpg"/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png"/>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=1.0.1"/>
+  <link rel="stylesheet" href="css/style.css?v=1.0.2"/>
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Nexcom Ventures Ltd",
+    "image": "https://nexcomventures-blip.github.io/nexcom-ventures/images/og-image.jpg",
+    "@id": "https://nexcomventures-blip.github.io/nexcom-ventures/",
+    "url": "https://nexcomventures-blip.github.io/nexcom-ventures/",
+    "telephone": "+254722816001",
+    "priceRange": "KES",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Norwich Union House, Mama Ngina Street",
+      "addressLocality": "Nairobi CBD",
+      "addressRegion": "Nairobi",
+      "postalCode": "00100",
+      "addressCountry": "KE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -1.2833,
+      "longitude": 36.8219
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "19:00"
+    },
+    "sameAs": [
+      "https://wa.me/254722816001"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -113,13 +177,19 @@
     <p>New • Ex-UK • Refurbished • Servers • Accessories. Every device tested & verified.</p>
   </div>
 
-  <!-- Filter Tabs -->
-  <div class="filter-tabs">
-    <button class="filter-btn active" onclick="filterProducts('featured', this)">Featured</button>
-    <button class="filter-btn" onclick="filterProducts('all', this)">All</button>
-    <button class="filter-btn" onclick="filterProducts('new', this)">New</button>
-    <button class="filter-btn" onclick="filterProducts('exuk', this)">🇬🇧 Ex-UK</button>
-    <button class="filter-btn" onclick="filterProducts('server', this)">🖥️ Servers</button>
+  <!-- Search & Filter -->
+  <div class="shop-controls">
+    <div class="search-wrap">
+      <input type="text" id="productSearch" placeholder="Search HP, Dell, Gaming..." onkeyup="searchProducts()" class="search-input"/>
+      <span class="search-icon">🔍</span>
+    </div>
+    <div class="filter-tabs">
+      <button class="filter-btn active" onclick="filterProducts('featured', this)">Featured</button>
+      <button class="filter-btn" onclick="filterProducts('all', this)">All</button>
+      <button class="filter-btn" onclick="filterProducts('new', this)">New</button>
+      <button class="filter-btn" onclick="filterProducts('exuk', this)">🇬🇧 Ex-UK</button>
+      <button class="filter-btn" onclick="filterProducts('server', this)">🖥️ Servers</button>
+    </div>
   </div>
 
   <div class="products-grid" id="productsGrid">
