@@ -110,21 +110,18 @@
 
   <!-- Filter Tabs -->
   <div class="filter-tabs">
-    <button class="filter-btn active" onclick="filterProducts('all', this)">All</button>
+    <button class="filter-btn active" onclick="filterProducts('featured', this)">Featured</button>
+    <button class="filter-btn" onclick="filterProducts('all', this)">All</button>
     <button class="filter-btn" onclick="filterProducts('new', this)">New</button>
     <button class="filter-btn" onclick="filterProducts('exuk', this)">🇬🇧 Ex-UK</button>
-    <button class="filter-btn" onclick="filterProducts('refurbished', this)">Refurbished</button>
-    <button class="filter-btn" onclick="filterProducts('gaming', this)">Gaming</button>
-    <button class="filter-btn" onclick="filterProducts('business', this)">Business</button>
     <button class="filter-btn" onclick="filterProducts('server', this)">🖥️ Servers</button>
-    <button class="filter-btn" onclick="filterProducts('accessories', this)">Accessories</button>
   </div>
 
   <div class="products-grid" id="productsGrid">
     <!-- Dynamically rendered by products.js -->
   </div>
   <div class="view-all-wrap">
-    <a href="#contact" class="btn-outline">View Full Catalogue →</a>
+    <a href="shop.html" class="btn-outline">Browse Full Catalogue →</a>
   </div>
 </section>
 
