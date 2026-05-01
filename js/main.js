@@ -129,7 +129,7 @@ function updateCartUI() {
     // Build WhatsApp checkout message
     const itemsList = cart.map(i => `• ${i.name} x${i.qty} = ${i.currency === 'USD' ? '$' : 'KES'} ${(i.price * i.qty).toLocaleString()}`).join('%0A');
     const totalsMsg = totalStrings.join(' %26 ');
-    const podNote = deliveryFee > 0 && deliveryFee <= 1200 ? "%0A%0A*I'd prefer Pay on Delivery (Nairobi Area)* 🤝" : "";
+    const podNote = "%0A%0A*I'd prefer Pay on Delivery* 🤝";
     const waMessage = `Hi Nexcom! 👋 I'd like to order:%0A%0A${itemsList}%0A%0A*Delivery: ${deliveryName}*%0A*Total: ${totalsMsg} (Excl. VAT)*${podNote}%0A%0AKindly confirm availability. Thank you!`;
     if (checkoutWA) checkoutWA.href = `https://wa.me/254722816001?text=${waMessage}`;
   }
