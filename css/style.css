@@ -869,6 +869,55 @@ section {
   font-weight: 700;
 }
 
+/* ====== REPAIRS ====== */
+#repairs {
+  background: var(--bg);
+}
+.repairs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.repair-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  transition: var(--transition);
+}
+.repair-item:hover {
+  border-color: var(--primary);
+  transform: translateY(-5px);
+  box-shadow: var(--glow);
+}
+.repair-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+.repair-item h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.repair-price {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.repair-item p {
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.repair-cta {
+  text-align: center;
+  margin-top: 3.5rem;
+}
+
 /* ====== WHY NEXCOM ====== */
 #about { background: var(--bg2); }
 .why-container {
