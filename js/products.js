@@ -17,6 +17,98 @@ function usdToKes(usd, markup) {
 const ALL_PRODUCTS = [
 
   /* ==========================================
+     FEATURED PRODUCTS (Top 8 for Homepage)
+     ========================================== */
+  {
+    id: "featured-dell-pc14250",
+    brand: "Dell",
+    name: "Dell Pro 14 PC14250",
+    specs: "Intel Core Ultra 5 220U • 16GB RAM • 512GB SSD • 14\" FHD+ • Win 11 Pro",
+    price: usdToKes(1052.28, 40),
+    category: "new business featured",
+    badge: "new",
+    source: "mitsumi",
+    img: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&q=80"
+  },
+  {
+    id: "featured-hp-probook460g11-u7",
+    brand: "HP",
+    name: "HP ProBook 460 G11",
+    specs: "Intel Core U7-155U • 16GB RAM • 512GB SSD • 16\" WUXGA • DOS",
+    price: usdToKes(877, 40),
+    category: "new business featured",
+    badge: "new",
+    source: "mitsumi",
+    img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&q=80"
+  },
+  {
+    id: "featured-lenovo-tb14g9-c5",
+    brand: "Lenovo",
+    name: "Lenovo ThinkBook 14 G9",
+    specs: "Intel Core 5-210H • 16GB DDR5 • 512GB SSD • 14\" WUXGA • Wi-Fi 7",
+    price: usdToKes(677, 40),
+    category: "new business featured",
+    badge: "new",
+    source: "mitsumi",
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80"
+  },
+  {
+    id: "featured-asus-rog-g14",
+    brand: "ASUS",
+    name: "ASUS ROG Zephyrus G14",
+    specs: "AMD Ryzen 9 • 16GB RAM • 1TB SSD • RTX 4060 • 14\" QHD 165Hz",
+    price: 165000,
+    category: "new gaming featured",
+    badge: "new",
+    source: "stock",
+    img: "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?w=400&q=80"
+  },
+  {
+    id: "featured-macbook-air-m2",
+    brand: "Apple",
+    name: "MacBook Air M2",
+    specs: "Apple M2 • 8GB RAM • 256GB SSD • 13.6\" Liquid Retina • 18-hr Battery",
+    price: 178000,
+    category: "new featured",
+    badge: "new",
+    source: "stock",
+    img: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=400&q=80"
+  },
+  {
+    id: "featured-hp-omen-16",
+    brand: "HP",
+    name: "HP Omen 16",
+    specs: "Intel i7 12th Gen • 16GB RAM • 512GB SSD • RTX 3060 6GB • 144Hz",
+    price: 145000,
+    category: "new gaming featured",
+    badge: "hot",
+    source: "stock",
+    img: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400&q=80"
+  },
+  {
+    id: "featured-dell-t160-tower",
+    brand: "Dell",
+    name: "Dell PowerEdge T160 Tower",
+    specs: "Xeon 6315P 4C 2.8GHz • 32GB DDR5 ECC • 2TB SATA HDD • PERC H355",
+    price: usdToKes(1551, 60),
+    category: "server tower featured",
+    badge: "new",
+    source: "mitsumi",
+    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80"
+  },
+  {
+    id: "featured-exuk-t490",
+    brand: "Lenovo",
+    name: "Lenovo ThinkPad T490 🇬🇧",
+    specs: "Intel Core i5 8th Gen • 8GB RAM • 256GB SSD • 14\" FHD • Grade A",
+    price: 35000,
+    category: "exuk business featured",
+    badge: "exuk",
+    source: "whatsapp",
+    img: "https://images.unsplash.com/photo-1541806757478-4ce07f5020d7?w=400&q=80"
+  },
+
+  /* ==========================================
      MITSUMI — NEW DELL LAPTOPS (+40% markup)
      ========================================== */
   {
@@ -602,41 +694,83 @@ const BADGE_LABELS = {
   server: "Server"
 };
 
-// Render all products
-function renderProducts(filter = "all") {
+let currentLimit = 12;
+let currentFilter = "featured";
+
+// Render products with limit
+function renderProducts(filter = "featured", append = false) {
   const grid = document.getElementById("productsGrid");
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
   if (!grid) return;
+
+  if (filter !== currentFilter) {
+    currentLimit = 12;
+    currentFilter = filter;
+  }
 
   const filtered = filter === "all"
     ? ALL_PRODUCTS
+    : filter === "featured"
+    ? ALL_PRODUCTS.filter(p => p.category.includes("featured"))
     : ALL_PRODUCTS.filter(p => p.category.includes(filter));
 
-  grid.innerHTML = filtered.map(p => `
-    <div class="product-card" data-category="${p.category}" data-name="${p.name}" data-price="${p.price}">
-      <div class="product-badge" style="background:${BADGE_COLORS[p.badge] || '#10b981'}">${BADGE_LABELS[p.badge] || p.badge}</div>
-      <div class="product-img">
-        <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200/1a1a2e/00d4ff?text=${encodeURIComponent(p.brand)}'"/>
-        <div class="product-overlay">
-          <button class="quick-view-btn" onclick='openModal("${p.name.replace(/"/g,"&quot;")}", "KES ${p.price.toLocaleString()}", "${p.specs.replace(/"/g,"&quot;")}", "${p.img}", ${p.price})'>Quick View</button>
+  const totalFiltered = filtered.length;
+  const toShow = filtered.slice(0, currentLimit);
+
+  const html = toShow.map(p => {
+    const isServer = p.category.includes('server') || p.name.toLowerCase().includes('server');
+    const currency = isServer ? 'USD' : 'KES';
+    const symbol = isServer ? '$' : 'KES';
+    const priceVal = isServer ? Math.round(p.price / USD_RATE) : p.price;
+    const priceDisplay = `${symbol} ${priceVal.toLocaleString()}`;
+
+    return `
+      <div class="product-card" data-category="${p.category}" data-name="${p.name}" data-price="${p.price}">
+        <div class="product-badge" style="background:${BADGE_COLORS[p.badge] || '#10b981'}">${BADGE_LABELS[p.badge] || p.badge}</div>
+        <div class="product-img">
+          <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200/1a1a2e/00d4ff?text=${encodeURIComponent(p.brand)}'"/>
+          <div class="product-overlay">
+            <button class="quick-view-btn" onclick='openModal("${p.name.replace(/"/g,"&quot;")}", "${priceDisplay}", "${p.specs.replace(/"/g,"&quot;")}", "${p.img}", ${priceVal})'>Quick View</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-brand">${p.brand}</div>
+          <h3>${p.name}</h3>
+          <p>${p.specs}</p>
+          <div class="product-footer">
+            <div class="price-container">
+              <span class="price">${priceDisplay}</span>
+              <span class="vat-tag">Excl. VAT</span>
+            </div>
+            <button class="add-cart" onclick="addToCart('${p.name.replace(/'/g,"\\'")}', ${priceVal}, '${currency}')">Add to Cart</button>
+          </div>
         </div>
       </div>
-      <div class="product-info">
-        <div class="product-brand">${p.brand}</div>
-        <h3>${p.name}</h3>
-        <p>${p.specs}</p>
-        <div class="product-footer">
-          <span class="price">KES ${p.price.toLocaleString()}</span>
-          <button class="add-cart" onclick="addToCart('${p.name.replace(/'/g,"\\'")}', ${p.price})">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-  `).join("");
+    `;
+  }).join("");
+
+  grid.innerHTML = html;
+
+  // Show/Hide Load More
+  if (loadMoreBtn) {
+    if (currentLimit >= totalFiltered) {
+      loadMoreBtn.style.display = "none";
+    } else {
+      loadMoreBtn.style.display = "inline-block";
+    }
+  }
 
   // Re-attach scroll animations
   document.querySelectorAll(".product-card").forEach(el => {
     el.classList.add("fade-in");
     observer.observe(el);
   });
+}
+
+// Load more handler
+function loadMoreProducts() {
+  currentLimit += 12;
+  renderProducts(currentFilter);
 }
 
 // Override filterProducts to use new render
@@ -647,4 +781,6 @@ function filterProducts(category, btn) {
 }
 
 // Init on DOM ready
-document.addEventListener("DOMContentLoaded", () => renderProducts("all"));
+document.addEventListener("DOMContentLoaded", () => {
+  renderProducts("featured");
+});

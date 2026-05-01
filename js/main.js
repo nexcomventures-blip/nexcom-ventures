@@ -55,12 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // ====== CART STATE ======
 let cart = [];
 
-function addToCart(name, price) {
+function addToCart(name, price, currency = 'KES') {
   const existing = cart.find(item => item.name === name);
   if (existing) {
     existing.qty += 1;
   } else {
-    cart.push({ name, price, qty: 1 });
+    cart.push({ name, price, currency, qty: 1 });
   }
   updateCartUI();
   showToast(`✅ ${name} added to cart`);
@@ -73,7 +73,12 @@ function removeFromCart(index) {
 
 function updateCartUI() {
   const count = cart.reduce((sum, i) => sum + i.qty, 0);
-  const total = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+  
+  // Group totals by currency
+  const totals = cart.reduce((acc, i) => {
+    acc[i.currency] = (acc[i.currency] || 0) + (i.price * i.qty);
+    return acc;
+  }, {});
 
   // Update badge
   const cartCount = document.getElementById('cartCount');
@@ -99,16 +104,22 @@ function updateCartUI() {
     cartItems.innerHTML = cart.map((item, i) => `
       <div class="cart-item">
         <span class="cart-item-name">${item.name} ${item.qty > 1 ? `x${item.qty}` : ''}</span>
-        <span class="cart-item-price">KES ${(item.price * item.qty).toLocaleString()}</span>
+        <span class="cart-item-price">${item.currency === 'USD' ? '$' : 'KES'} ${(item.price * item.qty).toLocaleString()}</span>
         <button class="cart-item-remove" onclick="removeFromCart(${i})">✕</button>
       </div>
     `).join('');
+    
     if (cartFooter) cartFooter.style.display = 'block';
-    if (cartTotal) cartTotal.textContent = `KES ${total.toLocaleString()}`;
+    
+    const totalStrings = Object.entries(totals).map(([curr, val]) => {
+      return curr === 'USD' ? `$ ${val.toLocaleString()}` : `KES ${val.toLocaleString()}`;
+    });
+    if (cartTotal) cartTotal.innerHTML = totalStrings.join('<br>') + '<br><small style="font-size:0.7em;opacity:0.8">(Excl. VAT)</small>';
 
     // Build WhatsApp checkout message
-    const itemsList = cart.map(i => `• ${i.name} x${i.qty} = KES ${(i.price * i.qty).toLocaleString()}`).join('%0A');
-    const waMessage = `Hi Nexcom! 👋 I'd like to order:%0A%0A${itemsList}%0A%0A*Total: KES ${total.toLocaleString()}*%0A%0AKindly confirm availability and delivery options. Thank you!`;
+    const itemsList = cart.map(i => `• ${i.name} x${i.qty} = ${i.currency === 'USD' ? '$' : 'KES'} ${(i.price * i.qty).toLocaleString()}`).join('%0A');
+    const totalsMsg = totalStrings.join(' %26 ');
+    const waMessage = `Hi Nexcom! 👋 I'd like to order:%0A%0A${itemsList}%0A%0A*Total: ${totalsMsg} (Excl. VAT)*%0A%0AKindly confirm availability and delivery options. Thank you!`;
     if (checkoutWA) checkoutWA.href = `https://wa.me/254722816001?text=${waMessage}`;
   }
 }
@@ -127,6 +138,9 @@ let currentModalPrice = 0;
 let currentModalName = '';
 
 function openModal(name, price, specs, img, priceNum) {
+  const isServer = specs.toLowerCase().includes('server') || name.toLowerCase().includes('server');
+  const currency = isServer ? 'USD' : 'KES';
+  
   currentModalName = name;
   currentModalPrice = priceNum;
 
@@ -134,16 +148,16 @@ function openModal(name, price, specs, img, priceNum) {
   const overlay = document.getElementById('modalOverlay');
 
   document.getElementById('modalName').textContent = name;
-  document.getElementById('modalPrice').textContent = price;
+  document.getElementById('modalPrice').innerHTML = `${price} <br><small style="font-size:0.6em;opacity:0.8">(Excl. VAT)</small>`;
   document.getElementById('modalSpecs').textContent = specs;
   document.getElementById('modalImg').src = img;
   document.getElementById('modalImg').alt = name;
 
-  const waMsg = `Hi Nexcom! 👋 I'm interested in the *${name}* (${price}). Is it available?`;
+  const waMsg = `Hi Nexcom! 👋 I'm interested in the *${name}* (${price} Excl. VAT). Is it available?`;
   document.getElementById('modalWhatsApp').href = `https://wa.me/254722816001?text=${encodeURIComponent(waMsg)}`;
 
   document.getElementById('modalAddCart').onclick = () => {
-    addToCart(name, priceNum);
+    addToCart(name, priceNum, currency);
     closeModal();
   };
 
