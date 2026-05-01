@@ -80,6 +80,11 @@ function updateCartUI() {
     return acc;
   }, {});
 
+  // Get delivery fee
+  const deliverySelect = document.getElementById('deliveryOption');
+  const deliveryFee = parseInt(deliverySelect?.value || '0');
+  const deliveryName = deliverySelect?.options[deliverySelect.selectedIndex]?.text || 'Pickup';
+
   // Update badge
   const cartCount = document.getElementById('cartCount');
   if (cartCount) cartCount.textContent = count;
@@ -109,19 +114,47 @@ function updateCartUI() {
       </div>
     `).join('');
     
+    // Add delivery fee to KES total if applicable
+    if (deliveryFee > 0) {
+      totals['KES'] = (totals['KES'] || 0) + deliveryFee;
+    }
+    
     if (cartFooter) cartFooter.style.display = 'block';
     
     const totalStrings = Object.entries(totals).map(([curr, val]) => {
       return curr === 'USD' ? `$ ${val.toLocaleString()}` : `KES ${val.toLocaleString()}`;
     });
-    if (cartTotal) cartTotal.innerHTML = totalStrings.join('<br>') + '<br><small style="font-size:0.7em;opacity:0.8">(Excl. VAT)</small>';
+    if (cartTotal) cartTotal.innerHTML = totalStrings.join('<br>') + (totalStrings.length === 1 ? '<br><small style="font-size:0.5em;opacity:0.8;display:block">(Excl. VAT, Incl. Delivery)</small>' : '');
 
     // Build WhatsApp checkout message
     const itemsList = cart.map(i => `• ${i.name} x${i.qty} = ${i.currency === 'USD' ? '$' : 'KES'} ${(i.price * i.qty).toLocaleString()}`).join('%0A');
     const totalsMsg = totalStrings.join(' %26 ');
-    const waMessage = `Hi Nexcom! 👋 I'd like to order:%0A%0A${itemsList}%0A%0A*Total: ${totalsMsg} (Excl. VAT)*%0A%0AKindly confirm availability and delivery options. Thank you!`;
+    const waMessage = `Hi Nexcom! 👋 I'd like to order:%0A%0A${itemsList}%0A%0A*Delivery: ${deliveryName}*%0A*Total: ${totalsMsg} (Excl. VAT)*%0A%0AKindly confirm availability. Thank you!`;
     if (checkoutWA) checkoutWA.href = `https://wa.me/254722816001?text=${waMessage}`;
   }
+}
+
+function requestMpesaPrompt() {
+  if (cart.length === 0) return;
+  
+  const phone = prompt("Enter your M-Pesa Phone Number (e.g., 0712345678):");
+  if (!phone) return;
+  
+  // Basic validation
+  if (!/^(07|01|254)\d{8}$/.test(phone)) {
+    showToast("⚠️ Invalid phone number format");
+    return;
+  }
+
+  showToast("🚀 Initiating M-Pesa Prompt...");
+  
+  // This is where you would call your backend API to trigger STK Push
+  // Example: fetch('https://your-api.com/mpesa/stk', { method: 'POST', body: ... })
+  
+  setTimeout(() => {
+    alert(`M-Pesa STK Push has been sent to ${phone}.\n\nPlease enter your PIN on your phone to complete the payment.\n\n(Demo: Integration with Daraja API required for real transactions)`);
+    showToast("✅ Prompt sent! Check your phone.");
+  }, 1500);
 }
 
 function toggleCart() {
