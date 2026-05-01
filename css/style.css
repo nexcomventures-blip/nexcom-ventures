@@ -1293,8 +1293,23 @@ footer {
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 1024px) {
-  .hero-content { grid-template-columns: 1fr; gap: 3rem; }
-  .hero-visual { order: -1; }
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-visual {
+    order: -1;
+  }
   .sell-container { grid-template-columns: 1fr; }
   .why-container { grid-template-columns: 1fr; }
   .footer-container { grid-template-columns: 1fr 1fr; }
@@ -1308,25 +1323,29 @@ footer {
   .hamburger { display: flex; }
   .cta-nav { display: none; }
   section { padding: 4rem 1.25rem; }
-  .hero-content h1 { letter-spacing: -2px; }
-  .hero-stats { gap: 1rem; }
+  .hero-content h1 { font-size: 3.5rem; letter-spacing: -2px; }
+  .hero-stats { gap: 1rem; justify-content: center; }
   .sell-container { gap: 2.5rem; }
   .sell-card ul { grid-template-columns: 1fr; }
   .footer-container { grid-template-columns: 1fr; gap: 2rem; }
   .cart-sidebar { width: 100%; }
   .form-row { grid-template-columns: 1fr; }
-  .hero-visual { display: none; }
   .products-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
   .accessories-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
   .why-container { gap: 3rem; }
-  .trust-container { justify-content: flex-start; }
+  .trust-container { justify-content: center; }
 }
 
-@media (max-width: 480px) {
-  .hero-btns { flex-direction: column; }
-  .sell-actions { flex-direction: column; }
+@media (max-width: 576px) {
+  #hero { padding-top: 80px; min-height: auto; }
+  .hero-content h1 { font-size: 2.8rem; letter-spacing: -1.5px; }
+  .hero-btns { flex-direction: column; width: 100%; }
+  .hero-btns .btn-primary, .hero-btns .btn-secondary { width: 100%; text-align: center; }
+  .sell-actions { flex-direction: column; width: 100%; }
+  .sell-actions a { width: 100%; text-align: center; }
   .hero-stats .stat-div { display: none; }
-  .hero-stats { gap: 0.75rem; flex-wrap: wrap; }
+  .hero-stats { gap: 1rem; flex-wrap: wrap; }
+  .laptop-card { max-width: 100%; }
 }
 
 /* ====== SCROLLBAR ====== */
