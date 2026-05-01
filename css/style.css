@@ -431,7 +431,9 @@ body {
 .laptop-img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 1.5rem;
+  background: #080808;
   transition: transform 0.5s ease;
 }
 .laptop-card:hover .laptop-img-wrap img { transform: scale(1.03); }
