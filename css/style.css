@@ -1,26 +1,26 @@
 /* ============================================
-   NEXCOM VENTURES — World-Class CSS
+   NEXCOM VENTURES LTD — World-Class CSS
    ============================================ */
 
 :root {
-  --primary: #00d4ff;
-  --primary-dark: #0099cc;
-  --secondary: #7c3aed;
-  --accent: #f59e0b;
-  --bg: #07080f;
-  --bg2: #0d0f1a;
-  --bg3: #141628;
-  --card: #111327;
+  --primary: #ff4d4d;
+  --primary-dark: #cc0000;
+  --secondary: #ff1a1a;
+  --accent: #ff8c00;
+  --bg: #000000;
+  --bg2: #0a0a0a;
+  --bg3: #121212;
+  --card: #0f0f0f;
   --border: rgba(255,255,255,0.07);
   --text: #f0f2ff;
   --gray: #8892a4;
   --success: #10b981;
   --whatsapp: #25d366;
-  --gradient: linear-gradient(135deg, #00d4ff, #7c3aed);
-  --glow: 0 0 40px rgba(0,212,255,0.15);
+  --gradient: linear-gradient(135deg, #ff4d4d, #cc0000);
+  --glow: 0 0 40px rgba(255,77,77,0.15);
   --radius: 16px;
   --radius-sm: 10px;
-  --shadow: 0 20px 60px rgba(0,0,0,0.5);
+  --shadow: 0 20px 60px rgba(0,0,0,0.8);
   --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
@@ -233,12 +233,12 @@ body {
 .orb1 {
   width: 600px; height: 600px;
   top: -200px; left: -200px;
-  background: radial-gradient(circle, #0099cc, transparent);
+  background: radial-gradient(circle, #cc0000, transparent);
 }
 .orb2 {
   width: 500px; height: 500px;
   bottom: -100px; right: -100px;
-  background: radial-gradient(circle, #7c3aed, transparent);
+  background: radial-gradient(circle, #ff1a1a, transparent);
 }
 .hero-grid {
   position: absolute; inset: 0;
@@ -696,7 +696,7 @@ section {
 }
 .vat-tag {
   font-size: 0.65rem;
-  color: #00d4ff;
+  color: var(--primary);
   font-weight: 700;
   text-transform: uppercase;
   margin-top: -2px;
