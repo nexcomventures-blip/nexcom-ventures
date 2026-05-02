@@ -687,17 +687,17 @@ section {
 .product-badge[style*="7c3aed"] { color: white; } /* Ex-UK purple */
 .product-badge[style*="0099cc"] { color: var(--bg); } /* Acc cyan */
 
-.product-img { background: #ffffff !important; display: flex !important;  background: #fff; display: flex; align-items: center; justify-content: center; padding: 1.2rem; 
+.product-img { background: #ffffff; display: flex; align-items: center; justify-content: center; padding: 1rem; border-bottom: 1px solid var(--border);  background: #ffffff !important; display: flex !important;  background: #fff; display: flex; align-items: center; justify-content: center; padding: 1.2rem; 
   position: relative;
   overflow: hidden;
   aspect-ratio: 4/3;
 }
-.product-img img { object-fit: contain !important; 
+.product-img img { object-fit: contain; 
   width: 100%; height: 100%;
-  object-fit: contain; filter: brightness(1.08) contrast(1.05);
+  object-fit: contain; filter: brightness(1.02);
   transition: transform 0.5s ease;
 }
-.product-card:hover .product-img img { object-fit: contain !important;  transform: scale(1.05); }
+.product-card:hover .product-img img { object-fit: contain;  transform: scale(1.05); }
 
 .product-overlay {
   position: absolute;
@@ -1360,7 +1360,7 @@ footer {
 
 .modal-body { display: grid; grid-template-columns: 1fr 1fr; }
 .modal-img { overflow: hidden; border-radius: 24px 0 0 24px; min-height: 350px; }
-.modal-img img { width: 100%; height: 100%; object-fit: contain; filter: brightness(1.08) contrast(1.05); }
+.modal-img img { width: 100%; height: 100%; object-fit: contain; filter: brightness(1.02); }
 .modal-info { padding: 2.5rem; }
 .modal-info h2 {
   font-family: 'Space Grotesk', sans-serif;
@@ -1492,4 +1492,5 @@ footer {
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--gray); }
+
 
