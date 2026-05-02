@@ -1582,3 +1582,61 @@ footer {
   .teaser-card-div { padding: 1rem; }
   .teaser-container { padding: 0 1.25rem; }
 }
+
+/* ====== ENHANCED TEASER CARDS ====== */
+.teaser-card-div {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.teaser-card-div:hover {
+  border-color: var(--primary);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(240,26,36,0.12);
+}
+
+.teaser-card-div i, .teaser-card-div .icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.teaser-card-div h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.teaser-card-div .sub-list {
+  font-size: 0.75rem;
+  color: var(--gray);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  display: block;
+}
+
+.teaser-card-div .price-tag {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 800;
+  background: rgba(240,26,36,0.05);
+  padding: 0.25rem 0.75rem;
+  border-radius: 99px;
+}
+
+@media (max-width: 576px) {
+  .teaser-card-div { padding: 1.25rem 1rem; }
+  .teaser-card-div i { font-size: 2rem; }
+  .teaser-card-div .sub-list { font-size: 0.7rem; }
+}
