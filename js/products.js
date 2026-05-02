@@ -99,7 +99,7 @@ const ALL_PRODUCTS = [
   {
     id: "featured-exuk-t490",
     brand: "Lenovo",
-    name: "Lenovo ThinkPad T490 🇬🇧",
+    name: "Lenovo ThinkPad T490 ",
     specs: "Intel Core i5 8th Gen • 8GB RAM • 256GB SSD • 14\" FHD • Grade A",
     price: 35000,
     category: "exuk business featured",
