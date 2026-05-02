@@ -1,4 +1,3 @@
-html, body { overflow-x: hidden; width: 100%; }
 /* ============================================
    NEXCOM VENTURES LTD — World-Class CSS
    ============================================ */
@@ -1493,7 +1492,7 @@ footer {
   .hamburger { display: flex; }
   .cta-nav { display: none; }
   section { padding: 4rem 1.25rem; }
-  .hero-content h1 { font-size: 3.2rem; word-break: break-word; letter-spacing: -2px; }
+  .hero-content h1 { font-size: 3.5rem; letter-spacing: -2px; }
   .hero-stats { gap: 1rem; justify-content: center; }
   .sell-container { gap: 2.5rem; }
   .sell-card ul { grid-template-columns: 1fr; }
@@ -1510,7 +1509,7 @@ footer {
   #hero { padding: 70px 1.25rem 30px; min-height: auto; }
   .hero-content { gap: 1rem; }
   .hero-visual { margin-bottom: 0.5rem; }
-  .hero-content h1 { font-size: 2.2rem; word-break: break-word; letter-spacing: -1.5px; margin-bottom: 0.75rem; }
+  .hero-content h1 { font-size: 2.5rem; letter-spacing: -1.5px; margin-bottom: 0.75rem; }
   .hero-sub { font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.5; }
   .hero-btns { flex-direction: column; width: 100%; gap: 0.75rem; margin-bottom: 2rem; }
   .hero-btns .btn-primary, .hero-btns .btn-secondary { width: 100%; text-align: center; padding: 0.75rem; }
@@ -1539,3 +1538,47 @@ footer {
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--gray); }
+
+/* ====== TEASER SECTIONS (Accessories/Repairs) ====== */
+.teaser-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 0 2rem;
+}
+.teaser-text { flex: 1; }
+.teaser-visual {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.teaser-card-div {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+.teaser-card-div:hover { border-color: var(--primary); transform: translateY(-5px); }
+
+@media (max-width: 992px) {
+  .teaser-container {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+  .teaser-text h2 { font-size: 2.2rem !important; }
+  .teaser-text p { margin-left: auto; margin-right: auto; }
+  .teaser-text div { justify-content: center; }
+}
+
+@media (max-width: 576px) {
+  .teaser-visual { gap: 0.75rem; }
+  .teaser-card-div { padding: 1rem; }
+  .teaser-container { padding: 0 1.25rem; }
+}
