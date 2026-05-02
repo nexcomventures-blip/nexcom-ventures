@@ -28,7 +28,7 @@ const ALL_PRODUCTS = [
     category: "new business featured",
     badge: "new",
     source: "mitsumi",
-    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/dell-pro/pc14250/media-gallery/notebook-dell-pro-pc14250-hd-fhd-bk-gallery-2.psd?fmt=png-alpha&wid=600"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/dell-pro/pc14250/media-gallery/notebook-dell-pro-pc14250-hd-fhd-bk-gallery-2.psd?fmt=png-alpha&wid=1000"
   },
   {
     id: "featured-hp-probook460g11-u7",
@@ -120,7 +120,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=600"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=1000"
   },
   {
     id: "dell-pro14-u5",
@@ -131,7 +131,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=600"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=1000"
   },
   {
     id: "dell-pro14-u7",
@@ -142,7 +142,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=600"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=1000"
   },
 
   /* ==========================================
@@ -475,7 +475,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=600"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=1000"
   },
   {
     id: "exuk-dell7300-i5",
@@ -486,7 +486,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=600"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=1000"
   },
   {
     id: "exuk-macbook-air-m1",
@@ -728,7 +728,7 @@ function renderProducts(filter = "featured", append = false) {
       <div class="product-card" data-category="${p.category}" data-name="${p.name}" data-price="${p.price}">
         <div class="product-badge" style="background:${BADGE_COLORS[p.badge] || '#10b981'}">${BADGE_LABELS[p.badge] || p.badge}</div>
         <div class="product-img">
-          <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200/1a1a2e/00d4ff?text=${encodeURIComponent(p.brand)}'"/>
+          <img src="${p.img}" referrerpolicy="no-referrer" alt="${p.name}"  onerror="this.src='https://via.placeholder.com/300x200/1a1a2e/00d4ff?text=${encodeURIComponent(p.brand)}'"/>
           <div class="product-overlay">
             <button class="quick-view-btn" onclick='openModal("${p.name.replace(/"/g,"&quot;")}", "${priceDisplay}", "${p.specs.replace(/"/g,"&quot;")}", "${p.img}", ${priceVal})'>Quick View</button>
           </div>
@@ -797,7 +797,7 @@ function searchProducts() {
       <div class="product-card fade-in" data-category="${p.category}" data-name="${p.name}" data-price="${p.price}">
         <div class="product-badge" style="background:${BADGE_COLORS[p.badge] || '#10b981'}">${BADGE_LABELS[p.badge] || p.badge}</div>
         <div class="product-img">
-          <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200/1a1a2e/00d4ff?text=${encodeURIComponent(p.brand)}'"/>
+          <img src="${p.img}" referrerpolicy="no-referrer" alt="${p.name}"  onerror="this.src='https://via.placeholder.com/300x200/1a1a2e/00d4ff?text=${encodeURIComponent(p.brand)}'"/>
           <div class="product-overlay">
             <button class="quick-view-btn" onclick='openModal("${p.name.replace(/"/g,"&quot;")}", "${priceDisplay}", "${p.specs.replace(/"/g,"&quot;")}", "${p.img}", ${priceVal})'>Quick View</button>
           </div>
