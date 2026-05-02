@@ -1458,7 +1458,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .nav-links { display: none; }
+  .nav-links { display: none !important; }
   .hamburger { display: flex; }
   .cta-nav { display: none; }
   section { padding: 4rem 1.25rem; }
@@ -1476,7 +1476,7 @@ footer {
 }
 
 @media (max-width: 576px) {
-  #hero { padding: 70px 1.25rem 30px; min-height: auto; }
+  #hero { padding: 80px 1.25rem 20px !important; min-height: auto !important; height: auto !important; }
   .hero-content { gap: 1rem; }
   .hero-visual { margin-bottom: 0.5rem; }
   .hero-content h1 { font-size: 2.5rem; letter-spacing: -1.5px; margin-bottom: 0.75rem; }
@@ -1489,7 +1489,7 @@ footer {
   .hero-stats { gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
   .stat span { font-size: 1.5rem; }
   .stat p { font-size: 0.7rem; }
-  .laptop-card { max-width: 100%; }
+  .laptop-card { max-width: 280px; margin: 0 auto; } .hero-visual { padding: 0; }
   
   /* Shop Grid - 2 per row for straight line alignment */
   .products-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
