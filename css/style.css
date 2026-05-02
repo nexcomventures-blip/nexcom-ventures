@@ -1508,11 +1508,23 @@ footer {
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--gray); }
-@media (max-width: 768px) {
-  .products-grid { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
-  .laptop-card { display: flex !important; flex-direction: column !important; height: 100% !important; }
-  .product-info { display: flex !important; flex-direction: column !important; flex: 1 !important; padding: 12px !important; }
-  .product-info h3 { font-size: 0.9rem !important; min-height: 2.6em !important; margin-bottom: 8px !important; }
-  .product-price-action { margin-top: auto !important; display: flex !important; flex-direction: column !important; gap: 6px !important; }
-  .nav-links, .cta-nav { display: none !important; }
+
+/* LOGO OVERRIDE - FORCE VISIBILITY */
+.logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-decoration: none !important;
+}
+.logo-icon {
+    display: flex !important;
+    width: 38px !important;
+    height: 38px !important;
+    background: linear-gradient(135deg, #00d4ff 0%, #090979 100%) !important;
+    border-radius: 10px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: white !important;
+    font-weight: 800 !important;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.4) !important;
 }
