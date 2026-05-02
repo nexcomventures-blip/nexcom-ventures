@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nexcomventures-blip.github.io/nexcom-ventures/sitemap.xml
