@@ -38,7 +38,7 @@ const ALL_PRODUCTS = [
     brand: "Apple",
     name: "MacBook Air M2",
     specs: "Apple M2 Chip • 8GB RAM • 256GB SSD • 13.6\" Liquid Retina",
-    price: 178000,
+    price: 175000,
     category: "new featured",
     badge: "new",
     img: "https://www.apple.com/newsroom/images/product/mac/standard/Apple-MacBook-Air-M2-availability-July-2022-hero_big.jpg.large.jpg"
@@ -82,7 +82,7 @@ const ALL_PRODUCTS = [
     brand: "HP",
     name: "HP EliteBook 840 G7",
     specs: "Intel Core i7 10th Gen • 16GB RAM • 512GB SSD • 14\" FHD",
-    price: 42000,
+    price: 39500,
     category: "exuk business",
     badge: "exuk",
     img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
@@ -92,7 +92,7 @@ const ALL_PRODUCTS = [
     brand: "HP",
     name: "HP EliteBook 840 G6 i5",
     specs: "Intel Core i5 8th Gen • 8GB RAM • 256GB SSD • 14\" FHD",
-    price: 27000,
+    price: 25500,
     category: "exuk business",
     badge: "exuk",
     img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
@@ -112,7 +112,7 @@ const ALL_PRODUCTS = [
     brand: "Apple",
     name: "MacBook Air M1 2020",
     specs: "Apple M1 Chip • 8GB RAM • 256GB SSD • Space Gray",
-    price: 68000,
+    price: 64500,
     category: "exuk apple",
     badge: "exuk",
     img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
