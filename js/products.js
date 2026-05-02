@@ -157,7 +157,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/center_facing.png"
   },
   {
     id: "hp-probook460g11-u7",
@@ -168,7 +168,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/center_facing.png"
   },
   {
     id: "hp-probook460g11-u5",
@@ -179,7 +179,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/center_facing.png"
   },
 
   /* ==========================================
@@ -332,7 +332,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/center_facing.png"
   },
   {
     id: "exuk-hp840g7-i5",
@@ -343,7 +343,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/center_facing.png"
   },
   {
     id: "exuk-hp840g6-i7",
@@ -354,7 +354,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/center_facing.png"
   },
   {
     id: "exuk-hp840g6-i5",
@@ -365,7 +365,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/center_facing.png"
   },
   {
     id: "exuk-hp830g8-i5-touch",
@@ -376,7 +376,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/center_facing.png"
   },
   {
     id: "exuk-hp1040g6-touch",
@@ -387,7 +387,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/center_facing.png"
   },
   {
     id: "exuk-hp1030g2",
@@ -398,7 +398,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/center_facing.png"
   },
   {
     id: "exuk-hp820g3",
@@ -409,7 +409,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/center_facing.png"
   },
   {
     id: "exuk-lenovo-x1carbon",
@@ -508,7 +508,7 @@ const ALL_PRODUCTS = [
     category: "refurbished gaming exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/center_facing.png"
   },
   {
     id: "exuk-hp-omnibook5",
@@ -519,7 +519,7 @@ const ALL_PRODUCTS = [
     category: "new gaming",
     badge: "new",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/center_facing.png"
   },
   {
     id: "exuk-hp-spectre-x360",
@@ -530,7 +530,7 @@ const ALL_PRODUCTS = [
     category: "refurbished gaming exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/center_facing.png"
   },
 
   /* ==========================================
@@ -670,7 +670,7 @@ const ALL_PRODUCTS = [
     category: "new gaming",
     badge: "hot",
     source: "stock",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/center_facing.png"
   }
 ];
 
@@ -839,4 +839,5 @@ function filterProducts(category, btn) {
 document.addEventListener("DOMContentLoaded", () => {
   renderProducts("featured");
 });
+
 
