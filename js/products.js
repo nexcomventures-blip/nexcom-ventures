@@ -18,7 +18,7 @@ const ALL_PRODUCTS = [
     brand: "Dell",
     name: "Dell Pro 14 PC14250",
     specs: "Intel Core Ultra 5 • 16GB RAM • 512GB SSD • 14\" FHD+",
-    price: usdToKes(1052, 40),
+    price: usdToKes(1052, 35),
     category: "new business featured",
     badge: "new",
     img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/dell-pro/pc14250/media-gallery/notebook-dell-pro-pc14250-hd-fhd-bk-gallery-2.psd?fmt=png-alpha&wid=1000"
@@ -28,7 +28,7 @@ const ALL_PRODUCTS = [
     brand: "HP",
     name: "HP ProBook 460 G11",
     specs: "Intel Core U7 • 16GB RAM • 512GB SSD • 16\" WUXGA",
-    price: usdToKes(877, 40),
+    price: usdToKes(877, 35),
     category: "new business featured",
     badge: "new",
     img: "https://m.media-amazon.com/images/I/61cojcv858L.jpg"
@@ -58,7 +58,7 @@ const ALL_PRODUCTS = [
     brand: "Lenovo",
     name: "Lenovo ThinkPad T490",
     specs: "Intel Core i5 8th Gen • 8GB RAM • 256GB SSD • 14\" FHD",
-    price: 35000,
+    price: 33500,
     category: "exuk business featured",
     badge: "exuk",
     img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8Nzg4OTN8aW1hZ2UvcG5nfGg5Ni9oYTcvMTA2NzMyMDYyNjM4MzgucG5nfDllOTUyNGM1OGYxNjkxNGU2ZTMxNWQxMTE1NDQ0MGZkNDU4ZWYwOWExZWZjMDJkMDRiZTIwYjc0OGE5NGUwMzA/lenovo-laptop-thinkpad-t490-hero-1126.png"
@@ -68,7 +68,7 @@ const ALL_PRODUCTS = [
     brand: "Dell",
     name: "PowerEdge R360 Rack",
     specs: "Xeon 6315P • 32GB DDR5 ECC • 2TB HDD • 1U Rack",
-    price: usdToKes(1761, 60),
+    price: usdToKes(1761, 55),
     category: "server rack featured",
     badge: "new",
     img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png"
@@ -102,7 +102,7 @@ const ALL_PRODUCTS = [
     brand: "Lenovo",
     name: "ThinkPad X1 Carbon i7",
     specs: "Intel Core i7 7th Gen • 16GB RAM • 512GB SSD • 14\" FHD",
-    price: 34000,
+    price: 32500,
     category: "exuk business",
     badge: "exuk",
     img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
@@ -122,7 +122,7 @@ const ALL_PRODUCTS = [
     brand: "Dell",
     name: "Dell Latitude 5400 i5",
     specs: "Intel Core i5 8th Gen • 8GB RAM • 256GB SSD • 14\" FHD",
-    price: 24000,
+    price: 22500,
     category: "exuk business",
     badge: "exuk",
     img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=1000"
