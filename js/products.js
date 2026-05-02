@@ -157,7 +157,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   },
   {
     id: "hp-probook460g11-u7",
@@ -168,7 +168,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   },
   {
     id: "hp-probook460g11-u5",
@@ -179,7 +179,7 @@ const ALL_PRODUCTS = [
     category: "new business",
     badge: "new",
     source: "mitsumi",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   },
 
   /* ==========================================
@@ -332,7 +332,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   },
   {
     id: "exuk-hp840g7-i5",
@@ -343,7 +343,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   },
   {
     id: "exuk-hp840g6-i7",
@@ -354,7 +354,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   },
   {
     id: "exuk-hp840g6-i5",
@@ -365,7 +365,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   },
   {
     id: "exuk-hp830g8-i5-touch",
@@ -376,7 +376,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   },
   {
     id: "exuk-hp1040g6-touch",
@@ -387,7 +387,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   },
   {
     id: "exuk-hp1030g2",
@@ -398,7 +398,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   },
   {
     id: "exuk-hp820g3",
@@ -409,7 +409,7 @@ const ALL_PRODUCTS = [
     category: "refurbished business exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   },
   {
     id: "exuk-lenovo-x1carbon",
@@ -497,7 +497,7 @@ const ALL_PRODUCTS = [
     category: "refurbished exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
+    img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
   },
   {
     id: "exuk-hp-zbook-i7",
@@ -508,7 +508,7 @@ const ALL_PRODUCTS = [
     category: "refurbished gaming exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   },
   {
     id: "exuk-hp-omnibook5",
@@ -519,7 +519,7 @@ const ALL_PRODUCTS = [
     category: "new gaming",
     badge: "new",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   },
   {
     id: "exuk-hp-spectre-x360",
@@ -530,7 +530,7 @@ const ALL_PRODUCTS = [
     category: "refurbished gaming exuk",
     badge: "exuk",
     source: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   },
 
   /* ==========================================
@@ -545,7 +545,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
+    img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
   },
   {
     id: "acc-cooling-pad-638b",
@@ -556,7 +556,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
+    img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
   },
   {
     id: "acc-cooling-pad-b9",
@@ -567,7 +567,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
+    img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
   },
   {
     id: "acc-stand-aluminium",
@@ -578,7 +578,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
+    img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
   },
   {
     id: "acc-keyboard-x98",
@@ -589,7 +589,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
+    img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
   },
   {
     id: "acc-keyboard-b033",
@@ -600,7 +600,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
+    img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
   },
   {
     id: "acc-mifi-cudy-mf4",
@@ -611,7 +611,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
+    img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
   },
   {
     id: "acc-flashdrive-dahua-128",
@@ -622,7 +622,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
+    img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
   },
   {
     id: "acc-microsd-dahua-128",
@@ -633,7 +633,7 @@ const ALL_PRODUCTS = [
     category: "accessories",
     badge: "acc",
     source: "evercomps",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
+    img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
   },
 
   /* ==========================================
@@ -648,7 +648,7 @@ const ALL_PRODUCTS = [
     category: "new gaming",
     badge: "new",
     source: "stock",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
+    img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
   },
   {
     id: "macbook-air-m2",
@@ -659,7 +659,7 @@ const ALL_PRODUCTS = [
     category: "new",
     badge: "new",
     source: "stock",
-    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
+    img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
   },
   {
     id: "hp-omen-16",
@@ -670,7 +670,7 @@ const ALL_PRODUCTS = [
     category: "new gaming",
     badge: "hot",
     source: "stock",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png"
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   }
 ];
 
@@ -839,3 +839,4 @@ function filterProducts(category, btn) {
 document.addEventListener("DOMContentLoaded", () => {
   renderProducts("featured");
 });
+
