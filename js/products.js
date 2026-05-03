@@ -270,7 +270,7 @@ const BADGE_LABELS = {
   new: "New Arrival",
   hot: "🔥 Bestseller",
   refurb: "Refurbished",
-  exuk: "🇬🇧 Ex-UK Grade A"
+  exuk: "Ex-UK Grade A"
 };
 
 let currentLimit = 12;
