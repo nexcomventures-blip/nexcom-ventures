@@ -137,7 +137,7 @@ const ALL_PRODUCTS = [{
     category: "parts screen apple macbook",
     badge: "new",
     img: "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=MacBook+Screen"
-  }
+  },
 
   {
     id: "exuk-lenovo-x1yogai711th-60000",
