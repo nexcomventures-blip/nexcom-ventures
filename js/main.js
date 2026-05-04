@@ -239,17 +239,12 @@ document.addEventListener('keydown', (e) => {
 function filterProducts(category, btn) {
   // Update active btn
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
+  if (btn) btn.classList.add('active');
 
-  // Filter cards
-  document.querySelectorAll('.product-card').forEach(card => {
-    const cats = card.dataset.category || '';
-    if (category === 'all' || cats.includes(category)) {
-      card.classList.remove('hidden');
-    } else {
-      card.classList.add('hidden');
-    }
-  });
+  // Call the robust renderer from products.js
+  if (typeof renderProducts === 'function') {
+    renderProducts(category);
+  }
 }
 
 // ====== CONTACT FORM ======
