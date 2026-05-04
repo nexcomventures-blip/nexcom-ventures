@@ -1,155 +1,203 @@
 const ALL_PRODUCTS = [
-  /* ==========================================
-     FEATURED PRODUCTS (PREMIUM COMPETITIVE)
-     ========================================== */
   {
-    id: "featured-dell-xps-9330",
-    brand: "Dell",
-    name: "Dell XPS 13 9330",
-    specs: "Intel Core i7 13th Gen • 16GB RAM • 512GB SSD • InfinityEdge",
-    price: 135000,
-    category: "exuk business featured dell",
-    badge: "new",
-    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9315/media-gallery/laptop-xps-13-9315-silver-gallery-1.psd?fmt=png-alpha&wid=1000"
+    "id": "hp-840-g8-i7",
+    "brand": "HP",
+    "name": "HP EliteBook 840 G8 i7",
+    "specs": "Intel Core i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" FHD",
+    "price": 63000,
+    "category": "exuk business featured hp",
+    "badge": "hot",
+    "img": "https://www.hp.com/ca-en/shop/Html/Merch/Images/c07010411_1750x1285.jpg"
   },
   {
-    id: "featured-dell-xps-9320",
-    brand: "Dell",
-    name: "Dell XPS 13 Plus 9320",
-    specs: "Intel Core i7 12th Gen • 16GB RAM • 512GB SSD • OLED Touch",
-    price: 110000,
-    category: "exuk business featured dell",
-    badge: "hot",
-    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9315/media-gallery/laptop-xps-13-9315-silver-gallery-1.psd?fmt=png-alpha&wid=1000"
+    "id": "hp-840-g8-i5",
+    "brand": "HP",
+    "name": "HP EliteBook 840 G8 i5",
+    "specs": "Intel Core i5 11th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 14\" FHD",
+    "price": 49000,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://www.hp.com/ca-en/shop/Html/Merch/Images/c07010411_1750x1285.jpg"
   },
   {
-    id: "featured-macbook-pro-m2",
-    brand: "Apple",
-    name: "MacBook Pro 13 M2 (2022)",
-    specs: "Apple M2 Chip • 8GB RAM • 512GB SSD • Retina Display",
-    price: 140000,
-    category: "exuk apple featured macbook",
-    badge: "hot",
-    img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80"
+    "id": "hp-840-g7-i5",
+    "brand": "HP",
+    "name": "HP EliteBook 840 G7 i5",
+    "specs": "Intel Core i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 14\" FHD",
+    "price": 41500,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://www.hp.com/ca-en/shop/Html/Merch/Images/c06616035_1750x1285.jpg"
   },
   {
-    id: "featured-macbook-air-m2",
-    brand: "Apple",
-    name: "MacBook Air 13 M2 (2022)",
-    specs: "Apple M2 Chip • 8GB RAM • 256GB SSD • Liquid Retina",
-    price: 115000,
-    category: "exuk apple featured macbook",
-    badge: "new",
-    img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
+    "id": "hp-840-g6-i5",
+    "brand": "HP",
+    "name": "HP EliteBook 840 G6 i5",
+    "specs": "Intel Core i5 8th Gen \u2022 16GB RAM \u2022 256GB SSD \u2022 14\" FHD",
+    "price": 36500,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   },
   {
-    id: "featured-lenovo-x1-g10",
-    brand: "Lenovo",
-    name: "ThinkPad X1 Carbon Gen 10",
-    specs: "Intel Core i7 12th Gen • 16GB RAM • 512GB SSD • 14\" Touch",
-    price: 91000,
-    category: "exuk business featured lenovo",
-    badge: "hot",
-    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
+    "id": "dell-xps-9330",
+    "brand": "Dell",
+    "name": "Dell XPS 13 9330",
+    "specs": "Intel Core i7 13th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 InfinityEdge",
+    "price": 135000,
+    "category": "exuk business featured dell",
+    "badge": "new",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9340/media-gallery/laptop-xps-13-9340-platinum-gallery-1.psd?fmt=png-alpha&wid=1000"
   },
   {
-    id: "featured-dell-xps-9310",
-    brand: "Dell",
-    name: "Dell XPS 13 9310",
-    specs: "Intel Core i7 11th Gen • 16GB RAM • 512GB SSD • FHD+ Touch",
-    price: 85000,
-    category: "exuk business featured dell",
-    badge: "exuk",
-    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9315/media-gallery/laptop-xps-13-9315-silver-gallery-1.psd?fmt=png-alpha&wid=1000"
+    "id": "dell-xps-9320",
+    "brand": "Dell",
+    "name": "Dell XPS 13 Plus 9320",
+    "specs": "Intel Core i7 12th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 OLED Touch",
+    "price": 110000,
+    "category": "exuk business featured dell",
+    "badge": "hot",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9320/media-gallery/laptop-xps-9320-t-silver-gallery-1.psd?fmt=png-alpha&wid=1000"
   },
   {
-    id: "featured-hp840g8-i7",
-    brand: "HP",
-    name: "HP EliteBook 840 G8 i7",
-    specs: "Intel Core i7 11th Gen • 16GB RAM • 512GB SSD • 14\" FHD",
-    price: 63000,
-    category: "exuk business featured hp",
-    badge: "hot",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    "id": "dell-xps-9310",
+    "brand": "Dell",
+    "name": "Dell XPS 13 9310",
+    "specs": "Intel Core i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 FHD+ Touch",
+    "price": 85000,
+    "category": "exuk business featured dell",
+    "badge": "exuk",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9310/media-gallery/laptop-xps-13-9310-silver-gallery-1.psd?fmt=png-alpha&wid=1000"
   },
   {
-    id: "featured-dell-xps-7390",
-    brand: "Dell",
-    name: "Dell XPS 13 7390",
-    specs: "Intel Core i7 10th Gen • 16GB RAM • 512GB SSD • 13.3\" FHD",
-    price: 49500,
-    category: "exuk business featured dell",
-    badge: "exuk",
-    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9315/media-gallery/laptop-xps-13-9315-silver-gallery-1.psd?fmt=png-alpha&wid=1000"
-  },
-  /* ==========================================
-     LENOVO PRICE LIST (Premium Quality)
-     ========================================== */
-  {
-    id: "lenovo-t490",
-    brand: "Lenovo",
-    name: "ThinkPad T490",
-    specs: "i5 8th Gen • 16GB RAM • 512GB SSD",
-    price: 49500,
-    category: "exuk business lenovo",
-    badge: "exuk",
-    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
+    "id": "dell-xps-7390",
+    "brand": "Dell",
+    "name": "Dell XPS 13 7390",
+    "specs": "Intel Core i7 10th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 13.3\" FHD",
+    "price": 49500,
+    "category": "exuk business featured dell",
+    "badge": "exuk",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9315/media-gallery/laptop-xps-13-9315-silver-gallery-1.psd?fmt=png-alpha&wid=1000"
   },
   {
-    id: "lenovo-x280",
-    brand: "Lenovo",
-    name: "ThinkPad X280 i5",
-    specs: "i5 8th Gen • 8GB RAM • 256GB SSD",
-    price: 29500,
-    category: "exuk business lenovo",
-    badge: "hot",
-    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
-  },
-  /* ==========================================
-     HP & DELL OPTIONS
-     ========================================== */
-  {
-    id: "exuk-hp840g6",
-    brand: "HP",
-    name: "HP EliteBook 840 G6 i5",
-    specs: "Intel Core i5 8th Gen • 16GB RAM • 256GB SSD • 14\" FHD",
-    price: 36500,
-    category: "exuk business hp",
-    badge: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+    "id": "dell-5400",
+    "brand": "Dell",
+    "name": "Dell Latitude 5400 i5",
+    "specs": "Intel Core i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 14\" FHD",
+    "price": 24000,
+    "category": "exuk business dell",
+    "badge": "exuk",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=1000"
   },
   {
-    id: "exuk-dell5400",
-    brand: "Dell",
-    name: "Dell Latitude 5400 i5",
-    specs: "Intel Core i5 8th Gen • 8GB RAM • 256GB SSD • 14\" FHD",
-    price: 24000,
-    category: "exuk business dell",
-    badge: "exuk",
-    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=1000"
-  },
-  /* ==========================================
-     PARTS & SERVICES
-     ========================================== */
-  {
-    id: "part-mac-a2337-battery",
-    brand: "Apple",
-    name: "MacBook Air A2337 Battery",
-    specs: "Original Replacement • For M1 MacBook Air",
-    price: 14000,
-    category: "parts battery apple macbook",
-    badge: "new",
-    img: "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=MacBook+Battery"
+    "id": "lenovo-x1-g10",
+    "brand": "Lenovo",
+    "name": "ThinkPad X1 Carbon Gen 10",
+    "specs": "Intel Core i7 12th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" Touch",
+    "price": 91000,
+    "category": "exuk business featured lenovo",
+    "badge": "hot",
+    "img": "https://p2-ofp.static.pub/fes/cms/2022/03/18/v7l068r6z9k4z9k4z9k4z9k4z9k4z9763529.png"
   },
   {
-    id: "part-mac-a2337-screen",
-    brand: "Apple",
-    name: "MacBook Air A2337 Screen",
-    specs: "13.3\" Liquid Retina • M1 Replacement",
-    price: 39900,
-    category: "parts screen apple macbook",
-    badge: "new",
-    img: "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=MacBook+Screen"
+    "id": "lenovo-x1-g9",
+    "brand": "Lenovo",
+    "name": "ThinkPad X1 Carbon Gen 9",
+    "specs": "Intel Core i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" FHD+",
+    "price": 75000,
+    "category": "exuk business lenovo",
+    "badge": "exuk",
+    "img": "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8ODUwODF8aW1hZ2UvcG5nfGg5Yy9oYTMvMTE2NTk0OTMzOTM0MzgucG5nfGNjOGFiOWI1NmViYTU4Yzk0NjRjMDUwOTI5OGNmNTBhM2I0MjY3NGVmNzY2MjI0OWRkMTNmZDI3ZDM1MWY3Yjc/lenovo-thinkpad-x1-carbon-gen-9-gallery-02.png"
+  },
+  {
+    "id": "lenovo-t490",
+    "brand": "Lenovo",
+    "name": "ThinkPad T490",
+    "specs": "i5 8th Gen \u2022 16GB RAM \u2022 512GB SSD",
+    "price": 49500,
+    "category": "exuk business lenovo",
+    "badge": "exuk",
+    "img": "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
+  },
+  {
+    "id": "lenovo-x280",
+    "brand": "Lenovo",
+    "name": "ThinkPad X280 i5",
+    "specs": "i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
+    "price": 29500,
+    "category": "exuk business lenovo",
+    "badge": "hot",
+    "img": "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
+  },
+  {
+    "id": "mac-pro-m2",
+    "brand": "Apple",
+    "name": "MacBook Pro 13 M2 (2022)",
+    "specs": "Apple M2 Chip \u2022 8GB RAM \u2022 512GB SSD \u2022 Retina Display",
+    "price": 140000,
+    "category": "exuk apple featured macbook",
+    "badge": "hot",
+    "img": "https://www.apple.com/v/macbook-pro-13/m/images/overview/hero_endframe__e953p4v88ce2_large.jpg"
+  },
+  {
+    "id": "mac-air-m2",
+    "brand": "Apple",
+    "name": "MacBook Air 13 M2 (2022)",
+    "specs": "Apple M2 Chip \u2022 8GB RAM \u2022 256GB SSD \u2022 Liquid Retina",
+    "price": 115000,
+    "category": "exuk apple featured macbook",
+    "badge": "new",
+    "img": "https://www.apple.com/v/macbook-air-m2/c/images/overview/hero/hero_static__f9clv6u74u6u_large.jpg"
+  },
+  {
+    "id": "mac-pro-16-2019",
+    "brand": "Apple",
+    "name": "MacBook Pro 16 2019 i9",
+    "specs": "Intel Core i9 \u2022 64GB RAM \u2022 1TB SSD \u2022 Touch Bar",
+    "price": 133000,
+    "category": "exuk apple macbook",
+    "badge": "exuk",
+    "img": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16touch-space-select-201911?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1573165440054"
+  },
+  {
+    "id": "mac-pro-m1",
+    "brand": "Apple",
+    "name": "MacBook Pro M1 13",
+    "specs": "2020 \u2022 16GB RAM \u2022 512GB SSD",
+    "price": 140000,
+    "category": "exuk apple macbook",
+    "badge": "hot",
+    "img": "https://www.apple.com/v/macbook-pro-13/m/images/overview/hero_endframe__e953p4v88ce2_large.jpg"
+  },
+  {
+    "id": "mac-air-m1",
+    "brand": "Apple",
+    "name": "MacBook Air M1",
+    "specs": "2020 \u2022 8GB RAM \u2022 256GB SSD",
+    "price": 84000,
+    "category": "exuk apple macbook",
+    "badge": "hot",
+    "img": "https://www.apple.com/v/macbook-air-m2/c/images/overview/hero/hero_static__f9clv6u74u6u_large.jpg"
+  },
+  {
+    "id": "part-mac-a2337-battery",
+    "brand": "Apple",
+    "name": "MacBook Air A2337 Battery",
+    "specs": "Original Replacement \u2022 For M1 MacBook Air",
+    "price": 14000,
+    "category": "parts battery apple macbook",
+    "badge": "new",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=MacBook+Battery"
+  },
+  {
+    "id": "part-mac-a2337-screen",
+    "brand": "Apple",
+    "name": "MacBook Air A2337 Screen",
+    "specs": "13.3\" Liquid Retina \u2022 M1 Replacement",
+    "price": 39900,
+    "category": "parts screen apple macbook",
+    "badge": "new",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=MacBook+Screen"
   }
 ];
 
