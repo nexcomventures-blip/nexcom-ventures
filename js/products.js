@@ -163,4 +163,38 @@ function searchProducts() {
   if (loadMoreBtn) loadMoreBtn.style.display = "none";
 }
 
-document.addEventListener("DOMContentLoaded", () => renderProducts("featured"));
+document.addEventListener("DOMContentLoaded", () => {
+  renderProducts("featured");
+  setupDailySpecial();
+});
+
+// Daily Special Logic
+function setupDailySpecial() {
+  const section = document.getElementById("daily-special");
+  if (!section || ALL_PRODUCTS.length === 0) return;
+
+  // Use current date to pick a unique item from ALL_PRODUCTS every day
+  const today = new Date();
+  const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+  const productIndex = dateSeed % ALL_PRODUCTS.length;
+  const p = ALL_PRODUCTS[productIndex];
+
+  // Apply 20% discount
+  const oldPrice = p.price;
+  const newPrice = Math.floor(oldPrice * 0.8);
+  
+  // Update DOM
+  document.getElementById("special-title").innerText = p.name;
+  document.getElementById("special-specs").innerText = p.specs;
+  document.getElementById("special-old-price").innerText = `KES ${oldPrice.toLocaleString()}`;
+  document.getElementById("special-new-price").innerText = `KES ${newPrice.toLocaleString()}`;
+  document.getElementById("special-img").src = p.img;
+  
+  const buyBtn = document.getElementById("special-buy-btn");
+  buyBtn.onclick = () => {
+    const text = encodeURIComponent(`Hi Nexcom! I want to claim today's special deal: ${p.name} at KES ${newPrice.toLocaleString()}`);
+    window.open(`https://wa.me/254722816001?text=${text}`, '_blank');
+  };
+
+  section.style.display = "block";
+}
