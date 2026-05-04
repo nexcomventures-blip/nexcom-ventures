@@ -179,9 +179,9 @@ function setupDailySpecial() {
   const productIndex = dateSeed % ALL_PRODUCTS.length;
   const p = ALL_PRODUCTS[productIndex];
 
-  // Apply 20% discount
+  // Apply 10% discount
   const oldPrice = p.price;
-  const newPrice = Math.floor(oldPrice * 0.8);
+  const newPrice = Math.floor(oldPrice * 0.9);
   
   // Update DOM
   document.getElementById("special-title").innerText = p.name;
@@ -192,7 +192,7 @@ function setupDailySpecial() {
   
   const buyBtn = document.getElementById("special-buy-btn");
   buyBtn.onclick = () => {
-    const text = encodeURIComponent(`Hi Nexcom! I want to claim today's special deal: ${p.name} at KES ${newPrice.toLocaleString()}`);
+    const text = encodeURIComponent(`Hi Nexcom! I want to claim today's special deal: ${p.name} at KES ${newPrice.toLocaleString()} (10% OFF)`);
     window.open(`https://wa.me/254722816001?text=${text}`, '_blank');
   };
 
