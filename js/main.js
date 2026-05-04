@@ -3,14 +3,22 @@
    ============================================ */
 
 // ====== PRELOADER ======
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) preloader.classList.add('hide');
+const hidePreloader = () => {
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    preloader.classList.add('hide');
     // Trigger entrance animations
     document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
-  }, 1800);
-});
+  }
+};
+
+if (document.readyState === 'complete') {
+  setTimeout(hidePreloader, 300);
+} else {
+  window.addEventListener('load', () => setTimeout(hidePreloader, 300));
+}
+// Fallback for preloader
+setTimeout(hidePreloader, 5000);
 
 // ====== NAVBAR SCROLL ======
 window.addEventListener('scroll', () => {
@@ -322,3 +330,4 @@ window.addEventListener('mousemove', (e) => {
 
 // ====== UPDATE CART BADGE ON INIT ======
 updateCartUI();
+
