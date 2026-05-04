@@ -19,26 +19,6 @@ const ALL_PRODUCTS = [{
     img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9320/media-gallery/laptop-xps-9320-t-silver-gallery-1.psd?fmt=png-alpha&wid=1000"
   },
 {
-    id: "featured-macbook-pro-m2",
-    brand: "Apple",
-    name: "MacBook Pro 13 M2 (2022)",
-    specs: "Apple M2 Chip • 8GB RAM • 512GB SSD • Retina Display",
-    price: 140000,
-    category: "exuk apple featured macbook",
-    badge: "hot",
-    img: "https://www.apple.com/v/macbook-pro-13/m/images/overview/hero_endframe__e953p4v88ce2_large.jpg"
-  },
-{
-    id: "featured-macbook-air-m2",
-    brand: "Apple",
-    name: "MacBook Air 13 M2 (2022)",
-    specs: "Apple M2 Chip • 8GB RAM • 256GB SSD • Liquid Retina",
-    price: 115000,
-    category: "exuk apple featured macbook",
-    badge: "new",
-    img: "https://www.apple.com/v/macbook-air-m2/c/images/overview/hero/hero_static__f9clv6u74u6u_large.jpg"
-  },
-{
     id: "featured-lenovo-x1-g10",
     brand: "Lenovo",
     name: "ThinkPad X1 Carbon Gen 10",
@@ -119,27 +99,6 @@ const ALL_PRODUCTS = [{
     img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=1000"
   },
 {
-    id: "part-mac-a2337-battery",
-    brand: "Apple",
-    name: "MacBook Air A2337 Battery",
-    specs: "Original Replacement • For M1 MacBook Air",
-    price: 14000,
-    category: "parts battery apple macbook",
-    badge: "new",
-    img: "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=MacBook+Battery"
-  },
-{
-    id: "part-mac-a2337-screen",
-    brand: "Apple",
-    name: "MacBook Air A2337 Screen",
-    specs: "13.3\" Liquid Retina • M1 Replacement",
-    price: 39900,
-    category: "parts screen apple macbook",
-    badge: "new",
-    img: "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=MacBook+Screen"
-  },
-
-  {
     id: "exuk-lenovo-x1yogai711th-60000",
     brand: "Lenovo",
     name: "Lenovo X1 Yoga I7 11Th 16/512Gb",
@@ -1108,7 +1067,477 @@ const ALL_PRODUCTS = [{
     category: "exuk business acer",
     badge: "exuk",
     img: "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Acer+4/128Gb"
-  },];
+  },,
+{
+    id: "apple-macbook-pro-16-2019-i9-64-1tb-with-8-graphics-133000",
+    brand: "Apple",
+    name: "MacBook Pro 16 2019 i9 64/1TB with 8 graphics",
+    specs: "16 2019 i9 64/1TB with 8 graphics",
+    price: 133000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://www.apple.com/v/macbook-pro-14-and-16/b/images/overview/hero/hero_intro_endframe__e671bev6066u_large.jpg"
+  },
+{
+    id: "apple-macbook-pro-16-i9-32-2tb-with-8gb-graphics-133000",
+    brand: "Apple",
+    name: "MacBook Pro 16 i9 32/2TB with 8gb graphics",
+    specs: "16 i9 32/2TB with 8gb graphics",
+    price: 133000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://www.apple.com/v/macbook-pro-14-and-16/b/images/overview/hero/hero_intro_endframe__e671bev6066u_large.jpg"
+  },
+{
+    id: "apple-macbook-pro-16-2019-i9-32-1tb-with-4gn-graphics-119000",
+    brand: "Apple",
+    name: "MacBook Pro 16 2019 i9 32/1TB with 4gn graphics",
+    specs: "16 2019 i9 32/1TB with 4gn graphics",
+    price: 119000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://www.apple.com/v/macbook-pro-14-and-16/b/images/overview/hero/hero_intro_endframe__e671bev6066u_large.jpg"
+  },
+{
+    id: "apple-macbook-pro-16-2019-i7-32-512gb-98000",
+    brand: "Apple",
+    name: "MacBook Pro 16 2019 i7 32/512gb",
+    specs: "16 2019 i7 32/512gb",
+    price: 98000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://www.apple.com/v/macbook-pro-14-and-16/b/images/overview/hero/hero_intro_endframe__e671bev6066u_large.jpg"
+  },
+{
+    id: "apple-macbook-pro-15-2019-i7-16-512gb-4gb-graphics-88000",
+    brand: "Apple",
+    name: "MacBook Pro 15 2019 i7 16/512gb 4gb graphics",
+    specs: "15 2019 i7 16/512gb 4gb graphics",
+    price: 88000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP794/macbook-pro-15-touch-2019.png"
+  },
+{
+    id: "apple-macbook-pro-15-2018-i7-16-512gb-4gb-graphics-77000",
+    brand: "Apple",
+    name: "MacBook Pro 15 2018 i7 16/512gb 4gb graphics",
+    specs: "15 2018 i7 16/512gb 4gb graphics",
+    price: 77000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP794/macbook-pro-15-touch-2019.png"
+  },
+{
+    id: "apple-macbook-pro-15-2017-i7-16-512gb-4gb-graphics-73000",
+    brand: "Apple",
+    name: "MacBook Pro 15 2017 i7 16/512gb 4gb graphics",
+    specs: "15 2017 i7 16/512gb 4gb graphics",
+    price: 73000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP794/macbook-pro-15-touch-2019.png"
+  },
+{
+    id: "apple-macbook-pro-15-2017-i7-16-512gb-2gb-graphics-70000",
+    brand: "Apple",
+    name: "MacBook Pro 15 2017 i7 16/512gb 2gb graphics",
+    specs: "15 2017 i7 16/512gb 2gb graphics",
+    price: 70000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP794/macbook-pro-15-touch-2019.png"
+  },
+{
+    id: "apple-macbook-pro-15-2015-i7-16-512gb-2gb-graphics-49000",
+    brand: "Apple",
+    name: "MacBook Pro 15 2015 i7 16/512gb 2gb graphics",
+    specs: "15 2015 i7 16/512gb 2gb graphics",
+    price: 49000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP794/macbook-pro-15-touch-2019.png"
+  },
+{
+    id: "apple-macbook-pro-m1-13-2020-16-512gb-140000",
+    brand: "Apple",
+    name: "MacBook Pro M1 13 2020 16/512gb",
+    specs: "M1 13 2020 16/512gb",
+    price: 140000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Nexcom+Ventures"
+  },
+{
+    id: "apple-macbook-pro-m1-13-2020-8-256gb-105000",
+    brand: "Apple",
+    name: "MacBook Pro M1 13 2020 8/256gb",
+    specs: "M1 13 2020 8/256gb",
+    price: 105000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Nexcom+Ventures"
+  },
+{
+    id: "apple-macbook-pro-13-i7-2020-16-1tb-91000",
+    brand: "Apple",
+    name: "MacBook Pro 13 i7 2020 16/1tb",
+    specs: "13 i7 2020 16/1tb",
+    price: 91000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-i7-2020-32-512gb-91000",
+    brand: "Apple",
+    name: "MacBook Pro 13 i7 2020 32/512gb",
+    specs: "13 i7 2020 32/512gb",
+    price: 91000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-i7-2020-16-512gb-84000",
+    brand: "Apple",
+    name: "MacBook Pro 13 i7 2020 16/512gb",
+    specs: "13 i7 2020 16/512gb",
+    price: 84000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2019-i7-16-1tb-98000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2019 i7 16/1tb",
+    specs: "13 2019 i7 16/1tb",
+    price: 98000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2019-i7-16-512gb-77000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2019 i7 16/512gb",
+    specs: "13 2019 i7 16/512gb",
+    price: 77000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2019-i7-16-256gb-70000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2019 i7 16/256gb",
+    specs: "13 2019 i7 16/256gb",
+    price: 70000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2019-i5-16-256gb-63000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2019 i5 16/256gb",
+    specs: "13 2019 i5 16/256gb",
+    price: 63000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2019-i5-8-256gb-59000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2019 i5 8/256gb",
+    specs: "13 2019 i5 8/256gb",
+    price: 59000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2018-i7-16-256gb-67000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2018 i7 16/256gb",
+    specs: "13 2018 i7 16/256gb",
+    price: 67000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2017-i7-16-1tb-70000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2017 i7 16/1tb",
+    specs: "13 2017 i7 16/1tb",
+    price: 70000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2017-i7-16-512gb-63000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2017 i7 16/512gb",
+    specs: "13 2017 i7 16/512gb",
+    price: 63000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2017-i7-16-256gb-56000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2017 i7 16/256gb",
+    specs: "13 2017 i7 16/256gb",
+    price: 56000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2017-i5-8-512gb-53000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2017 i5 8/512gb",
+    specs: "13 2017 i5 8/512gb",
+    price: 53000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2017-i5-8-256gb-45000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2017 i5 8/256gb",
+    specs: "13 2017 i5 8/256gb",
+    price: 45000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2015-i7-8-256gb-42000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2015 i7 8/256gb",
+    specs: "13 2015 i7 8/256gb",
+    price: 42000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2015-i5-16-512gb-45000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2015 i5 16/512gb",
+    specs: "13 2015 i5 16/512gb",
+    price: 45000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2015-i5-16-256gb-38000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2015 i5 16/256gb",
+    specs: "13 2015 i5 16/256gb",
+    price: 38000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2015-i5-8-256gb-35000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2015 i5 8/256gb",
+    specs: "13 2015 i5 8/256gb",
+    price: 35000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2014-i5-8-256gb-32000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2014 i5 8/256gb",
+    specs: "13 2014 i5 8/256gb",
+    price: 32000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2013-i5-8-256gb-29500",
+    brand: "Apple",
+    name: "MacBook Pro 13 2013 i5 8/256gb",
+    specs: "13 2013 i5 8/256gb",
+    price: 29500,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2013-i7-8-256gb-35000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2013 i7 8/256gb",
+    specs: "13 2013 i7 8/256gb",
+    price: 35000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2012-i7-8-256gb-26500",
+    brand: "Apple",
+    name: "MacBook Pro 13 2012 i7 8/256gb",
+    specs: "13 2012 i7 8/256gb",
+    price: 26500,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2012-i5-8-256gb-24000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2012 i5 8/256gb",
+    specs: "13 2012 i5 8/256gb",
+    price: 24000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-pro-13-2011-i5-8-256gb-21000",
+    brand: "Apple",
+    name: "MacBook Pro 13 2011 i5 8/256gb",
+    specs: "13 2011 i5 8/256gb",
+    price: 21000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP818/mbp13touch-silver.png"
+  },
+{
+    id: "apple-macbook-air-m1-2022-8-512gb-119000",
+    brand: "Apple",
+    name: "MacBook Air M1 2022 8/512gb",
+    specs: "M1 2022 8/512gb",
+    price: 119000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://www.apple.com/v/macbook-air-m2/c/images/overview/hero/hero_static__f9clv6u74u6u_large.jpg"
+  },
+{
+    id: "apple-macbook-air-m1-2022-8-256gb-112000",
+    brand: "Apple",
+    name: "MacBook Air M1 2022 8/256gb",
+    specs: "M1 2022 8/256gb",
+    price: 112000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://www.apple.com/v/macbook-air-m2/c/images/overview/hero/hero_static__f9clv6u74u6u_large.jpg"
+  },
+{
+    id: "apple-macbook-air-m1-2020-8-256gb-84000",
+    brand: "Apple",
+    name: "MacBook Air M1 2020 8/256gb",
+    specs: "M1 2020 8/256gb",
+    price: 84000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://www.apple.com/v/macbook-air-m2/c/images/overview/hero/hero_static__f9clv6u74u6u_large.jpg"
+  },
+{
+    id: "apple-macbook-air-13-2019-i5-16-256gb-59000",
+    brand: "Apple",
+    name: "MacBook Air 13 2019 i5 16/256gb",
+    specs: "13 2019 i5 16/256gb",
+    price: 59000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP773/sp773-mbair-13-gold.png"
+  },
+{
+    id: "apple-macbook-air-13-2019-i5-8-256gb-56000",
+    brand: "Apple",
+    name: "MacBook Air 13 2019 i5 8/256gb",
+    specs: "13 2019 i5 8/256gb",
+    price: 56000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP773/sp773-mbair-13-gold.png"
+  },
+{
+    id: "apple-macbook-air-13-2018-i5-8-256gb-53000",
+    brand: "Apple",
+    name: "MacBook Air 13 2018 i5 8/256gb",
+    specs: "13 2018 i5 8/256gb",
+    price: 53000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP773/sp773-mbair-13-gold.png"
+  },
+{
+    id: "apple-macbook-air-13-2017-i7-8-256gb-42000",
+    brand: "Apple",
+    name: "MacBook Air 13 2017 i7 8/256gb",
+    specs: "13 2017 i7 8/256gb",
+    price: 42000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP773/sp773-mbair-13-gold.png"
+  },
+{
+    id: "apple-macbook-air-13-2017-i5-8-256gb-35000",
+    brand: "Apple",
+    name: "MacBook Air 13 2017 i5 8/256gb",
+    specs: "13 2017 i5 8/256gb",
+    price: 35000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP773/sp773-mbair-13-gold.png"
+  },
+{
+    id: "apple-macbook-air-13-2015-i5-8-256-31000",
+    brand: "Apple",
+    name: "MacBook Air 13 2015 i5 8/256",
+    specs: "13 2015 i5 8/256",
+    price: 31000,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP773/sp773-mbair-13-gold.png"
+  },
+{
+    id: "apple-macbook-air-13-2014-i7-8-256-29500",
+    brand: "Apple",
+    name: "MacBook Air 13 2014 i7 8/256",
+    specs: "13 2014 i7 8/256",
+    price: 29500,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP773/sp773-mbair-13-gold.png"
+  },
+{
+    id: "apple-macbook-air-13-2013-i5-8-128-26500",
+    brand: "Apple",
+    name: "MacBook Air 13 2013 i5 8/128",
+    specs: "13 2013 i5 8/128",
+    price: 26500,
+    category: "exuk apple macbook",
+    badge: "exuk",
+    img: "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP773/sp773-mbair-13-gold.png"
+  },
+{
+    id: "samsung-sam930-i7-11th",
+    brand: "Samsung",
+    name: "Samsung Sam 930 i7 11th 16/512gb",
+    specs: "i7 11th Gen • 16GB RAM • 512GB SSD",
+    price: 84000,
+    category: "exuk business samsung",
+    badge: "premium",
+    img: "https://images.samsung.com/is/image/samsung/p6pim/uk/np930xdb-ka1uk/gallery/uk-galaxy-book-pro-np930xdb-ka1uk-393282173?$650_519_PNG$"
+  }];
 
 // Badge color map
 const BADGE_LABELS = {
