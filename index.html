@@ -132,34 +132,21 @@
   <a href="#contact" onclick="toggleMenu()">Contact</a>
 </div>
 
-<!-- TODAY'S SPECIAL PROMOTION -->
-<section id="daily-special" style="display:none; padding: 2rem 0; background: var(--bg2); border-bottom: 1px solid var(--border);">
-  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-    <div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border: 2px solid #f01a24; border-radius: 20px; overflow: hidden; display: flex; flex-wrap: wrap; align-items: center; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
-      <div style="flex: 1; min-width: 300px; padding: 3rem; color: white;">
-        <div style="display: inline-block; background: #f01a24; color: white; padding: 4px 15px; border-radius: 50px; font-weight: 900; font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 1.5rem; text-transform: uppercase;">🔥 Today's Special Deal</div>
-        <h2 id="special-title" style="font-size: 2.5rem; line-height: 1.1; margin-bottom: 1rem;">-</h2>
-        <p id="special-specs" style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 2rem;">-</p>
-        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
-          <div>
-            <span style="display: block; font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px;">Was KES</span>
-            <span id="special-old-price" style="text-decoration: line-through; color: #64748b; font-size: 1.5rem;">-</span>
-          </div>
-          <div style="width: 2px; height: 40px; background: #334155;"></div>
-          <div>
-            <span style="display: block; font-size: 0.8rem; color: #22c55e; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Now Only (10% OFF)</span>
-            <span id="special-new-price" style="color: white; font-size: 2.5rem; font-weight: 900;">-</span>
-          </div>
-        </div>
-        <button id="special-buy-btn" class="btn-primary" style="padding: 1.2rem 2.5rem; font-size: 1.1rem;">Claim This Deal Now</button>
-      </div>
-      <div style="flex: 1; min-width: 300px; height: 400px; position: relative;">
-        <img id="special-img" src="" alt="Today's Special" style="width: 100%; height: 100%; object-fit: contain; padding: 2rem; background: rgba(0,0,0,0.2);">
-        <div style="position: absolute; top: 20px; right: 20px; background: #22c55e; color: white; width: 80px; height: 80px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; transform: rotate(15deg); box-shadow: 0 10px 20px rgba(0,0,0,0.2); border: 2px solid white;">
-          <span style="font-size: 1.2rem; font-weight: 900;">10%</span>
-          <span style="font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">OFF</span>
+<!-- COMPACT TODAY'S SPECIAL -->
+<section id="daily-special" style="display:none; padding: 10px 0; background: #000;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 10px;">
+    <div id="special-banner" style="position: relative; height: 180px; border-radius: 12px; overflow: hidden; background: #111; cursor: pointer; border: 1px solid #333;">
+      <img id="special-img" src="" style="width: 100%; height: 100%; object-fit: contain; object-position: right center; opacity: 0.6;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); display: flex; flex-direction: column; justify-content: center; padding: 0 30px;">
+        <div style="color: #f01a24; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 4px;">⚡ Deal of the Day (10% OFF)</div>
+        <h2 id="special-title" style="color: white; font-size: 1.4rem; margin: 0; line-height: 1.2;">-</h2>
+        <p id="special-specs" style="color: #ccc; font-size: 0.85rem; margin: 4px 0 12px; max-width: 50%;">-</p>
+        <div style="display: flex; align-items: baseline; gap: 10px;">
+          <span id="special-new-price" style="color: white; font-size: 1.6rem; font-weight: 900;">-</span>
+          <span id="special-old-price" style="color: #666; text-decoration: line-through; font-size: 0.9rem;">-</span>
         </div>
       </div>
+      <div style="position: absolute; bottom: 15px; right: 20px; background: #f01a24; color: white; padding: 6px 15px; border-radius: 4px; font-weight: bold; font-size: 0.8rem;">CLAIM OFFER</div>
     </div>
   </div>
 </section>
