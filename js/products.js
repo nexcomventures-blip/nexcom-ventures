@@ -190,8 +190,8 @@ function setupDailySpecial() {
   document.getElementById("special-new-price").innerText = `KES ${newPrice.toLocaleString()}`;
   document.getElementById("special-img").src = p.img;
   
-  const buyBtn = document.getElementById("special-buy-btn");
-  buyBtn.onclick = () => {
+  const banner = document.getElementById("special-banner");
+  banner.onclick = () => {
     const text = encodeURIComponent(`Hi Nexcom! I want to claim today's special deal: ${p.name} at KES ${newPrice.toLocaleString()} (10% OFF)`);
     window.open(`https://wa.me/254722816001?text=${text}`, '_blank');
   };
