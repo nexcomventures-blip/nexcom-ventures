@@ -24,6 +24,36 @@ const ALL_PRODUCTS = [
     img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80"
   },
   {
+    id: "featured-hp-spectre-15t",
+    brand: "HP",
+    name: "HP Spectre x360 15t",
+    specs: "i7 10th Gen • 16GB RAM • 512GB SSD • 2GB Graphics • 4K Touch",
+    price: 119000,
+    category: "exuk business featured hp",
+    badge: "new",
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+  },
+  {
+    id: "featured-dell-precision-5550",
+    brand: "Dell",
+    name: "Dell Precision 5550",
+    specs: "i7 10th Gen • 16GB RAM • 512GB SSD • 4GB Nvidia T1000",
+    price: 98000,
+    category: "exuk business featured dell",
+    badge: "hot",
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=1000"
+  },
+  {
+    id: "featured-lenovo-x1-g9",
+    brand: "Lenovo",
+    name: "ThinkPad X1 Carbon Gen 9",
+    specs: "i7 11th Gen • 16GB RAM • 512GB SSD • 14\" Touch",
+    price: 119500,
+    category: "exuk business featured lenovo",
+    badge: "new",
+    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
+  },
+  {
     id: "featured-macbook-pro-m1-16",
     brand: "Apple",
     name: "MacBook Pro M1 13 2020",
@@ -34,34 +64,24 @@ const ALL_PRODUCTS = [
     img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
   },
   {
-    id: "featured-lenovo-x1-g9",
-    brand: "Lenovo",
-    name: "ThinkPad X1 Carbon Gen 9",
-    specs: "Intel Core i7 11th Gen • 16GB RAM • 512GB SSD • 14\" Touch",
-    price: 119500,
-    category: "exuk business featured lenovo",
+    id: "featured-hp-zbook-firefly",
+    brand: "HP",
+    name: "HP ZBook Firefly G7",
+    specs: "i7 10th Gen • 32GB RAM • 512GB SSD • 4GB Nvidia • Touch",
+    price: 98000,
+    category: "exuk business featured hp",
+    badge: "hot",
+    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
+  },
+  {
+    id: "featured-dell-xps-9320",
+    brand: "Dell",
+    name: "Dell XPS 13 9320",
+    specs: "i7 12th Gen • 16GB RAM • 512GB SSD • OLED Touch",
+    price: 133000,
+    category: "exuk business featured dell",
     badge: "new",
-    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
-  },
-  {
-    id: "featured-lenovo-t14",
-    brand: "Lenovo",
-    name: "ThinkPad T14 Gen 1",
-    specs: "Intel Core i5 10th Gen • 8GB RAM • 256GB SSD",
-    price: 75000,
-    category: "exuk business featured lenovo",
-    badge: "hot",
-    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
-  },
-  {
-    id: "featured-macbook-air-m1",
-    brand: "Apple",
-    name: "MacBook Air M1 2020",
-    specs: "Apple M1 Chip • 8GB RAM • 256GB SSD • Light & Powerful",
-    price: 115000,
-    category: "exuk apple featured macbook",
-    badge: "hot",
-    img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
+    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=1000"
   },
   {
     id: "featured-samsung-sam930",
@@ -72,42 +92,6 @@ const ALL_PRODUCTS = [
     category: "exuk business featured",
     badge: "hot",
     img: "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Samsung+Sam+930"
-  },
-  /* ==========================================
-     LENOVO PRICE LIST (Premium Quality)
-     ========================================== */
-  {
-    id: "lenovo-t490",
-    brand: "Lenovo",
-    name: "ThinkPad T490",
-    specs: "i5 8th Gen • 16GB RAM • 512GB SSD",
-    price: 49500,
-    category: "exuk business lenovo",
-    badge: "exuk",
-    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
-  },
-  {
-    id: "lenovo-x280",
-    brand: "Lenovo",
-    name: "ThinkPad X280 i5",
-    specs: "i5 8th Gen • 8GB RAM • 256GB SSD",
-    price: 29500,
-    category: "exuk business lenovo",
-    badge: "hot",
-    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
-  },
-  /* ==========================================
-     OTHER LAPTOPS
-     ========================================== */
-  {
-    id: "exuk-hp840g7",
-    brand: "HP",
-    name: "HP EliteBook 840 G7",
-    specs: "Intel Core i7 10th Gen • 16GB RAM • 512GB SSD • 14\" FHD",
-    price: 75000,
-    category: "exuk business",
-    badge: "exuk",
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   }
 ];
 
@@ -144,12 +128,16 @@ function renderProducts(filter = "featured") {
     const priceVal = p.price;
     const priceDisplay = `${symbol} ${priceVal.toLocaleString()}`;
 
-    // Link to brand page
+    // Link logic
     let viewBtn = `<button class="quick-view-btn" onclick='openModal("${p.name.replace(/"/g,"&quot;")}", "${priceDisplay}", "${p.specs.replace(/"/g,"&quot;")}", "${p.img}", ${priceVal})'>Quick View</button>`;
     if (p.category.includes('macbook')) {
-      viewBtn = `<a href="macbook-nairobi.html" class="quick-view-btn" style="text-decoration:none;display:inline-block;text-align:center">View All MacBooks</a>`;
+      viewBtn = `<a href="macbook-nairobi.html" class="quick-view-btn" style="text-decoration:none;display:inline-block;text-align:center">All MacBooks</a>`;
     } else if (p.category.includes('lenovo')) {
-      viewBtn = `<a href="lenovo-nairobi.html" class="quick-view-btn" style="text-decoration:none;display:inline-block;text-align:center">View All Lenovos</a>`;
+      viewBtn = `<a href="lenovo-nairobi.html" class="quick-view-btn" style="text-decoration:none;display:inline-block;text-align:center">All Lenovos</a>`;
+    } else if (p.category.includes('hp')) {
+      viewBtn = `<a href="hp-nairobi.html" class="quick-view-btn" style="text-decoration:none;display:inline-block;text-align:center">All HP Laptops</a>`;
+    } else if (p.category.includes('dell')) {
+      viewBtn = `<a href="dell-nairobi.html" class="quick-view-btn" style="text-decoration:none;display:inline-block;text-align:center">All Dell Laptops</a>`;
     }
 
     return `
