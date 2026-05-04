@@ -18,7 +18,7 @@ const ALL_PRODUCTS = [
     brand: "Apple",
     name: "MacBook Pro 16 2019 i9",
     specs: "Intel Core i9 • 64GB RAM • 1TB SSD • 8GB Graphics",
-    price: 95000,
+    price: 133000,
     category: "exuk apple featured macbook",
     badge: "hot",
     img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80"
@@ -28,7 +28,7 @@ const ALL_PRODUCTS = [
     brand: "Apple",
     name: "MacBook Pro M1 13 2020",
     specs: "Apple M1 Chip • 16GB RAM • 512GB SSD • Retina",
-    price: 100000,
+    price: 140000,
     category: "exuk apple featured macbook",
     badge: "hot",
     img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
@@ -38,7 +38,7 @@ const ALL_PRODUCTS = [
     brand: "Apple",
     name: "MacBook Air M1 2020",
     specs: "Apple M1 Chip • 8GB RAM • 256GB SSD • Light & Powerful",
-    price: 60000,
+    price: 84000,
     category: "exuk apple featured macbook",
     badge: "hot",
     img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
@@ -81,7 +81,7 @@ const ALL_PRODUCTS = [
     brand: "Apple",
     name: "MacBook Pro 15 2019 i7",
     specs: "16GB RAM • 512GB SSD • 4GB Graphics",
-    price: 63000,
+    price: 88000,
     category: "exuk apple macbook",
     badge: "exuk",
     img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80"
@@ -91,7 +91,7 @@ const ALL_PRODUCTS = [
     brand: "Apple",
     name: "MacBook Pro 13 2019 i7",
     specs: "16GB RAM • 512GB SSD • Space Gray",
-    price: 55000,
+    price: 77000,
     category: "exuk apple macbook",
     badge: "exuk",
     img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
@@ -101,7 +101,7 @@ const ALL_PRODUCTS = [
     brand: "Apple",
     name: "MacBook Air 13 2017 i5",
     specs: "8GB RAM • 256GB SSD • Best Budget Deal",
-    price: 25000,
+    price: 35000,
     category: "exuk apple macbook",
     badge: "hot",
     img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=800&q=80"
@@ -111,7 +111,7 @@ const ALL_PRODUCTS = [
     brand: "Samsung",
     name: "Samsung Sam 930 i7",
     specs: "11th Gen i7 • 16GB RAM • 512GB SSD",
-    price: 60000,
+    price: 84000,
     category: "exuk business",
     badge: "new",
     img: "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Samsung+Sam+930"
