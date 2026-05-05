@@ -88,10 +88,11 @@
 <!-- ===== PRELOADER ===== -->
 <div id="preloader">
   <div class="preloader-inner">
-    <div class="logo-anim">
-      <svg viewBox="0 0 100 100" width="40" height="40">
-        <path d="M20,70 Q40,20 60,50 T100,30" fill="none" stroke="#800000" stroke-width="12" stroke-linecap="round"/>
+    <div class="logo-anim" style="display: flex; flex-direction: column; align-items: center;">
+      <svg viewBox="0 0 100 50" width="50" height="30">
+        <path d="M10,40 Q30,5 50,25 T90,10" fill="none" stroke="#800000" stroke-width="12" stroke-linecap="round"/>
       </svg>
+      <div style="font-weight: 900; font-size: 1.2rem; letter-spacing: -1.5px; color: #212529;">nexcom<span style="color: #800000;">.</span></div>
     </div>
     <div class="preloader-bar"><div class="preloader-fill"></div></div>
   </div>
@@ -100,11 +101,11 @@
 <!-- ===== NAVBAR ===== -->
 <nav id="navbar">
   <div class="nav-container">
-    <a href="#" class="nav-logo" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
-      <svg viewBox="0 0 100 60" width="45" height="28">
-        <path d="M10,45 Q30,10 50,30 T90,15" fill="none" stroke="#800000" stroke-width="14" stroke-linecap="round"/>
+    <a href="#" class="nav-logo" style="display: flex; flex-direction: column; align-items: center; line-height: 1; text-decoration: none;">
+      <svg viewBox="0 0 100 50" width="45" height="25">
+        <path d="M10,40 Q30,5 50,25 T90,10" fill="none" stroke="#800000" stroke-width="14" stroke-linecap="round"/>
       </svg>
-      <span style="color: var(--text); font-weight: 700; font-size: 1.4rem; letter-spacing: -1.5px; text-transform: lowercase;">nexcom<span style="color: var(--primary);">.</span></span>
+      <span style="color: var(--text); font-weight: 900; font-size: 1.1rem; letter-spacing: -1.5px; text-transform: lowercase; margin-top: -3px;">nexcom<span style="color: var(--primary);">.</span></span>
     </a>
     <ul class="nav-links">
       <li><a href="#shop">Shop</a></li>
@@ -591,7 +592,12 @@
   </div>
   <div class="footer-container">
     <div class="footer-brand">
-      <div class="footer-logo">NEXCOM<span>.</span></div>
+      <div class="footer-logo" style="display: flex; flex-direction: column; align-items: flex-start; gap: 5px; margin-bottom: 1.5rem;">
+        <svg viewBox="0 0 100 50" width="60" height="30">
+          <path d="M10,40 Q30,5 50,25 T90,10" fill="none" stroke="#800000" stroke-width="14" stroke-linecap="round"/>
+        </svg>
+        <span style="font-weight: 900; font-size: 2rem; letter-spacing: -2px; color: var(--text); text-transform: lowercase;">nexcom<span style="color: var(--primary);">.</span></span>
+      </div>
       <p>Nairobi's trusted tech partner. New laptops, refurbished deals, and instant cash for your old device.</p>
     </div>
     <div class="footer-links">
