@@ -132,27 +132,7 @@
   <a href="#contact" onclick="toggleMenu()">Contact</a>
 </div>
 
-<!-- COMPACT TODAY'S SPECIAL -->
-<section id="daily-special" style="display:none; padding: 10px 0; background: #000;">
-  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 10px;">
-    <div id="special-banner" style="position: relative; height: 220px; border-radius: 12px; overflow: hidden; background: #111; cursor: pointer; border: 1px solid #333; display: flex; align-items: center; justify-content: center; text-align: center;">
-      <img id="special-img" src="" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0.3; z-index: 1;">
-      <div style="position: relative; z-index: 2; padding: 20px; width: 100%; background: rgba(0,0,0,0.6);">
-        <div style="color: #f01a24; font-weight: 900; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">⚡ Today's Special Deal (10% OFF)</div>
-        <h2 id="special-title" style="color: white; font-size: 1.6rem; margin: 0; line-height: 1.2; font-weight: 800;">-</h2>
-        <p id="special-specs" style="color: #eee; font-size: 0.9rem; margin: 8px auto 15px; max-width: 600px;">-</p>
-        <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
-          <span id="special-new-price" style="color: #fff; font-size: 1.8rem; font-weight: 900;">-</span>
-          <span id="special-old-price" style="color: #888; text-decoration: line-through; font-size: 1.1rem;">-</span>
-        </div>
-        <div style="display: inline-block; margin-top: 15px; background: #f01a24; color: white; padding: 8px 20px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; text-transform: uppercase;">Claim Offer</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== HERO ===== -->
-
 <section id="hero">
   
   <div class="hero-bg">
@@ -223,14 +203,14 @@
     </div>
     <div class="filter-tabs">
       <button class="filter-btn active" onclick="filterProducts('featured', this)">Featured</button>
-      <button class="filter-btn" onclick="filterProducts('all', this)">All Laptops</button>
+      <button class="filter-btn" onclick="filterProducts('all', this)">All</button>
       <button class="filter-btn" onclick="location.href='budget-laptops.html'">🎓 Student & Baby</button>
-      <button class="filter-btn" onclick="filterProducts('lenovo', this)">Lenovo</button>
-      <button class="filter-btn" onclick="filterProducts('dell', this)">Dell</button>
-      <button class="filter-btn" onclick="filterProducts('hp', this)">HP</button>
-      <button class="filter-btn" onclick="filterProducts('apple', this)">MacBook</button>
-      <button class="filter-btn" onclick="filterProducts('new', this)">New Arrivals</button>
-      <button class="filter-btn" onclick="filterProducts('server', this)">Servers</button>
+      <button class="filter-btn" onclick="filterProducts('lenovo', this)">💻 Lenovo</button>
+      <button class="filter-btn" onclick="filterProducts('dell', this)">💻 Dell</button>
+      <button class="filter-btn" onclick="filterProducts('hp', this)">💻 HP</button>
+      <button class="filter-btn" onclick="filterProducts('apple', this)">🍎 MacBook</button>
+      <button class="filter-btn" onclick="filterProducts('new', this)">New</button>
+      <button class="filter-btn" onclick="filterProducts('server', this)">🖥️ Servers</button>
     </div>
   </div>
 
@@ -306,94 +286,92 @@
 
 <!-- ===== ACCESSORIES TEASER ===== -->
 <section id="accessories-teaser" style="padding: 6rem 0; background: var(--bg);">
-  <div class="repair-teaser-content container" style="display: flex; align-items: center; justify-content: space-between; gap: 4rem;">
-    <div style="flex: 1;">
-      <div class="section-tag">— Essential Add-ons —</div>
-      <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Complete Your <span class="gradient-text">Workspace.</span></h2>
-      <p style="color: var(--gray); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem; max-width: 500px;">
-        Enhance your performance and protect your investment with our premium selection of original accessories. High-quality chargers, bags, and storage solutions.
-      </p>
-      <div style="display: flex; gap: 1rem;">
-        <a href="accessories.html" class="btn-primary">View All Accessories</a>
-      </div>
-    </div>
-    <div class="repair-visual-teaser" style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+  <div class="container" style="text-align: center;">
+    <div class="section-tag">— Essential Add-ons —</div>
+    <h2 style="font-size: 2.8rem; margin-bottom: 1rem;">Complete Your <span class="gradient-text">Workspace.</span></h2>
+    <p style="color: var(--gray); font-size: 1.1rem; line-height: 1.6; margin: 0 auto 3.5rem; max-width: 650px;">
+      Enhance your performance and protect your investment with our premium selection of original accessories. High-quality chargers, bags, and storage solutions.
+    </p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
       <a href="accessories.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">⚡</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.25rem;">Chargers</h4>
-          <span style="font-size: 0.75rem; color: var(--primary); font-weight: bold;">From 3k</span>
+        <div style="background: var(--card); border: 1px solid var(--border); padding: 2.5rem 1.5rem; border-radius: 16px; text-align: center; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--primary)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 700;">Chargers</h4>
+          <span style="font-size: 0.9rem; color: var(--primary); font-weight: 800; background: rgba(240, 26, 36, 0.05); padding: 4px 12px; border-radius: 20px;">From 3k</span>
         </div>
       </a>
       <a href="accessories.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🎒</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.25rem;">Bags</h4>
-          <span style="font-size: 0.75rem; color: var(--primary); font-weight: bold;">From 2.5k</span>
+        <div style="background: var(--card); border: 1px solid var(--border); padding: 2.5rem 1.5rem; border-radius: 16px; text-align: center; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--primary)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🎒</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 700;">Bags</h4>
+          <span style="font-size: 0.9rem; color: var(--primary); font-weight: 800; background: rgba(240, 26, 36, 0.05); padding: 4px 12px; border-radius: 20px;">From 2.5k</span>
         </div>
       </a>
       <a href="accessories.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔌</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.25rem;">Hubs</h4>
-          <span style="font-size: 0.75rem; color: var(--primary); font-weight: bold;">From 2.5k</span>
+        <div style="background: var(--card); border: 1px solid var(--border); padding: 2.5rem 1.5rem; border-radius: 16px; text-align: center; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--primary)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🔌</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 700;">Hubs</h4>
+          <span style="font-size: 0.9rem; color: var(--primary); font-weight: 800; background: rgba(240, 26, 36, 0.05); padding: 4px 12px; border-radius: 20px;">From 2.5k</span>
         </div>
       </a>
       <a href="accessories.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💾</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.25rem;">Storage</h4>
-          <span style="font-size: 0.75rem; color: var(--primary); font-weight: bold;">From 3.5k</span>
+        <div style="background: var(--card); border: 1px solid var(--border); padding: 2.5rem 1.5rem; border-radius: 16px; text-align: center; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--primary)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">💾</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 700;">Storage</h4>
+          <span style="font-size: 0.9rem; color: var(--primary); font-weight: 800; background: rgba(240, 26, 36, 0.05); padding: 4px 12px; border-radius: 20px;">From 3.5k</span>
         </div>
       </a>
     </div>
+    
+    <a href="accessories.html" class="btn-primary" style="padding: 1rem 2.5rem;">Explore All Accessories</a>
   </div>
 </section>
 
 
 <!-- ===== REPAIRS TEASER ===== -->
-<section id="repairs-teaser" style="background: linear-gradient(to bottom, var(--bg), var(--bg2));">
-  <div class="repair-teaser-content container" style="display: flex; align-items: center; justify-content: space-between; gap: 4rem; padding: 6rem 0;">
-    <div style="flex: 1;">
-      <div class="section-tag">— Expert Service Center —</div>
-      <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Professional Laptop <br/><span class="gradient-text">Repair Services.</span></h2>
-      <p style="color: var(--gray); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem; max-width: 500px;">
-        Fast, reliable, and affordable solutions for all your laptop issues. From <strong>Screen Replacements</strong> and <strong>Data Recovery</strong> to complex <strong>Motherboard Repair</strong>.
-      </p>
-      <div style="display: flex; gap: 1rem;">
-        <a href="repairs.html" class="btn-primary">View All Services</a>
-        <a href="https://wa.me/254722816001?text=Hi%20Nexcom!%20I%20need%20help%20with%20a%20laptop%20repair." class="btn-outline">Talk to a Tech</a>
-      </div>
+<section id="repairs-teaser" style="padding: 6rem 0; background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container" style="text-align: center;">
+    <div class="section-tag">— Expert Service Center —</div>
+    <h2 style="font-size: 2.8rem; margin-bottom: 1rem;">Professional Laptop <br/><span class="gradient-text">Repair Services.</span></h2>
+    <p style="color: var(--gray); font-size: 1.1rem; line-height: 1.6; margin: 0 auto 3.5rem; max-width: 650px;">
+      Fast, reliable, and affordable solutions for all your laptop issues. From Screen Replacements and Data Recovery to complex Motherboard Repair.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 3.5rem;">
+      <a href="repairs.html" style="text-decoration: none; color: inherit;">
+        <div style="background: var(--card); border: 1px solid var(--border); padding: 2.5rem 1.5rem; border-radius: 16px; text-align: center; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--primary)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🖥️</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 700;">Screens</h4>
+          <span style="font-size: 0.9rem; color: var(--primary); font-weight: 800; background: rgba(240, 26, 36, 0.05); padding: 4px 12px; border-radius: 20px;">From 6.5k</span>
+        </div>
+      </a>
+      <a href="repairs.html" style="text-decoration: none; color: inherit;">
+        <div style="background: var(--card); border: 1px solid var(--border); padding: 2.5rem 1.5rem; border-radius: 16px; text-align: center; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--primary)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">💾</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 700;">Data</h4>
+          <span style="font-size: 0.9rem; color: var(--primary); font-weight: 800; background: rgba(240, 26, 36, 0.05); padding: 4px 12px; border-radius: 20px;">From 4.5k</span>
+        </div>
+      </a>
+      <a href="repairs.html" style="text-decoration: none; color: inherit;">
+        <div style="background: var(--card); border: 1px solid var(--border); padding: 2.5rem 1.5rem; border-radius: 16px; text-align: center; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--primary)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔌</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 700;">Motherboard</h4>
+          <span style="font-size: 0.9rem; color: var(--primary); font-weight: 800; background: rgba(240, 26, 36, 0.05); padding: 4px 12px; border-radius: 20px;">From 6k</span>
+        </div>
+      </a>
+      <a href="repairs.html" style="text-decoration: none; color: inherit;">
+        <div style="background: var(--card); border: 1px solid var(--border); padding: 2.5rem 1.5rem; border-radius: 16px; text-align: center; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--primary)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔋</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 700;">Battery</h4>
+          <span style="font-size: 0.9rem; color: var(--primary); font-weight: 800; background: rgba(240, 26, 36, 0.05); padding: 4px 12px; border-radius: 20px;">From 3.5k</span>
+        </div>
+      </a>
     </div>
-    <div class="repair-visual-teaser" style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-      <a href="repairs.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🖥️</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.25rem;">Screens</h4>
-          <span style="font-size: 0.75rem; color: var(--primary); font-weight: bold;">From 6.5k</span>
-        </div>
-      </a>
-      <a href="repairs.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size: 2rem; margin-bottom: 0.5rem;">💾</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.25rem;">Data</h4>
-          <span style="font-size: 0.75rem; color: var(--primary); font-weight: bold;">From 4.5k</span>
-        </div>
-      </a>
-      <a href="repairs.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔌</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.25rem;">Motherboard</h4>
-          <span style="font-size: 0.75rem; color: var(--primary); font-weight: bold;">From 6k</span>
-        </div>
-      </a>
-      <a href="repairs.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔋</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.25rem;">Battery</h4>
-          <span style="font-size: 0.75rem; color: var(--primary); font-weight: bold;">From 3.5k</span>
-        </div>
-      </a>
+
+    <div style="display: flex; gap: 1rem; justify-content: center;">
+      <a href="repairs.html" class="btn-primary" style="padding: 1rem 2.5rem;">View All Services</a>
+      <a href="https://wa.me/254722816001?text=Hi%20Nexcom!%20I%20need%20help%20with%20a%20laptop%20repair." class="btn-outline" style="padding: 1rem 2.5rem;">Talk to a Tech</a>
     </div>
   </div>
 </section>
