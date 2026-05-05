@@ -3,10 +3,10 @@
    ============================================ */
 
 :root {
-  --primary: #f01a24;
-  --primary-dark: #c7161e;
-  --secondary: #f01a24;
-  --accent: #ff4d4d;
+  --primary: #800000;
+  --primary-dark: #660000;
+  --secondary: #800000;
+  --accent: #a52a2a;
   --bg: #f2f4f7;
   --bg2: #e9ecef;
   --bg3: #dee2e6;
@@ -16,8 +16,8 @@
   --gray: #6c757d;
   --success: #10b981;
   --whatsapp: #25d366;
-  --gradient: linear-gradient(135deg, #f01a24, #c7161e);
-  --glow: 0 0 40px rgba(240,26,36,0.25);
+  --gradient: linear-gradient(135deg, #800000, #660000);
+  --glow: 0 0 40px rgba(128,0,0,0.25);
   --radius: 16px;
   --radius-sm: 10px;
   --shadow: 0 10px 30px rgba(0,0,0,0.04);
@@ -233,12 +233,12 @@ body {
 .orb1 {
   width: 600px; height: 600px;
   top: -200px; left: -200px;
-  background: radial-gradient(circle, #b30000, transparent);
+  background: radial-gradient(circle, #660000, transparent);
 }
 .orb2 {
   width: 500px; height: 500px;
   bottom: -100px; right: -100px;
-  background: radial-gradient(circle, #e60000, transparent);
+  background: radial-gradient(circle, #800000, transparent);
 }
 .hero-grid {
   position: absolute; inset: 0;
