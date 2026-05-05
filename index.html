@@ -87,7 +87,11 @@
 <!-- ===== PRELOADER ===== -->
 <div id="preloader">
   <div class="preloader-inner">
-    <div class="logo-anim">N<span>X</span></div>
+    <div class="logo-anim">
+      <svg viewBox="0 0 100 100" width="40" height="40">
+        <path d="M20,70 Q40,20 60,50 T100,30" fill="none" stroke="#800000" stroke-width="12" stroke-linecap="round"/>
+      </svg>
+    </div>
     <div class="preloader-bar"><div class="preloader-fill"></div></div>
   </div>
 </div>
@@ -95,7 +99,12 @@
 <!-- ===== NAVBAR ===== -->
 <nav id="navbar">
   <div class="nav-container">
-    <a href="#" class="nav-logo">NEXCOM<span>.</span></a>
+    <a href="#" class="nav-logo" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+      <svg viewBox="0 0 100 60" width="45" height="28">
+        <path d="M10,45 Q30,10 50,30 T90,15" fill="none" stroke="#800000" stroke-width="14" stroke-linecap="round"/>
+      </svg>
+      <span style="color: var(--text); font-weight: 800; font-size: 1.4rem; letter-spacing: -0.5px;">NEXCOM<span style="color: var(--primary);">.</span></span>
+    </a>
     <ul class="nav-links">
       <li><a href="#shop">Shop</a></li>
       <li><a href="budget-laptops.html">Student & Baby</a></li>
