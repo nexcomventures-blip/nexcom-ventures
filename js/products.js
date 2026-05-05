@@ -139,6 +139,26 @@ const ALL_PRODUCTS = [
     "badge": "exuk",
     "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
   }
+  {
+    "id": "s-1",
+    "brand": "Dell",
+    "name": "PowerEdge T150 Server",
+    "specs": "Intel Xeon • 16GB ECC • 2TB HDD",
+    "price": 145000,
+    "category": "server enterprise new",
+    "badge": "server",
+    "img": "https://images.unsplash.com/photo-1558494949-ef010978911e?q=80&w=800"
+  },
+  {
+    "id": "s-2",
+    "brand": "HP",
+    "name": "ProLiant DL380 Gen10",
+    "specs": "Dual Xeon • 64GB RAM • Rack Server",
+    "price": 280000,
+    "category": "server enterprise exuk",
+    "badge": "server",
+    "img": "https://images.unsplash.com/photo-1558494949-ef010978911e?q=80&w=800"
+  }
 ];
 
 function renderProducts(filter = "all") {
@@ -147,10 +167,17 @@ function renderProducts(filter = "all") {
   container.innerHTML = "";
 
   const filtered = ALL_PRODUCTS.filter(p => {
-    if (filter === "all") return true;
-    if (filter === "featured") return p.category.includes("featured");
-    if (filter === "student") return p.category.includes("student");
-    return p.brand.toLowerCase() === filter.toLowerCase();
+    const cat = p.category.toLowerCase();
+    const brand = p.brand.toLowerCase();
+    const f = filter.toLowerCase();
+
+    if (f === "all") return true;
+    if (f === "featured") return cat.includes("featured");
+    if (f === "student") return cat.includes("student") || cat.includes("budget");
+    if (f === "server") return cat.includes("server");
+    if (f === "new") return cat.includes("new");
+    
+    return brand === f || cat.includes(f);
   });
 
   container.innerHTML = filtered.map(p => {
