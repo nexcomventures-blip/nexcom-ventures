@@ -7,7 +7,7 @@ const ALL_PRODUCTS = [
         "price": 1014390,
         "category": "server enterprise hpe featured brandnew",
         "badge": "new",
-        "img": "https://expresscomputersystems.com/cdn/shop/files/hpe-dl380-gen11-12-edsff_800x.jpg?v=1731626706"
+        "img": "https://images.weserv.nl/?url=https://expresscomputersystems.com/cdn/shop/files/hpe-dl380-gen11-12-edsff_800x.jpg&w=400&output=webp"
     },
     {
         "id": "hpe-dl380-gen11-12core",
@@ -17,7 +17,7 @@ const ALL_PRODUCTS = [
         "price": 985660,
         "category": "server enterprise hpe featured brandnew",
         "badge": "new",
-        "img": "https://expresscomputersystems.com/cdn/shop/files/hpe-dl380-gen11-12-edsff_800x.jpg?v=1731626706"
+        "img": "https://images.weserv.nl/?url=https://expresscomputersystems.com/cdn/shop/files/hpe-dl380-gen11-12-edsff_800x.jpg&w=400&output=webp"
     },
     {
         "id": "lenovo-yoga-7-ultra7",
@@ -27,7 +27,7 @@ const ALL_PRODUCTS = [
         "price": 309400,
         "category": "laptop premium lenovo featured brandnew",
         "badge": "new",
-        "img": "https://p1-ofp.static.pub//medias/30154096055_Yoga7_2in1_14AHP9_PureDarkGray_202311010313361715631777266.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub//medias/30154096055_Yoga7_2in1_14AHP9_PureDarkGray_202311010313361715631777266.png&w=400&output=webp"
     },
     {
         "id": "dell-latitude-3450-i7",
@@ -37,7 +37,7 @@ const ALL_PRODUCTS = [
         "price": 209729,
         "category": "laptop business dell featured brandnew",
         "badge": "new",
-        "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-3450-laptop/media-gallery/laptop-latitude-14-3450-black-gallery-1.psd?fmt=png-alpha&wid=1000"
+        "img": "https://images.weserv.nl/?url=https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-3450-laptop/media-gallery/laptop-latitude-14-3450-black-gallery-1.psd&w=400&output=webp"
     },
     {
         "id": "exuk-hp-0",
@@ -45,9 +45,9 @@ const ALL_PRODUCTS = [
         "name": "",
         "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
         "price": 1352,
-        "category": "exuk hp",
+        "category": "exuk hp ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-1",
@@ -57,7 +57,7 @@ const ALL_PRODUCTS = [
         "price": 54600,
         "category": "exuk hp touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-2",
@@ -67,7 +67,7 @@ const ALL_PRODUCTS = [
         "price": 41600,
         "category": "exuk hp touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-3",
@@ -77,7 +77,7 @@ const ALL_PRODUCTS = [
         "price": 40300,
         "category": "exuk hp touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-4",
@@ -85,9 +85,9 @@ const ALL_PRODUCTS = [
         "name": "Hp",
         "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
         "price": 1339,
-        "category": "exuk hp",
+        "category": "exuk hp ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-5",
@@ -95,9 +95,9 @@ const ALL_PRODUCTS = [
         "name": "Hp",
         "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
         "price": 1339,
-        "category": "exuk hp",
+        "category": "exuk hp ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-6",
@@ -105,9 +105,9 @@ const ALL_PRODUCTS = [
         "name": "Hp",
         "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
         "price": 1339,
-        "category": "exuk hp",
+        "category": "exuk hp ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-7",
@@ -117,7 +117,7 @@ const ALL_PRODUCTS = [
         "price": 46800,
         "category": "exuk hp touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-8",
@@ -127,7 +127,7 @@ const ALL_PRODUCTS = [
         "price": 44200,
         "category": "exuk hp touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-9",
@@ -137,7 +137,7 @@ const ALL_PRODUCTS = [
         "price": 35100,
         "category": "exuk hp touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-10",
@@ -145,9 +145,9 @@ const ALL_PRODUCTS = [
         "name": "HP 840 G5 core i5 8 Genration 8/256. 8GEN",
         "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
         "price": 32500,
-        "category": "exuk hp",
+        "category": "exuk hp ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-11",
@@ -157,7 +157,7 @@ const ALL_PRODUCTS = [
         "price": 40300,
         "category": "exuk hp touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-12",
@@ -167,7 +167,7 @@ const ALL_PRODUCTS = [
         "price": 31200,
         "category": "exuk hp touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-13",
@@ -177,7 +177,7 @@ const ALL_PRODUCTS = [
         "price": 29900,
         "category": "exuk hp touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-14",
@@ -187,7 +187,7 @@ const ALL_PRODUCTS = [
         "price": 28600,
         "category": "exuk hp touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-15",
@@ -195,9 +195,9 @@ const ALL_PRODUCTS = [
         "name": "HP 840 G4 core i5 non 8/256. 7th generation",
         "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
         "price": 27300,
-        "category": "exuk hp",
+        "category": "exuk hp ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-16",
@@ -207,7 +207,7 @@ const ALL_PRODUCTS = [
         "price": 26000,
         "category": "exuk hp touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-17",
@@ -215,9 +215,9 @@ const ALL_PRODUCTS = [
         "name": "Hp 820 G3 core i5 8/256 6th gen",
         "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
         "price": 23400,
-        "category": "exuk hp",
+        "category": "exuk hp ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-18",
@@ -225,9 +225,9 @@ const ALL_PRODUCTS = [
         "name": "Hp 840 G2 core i5 8 GB Ram 256 SSD non",
         "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
         "price": 22100,
-        "category": "exuk hp",
+        "category": "exuk hp ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-19",
@@ -235,9 +235,9 @@ const ALL_PRODUCTS = [
         "name": "Hp 640 G3 core i5 8 GB Ram 256 SSD 7th gen",
         "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
         "price": 23400,
-        "category": "exuk hp",
+        "category": "exuk hp ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-20",
@@ -245,9 +245,9 @@ const ALL_PRODUCTS = [
         "name": "Hp 640 G2 core i5 8/256 6th gen",
         "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
         "price": 22100,
-        "category": "exuk hp",
+        "category": "exuk hp ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-21",
@@ -255,9 +255,9 @@ const ALL_PRODUCTS = [
         "name": "Hp 640 G1 core i5 8 GB RAM/500 GB HDD",
         "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
         "price": 16900,
-        "category": "exuk hp",
+        "category": "exuk hp ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-22",
@@ -265,9 +265,9 @@ const ALL_PRODUCTS = [
         "name": "Hp",
         "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
         "price": 12311,
-        "category": "exuk hp",
+        "category": "exuk hp ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-23",
@@ -275,9 +275,9 @@ const ALL_PRODUCTS = [
         "name": "Hp",
         "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
         "price": 12324,
-        "category": "exuk hp",
+        "category": "exuk hp ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-24",
@@ -287,7 +287,7 @@ const ALL_PRODUCTS = [
         "price": 26000,
         "category": "exuk hp touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-25",
@@ -297,7 +297,7 @@ const ALL_PRODUCTS = [
         "price": 18200,
         "category": "exuk hp touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-26",
@@ -307,7 +307,7 @@ const ALL_PRODUCTS = [
         "price": 15600,
         "category": "exuk hp touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-27",
@@ -315,9 +315,9 @@ const ALL_PRODUCTS = [
         "name": "Hp",
         "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
         "price": 10998,
-        "category": "exuk hp",
+        "category": "exuk hp ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-hp-28",
@@ -325,9 +325,9 @@ const ALL_PRODUCTS = [
         "name": "Hp",
         "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
         "price": 11141,
-        "category": "exuk hp",
+        "category": "exuk hp ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/hp-elite.png"
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
         "id": "exuk-dell-29",
@@ -335,9 +335,9 @@ const ALL_PRODUCTS = [
         "name": "Dell",
         "specs": "Ex-UK Premium Grade \u2022 Dell Business Series",
         "price": 6890,
-        "category": "exuk dell",
+        "category": "exuk dell ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/dell-lat.png"
+        "img": "https://images.weserv.nl/?url=https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-3420/media-gallery/laptop-latitude-3420-gallery-1.psd&w=300&output=webp"
     },
     {
         "id": "exuk-dell-30",
@@ -345,9 +345,9 @@ const ALL_PRODUCTS = [
         "name": "Dell",
         "specs": "Ex-UK Premium Grade \u2022 Dell Business Series",
         "price": 9451,
-        "category": "exuk dell",
+        "category": "exuk dell ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/dell-lat.png"
+        "img": "https://images.weserv.nl/?url=https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-3420/media-gallery/laptop-latitude-3420-gallery-1.psd&w=300&output=webp"
     },
     {
         "id": "exuk-dell-31",
@@ -355,9 +355,9 @@ const ALL_PRODUCTS = [
         "name": "Dell",
         "specs": "Ex-UK Premium Grade \u2022 Dell Business Series",
         "price": 9451,
-        "category": "exuk dell",
+        "category": "exuk dell ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/dell-lat.png"
+        "img": "https://images.weserv.nl/?url=https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-3420/media-gallery/laptop-latitude-3420-gallery-1.psd&w=300&output=webp"
     },
     {
         "id": "exuk-dell-32",
@@ -365,9 +365,9 @@ const ALL_PRODUCTS = [
         "name": "Dell",
         "specs": "Ex-UK Premium Grade \u2022 Dell Business Series",
         "price": 9425,
-        "category": "exuk dell",
+        "category": "exuk dell ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/dell-lat.png"
+        "img": "https://images.weserv.nl/?url=https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-3420/media-gallery/laptop-latitude-3420-gallery-1.psd&w=300&output=webp"
     },
     {
         "id": "exuk-dell-33",
@@ -375,9 +375,9 @@ const ALL_PRODUCTS = [
         "name": "DELL",
         "specs": "Ex-UK Premium Grade \u2022 Dell Business Series",
         "price": 9412,
-        "category": "exuk dell",
+        "category": "exuk dell ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/dell-lat.png"
+        "img": "https://images.weserv.nl/?url=https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-3420/media-gallery/laptop-latitude-3420-gallery-1.psd&w=300&output=webp"
     },
     {
         "id": "exuk-dell-34",
@@ -385,9 +385,9 @@ const ALL_PRODUCTS = [
         "name": "DELL",
         "specs": "Ex-UK Premium Grade \u2022 Dell Business Series",
         "price": 9412,
-        "category": "exuk dell",
+        "category": "exuk dell ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/dell-lat.png"
+        "img": "https://images.weserv.nl/?url=https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-3420/media-gallery/laptop-latitude-3420-gallery-1.psd&w=300&output=webp"
     },
     {
         "id": "exuk-dell-35",
@@ -395,9 +395,9 @@ const ALL_PRODUCTS = [
         "name": "Dell",
         "specs": "Ex-UK Premium Grade \u2022 Dell Business Series",
         "price": 4147,
-        "category": "exuk dell",
+        "category": "exuk dell ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/dell-lat.png"
+        "img": "https://images.weserv.nl/?url=https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-3420/media-gallery/laptop-latitude-3420-gallery-1.psd&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-36",
@@ -407,7 +407,7 @@ const ALL_PRODUCTS = [
         "price": 44200,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-37",
@@ -417,7 +417,7 @@ const ALL_PRODUCTS = [
         "price": 44200,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-38",
@@ -427,7 +427,7 @@ const ALL_PRODUCTS = [
         "price": 41600,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-39",
@@ -437,7 +437,7 @@ const ALL_PRODUCTS = [
         "price": 31200,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-40",
@@ -447,7 +447,7 @@ const ALL_PRODUCTS = [
         "price": 32500,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-41",
@@ -457,7 +457,7 @@ const ALL_PRODUCTS = [
         "price": 27300,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-42",
@@ -467,7 +467,7 @@ const ALL_PRODUCTS = [
         "price": 27300,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-43",
@@ -477,7 +477,7 @@ const ALL_PRODUCTS = [
         "price": 25350,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-44",
@@ -487,7 +487,7 @@ const ALL_PRODUCTS = [
         "price": 18200,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-45",
@@ -497,7 +497,7 @@ const ALL_PRODUCTS = [
         "price": 29250,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-46",
@@ -505,9 +505,9 @@ const ALL_PRODUCTS = [
         "name": "T480 s core i5 8 GB Ram/256 SSD",
         "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
         "price": 27950,
-        "category": "exuk lenovo",
+        "category": "exuk lenovo ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-47",
@@ -515,9 +515,9 @@ const ALL_PRODUCTS = [
         "name": "Lenovo T470 s core i5 8 GB RAM 256 SSD",
         "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
         "price": 22100,
-        "category": "exuk lenovo",
+        "category": "exuk lenovo ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-48",
@@ -525,9 +525,9 @@ const ALL_PRODUCTS = [
         "name": "Lenovo T440 s core i5 8 GB Ram 500 HDD 14 inch screen",
         "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
         "price": 19500,
-        "category": "exuk lenovo",
+        "category": "exuk lenovo ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-49",
@@ -535,9 +535,9 @@ const ALL_PRODUCTS = [
         "name": "Lenovo T440 s core i7 8 GB Ram 500 HDD. 14 inch screen",
         "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
         "price": 19500,
-        "category": "exuk lenovo",
+        "category": "exuk lenovo ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-50",
@@ -547,7 +547,7 @@ const ALL_PRODUCTS = [
         "price": 26000,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-51",
@@ -557,7 +557,7 @@ const ALL_PRODUCTS = [
         "price": 33800,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-52",
@@ -567,7 +567,7 @@ const ALL_PRODUCTS = [
         "price": 24700,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-53",
@@ -575,9 +575,9 @@ const ALL_PRODUCTS = [
         "name": "Lenovo X270 core i5 8 GB Ram 256 SSD.non",
         "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
         "price": 22100,
-        "category": "exuk lenovo",
+        "category": "exuk lenovo ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-54",
@@ -587,7 +587,7 @@ const ALL_PRODUCTS = [
         "price": 20800,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-55",
@@ -597,7 +597,7 @@ const ALL_PRODUCTS = [
         "price": 18200,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-56",
@@ -607,7 +607,7 @@ const ALL_PRODUCTS = [
         "price": 16900,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-57",
@@ -617,7 +617,7 @@ const ALL_PRODUCTS = [
         "price": 18200,
         "category": "exuk lenovo touch",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     },
     {
         "id": "exuk-lenovo-58",
@@ -625,138 +625,63 @@ const ALL_PRODUCTS = [
         "name": "Lenovo x230 core i5 4GB /320 GB hdd",
         "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
         "price": 10400,
-        "category": "exuk lenovo",
+        "category": "exuk lenovo ",
         "badge": "exuk",
-        "img": "https://nexcomventures.co.ke/js/lenovo-think.png"
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
     }
 ];
 
+
 const BADGE_LABELS = {
-  new: "New Arrival",
-  hot: "🔥 Bestseller",
-  refurb: "Refurbished",
-  exuk: "Ex-UK Grade A"
+  new: "Brand New",
+  exuk: "Ex-UK Premium",
+  sale: "Special Offer"
 };
 
-let currentLimit = 12;
-let currentFilter = "featured";
+function renderProducts(filter = "all") {
+  const container = document.getElementById("product-grid");
+  if (!container) return;
+  container.innerHTML = "";
 
-// Render products
-function renderProducts(filter = "featured") {
-  const grid = document.getElementById("productsGrid");
-  const loadMoreBtn = document.getElementById("loadMoreBtn");
-  if (!grid) return;
+  const filtered = ALL_PRODUCTS.filter(p => {
+    if (filter === "all") return true;
+    if (filter === "featured") return p.category.includes("featured");
+    return p.category.includes(filter);
+  });
 
-  currentFilter = filter;
-  const filtered = filter === "all"
-    ? ALL_PRODUCTS
-    : filter === "featured"
-    ? ALL_PRODUCTS.filter(p => p.category.includes("featured"))
-    : ALL_PRODUCTS.filter(p => p.category.includes(filter));
-
-  const toShow = filtered.slice(0, currentLimit);
-
-  grid.innerHTML = toShow.map(p => {
-    const isServer = p.category.includes('server');
-    const currency = isServer ? 'USD' : 'KES';
-    const symbol = isServer ? '$' : 'KES';
-    const priceVal = p.price;
-    const priceDisplay = `${symbol} ${priceVal.toLocaleString()}`;
-
-    return `
-      <div class="product-card">
-        <div class="product-badge ${p.badge}">${BADGE_LABELS[p.badge] || p.badge}</div>
-        <div class="product-img">
-          <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200/0a0a0a/f01a24?text=${encodeURIComponent(p.brand)}'"/>
-          <div class="product-overlay">
-            <button class="quick-view-btn" onclick='openModal("${p.name.replace(/"/g,"&quot;")}", "${priceDisplay}", "${p.specs.replace(/"/g,"&quot;")}", "${p.img}", ${priceVal})'>Quick View</button>
-          </div>
-        </div>
-        <div class="product-info">
-          <div class="product-brand">${p.brand}</div>
-          <h3>${p.name}</h3>
-          <p>${p.specs}</p>
-          <div class="product-footer">
-            <div class="price-container">
-              <span class="price">${priceDisplay}</span>
-              <span class="vat-tag">Excl. VAT</span>
-            </div>
-            <button class="add-cart" onclick="addToCart('${p.name.replace(/'/g,"\\'")}', ${priceVal}, '${currency}')">Add to Cart</button>
-          </div>
+  filtered.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+    const badge = p.badge ? `<span class="badge badge-${p.badge}">${BADGE_LABELS[p.badge]}</span>` : "";
+    
+    card.innerHTML = `
+      ${badge}
+      <div class="product-img-container">
+        <img src="${p.img}" alt="${p.name}" loading="lazy">
+      </div>
+      <div class="product-info">
+        <div class="product-brand">${p.brand}</div>
+        <h3 class="product-name">${p.name}</h3>
+        <p class="product-specs">${p.specs}</p>
+        <div class="product-footer">
+          <div class="product-price">KES ${p.price.toLocaleString()}</div>
+          <button class="btn-buy" onclick="orderWhatsApp('${p.name}', ${p.price})">Buy</button>
         </div>
       </div>
     `;
-  }).join("");
-
-  if (loadMoreBtn) {
-    loadMoreBtn.style.display = currentLimit >= filtered.length ? "none" : "inline-block";
-  }
+    container.appendChild(card);
+  });
 }
 
-function filterProducts(category, btn) {
-  document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
-  if (btn) btn.classList.add("active");
-  currentLimit = 12;
-  renderProducts(category);
+function orderWhatsApp(name, price) {
+  const text = encodeURIComponent(`Hi Nexcom! I'm interested in the ${name} (KES ${price.toLocaleString()}). Is it available?`);
+  window.open(`https://wa.me/254722816001?text=${text}`, '_blank');
 }
 
-function loadMoreProducts() {
-  currentLimit += 12;
-  renderProducts(currentFilter);
-}
-
-function searchProducts() {
-  const query = document.getElementById("productSearch").value.toLowerCase();
-  const grid = document.getElementById("productsGrid");
-  const loadMoreBtn = document.getElementById("loadMoreBtn");
-  if (!grid) return;
-
-  if (!query) { renderProducts(currentFilter); return; }
-  
-  const filtered = ALL_PRODUCTS.filter(p => 
-    p.name.toLowerCase().includes(query) || 
-    p.brand.toLowerCase().includes(query) || 
-    p.specs.toLowerCase().includes(query)
-  );
-
-  grid.innerHTML = filtered.map(p => {
-    const isServer = p.category.includes('server');
-    const currency = isServer ? 'USD' : 'KES';
-    const symbol = isServer ? '$' : 'KES';
-    const priceVal = p.price;
-    const priceDisplay = `${symbol} ${priceVal.toLocaleString()}`;
-
-    return `
-      <div class="product-card">
-        <div class="product-badge ${p.badge}">${BADGE_LABELS[p.badge] || p.badge}</div>
-        <div class="product-img">
-          <img src="${p.img}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/300x200/0a0a0a/f01a24?text=${encodeURIComponent(p.brand)}'"/>
-          <div class="product-overlay">
-            <button class="quick-view-btn" onclick='openModal("${p.name.replace(/"/g,"&quot;")}", "${priceDisplay}", "${p.specs.replace(/"/g,"&quot;")}", "${p.img}", ${priceVal})'>Quick View</button>
-          </div>
-        </div>
-        <div class="product-info">
-          <div class="product-brand">${p.brand}</div>
-          <h3>${p.name}</h3>
-          <p>${p.specs}</p>
-          <div class="product-footer">
-            <div class="price-container">
-              <span class="price">${priceDisplay}</span>
-              <span class="vat-tag">Excl. VAT</span>
-            </div>
-            <button class="add-cart" onclick="addToCart('${p.name.replace(/'/g,"\\'")}', ${priceVal}, '${currency}')">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-    `;
-  }).join("") || `<div class="no-results">No matches found for "${query}"</div>`;
-  
-  if (loadMoreBtn) loadMoreBtn.style.display = "none";
-}
-
+// Initial render
 document.addEventListener("DOMContentLoaded", () => {
   renderProducts("featured");
-  setupDailySpecial();
+  if (typeof setupDailySpecial === 'function') setupDailySpecial();
 });
 
 // Daily Special Logic
@@ -764,17 +689,14 @@ function setupDailySpecial() {
   const section = document.getElementById("daily-special");
   if (!section || ALL_PRODUCTS.length === 0) return;
 
-  // Use current date to pick a unique item from ALL_PRODUCTS every day
   const today = new Date();
   const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
   const productIndex = dateSeed % ALL_PRODUCTS.length;
   const p = ALL_PRODUCTS[productIndex];
 
-  // Apply 10% discount
   const oldPrice = p.price;
   const newPrice = Math.floor(oldPrice * 0.9);
   
-  // Update DOM
   document.getElementById("special-title").innerText = p.name;
   document.getElementById("special-specs").innerText = p.specs;
   document.getElementById("special-old-price").innerText = `KES ${oldPrice.toLocaleString()}`;
@@ -782,10 +704,12 @@ function setupDailySpecial() {
   document.getElementById("special-img").src = p.img;
   
   const banner = document.getElementById("special-banner");
-  banner.onclick = () => {
-    const text = encodeURIComponent(`Hi Nexcom! I want to claim today's special deal: ${p.name} at KES ${newPrice.toLocaleString()} (10% OFF)`);
-    window.open(`https://wa.me/254722816001?text=${text}`, '_blank');
-  };
+  if (banner) {
+    banner.onclick = () => {
+      const text = encodeURIComponent(`Hi Nexcom! I want to claim today's special deal: ${p.name} at KES ${newPrice.toLocaleString()} (10% OFF)`);
+      window.open(`https://wa.me/254722816001?text=${text}`, '_blank');
+    };
+  }
 
   section.style.display = "block";
 }
