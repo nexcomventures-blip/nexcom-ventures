@@ -36,8 +36,9 @@ const ALL_PRODUCTS = [
     "id": "feat-4",
     "brand": "HP",
     "name": "HP EliteBook 840 G8",
-    "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD",
+    "specs": "i7 11th Gen • 16GB RAM • 512GB SSD",
     "price": 63000,
+    "originalPrice": 72000,
     "category": "exuk business featured hp",
     "badge": "hot",
     "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
@@ -46,78 +47,79 @@ const ALL_PRODUCTS = [
     "id": "bud-1",
     "brand": "Lenovo",
     "name": "Lenovo 11E Core M5",
-    "specs": "8GB RAM \u2022 128GB SSD \u2022 11.6\"",
+    "specs": "8GB RAM • 128GB SSD • 11.6\"",
     "price": 13000,
     "category": "exuk student budget",
     "badge": "student",
-    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1525547718571-03b05761ad91?q=80&w=800"
   },
   {
     "id": "bud-2",
     "brand": "Lenovo",
     "name": "Lenovo 11E Celeron",
-    "specs": "4GB RAM \u2022 128GB SSD \u2022 Rugged",
+    "specs": "4GB RAM • 128GB SSD • Rugged",
     "price": 10000,
     "category": "exuk student budget",
     "badge": "student",
-    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=800"
   },
   {
     "id": "bud-3",
     "brand": "Lenovo",
     "name": "Lenovo Yoga N23S",
-    "specs": "Celeron \u2022 4GB RAM \u2022 128GB SSD \u2022 Touch",
+    "specs": "Celeron • 4GB RAM • 128GB SSD • Touch",
     "price": 12500,
     "category": "exuk student budget",
     "badge": "student",
-    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
   },
   {
     "id": "d-1",
     "brand": "Dell",
     "name": "Dell Latitude 5400 i5",
-    "specs": "8th Gen \u2022 8GB \u2022 256GB SSD",
+    "specs": "8th Gen • 8GB • 256GB SSD",
     "price": 24000,
     "category": "exuk business featured dell",
     "badge": "exuk",
-    "img": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800"
   },
   {
     "id": "d-2",
     "brand": "Dell",
     "name": "Dell Precision 5550 i7",
-    "specs": "10th Gen \u2022 16GB \u2022 512GB \u2022 4GB Nvidia",
+    "specs": "10th Gen • 16GB • 512GB • 4GB Nvidia",
     "price": 70000,
     "category": "exuk business dell",
     "badge": "pro",
-    "img": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=800"
   },
   {
     "id": "d-3",
     "brand": "Dell",
     "name": "Dell XPS 13 9310 i7",
-    "specs": "11th Gen \u2022 16GB \u2022 512GB \u2022 Touch",
+    "specs": "11th Gen • 16GB • 512GB • Touch",
     "price": 65000,
     "category": "exuk business dell",
     "badge": "premium",
-    "img": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1554412664-6a4d8f640b3b?q=80&w=800"
   },
   {
     "id": "h-1",
     "brand": "HP",
     "name": "HP ProBook 640 G5 i5",
-    "specs": "8th Gen \u2022 8GB \u2022 256GB SSD",
+    "specs": "8th Gen • 8GB • 256GB SSD",
     "price": 25800,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1516387938699-a93567ec168e?q=80&w=800"
   },
   {
     "id": "h-2",
     "brand": "HP",
     "name": "HP EliteBook 840 G6 i5",
-    "specs": "8th Gen \u2022 16GB \u2022 256GB SSD",
+    "specs": "8th Gen • 16GB • 256GB SSD",
     "price": 36500,
+    "originalPrice": 42000,
     "category": "exuk business featured hp",
     "badge": "hot",
     "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
@@ -126,21 +128,21 @@ const ALL_PRODUCTS = [
     "id": "l-1",
     "brand": "Lenovo",
     "name": "ThinkPad T490s i5",
-    "specs": "8th Gen \u2022 8GB \u2022 256GB SSD",
+    "specs": "8th Gen • 8GB • 256GB SSD",
     "price": 25000,
     "category": "exuk business lenovo",
     "badge": "exuk",
-    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e520b?q=80&w=800"
   },
   {
     "id": "l-2",
     "brand": "Lenovo",
     "name": "ThinkPad X1 Yoga i7",
-    "specs": "8th Gen \u2022 16GB \u2022 512GB \u2022 Touch",
+    "specs": "8th Gen • 16GB • 512GB • Touch",
     "price": 40000,
     "category": "exuk business featured lenovo",
     "badge": "exuk",
-    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=800"
   },
   {
     "id": "s-1",
@@ -160,7 +162,7 @@ const ALL_PRODUCTS = [
     "price": 280000,
     "category": "server enterprise exuk",
     "badge": "server",
-    "img": "https://images.unsplash.com/photo-1558494949-ef010978911e?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1594065296416-aed7ae708d58?q=80&w=800"
   }
 ];
 
@@ -178,68 +180,40 @@ function renderProducts(filter = "all") {
     if (f === "student") return cat.includes("student") || cat.includes("budget");
     if (f === "server") return cat.includes("server");
     if (f === "new") return cat.includes("new");
-    
     return brand === f || cat.includes(f);
   });
 
-  displayProducts(filtered);
-}
-
-function searchProducts() {
-  const query = document.getElementById('productSearch').value.toLowerCase();
-  const filtered = ALL_PRODUCTS.filter(p => 
-    p.name.toLowerCase().includes(query) || 
-    p.brand.toLowerCase().includes(query) || 
-    p.specs.toLowerCase().includes(query) ||
-    p.category.toLowerCase().includes(query)
-  );
-  displayProducts(filtered);
-}
-
-function displayProducts(products) {
-  const container = document.getElementById("productsGrid");
-  if (!container) return;
-
-  if (products.length === 0) {
-    container.innerHTML = `<div class="no-results" style="grid-column: 1/-1; text-align: center; padding: 3rem; opacity: 0.5;">No products found matching your search.</div>`;
-    return;
-  }
-
-  container.innerHTML = products.map(p => {
-    const priceVal = p.price;
-    const priceDisplay = 'KES ' + priceVal.toLocaleString();
-    const originalPriceDisplay = p.originalPrice ? 'KES ' + p.originalPrice.toLocaleString() : '';
-    const currency = 'KES';
-    
+  container.innerHTML = filtered.map(p => {
+    const oldPrice = p.originalPrice || Math.floor(p.price * 1.15);
     return `
-      <div class="product-card" data-category="${p.category}">
+      <div class="product-card" onclick="window.open('https://wa.me/254722816001?text=Hi Nexcom! I want to inquire about: ${p.name}', '_blank')">
+        <div class="product-badge">${p.badge}</div>
         <div class="product-img">
           <img src="${p.img}" alt="${p.name}" loading="lazy">
-          ${p.badge ? `<span class="product-badge ${p.badge}">${p.badge.toUpperCase()}</span>` : ""}
-          ${p.originalPrice ? `<span class="sale-badge">SALE</span>` : ""}
         </div>
         <div class="product-info">
           <div class="product-brand">${p.brand}</div>
-          <h3>${p.name}</h3>
-          <p>${p.specs}</p>
-          <div class="product-footer">
-            <div class="price-container">
-              ${p.originalPrice ? `<span class="original-price">${originalPriceDisplay}</span>` : ""}
-              <span class="price">${priceDisplay}</span>
-              <span class="vat-tag">Excl. VAT</span>
-            </div>
-            <button class="add-cart" onclick="addToCart('${p.name.replace(/'/g,"\\'")}', ${priceVal}, '${currency}')">Add to Cart</button>
+          <h3 class="product-name">${p.name}</h3>
+          <p class="product-specs">${p.specs}</p>
+          <div class="product-price-row">
+            <div class="product-price">KES ${p.price.toLocaleString()}</div>
+            <div class="product-old-price">KES ${oldPrice.toLocaleString()}</div>
           </div>
         </div>
       </div>
     `;
-  }).join("");
+  }).join('');
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderProducts("featured");
-  setupDailySpecial();
-});
+function filterCategory(cat) {
+  renderProducts(cat);
+  const btns = document.querySelectorAll('.filter-btn');
+  btns.forEach(b => {
+    b.classList.remove('active');
+    if (b.innerText.toLowerCase().includes(cat.toLowerCase())) b.classList.add('active');
+    if (cat === 'all' && b.innerText.toLowerCase() === 'all') b.classList.add('active');
+  });
+}
 
 // Daily Special Logic
 function setupDailySpecial() {
@@ -280,7 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (priceEl) priceEl.innerText = `KES ${p.price.toLocaleString()}`;
       if (imgEl) imgEl.style.backgroundImage = `url('${p.img}')`;
       if (waEl) {
-        waEl.href = `https://wa.me/254722816001?text=Hi%20Nexcom!%20I%20want%20to%20order%20the%20Today's%20Special:%20${p.name}`;
+        waEl.href = `https://wa.me/254722816001?text=Hi Nexcom! I want to order the Today's Special: ${p.name}`;
       }
     }
 
