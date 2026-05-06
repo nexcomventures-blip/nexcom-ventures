@@ -1594,6 +1594,52 @@ footer {
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 3px; }
+/* ====== ADVERTISEMENT BANNER REFINEMENTS ====== */
+#daily-special {
+  padding: 40px 0 !important;
+  background: radial-gradient(circle at center, #1a0000 0%, #000 100%) !important;
+  border-top: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+#special-banner {
+  border: 2px solid var(--primary) !important;
+  background: rgba(128, 0, 0, 0.05) !important;
+  backdrop-filter: blur(10px);
+}
+
+.moving-deal {
+  animation: promoFloat 3s ease-in-out infinite, glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 15px rgba(128,0,0,0.3), inset 0 0 10px rgba(128,0,0,0.1); }
+  50% { box-shadow: 0 0 40px rgba(128,0,0,0.6), inset 0 0 20px rgba(128,0,0,0.2); }
+  100% { box-shadow: 0 0 15px rgba(128,0,0,0.3), inset 0 0 10px rgba(128,0,0,0.1); }
+}
+
+#special-new-price {
+  animation: pricePop 1s ease-in-out infinite alternate;
+  display: inline-block;
+  color: #fff !important;
+  text-shadow: 0 0 15px var(--primary);
+}
+
+@keyframes pricePop {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+.save-badge-anim {
+  animation: pulseBadge 1.5s infinite;
+}
+
+@keyframes pulseBadge {
+  0% { transform: scale(1); background: #27ae60; }
+  50% { transform: scale(1.15); background: #2ecc71; }
+  100% { transform: scale(1); background: #27ae60; }
+}
+
 ::-webkit-scrollbar-thumb:hover { background: var(--gray); }
 
 /* ====== PRODUCT CARD REFINEMENTS ====== */
