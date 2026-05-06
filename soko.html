@@ -640,26 +640,12 @@
                     <div class="relative overflow-hidden aspect-square">
                         <img src="${a.img}" class="ad-img" loading="lazy">
                         ${a.isBoosted ? `<div class="absolute top-2 left-2 boost-badge ${a.boostLevel}"><i class="fa-solid fa-rocket"></i> ${a.boostLevel}</div>` : ''}
-                        ${a.oldPrice ? `
-                            <div class="absolute bottom-2 left-2 bg-red-600 text-white text-[8px] font-black px-2 py-1 rounded-full animate-pulse uppercase tracking-tighter">
-                                Save ${calculateSavings(a.price, a.oldPrice)}%
-                            </div>
-                        ` : ''}
                     </div>
-                    <div class="flex items-baseline gap-1.5 mt-2 px-1">
-                        <p class="ad-price">${a.price}</p>
-                        ${a.oldPrice ? `<p class="text-[9px] text-slate-400 line-through font-bold">${a.oldPrice}</p>` : ''}
-                    </div>
+                    <p class="ad-price">${a.price}</p>
                     <p class="ad-name">${a.name}</p>
                     <p class="text-[8px] text-slate-400 mt-0.5 uppercase font-bold tracking-wider"><i class="fa-solid fa-location-dot mr-1"></i>${a.loc}</p>
                 </div>
             `).join('');
-        }
-
-        function calculateSavings(price, old) {
-            const p = parseInt(price.replace(/\D/g, ''));
-            const o = parseInt(old.replace(/\D/g, ''));
-            return Math.round(((o - p) / o) * 100);
         }
 
         function openP(id) {
