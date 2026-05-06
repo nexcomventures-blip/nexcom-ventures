@@ -50,14 +50,16 @@ body {
 .preloader-inner { text-align: center; }
 
 .logo-anim {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 4rem;
-  font-weight: 900;
-  letter-spacing: -2px;
-  color: var(--text);
-  animation: pulse 1s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  animation: pulse 1.5s ease-in-out infinite;
 }
-.logo-anim span { color: var(--primary); }
+.logo-anim img {
+  width: 120px;
+  height: auto;
+}
 
 .preloader-bar {
   width: 200px;
@@ -120,14 +122,20 @@ body {
 }
 
 .nav-logo {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--text);
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  letter-spacing: -1px;
+  height: 100%;
 }
-.nav-logo span { color: var(--primary); }
+.nav-logo img {
+  height: 54px;
+  width: auto;
+  display: block;
+  transition: var(--transition);
+}
+.nav-logo:hover img {
+  transform: scale(1.02);
+}
 
 .nav-links {
   display: flex;
@@ -1486,13 +1494,14 @@ footer {
   border-bottom: 1px solid var(--border);
 }
 .footer-logo {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 900;
-  letter-spacing: -1px;
+  display: flex;
+  align-items: center;
   margin-bottom: 1rem;
 }
-.footer-logo span { color: var(--primary); }
+.footer-logo img {
+  width: 160px;
+  height: auto;
+}
 .footer-brand p { color: var(--gray); font-size: 0.875rem; line-height: 1.7; margin-bottom: 1.25rem; }
 
 .footer-social { display: flex; gap: 0.75rem; }
