@@ -1595,3 +1595,59 @@ footer {
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--gray); }
+
+/* ====== PRODUCT CARD REFINEMENTS ====== */
+.price-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.original-price {
+  text-decoration: line-through;
+  color: var(--gray);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--primary);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 4px;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(128,0,0,0.3);
+}
+
+/* ====== MOVING PROMO ANIMATIONS ====== */
+@keyframes promoFloat {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-5px) scale(1.02); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 5px rgba(128,0,0,0.2); }
+  50% { box-shadow: 0 0 20px rgba(128,0,0,0.5); }
+  100% { box-shadow: 0 0 5px rgba(128,0,0,0.2); }
+}
+
+.moving-deal {
+  animation: promoFloat 3s ease-in-out infinite, glowPulse 3s ease-in-out infinite;
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #212529 0%, #800000 50%, #212529 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  to { background-position: 200% center; }
+}
