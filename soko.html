@@ -49,466 +49,575 @@
             transition: 0.3s;
         }
 
+        /* Content Layout */
+        .content-width { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+
+        /* Logo Design */
+        .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+        .logo-box {
+            width: 32px;
+            height: 32px;
+            background: var(--brand);
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 18px;
+        }
+        .logo-text { line-height: 1; }
+        .logo-top { display: block; font-weight: 800; font-size: 16px; color: var(--text); letter-spacing: -0.5px; }
+        .logo-bottom { display: block; font-weight: 700; font-size: 8px; color: var(--brand); letter-spacing: 2px; text-transform: uppercase; }
+
+        /* Navigation */
+        .nav-sticky { 
+            position: sticky; 
+            top: 0; 
+            z-index: 50; 
+            background: var(--bg);
+            border-bottom: 1px solid var(--border); 
+        }
+
+        /* Modern Category Scroller */
+        .cat-scroll { display: flex; gap: 8px; overflow-x: auto; padding: 12px 0; scrollbar-width: none; }
+        .cat-scroll::-webkit-scrollbar { display: none; }
+        .cat-btn {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 99px;
+            white-space: nowrap;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+            transition: 0.2s;
+        }
+        .cat-btn.active { background: var(--brand); border-color: var(--brand); color: white; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-        .safe-meeting-banner {
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            border: 1px solid #e2e8f0;
-        }
-        .dark .safe-meeting-banner {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid #334155;
-        }
-        
-        .tab-active { color: var(--brand); border-bottom: 2px solid var(--brand); }
+        /* Performance Grid */
+        .ad-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        @media (min-width: 768px) { .ad-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; } }
 
-        /* M-Pesa Brand Colors */
+        .ad-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 8px;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        .ad-price { font-weight: 800; font-size: 14px; color: var(--brand); }
+        .ad-name { font-size: 12px; font-weight: 600; color: var(--text); display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+
+        .ad-img { aspect-ratio: 1; width: 100%; border-radius: 10px; margin-bottom: 8px; object-fit: cover; background: var(--surface); }
+        
+        .ad-card.boost-gold { border: 2px solid #fbbf24; background: var(--surface); box-shadow: 0 4px 20px rgba(251, 191, 36, 0.15); }
+        .ad-card.boost-silver { border: 2px solid #1e293b; background: var(--surface); }
+        .ad-card.boost-bronze { border: 2px solid #b45309; background: var(--surface); }
+
+        .boost-badge {
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 7px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .boost-badge.gold { background: #fbbf24; color: #000; }
+        .boost-badge.silver { background: #1e293b; color: #fff; }
+        .boost-badge.bronze { background: #b45309; color: #fff; }
+
+        /* Search */
+        .search-wrap { position: relative; margin: 12px 0; }
+        .search-input {
+            width: 100%;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 10px 40px;
+            border-radius: 12px;
+            font-size: 13px;
+            outline: none;
+            color: var(--text);
+        }
+
+        /* Modal Theme */
+        .modal-bg { background: var(--card); color: var(--text); }
+
+        /* M-Pesa Colors */
         .mpesa-green { color: #49B04D; }
         .mpesa-bg { background-color: #49B04D; }
+
+        .upgrade-card {
+            padding: 12px;
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .upgrade-card.selected { border-color: var(--brand); background: rgba(37, 99, 235, 0.05); }
+
     </style>
 </head>
-<body class="pb-24">
+<body>
 
-    <!-- Header -->
-    <header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 px-4 py-2 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white shadow-md shadow-blue-500/20">
-                <i class="fa fa-shopping-bag text-sm"></i>
-            </div>
-            <div>
-                <h1 class="text-base font-black tracking-tighter leading-none">SOKO <span class="text-blue-600 uppercase">MPYA</span></h1>
-                <p class="text-[8px] text-slate-400 font-bold uppercase tracking-widest">Verified Marketplace</p>
+    <nav class="nav-sticky">
+        <div class="content-width h-14 flex items-center justify-between px-4">
+            <a href="#" class="logo">
+                <div class="logo-box">S</div>
+                <div class="logo-text">
+                    <span class="logo-top">SOKO</span>
+                    <span class="logo-bottom">MPYA</span>
+                </div>
+            </a>
+            <div class="flex items-center gap-2">
+                <button onclick="postAd()" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide">Post Ad</button>
+                <button onclick="toggleDark()" class="w-8 h-8 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-full">
+                    <i class="fa-solid fa-moon text-slate-600 dark:text-slate-300 text-sm"></i>
+                </button>
             </div>
         </div>
-        <div class="flex items-center gap-2">
-            <button onclick="toggleTheme()" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
-                <i class="fa fa-moon dark:fa-sun text-slate-600 dark:text-slate-300 text-xs"></i>
+    </nav>
+
+    <main class="content-width px-4">
+        <div class="search-wrap">
+            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+            <input type="text" class="search-input" id="qInput" placeholder="Search laptops, phones, cars..." onkeyup="search(this.value)">
+            <div class="absolute right-3.5 top-1/2 -translate-y-1/2 flex items-center gap-2">
+                <button onclick="detectMyLocation()" class="w-7 h-7 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center hover:bg-blue-100 transition" title="Near Me">
+                    <i class="fa-solid fa-location-crosshairs text-[10px]"></i>
+                </button>
+                <button onclick="document.getElementById('requestModal').classList.remove('hidden')" class="w-7 h-7 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center hover:bg-blue-100 transition">
+                    <i class="fa-solid fa-hand-holding-heart text-[10px]"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-2 mb-4 mt-2">
+            <button onclick="document.getElementById('boostInfoModal').classList.remove('hidden')" class="flex-1 bg-gradient-to-r from-amber-400 to-orange-500 text-white p-3 rounded-xl flex items-center justify-between shadow-md transition hover:scale-[1.01]">
+                <div>
+                    <p class="text-[8px] font-black uppercase opacity-80">Seller Center</p>
+                    <p class="text-[10px] font-black uppercase tracking-widest">🚀 Boost sales & Stats</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-[10px]"></i>
             </button>
-            <div class="relative">
-                <div class="w-1.5 h-1.5 bg-red-500 rounded-full absolute top-0 right-0 border border-white dark:border-slate-900"></div>
-                <i class="fa fa-bell text-slate-400 text-lg"></i>
-            </div>
-        </div>
-    </header>
-
-    <!-- Search & Location -->
-    <div class="p-4 space-y-3">
-        <div class="flex items-center gap-2">
-            <div class="flex-1 relative">
-                <i class="fa fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
-                <input type="text" id="searchInput" placeholder="Search laptops, phones..." class="w-full pl-10 pr-4 py-2.5 bg-slate-100 dark:bg-slate-800 border-none rounded-xl text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all">
-                <i onclick="startVoiceSearch()" class="fa fa-microphone absolute right-3.5 top-1/2 -translate-y-1/2 text-blue-500 cursor-pointer text-sm"></i>
-            </div>
-            <div onclick="openRequestModal()" class="w-10 h-10 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 cursor-pointer hover:scale-95 transition border border-blue-100 dark:border-blue-800">
-                <i class="fa fa-hand-holding-heart text-lg"></i>
-            </div>
+            <button onclick="document.getElementById('postModal').classList.remove('hidden')" class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center shadow-md transition hover:bg-blue-700">
+                <i class="fa-solid fa-plus text-lg"></i>
+            </button>
         </div>
 
-        <!-- Location Bar with Upgrade 3 -->
-        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
-            <div onclick="detectMyLocation()" class="flex-shrink-0 flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-full text-xs font-bold cursor-pointer hover:bg-blue-700 transition shadow-sm">
-                <i class="fa fa-location-crosshairs"></i>
-                <span>Near Me</span>
-            </div>
-            <div id="locationList" class="flex items-center gap-2">
-                <!-- Locations will be populated here -->
-            </div>
+        <div class="cat-scroll" id="cats"></div>
+
+        <div class="flex items-center justify-between py-4">
+            <h2 class="text-base font-black text-slate-800 dark:text-slate-100 tracking-tight" id="title">Featured Market</h2>
+            <span class="text-[9px] font-black uppercase text-blue-600 bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded" id="stats"></span>
         </div>
 
-        <!-- Categories Scroll -->
-        <div class="flex items-center gap-4 overflow-x-auto no-scrollbar py-2 border-b border-slate-100 dark:border-slate-800">
-            <div onclick="filterCategory('All')" class="category-tab tab-active flex-shrink-0 text-xs font-black uppercase tracking-widest pb-2 cursor-pointer">All</div>
-            <div onclick="filterCategory('Electronics')" class="category-tab flex-shrink-0 text-xs font-black uppercase tracking-widest pb-2 cursor-pointer text-slate-400">Electronics</div>
-            <div onclick="filterCategory('Vehicles')" class="category-tab flex-shrink-0 text-xs font-black uppercase tracking-widest pb-2 cursor-pointer text-slate-400">Vehicles</div>
-            <div onclick="filterCategory('Property')" class="category-tab flex-shrink-0 text-xs font-black uppercase tracking-widest pb-2 cursor-pointer text-slate-400">Property</div>
-            <div onclick="filterCategory('Home')" class="category-tab flex-shrink-0 text-xs font-black uppercase tracking-widest pb-2 cursor-pointer text-slate-400">Home</div>
-        </div>
-    </div>
-
-    <!-- Main Feed -->
-    <main id="adFeed" class="p-4 grid grid-cols-2 gap-4">
-        <!-- Ads populate here -->
+        <div class="ad-grid fast-load" id="grid"></div>
+        <div class="h-20"></div>
     </main>
 
-    <!-- Floating Action Button -->
-    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3">
-        <button onclick="openBoostModal()" class="flex items-center gap-2 px-4 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl font-black text-[10px] uppercase tracking-widest shadow-xl hover:scale-105 active:scale-95 transition">
-            <i class="fa fa-rocket text-blue-500 text-sm"></i>
-            Boost Sales
-        </button>
-        <button onclick="openPostModal()" class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center shadow-xl shadow-blue-500/40 hover:scale-110 active:scale-90 transition">
-            <i class="fa fa-plus text-xl"></i>
-        </button>
-    </div>
-
     <!-- Ad Detail Modal -->
-    <div id="adModal" class="fixed inset-0 z-50 hidden">
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeModal()"></div>
-        <div class="absolute bottom-0 left-0 right-0 bg-white dark:bg-slate-900 rounded-t-[32px] max-h-[90vh] overflow-y-auto no-scrollbar">
-            <div class="sticky top-0 z-10 p-4 flex justify-between items-center bg-white/80 dark:bg-slate-900/80 backdrop-blur-md">
-                <button onclick="closeModal()" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
-                    <i class="fa fa-times"></i>
-                </button>
-                <div class="flex items-center gap-2">
-                    <button onclick="shareAd()" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
-                        <i class="fa fa-share-nodes"></i>
-                    </button>
+    <div id="modal" class="fixed inset-0 z-[100] hidden flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/50 backdrop-blur-sm">
+        <div class="modal-bg w-full max-w-lg rounded-t-3xl sm:rounded-3xl shadow-2xl relative animate-in slide-in-from-bottom duration-300 max-h-[90vh] overflow-y-auto no-scrollbar">
+            <div class="sticky top-0 right-0 flex justify-end p-4 z-[110] pointer-events-none">
+                <div class="flex gap-2 pointer-events-auto">
+                    <button id="detailCompareBtn" class="w-8 h-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur rounded-full flex items-center justify-center text-slate-700 dark:text-slate-200 shadow-md border border-slate-200/50 dark:border-slate-700/50"><i class="fa-solid fa-scale-balanced text-sm"></i></button>
+                    <button onclick="closeM()" class="w-8 h-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur rounded-full flex items-center justify-center text-slate-700 dark:text-slate-200 shadow-md border border-slate-200/50 dark:border-slate-700/50"><i class="fa-solid fa-xmark text-sm"></i></button>
                 </div>
             </div>
-            
-            <div id="modalContent" class="p-6 pt-0">
-                <!-- Content injected here -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Boost Modal (Upgrade 1 & 2 Preview) -->
-    <div id="boostModal" class="fixed inset-0 z-50 hidden">
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeBoostModal()"></div>
-        <div class="absolute bottom-0 left-0 right-0 bg-white dark:bg-slate-900 rounded-t-[32px] p-8">
-            <div class="w-12 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full mx-auto mb-8"></div>
-            <h2 class="text-2xl font-black mb-2">Grow your sales <span class="text-blue-600">Faster</span></h2>
-            <p class="text-slate-500 text-sm mb-8">Get up to 10x more views and calls with our premium boost plans.</p>
-
-            <!-- Upgrade 2: Analytics Preview -->
-            <div class="mb-8 p-4 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700">
-                <p class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-3">Your Platform Stats</p>
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="text-center">
-                        <p class="text-xl font-black text-blue-600">1.2k</p>
-                        <p class="text-[9px] text-slate-500 uppercase font-bold">Views</p>
-                    </div>
-                    <div class="text-center border-x border-slate-200 dark:border-slate-700">
-                        <p class="text-xl font-black text-green-500">84</p>
-                        <p class="text-[9px] text-slate-500 uppercase font-bold">Calls</p>
-                    </div>
-                    <div class="text-center">
-                        <p class="text-xl font-black text-orange-500">12</p>
-                        <p class="text-[9px] text-slate-500 uppercase font-bold">Sold</p>
-                    </div>
+            <div class="p-4 sm:p-6 -mt-10">
+                <div class="relative w-full aspect-square bg-slate-50 rounded-2xl mb-4 overflow-hidden">
+                    <div id="carousel" class="flex transition-transform duration-300 h-full"></div>
+                    <div id="carouselDots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1"></div>
                 </div>
-            </div>
-
-            <div class="space-y-4">
-                <div onclick="initMpesaPayment('Gold', 1500)" class="p-3 rounded-xl border-2 border-slate-100 dark:border-slate-800 flex items-center justify-between hover:border-blue-500 transition cursor-pointer">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-yellow-400/20 rounded-lg flex items-center justify-center text-yellow-600">
-                            <i class="fa fa-crown text-lg"></i>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <div class="flex items-center gap-1.5 mb-1">
+                            <span id="m-badge" class="text-[9px] font-black uppercase text-blue-600 block"></span>
+                            <div class="flex items-center gap-1 bg-green-50 text-green-700 px-1.5 py-0.5 rounded text-[7px] font-black uppercase border border-green-100">
+                                <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span> Online
+                            </div>
                         </div>
-                        <div>
-                            <p class="text-sm font-bold">Gold Plan</p>
-                            <p class="text-[10px] text-slate-500">Top of category for 30 days</p>
+                        <h3 id="m-name" class="text-lg font-bold mb-1"></h3>
+                        <div class="flex items-center gap-1 text-amber-400 text-[9px] mb-2">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-slate-400 font-bold ml-1">(48 Reviews)</span>
                         </div>
                     </div>
-                    <p class="font-black text-blue-600 text-sm">KSh 1,500</p>
-                </div>
-                <div onclick="initMpesaPayment('Silver', 800)" class="p-3 rounded-xl border-2 border-slate-100 dark:border-slate-800 flex items-center justify-between hover:border-blue-500 transition cursor-pointer">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-slate-400/20 rounded-lg flex items-center justify-center text-slate-600">
-                            <i class="fa fa-gem text-lg"></i>
-                        </div>
-                        <div>
-                            <p class="text-sm font-bold">Silver Plan</p>
-                            <p class="text-[10px] text-slate-500">Priority listing for 14 days</p>
-                        </div>
-                    </div>
-                    <p class="font-black text-blue-600 text-sm">KSh 800</p>
-                </div>
-            </div>
-            
-            <a href="https://wa.me/254722816001?text=Hi, I want to boost my ad on Soko Mpya" class="block w-full mt-8 bg-blue-600 text-white text-center py-4 rounded-2xl font-bold">Contact Support</a>
-        </div>
-    </div>
-
-    <!-- M-Pesa Payment Simulation (Upgrade 1) -->
-    <div id="paymentModal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-6">
-        <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closePaymentModal()"></div>
-        <div class="relative w-full max-w-sm bg-white dark:bg-slate-900 rounded-[32px] overflow-hidden shadow-2xl">
-            <div class="mpesa-bg p-6 text-white text-center">
-                <div class="w-16 h-16 bg-white/20 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                    <i class="fa fa-mobile-screen-button text-3xl"></i>
-                </div>
-                <h3 class="text-xl font-black">M-PESA STK PUSH</h3>
-                <p class="text-sm opacity-80">Verify on your phone</p>
-            </div>
-            <div class="p-8 text-center">
-                <p class="text-slate-500 text-sm mb-2">Paying for <span id="paymentPlan" class="font-bold text-slate-900 dark:text-white">Gold Plan</span></p>
-                <p id="paymentAmount" class="text-4xl font-black mb-6 text-slate-900 dark:text-white">KSh 1,500</p>
-                
-                <div class="flex flex-col gap-3">
-                    <div class="flex items-center gap-4 p-4 bg-slate-100 dark:bg-slate-800 rounded-2xl">
-                        <i class="fa fa-spinner fa-spin mpesa-green text-xl"></i>
-                        <p class="text-xs font-bold text-slate-600 dark:text-slate-300 text-left">Requesting M-Pesa prompt on your phone... Check your screen now.</p>
+                    <div class="text-right">
+                        <p id="m-price" class="text-xl font-black text-blue-600"></p>
+                        <p id="m-oldPrice" class="text-xs text-slate-400 line-through"></p>
                     </div>
                 </div>
-
-                <div class="mt-8 grid grid-cols-2 gap-4">
-                    <button onclick="closePaymentModal()" class="py-3 bg-slate-100 dark:bg-slate-800 rounded-xl font-bold text-sm">Cancel</button>
-                    <button onclick="verifyPayment()" class="py-3 mpesa-bg text-white rounded-xl font-bold text-sm">I have Paid</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- AI Price Check Modal (Upgrade 4) -->
-    <div id="priceModal" class="fixed inset-0 z-50 hidden">
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closePriceModal()"></div>
-        <div class="absolute bottom-0 left-0 right-0 bg-white dark:bg-slate-900 rounded-t-[32px] p-8">
-            <div class="w-12 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full mx-auto mb-8"></div>
-            <div class="flex items-center gap-3 mb-4">
-                <div class="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-600">
-                    <i class="fa fa-sparkles"></i>
-                </div>
-                <h2 class="text-2xl font-black">AI Price Check</h2>
-            </div>
-            <p class="text-slate-500 text-sm mb-6">Enter details to get an estimated market value in Nairobi.</p>
-            
-            <div class="space-y-4">
-                <input type="text" id="priceModel" placeholder="e.g. MacBook Pro M1 2020 8/256" class="w-full p-4 bg-slate-100 dark:bg-slate-800 rounded-2xl outline-none focus:ring-2 focus:ring-purple-500 transition">
-                <button onclick="estimatePrice()" class="w-full py-4 bg-purple-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest">Get Estimate</button>
-                
-                <div id="priceResult" class="hidden p-6 bg-purple-50 dark:bg-purple-900/30 rounded-2xl border border-purple-100 dark:border-purple-800">
-                    <p class="text-[10px] font-black uppercase text-purple-400 mb-2">Market Estimate</p>
-                    <div class="flex items-baseline gap-2">
-                        <p id="estValue" class="text-3xl font-black text-purple-600">KSh 85,000</p>
-                        <p class="text-xs text-purple-400">Avg.</p>
+                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl text-xs text-slate-500 mb-4 leading-relaxed" id="m-specs"></div>
+                <div onclick="showSafety()" class="flex items-center gap-2 mb-6 p-3 bg-blue-50 dark:bg-blue-900/30 rounded-xl border border-blue-100 dark:border-blue-800 cursor-pointer hover:bg-blue-100 transition">
+                    <i class="fa-solid fa-shield-check text-blue-600"></i>
+                    <div class="flex-1">
+                        <p class="text-[9px] font-bold text-blue-700 dark:text-blue-400 uppercase tracking-wider">Protected by Soko Mpya Escrow</p>
+                        <p class="text-[7px] text-blue-500 font-bold uppercase tracking-tight">Tap to see how it works</p>
                     </div>
-                    <p class="text-[10px] text-purple-500 mt-2 font-bold uppercase italic">Based on real listings on Soko Mpya & Jiji</p>
+                    <i class="fa-solid fa-chevron-right text-blue-300 text-xs"></i>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <button onclick="call()" class="bg-blue-600 text-white py-3.5 rounded-xl font-bold uppercase text-[10px] tracking-widest">Call</button>
+                    <button onclick="wpp()" class="bg-[#25D366] text-white py-3.5 rounded-xl font-bold uppercase text-[10px] tracking-widest">WhatsApp</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Post Ad Modal -->
-    <div id="postModal" class="fixed inset-0 z-50 hidden">
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closePostModal()"></div>
-        <div class="absolute bottom-0 left-0 right-0 bg-white dark:bg-slate-900 rounded-t-[32px] max-h-[90vh] overflow-y-auto p-6">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-xl font-black">Post New Ad</h2>
-                <button onclick="openPriceModal()" class="flex items-center gap-2 px-3 py-1.5 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-full text-[10px] font-bold uppercase tracking-wider">
-                    <i class="fa fa-sparkles"></i> AI Price Check
+    <div id="postModal" class="fixed inset-0 z-[110] hidden flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/50 backdrop-blur-sm">
+        <div class="modal-bg w-full max-w-lg rounded-t-3xl sm:rounded-3xl overflow-hidden shadow-2xl relative max-h-[95vh] flex flex-col">
+            <div class="p-4 border-b flex items-center justify-between">
+                <h3 class="font-black text-lg">Post New Ad</h3>
+                <button onclick="document.getElementById('priceModal').classList.remove('hidden')" class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-[8px] font-black uppercase tracking-widest border border-purple-100">
+                    <i class="fa-solid fa-sparkles mr-1"></i> AI Price Check
                 </button>
+                <button onclick="closePost()" class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-600"><i class="fa-solid fa-xmark"></i></button>
             </div>
-            <form id="postForm" onsubmit="handlePost(event)" class="space-y-4">
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="col-span-2 border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-2xl p-8 text-center cursor-pointer hover:border-blue-500 transition">
-                        <i class="fa fa-cloud-arrow-up text-3xl text-slate-300 mb-2"></i>
-                        <p class="text-xs font-bold text-slate-400">Upload Photos</p>
-                    </div>
-                    <input type="text" name="name" placeholder="Item Name" required class="col-span-2 p-4 bg-slate-100 dark:bg-slate-800 rounded-2xl outline-none">
-                    <input type="text" name="price" placeholder="Price (e.g. KSh 25,000)" required class="p-4 bg-slate-100 dark:bg-slate-800 rounded-2xl outline-none">
-                    <select name="category" class="p-4 bg-slate-100 dark:bg-slate-800 rounded-2xl outline-none">
-                        <option>Electronics</option>
-                        <option>Vehicles</option>
-                        <option>Property</option>
-                    </select>
+            
+            <div class="p-6 overflow-y-auto space-y-4 no-scrollbar">
+                <div id="syncDropzone" class="bg-blue-50 border-2 border-dashed border-blue-200 rounded-xl p-4 text-center cursor-pointer hover:bg-blue-100 transition" onclick="document.getElementById('syncInput').click()">
+                    <i class="fa-solid fa-cloud-arrow-up text-blue-500 text-xl mb-1"></i>
+                    <p class="text-[9px] font-black text-blue-700 uppercase">Inventory Sync</p>
+                    <p class="text-[8px] text-blue-500 mt-0.5">Drop CSV/JSON for bulk upload</p>
+                    <input type="file" id="syncInput" class="hidden" accept=".csv,.json" onchange="handleSync(this)">
                 </div>
-                <textarea name="desc" placeholder="Describe your item..." class="w-full p-4 bg-slate-100 dark:bg-slate-800 rounded-2xl outline-none h-32"></textarea>
-                <button type="submit" class="w-full py-4 bg-blue-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest shadow-xl shadow-blue-500/20">Post Ad</button>
-            </form>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="col-span-2">
+                        <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">What are you selling?</label>
+                        <input type="text" id="postName" placeholder="e.g. MacBook Pro M1" class="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl text-sm outline-none focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Category</label>
+                        <select id="postCat" class="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl text-sm outline-none appearance-none">
+                            <option value="laptops">Laptops</option>
+                            <option value="phones">Phones</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="vehicles">Vehicles</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Price (KSh)</label>
+                        <input type="number" id="postPrice" placeholder="e.g. 45000" class="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl text-sm outline-none focus:border-blue-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Condition</label>
+                    <div class="flex gap-2">
+                        <button onclick="setCond(this, 'New')" class="cond-btn flex-1 py-2 rounded-lg border-2 border-blue-600 text-[9px] font-black uppercase tracking-wider bg-blue-50 text-blue-600">New</button>
+                        <button onclick="setCond(this, 'Ex-UK')" class="cond-btn flex-1 py-2 rounded-lg border border-slate-200 text-[9px] font-black uppercase tracking-wider bg-slate-50 text-slate-500">Ex-UK</button>
+                    </div>
+                </div>
+
+                <textarea id="postSpecs" rows="2" placeholder="Describe RAM, Storage, etc." class="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl text-sm outline-none focus:border-blue-500"></textarea>
+
+                <button onclick="publishAd()" class="w-full bg-blue-600 text-white py-4 rounded-xl font-black uppercase text-[10px] tracking-widest shadow-lg active:scale-95 transition">Publish Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upgrade Ad Modal (Analytics Included) -->
+    <div id="upgradeModal" class="fixed inset-0 z-[120] hidden flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/50 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-lg rounded-t-3xl sm:rounded-3xl overflow-hidden shadow-2xl relative p-6 animate-in slide-in-from-bottom duration-300">
+            <h3 class="font-black text-xl mb-1">🚀 Boost Your Ad</h3>
+            <p class="text-slate-500 text-xs mb-6">Reach up to 20x more buyers instantly.</p>
+
+            <!-- Analytics Preview -->
+            <div class="mb-6 p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                <div class="flex justify-between items-center mb-3">
+                    <p class="text-[9px] font-black uppercase text-slate-400 tracking-widest">Platform Insights</p>
+                    <span class="text-[8px] bg-green-100 text-green-700 px-2 py-0.5 rounded font-black uppercase">Live</span>
+                </div>
+                <div class="grid grid-cols-3 gap-2">
+                    <div class="text-center">
+                        <p class="text-lg font-black text-blue-600">1.2k</p>
+                        <p class="text-[8px] text-slate-500 uppercase font-bold">Views</p>
+                    </div>
+                    <div class="text-center border-x border-slate-200">
+                        <p class="text-lg font-black text-green-500">84</p>
+                        <p class="text-[8px] text-slate-500 uppercase font-bold">Leads</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-lg font-black text-orange-500">12</p>
+                        <p class="text-[8px] text-slate-500 uppercase font-bold">Sold</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="space-y-3 mb-8">
+                <div class="upgrade-card selected" id="up-silver" onclick="selectUpgrade('up-silver', 'silver')">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-bold text-sm">Silver Standard (14 Days)</p>
+                            <p class="text-[9px] text-slate-400">2 weeks of top-tier visibility.</p>
+                        </div>
+                        <span class="font-black text-blue-600 text-sm">KSh 749</span>
+                    </div>
+                </div>
+                <div class="upgrade-card" id="up-gold" onclick="selectUpgrade('up-gold', 'gold')">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-bold text-sm">Gold Diamond (30 Days)</p>
+                            <p class="text-[9px] text-slate-400">Omnipresent position + Social push.</p>
+                        </div>
+                        <span class="font-black text-blue-600 text-sm">KSh 2,499</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <button onclick="skipUpgrade()" class="text-slate-400 font-bold text-[10px] uppercase tracking-widest">Maybe Later</button>
+                <button onclick="initMpesaPayment(selectedBoost, selectedBoost === 'silver' ? 749 : 2499)" class="bg-blue-600 text-white py-4 rounded-xl font-black uppercase text-[10px] tracking-widest shadow-lg">Pay & Boost</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- M-Pesa Payment Simulation -->
+    <div id="paymentModal" class="fixed inset-0 z-[150] hidden flex items-center justify-center p-6">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closePaymentModal()"></div>
+        <div class="relative w-full max-w-sm bg-white rounded-[32px] overflow-hidden shadow-2xl">
+            <div class="mpesa-bg p-5 text-white text-center">
+                <i class="fa-solid fa-mobile-screen-button text-2xl mb-2"></i>
+                <h3 class="text-lg font-black">M-PESA STK PUSH</h3>
+            </div>
+            <div class="p-8 text-center">
+                <p class="text-slate-500 text-[10px] uppercase font-black mb-1">Plan: <span id="paymentPlan" class="text-slate-900">Silver</span></p>
+                <p id="paymentAmount" class="text-3xl font-black mb-6 text-slate-900">KSh 749</p>
+                <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl mb-6">
+                    <i class="fa-solid fa-spinner fa-spin mpesa-green text-xl"></i>
+                    <p class="text-[9px] font-bold text-slate-600 text-left">Requesting M-Pesa prompt on your phone... Check your screen now.</p>
+                </div>
+                <button onclick="verifyPayment()" class="w-full py-4 mpesa-bg text-white rounded-xl font-bold text-[10px] uppercase tracking-widest">I have Paid</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Price Check Modal -->
+    <div id="priceModal" class="fixed inset-0 z-[160] hidden flex items-center justify-center p-6 bg-black/80 backdrop-blur-md">
+        <div class="relative w-full max-w-sm bg-white dark:bg-slate-900 rounded-3xl p-6 shadow-2xl">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-8 h-8 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center"><i class="fa-solid fa-sparkles"></i></div>
+                <h3 class="text-lg font-black">AI Price Check</h3>
+            </div>
+            <input type="text" id="priceModel" placeholder="e.g. MacBook Pro M1 2020" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl mb-4 outline-none text-sm">
+            <button onclick="estimatePrice()" class="w-full py-4 bg-purple-600 text-white rounded-xl font-black text-[10px] uppercase tracking-widest mb-6">Get Estimate</button>
+            <div id="priceResult" class="hidden p-4 bg-purple-50 rounded-xl border border-purple-100">
+                <p class="text-[8px] font-black uppercase text-purple-400 mb-1">Market Value</p>
+                <p id="estValue" class="text-2xl font-black text-purple-600"></p>
+                <p class="text-[8px] text-purple-400 mt-1 italic uppercase">Based on real listings across Kenya</p>
+            </div>
+            <button onclick="document.getElementById('priceModal').classList.add('hidden')" class="w-full text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-4">Close</button>
+        </div>
+    </div>
+
+    <!-- Comparisons, Requests modals (keeping them) -->
+    <div id="requestModal" class="fixed inset-0 z-[120] hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl relative flex flex-col max-h-[80vh]">
+            <div class="p-6 border-b flex items-center justify-between bg-slate-50 dark:bg-slate-800">
+                <h3 class="font-black text-xl">🔎 "I'm Looking For..."</h3>
+                <button onclick="document.getElementById('requestModal').classList.add('hidden')" class="w-8 h-8 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center shadow-md"><i class="fa-solid fa-xmark text-sm"></i></button>
+            </div>
+            <div class="p-6 overflow-y-auto" id="requestBoard"></div>
+            <div class="p-6 border-t bg-slate-50 dark:bg-slate-800 flex gap-2">
+                <input type="text" id="reqInput" placeholder="e.g. MacBook under 90k..." class="flex-1 bg-white dark:bg-slate-700 border border-slate-200 p-3 rounded-xl text-sm outline-none">
+                <button onclick="postRequest()" class="bg-blue-600 text-white px-6 rounded-xl font-black text-[10px] uppercase">Post</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison Table (keeping it) -->
+    <div id="compareModal" class="fixed inset-0 z-[120] hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
+            <div class="p-6 border-b flex items-center justify-between bg-slate-50 dark:bg-slate-800">
+                <h3 class="font-black text-xl">⚖️ Item Comparison</h3>
+                <button onclick="closeCompareTable()" class="w-8 h-8 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center shadow-md"><i class="fa-solid fa-xmark text-sm"></i></button>
+            </div>
+            <div class="p-6 overflow-x-auto"><table class="w-full text-left border-collapse" id="compareTable"></table></div>
+        </div>
+    </div>
+
+    <div id="compareBar" class="fixed bottom-0 left-0 right-0 z-[100] hidden bg-white dark:bg-slate-900 border-t border-slate-200 shadow-2xl">
+        <div class="content-width p-4 flex items-center justify-between">
+            <div class="flex items-center gap-3 overflow-x-auto no-scrollbar py-1" id="compareList"></div>
+            <div class="flex items-center gap-4 ml-4">
+                <button onclick="clearCompare()" class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Clear</button>
+                <button onclick="showCompareTable()" class="bg-blue-600 text-white px-5 py-3 rounded-xl font-black uppercase text-[10px] tracking-widest shadow-lg shadow-blue-500/30">Compare</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seller Boost Info -->
+    <div id="boostInfoModal" class="fixed inset-0 z-[110] hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-md rounded-3xl overflow-hidden shadow-2xl relative">
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 text-white text-center">
+                <i class="fa-solid fa-rocket text-3xl mb-2"></i>
+                <h3 class="text-lg font-black">Boost Your Listings</h3>
+            </div>
+            <div class="p-6 space-y-4">
+                <!-- Analytics Preview for Sellers -->
+                <div class="p-4 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-100 flex items-center justify-around text-center">
+                    <div><p class="text-xl font-black text-blue-600">8.4k</p><p class="text-[8px] text-slate-500 uppercase font-bold">Total Reach</p></div>
+                    <div class="w-px h-8 bg-slate-200"></div>
+                    <div><p class="text-xl font-black text-green-500">142</p><p class="text-[8px] text-slate-500 uppercase font-bold">Conversions</p></div>
+                </div>
+
+                <div class="flex items-center gap-4 p-3 border-2 border-amber-400 rounded-2xl bg-amber-50">
+                    <div class="w-10 h-10 bg-amber-400 text-white rounded-full flex items-center justify-center font-black">G</div>
+                    <div class="flex-1"><p class="text-[10px] font-black uppercase text-amber-600">Gold Tier</p><p class="text-[8px] text-slate-500">Always top + Spotlight badge</p></div>
+                    <p class="text-xs font-black">KES 500/wk</p>
+                </div>
+                <button onclick="window.location.href='https://wa.me/254722816001?text=I%20want%20to%20boost%20on%20Soko%20Mpya'" class="w-full bg-blue-600 text-white p-4 rounded-2xl font-black text-xs shadow-lg hover:bg-blue-700 transition uppercase tracking-widest">TALK TO AN AGENT</button>
+                <button onclick="document.getElementById('boostInfoModal').classList.add('hidden')" class="w-full text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-2">Maybe Later</button>
+            </div>
         </div>
     </div>
 
     <script>
-        // Initial Sample Data
-        let ads = [
-            { id: 1, name: 'MacBook Pro M1', price: 'KSh 95,000', cat: 'Electronics', loc: 'Nairobi', img: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=400&auto=format&fit=crop', views: 420, calls: 24, verified: true },
-            { id: 2, name: 'iPhone 13 Pro', price: 'KSh 72,000', cat: 'Electronics', loc: 'Mombasa', img: 'https://images.unsplash.com/photo-1632661674596-df8be070a5c5?q=80&w=400&auto=format&fit=crop', views: 180, calls: 12, verified: false },
-            { id: 3, name: 'Toyota Vitz 2015', price: 'KSh 850,000', cat: 'Vehicles', loc: 'Nairobi', img: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=400&auto=format&fit=crop', views: 950, calls: 45, verified: true },
-            { id: 4, name: 'Dell Latitude 7490', price: 'KSh 32,000', cat: 'Electronics', loc: 'Kisumu', img: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=400&auto=format&fit=crop', views: 310, calls: 8, verified: false }
+        const CATEGORIES = [
+            { id: 'all', name: 'All Items' }, { id: 'laptops', name: 'Laptops' }, { id: 'phones', name: 'Phones' },
+            { id: 'electronics', name: 'TV & Audio' }, { id: 'gaming', name: 'Video Games' }, { id: 'vehicles', name: 'Vehicles' }
         ];
 
-        let locations = ['Nairobi', 'Mombasa', 'Kisumu', 'Nakuru', 'Eldoret', 'Thika'];
-        let currentFilter = 'All';
-        let currentLoc = 'All';
+        let ADS = [
+            { id: 1, cat: 'laptops', name: 'HP EliteBook 840 G8', price: 'KSh 85,000', oldPrice: 'KSh 92,000', img: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=400&q=50', specs: 'Core i7 11th Gen • 16GB • 512GB SSD', badge: 'Verified', isBoosted: false, seller: 'Nexcom Ventures', loc: 'Nairobi CBD', phone: '254725258963' },
+            { id: 2, cat: 'phones', name: 'iPhone 15 Pro Max', price: 'KSh 185,000', oldPrice: 'KSh 195,000', img: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=400&q=50', specs: '256GB • Titanium • Battery 100%', badge: 'Premium', isBoosted: true, boostLevel: 'gold', seller: 'Nexcom Ventures', loc: 'Mama Ngina St', phone: '254725258963' },
+            { id: 3, cat: 'vehicles', name: 'Toyota Harrier 2018', price: 'KSh 3,850,000', img: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=400&q=50', specs: 'Zero Mileage • Sunroof', badge: 'New', isBoosted: false, seller: 'Car Mart', loc: 'Karen', phone: '254722816001' }
+        ];
 
-        function init() {
-            renderLocations();
-            renderAds();
-        }
+        let cur = 'all', compareItems = [], currentLoc = 'all';
 
-        function renderLocations() {
-            const container = document.getElementById('locationList');
-            container.innerHTML = locations.map(loc => `
-                <div onclick="filterLocation('${loc}')" class="flex-shrink-0 px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold cursor-pointer hover:bg-slate-200 transition ${currentLoc === loc ? 'bg-blue-100 text-blue-600 dark:bg-blue-900/30' : 'text-slate-500'}">
-                    ${loc}
-                </div>
-            `).join('');
-        }
+        function init() { renderCats(); filter('all'); }
 
-        function renderAds() {
-            const container = document.getElementById('adFeed');
-            const filtered = ads.filter(ad => 
-                (currentFilter === 'All' || ad.cat === currentFilter) &&
-                (currentLoc === 'All' || ad.loc === currentLoc)
-            );
+        const LOCS = ["All Kenya", "Nairobi", "Mombasa", "Kisumu", "Eldoret", "Nakuru", "Thika"];
 
-            container.innerHTML = filtered.map(ad => `
-                <div onclick="openAd(${ad.id})" class="bg-white dark:bg-slate-800 rounded-[24px] overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700/50 group active:scale-95 transition-transform duration-200">
-                    <div class="aspect-square relative overflow-hidden">
-                        <img src="${ad.img}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-2 left-2 flex gap-1">
-                            ${ad.verified ? '<div class="bg-blue-600 text-white px-2 py-1 rounded-lg text-[8px] font-black uppercase tracking-widest"><i class="fa fa-check-circle mr-1"></i>Verified</div>' : ''}
-                        </div>
-                        <div class="absolute bottom-2 right-2 px-2 py-1 bg-black/50 backdrop-blur-md rounded-lg text-[8px] text-white font-bold">
-                            <i class="fa fa-location-dot mr-1 text-blue-400"></i>${ad.loc}
-                        </div>
-                    </div>
-                    <div class="p-3">
-                        <h3 class="text-xs font-bold text-slate-800 dark:text-slate-200 mb-1 truncate">${ad.name}</h3>
-                        <p class="text-blue-600 font-black text-sm">${ad.price}</p>
+        function renderCats() {
+            const locOptions = LOCS.map(l => `<option value="${l === "All Kenya" ? 'all' : l}" ${currentLoc === l ? 'selected' : ''}>${l}</option>`).join('');
+            const locFilter = `
+                <div class="px-0 py-2 mb-2 flex items-center gap-2">
+                    <div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-3 py-2 rounded-xl">
+                        <i class="fa-solid fa-location-dot text-blue-600 text-[10px]"></i>
+                        <select id="locFilter" onchange="currentLoc=this.value; filter(cur)" class="bg-transparent text-[10px] font-black uppercase tracking-widest text-slate-500 outline-none cursor-pointer">
+                            ${locOptions}
+                        </select>
                     </div>
                 </div>
-            `).join('');
+            `;
+            const catsHtml = CATEGORIES.map(c => `<button class="cat-btn ${cur === c.id ? 'active' : ''}" onclick="filter('${c.id}')">${c.name}</button>`).join('');
+            document.getElementById('cats').innerHTML = locFilter + `<div class="flex gap-2 overflow-x-auto no-scrollbar">${catsHtml}</div>`;
         }
 
-        // Upgrade 3: GPS Detection
-        function detectMyLocation() {
-            if (!navigator.geolocation) {
-                alert("Geolocation is not supported by your browser.");
-                return;
-            }
-
-            const btn = document.querySelector('[onclick="detectMyLocation()"]');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Finding...';
-
-            navigator.geolocation.getCurrentPosition((position) => {
-                // In a real app, we'd use reverse geocoding to find the city.
-                // For this demo, we'll simulate finding "Nairobi"
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    currentLoc = 'Nairobi';
-                    renderLocations();
-                    renderAds();
-                    alert("Located: Nairobi CBD. Showing deals near you.");
-                }, 1500);
-            }, () => {
-                btn.innerHTML = originalText;
-                alert("Unable to retrieve your location. Please check permissions.");
+        function filter(id) {
+            cur = id; const q = document.getElementById('qInput').value.toLowerCase();
+            const loc = document.getElementById('locFilter').value;
+            const res = ADS.filter(a => {
+                const mc = id === 'all' || a.cat === id;
+                const mq = a.name.toLowerCase().includes(q) || a.specs.toLowerCase().includes(q);
+                const ml = loc === 'all' || (a.loc && a.loc.includes(loc));
+                return mc && mq && ml;
             });
+            render(res); renderCats();
+            document.getElementById('stats').innerText = `${res.length} items`;
         }
 
-        // Upgrade 1: M-Pesa STK Push
+        function render(ads) {
+            const boostOrder = { 'gold': 3, 'silver': 2, 'bronze': 1, 'none': 0 };
+            const sortedAds = [...ads].sort((a, b) => boostOrder[b.boostLevel || 'none'] - boostOrder[a.boostLevel || 'none']);
+            document.getElementById('grid').innerHTML = sortedAds.map(a => `
+                <div class="ad-card ${a.isBoosted ? 'boost-' + a.boostLevel : ''}" onclick="openP(${a.id})">
+                    <div class="relative overflow-hidden aspect-square">
+                        <img src="${a.img}" class="ad-img" loading="lazy">
+                        ${a.isBoosted ? `<div class="absolute top-2 left-2 boost-badge ${a.boostLevel}"><i class="fa-solid fa-rocket"></i> ${a.boostLevel}</div>` : ''}
+                    </div>
+                    <p class="ad-price">${a.price}</p>
+                    <p class="ad-name">${a.name}</p>
+                    <p class="text-[8px] text-slate-400 mt-0.5 uppercase font-bold tracking-wider"><i class="fa-solid fa-location-dot mr-1"></i>${a.loc}</p>
+                </div>
+            `).join('');
+        }
+
+        function openP(id) {
+            const a = ADS.find(ad => ad.id === id);
+            document.getElementById('carousel').innerHTML = `<img src="${a.img}" class="w-full h-full object-cover">`;
+            document.getElementById('m-name').innerText = a.name;
+            document.getElementById('m-price').innerText = a.price;
+            document.getElementById('m-oldPrice').innerText = a.oldPrice || '';
+            document.getElementById('m-specs').innerText = a.specs;
+            document.getElementById('m-badge').innerText = a.badge;
+            document.getElementById('modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeM() { document.getElementById('modal').classList.add('hidden'); document.body.style.overflow = 'auto'; }
+        function toggleDark() { document.documentElement.classList.toggle('dark'); }
+        function search() { filter(cur); }
+
+        // M-Pesa & GPS & Price Check Implementation
+        function detectMyLocation() {
+            const btn = document.querySelector('[onclick="detectMyLocation()"]');
+            const icon = btn.querySelector('i');
+            icon.classList.replace('fa-location-crosshairs', 'fa-spinner'); icon.classList.add('fa-spin');
+            navigator.geolocation.getCurrentPosition((p) => {
+                setTimeout(() => {
+                    icon.classList.replace('fa-spinner', 'fa-location-crosshairs'); icon.classList.remove('fa-spin');
+                    currentLoc = 'Nairobi'; filter(cur); alert("Location Detected: Nairobi CBD");
+                }, 1000);
+            }, () => { alert("Unable to detect location. Enable GPS."); });
+        }
+
         function initMpesaPayment(plan, amount) {
-            document.getElementById('paymentPlan').innerText = plan + ' Plan';
+            document.getElementById('paymentPlan').innerText = plan.toUpperCase();
             document.getElementById('paymentAmount').innerText = 'KSh ' + amount.toLocaleString();
             document.getElementById('paymentModal').classList.remove('hidden');
         }
 
-        function closePaymentModal() {
-            document.getElementById('paymentModal').classList.add('hidden');
-        }
+        function closePaymentModal() { document.getElementById('paymentModal').classList.add('hidden'); }
 
         function verifyPayment() {
-            alert("Verification initiated. Checking Daraja API for Transaction ID...");
-            setTimeout(() => {
-                alert("Success! Your ad has been boosted to " + document.getElementById('paymentPlan').innerText);
-                closePaymentModal();
-                closeBoostModal();
-            }, 2000);
+            alert("Payment Verified! Your ad is now boosted.");
+            closePaymentModal(); document.getElementById('upgradeModal').classList.add('hidden');
+            const ad = ADS[0]; ad.isBoosted = true; ad.boostLevel = selectedBoost; filter('all');
         }
 
-        // Upgrade 4: AI Price Check
         function estimatePrice() {
-            const model = document.getElementById('priceModel').value;
-            if(!model) return;
-            
-            const result = document.getElementById('priceResult');
-            const val = document.getElementById('estValue');
-            
-            result.classList.add('hidden');
-            
-            // Simulating AI logic
+            const m = document.getElementById('priceModel').value; if(!m) return;
+            const res = document.getElementById('priceResult'), val = document.getElementById('estValue');
+            res.classList.add('hidden');
             setTimeout(() => {
-                let price = 45000;
-                if(model.toLowerCase().includes('macbook')) price = 85000;
-                if(model.toLowerCase().includes('m1')) price = 110000;
-                if(model.toLowerCase().includes('iphone')) price = 65000;
-                
-                val.innerText = 'KSh ' + price.toLocaleString();
-                result.classList.remove('hidden');
-            }, 1000);
+                let p = 45000; if(m.toLowerCase().includes('macbook')) p = 85000;
+                val.innerText = 'KSh ' + p.toLocaleString(); res.classList.remove('hidden');
+            }, 800);
         }
 
-        function openAd(id) {
-            const ad = ads.find(a => a.id === id);
-            const modal = document.getElementById('adModal');
-            const content = document.getElementById('modalContent');
-            
-            content.innerHTML = `
-                <div class="aspect-video rounded-3xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="${ad.img}" class="w-full h-full object-cover">
-                </div>
-                
-                <div class="flex items-center justify-between mb-4">
-                    <span class="px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest">${ad.cat}</span>
-                    <div class="flex items-center gap-1 text-slate-400 text-xs">
-                        <i class="fa fa-eye"></i>
-                        <span>${ad.views} views</span>
-                    </div>
-                </div>
+        let lastCreatedAdId = null, selectedBoost = 'silver', selectedCond = 'New';
+        function postAd() { document.getElementById('postModal').classList.remove('hidden'); }
+        function closePost() { document.getElementById('postModal').classList.add('hidden'); }
+        function selectUpgrade(id, level) {
+            document.querySelectorAll('.upgrade-card').forEach(c => c.classList.remove('selected'));
+            document.getElementById(id).classList.add('selected'); selectedBoost = level;
+        }
+        function skipUpgrade() { document.getElementById('upgradeModal').classList.add('hidden'); alert("Ad published successfully!"); }
 
-                <h2 class="text-2xl font-black text-slate-900 dark:text-white mb-2">${ad.name}</h2>
-                <p class="text-3xl font-black text-blue-600 mb-6">${ad.price}</p>
-
-                <div class="safe-meeting-banner p-4 rounded-2xl mb-6">
-                    <div class="flex gap-3">
-                        <div class="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center text-white flex-shrink-0">
-                            <i class="fa fa-shield-halved"></i>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Soko Mpya Safety</p>
-                            <p class="text-xs font-bold text-slate-600 dark:text-slate-300">Meet at a physical shop or public place if outside town. Inspect item before paying.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-2 gap-4">
-                    <a href="tel:254722816001" class="flex items-center justify-center gap-2 py-4 bg-slate-100 dark:bg-slate-800 rounded-2xl font-bold text-sm">
-                        <i class="fa fa-phone"></i> Call Seller
-                    </a>
-                    <a href="https://wa.me/254722816001" class="flex items-center justify-center gap-2 py-4 bg-blue-600 text-white rounded-2xl font-bold text-sm">
-                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
-                    </a>
-                </div>
-            `;
-            
-            modal.classList.remove('hidden');
+        function publishAd() {
+            const n = document.getElementById('postName').value, p = document.getElementById('postPrice').value;
+            if(!n || !p) return alert("Fill Name and Price");
+            const newAd = { id: Date.now(), cat: document.getElementById('postCat').value, name: n, price: 'KSh ' + Number(p).toLocaleString(), img: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=50', specs: document.getElementById('postSpecs').value, badge: selectedCond, loc: 'Nairobi', phone: '254722816001' };
+            ADS.unshift(newAd); filter('all'); closePost();
+            setTimeout(() => document.getElementById('upgradeModal').classList.remove('hidden'), 400);
         }
 
-        // UI Handlers
-        function filterCategory(cat) {
-            currentFilter = cat;
-            document.querySelectorAll('.category-tab').forEach(t => {
-                t.classList.remove('tab-active', 'text-slate-900', 'dark:text-white');
-                t.classList.add('text-slate-400');
-                if(t.innerText === cat.toUpperCase()) {
-                    t.classList.add('tab-active', 'text-slate-900', 'dark:text-white');
-                    t.classList.remove('text-slate-400');
-                }
-            });
-            renderAds();
-        }
-
-        function filterLocation(loc) {
-            currentLoc = loc === currentLoc ? 'All' : loc;
-            renderLocations();
-            renderAds();
-        }
-
-        function toggleTheme() {
-            document.documentElement.classList.toggle('dark');
-        }
-
-        function closeModal() { document.getElementById('adModal').classList.add('hidden'); }
-        function openPostModal() { document.getElementById('postModal').classList.remove('hidden'); }
-        function closePostModal() { document.getElementById('postModal').classList.add('hidden'); }
-        function openBoostModal() { document.getElementById('boostModal').classList.remove('hidden'); }
-        function closeBoostModal() { document.getElementById('boostModal').classList.add('hidden'); }
-        function openPriceModal() { document.getElementById('priceModal').classList.remove('hidden'); }
-        function closePriceModal() { document.getElementById('priceModal').classList.add('hidden'); }
+        function showSafety() { alert("Protected by Soko Mpya Escrow. Inspect before paying."); }
+        function call() { window.location.href = 'tel:254722816001'; }
+        function wpp() { window.location.href = 'https://wa.me/254722816001'; }
 
         init();
     </script>
