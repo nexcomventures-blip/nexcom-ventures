@@ -236,6 +236,26 @@ body {
   overflow: hidden;
 }
 
+/* Hero Animations */
+.hero-text > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: reveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.hero-badge { animation-delay: 0.1s; }
+.hero-content h1 { animation-delay: 0.2s; }
+.hero-sub { animation-delay: 0.3s; }
+.hero-btns { animation-delay: 0.4s; }
+.hero-stats { animation-delay: 0.5s; }
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero-bg {
   position: absolute;
   inset: 0;
