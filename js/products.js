@@ -145,6 +145,46 @@ const ALL_PRODUCTS = [
     "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
   },
   {
+    "id": "l-new-1",
+    "brand": "Lenovo",
+    "name": "Lenovo IdeaPad Slim 3",
+    "specs": "Ryzen 5 • 8GB RAM • 512GB SSD",
+    "price": 48500,
+    "category": "exuk student business lenovo",
+    "badge": "new",
+    "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
+  },
+  {
+    "id": "l-new-2",
+    "brand": "Lenovo",
+    "name": "ThinkPad E14 Gen 2",
+    "specs": "i5 11th Gen • 8GB RAM • 256GB SSD",
+    "price": 38000,
+    "category": "exuk business lenovo",
+    "badge": "exuk",
+    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+  },
+  {
+    "id": "l-new-3",
+    "brand": "Lenovo",
+    "name": "Lenovo ThinkBook 15",
+    "specs": "i7 11th Gen • 16GB RAM • 512GB SSD",
+    "price": 55000,
+    "category": "exuk business featured lenovo",
+    "badge": "hot",
+    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+  },
+  {
+    "id": "l-new-4",
+    "brand": "Lenovo",
+    "name": "ThinkPad L13 Yoga",
+    "specs": "i5 10th Gen • 8GB RAM • 256GB SSD • Touch",
+    "price": 32000,
+    "category": "exuk business lenovo",
+    "badge": "exuk",
+    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+  },
+  {
     "id": "s-1",
     "brand": "Dell",
     "name": "PowerEdge T150 Server",
