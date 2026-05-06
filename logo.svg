@@ -1,11 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50">
-  <!-- Ultra-Compact Horizontal Logo -->
+  <!-- Balanced Horizontal Logo -->
   <g transform="translate(0, 5)">
-    <!-- Iconic Wave -->
-    <path d="M5,22 C12,8 18,8 24,18 C30,28 36,28 42,14" fill="none" stroke="#800000" stroke-width="6" stroke-linecap="round"/>
-    
-    <!-- Wordmark -->
-    <text x="50" y="26" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="25" letter-spacing="-0.5" fill="#111">nexcom<tspan fill="#800000">.</tspan></text>
-    <text x="50" y="39" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="8" letter-spacing="1.5" fill="#444">VENTURES LTD</text>
+    <path d="M5,22 C12,10 18,10 24,18 C30,26 36,26 42,16" fill="none" stroke="#800000" stroke-width="5.5" stroke-linecap="round"/>
+    <text x="48" y="24" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="22" letter-spacing="-0.8" fill="#111">nexcom<tspan fill="#800000">.</tspan></text>
+    <text x="48" y="38" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="8.5" letter-spacing="1.2" fill="#555">VENTURES LTD</text>
   </g>
 </svg>
