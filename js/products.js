@@ -227,7 +227,7 @@ function closePromo() {
   const overlay = document.getElementById('promoOverlay');
   if (overlay) {
     overlay.classList.remove('active');
-    setTimeout(() => { overlay.style.display = 'none'; }, 500);
+    setTimeout(() => { overlay.style.display = 'none'; }, 800);
   }
 }
 
@@ -249,28 +249,34 @@ document.addEventListener("DOMContentLoaded", () => {
       const waEl = document.getElementById('promoWA');
       const imgEl = overlay.querySelector('.promo-img');
       
-      if (titleEl) titleEl.innerHTML = p.name.replace(' ', '<br/>');
+      if (titleEl) {
+        titleEl.innerHTML = p.name.replace(' ', '<br/>');
+        titleEl.style.fontSize = "1.8rem"; // Robust sizing for the new card style
+      }
       if (specsEl) specsEl.innerText = p.specs;
       if (priceEl) priceEl.innerText = `KES ${p.price.toLocaleString()}`;
       if (imgEl) imgEl.style.backgroundImage = `url('${p.img}')`;
       if (waEl) {
-        waEl.href = `https://wa.me/254722816001?text=Hi Nexcom! I want to order the Today's Special: ${p.name}`;
+        waEl.href = `https://wa.me/254722816001?text=Hi%20Nexcom!%20I%20want%20to%20order%20the%20Today's%20Special:%20${p.name}`;
       }
     }
 
-    // Show after short delay (post-logo flash)
+    // Show after preloader is gone (usually 2s total)
     setTimeout(() => {
-      overlay.classList.add('active');
-      
-      // Start the 5s timer bar
-      if (timerBar) {
-        timerBar.style.animation = 'timerProgress 5s linear forwards';
-      }
-
-      // Auto-close after 5 seconds
+      overlay.style.display = 'flex';
       setTimeout(() => {
-        closePromo();
-      }, 5000);
-    }, 1200);
+        overlay.classList.add('active');
+        
+        // Start the 7s timer bar
+        if (timerBar) {
+          timerBar.style.animation = 'timerProgress 7s linear forwards';
+        }
+
+        // Auto-close after 7 seconds
+        setTimeout(() => {
+          closePromo();
+        }, 7000);
+      }, 100);
+    }, 2500);
   }
 });
