@@ -824,6 +824,9 @@ section {
   overflow: hidden;
   transition: var(--transition);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .product-card:hover {
   transform: translateY(-6px);
@@ -897,6 +900,7 @@ section {
   display: flex;
   flex-direction: column;
   min-height: 180px; /* Ensures consistent info height */
+  flex-grow: 1;
 }
 .product-brand {
   font-size: 0.7rem;
