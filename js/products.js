@@ -226,11 +226,8 @@ function setupDailySpecial() {
 
   const today = new Date();
   const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
-  // Find HP ProBook 640 G5 index
-  let productIndex = ALL_PRODUCTS.findIndex(p => p.name.includes("640 G5"));
-  if (productIndex === -1) productIndex = dateSeed % ALL_PRODUCTS.length;
   
-  const p = ALL_PRODUCTS[productIndex];
+  const p = ALL_PRODUCTS.find(p => p.name.includes("640 G5")) || ALL_PRODUCTS[dateSeed % ALL_PRODUCTS.length];
 
   const oldPrice = p.price;
   const newPrice = Math.floor(oldPrice * 0.9);
