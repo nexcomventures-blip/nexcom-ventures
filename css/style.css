@@ -2022,101 +2022,114 @@ footer {
   }
 }
 
-/* ===== PROMO OVERLAY BANNER ===== */
+/* ===== PREMIUM FLOATING DEAL BANNER (NEW STYLE) ===== */
 .promo-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(8px);
-  z-index: 10000;
+  bottom: 2rem;
+  left: 2rem;
+  width: auto;
+  height: auto;
+  background: transparent;
+  z-index: 9999;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.5s ease;
+  transform: translateX(-100%);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
 }
 .promo-overlay.active {
   opacity: 1;
   visibility: visible;
+  transform: translateX(0);
+  pointer-events: all;
 }
 .promo-card {
   position: relative;
-  width: 90%;
-  max-width: 800px;
-  background: var(--bg1);
-  border-radius: 24px;
+  width: 380px;
+  background: #ffffff;
+  border-radius: 20px;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  transform: scale(0.8);
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  border: 1px solid var(--border);
-}
-.promo-overlay.active .promo-card {
-  transform: scale(1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(128, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 .promo-close {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 36px;
-  height: 36px;
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
+  top: 12px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text);
+  border: 1px solid var(--border);
   border-radius: 50%;
   cursor: pointer;
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  transition: background 0.3s;
+  font-size: 0.8rem;
+  transition: all 0.3s;
 }
 .promo-close:hover {
   background: var(--primary);
+  color: white;
 }
 .promo-img {
-  background: url('https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800&auto=format&fit=crop') center/cover no-repeat;
-  min-height: 300px;
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.promo-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 100%);
 }
 .promo-content {
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 24px;
+  background: #fff;
 }
 .promo-badge {
   display: inline-block;
-  align-self: flex-start;
-  padding: 4px 12px;
+  padding: 4px 10px;
   background: var(--primary);
   color: white;
-  border-radius: 50px;
-  font-size: 0.7rem;
-  font-weight: 800;
-  margin-bottom: 15px;
+  border-radius: 6px;
+  font-size: 0.65rem;
+  font-weight: 900;
+  margin-bottom: 12px;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .promo-timer-bar {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   height: 4px;
   background: var(--primary);
   width: 100%;
   transform-origin: left;
+  z-index: 5;
 }
 @keyframes timerProgress {
   from { transform: scaleX(1); }
   to { transform: scaleX(0); }
 }
 @media (max-width: 600px) {
-  .promo-card { grid-template-columns: 1fr; }
-  .promo-img { height: 150px; min-height: 150px; }
-  .promo-content { padding: 20px; }
+  .promo-overlay {
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+  }
+  .promo-card {
+    width: 100%;
+  }
 }
