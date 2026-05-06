@@ -238,7 +238,10 @@ function setupDailySpecial() {
   const newPriceEl = document.getElementById("special-new-price");
   const imgEl = document.getElementById("special-img");
 
-  if (titleEl) titleEl.innerText = p.name;
+  if (titleEl) {
+    titleEl.innerText = p.name;
+    titleEl.classList.add("shimmer-text");
+  }
   if (specsEl) specsEl.innerText = p.specs;
   if (oldPriceEl) oldPriceEl.innerText = `KES ${oldPrice.toLocaleString()}`;
   if (newPriceEl) newPriceEl.innerText = `KES ${newPrice.toLocaleString()}`;
