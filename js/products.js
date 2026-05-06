@@ -249,7 +249,9 @@ function setupDailySpecial() {
   const today = new Date();
   const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
   
-  const p = ALL_PRODUCTS.find(p => p.name.includes("640 G5")) || ALL_PRODUCTS[dateSeed % ALL_PRODUCTS.length];
+  // Exclude HP ProBook 640 G5 from landing page daily special as per request
+  const eligibleProducts = ALL_PRODUCTS.filter(p => !p.name.includes("640 G5"));
+  const p = eligibleProducts[dateSeed % eligibleProducts.length] || ALL_PRODUCTS[dateSeed % ALL_PRODUCTS.length];
 
   const oldPrice = p.price;
   const newPrice = Math.floor(oldPrice * 0.9);
