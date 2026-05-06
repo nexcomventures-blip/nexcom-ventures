@@ -3,13 +3,15 @@
   <rect width="400" height="400" fill="white"/>
   
   <g transform="translate(200, 200)">
-    <!-- Scale the entire group for a nice fit -->
-    <g transform="scale(3.2) translate(-50, -45)">
+    <g transform="scale(3.0) translate(-50, -50)">
       <!-- Wave Logo on top -->
-      <path d="M10,40 Q30,5 50,25 T90,10" fill="none" stroke="#800000" stroke-width="12" stroke-linecap="round"/>
+      <path d="M10,35 Q30,0 50,20 T90,5" fill="none" stroke="#800000" stroke-width="12" stroke-linecap="round"/>
       
-      <!-- Text nexcom. below -->
-      <text x="50" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="28" letter-spacing="-2" fill="#212529">nexcom<tspan fill="#800000">.</tspan></text>
+      <!-- Main Text: nexcom. -->
+      <text x="50" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="28" letter-spacing="-2" fill="#212529">nexcom<tspan fill="#800000">.</tspan></text>
+      
+      <!-- Subtitle: VENTURES LTD -->
+      <text x="50" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="8" letter-spacing="4" fill="#6c757d" text-transform="uppercase">VENTURES LTD</text>
     </g>
   </g>
 </svg>
