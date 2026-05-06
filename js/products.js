@@ -8,7 +8,7 @@ const ALL_PRODUCTS = [
     "originalPrice": 145000,
     "category": "exuk business featured dell",
     "badge": "new",
-    "img": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=800"
   },
   {
     "id": "feat-2",
@@ -61,7 +61,7 @@ const ALL_PRODUCTS = [
     "price": 10000,
     "category": "exuk student budget",
     "badge": "student",
-    "img": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
   },
   {
     "id": "bud-3",
@@ -71,7 +71,7 @@ const ALL_PRODUCTS = [
     "price": 12500,
     "category": "exuk student budget",
     "badge": "student",
-    "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e520b?q=80&w=800"
   },
   {
     "id": "d-1",
@@ -91,7 +91,7 @@ const ALL_PRODUCTS = [
     "price": 70000,
     "category": "exuk business dell",
     "badge": "pro",
-    "img": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1661961111184-11317b40adb2?q=80&w=800"
   },
   {
     "id": "d-3",
@@ -101,7 +101,7 @@ const ALL_PRODUCTS = [
     "price": 65000,
     "category": "exuk business dell",
     "badge": "premium",
-    "img": "https://images.unsplash.com/photo-1554412664-6a4d8f640b3b?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1661961112134-fbce0fdf3d99?q=80&w=800"
   },
   {
     "id": "h-1",
@@ -111,7 +111,7 @@ const ALL_PRODUCTS = [
     "price": 25800,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://images.unsplash.com/photo-1516387938699-a93567ec168e?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
   },
   {
     "id": "h-2",
@@ -132,7 +132,7 @@ const ALL_PRODUCTS = [
     "price": 25000,
     "category": "exuk business lenovo",
     "badge": "exuk",
-    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e520b?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
   },
   {
     "id": "l-2",
@@ -142,7 +142,7 @@ const ALL_PRODUCTS = [
     "price": 40000,
     "category": "exuk business featured lenovo",
     "badge": "exuk",
-    "img": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=800"
+    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
   },
   {
     "id": "s-1",
