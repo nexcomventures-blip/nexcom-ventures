@@ -128,7 +128,7 @@ body {
   height: 100%;
 }
 .nav-logo img {
-  height: 54px;
+  height: 48px;
   width: auto;
   display: block;
   transition: var(--transition);
