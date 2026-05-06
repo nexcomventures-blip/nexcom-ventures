@@ -244,42 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Daily Special Logic
 function setupDailySpecial() {
   const section = document.getElementById("daily-special");
-  if (!section || ALL_PRODUCTS.length === 0) return;
-
-  const today = new Date();
-  const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
-  
-  // Exclude HP ProBook 640 G5 from landing page daily special as per request
-  const eligibleProducts = ALL_PRODUCTS.filter(p => !p.name.includes("640 G5"));
-  const p = eligibleProducts[dateSeed % eligibleProducts.length] || ALL_PRODUCTS[dateSeed % ALL_PRODUCTS.length];
-
-  const oldPrice = p.price;
-  const newPrice = Math.floor(oldPrice * 0.9);
-  
-  const titleEl = document.getElementById("special-title");
-  const specsEl = document.getElementById("special-specs");
-  const oldPriceEl = document.getElementById("special-old-price");
-  const newPriceEl = document.getElementById("special-new-price");
-  const imgEl = document.getElementById("special-img");
-
-  if (titleEl) {
-    titleEl.innerText = p.name;
-    titleEl.classList.add("shimmer-text");
-  }
-  if (specsEl) specsEl.innerText = p.specs;
-  if (oldPriceEl) oldPriceEl.innerText = `KES ${oldPrice.toLocaleString()}`;
-  if (newPriceEl) newPriceEl.innerText = `KES ${newPrice.toLocaleString()}`;
-  if (imgEl) imgEl.src = p.img;
-  
-  const banner = document.getElementById("special-banner");
-  if (banner) {
-    banner.onclick = () => {
-      const text = encodeURIComponent(`Hi Nexcom! I want to claim today's special deal: ${p.name} at KES ${newPrice.toLocaleString()} (10% OFF)`);
-      window.open(`https://wa.me/254722816001?text=${text}`, '_blank');
-    };
-  }
-
-  section.style.display = "block";
+  if (section) section.remove(); // Remove the daily special section completely as requested
 }
 
 
@@ -297,6 +262,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const timerBar = document.getElementById('promoTimerBar');
   
   if (overlay) {
+    // Setup dynamic deal for the welcome banner
+    const today = new Date();
+    const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+    // Cycle through all products daily
+    const p = ALL_PRODUCTS[dateSeed % ALL_PRODUCTS.length];
+    
+    if (p) {
+      const titleEl = document.getElementById('promoTitle');
+      const specsEl = document.getElementById('promoSpecs');
+      const priceEl = document.getElementById('promoPrice');
+      const waEl = document.getElementById('promoWA');
+      const imgEl = overlay.querySelector('.promo-img');
+      
+      if (titleEl) titleEl.innerHTML = p.name.replace(' ', '<br/>');
+      if (specsEl) specsEl.innerText = p.specs;
+      if (priceEl) priceEl.innerText = `KES ${p.price.toLocaleString()}`;
+      if (imgEl) imgEl.style.backgroundImage = `url('${p.img}')`;
+      if (waEl) {
+        waEl.href = `https://wa.me/254722816001?text=Hi%20Nexcom!%20I%20want%20to%20order%20the%20Today's%20Special:%20${p.name}`;
+      }
+    }
+
     // Show after short delay (post-logo flash)
     setTimeout(() => {
       overlay.classList.add('active');
