@@ -280,3 +280,34 @@ function setupDailySpecial() {
   section.style.display = "block";
 }
 
+
+// Welcome Promo Logic
+function closePromo() {
+  const overlay = document.getElementById('promoOverlay');
+  if (overlay) {
+    overlay.classList.remove('active');
+    setTimeout(() => { overlay.style.display = 'none'; }, 500);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById('promoOverlay');
+  const timerBar = document.getElementById('promoTimerBar');
+  
+  if (overlay) {
+    // Show after short delay (post-logo flash)
+    setTimeout(() => {
+      overlay.classList.add('active');
+      
+      // Start the 5s timer bar
+      if (timerBar) {
+        timerBar.style.animation = 'timerProgress 5s linear forwards';
+      }
+
+      // Auto-close after 5 seconds
+      setTimeout(() => {
+        closePromo();
+      }, 5000);
+    }, 1200);
+  }
+});
