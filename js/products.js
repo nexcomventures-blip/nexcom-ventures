@@ -227,7 +227,7 @@ function closePromo() {
   const overlay = document.getElementById('promoOverlay');
   if (overlay) {
     overlay.classList.remove('active');
-    setTimeout(() => { overlay.style.display = 'none'; }, 800);
+    setTimeout(() => { overlay.style.display = 'none'; }, 700);
   }
 }
 
@@ -267,15 +267,15 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         overlay.classList.add('active');
         
-        // Start the 7s timer bar
+        // Start the 8s timer bar
         if (timerBar) {
-          timerBar.style.animation = 'timerProgress 7s linear forwards';
+          timerBar.style.animation = 'timerProgress 8s linear forwards';
         }
 
-        // Auto-close after 7 seconds
+        // Auto-close after 8 seconds
         setTimeout(() => {
           closePromo();
-        }, 7000);
+        }, 8000);
       }, 100);
     }, 2500);
   }
