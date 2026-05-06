@@ -133,6 +133,52 @@
 </div>
 
 
+<!-- COMPACT TODAY'S SPECIAL -->
+<section id="daily-special" style="display:none; padding: 20px 0; background: var(--bg2); border-bottom: 1px solid var(--border);">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <div id="special-banner" style="position: relative; height: 200px; border-radius: 16px; overflow: hidden; background: #000; cursor: pointer; border: 1px solid var(--primary); display: flex; align-items: center; justify-content: center; text-align: center; box-shadow: 0 10px 30px rgba(240, 26, 36, 0.2);">
+      <img id="special-img" src="" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; z-index: 1;">
+      <div style="position: relative; z-index: 2; padding: 30px; width: 100%; background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4)); height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div style="background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; display: inline-block;">⚡ Flash Deal of the Day (10% OFF)</div>
+        <h2 id="special-title" style="color: white; font-size: 1.8rem; margin: 0; line-height: 1.2; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Loading Deal...</h2>
+        <p id="special-specs" style="color: #ccc; font-size: 0.9rem; margin: 8px auto 15px; max-width: 600px; font-weight: 500;">Please wait while we fetch today's best price.</p>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+          <span id="special-old-price" style="text-decoration: line-through; color: #888; font-size: 1.1rem; font-weight: 600;">-</span>
+          <span id="special-new-price" style="color: #fff; font-size: 1.8rem; font-weight: 900; letter-spacing: -0.5px;">-</span>
+          <span style="background: #27ae60; color: white; padding: 3px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 800;">SAVE 10%</span>
+        </div>
+        <div style="margin-top: 15px; color: var(--primary); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Click to Claim on WhatsApp →</div>
+      </div>
+    </div>
+    
+    <!-- Trust Badges Row -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
+      <div style="background: var(--bg3); padding: 12px; border-radius: 12px; display: flex; align-items: center; gap: 10px; border: 1px solid var(--border);">
+        <span style="font-size: 1.5rem;">🚚</span>
+        <div>
+          <div style="font-weight: 700; font-size: 0.85rem;">Free Delivery</div>
+          <div style="font-size: 0.7rem; color: var(--gray);">Within Nairobi CBD</div>
+        </div>
+      </div>
+      <div style="background: var(--bg3); padding: 12px; border-radius: 12px; display: flex; align-items: center; gap: 10px; border: 1px solid var(--border);">
+        <span style="font-size: 1.5rem;">🛡️</span>
+        <div>
+          <div style="font-weight: 700; font-size: 0.85rem;">6-Month Warranty</div>
+          <div style="font-size: 0.7rem; color: var(--gray);">Full Hardware Support</div>
+        </div>
+      </div>
+      <div style="background: var(--bg3); padding: 12px; border-radius: 12px; display: flex; align-items: center; gap: 10px; border: 1px solid var(--border);">
+        <span style="font-size: 1.5rem;">🖱️</span>
+        <div>
+          <div style="font-weight: 700; font-size: 0.85rem;">Free Mouse</div>
+          <div style="font-size: 0.7rem; color: var(--gray);">On All Laptops</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#shop" onclick="toggleMenu()">Shop</a>
