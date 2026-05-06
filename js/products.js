@@ -78,7 +78,7 @@ const ALL_PRODUCTS = [
     "name": "Dell Latitude 5400 i5",
     "specs": "8th Gen \u2022 8GB \u2022 256GB SSD",
     "price": 24000,
-    "category": "exuk business dell",
+    "category": "exuk business featured dell",
     "badge": "exuk",
     "img": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=800"
   },
@@ -118,7 +118,7 @@ const ALL_PRODUCTS = [
     "name": "HP EliteBook 840 G6 i5",
     "specs": "8th Gen \u2022 16GB \u2022 256GB SSD",
     "price": 36500,
-    "category": "exuk business hp",
+    "category": "exuk business featured hp",
     "badge": "hot",
     "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
   },
@@ -138,7 +138,7 @@ const ALL_PRODUCTS = [
     "name": "ThinkPad X1 Yoga i7",
     "specs": "8th Gen \u2022 16GB \u2022 512GB \u2022 Touch",
     "price": 40000,
-    "category": "exuk business lenovo",
+    "category": "exuk business featured lenovo",
     "badge": "exuk",
     "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
   },
@@ -167,8 +167,7 @@ const ALL_PRODUCTS = [
 function renderProducts(filter = "all") {
   const container = document.getElementById("productsGrid");
   if (!container) return;
-  container.innerHTML = "";
-
+  
   const filtered = ALL_PRODUCTS.filter(p => {
     const cat = p.category.toLowerCase();
     const brand = p.brand.toLowerCase();
@@ -183,7 +182,30 @@ function renderProducts(filter = "all") {
     return brand === f || cat.includes(f);
   });
 
-  container.innerHTML = filtered.map(p => {
+  displayProducts(filtered);
+}
+
+function searchProducts() {
+  const query = document.getElementById('productSearch').value.toLowerCase();
+  const filtered = ALL_PRODUCTS.filter(p => 
+    p.name.toLowerCase().includes(query) || 
+    p.brand.toLowerCase().includes(query) || 
+    p.specs.toLowerCase().includes(query) ||
+    p.category.toLowerCase().includes(query)
+  );
+  displayProducts(filtered);
+}
+
+function displayProducts(products) {
+  const container = document.getElementById("productsGrid");
+  if (!container) return;
+
+  if (products.length === 0) {
+    container.innerHTML = `<div class="no-results" style="grid-column: 1/-1; text-align: center; padding: 3rem; opacity: 0.5;">No products found matching your search.</div>`;
+    return;
+  }
+
+  container.innerHTML = products.map(p => {
     const priceVal = p.price;
     const priceDisplay = 'KES ' + priceVal.toLocaleString();
     const originalPriceDisplay = p.originalPrice ? 'KES ' + p.originalPrice.toLocaleString() : '';
@@ -191,9 +213,9 @@ function renderProducts(filter = "all") {
     
     return `
       <div class="product-card" data-category="${p.category}">
-        <div class="product-image">
+        <div class="product-img">
           <img src="${p.img}" alt="${p.name}" loading="lazy">
-          ${p.badge ? `<span class="badge ${p.badge}">${p.badge.toUpperCase()}</span>` : ""}
+          ${p.badge ? `<span class="product-badge ${p.badge}">${p.badge.toUpperCase()}</span>` : ""}
           ${p.originalPrice ? `<span class="sale-badge">SALE</span>` : ""}
         </div>
         <div class="product-info">
@@ -211,7 +233,7 @@ function renderProducts(filter = "all") {
         </div>
       </div>
     `;
-  }).join("") || `<div class="no-results">No matches found for this category</div>`;
+  }).join("");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
