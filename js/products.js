@@ -3,8 +3,9 @@ const ALL_PRODUCTS = [
     "id": "feat-1",
     "brand": "Dell",
     "name": "Dell XPS 13 9330",
-    "specs": "Intel Core i7 13th Gen \u2022 16GB RAM \u2022 512GB SSD",
+    "specs": "Intel Core i7 13th Gen • 16GB RAM • 512GB SSD",
     "price": 135000,
+    "originalPrice": 145000,
     "category": "exuk business featured dell",
     "badge": "new",
     "img": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=800"
@@ -13,8 +14,9 @@ const ALL_PRODUCTS = [
     "id": "feat-2",
     "brand": "Apple",
     "name": "MacBook Pro 13 M2",
-    "specs": "Apple M2 Chip \u2022 8GB RAM \u2022 512GB SSD",
+    "specs": "Apple M2 Chip • 8GB RAM • 512GB SSD",
     "price": 140000,
+    "originalPrice": 155000,
     "category": "exuk apple featured macbook",
     "badge": "hot",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -23,8 +25,9 @@ const ALL_PRODUCTS = [
     "id": "feat-3",
     "brand": "Lenovo",
     "name": "ThinkPad X1 Carbon Gen 10",
-    "specs": "i7 12th Gen \u2022 16GB RAM \u2022 512GB SSD",
+    "specs": "i7 12th Gen • 16GB RAM • 512GB SSD",
     "price": 91000,
+    "originalPrice": 98000,
     "category": "exuk business featured lenovo",
     "badge": "hot",
     "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
@@ -183,12 +186,15 @@ function renderProducts(filter = "all") {
   container.innerHTML = filtered.map(p => {
     const priceVal = p.price;
     const priceDisplay = 'KES ' + priceVal.toLocaleString();
+    const originalPriceDisplay = p.originalPrice ? 'KES ' + p.originalPrice.toLocaleString() : '';
     const currency = 'KES';
+    
     return `
       <div class="product-card" data-category="${p.category}">
         <div class="product-image">
           <img src="${p.img}" alt="${p.name}" loading="lazy">
           ${p.badge ? `<span class="badge ${p.badge}">${p.badge.toUpperCase()}</span>` : ""}
+          ${p.originalPrice ? `<span class="sale-badge">SALE</span>` : ""}
         </div>
         <div class="product-info">
           <div class="product-brand">${p.brand}</div>
@@ -196,6 +202,7 @@ function renderProducts(filter = "all") {
           <p>${p.specs}</p>
           <div class="product-footer">
             <div class="price-container">
+              ${p.originalPrice ? `<span class="original-price">${originalPriceDisplay}</span>` : ""}
               <span class="price">${priceDisplay}</span>
               <span class="vat-tag">Excl. VAT</span>
             </div>
