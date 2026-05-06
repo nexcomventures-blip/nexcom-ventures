@@ -138,7 +138,7 @@ const ALL_PRODUCTS = [
     "category": "exuk business lenovo",
     "badge": "exuk",
     "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
-  }
+  },
   {
     "id": "s-1",
     "brand": "Dell",
@@ -207,4 +207,44 @@ function renderProducts(filter = "all") {
   }).join("") || `<div class="no-results">No matches found for this category</div>`;
 }
 
-document.addEventListener("DOMContentLoaded", () => renderProducts("featured"));
+document.addEventListener("DOMContentLoaded", () => {
+  renderProducts("featured");
+  setupDailySpecial();
+});
+
+// Daily Special Logic
+function setupDailySpecial() {
+  const section = document.getElementById("daily-special");
+  if (!section || ALL_PRODUCTS.length === 0) return;
+
+  const today = new Date();
+  const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+  const productIndex = dateSeed % ALL_PRODUCTS.length;
+  const p = ALL_PRODUCTS[productIndex];
+
+  const oldPrice = p.price;
+  const newPrice = Math.floor(oldPrice * 0.9);
+  
+  const titleEl = document.getElementById("special-title");
+  const specsEl = document.getElementById("special-specs");
+  const oldPriceEl = document.getElementById("special-old-price");
+  const newPriceEl = document.getElementById("special-new-price");
+  const imgEl = document.getElementById("special-img");
+
+  if (titleEl) titleEl.innerText = p.name;
+  if (specsEl) specsEl.innerText = p.specs;
+  if (oldPriceEl) oldPriceEl.innerText = `KES ${oldPrice.toLocaleString()}`;
+  if (newPriceEl) newPriceEl.innerText = `KES ${newPrice.toLocaleString()}`;
+  if (imgEl) imgEl.src = p.img;
+  
+  const banner = document.getElementById("special-banner");
+  if (banner) {
+    banner.onclick = () => {
+      const text = encodeURIComponent(`Hi Nexcom! I want to claim today's special deal: ${p.name} at KES ${newPrice.toLocaleString()} (10% OFF)`);
+      window.open(`https://wa.me/254722816001?text=${text}`, '_blank');
+    };
+  }
+
+  section.style.display = "block";
+}
+
