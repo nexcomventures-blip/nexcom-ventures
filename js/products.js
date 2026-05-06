@@ -165,7 +165,7 @@ const ALL_PRODUCTS = [
 ];
 
 function renderProducts(filter = "all") {
-  const container = document.getElementById("product-grid");
+  const container = document.getElementById("productsGrid");
   if (!container) return;
   container.innerHTML = "";
 
