@@ -299,7 +299,9 @@
                     <div>
                         <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Category</label>
                         <select id="postCat" class="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl text-sm outline-none appearance-none">
-                            <option value="laptops">Laptops</option>
+                            <option value="laptops">Laptops (New)</option>
+                            <option value="laptops">Laptops (Ex-UK)</option>
+                            <option value="laptops">Laptops (Refurbished)</option>
                             <option value="phones">Phones & Tablets</option>
                             <option value="electronics">Electronics</option>
                             <option value="gaming">Video Games</option>
@@ -340,8 +342,9 @@
                 <div>
                     <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Condition</label>
                     <div class="flex gap-2">
-                        <button onclick="setCond(this, 'New')" class="cond-btn flex-1 py-2 rounded-lg border-2 border-blue-600 text-[9px] font-black uppercase tracking-wider bg-blue-50 text-blue-600">New</button>
+                        <button onclick="setCond(this, 'New')" class="cond-btn flex-1 py-2 rounded-lg border border-slate-200 text-[9px] font-black uppercase tracking-wider bg-slate-50 text-slate-500">New</button>
                         <button onclick="setCond(this, 'Ex-UK')" class="cond-btn flex-1 py-2 rounded-lg border border-slate-200 text-[9px] font-black uppercase tracking-wider bg-slate-50 text-slate-500">Ex-UK</button>
+                        <button onclick="setCond(this, 'Refurbished')" class="cond-btn flex-1 py-2 rounded-lg border border-slate-200 text-[9px] font-black uppercase tracking-wider bg-slate-50 text-slate-500">Refurbished</button>
                     </div>
                 </div>
 
@@ -544,8 +547,10 @@
         ];
 
         let ADS = [
-            { id: 1, cat: 'laptops', name: 'HP EliteBook 840 G8', price: 'KSh 85,000', oldPrice: 'KSh 92,000', img: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=400&q=50', specs: 'Core i7 11th Gen • 16GB • 512GB SSD', badge: 'Verified', isBoosted: false, seller: 'Nexcom Ventures', loc: 'Nairobi CBD', phone: '254725258963' },
-            { id: 2, cat: 'phones', name: 'iPhone 15 Pro Max', price: 'KSh 185,000', oldPrice: 'KSh 195,000', img: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=400&q=50', specs: '256GB • Titanium • Battery 100%', badge: 'Premium', isBoosted: true, boostLevel: 'gold', seller: 'Nexcom Ventures', loc: 'Mama Ngina St', phone: '254725258963' },
+            { id: 1, cat: 'laptops', name: 'HP EliteBook 840 G8', price: 'KSh 85,000', oldPrice: 'KSh 92,000', img: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=400&q=50', specs: 'Core i7 11th Gen • 16GB • 512GB SSD', badge: 'Ex-UK', isBoosted: false, seller: 'Nexcom Ventures', loc: 'Nairobi CBD', phone: '254722816001' },
+            { id: 4, cat: 'laptops', name: 'Dell Latitude 7490', price: 'KSh 32,000', oldPrice: 'KSh 38,000', img: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=400&q=50', specs: 'Core i5 8th Gen • 8GB • 256GB SSD', badge: 'Refurbished', isBoosted: false, seller: 'Nexcom Ventures', loc: 'Nairobi CBD', phone: '254722816001' },
+            { id: 5, cat: 'laptops', name: 'MacBook Air M2 (New)', price: 'KSh 145,000', oldPrice: 'KSh 155,000', img: 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=400&q=50', specs: 'M2 Chip • 8GB • 256GB • Brand New', badge: 'New', isBoosted: true, boostLevel: 'silver', seller: 'Nexcom Ventures', loc: 'Nairobi CBD', phone: '254722816001' },
+            { id: 2, cat: 'phones', name: 'iPhone 15 Pro Max', price: 'KSh 185,000', oldPrice: 'KSh 195,000', img: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=400&q=50', specs: '256GB • Titanium • Battery 100%', badge: 'Premium', isBoosted: true, boostLevel: 'gold', seller: 'Nexcom Ventures', loc: 'Mama Ngina St', phone: '254722816001' },
             { id: 3, cat: 'vehicles', name: 'Toyota Harrier 2018', price: 'KSh 3,850,000', img: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=400&q=50', specs: 'Zero Mileage • Sunroof', badge: 'New', isBoosted: false, seller: 'Car Mart', loc: 'Karen', phone: '254722816001' }
         ];
 
@@ -654,6 +659,15 @@
         }
 
         let lastCreatedAdId = null, selectedBoost = 'silver', selectedCond = 'New';
+        function setCond(btn, val) {
+            document.querySelectorAll('.cond-btn').forEach(b => {
+                b.classList.remove('border-blue-600', 'bg-blue-50', 'text-blue-600', 'border-2');
+                b.classList.add('border-slate-200', 'bg-slate-50', 'text-slate-500');
+            });
+            btn.classList.remove('border-slate-200', 'bg-slate-50', 'text-slate-500');
+            btn.classList.add('border-blue-600', 'bg-blue-50', 'text-blue-600', 'border-2');
+            selectedCond = val;
+        }
         function postAd() { document.getElementById('postModal').classList.remove('hidden'); }
         function closePost() { document.getElementById('postModal').classList.add('hidden'); }
         function selectUpgrade(id, level) {
