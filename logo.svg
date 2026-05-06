@@ -1,16 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
-  <!-- Transparent Background -->
-  
-  <g transform="translate(200, 100)">
-    <g transform="scale(3.5) translate(-50, -45)">
-      <!-- Wave Logo on top -->
-      <path d="M10,35 Q30,0 50,20 T90,5" fill="none" stroke="#800000" stroke-width="12" stroke-linecap="round"/>
-      
-      <!-- Main Text: nexcom. -->
-      <text x="50" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="28" letter-spacing="-1.5" fill="#212529">nexcom<tspan fill="#800000">.</tspan></text>
-      
-      <!-- Subtitle: VENTURES LTD -->
-      <text x="50" y="93" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="7" letter-spacing="3.5" fill="#6c757d" text-transform="uppercase">VENTURES LTD</text>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <g transform="translate(100, 40) scale(1.4) translate(-50, -45)">
+    <!-- Wave Logo -->
+    <path d="M10,35 Q30,0 50,20 T90,5" fill="none" stroke="#800000" stroke-width="10" stroke-linecap="round"/>
+    
+    <!-- Main Text: nexcom. -->
+    <text x="50" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="26" letter-spacing="-1" fill="#212529">nexcom<tspan fill="#800000">.</tspan></text>
+    
+    <!-- Subtitle: VENTURES LTD -->
+    <text x="50" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="6.5" letter-spacing="2.5" fill="#6c757d">VENTURES LTD</text>
   </g>
 </svg>
