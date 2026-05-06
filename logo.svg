@@ -1,13 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 50">
-  <!-- Highly Compact Horizontal Logo -->
-  <g transform="translate(2, 5)">
-    <!-- Wave Logo -->
-    <path d="M0,22 Q8,0 16,12 T32,4" fill="none" stroke="#800000" stroke-width="5" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50">
+  <!-- Refined Horizontal Logo -->
+  <g transform="translate(5, 5)">
+    <!-- Premium Wave Icon -->
+    <path d="M2,22 C8,8 15,8 20,18 C25,28 32,28 38,14" fill="none" stroke="#800000" stroke-width="6" stroke-linecap="round"/>
     
-    <!-- Main Text: nexcom. -->
-    <text x="38" y="25" font-family="Arial, sans-serif" font-weight="900" font-size="26" letter-spacing="-1" fill="#212529">nexcom<tspan fill="#800000">.</tspan></text>
-    
-    <!-- Subtitle: VENTURES LTD -->
-    <text x="38" y="38" font-family="Arial, sans-serif" font-weight="800" font-size="7" letter-spacing="1.5" fill="#6c757d">VENTURES LTD</text>
+    <!-- Text Alignment -->
+    <text x="45" y="26" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="24" letter-spacing="-0.5" fill="#1a1a1a">nexcom<tspan fill="#800000">.</tspan></text>
+    <text x="45" y="39" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="7.5" letter-spacing="1.8" fill="#555">VENTURES LTD</text>
   </g>
 </svg>
