@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
   <meta name="google-site-verification" content="0ZBLtahjoBRt7Luh1J6Fa5tAiNG5GB4-EcSEPtr0REQ" />
+  <!-- Refresh Build: 2026-05-05 17:35 -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 
   <!-- SEO: Primary Meta Tags -->
+  <link rel="icon" type="image/png" href="images/logo.png">
   <title>Buy &amp; Sell Laptops Nairobi | MacBook, HP, Dell, Lenovo | Nexcom Ventures</title>
   <meta name="description" content="Nairobi's top laptop store on Mama Ngina St. Buy new &amp; refurbished MacBook, HP, Dell &amp; Lenovo laptops — or sell your old, broken or unused laptop for instant cash. Call 0721 585 784."/>
   <meta name="keywords" content="buy laptop Nairobi, sell laptop Nairobi, refurbished laptops Nairobi, MacBook Nairobi, HP laptop Nairobi, Dell laptop Nairobi, Lenovo Nairobi, dead laptop buyers Nairobi, broken laptop buyers Nairobi, ex-UK laptops Kenya, sell broken laptop cash Nairobi, Nexcom Ventures"/>
@@ -17,7 +19,7 @@
   <meta property="og:url" content="https://nexcomventures.co.ke/"/>
   <meta property="og:title" content="Buy &amp; Sell Laptops Nairobi | Nexcom Ventures"/>
   <meta property="og:description" content="Nairobi's top laptop store on Mama Ngina St. Buy new &amp; refurbished MacBook, HP, Dell &amp; Lenovo — or sell your old/broken laptop for instant cash. Call 0721 585 784."/>
-  <meta property="og:image" content="https://nexcomventures.co.ke/images/og-image.jpg"/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=1200&auto=format&fit=crop"/>
   <meta property="og:locale" content="en_KE"/>
   <meta property="og:site_name" content="Nexcom Ventures Ltd"/>
 
@@ -26,10 +28,10 @@
   <meta property="twitter:url" content="https://nexcomventures.co.ke/"/>
   <meta property="twitter:title" content="Buy &amp; Sell Laptops Nairobi | Nexcom Ventures"/>
   <meta property="twitter:description" content="Nairobi's top laptop store on Mama Ngina St. Buy new &amp; refurbished MacBook, HP, Dell &amp; Lenovo — or sell your old/broken laptop for instant cash."/>
-  <meta property="twitter:image" content="https://nexcomventures.co.ke/images/og-image.jpg"/>
+  <meta property="twitter:image" content="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=1200&auto=format&fit=crop"/>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/favicon.png"/>
+  <link rel="icon" type="image/png" href="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=32&h=32&auto=format&fit=crop"/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,24 +83,53 @@
   }
   </script>
 </head>
+<body>
 
 <!-- ===== PRELOADER ===== -->
 <div id="preloader">
   <div class="preloader-inner">
-    <div class="logo-anim">N<span>X</span></div>
+    <div class="logo-anim" style="display: flex; flex-direction: column; align-items: center;">
+      <img src="images/logo.png" alt="Nexcom Logo" style="height: 80px; width: auto;">
+    </div>
     <div class="preloader-bar"><div class="preloader-fill"></div></div>
+  </div>
+</div>
+
+<!-- ===== PROMO OVERLAY ===== -->
+<div id="promoOverlay" class="promo-overlay">
+  <div class="promo-card">
+    <button class="promo-close" onclick="closePromo()">✕</button>
+    <div class="promo-img"></div>
+    <div class="promo-content" id="promoContent" style="background: #000; padding: 30px; position: relative; border-top: 1px solid rgba(255,255,255,0.1);">
+      <div class="promo-badge" style="background: var(--primary); color: #fff; border-radius: 6px; padding: 4px 10px; font-size: 0.7rem; letter-spacing: 1px; margin-bottom: 15px; display: inline-block;">FLASH SALE</div>
+      <h2 id="promoTitle" style="font-size: 2.2rem; font-weight: 900; margin-bottom: 12px; color: #fff; letter-spacing: -0.8px; line-height: 1.1; font-family: 'Inter', sans-serif;">Loading...</h2>
+      <p id="promoSpecs" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 25px; font-weight: 400; line-height: 1.5; border-left: 2px solid var(--primary); padding-left: 15px;">...</p>
+      <div style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 30px;">
+        <span style="font-size: 0.8rem; color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">Limited Time Price</span>
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <div id="promoPrice" style="font-size: 2.6rem; font-weight: 950; color: #fff; text-shadow: 0 0 20px rgba(255,255,255,0.1);">...</div>
+          <div style="font-size: 1rem; color: rgba(255,255,255,0.4); text-decoration: line-through; font-weight: 500;">Reg. Price</div>
+        </div>
+      </div>
+      <a id="promoWA" href="#" target="_blank" class="btn-primary" style="text-align: center; text-decoration: none; width: 100%; height: 55px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.05rem; border-radius: 14px; background: #fff; color: #000; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border: none; box-shadow: 0 10px 30px rgba(255,255,255,0.15);">Claim This Offer Now →</a>
+    </div>
+    <div id="promoTimerBar" class="promo-timer-bar"></div>
   </div>
 </div>
 
 <!-- ===== NAVBAR ===== -->
 <nav id="navbar">
   <div class="nav-container">
-    <a href="#" class="nav-logo"><img src="images/logo.png" alt="Nexcom Logo" style="height: 40px; width: auto; vertical-align: middle;"></a>
+    <a href="#" class="nav-logo" style="display: flex; align-items: center; text-decoration: none; padding: 5px 0; gap: 10px;">
+      <img src="images/logo.png" alt="Nexcom Logo" style="height: 50px; width: 50px; border-radius: 50%; object-fit: cover;">
+      <div style="display: flex; flex-direction: column; line-height: 1.1;">
+        <span style="color: var(--text); font-size: 1.2rem; font-weight: 900; letter-spacing: -0.5px; text-transform: uppercase;">Nexcom</span>
+        <span style="color: var(--gray); font-size: 0.6rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">Ventures Ltd</span>
+      </div>
+    </a>
     <ul class="nav-links">
       <li><a href="#shop">Shop</a></li>
-      <li><a href="hp-laptops-nairobi.html">HP</a></li>
-      <li><a href="dell-laptops-nairobi.html">Dell</a></li>
-      <li><a href="lenovo-laptops-nairobi.html">Lenovo</a></li>
+      <li><a href="budget-laptops.html">Student & Baby</a></li>
       <li><a href="#sell">Sell</a></li>
       <li><a href="repairs.html">Repairs</a></li>
       <li><a href="accessories.html">Accessories</a></li>
@@ -116,15 +147,57 @@
     </div>
   </div>
 </nav>
-<!-- MAY DEALS BANNER -->
-<div style="background: linear-gradient(90deg, #f01a24, #ff4d4d); color: white; padding: 0.6rem; text-align: center; font-weight: bold; font-size: 0.9rem; z-index: 999; position: relative;">
-    🚀 MAY DEALS: Save up to KES 10,000 on MacBook Air & Pro! | <a href="macbook-nairobi.html" style="color: white; text-decoration: underline;">Claim Now</a>
-</div>
+
+<!-- COMPACT TODAY'S SPECIAL -->
+<section id="daily-special" style="display:none; padding: 20px 0; background: var(--bg2); border-bottom: 1px solid var(--border);">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <div id="special-banner" class="moving-deal" style="position: relative; height: 200px; border-radius: 16px; overflow: hidden; background: #000; cursor: pointer; border: 1px solid var(--primary); display: flex; align-items: center; justify-content: center; text-align: center; box-shadow: 0 10px 30px rgba(240, 26, 36, 0.2);">
+      <img id="special-img" src="" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; z-index: 1;">
+      <div style="position: relative; z-index: 2; padding: 30px; width: 100%; background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4)); height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div style="background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; display: inline-block;">⚡ Flash Deal of the Day (10% OFF)</div>
+        <h2 id="special-title" style="color: white; font-size: 1.8rem; margin: 0; line-height: 1.2; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Loading Deal...</h2>
+        <p id="special-specs" style="color: #ccc; font-size: 0.9rem; margin: 8px auto 15px; max-width: 600px; font-weight: 500;">Please wait while we fetch today's best price.</p>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+          <span id="special-old-price" style="text-decoration: line-through; color: #888; font-size: 1.1rem; font-weight: 600;">-</span>
+          <span id="special-new-price" style="color: #fff; font-size: 1.8rem; font-weight: 900; letter-spacing: -0.5px;">-</span>
+          <span class="save-badge-anim" style="background: #27ae60; color: white; padding: 4px 12px; border-radius: 6px; font-size: 0.85rem; font-weight: 800; box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);">SAVE 10%</span>
+        </div>
+        <div style="margin-top: 15px; color: var(--primary); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Click to Claim on WhatsApp →</div>
+      </div>
+    </div>
+    
+    <!-- Trust Badges Row -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
+      <div style="background: var(--bg3); padding: 12px; border-radius: 12px; display: flex; align-items: center; gap: 10px; border: 1px solid var(--border);">
+        <span style="font-size: 1.5rem;">🚚</span>
+        <div>
+          <div style="font-weight: 700; font-size: 0.85rem;">Free Delivery</div>
+          <div style="font-size: 0.7rem; color: var(--gray);">Within Nairobi CBD</div>
+        </div>
+      </div>
+      <div style="background: var(--bg3); padding: 12px; border-radius: 12px; display: flex; align-items: center; gap: 10px; border: 1px solid var(--border);">
+        <span style="font-size: 1.5rem;">🛡️</span>
+        <div>
+          <div style="font-weight: 700; font-size: 0.85rem;">6-Month Warranty</div>
+          <div style="font-size: 0.7rem; color: var(--gray);">Full Hardware Support</div>
+        </div>
+      </div>
+      <div style="background: var(--bg3); padding: 12px; border-radius: 12px; display: flex; align-items: center; gap: 10px; border: 1px solid var(--border);">
+        <span style="font-size: 1.5rem;">🖱️</span>
+        <div>
+          <div style="font-weight: 700; font-size: 0.85rem;">Free Mouse</div>
+          <div style="font-size: 0.7rem; color: var(--gray);">On All Laptops</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#shop" onclick="toggleMenu()">Shop</a>
+  <a href="budget-laptops.html" onclick="toggleMenu()">Student & Baby Laptops</a>
   <a href="#sell" onclick="toggleMenu()">Sell Your Laptop</a>
   <a href="repairs.html" onclick="toggleMenu()">Repairs</a>
   <a href="accessories.html" onclick="toggleMenu()">Accessories</a>
@@ -158,13 +231,29 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="laptop-card floating" id="heroCard">
-        <div class="laptop-img-wrap">
-          <img id="heroImage" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80" alt="Premium Laptop" onerror="this.src='https://via.placeholder.com/500x350/000000/ff4d4d?text=Premium+Laptops'"/>
+      <div class="visual-inner">
+        <div class="floating-badge top-right">
+          <div class="badge-icon">⭐</div>
+          <div class="badge-text">
+            <strong>4.9/5 Rating</strong>
+            <span>Verified on Google</span>
+          </div>
         </div>
-        <div class="price-tag-badge">
-          <span class="price-from" id="heroLabel">Starting from</span>
-          <span class="price-amount" id="heroPrice">KES 35,000</span>
+        <div class="floating-badge bottom-left">
+          <div class="badge-icon">📍</div>
+          <div class="badge-text">
+            <strong>Mama Ngina St</strong>
+            <span>Nairobi CBD</span>
+          </div>
+        </div>
+          <div class="laptop-card floating" id="heroCard">
+          <div class="laptop-img-wrap">
+            <img id="heroImage" src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=1200&auto=format&fit=crop" alt="Premium Laptops Nexcom" style="width: 100%; height: 100%; object-fit: cover;"/>
+          </div>
+          <div class="price-tag-badge">
+            <span class="price-from" id="heroLabel">Starting from</span>
+            <span class="price-amount" id="heroPrice">KES 35,000</span>
+          </div>
         </div>
       </div>
     </div>
@@ -188,14 +277,14 @@
 
 <!-- ===== SHOP SECTION ===== -->
 <section id="shop">
-  <div class="section-header">
+  <div class="section-header" style="display: none;">
     <div class="section-tag">— Our Full Catalogue —</div>
     <h2>Laptops, Servers & Accessories</h2>
     <p>New • Ex-UK • Refurbished • Servers • Accessories. Every device tested & verified.</p>
   </div>
 
   <!-- Search & Filter -->
-  <div class="shop-controls">
+  <div class="shop-controls" style="display: none;">
     <div class="search-wrap">
       <input type="text" id="productSearch" placeholder="Search HP, Dell, Gaming..." onkeyup="searchProducts()" class="search-input"/>
       <span class="search-icon">🔍</span>
@@ -203,18 +292,20 @@
     <div class="filter-tabs">
       <button class="filter-btn active" onclick="filterProducts('featured', this)">Featured</button>
       <button class="filter-btn" onclick="filterProducts('all', this)">All</button>
+      <button class="filter-btn" onclick="location.href='budget-laptops.html'">🎓 Student & Baby</button>
+      <button class="filter-btn" onclick="filterProducts('lenovo', this)">💻 Lenovo</button>
+      <button class="filter-btn" onclick="filterProducts('dell', this)">💻 Dell</button>
+      <button class="filter-btn" onclick="filterProducts('hp', this)">💻 HP</button>
+      <button class="filter-btn" onclick="filterProducts('apple', this)">🍎 MacBook</button>
       <button class="filter-btn" onclick="filterProducts('new', this)">New</button>
-      <button class="filter-btn" onclick="filterProducts('macbook', this)">💻 MacBooks</button>
-      <button class="filter-btn" onclick="filterProducts('exuk', this)">Ex-UK</button>
       <button class="filter-btn" onclick="filterProducts('server', this)">🖥️ Servers</button>
-      <button class="filter-btn" onclick="filterProducts('parts', this)">🛠️ Parts & Services</button>
     </div>
   </div>
 
   <div class="products-grid" id="productsGrid">
     <!-- Dynamically rendered by products.js -->
   </div>
-  <div class="view-all-wrap">
+  <div class="view-all-wrap" style="display: none;">
     <button id="loadMoreBtn" class="btn-outline" onclick="loadMoreProducts()">Load More Items</button>
   </div>
 </section>
@@ -282,95 +373,125 @@
 </section>
 
 <!-- ===== ACCESSORIES TEASER ===== -->
-<section id="accessories-teaser" style="padding: 6rem 0; background: var(--bg);">
-  <div class="repair-teaser-content container" style="display: flex; align-items: center; justify-content: space-between; gap: 4rem;">
-    <div style="flex: 1;">
-      <div class="section-tag">— Essential Add-ons —</div>
-      <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Complete Your <span class="gradient-text">Workspace.</span></h2>
-      <p style="color: var(--gray); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem; max-width: 500px;">
-        Enhance your performance and protect your investment with our premium selection of original accessories. High-quality chargers, bags, and storage solutions.
-      </p>
-      <div style="display: flex; gap: 1rem;">
-        <a href="accessories.html" class="btn-primary">View All Accessories</a>
-      </div>
+<section id="accessories-teaser" class="section-padding" style="background: var(--bg);">
+  <div class="container" style="text-align: center;">
+    <div class="section-tag">— Essential Add-ons —</div>
+    <h2 class="section-title">Complete Your <span class="gradient-text">Workspace.</span></h2>
+    <p class="section-sub">
+      Enhance your performance and protect your investment with our premium selection of original accessories. High-quality chargers, bags, and storage solutions.
+    </p>
+    
+    <div class="workspace-grid">
+      <a href="accessories.html" class="workspace-card">
+        <div class="workspace-card-inner">
+          <div class="workspace-img">
+            <img src="https://images.unsplash.com/photo-1625766763788-95dcce9bf5ac?q=80&w=400&auto=format&fit=crop" alt="Chargers" loading="lazy">
+          </div>
+          <div class="workspace-info">
+            <h4>Chargers</h4>
+            <span class="workspace-price">From 3k</span>
+          </div>
+        </div>
+      </a>
+      <a href="accessories.html" class="workspace-card">
+        <div class="workspace-card-inner">
+          <div class="workspace-img">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb94c6a62?q=80&w=400&auto=format&fit=crop" alt="Bags" loading="lazy">
+          </div>
+          <div class="workspace-info">
+            <h4>Bags</h4>
+            <span class="workspace-price">From 2.5k</span>
+          </div>
+        </div>
+      </a>
+      <a href="accessories.html" class="workspace-card">
+        <div class="workspace-card-inner">
+          <div class="workspace-img">
+            <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?q=80&w=400&auto=format&fit=crop" alt="Hubs" loading="lazy">
+          </div>
+          <div class="workspace-info">
+            <h4>Hubs</h4>
+            <span class="workspace-price">From 2.5k</span>
+          </div>
+        </div>
+      </a>
+      <a href="accessories.html" class="workspace-card">
+        <div class="workspace-card-inner">
+          <div class="workspace-img">
+            <img src="https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80&w=400&auto=format&fit=crop" alt="Storage" loading="lazy">
+          </div>
+          <div class="workspace-info">
+            <h4>Storage</h4>
+            <span class="workspace-price">From 3.5k</span>
+          </div>
+        </div>
+      </a>
     </div>
-    <div class="repair-visual-teaser" style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-      <a href="accessories.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">⚡</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.25rem;">Chargers</h4>
-          <span style="font-size: 0.75rem; color: var(--primary); font-weight: bold;">From 3k</span>
-        </div>
-      </a>
-      <a href="accessories.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🎒</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.25rem;">Bags</h4>
-          <span style="font-size: 0.75rem; color: var(--primary); font-weight: bold;">From 2.5k</span>
-        </div>
-      </a>
-      <a href="accessories.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔌</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.25rem;">Hubs</h4>
-          <span style="font-size: 0.75rem; color: var(--primary); font-weight: bold;">From 2.5k</span>
-        </div>
-      </a>
-      <a href="accessories.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💾</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.25rem;">Storage</h4>
-          <span style="font-size: 0.75rem; color: var(--primary); font-weight: bold;">From 3.5k</span>
-        </div>
-      </a>
-    </div>
+    
+    <a href="accessories.html" class="btn-primary" style="padding: 1rem 2.5rem;">Explore All Accessories</a>
   </div>
 </section>
 
 
 <!-- ===== REPAIRS TEASER ===== -->
-<section id="repairs-teaser" style="background: linear-gradient(to bottom, var(--bg), var(--bg2));">
-  <div class="repair-teaser-content container" style="display: flex; align-items: center; justify-content: space-between; gap: 4rem; padding: 6rem 0;">
-    <div style="flex: 1;">
-      <div class="section-tag">— Expert Service Center —</div>
-      <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Professional Laptop <br/><span class="gradient-text">Repair Services.</span></h2>
-      <p style="color: var(--gray); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem; max-width: 500px;">
-        Fast, reliable, and affordable solutions for all your laptop issues. From <strong>Screen Replacements</strong> and <strong>Data Recovery</strong> to complex <strong>Motherboard Repair</strong>.
-      </p>
-      <div style="display: flex; gap: 1rem;">
-        <a href="repairs.html" class="btn-primary">View All Services</a>
-        <a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I%20need%20help%20with%20a%20laptop%20repair." class="btn-outline">Talk to a Tech</a>
-      </div>
+<section id="repairs-teaser" class="section-padding" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container" style="text-align: center;">
+    <div class="section-tag">— Expert Service Center —</div>
+    <h2 class="section-title">Professional Laptop <br/><span class="gradient-text">Repair Services.</span></h2>
+    <p class="section-sub">
+      Fast, reliable, and affordable solutions for all your laptop issues. From Screen Replacements and Data Recovery to complex Motherboard Repair.
+    </p>
+
+    <div class="workspace-grid">
+      <a href="repairs.html" class="workspace-card">
+        <div class="workspace-card-inner">
+          <div class="workspace-img">
+            <img src="https://images.unsplash.com/photo-1588508065123-287b28e013da?q=80&w=400&auto=format&fit=crop" alt="Screens" loading="lazy">
+          </div>
+          <div class="workspace-info">
+            <h4>Screens</h4>
+            <span class="workspace-price">From 6.5k</span>
+          </div>
+        </div>
+      </a>
+      <a href="repairs.html" class="workspace-card">
+        <div class="workspace-card-inner">
+          <div class="workspace-img">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010978911e?q=80&w=400&auto=format&fit=crop" alt="Data" loading="lazy">
+          </div>
+          <div class="workspace-info">
+            <h4>Data</h4>
+            <span class="workspace-price">From 4.5k</span>
+          </div>
+        </div>
+      </a>
+      <a href="repairs.html" class="workspace-card">
+        <div class="workspace-card-inner">
+          <div class="workspace-img">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=400&auto=format&fit=crop" alt="Motherboard" loading="lazy">
+          </div>
+          <div class="workspace-info">
+            <h4>Motherboard</h4>
+            <span class="workspace-price">From 6k</span>
+          </div>
+        </div>
+      </a>
+      <a href="repairs.html" class="workspace-card">
+        <div class="workspace-card-inner">
+          <div class="workspace-img">
+            <img src="https://images.unsplash.com/photo-1595931343734-738981f9397f?q=80&w=400&auto=format&fit=crop" alt="Battery" loading="lazy">
+          </div>
+          <div class="workspace-info">
+            <h4>Battery</h4>
+            <span class="workspace-price">From 3.5k</span>
+          </div>
+        </div>
+      </a>
     </div>
-    <div class="repair-visual-teaser" style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-      <a href="repairs.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🖥️</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.25rem;">Screens</h4>
-          <span style="font-size: 0.75rem; color: var(--primary); font-weight: bold;">From 6.5k</span>
-        </div>
-      </a>
-      <a href="repairs.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size: 2rem; margin-bottom: 0.5rem;">💾</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.25rem;">Data</h4>
-          <span style="font-size: 0.75rem; color: var(--primary); font-weight: bold;">From 4.5k</span>
-        </div>
-      </a>
-      <a href="repairs.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔌</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.25rem;">Motherboard</h4>
-          <span style="font-size: 0.75rem; color: var(--primary); font-weight: bold;">From 6k</span>
-        </div>
-      </a>
-      <a href="repairs.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; text-align: center; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔋</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.25rem;">Battery</h4>
-          <span style="font-size: 0.75rem; color: var(--primary); font-weight: bold;">From 3.5k</span>
-        </div>
-      </a>
+
+    <div style="display: flex; gap: 1rem; justify-content: center;">
+      <a href="repairs.html" class="btn-primary" style="padding: 1rem 2.5rem;">View All Services</a>
+      <a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I%20need%20help%20with%20a%20laptop%20repair." class="btn-outline" style="padding: 1rem 2.5rem;">Talk to a Tech</a>
     </div>
   </div>
 </section>
@@ -497,74 +618,90 @@
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  <!-- Verified Reviews Marquee -->
-  <div class="reviews-marquee-wrap" style="background: rgba(255,255,255,0.03); border-top: none; border-bottom: 1px solid var(--border); padding: 2rem 0;">
-    <div class="reviews-marquee">
-      <!-- Mark Mutie -->
-      <div class="review-card-horizontal">
-        <div class="review-stars">⭐⭐⭐⭐⭐ <span class="jiji-tag">Jiji Verified</span></div>
-        <p>"Exceptional service. Focus is on customer benefit and advice rather than just gain. They even provide a generous 6-month warranty."</p>
-        <div class="reviewer">— Mark Mutie</div>
-      </div>
-      <!-- Alvine Njuguna -->
-      <div class="review-card-horizontal">
-        <div class="review-stars">⭐⭐⭐⭐⭐ <span class="jiji-tag">Jiji Verified</span></div>
-        <p>"The customer service was great, they offered the best experience and have good quality laptops. Definitely coming back again!"</p>
-        <div class="reviewer">— Alvine Njuguna</div>
-      </div>
-      <!-- Hesbon Maisha -->
-      <div class="review-card-horizontal">
-        <div class="review-stars">⭐⭐⭐⭐⭐ <span class="jiji-tag">Jiji Verified</span></div>
-        <p>"I love the service I received, very honest guy, I'm definitely working with him again in the near future. Highly recommend him."</p>
-        <div class="reviewer">— Hesbon Maisha</div>
-      </div>
-      <!-- EricSmith Kimani -->
-      <div class="review-card-horizontal">
-        <div class="review-stars">⭐⭐⭐⭐⭐ <span class="jiji-tag">Jiji Verified</span></div>
-        <p>"Quality machines, timely delivery of what is promised and great customer service. Try them!"</p>
-        <div class="reviewer">— EricSmith Kimani</div>
-      </div>
-      <!-- Vico 254 -->
-      <div class="review-card-horizontal">
-        <div class="review-stars">⭐⭐⭐⭐⭐ <span class="jiji-tag">Jiji Verified</span></div>
-        <p>"I ordered a Lenovo Laptop from these people and I got it safe and sound. Asante!"</p>
-        <div class="reviewer">— Vico 254</div>
-      </div>
-
-      <!-- Loop duplicates for infinite scroll -->
-      <div class="review-card-horizontal">
-        <div class="review-stars">⭐⭐⭐⭐⭐ <span class="jiji-tag">Jiji Verified</span></div>
-        <p>"Exceptional service. Focus is on customer benefit and advice rather than just gain. They even provide a generous 6-month warranty."</p>
-        <div class="reviewer">— Mark Mutie</div>
-      </div>
-      <div class="review-card-horizontal">
-        <div class="review-stars">⭐⭐⭐⭐⭐ <span class="jiji-tag">Jiji Verified</span></div>
-        <p>"The customer service was great, they offered the best experience and have good quality laptops. Definitely coming back again!"</p>
-        <div class="reviewer">— Alvine Njuguna</div>
-      </div>
-      <div class="review-card-horizontal">
-        <div class="review-stars">⭐⭐⭐⭐⭐ <span class="jiji-tag">Jiji Verified</span></div>
-        <p>"I love the service I received, very honest guy, I'm definitely working with him again in the near future. Highly recommend him."</p>
-        <div class="reviewer">— Hesbon Maisha</div>
-      </div>
-      <div class="review-card-horizontal">
-        <div class="review-stars">⭐⭐⭐⭐⭐ <span class="jiji-tag">Jiji Verified</span></div>
-        <p>"Quality machines, timely delivery of what is promised and great customer service. Try them!"</p>
-        <div class="reviewer">— EricSmith Kimani</div>
-      </div>
-      <div class="review-card-horizontal">
-        <div class="review-stars">⭐⭐⭐⭐⭐ <span class="jiji-tag">Jiji Verified</span></div>
-        <p>"I ordered a Lenovo Laptop from these people and I got it safe and sound. Asante!"</p>
-        <div class="reviewer">— Vico 254</div>
+  <!-- MERGED REVIEWS SECTION -->
+  <div style="padding: 3rem 0; background: var(--bg1); border-top: 1px solid var(--border); overflow: hidden;">
+    <div style="text-align: center; margin-bottom: 2rem; padding: 0 1.5rem;">
+      <h3 style="font-size: 1.8rem; font-weight: 900; margin-bottom: 0.5rem; letter-spacing: -0.5px;">Trusted by <span class="gradient-text">Hundreds.</span></h3>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-top: 10px;">
+        <div style="display: flex; align-items: center; gap: 5px; font-weight: 700; font-size: 0.9rem;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Logo.svg" style="height: 14px;" alt="Google">
+          <span>5.0 ⭐⭐⭐⭐⭐</span>
+        </div>
+        <div style="width: 1px; height: 12px; background: var(--border);"></div>
+        <div style="display: flex; align-items: center; gap: 5px; font-weight: 700; font-size: 0.9rem;">
+          <span style="color: #2ecc71;">Jiji Verified</span>
+          <span>100+ Reviews</span>
+        </div>
       </div>
     </div>
-    <div style="text-align: center; margin-top: 1rem;">
-      <a href="https://jiji.co.ke/create-opinion/user4880546" target="_blank" class="btn-outline" style="font-size: 0.8rem; padding: 6px 15px;">See all 100+ Verified Reviews on Jiji →</a>
+
+    <div class="reviews-marquee-wrap" style="padding: 1rem 0;">
+      <div class="reviews-marquee">
+        <!-- Google Review 1 -->
+        <div class="review-card-horizontal" style="border-left: 3px solid #4285F4;">
+          <div class="review-stars">⭐⭐⭐⭐⭐ <span style="color: #4285F4; font-size: 0.65rem; font-weight: 800;">GOOGLE REVIEW</span></div>
+          <p>"Very reliable and honest. Legit products, also made a follow-up"</p>
+          <div class="reviewer">— Anne Aswan</div>
+        </div>
+        <!-- Jiji Review 1 -->
+        <div class="review-card-horizontal" style="border-left: 3px solid #2ecc71;">
+          <div class="review-stars">⭐⭐⭐⭐⭐ <span style="color: #2ecc71; font-size: 0.65rem; font-weight: 800;">JIJI VERIFIED</span></div>
+          <p>"Exceptional service. Focus is on customer benefit and advice rather than just gain. They even provide a generous 6-month warranty."</p>
+          <div class="reviewer">— Mark Mutie</div>
+        </div>
+        <!-- Google Review 2 -->
+        <div class="review-card-horizontal" style="border-left: 3px solid #4285F4;">
+          <div class="review-stars">⭐⭐⭐⭐⭐ <span style="color: #4285F4; font-size: 0.65rem; font-weight: 800;">GOOGLE REVIEW</span></div>
+          <p>"Legit items and top notch customer experience."</p>
+          <div class="reviewer">— Magrine Jepngetich</div>
+        </div>
+        <!-- Jiji Review 2 -->
+        <div class="review-card-horizontal" style="border-left: 3px solid #2ecc71;">
+          <div class="review-stars">⭐⭐⭐⭐⭐ <span style="color: #2ecc71; font-size: 0.65rem; font-weight: 800;">JIJI VERIFIED</span></div>
+          <p>"The customer service was great, they offered the best experience and have good quality laptops. Definitely coming back again!"</p>
+          <div class="reviewer">— Alvine Njuguna</div>
+        </div>
+        <!-- Google Review 3 -->
+        <div class="review-card-horizontal" style="border-left: 3px solid #4285F4;">
+          <div class="review-stars">⭐⭐⭐⭐⭐ <span style="color: #4285F4; font-size: 0.65rem; font-weight: 800;">GOOGLE REVIEW</span></div>
+          <p>"They have the best products at a friendly price plus good customer service."</p>
+          <div class="reviewer">— Wesley Nyandika</div>
+        </div>
+        <!-- Jiji Review 3 -->
+        <div class="review-card-horizontal" style="border-left: 3px solid #2ecc71;">
+          <div class="review-stars">⭐⭐⭐⭐⭐ <span style="color: #2ecc71; font-size: 0.65rem; font-weight: 800;">JIJI VERIFIED</span></div>
+          <p>"I love the service I received, very honest guy, I'm definitely working with him again in the near future."</p>
+          <div class="reviewer">— Hesbon Maisha</div>
+        </div>
+
+        <!-- Duplicates for infinite scroll -->
+        <div class="review-card-horizontal" style="border-left: 3px solid #4285F4;">
+          <div class="review-stars">⭐⭐⭐⭐⭐ <span style="color: #4285F4; font-size: 0.65rem; font-weight: 800;">GOOGLE REVIEW</span></div>
+          <p>"Very reliable and honest. Legit products, also made a follow-up"</p>
+          <div class="reviewer">— Anne Aswan</div>
+        </div>
+        <div class="review-card-horizontal" style="border-left: 3px solid #2ecc71;">
+          <div class="review-stars">⭐⭐⭐⭐⭐ <span style="color: #2ecc71; font-size: 0.65rem; font-weight: 800;">JIJI VERIFIED</span></div>
+          <p>"Exceptional service. Focus is on customer benefit and advice rather than just gain."</p>
+          <div class="reviewer">— Mark Mutie</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 1.5rem; padding: 0 1.5rem;">
+      <a href="https://g.page/r/Cff7ogxxeBoSEAE/review" target="_blank" class="btn-outline" style="font-size: 0.75rem; padding: 6px 12px; border-color: #4285F4; color: #4285F4;">Review on Google</a>
+      <a href="https://jiji.co.ke/create-opinion/user4880546" target="_blank" class="btn-outline" style="font-size: 0.75rem; padding: 6px 12px; border-color: #2ecc71; color: #2ecc71;">See Jiji Reviews</a>
     </div>
   </div>
   <div class="footer-container">
     <div class="footer-brand">
-      <div class="footer-logo"><img src="images/logo.png" alt="Nexcom Logo" style="height: 40px; width: auto; vertical-align: middle;"></div>
+      <div class="footer-logo" style="display: flex; align-items: center; gap: 12px; margin-bottom: 1.5rem;">
+        <img src="images/logo.png" alt="Nexcom Logo" style="height: 50px; width: 50px; border-radius: 50%; object-fit: cover;">
+        <div style="display: flex; flex-direction: column; line-height: 1.1;">
+          <span style="color: #000; font-size: 1.2rem; font-weight: 900; letter-spacing: -0.5px; text-transform: uppercase;">Nexcom</span>
+          <span style="color: rgba(0,0,0,0.5); font-size: 0.6rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">Ventures Ltd</span>
+        </div>
+      </div>
       <p>Nairobi's trusted tech partner. New laptops, refurbished deals, and instant cash for your old device.</p>
     </div>
     <div class="footer-links">
@@ -576,10 +713,10 @@
     </div>
     <div class="footer-links">
       <h4>Top Brands</h4>
-      <a href="#shop">Dell</a>
-      <a href="#shop">HP</a>
-      <a href="#shop">Lenovo</a>
-      <a href="#shop">Apple</a>
+      <a href="#shop" onclick="filterCategory('dell')">Dell</a>
+      <a href="#shop" onclick="filterCategory('hp')">HP</a>
+      <a href="#shop" onclick="filterCategory('lenovo')">Lenovo</a>
+      <a href="#shop" onclick="filterCategory('apple')">Apple</a>
     </div>
     <div class="footer-contact">
       <h4>Follow Us</h4>
@@ -711,29 +848,24 @@
 <script>
 const heroData = [
   {
-    img: "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_medium.png",
-    label: "HP ProBook G11 Series",
-    price: "KES 89,000"
+    img: "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=1200&auto=format&fit=crop",
+    label: "HP ProBook 640 G5 i5",
+    price: "Now KES 25,800"
   },
   {
-    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png",
-    label: "ThinkBook 14 Business",
-    price: "KES 75,000"
+    img: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?q=80&w=1200&auto=format&fit=crop",
+    label: "MacBook Pro Retina",
+    price: "From KES 145,000"
   },
   {
-    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8Nzg4OTN8aW1hZ2UvcG5nfGg5Ni9oYTcvMTA2NzMyMDYyNjM4MzgucG5nfDllOTUyNGM1OGYxNjkxNGU2ZTMxNWQxMTE1NDQ0MGZkNDU4ZWYwOWExZWZjMDJkMDRiZTIwYjc0OGE5NGUwMzA/lenovo-laptop-thinkpad-t490-hero-1126.png",
-    label: "ThinkPad T490 (Ex-UK)",
-    price: "KES 29,999"
+    img: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=1200&auto=format&fit=crop",
+    label: "Dell XPS Infinity Screen",
+    price: "From KES 125,000"
   },
   {
-    img: "https://www.hp.com/content/dam/sites/omen/worldwide/laptops/2023-omen-16-intel/ImageMain22x.png",
-    label: "HP Omen Gaming Beast",
-    price: "KES 145,000"
-  },
-  {
-    img: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
-    label: "Dell PowerEdge Servers",
-    price: "from $1,200"
+    img: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=1200&auto=format&fit=crop",
+    label: "Lenovo ThinkPad Elite",
+    price: "From KES 45,000"
   }
 ];
 
