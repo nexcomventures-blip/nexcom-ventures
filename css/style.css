@@ -1070,7 +1070,10 @@ section {
 .add-cart:hover { opacity: 0.9; transform: scale(1.03); }
 
 .view-all-wrap {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   margin-top: 2.5rem;
 }
 
@@ -2030,12 +2033,6 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-}
-.original-price {
-  text-decoration: line-through;
-  color: var(--gray);
-  font-size: 0.85rem;
-  font-weight: 500;
 }
 .sale-badge {
   position: absolute;
