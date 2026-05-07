@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexcom Neo | Premium Tech Nairobi</title>
+    <title>Nexcom Stealth | High-Performance Tech</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/neo_design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/stealth_design.css">
 </head>
 <body>
 
     <header>
         <div class="container">
             <nav>
-                <a href="#" class="logo">NEXCOM.</a>
+                <a href="#" class="logo">Nexcom<span>Stealth</span></a>
                 <div class="nav-links">
-                    <a href="#shop">Collection</a>
-                    <a href="#sell">Sell Laptop</a>
-                    <a href="#contact">Find Us</a>
+                    <a href="#inventory">Inventory</a>
+                    <a href="#buyback">Sell Device</a>
+                    <a href="#location">Studio</a>
                 </div>
-                <a href="https://wa.me/254721585784" class="btn btn-primary">Support</a>
+                <a href="https://wa.me/254721585784" class="btn btn-outline" style="padding: 0.6rem 1.2rem; font-size: 0.75rem;">Direct Line</a>
             </nav>
         </div>
     </header>
@@ -28,117 +28,58 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>Laptops for the <br><span style="color: var(--primary);">Next Generation.</span></h1>
-                <p>Nairobi's most trusted source for premium laptops. From MacBook Pros to Business EliteBooks—all certified with warranty.</p>
-                <div class="cta-group">
-                    <a href="#shop" class="btn btn-primary">Shop Collection</a>
-                    <a href="#sell" class="btn btn-secondary">Sell Broken Laptop</a>
+                <div style="color: var(--primary); font-weight: 700; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px;">Premium Tech Curator</div>
+                <h1>Machines for <br>Peak Performance.</h1>
+                <p>Nairobi's elite selection of new and refurbished laptops. High-spec business machines, workstation-grade power, and MacBooks.</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#inventory" class="btn btn-primary">View Vault</a>
+                    <a href="#buyback" class="btn btn-outline">Sell Broken Device</a>
                 </div>
             </div>
         </section>
 
-        <section class="container">
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">🛡️</div>
-                    <h3>Certified Quality</h3>
-                    <p>Every machine undergoes a 30-point inspection and comes with a 6-month warranty.</p>
-                </div>
-                <div class="feature-card">
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">🚀</div>
-                    <h3>Same-Day Delivery</h3>
-                    <div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--accent);">
-                        <span style="width: 8px; height: 8px; background: var(--accent); border-radius: 50%;"></span>
-                        Live in Nairobi
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div style="font-size: 2rem; margin-bottom: 1rem;">💰</div>
-                    <h3>Trade-In & Sell</h3>
-                    <p>Upgrade your tech. We buy dead, broken, or unused laptops for instant cash.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="container" id="shop">
-            <div class="section-title">
-                <h2>New Arrivals</h2>
-                <div style="display: flex; gap: 0.5rem;">
-                    <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.75rem;">MacBook</button>
-                    <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.75rem;">Business</button>
+        <section class="container" id="inventory">
+            <div class="section-header">
+                <div>
+                    <h2 style="margin-bottom: 0.5rem;">Current Vault</h2>
+                    <p style="color: var(--text-dim);">Live inventory of premium performance machines.</p>
                 </div>
             </div>
             
-            <div class="product-grid" id="productGrid">
-                <!-- Products loaded by neo_logic.js -->
+            <div class="grid" id="inventory">
+                <!-- Loaded by stealth_logic.js -->
             </div>
         </section>
 
-        <section class="container" id="sell">
-            <div class="sell-banner">
-                <div class="sell-content">
-                    <span style="color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">Cash for Laptops</span>
-                    <h2>Turn your old <br>tech into cash.</h2>
-                    <p style="opacity: 0.8; margin-bottom: 2.5rem;">We buy broken screens, dead motherboards, or just unused laptops. Get a valuation in minutes.</p>
-                    <a href="https://wa.me/254721585784?text=I want to sell my laptop" class="btn btn-primary" style="background: white; color: var(--secondary);">Get Instant Quote</a>
-                </div>
-                <div class="sell-steps">
-                    <div class="step">
-                        <div class="step-num">1</div>
-                        <div>
-                            <div style="font-weight: 700;">Snap & Send</div>
-                            <p style="font-size: 0.875rem; opacity: 0.7;">Send specs or photos on WhatsApp.</p>
-                        </div>
-                    </div>
-                    <div class="step">
-                        <div class="step-num">2</div>
-                        <div>
-                            <div style="font-weight: 700;">Get a Quote</div>
-                            <p style="font-size: 0.875rem; opacity: 0.7;">We offer the best market rates in Nairobi.</p>
-                        </div>
-                    </div>
-                    <div class="step">
-                        <div class="step-num">3</div>
-                        <div>
-                            <div style="font-weight: 700;">Instant Payment</div>
-                            <p style="font-size: 0.875rem; opacity: 0.7;">Payment via M-Pesa or Cash on the spot.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="container" id="contact" style="margin-bottom: 6rem;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                <div style="background: #F3F4F6; border-radius: 2rem; height: 400px; overflow: hidden;">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m18!1m12!1m3!1d3988.8188176882253!2d36.8219!3d-1.2833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d6350c3331%3A0xb35183f6f1604a11!2sNorwich%20Union%20House!5e0!3m2!1sen!2ske!4v1715080000000!5m2!1sen!2ske" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
+        <section class="container" id="buyback">
+            <div class="sell-box">
                 <div>
-                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Visit the Studio.</h2>
-                    <p style="color: var(--text-light); margin-bottom: 2rem;">Come see our collection in person. We are located in the heart of the CBD for easy access.</p>
-                    <div style="display: grid; gap: 1.5rem;">
-                        <div>
-                            <div style="font-weight: 700;">Location</div>
-                            <p style="color: var(--text-light);">Norwich Union House, 5th Floor, Suite 5A<br>Mama Ngina Street, Nairobi</p>
-                        </div>
-                        <div>
-                            <div style="font-weight: 700;">Hours</div>
-                            <p style="color: var(--text-light);">Monday – Saturday<br>9:00 AM – 6:00 PM</p>
-                        </div>
-                    </div>
+                    <h2>Get Paid for Your Tech.</h2>
+                    <p style="color: var(--text-dim); max-width: 450px;">We buy unused, broken, or dead laptops. Instant evaluation. Instant M-Pesa payment.</p>
                 </div>
+                <a href="https://wa.me/254721585784?text=Vault: Selling my laptop" class="btn btn-primary">Get Quote</a>
+            </div>
+        </section>
+
+        <section class="container" id="location" style="padding: 10rem 0;">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2>The Studio.</h2>
+                <p style="color: var(--text-dim);">Norwich Union House, 5th Floor, Suite 5A • Nairobi CBD</p>
+            </div>
+            <div style="border: 1px solid var(--border); height: 450px; border-radius: 8px; overflow: hidden; filter: grayscale(1) invert(1) contrast(1.2);">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m18!1m12!1m3!1d3988.8188176882253!2d36.8219!3d-1.2833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d6350c3331%3A0xb35183f6f1604a11!2sNorwich%20Union%20House!5e0!3m2!1sen!2ske!4v1715080000000!5m2!1sen!2ske" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
     </main>
 
-    <footer style="border-top: 1px solid #E5E7EB; padding: 4rem 0;">
-        <div class="container" style="text-align: center; color: var(--text-light); font-size: 0.875rem;">
-            <p>&copy; 2026 Nexcom Ventures Ltd. All Rights Reserved.</p>
+    <footer style="padding: 5rem 0; border-top: 1px solid var(--border); text-align: center;">
+        <div class="container">
+            <div class="logo" style="margin-bottom: 1rem; font-size: 1.2rem;">Nexcom<span>Stealth</span></div>
+            <p style="color: var(--text-dim); font-size: 0.8rem;">&copy; 2026 Nexcom Ventures Ltd. Elite Tech Sourcing.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="js/products.js"></script>
-    <script src="js/neo_logic.js"></script>
+    <script src="js/stealth_logic.js"></script>
 </body>
 </html>
