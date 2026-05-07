@@ -1729,7 +1729,7 @@ function renderProducts(filter = "all") {
     return brand === f || cat.includes(f);
   });
 
-  currentLimit = 8;
+  currentLimit = 24;
   renderFiltered();
 }
 
