@@ -227,7 +227,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 16 2019 i9 64/1tb with 8 graphics",
     "specs": "macbook pro 16 2019 i9 64/1tb with 8 graphics",
-    "price": 95000,
+    "price": 114000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -237,7 +237,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 16 i9 32/2tb with 8gb graphics",
     "specs": "macbook pro 16 i9 32/2tb with 8gb graphics",
-    "price": 95000,
+    "price": 114000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -247,7 +247,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 16 2019 i9 32/1tb with 4gn graphics",
     "specs": "macbook pro 16 2019 i9 32/1tb with 4gn graphics",
-    "price": 85000,
+    "price": 102000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -257,7 +257,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 16 2019 i7 32/512gb",
     "specs": "macbook pro 16 2019 i7 32/512gb",
-    "price": 70000,
+    "price": 84000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -267,7 +267,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 15 2019 i7 16/512gb 4gb graphics",
     "specs": "macbook pro 15 2019 i7 16/512gb 4gb graphics",
-    "price": 63000,
+    "price": 75600,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -277,7 +277,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 15 2018 i7 16/512gb 4gb graphics",
     "specs": "macbook pro 15 2018 i7 16/512gb 4gb graphics",
-    "price": 55000,
+    "price": 66000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -287,7 +287,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 15 2017 i7 16/512gb 4gb graphics",
     "specs": "macbook pro 15 2017 i7 16/512gb 4gb graphics",
-    "price": 52000,
+    "price": 62400,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -297,7 +297,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 15 2017 i7 16/512gb 2gb graphics",
     "specs": "macbook pro 15 2017 i7 16/512gb 2gb graphics",
-    "price": 50000,
+    "price": 60000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -307,7 +307,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 15 2015 i7 16/512gb 2gb graphics",
     "specs": "macbook pro 15 2015 i7 16/512gb 2gb graphics",
-    "price": 35000,
+    "price": 42000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -317,7 +317,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro m1 13 2020 16/512gb",
     "specs": "macbook pro m1 13 2020 16/512gb",
-    "price": 100000,
+    "price": 120000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -327,7 +327,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro m1 13 2020 8/256gb",
     "specs": "macbook pro m1 13 2020 8/256gb",
-    "price": 75000,
+    "price": 90000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -337,7 +337,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 i7 2020 16/1tb",
     "specs": "macbook pro 13 i7 2020 16/1tb",
-    "price": 65000,
+    "price": 78000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -347,7 +347,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 i7 2020 32/512gb",
     "specs": "macbook pro 13 i7 2020 32/512gb",
-    "price": 65000,
+    "price": 78000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -357,7 +357,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 i7 2020 16/512gb",
     "specs": "macbook pro 13 i7 2020 16/512gb",
-    "price": 60000,
+    "price": 72000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -367,7 +367,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2019 i7 16/1tb",
     "specs": "macbook pro 13 2019 i7 16/1tb",
-    "price": 70000,
+    "price": 84000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -377,7 +377,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2019 i7 16/512gb",
     "specs": "macbook pro 13 2019 i7 16/512gb",
-    "price": 55000,
+    "price": 66000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -387,7 +387,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2019 i7 16/256gb",
     "specs": "macbook pro 13 2019 i7 16/256gb",
-    "price": 50000,
+    "price": 60000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -397,7 +397,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2019 i5 16/256gb",
     "specs": "macbook pro 13 2019 i5 16/256gb",
-    "price": 45000,
+    "price": 54000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -407,7 +407,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2019 i5 8/256gb",
     "specs": "macbook pro 13 2019 i5 8/256gb",
-    "price": 42000,
+    "price": 50400,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -417,7 +417,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2018 i7 16/256gb",
     "specs": "macbook pro 13 2018 i7 16/256gb",
-    "price": 48000,
+    "price": 57600,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -427,7 +427,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2017 i7 16/1tb",
     "specs": "macbook pro 13 2017 i7 16/1tb",
-    "price": 50000,
+    "price": 60000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -437,7 +437,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2017 i7 16/512gb",
     "specs": "macbook pro 13 2017 i7 16/512gb",
-    "price": 45000,
+    "price": 54000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -447,7 +447,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2017 i7 16/256gb",
     "specs": "macbook pro 13 2017 i7 16/256gb",
-    "price": 40000,
+    "price": 48000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -457,7 +457,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2017 i5 8/512gb",
     "specs": "macbook pro 13 2017 i5 8/512gb",
-    "price": 38000,
+    "price": 45600,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -467,7 +467,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2017 i5 8/256gb",
     "specs": "macbook pro 13 2017 i5 8/256gb",
-    "price": 32000,
+    "price": 38400,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -477,7 +477,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2015 i7 8/256gb",
     "specs": "macbook pro 13 2015 i7 8/256gb",
-    "price": 30000,
+    "price": 36000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -487,7 +487,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2015 i5 16/512gb",
     "specs": "macbook pro 13 2015 i5 16/512gb",
-    "price": 32000,
+    "price": 38400,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -497,7 +497,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2015 i5 16/256gb",
     "specs": "macbook pro 13 2015 i5 16/256gb",
-    "price": 27000,
+    "price": 32400,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -507,7 +507,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2015 i5 8/256gb",
     "specs": "macbook pro 13 2015 i5 8/256gb",
-    "price": 25000,
+    "price": 30000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -517,7 +517,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2014 i5 8/256gb",
     "specs": "macbook pro 13 2014 i5 8/256gb",
-    "price": 23000,
+    "price": 27600,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -527,7 +527,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2013 i5 8/256gb",
     "specs": "macbook pro 13 2013 i5 8/256gb",
-    "price": 21000,
+    "price": 25200,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -537,7 +537,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2013 i7 8/256gb",
     "specs": "macbook pro 13 2013 i7 8/256gb",
-    "price": 25000,
+    "price": 30000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -547,7 +547,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2012 i7 8/256gb",
     "specs": "macbook pro 13 2012 i7 8/256gb",
-    "price": 19000,
+    "price": 22800,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -557,7 +557,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2012 i5 8/256gb",
     "specs": "macbook pro 13 2012 i5 8/256gb",
-    "price": 17000,
+    "price": 20400,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -567,7 +567,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2011 i5 8/256gb",
     "specs": "macbook pro 13 2011 i5 8/256gb",
-    "price": 15000,
+    "price": 18000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -587,7 +587,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook air m1 2022 8/256gb",
     "specs": "macbook air m1 2022 8/256gb",
-    "price": 80000,
+    "price": 96000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -597,7 +597,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook air m1 2020 8/256gb",
     "specs": "macbook air m1 2020 8/256gb",
-    "price": 60000,
+    "price": 72000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -607,7 +607,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook air 13 2019 i5 16/256gb",
     "specs": "macbook air 13 2019 i5 16/256gb",
-    "price": 42000,
+    "price": 50400,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -617,7 +617,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook air 13 2019 i58/256gb",
     "specs": "macbook air 13 2019 i58/256gb",
-    "price": 40000,
+    "price": 48000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -627,7 +627,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook air 13 2018 i5 8/256gb",
     "specs": "macbook air 13 2018 i5 8/256gb",
-    "price": 38000,
+    "price": 45600,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -637,7 +637,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook air 13 2017 i7 8/256gb",
     "specs": "macbook air 13 2017 i7 8/256gb",
-    "price": 30000,
+    "price": 36000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -647,7 +647,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook air 13 2017 i5 8/256gb",
     "specs": "macbook air 13 2017 i5 8/256gb",
-    "price": 25000,
+    "price": 30000,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -657,7 +657,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "MacBook Air 13 2015 i5 8/256",
     "specs": "MacBook Air 13 2015 i5 8/256",
-    "price": 22000,
+    "price": 26400,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -667,7 +667,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "MacBook Air 13 2014 i7 8/256",
     "specs": "MacBook Air 13 2014 i7 8/256",
-    "price": 21000,
+    "price": 25200,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -677,7 +677,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "MacBook Air 13 2013 i5 8/128",
     "specs": "MacBook Air 13 2013 i5 8/128",
-    "price": 19000,
+    "price": 22800,
     "category": "apple macbook exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -687,7 +687,7 @@ const ALL_PRODUCTS = [
     "brand": "Samsung",
     "name": "sam 930 i7 11th 16/512gb",
     "specs": "sam 930 i7 11th 16/512gb",
-    "price": 60000,
+    "price": 72000,
     "category": "samsung laptop exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
