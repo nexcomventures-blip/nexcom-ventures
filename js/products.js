@@ -675,7 +675,7 @@ function renderProducts(filter = "all") {
 
 function orderWhatsApp(name, price) {
   const text = encodeURIComponent(`Hi Nexcom! I'm interested in the ${name} (KES ${price.toLocaleString()}). Is it available?`);
-  window.open(`https://wa.me/254722816001?text=${text}`, '_blank');
+  window.open(`https://wa.me/254721585784?text=${text}`, '_blank');
 }
 
 // Initial render
@@ -707,7 +707,7 @@ function setupDailySpecial() {
   if (banner) {
     banner.onclick = () => {
       const text = encodeURIComponent(`Hi Nexcom! I want to claim today's special deal: ${p.name} at KES ${newPrice.toLocaleString()} (10% OFF)`);
-      window.open(`https://wa.me/254722816001?text=${text}`, '_blank');
+      window.open(`https://wa.me/254721585784?text=${text}`, '_blank');
     };
   }
 
