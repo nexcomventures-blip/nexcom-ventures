@@ -1,715 +1,1821 @@
 const ALL_PRODUCTS = [
-    {
-        "id": "hpe-dl380-gen11-16core",
-        "brand": "HPE",
-        "name": "HPE ProLiant DL380 Gen11 (16-Core)",
-        "specs": "Intel Xeon Gold 5416S \u2022 32GB RAM \u2022 2U Rack \u2022 1 Year Warranty \u2022 BRAND NEW",
-        "price": 1014390,
-        "category": "server enterprise hpe featured brandnew",
-        "badge": "new",
-        "img": "https://images.weserv.nl/?url=https://expresscomputersystems.com/cdn/shop/files/hpe-dl380-gen11-12-edsff_800x.jpg&w=400&output=webp"
-    },
-    {
-        "id": "hpe-dl380-gen11-12core",
-        "brand": "HPE",
-        "name": "HPE ProLiant DL380 Gen11 (12-Core)",
-        "specs": "Intel Xeon Silver 4410Y \u2022 32GB RAM \u2022 2U Rack \u2022 1 Year Warranty \u2022 BRAND NEW",
-        "price": 985660,
-        "category": "server enterprise hpe featured brandnew",
-        "badge": "new",
-        "img": "https://images.weserv.nl/?url=https://expresscomputersystems.com/cdn/shop/files/hpe-dl380-gen11-12-edsff_800x.jpg&w=400&output=webp"
-    },
-    {
-        "id": "lenovo-yoga-7-ultra7",
-        "brand": "Lenovo",
-        "name": "Lenovo Yoga 7 2-in-1 OLED",
-        "specs": "Intel Core Ultra 7 155H \u2022 16GB RAM \u2022 1TB SSD \u2022 14\" 2.8K OLED Touch \u2022 BRAND NEW",
-        "price": 309400,
-        "category": "laptop premium lenovo featured brandnew",
-        "badge": "new",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub//medias/30154096055_Yoga7_2in1_14AHP9_PureDarkGray_202311010313361715631777266.png&w=400&output=webp"
-    },
-    {
-        "id": "dell-latitude-3450-i7",
-        "brand": "Dell",
-        "name": "Dell Latitude 3450 (i7 13th Gen)",
-        "specs": "Intel Core i7 1355U \u2022 8GB RAM \u2022 512GB SSD \u2022 14\" FHD \u2022 BRAND NEW",
-        "price": 209729,
-        "category": "laptop business dell featured brandnew",
-        "badge": "new",
-        "img": "https://images.weserv.nl/?url=https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-3450-laptop/media-gallery/laptop-latitude-14-3450-black-gallery-1.psd&w=400&output=webp"
-    },
-    {
-        "id": "exuk-hp-0",
-        "brand": "HP",
-        "name": "",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 1352,
-        "category": "exuk hp ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-1",
-        "brand": "HP",
-        "name": "Hp 830 G8 core i7 16 GB Ram 512 SSD 11th Gen non touch",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 54600,
-        "category": "exuk hp touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-2",
-        "brand": "HP",
-        "name": "Hp 830 g8 core i5 8 gb ram 256 ssd Touch screen 11th gen",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 41600,
-        "category": "exuk hp touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-3",
-        "brand": "HP",
-        "name": "830 G7 Core i5 8GB RAM 256 SSD Touchscreen 10Gen",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 40300,
-        "category": "exuk hp touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-4",
-        "brand": "HP",
-        "name": "Hp",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 1339,
-        "category": "exuk hp ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-5",
-        "brand": "HP",
-        "name": "Hp",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 1339,
-        "category": "exuk hp ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-6",
-        "brand": "HP",
-        "name": "Hp",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 1339,
-        "category": "exuk hp ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-7",
-        "brand": "HP",
-        "name": "Hp 840 G5 core i7 16 GB ram 512 ssd Touch screen",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 46800,
-        "category": "exuk hp touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-8",
-        "brand": "HP",
-        "name": "Hp 840 g5 core i7 16 GB ram 512 ssd non touch",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 44200,
-        "category": "exuk hp touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-9",
-        "brand": "HP",
-        "name": "Hp 840 G5 core i5 8 GB Ram 256 SSD Touchscreen 8 Gen ",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 35100,
-        "category": "exuk hp touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-10",
-        "brand": "HP",
-        "name": "HP 840 G5 core i5 8 Genration 8/256. 8GEN",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 32500,
-        "category": "exuk hp ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-11",
-        "brand": "HP",
-        "name": "Hp 830 g5 /6 core i5 8GB /256 SSD Touch x360 8 gen",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 40300,
-        "category": "exuk hp touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-12",
-        "brand": "HP",
-        "name": "HP 830 G5 core i5 8/256 non touch 8 gen",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 31200,
-        "category": "exuk hp touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-13",
-        "brand": "HP",
-        "name": "Hp 840 G4 core i7 non touch. 8/256",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 29900,
-        "category": "exuk hp touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-14",
-        "brand": "HP",
-        "name": "HP 840 G3 core i7 Non touch. 8/256",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 28600,
-        "category": "exuk hp touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-15",
-        "brand": "HP",
-        "name": "HP 840 G4 core i5 non 8/256. 7th generation",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 27300,
-        "category": "exuk hp ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-16",
-        "brand": "HP",
-        "name": "HP 840 G3 core i5 8/256. Non touch",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 26000,
-        "category": "exuk hp touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-17",
-        "brand": "HP",
-        "name": "Hp 820 G3 core i5 8/256 6th gen",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 23400,
-        "category": "exuk hp ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-18",
-        "brand": "HP",
-        "name": "Hp 840 G2 core i5 8 GB Ram 256 SSD non",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 22100,
-        "category": "exuk hp ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-19",
-        "brand": "HP",
-        "name": "Hp 640 G3 core i5 8 GB Ram 256 SSD 7th gen",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 23400,
-        "category": "exuk hp ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-20",
-        "brand": "HP",
-        "name": "Hp 640 G2 core i5 8/256 6th gen",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 22100,
-        "category": "exuk hp ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-21",
-        "brand": "HP",
-        "name": "Hp 640 G1 core i5 8 GB RAM/500 GB HDD",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 16900,
-        "category": "exuk hp ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-22",
-        "brand": "HP",
-        "name": "Hp",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 12311,
-        "category": "exuk hp ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-23",
-        "brand": "HP",
-        "name": "Hp",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 12324,
-        "category": "exuk hp ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-24",
-        "brand": "HP",
-        "name": "Hp 11G6 core i5 8 GB Ram 256 SSD Touchscreen. 10 GEN",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 26000,
-        "category": "exuk hp touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-25",
-        "brand": "HP",
-        "name": "Hp11G2 8GB RAM 128 SSD 7th generation Touch x360",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 18200,
-        "category": "exuk hp touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-26",
-        "brand": "HP",
-        "name": "Hp 11G1 4GB RAM /128 SSD. Touch screen x360. Only",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 15600,
-        "category": "exuk hp touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-27",
-        "brand": "HP",
-        "name": "Hp",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 10998,
-        "category": "exuk hp ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-hp-28",
-        "brand": "HP",
-        "name": "Hp",
-        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
-        "price": 11141,
-        "category": "exuk hp ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-dell-29",
-        "brand": "Dell",
-        "name": "Dell",
-        "specs": "Ex-UK Premium Grade \u2022 Dell Business Series",
-        "price": 6890,
-        "category": "exuk dell ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-3420/media-gallery/laptop-latitude-3420-gallery-1.psd&w=300&output=webp"
-    },
-    {
-        "id": "exuk-dell-30",
-        "brand": "Dell",
-        "name": "Dell",
-        "specs": "Ex-UK Premium Grade \u2022 Dell Business Series",
-        "price": 9451,
-        "category": "exuk dell ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-3420/media-gallery/laptop-latitude-3420-gallery-1.psd&w=300&output=webp"
-    },
-    {
-        "id": "exuk-dell-31",
-        "brand": "Dell",
-        "name": "Dell",
-        "specs": "Ex-UK Premium Grade \u2022 Dell Business Series",
-        "price": 9451,
-        "category": "exuk dell ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-3420/media-gallery/laptop-latitude-3420-gallery-1.psd&w=300&output=webp"
-    },
-    {
-        "id": "exuk-dell-32",
-        "brand": "Dell",
-        "name": "Dell",
-        "specs": "Ex-UK Premium Grade \u2022 Dell Business Series",
-        "price": 9425,
-        "category": "exuk dell ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-3420/media-gallery/laptop-latitude-3420-gallery-1.psd&w=300&output=webp"
-    },
-    {
-        "id": "exuk-dell-33",
-        "brand": "Dell",
-        "name": "DELL",
-        "specs": "Ex-UK Premium Grade \u2022 Dell Business Series",
-        "price": 9412,
-        "category": "exuk dell ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-3420/media-gallery/laptop-latitude-3420-gallery-1.psd&w=300&output=webp"
-    },
-    {
-        "id": "exuk-dell-34",
-        "brand": "Dell",
-        "name": "DELL",
-        "specs": "Ex-UK Premium Grade \u2022 Dell Business Series",
-        "price": 9412,
-        "category": "exuk dell ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-3420/media-gallery/laptop-latitude-3420-gallery-1.psd&w=300&output=webp"
-    },
-    {
-        "id": "exuk-dell-35",
-        "brand": "Dell",
-        "name": "Dell",
-        "specs": "Ex-UK Premium Grade \u2022 Dell Business Series",
-        "price": 4147,
-        "category": "exuk dell ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-3420/media-gallery/laptop-latitude-3420-gallery-1.psd&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-36",
-        "brand": "Lenovo",
-        "name": "Lenovo X1YOGA core i7 16 GB Ram 512 SSD. 8 GEN Touchscreen x360. With stylus",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 44200,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-37",
-        "brand": "Lenovo",
-        "name": "Lenovo yoga x390 core i7 16 GB Ram 512 SSD Touchscreen x360 with  pen",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 44200,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-38",
-        "brand": "Lenovo",
-        "name": "Lenovo yoga 380 core i7 16 GB Ram. 256 SSD touch screen x360 with stylus pen ",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 41600,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-39",
-        "brand": "Lenovo",
-        "name": "Lenovo yoga X380 core i5 8 GB Ram 256 SSD Touchscreen x360 with ",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 31200,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-40",
-        "brand": "Lenovo",
-        "name": "Lenovo yoga 370 core i7 8 GB Ram 256 SSD Touch screen X360 with stylus pen ",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 32500,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-41",
-        "brand": "Lenovo",
-        "name": "LENOVO Yoga X370 core i5 8 GB Ram 256 GB SSD Touchscreen x360 with stylus pen",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 27300,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-42",
-        "brand": "Lenovo",
-        "name": "Lenovo yoga 260 core i7 8 GB Ram 256 SSD Touchscreen x360 with stylus pen",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 27300,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-43",
-        "brand": "Lenovo",
-        "name": "Lenovo yoga 260 core i5 8 GB ram 256 ssd Touch x360 with stylus pen",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 25350,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-44",
-        "brand": "Lenovo",
-        "name": "Lenovo yoga 300 e. 8 GB Ram 128 SSD Touchscreen x360 with stylus pen ",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 18200,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-45",
-        "brand": "Lenovo",
-        "name": "T490 s core i5 8 GB RAM 256 SSD non Touch",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 29250,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-46",
-        "brand": "Lenovo",
-        "name": "T480 s core i5 8 GB Ram/256 SSD",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 27950,
-        "category": "exuk lenovo ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-47",
-        "brand": "Lenovo",
-        "name": "Lenovo T470 s core i5 8 GB RAM 256 SSD",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 22100,
-        "category": "exuk lenovo ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-48",
-        "brand": "Lenovo",
-        "name": "Lenovo T440 s core i5 8 GB Ram 500 HDD 14 inch screen",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 19500,
-        "category": "exuk lenovo ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-49",
-        "brand": "Lenovo",
-        "name": "Lenovo T440 s core i7 8 GB Ram 500 HDD. 14 inch screen",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 19500,
-        "category": "exuk lenovo ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-50",
-        "brand": "Lenovo",
-        "name": "Lenovo x280 core i5 8 GB Ram 256 SSD Touchscreen",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 26000,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-51",
-        "brand": "Lenovo",
-        "name": "Lenovo X390 core i5 16 GB Ram 256 SSD Touchscreen 8 gen",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 33800,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-52",
-        "brand": "Lenovo",
-        "name": "Lenovo X270 core i5 8/256 Touch screen ",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 24700,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-53",
-        "brand": "Lenovo",
-        "name": "Lenovo X270 core i5 8 GB Ram 256 SSD.non",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 22100,
-        "category": "exuk lenovo ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-54",
-        "brand": "Lenovo",
-        "name": "Lenovo x260 core i7 8 GB Ram 256 SSD non touch",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 20800,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-55",
-        "brand": "Lenovo",
-        "name": "Lenovo yoga 11E core i3 8 GB Ram 128 SSD Touchscreen x360. 7th generation",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 18200,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-56",
-        "brand": "Lenovo",
-        "name": "Lenovo yoga 11E core i3 4 GB Ram 128 SSD Touchscreen x360 7th generation",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 16900,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-57",
-        "brand": "Lenovo",
-        "name": "Lenovo yoga 300 E. 8 GB Ram 128 SSD Touchscreen x360 with ",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 18200,
-        "category": "exuk lenovo touch",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    },
-    {
-        "id": "exuk-lenovo-58",
-        "brand": "Lenovo",
-        "name": "Lenovo x230 core i5 4GB /320 GB hdd",
-        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
-        "price": 10400,
-        "category": "exuk lenovo ",
-        "badge": "exuk",
-        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
-    }
+  {
+    "id": "feat-1",
+    "brand": "Dell",
+    "name": "Dell XPS 13 9330",
+    "specs": "Intel Core i7 13th Gen \u2022 16GB RAM \u2022 512GB SSD",
+    "price": 135000,
+    "category": "exuk business featured dell",
+    "badge": "new",
+    "img": "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=800"
+  },
+  {
+    "id": "feat-2",
+    "brand": "Apple",
+    "name": "MacBook Pro 13 M2",
+    "specs": "Apple M2 Chip \u2022 8GB RAM \u2022 512GB SSD",
+    "price": 140000,
+    "onFlashSale": true,
+    "category": "exuk apple featured macbook",
+    "badge": "hot",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "feat-3",
+    "brand": "Lenovo",
+    "name": "ThinkPad X1 Carbon Gen 10",
+    "specs": "i7 12th Gen \u2022 16GB RAM \u2022 512GB SSD",
+    "price": 91000,
+    "category": "exuk business featured lenovo",
+    "badge": "hot",
+    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+  },
+  {
+    "id": "feat-4",
+    "brand": "HP",
+    "name": "HP EliteBook 840 G8",
+    "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD",
+    "price": 63000,
+    "onFlashSale": true,
+    "category": "exuk business featured hp",
+    "badge": "hot",
+    "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
+  },
+  {
+    "id": "bud-1",
+    "brand": "Lenovo",
+    "name": "Lenovo 11E Core M5",
+    "specs": "8GB RAM \u2022 128GB SSD \u2022 11.6\"",
+    "price": 13000,
+    "onFlashSale": true,
+    "category": "exuk student budget",
+    "badge": "student",
+    "img": "https://images.unsplash.com/photo-1525547718571-03b05761ad91?q=80&w=800"
+  },
+  {
+    "id": "bud-2",
+    "brand": "Lenovo",
+    "name": "Lenovo 11E Celeron",
+    "specs": "4GB RAM \u2022 128GB SSD \u2022 Rugged",
+    "price": 10000,
+    "category": "exuk student budget",
+    "badge": "student",
+    "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
+  },
+  {
+    "id": "bud-3",
+    "brand": "Lenovo",
+    "name": "Lenovo Yoga N23S",
+    "specs": "Celeron \u2022 4GB RAM \u2022 128GB SSD \u2022 Touch",
+    "price": 12500,
+    "category": "exuk student budget",
+    "badge": "student",
+    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e520b?q=80&w=800"
+  },
+  {
+    "id": "d-1",
+    "brand": "Dell",
+    "name": "Dell Latitude 5400 i5",
+    "specs": "8th Gen \u2022 8GB \u2022 256GB SSD",
+    "price": 24000,
+    "category": "exuk business featured dell",
+    "badge": "exuk",
+    "img": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800"
+  },
+  {
+    "id": "d-2",
+    "brand": "Dell",
+    "name": "Dell Precision 5550 i7",
+    "specs": "10th Gen \u2022 16GB \u2022 512GB \u2022 4GB Nvidia",
+    "price": 70000,
+    "category": "exuk business dell",
+    "badge": "pro",
+    "img": "https://images.unsplash.com/photo-1661961111184-11317b40adb2?q=80&w=800"
+  },
+  {
+    "id": "d-3",
+    "brand": "Dell",
+    "name": "Dell XPS 13 9310 i7",
+    "specs": "11th Gen \u2022 16GB \u2022 512GB \u2022 Touch",
+    "price": 65000,
+    "category": "exuk business dell",
+    "badge": "premium",
+    "img": "https://images.unsplash.com/photo-1661961112134-fbce0fdf3d99?q=80&w=800"
+  },
+  {
+    "id": "h-1",
+    "brand": "HP",
+    "name": "HP ProBook 640 G5 i5",
+    "specs": "8th Gen \u2022 8GB \u2022 256GB SSD",
+    "price": 25800,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
+  },
+  {
+    "id": "h-2",
+    "brand": "HP",
+    "name": "HP EliteBook 840 G6 i5",
+    "specs": "8th Gen \u2022 16GB \u2022 256GB SSD",
+    "price": 36500,
+    "category": "exuk business featured hp",
+    "badge": "hot",
+    "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
+  },
+  {
+    "id": "l-1",
+    "brand": "Lenovo",
+    "name": "ThinkPad T490s i5",
+    "specs": "8th Gen \u2022 8GB \u2022 256GB SSD",
+    "price": 25000,
+    "category": "exuk business lenovo",
+    "badge": "exuk",
+    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+  },
+  {
+    "id": "l-2",
+    "brand": "Lenovo",
+    "name": "ThinkPad X1 Yoga i7",
+    "specs": "8th Gen \u2022 16GB \u2022 512GB \u2022 Touch",
+    "price": 40000,
+    "category": "exuk business featured lenovo",
+    "badge": "exuk",
+    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+  },
+  {
+    "id": "l-new-1",
+    "brand": "Lenovo",
+    "name": "Lenovo IdeaPad Slim 3",
+    "specs": "Ryzen 5 \u2022 8GB RAM \u2022 512GB SSD",
+    "price": 48500,
+    "category": "exuk student business lenovo",
+    "badge": "new",
+    "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
+  },
+  {
+    "id": "l-new-2",
+    "brand": "Lenovo",
+    "name": "ThinkPad E14 Gen 2",
+    "specs": "i5 11th Gen \u2022 8GB RAM \u2022 256GB SSD",
+    "price": 38000,
+    "category": "exuk business lenovo",
+    "badge": "exuk",
+    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+  },
+  {
+    "id": "l-new-3",
+    "brand": "Lenovo",
+    "name": "Lenovo ThinkBook 15",
+    "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD",
+    "price": 55000,
+    "category": "exuk business featured lenovo",
+    "badge": "hot",
+    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+  },
+  {
+    "id": "l-new-4",
+    "brand": "Lenovo",
+    "name": "ThinkPad L13 Yoga",
+    "specs": "i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touch",
+    "price": 32000,
+    "category": "exuk business lenovo",
+    "badge": "exuk",
+    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+  },
+  {
+    "id": "s-1",
+    "brand": "Dell",
+    "name": "PowerEdge T150 Server",
+    "specs": "Intel Xeon \u2022 16GB ECC \u2022 2TB HDD",
+    "price": 145000,
+    "category": "server enterprise new",
+    "badge": "server",
+    "img": "https://images.unsplash.com/photo-1558494949-ef010978911e?q=80&w=800"
+  },
+  {
+    "id": "s-2",
+    "brand": "HP",
+    "name": "ProLiant DL380 Gen10",
+    "specs": "Dual Xeon \u2022 64GB RAM \u2022 Rack Server",
+    "price": 280000,
+    "category": "server enterprise exuk",
+    "badge": "server",
+    "img": "https://images.unsplash.com/photo-1594065296416-aed7ae708d58?q=80&w=800"
+  },
+  {
+    "id": "m-1",
+    "brand": "Apple",
+    "name": "MacBook Air M1",
+    "specs": "Apple M1 Chip \u2022 8GB RAM \u2022 256GB SSD \u2022 13.3-inch Retina",
+    "price": 85000,
+    "category": "exuk apple macbook",
+    "badge": "new",
+    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
+  },
+  {
+    "id": "m-2",
+    "brand": "Apple",
+    "name": "MacBook Pro 14 M3",
+    "specs": "Apple M3 Chip \u2022 16GB RAM \u2022 512GB SSD \u2022 Liquid Retina XDR",
+    "price": 285000,
+    "category": "new apple macbook premium",
+    "badge": "hot",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-100",
+    "brand": "Apple",
+    "name": "macbook pro 16 2019 i9 64/1tb with 8 graphics",
+    "specs": "macbook pro 16 2019 i9 64/1tb with 8 graphics",
+    "price": 95000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-101",
+    "brand": "Apple",
+    "name": "macbook pro 16 i9 32/2tb with 8gb graphics",
+    "specs": "macbook pro 16 i9 32/2tb with 8gb graphics",
+    "price": 95000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-102",
+    "brand": "Apple",
+    "name": "macbook pro 16 2019 i9 32/1tb with 4gn graphics",
+    "specs": "macbook pro 16 2019 i9 32/1tb with 4gn graphics",
+    "price": 85000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-103",
+    "brand": "Apple",
+    "name": "macbook pro 16 2019 i7 32/512gb",
+    "specs": "macbook pro 16 2019 i7 32/512gb",
+    "price": 70000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-104",
+    "brand": "Apple",
+    "name": "macbook pro 15 2019 i7 16/512gb 4gb graphics",
+    "specs": "macbook pro 15 2019 i7 16/512gb 4gb graphics",
+    "price": 63000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-105",
+    "brand": "Apple",
+    "name": "macbook pro 15 2018 i7 16/512gb 4gb graphics",
+    "specs": "macbook pro 15 2018 i7 16/512gb 4gb graphics",
+    "price": 55000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-106",
+    "brand": "Apple",
+    "name": "macbook pro 15 2017 i7 16/512gb 4gb graphics",
+    "specs": "macbook pro 15 2017 i7 16/512gb 4gb graphics",
+    "price": 52000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-107",
+    "brand": "Apple",
+    "name": "macbook pro 15 2017 i7 16/512gb 2gb graphics",
+    "specs": "macbook pro 15 2017 i7 16/512gb 2gb graphics",
+    "price": 50000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-108",
+    "brand": "Apple",
+    "name": "macbook pro 15 2015 i7 16/512gb 2gb graphics",
+    "specs": "macbook pro 15 2015 i7 16/512gb 2gb graphics",
+    "price": 35000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-109",
+    "brand": "Apple",
+    "name": "macbook pro m1 13 2020 16/512gb",
+    "specs": "macbook pro m1 13 2020 16/512gb",
+    "price": 100000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-110",
+    "brand": "Apple",
+    "name": "macbook pro m1 13 2020 8/256gb",
+    "specs": "macbook pro m1 13 2020 8/256gb",
+    "price": 75000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-111",
+    "brand": "Apple",
+    "name": "macbook pro 13 i7 2020 16/1tb",
+    "specs": "macbook pro 13 i7 2020 16/1tb",
+    "price": 65000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-112",
+    "brand": "Apple",
+    "name": "macbook pro 13 i7 2020 32/512gb",
+    "specs": "macbook pro 13 i7 2020 32/512gb",
+    "price": 65000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-113",
+    "brand": "Apple",
+    "name": "macbook pro 13 i7 2020 16/512gb",
+    "specs": "macbook pro 13 i7 2020 16/512gb",
+    "price": 60000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-114",
+    "brand": "Apple",
+    "name": "macbook pro 13 2019 i7 16/1tb",
+    "specs": "macbook pro 13 2019 i7 16/1tb",
+    "price": 70000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-115",
+    "brand": "Apple",
+    "name": "macbook pro 13 2019 i7 16/512gb",
+    "specs": "macbook pro 13 2019 i7 16/512gb",
+    "price": 55000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-116",
+    "brand": "Apple",
+    "name": "macbook pro 13 2019 i7 16/256gb",
+    "specs": "macbook pro 13 2019 i7 16/256gb",
+    "price": 50000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-117",
+    "brand": "Apple",
+    "name": "macbook pro 13 2019 i5 16/256gb",
+    "specs": "macbook pro 13 2019 i5 16/256gb",
+    "price": 45000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-118",
+    "brand": "Apple",
+    "name": "macbook pro 13 2019 i5 8/256gb",
+    "specs": "macbook pro 13 2019 i5 8/256gb",
+    "price": 42000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-119",
+    "brand": "Apple",
+    "name": "macbook pro 13 2018 i7 16/256gb",
+    "specs": "macbook pro 13 2018 i7 16/256gb",
+    "price": 48000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-120",
+    "brand": "Apple",
+    "name": "macbook pro 13 2017 i7 16/1tb",
+    "specs": "macbook pro 13 2017 i7 16/1tb",
+    "price": 50000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-121",
+    "brand": "Apple",
+    "name": "macbook pro 13 2017 i7 16/512gb",
+    "specs": "macbook pro 13 2017 i7 16/512gb",
+    "price": 45000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-122",
+    "brand": "Apple",
+    "name": "macbook pro 13 2017 i7 16/256gb",
+    "specs": "macbook pro 13 2017 i7 16/256gb",
+    "price": 40000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-123",
+    "brand": "Apple",
+    "name": "macbook pro 13 2017 i5 8/512gb",
+    "specs": "macbook pro 13 2017 i5 8/512gb",
+    "price": 38000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-124",
+    "brand": "Apple",
+    "name": "macbook pro 13 2017 i5 8/256gb",
+    "specs": "macbook pro 13 2017 i5 8/256gb",
+    "price": 32000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-125",
+    "brand": "Apple",
+    "name": "macbook pro 13 2015 i7 8/256gb",
+    "specs": "macbook pro 13 2015 i7 8/256gb",
+    "price": 30000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-126",
+    "brand": "Apple",
+    "name": "macbook pro 13 2015 i5 16/512gb",
+    "specs": "macbook pro 13 2015 i5 16/512gb",
+    "price": 32000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-127",
+    "brand": "Apple",
+    "name": "macbook pro 13 2015 i5 16/256gb",
+    "specs": "macbook pro 13 2015 i5 16/256gb",
+    "price": 27000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-128",
+    "brand": "Apple",
+    "name": "macbook pro 13 2015 i5 8/256gb",
+    "specs": "macbook pro 13 2015 i5 8/256gb",
+    "price": 25000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-129",
+    "brand": "Apple",
+    "name": "macbook pro 13 2014 i5 8/256gb",
+    "specs": "macbook pro 13 2014 i5 8/256gb",
+    "price": 23000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-130",
+    "brand": "Apple",
+    "name": "macbook pro 13 2013 i5 8/256gb",
+    "specs": "macbook pro 13 2013 i5 8/256gb",
+    "price": 21000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-131",
+    "brand": "Apple",
+    "name": "macbook pro 13 2013 i7 8/256gb",
+    "specs": "macbook pro 13 2013 i7 8/256gb",
+    "price": 25000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-132",
+    "brand": "Apple",
+    "name": "macbook pro 13 2012 i7 8/256gb",
+    "specs": "macbook pro 13 2012 i7 8/256gb",
+    "price": 19000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-133",
+    "brand": "Apple",
+    "name": "macbook pro 13 2012 i5 8/256gb",
+    "specs": "macbook pro 13 2012 i5 8/256gb",
+    "price": 17000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-134",
+    "brand": "Apple",
+    "name": "macbook pro 13 2011 i5 8/256gb",
+    "specs": "macbook pro 13 2011 i5 8/256gb",
+    "price": 15000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  },
+  {
+    "id": "mb-135",
+    "brand": "Apple",
+    "name": "macbook air laptops macbook air m1 2022 8/512gb",
+    "specs": "macbook air laptops macbook air m1 2022 8/512gb",
+    "price": 119000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
+  },
+  {
+    "id": "mb-136",
+    "brand": "Apple",
+    "name": "macbook air m1 2022 8/256gb",
+    "specs": "macbook air m1 2022 8/256gb",
+    "price": 80000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
+  },
+  {
+    "id": "mb-137",
+    "brand": "Apple",
+    "name": "macbook air m1 2020 8/256gb",
+    "specs": "macbook air m1 2020 8/256gb",
+    "price": 60000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
+  },
+  {
+    "id": "mb-138",
+    "brand": "Apple",
+    "name": "macbook air 13 2019 i5 16/256gb",
+    "specs": "macbook air 13 2019 i5 16/256gb",
+    "price": 42000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
+  },
+  {
+    "id": "mb-139",
+    "brand": "Apple",
+    "name": "macbook air 13 2019 i58/256gb",
+    "specs": "macbook air 13 2019 i58/256gb",
+    "price": 40000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
+  },
+  {
+    "id": "mb-140",
+    "brand": "Apple",
+    "name": "macbook air 13 2018 i5 8/256gb",
+    "specs": "macbook air 13 2018 i5 8/256gb",
+    "price": 38000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
+  },
+  {
+    "id": "mb-141",
+    "brand": "Apple",
+    "name": "macbook air 13 2017 i7 8/256gb",
+    "specs": "macbook air 13 2017 i7 8/256gb",
+    "price": 30000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
+  },
+  {
+    "id": "mb-142",
+    "brand": "Apple",
+    "name": "macbook air 13 2017 i5 8/256gb",
+    "specs": "macbook air 13 2017 i5 8/256gb",
+    "price": 25000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
+  },
+  {
+    "id": "mb-143",
+    "brand": "Apple",
+    "name": "MacBook Air 13 2015 i5 8/256",
+    "specs": "MacBook Air 13 2015 i5 8/256",
+    "price": 22000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
+  },
+  {
+    "id": "mb-144",
+    "brand": "Apple",
+    "name": "MacBook Air 13 2014 i7 8/256",
+    "specs": "MacBook Air 13 2014 i7 8/256",
+    "price": 21000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
+  },
+  {
+    "id": "mb-145",
+    "brand": "Apple",
+    "name": "MacBook Air 13 2013 i5 8/128",
+    "specs": "MacBook Air 13 2013 i5 8/128",
+    "price": 19000,
+    "category": "apple macbook exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
+  },
+  {
+    "id": "mb-146",
+    "brand": "Samsung",
+    "name": "sam 930 i7 11th 16/512gb",
+    "specs": "sam 930 i7 11th 16/512gb",
+    "price": 60000,
+    "category": "samsung laptop exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
+  },
+  {
+    "id": "hp-500",
+    "brand": "HP",
+    "name": "hp spectre x360 convertible 15t -df100 i7 10th with 2gb graphics",
+    "specs": "hp spectre x360 convertible 15t -df100 i7 10th with 2gb graphics",
+    "price": 119000,
+    "category": "hp exuk workstation premium premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
+  },
+  {
+    "id": "hp-501",
+    "brand": "HP",
+    "name": "hp spectre x360 convertible 15-df0xxx i7 8th 16/512gb with 2gb graphics",
+    "specs": "hp spectre x360 convertible 15-df0xxx i7 8th 16/512gb with 2gb graphics",
+    "price": 84000,
+    "category": "hp exuk workstation premium premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
+  },
+  {
+    "id": "hp-502",
+    "brand": "HP",
+    "name": "hp. spectre x360 convertible 15-bl0xx i7 7th 16/512gb with 2gb graphics",
+    "specs": "hp. spectre x360 convertible 15-bl0xx i7 7th 16/512gb with 2gb graphics",
+    "price": 77000,
+    "category": "hp exuk workstation premium premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
+  },
+  {
+    "id": "hp-503",
+    "brand": "HP",
+    "name": "hp envy x360 convertible 15m i7 8th 16/512gb",
+    "specs": "hp envy x360 convertible 15m i7 8th 16/512gb",
+    "price": 70000,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-504",
+    "brand": "HP",
+    "name": "hp zbook studio 15 g7 mobile workstation i7 10th 32/512gb with 4gb graphics",
+    "specs": "hp zbook studio 15 g7 mobile workstation i7 10th 32/512gb with 4gb graphics",
+    "price": 105000,
+    "category": "hp exuk workstation premium",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-505",
+    "brand": "HP",
+    "name": "hp zbook 15 studio g5 i7 9th 16/512gb with 4gb nvidia Quadro p1000",
+    "specs": "hp zbook 15 studio g5 i7 9th 16/512gb with 4gb nvidia Quadro p1000",
+    "price": 84000,
+    "category": "hp exuk workstation premium",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-506",
+    "brand": "HP",
+    "name": "hp zbook 15 studio i7 8th 16/512gb with 4gb nvidia Quadro p1000",
+    "specs": "hp zbook 15 studio i7 8th 16/512gb with 4gb nvidia Quadro p1000",
+    "price": 77000,
+    "category": "hp exuk workstation premium",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-507",
+    "brand": "HP",
+    "name": "hp zbook 15 g5 i7 8th 16/512gb with 4gb nvidia Quadro p1000",
+    "specs": "hp zbook 15 g5 i7 8th 16/512gb with 4gb nvidia Quadro p1000",
+    "price": 77000,
+    "category": "hp exuk workstation premium",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-508",
+    "brand": "HP",
+    "name": "hp zbook 15u g6 i7 8th 16/512gb with 4gb AMD Radeon pro wx3200 graphics",
+    "specs": "hp zbook 15u g6 i7 8th 16/512gb with 4gb AMD Radeon pro wx3200 graphics",
+    "price": 70000,
+    "category": "hp exuk workstation premium",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-509",
+    "brand": "HP",
+    "name": "hp zbook 15 studio g5 i7 8th 16/512gb with 4gb nvidia quadro p1000",
+    "specs": "hp zbook 15 studio g5 i7 8th 16/512gb with 4gb nvidia quadro p1000",
+    "price": 77000,
+    "category": "hp exuk workstation premium",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-510",
+    "brand": "HP",
+    "name": "hp zbook g4 i7 7th 16/512gb with 4gb nvidia quadro m1200",
+    "specs": "hp zbook g4 i7 7th 16/512gb with 4gb nvidia quadro m1200",
+    "price": 56000,
+    "category": "hp exuk workstation premium",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-511",
+    "brand": "HP",
+    "name": "hp zbook 15 g3 i7 6th 16/512gb with 4gb nvidia Quadro m1200",
+    "specs": "hp zbook 15 g3 i7 6th 16/512gb with 4gb nvidia Quadro m1200",
+    "price": 49000,
+    "category": "hp exuk workstation premium",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-512",
+    "brand": "HP",
+    "name": "hp zbook 14 firefly g7 mobile workstation 32/512gb with 4gb nvidia graphics touchscreen",
+    "specs": "hp zbook 14 firefly g7 mobile workstation 32/512gb with 4gb nvidia graphics touchscreen",
+    "price": 98000,
+    "category": "hp exuk workstation premium",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-513",
+    "brand": "HP",
+    "name": "hp zbook 14u g6 i7 8th 16/512gb with 4gb AMD Radeon pro wx3200 graphics",
+    "specs": "hp zbook 14u g6 i7 8th 16/512gb with 4gb AMD Radeon pro wx3200 graphics",
+    "price": 63000,
+    "category": "hp exuk workstation premium",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-514",
+    "brand": "HP",
+    "name": "hp zbook 14u i7 8/256gb with 4gb graphics",
+    "specs": "hp zbook 14u i7 8/256gb with 4gb graphics",
+    "price": 56000,
+    "category": "hp exuk workstation premium",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-515",
+    "brand": "HP",
+    "name": "hp zbook 14u g5 i7 8th 16/512gb with 2gb AMD Radeon pro wx 3100",
+    "specs": "hp zbook 14u g5 i7 8th 16/512gb with 2gb AMD Radeon pro wx 3100",
+    "price": 56000,
+    "category": "hp exuk workstation premium",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-516",
+    "brand": "HP",
+    "name": "hp 1040 g8 i7 11th 16/512gb",
+    "specs": "hp 1040 g8 i7 11th 16/512gb",
+    "price": 77000,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-517",
+    "brand": "HP",
+    "name": "hp 1040 g7 i7 10th 16/512gb x360 touchscreen",
+    "specs": "hp 1040 g7 i7 10th 16/512gb x360 touchscreen",
+    "price": 70000,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-518",
+    "brand": "HP",
+    "name": "hp 1040 g6 i7 8th 16/52gb x360 touchscreen",
+    "specs": "hp 1040 g6 i7 8th 16/52gb x360 touchscreen",
+    "price": 60000,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-519",
+    "brand": "HP",
+    "name": "hp 1040 g5 i5 8th 16/512gb x360 touchscreen",
+    "specs": "hp 1040 g5 i5 8th 16/512gb x360 touchscreen",
+    "price": 50500,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-520",
+    "brand": "HP",
+    "name": "hp 1040 g5 i5 8/256gb x360 touchscreen",
+    "specs": "hp 1040 g5 i5 8/256gb x360 touchscreen",
+    "price": 46000,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-521",
+    "brand": "HP",
+    "name": "hp 1040 g3 i5 6th 16/256gb",
+    "specs": "hp 1040 g3 i5 6th 16/256gb",
+    "price": 33500,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-522",
+    "brand": "HP",
+    "name": "hp 1040 g3 i5 6th 8/256gb",
+    "specs": "hp 1040 g3 i5 6th 8/256gb",
+    "price": 31000,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-523",
+    "brand": "HP",
+    "name": "hp 1040 g3 i7 6th 16/512gb",
+    "specs": "hp 1040 g3 i7 6th 16/512gb",
+    "price": 35000,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-524",
+    "brand": "HP",
+    "name": "hp 1030 g8 i7 11th 16/512gb x360 touchscreen",
+    "specs": "hp 1030 g8 i7 11th 16/512gb x360 touchscreen",
+    "price": 77000,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-525",
+    "brand": "HP",
+    "name": "hp 1030 g8 i5 11th 16/512gb x360 touchscreen",
+    "specs": "hp 1030 g8 i5 11th 16/512gb x360 touchscreen",
+    "price": 70000,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-526",
+    "brand": "HP",
+    "name": "hp 1030 g3 i7 16/512gb",
+    "specs": "hp 1030 g3 i7 16/512gb",
+    "price": 60000,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-527",
+    "brand": "HP",
+    "name": "hp 1030 g3 i7 8th 16/256gb",
+    "specs": "hp 1030 g3 i7 8th 16/256gb",
+    "price": 56000,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-528",
+    "brand": "HP",
+    "name": "hp 1030 g3 i7 8th 8/256gb",
+    "specs": "hp 1030 g3 i7 8th 8/256gb",
+    "price": 49000,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-529",
+    "brand": "HP",
+    "name": "hp 1030 g3 i5 8th 16/512gb",
+    "specs": "hp 1030 g3 i5 8th 16/512gb",
+    "price": 50500,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-530",
+    "brand": "HP",
+    "name": "hp 1030 g3 i5 8/256gb",
+    "specs": "hp 1030 g3 i5 8/256gb",
+    "price": 46000,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-531",
+    "brand": "HP",
+    "name": "hp 1030 g2 i7 7th 8/256gb",
+    "specs": "hp 1030 g2 i7 7th 8/256gb",
+    "price": 47500,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-532",
+    "brand": "HP",
+    "name": "hp 1030 g2 i5 16/256gb",
+    "specs": "hp 1030 g2 i5 16/256gb",
+    "price": 46000,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-533",
+    "brand": "HP",
+    "name": "hp 1030 g2 i5 7th 8/256gb",
+    "specs": "hp 1030 g2 i5 7th 8/256gb",
+    "price": 43500,
+    "category": "hp exuk premium touchscreen",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-534",
+    "brand": "HP",
+    "name": "hp 1020 g2 i5 7th 16/512gb x360 touchscreen",
+    "specs": "hp 1020 g2 i5 7th 16/512gb x360 touchscreen",
+    "price": 49000,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-535",
+    "brand": "HP",
+    "name": "hp 1020 g2 i5 7th 8/256gb touchscreen",
+    "specs": "hp 1020 g2 i5 7th 8/256gb touchscreen",
+    "price": 42000,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-536",
+    "brand": "HP",
+    "name": "hp elite x2 g4 i7 8th touchscreen",
+    "specs": "hp elite x2 g4 i7 8th touchscreen",
+    "price": 56000,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-537",
+    "brand": "HP",
+    "name": "hp elite x2 g2 i5 7th 16/256gb",
+    "specs": "hp elite x2 g2 i5 7th 16/256gb",
+    "price": 45000,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-538",
+    "brand": "HP",
+    "name": "hp 840 g10 i7 13th. 16/512gb",
+    "specs": "hp 840 g10 i7 13th. 16/512gb",
+    "price": 84000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-539",
+    "brand": "HP",
+    "name": "hp 840 g9 i7 12th 16/512gb",
+    "specs": "hp 840 g9 i7 12th 16/512gb",
+    "price": 77000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-540",
+    "brand": "HP",
+    "name": "hp 840 g8 i5 11th 8/256gb touchscreen",
+    "specs": "hp 840 g8 i5 11th 8/256gb touchscreen",
+    "price": 49000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-541",
+    "brand": "HP",
+    "name": "hp 840 g8 i5 11th 8/256gb",
+    "specs": "hp 840 g8 i5 11th 8/256gb",
+    "price": 46000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-542",
+    "brand": "HP",
+    "name": "hp 840 g7 i7 10th 8/256gb touchscreen",
+    "specs": "hp 840 g7 i7 10th 8/256gb touchscreen",
+    "price": 56000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-543",
+    "brand": "HP",
+    "name": "hp 840 g7 i5 10th 8/256gb touchscreen",
+    "specs": "hp 840 g7 i5 10th 8/256gb touchscreen",
+    "price": 47500,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-544",
+    "brand": "HP",
+    "name": "hp 840 g7 i5 10th 8/256gb",
+    "specs": "hp 840 g7 i5 10th 8/256gb",
+    "price": 45000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-545",
+    "brand": "HP",
+    "name": "hp 840 g5 i7 8th 8/256gb touchscreen",
+    "specs": "hp 840 g5 i7 8th 8/256gb touchscreen",
+    "price": 45000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-546",
+    "brand": "HP",
+    "name": "hp 840 g5 i7 8th 8/256gb",
+    "specs": "hp 840 g5 i7 8th 8/256gb",
+    "price": 42000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-547",
+    "brand": "HP",
+    "name": "hp 840 g5 i5 8th 8/256gb touchscreen",
+    "specs": "hp 840 g5 i5 8th 8/256gb touchscreen",
+    "price": 39000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-548",
+    "brand": "HP",
+    "name": "hp 840 g5 i5 7th 8/256gb touchscreen",
+    "specs": "hp 840 g5 i5 7th 8/256gb touchscreen",
+    "price": 38000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-549",
+    "brand": "HP",
+    "name": "hp 840 g5 i5 8th 8/256gb",
+    "specs": "hp 840 g5 i5 8th 8/256gb",
+    "price": 36500,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-550",
+    "brand": "HP",
+    "name": "hp 840 g5 i5 7th 8/256gb",
+    "specs": "hp 840 g5 i5 7th 8/256gb",
+    "price": 35000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-551",
+    "brand": "HP",
+    "name": "hp 840 g2 i5 8/500gb",
+    "specs": "hp 840 g2 i5 8/500gb",
+    "price": 20500,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-552",
+    "brand": "HP",
+    "name": "hp 840 g1 i7 8/256gb",
+    "specs": "hp 840 g1 i7 8/256gb",
+    "price": 23000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-553",
+    "brand": "HP",
+    "name": "hp 830 g8 i7 11th 32/512gb x360 touchscreen",
+    "specs": "hp 830 g8 i7 11th 32/512gb x360 touchscreen",
+    "price": 80000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-554",
+    "brand": "HP",
+    "name": "hp 830 g8 i7 11th 16/512gb x360 touchscreen",
+    "specs": "hp 830 g8 i7 11th 16/512gb x360 touchscreen",
+    "price": 74000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-555",
+    "brand": "HP",
+    "name": "hp 830 g8 i5 11th 16/256gb x360 touchscreen",
+    "specs": "hp 830 g8 i5 11th 16/256gb x360 touchscreen",
+    "price": 56000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-556",
+    "brand": "HP",
+    "name": "hp 830 g8 i5 11th 8/256gb x360 touchscreen",
+    "specs": "hp 830 g8 i5 11th 8/256gb x360 touchscreen",
+    "price": 53000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-557",
+    "brand": "HP",
+    "name": "hp 830 g8 i7 11th 8/256gb touchscreen",
+    "specs": "hp 830 g8 i7 11th 8/256gb touchscreen",
+    "price": 56000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-558",
+    "brand": "HP",
+    "name": "hp 830 g8 i5 11th 8/256gb touchscreen",
+    "specs": "hp 830 g8 i5 11th 8/256gb touchscreen",
+    "price": 47500,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-559",
+    "brand": "HP",
+    "name": "hp 830 g8 i5 11th 8/256gb",
+    "specs": "hp 830 g8 i5 11th 8/256gb",
+    "price": 45000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-560",
+    "brand": "HP",
+    "name": "hp 830 g7 i7 8/256gb touchscreen",
+    "specs": "hp 830 g7 i7 8/256gb touchscreen",
+    "price": 53000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-561",
+    "brand": "HP",
+    "name": "hp 830 g7 i7 10th 8/256gb",
+    "specs": "hp 830 g7 i7 10th 8/256gb",
+    "price": 46000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-562",
+    "brand": "HP",
+    "name": "hp 830 g7 i5 10th 8/256gb touchscreen",
+    "specs": "hp 830 g7 i5 10th 8/256gb touchscreen",
+    "price": 46000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-563",
+    "brand": "HP",
+    "name": "hp 830 g7 i5 8/256gb",
+    "specs": "hp 830 g7 i5 8/256gb",
+    "price": 43500,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-564",
+    "brand": "HP",
+    "name": "hp 830 g6 i7 8th 16/512gb touchscreen",
+    "specs": "hp 830 g6 i7 8th 16/512gb touchscreen",
+    "price": 50500,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-565",
+    "brand": "HP",
+    "name": "hp 830 g5 i7 8th 8/256gb",
+    "specs": "hp 830 g5 i7 8th 8/256gb",
+    "price": 42000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-566",
+    "brand": "HP",
+    "name": "hp 830 g5 i7 8th 8/256gb touchscreen",
+    "specs": "hp 830 g5 i7 8th 8/256gb touchscreen",
+    "price": 45000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-567",
+    "brand": "HP",
+    "name": "hp 830 g6 i5 8/256gb touchscreen",
+    "specs": "hp 830 g6 i5 8/256gb touchscreen",
+    "price": 36500,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-568",
+    "brand": "HP",
+    "name": "hp 830 g5 i5 8th 8/256gb",
+    "specs": "hp 830 g5 i5 8th 8/256gb",
+    "price": 35000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-569",
+    "brand": "HP",
+    "name": "hp 830 g7 i7 10th 8/256gb x360 touchscreen",
+    "specs": "hp 830 g7 i7 10th 8/256gb x360 touchscreen",
+    "price": 52000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-570",
+    "brand": "HP",
+    "name": "hp 830 g6 i7 8th 8/256gb x360 touchscreen",
+    "specs": "hp 830 g6 i7 8th 8/256gb x360 touchscreen",
+    "price": 50500,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-571",
+    "brand": "HP",
+    "name": "hp 830 g6 i5 8th 8/256gb x360 touchscreen",
+    "specs": "hp 830 g6 i5 8th 8/256gb x360 touchscreen",
+    "price": 45000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-572",
+    "brand": "HP",
+    "name": "hp 450 g8 i5 11th 8/256gb",
+    "specs": "hp 450 g8 i5 11th 8/256gb",
+    "price": 49000,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-573",
+    "brand": "HP",
+    "name": "hp 850 g8 i5 11th 8/256gb touchscreen",
+    "specs": "hp 850 g8 i5 11th 8/256gb touchscreen",
+    "price": 59000,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-574",
+    "brand": "HP",
+    "name": "hp 850 g8 i5 11th 8/256gb",
+    "specs": "hp 850 g8 i5 11th 8/256gb",
+    "price": 56000,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-575",
+    "brand": "HP",
+    "name": "hp 850 g7 i5 10th 8/256gb",
+    "specs": "hp 850 g7 i5 10th 8/256gb",
+    "price": 49000,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-576",
+    "brand": "HP",
+    "name": "Hp 850 G5 I5 8th 8/256",
+    "specs": "Hp 850 G5 I5 8th 8/256",
+    "price": 42000,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-577",
+    "brand": "HP",
+    "name": "hp dreagonfly i5 8th 16/512gb",
+    "specs": "hp dreagonfly i5 8th 16/512gb",
+    "price": 63000,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-578",
+    "brand": "HP",
+    "name": "hp 845 g7 ryzen ryzen 7 8/256gb",
+    "specs": "hp 845 g7 ryzen ryzen 7 8/256gb",
+    "price": 42000,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-579",
+    "brand": "HP",
+    "name": "hp 835 g8 ryzen 7. 8/256gb",
+    "specs": "hp 835 g8 ryzen 7. 8/256gb",
+    "price": 45000,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-580",
+    "brand": "HP",
+    "name": "Hp 745 G6 Ryzen 7 8/256 2gb graphics",
+    "specs": "Hp 745 G6 Ryzen 7 8/256 2gb graphics",
+    "price": 39000,
+    "category": "hp exuk workstation premium",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-581",
+    "brand": "HP",
+    "name": "Hp 745 Ryzen 5 8/256 touchscreen 2gb graphics",
+    "specs": "Hp 745 Ryzen 5 8/256 touchscreen 2gb graphics",
+    "price": 38000,
+    "category": "hp exuk workstation premium",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-582",
+    "brand": "HP",
+    "name": "hp 745 g6 ryzen 5 nontouch 8/256gb",
+    "specs": "hp 745 g6 ryzen 5 nontouch 8/256gb",
+    "price": 35000,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-583",
+    "brand": "HP",
+    "name": "hp 735 g6 ryzen 7 8/256gb 2gb graphics",
+    "specs": "hp 735 g6 ryzen 7 8/256gb 2gb graphics",
+    "price": 39000,
+    "category": "hp exuk workstation premium",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-584",
+    "brand": "HP",
+    "name": "hp 640 g9 i5 12th 8/256gb",
+    "specs": "hp 640 g9 i5 12th 8/256gb",
+    "price": 56000,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-585",
+    "brand": "HP",
+    "name": "hp probook 630 g8 i5 11th 8/256gb touchscreen",
+    "specs": "hp probook 630 g8 i5 11th 8/256gb touchscreen",
+    "price": 49000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-586",
+    "brand": "HP",
+    "name": "hp probook 430 g7 i5 10th 8/256gb",
+    "specs": "hp probook 430 g7 i5 10th 8/256gb",
+    "price": 42000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-587",
+    "brand": "HP",
+    "name": "hp probook 430 g5 i5 8th 8/256gb",
+    "specs": "hp probook 430 g5 i5 8th 8/256gb",
+    "price": 32000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-588",
+    "brand": "HP",
+    "name": "hp probook g4 i5 8th 8/256gb x360 touchscreen",
+    "specs": "hp probook g4 i5 8th 8/256gb x360 touchscreen",
+    "price": 32000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-589",
+    "brand": "HP",
+    "name": "hp probook g2 i5 7th 8/256gb x360 touchscreen",
+    "specs": "hp probook g2 i5 7th 8/256gb x360 touchscreen",
+    "price": 27500,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-590",
+    "brand": "HP",
+    "name": "hp probook 440 g1 i5 7th 8/256gb touchscreen",
+    "specs": "hp probook 440 g1 i5 7th 8/256gb touchscreen",
+    "price": 35000,
+    "category": "hp exuk student business",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-591",
+    "brand": "HP",
+    "name": "hp folio 9470 i7 4th 8/500gb",
+    "specs": "hp folio 9470 i7 4th 8/500gb",
+    "price": 23000,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-592",
+    "brand": "HP",
+    "name": "hp folio 9480 i5 5th 8/500gb",
+    "specs": "hp folio 9480 i5 5th 8/500gb",
+    "price": 21500,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-593",
+    "brand": "HP",
+    "name": "hp stream celeron 4/32gb",
+    "specs": "hp stream celeron 4/32gb",
+    "price": 12500,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  },
+  {
+    "id": "hp-594",
+    "brand": "HP",
+    "name": "hp stream celeron 2/32gb",
+    "specs": "hp stream celeron 2/32gb",
+    "price": 12000,
+    "category": "hp exuk",
+    "badge": "ex-uk",
+    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+  }
 ];
 
+let currentLimit = 8;
+let currentProducts = [];
 
-const BADGE_LABELS = {
-  new: "Brand New",
-  exuk: "Ex-UK Premium",
-  sale: "Special Offer"
-};
-
-function renderProducts(filter = "all") {
-  const container = document.getElementById("product-grid");
+function searchProducts() {
+  const query = document.getElementById('productSearch').value.toLowerCase();
+  const container = document.getElementById("productsGrid");
   if (!container) return;
-  container.innerHTML = "";
 
-  const filtered = ALL_PRODUCTS.filter(p => {
-    if (filter === "all") return true;
-    if (filter === "featured") return p.category.includes("featured");
-    return p.category.includes(filter);
+  currentProducts = ALL_PRODUCTS.filter(p => {
+    return p.name.toLowerCase().includes(query) || 
+           p.brand.toLowerCase().includes(query) || 
+           p.specs.toLowerCase().includes(query);
   });
 
-  filtered.forEach(p => {
-    const card = document.createElement("div");
-    card.className = "product-card";
-    const badge = p.badge ? `<span class="badge badge-${p.badge}">${BADGE_LABELS[p.badge]}</span>` : "";
-    
-    card.innerHTML = `
-      ${badge}
-      <div class="product-img-container">
-        <img src="${p.img}" alt="${p.name}" loading="lazy">
-      </div>
-      <div class="product-info">
-        <div class="product-brand">${p.brand}</div>
-        <h3 class="product-name">${p.name}</h3>
-        <p class="product-specs">${p.specs}</p>
-        <div class="product-footer">
-          <div class="product-price">KES ${p.price.toLocaleString()}</div>
-          <button class="btn-buy" onclick="orderWhatsApp('${p.name}', ${p.price})">Buy</button>
+  currentLimit = 8;
+  renderFiltered();
+}
+
+function loadMoreProducts() {
+  currentLimit += 8;
+  renderFiltered();
+}
+
+function renderFiltered() {
+  const container = document.getElementById("productsGrid");
+  if (!container) return;
+
+  const displayList = currentProducts.slice(0, currentLimit);
+  
+  container.innerHTML = displayList.map(p => {
+    const isFlash = p.onFlashSale || false;
+    let priceHTML = `<div class="product-price">KES ${p.price.toLocaleString()}</div>`;
+    let badgeHTML = `<div class="product-badge">${p.badge}</div>`;
+
+    if (isFlash) {
+      const offerPrice = Math.round(p.price * 0.9);
+      priceHTML = `
+        <div class="product-price-old" style="text-decoration: line-through; color: #888; font-size: 0.85rem;">KES ${p.price.toLocaleString()}</div>
+        <div class="product-price" style="color: #e63946;">KES ${offerPrice.toLocaleString()}</div>
+      `;
+      badgeHTML += `<div class="flash-badge" style="position: absolute; top: 10px; right: 10px; background: #e63946; color: white; padding: 4px 8px; font-size: 0.7rem; font-weight: 800; border-radius: 4px; animation: pulse 2s infinite;">10% OFF</div>`;
+    }
+
+    return `
+      <div class="product-card" style="position: relative;" onclick="window.open('https://wa.me/254721585784?text=Hi Nexcom! I want to inquire about: ${p.name}', '_blank')">
+        ${badgeHTML}
+        <div class="product-img">
+          <img src="${p.img}" alt="${p.name}" loading="lazy">
+        </div>
+        <div class="product-info">
+          <div class="product-brand">${p.brand}</div>
+          <h3 class="product-name">${p.name}</h3>
+          <p class="product-specs">${p.specs}</p>
+          <div class="price-container">
+            ${priceHTML}
+          </div>
         </div>
       </div>
     `;
-    container.appendChild(card);
+  }).join('');
+
+  // Hide button if no more products
+  const btn = document.getElementById('loadMoreBtn');
+  if (btn) {
+    btn.style.display = currentLimit >= currentProducts.length ? 'none' : 'block';
+  }
+}
+
+function renderProducts(filter = "all") {
+  const container = document.getElementById("productsGrid");
+  if (!container) return;
+  
+  currentProducts = ALL_PRODUCTS.filter(p => {
+    const cat = p.category.toLowerCase();
+    const brand = p.brand.toLowerCase();
+    const f = filter.toLowerCase();
+
+    if (f === "all") return true;
+    if (f === "featured") return cat.includes("featured");
+    if (f === "student") return cat.includes("student") || cat.includes("budget");
+    if (f === "server") return cat.includes("server");
+    if (f === "new") return cat.includes("new");
+    return brand === f || cat.includes(f);
+  });
+
+  currentLimit = 8;
+  renderFiltered();
+}
+
+function filterCategory(cat) {
+  renderProducts(cat);
+  const btns = document.querySelectorAll('.filter-btn');
+  btns.forEach(b => {
+    b.classList.remove('active');
+    if (b.innerText.toLowerCase().includes(cat.toLowerCase())) b.classList.add('active');
+    if (cat === 'all' && b.innerText.toLowerCase() === 'all') b.classList.add('active');
   });
 }
-
-function orderWhatsApp(name, price) {
-  const text = encodeURIComponent(`Hi Nexcom! I'm interested in the ${name} (KES ${price.toLocaleString()}). Is it available?`);
-  window.open(`https://wa.me/254721585784?text=${text}`, '_blank');
-}
-
-// Initial render
-document.addEventListener("DOMContentLoaded", () => {
-  renderProducts("featured");
-  if (typeof setupDailySpecial === 'function') setupDailySpecial();
-});
 
 // Daily Special Logic
 function setupDailySpecial() {
   const section = document.getElementById("daily-special");
-  if (!section || ALL_PRODUCTS.length === 0) return;
-
-  const today = new Date();
-  const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
-  const productIndex = dateSeed % ALL_PRODUCTS.length;
-  const p = ALL_PRODUCTS[productIndex];
-
-  const oldPrice = p.price;
-  const newPrice = Math.floor(oldPrice * 0.9);
-  
-  document.getElementById("special-title").innerText = p.name;
-  document.getElementById("special-specs").innerText = p.specs;
-  document.getElementById("special-old-price").innerText = `KES ${oldPrice.toLocaleString()}`;
-  document.getElementById("special-new-price").innerText = `KES ${newPrice.toLocaleString()}`;
-  document.getElementById("special-img").src = p.img;
-  
-  const banner = document.getElementById("special-banner");
-  if (banner) {
-    banner.onclick = () => {
-      const text = encodeURIComponent(`Hi Nexcom! I want to claim today's special deal: ${p.name} at KES ${newPrice.toLocaleString()} (10% OFF)`);
-      window.open(`https://wa.me/254721585784?text=${text}`, '_blank');
-    };
-  }
-
-  section.style.display = "block";
+  if (section) section.remove(); // Remove the daily special section completely as requested
 }
+
+
+// Welcome Promo Logic
+function closePromo() {
+  const overlay = document.getElementById('promoOverlay');
+  if (overlay) {
+    overlay.classList.remove('active');
+    setTimeout(() => { overlay.style.display = 'none'; }, 700);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById('promoOverlay');
+  const timerBar = document.getElementById('promoTimerBar');
+  
+  if (overlay) {
+    // Setup dynamic deal for the welcome banner
+    const today = new Date();
+    const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+    // Cycle through all products daily
+    const p = ALL_PRODUCTS[dateSeed % ALL_PRODUCTS.length];
+    
+    if (p) {
+      const titleEl = document.getElementById('promoTitle');
+      const specsEl = document.getElementById('promoSpecs');
+      const priceEl = document.getElementById('promoPrice');
+      const waEl = document.getElementById('promoWA');
+      const imgEl = overlay.querySelector('.promo-img');
+      
+      const isFlash = p.onFlashSale || false;
+      let displayPrice = `KES ${p.price.toLocaleString()}`;
+      if (isFlash) {
+        displayPrice = `<span style="text-decoration: line-through; opacity: 0.6; font-size: 0.9rem;">KES ${p.price.toLocaleString()}</span><br/>KES ${Math.round(p.price * 0.9).toLocaleString()}`;
+      }
+
+      if (titleEl) {
+        titleEl.innerHTML = p.name.replace(' ', '<br/>');
+        titleEl.style.fontSize = "1.8rem"; 
+      }
+      if (specsEl) specsEl.innerText = p.specs;
+      if (priceEl) priceEl.innerHTML = displayPrice;
+      if (imgEl) imgEl.style.backgroundImage = `url('${p.img}')`;
+      if (waEl) {
+        waEl.href = `https://wa.me/254721585784?text=Hi%20Nexcom!%20I%20want%20to%20order%20the%20Today's%20Special:%20${p.name}`;
+      }
+    }
+
+    // Show after preloader is gone (usually 2s total)
+    setTimeout(() => {
+      overlay.style.display = 'flex';
+      setTimeout(() => {
+        overlay.classList.add('active');
+        
+        // Start the 8s timer bar
+        if (timerBar) {
+          timerBar.style.animation = 'timerProgress 8s linear forwards';
+        }
+
+        // Auto-close after 8 seconds
+        setTimeout(() => {
+          closePromo();
+        }, 8000);
+      }, 100);
+    }, 2500);
+  }
+});
+
+// Initial Render
+document.addEventListener('DOMContentLoaded', () => {
+  renderProducts('all');
+});
