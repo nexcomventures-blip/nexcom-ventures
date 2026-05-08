@@ -246,58 +246,9 @@ body {
   font-weight: 500;
   transition: var(--transition);
 }
-/* Brand Strip & Swing */
-.brand-strip {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 2rem 0;
-  flex-wrap: wrap;
-}
+.nav-links a:hover { color: var(--primary); }
 
-.brand-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  transition: var(--transition);
-  padding: 1rem;
-  background: var(--bg2);
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  min-width: 100px;
-}
-
-.brand-item:hover {
-  border-color: var(--primary);
-  background: var(--bg3);
-  transform: translateY(-5px);
-}
-
-.brand-item .brand-icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  transition: transform 0.3s ease;
-}
-
-.brand-item:hover .brand-icon {
-  animation: roSwing 0.6s ease;
-}
-
-@keyframes roSwing {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(15deg); }
-  50% { transform: rotate(-10deg); }
-  75% { transform: rotate(5deg); }
-  100% { transform: rotate(0deg); }
-}
-
-.brand-item span {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+.nav-actions { display: flex; align-items: center; gap: 1rem; }
 
 .cart-btn {
   position: relative;
@@ -862,11 +813,10 @@ section {
 }
 .section-header h2 {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 800;
-  letter-spacing: -2px;
-  margin-bottom: 1.5rem;
-  line-height: 1.1;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
 }
 .section-header p {
   color: var(--gray);
@@ -1120,10 +1070,7 @@ section {
 .add-cart:hover { opacity: 0.9; transform: scale(1.03); }
 
 .view-all-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  text-align: center;
   margin-top: 2.5rem;
 }
 
@@ -2083,6 +2030,12 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+.original-price {
+  text-decoration: line-through;
+  color: var(--gray);
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 .sale-badge {
   position: absolute;
