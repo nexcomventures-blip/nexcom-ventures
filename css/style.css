@@ -2255,3 +2255,50 @@ footer {
     width: 100%;
   }
 }
+
+/* ====== REVIEWS MARQUEE ====== */
+.reviews-marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+  padding: 3rem 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.reviews-marquee {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+}
+
+.review-card-horizontal {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 350px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow);
+}
+
+.review-card-horizontal p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  font-style: italic;
+  margin: 0.75rem 0;
+  line-height: 1.5;
+}
+
+.review-stars { color: #f1c40f; font-size: 0.8rem; margin-bottom: 0.5rem; }
+.reviewer { font-weight: 700; font-size: 0.8rem; color: var(--text); }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 1rem)); }
+}
+
+.reviews-marquee:hover {
+  animation-play-state: paused;
+}
