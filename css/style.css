@@ -992,6 +992,40 @@ section {
 }
 .quick-view-btn:hover { transform: scale(1.05); }
 
+.product-actions {
+  display: flex;
+  gap: 0.75rem;
+  transform: translateY(20px);
+  transition: var(--transition);
+}
+.product-card:hover .product-actions {
+  transform: translateY(0);
+}
+
+.action-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.action-btn.quick-view {
+  background: white;
+  color: #212529;
+}
+.action-btn.order-wa {
+  background: #25D366;
+  color: white;
+}
+.action-btn:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+
 .product-info { 
   padding: 1.25rem; 
   display: flex;
