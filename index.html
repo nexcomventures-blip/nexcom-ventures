@@ -196,11 +196,12 @@
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#shop" onclick="toggleMenu()">Shop All</a>
+  <a href="#shop" onclick="toggleMenu()">Shop</a>
   <a href="budget-laptops.html" onclick="toggleMenu()">Student & Baby Laptops</a>
   <a href="#sell" onclick="toggleMenu()">Sell Your Laptop</a>
   <a href="repairs.html" onclick="toggleMenu()">Repairs</a>
   <a href="accessories.html" onclick="toggleMenu()">Accessories</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
 </div>
 
@@ -277,42 +278,26 @@
 <!-- ===== SHOP SECTION ===== -->
 <section id="shop">
   <div class="section-header">
-    <div class="section-tag">— Selected Inventory —</div>
-    <h2>Featured <span class="gradient-text">Machines.</span></h2>
-    <p>Premium laptops, ex-UK servers, and high-performance hardware. Quality checked and ready to go.</p>
+    <div class="section-tag">— Our Full Catalogue —</div>
+    <h2>Laptops, Servers & Accessories</h2>
+    <p>New • Ex-UK • Refurbished • Servers • Accessories. Every device tested & verified.</p>
   </div>
 
   <!-- Search & Filter -->
-  <div class="shop-controls" style="display: block; margin-top: 3rem;">
-    <div class="section-tag" style="text-align: center; margin-bottom: 1rem;">— Shop by Brand —</div>
-    <div class="brand-strip">
-      <div class="brand-item" onclick="filterProducts('hp', this)">
-        <div class="brand-icon">💻</div>
-        <span>HP</span>
-      </div>
-      <div class="brand-item" onclick="filterProducts('dell', this)">
-        <div class="brand-icon">💻</div>
-        <span>Dell</span>
-      </div>
-      <div class="brand-item" onclick="filterProducts('lenovo', this)">
-        <div class="brand-icon">💻</div>
-        <span>Lenovo</span>
-      </div>
-      <div class="brand-item" onclick="filterProducts('apple', this)">
-        <div class="brand-icon">🍎</div>
-        <span>MacBook</span>
-      </div>
-    </div>
-
-    <div class="search-wrap" style="max-width: 600px; margin: 2rem auto;">
+  <div class="shop-controls">
+    <div class="search-wrap">
       <input type="text" id="productSearch" placeholder="Search HP, Dell, Gaming..." onkeyup="searchProducts()" class="search-input"/>
       <span class="search-icon">🔍</span>
     </div>
-    
-    <div class="filter-tabs" style="justify-content: center;">
+    <div class="filter-tabs">
       <button class="filter-btn active" onclick="filterProducts('featured', this)">Featured</button>
-      <button class="filter-btn" onclick="filterProducts('all', this)">All Laptops</button>
-      <button class="filter-btn" onclick="filterProducts('new', this)">Brand New</button>
+      <button class="filter-btn" onclick="filterProducts('all', this)">All</button>
+      <button class="filter-btn" onclick="location.href='budget-laptops.html'">🎓 Student & Baby</button>
+      <button class="filter-btn" onclick="filterProducts('lenovo', this)">💻 Lenovo</button>
+      <button class="filter-btn" onclick="filterProducts('dell', this)">💻 Dell</button>
+      <button class="filter-btn" onclick="filterProducts('hp', this)">💻 HP</button>
+      <button class="filter-btn" onclick="filterProducts('apple', this)">🍎 MacBook</button>
+      <button class="filter-btn" onclick="filterProducts('new', this)">New</button>
       <button class="filter-btn" onclick="filterProducts('server', this)">🖥️ Servers</button>
     </div>
   </div>
@@ -320,7 +305,7 @@
   <div class="products-grid" id="productsGrid">
     <!-- Dynamically rendered by products.js -->
   </div>
-  <div class="view-all-wrap" style="display: none;">
+  <div class="view-all-wrap">
     <button id="loadMoreBtn" class="btn-outline" onclick="loadMoreProducts()">Load More Items</button>
   </div>
 </section>
@@ -721,18 +706,17 @@
     </div>
     <div class="footer-links">
       <h4>Quick Links</h4>
-      <a href="#shop">Featured Machines</a>
-      <a href="budget-laptops.html">Student Laptops</a>
-      <a href="repairs.html">Repairs</a>
-      <a href="accessories.html">Accessories</a>
-      <a href="guide.html">Buying Guide</a>
+      <a href="#shop">Shop Laptops</a>
+      <a href="#sell">Sell Your Laptop</a>
+      <a href="#accessories">Accessories</a>
+      <a href="#contact">Contact Us</a>
     </div>
     <div class="footer-links">
       <h4>Top Brands</h4>
-      <a href="hp/">HP Laptops</a>
-      <a href="dell/">Dell Laptops</a>
-      <a href="lenovo/">Lenovo Laptops</a>
-      <a href="macbook/">Apple MacBooks</a>
+      <a href="#shop" onclick="filterCategory('dell')">Dell</a>
+      <a href="#shop" onclick="filterCategory('hp')">HP</a>
+      <a href="#shop" onclick="filterCategory('lenovo')">Lenovo</a>
+      <a href="#shop" onclick="filterCategory('apple')">Apple</a>
     </div>
     <div class="footer-contact">
       <h4>Follow Us</h4>
