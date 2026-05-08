@@ -120,7 +120,7 @@
 <!-- ===== NAVBAR ===== -->
 <nav id="navbar">
   <div class="nav-container">
-    <a href="#" class="nav-logo" style="display: flex; align-items: center; text-decoration: none; padding: 5px 0; gap: 10px;">
+    <a href="index.html" class="nav-logo" style="display: flex; align-items: center; text-decoration: none; padding: 5px 0; gap: 10px;">
       <img src="images/logo.png" alt="Nexcom Logo" style="height: 50px; width: 50px; border-radius: 50%; object-fit: cover;">
       <div style="display: flex; flex-direction: column; line-height: 1.1;">
         <span style="color: var(--text); font-size: 1.2rem; font-weight: 900; letter-spacing: -0.5px; text-transform: uppercase;">Nexcom</span>
@@ -128,11 +128,20 @@
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="#shop">Shop</a></li>
-      <li><a href="budget-laptops.html">Student & Baby</a></li>
+      <li class="dropdown">
+        <a href="#shop" class="dropbtn">Shop by Brand <span class="chevron">▼</span></a>
+        <div class="dropdown-content">
+          <a href="hp/">💻 HP Laptops</a>
+          <a href="dell/">💻 Dell Laptops</a>
+          <a href="lenovo/">💻 Lenovo Laptops</a>
+          <a href="macbook/">🍎 MacBooks</a>
+          <hr style="margin: 5px 0; border: 0; border-top: 1px solid var(--border);">
+          <a href="budget-laptops.html">🎓 Student & Budget</a>
+          <a href="accessories.html">🖱️ Accessories</a>
+        </div>
+      </li>
       <li><a href="#sell">Sell</a></li>
       <li><a href="repairs.html">Repairs</a></li>
-      <li><a href="accessories.html">Accessories</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-actions">
@@ -293,10 +302,10 @@
       <button class="filter-btn active" onclick="filterProducts('featured', this)">Featured</button>
       <button class="filter-btn" onclick="filterProducts('all', this)">All</button>
       <button class="filter-btn" onclick="location.href='budget-laptops.html'">🎓 Student & Baby</button>
-      <button class="filter-btn" onclick="filterProducts('lenovo', this)">💻 Lenovo</button>
-      <button class="filter-btn" onclick="filterProducts('dell', this)">💻 Dell</button>
-      <button class="filter-btn" onclick="filterProducts('hp', this)">💻 HP</button>
-      <button class="filter-btn" onclick="filterProducts('apple', this)">🍎 MacBook</button>
+      <button class="filter-btn" onclick="location.href='lenovo/'">💻 Lenovo</button>
+      <button class="filter-btn" onclick="location.href='dell/'">💻 Dell</button>
+      <button class="filter-btn" onclick="location.href='hp/'">💻 HP</button>
+      <button class="filter-btn" onclick="location.href='macbook/'">🍎 MacBook</button>
       <button class="filter-btn" onclick="filterProducts('new', this)">New</button>
       <button class="filter-btn" onclick="filterProducts('server', this)">🖥️ Servers</button>
     </div>
