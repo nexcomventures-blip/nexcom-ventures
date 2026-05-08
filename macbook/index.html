@@ -128,7 +128,15 @@
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="#shop">Shop</a></li>
+      <li class="dropdown">
+        <a href="#shop" class="dropbtn">Shop by Brand <span class="chevron">▼</span></a>
+        <div class="dropdown-content">
+          <a href="../hp/">💻 HP Laptops</a>
+          <a href="../dell/">💻 Dell Laptops</a>
+          <a href="../lenovo/">💻 Lenovo ThinkPads</a>
+          <a href="../macbook/">🍎 Apple MacBooks</a>
+        </div>
+      </li>
       <li><a href="../budget-laptops.html">Student & Baby</a></li>
       <li><a href="#sell">Sell</a></li>
       <li><a href="../repairs.html">Repairs</a></li>
@@ -196,12 +204,17 @@
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#shop" onclick="toggleMenu()">Shop</a>
+  <a href="#shop" onclick="toggleMenu()">Featured Machines</a>
+  <div style="padding: 10px 20px; font-size: 0.7rem; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; border-top: 1px solid var(--border); margin-top: 10px;">Shop by Brand</div>
+  <a href="../hp/" onclick="toggleMenu()">💻 HP Laptops</a>
+  <a href="../dell/" onclick="toggleMenu()">💻 Dell Laptops</a>
+  <a href="../lenovo/" onclick="toggleMenu()">💻 Lenovo ThinkPads</a>
+  <a href="../macbook/" onclick="toggleMenu()">🍎 Apple MacBooks</a>
+  <div style="border-top: 1px solid var(--border); margin-top: 10px;"></div>
   <a href="../budget-laptops.html" onclick="toggleMenu()">Student & Baby Laptops</a>
   <a href="#sell" onclick="toggleMenu()">Sell Your Laptop</a>
   <a href="../repairs.html" onclick="toggleMenu()">Repairs</a>
   <a href="../accessories.html" onclick="toggleMenu()">Accessories</a>
-  <a href="#about" onclick="toggleMenu()">About</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
 </div>
 
@@ -706,17 +719,18 @@
     </div>
     <div class="footer-links">
       <h4>Quick Links</h4>
-      <a href="#shop">Shop Laptops</a>
-      <a href="#sell">Sell Your Laptop</a>
-      <a href="#accessories">Accessories</a>
-      <a href="#contact">Contact Us</a>
+      <a href="#shop">Featured Machines</a>
+      <a href="../budget-laptops.html">Student Laptops</a>
+      <a href="../repairs.html">Repairs</a>
+      <a href="../accessories.html">Accessories</a>
+      <a href="guide.html">Buying Guide</a>
     </div>
     <div class="footer-links">
       <h4>Top Brands</h4>
-      <a href="#shop" onclick="filterCategory('dell')">Dell</a>
-      <a href="#shop" onclick="filterCategory('hp')">HP</a>
-      <a href="#shop" onclick="filterCategory('lenovo')">Lenovo</a>
-      <a href="#shop" onclick="filterCategory('apple')">Apple</a>
+      <a href="../hp/">HP Laptops</a>
+      <a href="../dell/">Dell Laptops</a>
+      <a href="../lenovo/">Lenovo Laptops</a>
+      <a href="../macbook/">Apple MacBooks</a>
     </div>
     <div class="footer-contact">
       <h4>Follow Us</h4>
