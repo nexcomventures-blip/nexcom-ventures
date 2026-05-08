@@ -248,6 +248,59 @@ body {
 }
 .nav-links a:hover { color: var(--primary); }
 
+/* Navbar Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  min-width: 220px;
+  box-shadow: 0px 8px 32px 0px rgba(0,0,0,0.1);
+  z-index: 1000;
+  border-radius: 12px;
+  padding: 8px 0;
+  margin-top: 5px;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.dropdown-content a {
+  color: var(--text) !important;
+  padding: 10px 20px !important;
+  text-decoration: none;
+  display: block;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--bg3);
+  color: var(--primary) !important;
+  padding-left: 25px !important;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  animation: navFadeIn 0.3s ease;
+}
+
+.chevron {
+  font-size: 0.5rem;
+  margin-left: 2px;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+
+@keyframes navFadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .nav-actions { display: flex; align-items: center; gap: 1rem; }
 
 .cart-btn {
