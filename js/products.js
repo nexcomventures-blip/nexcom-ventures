@@ -18,7 +18,7 @@ const ALL_PRODUCTS = [
     "onFlashSale": true,
     "category": "exuk apple featured macbook",
     "badge": "hot",
-    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+    "img": "images/macbook_m2.jpg"
   },
   {
     "id": "feat-3",
