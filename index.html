@@ -128,15 +128,7 @@
       </div>
     </a>
     <ul class="nav-links">
-      <li class="dropdown">
-        <a href="#shop" class="dropbtn">Shop by Brand <span class="chevron">▼</span></a>
-        <div class="dropdown-content">
-          <a href="hp/">💻 HP Laptops</a>
-          <a href="dell/">💻 Dell Laptops</a>
-          <a href="lenovo/">💻 Lenovo ThinkPads</a>
-          <a href="macbook/">🍎 Apple MacBooks</a>
-        </div>
-      </li>
+      <li><a href="#shop">Shop</a></li>
       <li><a href="budget-laptops.html">Student & Baby</a></li>
       <li><a href="#sell">Sell</a></li>
       <li><a href="repairs.html">Repairs</a></li>
@@ -204,13 +196,7 @@
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#shop" onclick="toggleMenu()">Featured Machines</a>
-  <div style="padding: 10px 20px; font-size: 0.7rem; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; border-top: 1px solid var(--border); margin-top: 10px;">Shop by Brand</div>
-  <a href="hp/" onclick="toggleMenu()">💻 HP Laptops</a>
-  <a href="dell/" onclick="toggleMenu()">💻 Dell Laptops</a>
-  <a href="lenovo/" onclick="toggleMenu()">💻 Lenovo ThinkPads</a>
-  <a href="macbook/" onclick="toggleMenu()">🍎 Apple MacBooks</a>
-  <div style="border-top: 1px solid var(--border); margin-top: 10px;"></div>
+  <a href="#shop" onclick="toggleMenu()">Shop All</a>
   <a href="budget-laptops.html" onclick="toggleMenu()">Student & Baby Laptops</a>
   <a href="#sell" onclick="toggleMenu()">Sell Your Laptop</a>
   <a href="repairs.html" onclick="toggleMenu()">Repairs</a>
@@ -297,20 +283,36 @@
   </div>
 
   <!-- Search & Filter -->
-  <div class="shop-controls" style="display: none;">
-    <div class="search-wrap">
+  <div class="shop-controls" style="display: block; margin-top: 3rem;">
+    <div class="section-tag" style="text-align: center; margin-bottom: 1rem;">— Shop by Brand —</div>
+    <div class="brand-strip">
+      <div class="brand-item" onclick="filterProducts('hp', this)">
+        <div class="brand-icon">💻</div>
+        <span>HP</span>
+      </div>
+      <div class="brand-item" onclick="filterProducts('dell', this)">
+        <div class="brand-icon">💻</div>
+        <span>Dell</span>
+      </div>
+      <div class="brand-item" onclick="filterProducts('lenovo', this)">
+        <div class="brand-icon">💻</div>
+        <span>Lenovo</span>
+      </div>
+      <div class="brand-item" onclick="filterProducts('apple', this)">
+        <div class="brand-icon">🍎</div>
+        <span>MacBook</span>
+      </div>
+    </div>
+
+    <div class="search-wrap" style="max-width: 600px; margin: 2rem auto;">
       <input type="text" id="productSearch" placeholder="Search HP, Dell, Gaming..." onkeyup="searchProducts()" class="search-input"/>
       <span class="search-icon">🔍</span>
     </div>
-    <div class="filter-tabs">
+    
+    <div class="filter-tabs" style="justify-content: center;">
       <button class="filter-btn active" onclick="filterProducts('featured', this)">Featured</button>
-      <button class="filter-btn" onclick="filterProducts('all', this)">All</button>
-      <button class="filter-btn" onclick="location.href='budget-laptops.html'">🎓 Student & Baby</button>
-      <button class="filter-btn" onclick="filterProducts('lenovo', this)">💻 Lenovo</button>
-      <button class="filter-btn" onclick="filterProducts('dell', this)">💻 Dell</button>
-      <button class="filter-btn" onclick="filterProducts('hp', this)">💻 HP</button>
-      <button class="filter-btn" onclick="filterProducts('apple', this)">🍎 MacBook</button>
-      <button class="filter-btn" onclick="filterProducts('new', this)">New</button>
+      <button class="filter-btn" onclick="filterProducts('all', this)">All Laptops</button>
+      <button class="filter-btn" onclick="filterProducts('new', this)">Brand New</button>
       <button class="filter-btn" onclick="filterProducts('server', this)">🖥️ Servers</button>
     </div>
   </div>
