@@ -1756,7 +1756,34 @@ function filterCategory(cat) {
 // Daily Special Logic
 function setupDailySpecial() {
   const section = document.getElementById("daily-special");
-  if (section) section.remove(); // Remove the daily special section completely as requested
+  if (!section) return;
+
+  // Use a rotating deal based on the day
+  const today = new Date();
+  const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+  const p = ALL_PRODUCTS[dateSeed % ALL_PRODUCTS.length];
+
+  if (p) {
+    section.style.display = 'block';
+    const titleEl = document.getElementById('special-title');
+    const specsEl = document.getElementById('special-specs');
+    const oldPriceEl = document.getElementById('special-old-price');
+    const newPriceEl = document.getElementById('special-new-price');
+    const imgEl = document.getElementById('special-img');
+    const bannerEl = document.getElementById('special-banner');
+
+    if (titleEl) titleEl.innerText = p.name;
+    if (specsEl) specsEl.innerText = p.specs;
+    if (oldPriceEl) oldPriceEl.innerText = `KES ${p.price.toLocaleString()}`;
+    if (newPriceEl) newPriceEl.innerText = `KES ${Math.round(p.price * 0.9).toLocaleString()}`;
+    if (imgEl) imgEl.src = p.img;
+    
+    if (bannerEl) {
+      bannerEl.onclick = () => {
+        window.open(`https://wa.me/254721585784?text=Hi Nexcom! I want to claim the Daily Special: ${p.name}`, '_blank');
+      };
+    }
+  }
 }
 
 
@@ -1827,6 +1854,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Initial Render
 document.addEventListener('DOMContentLoaded', () => {
+  setupDailySpecial();
+  
   // Check URL parameters for filtering
   const urlParams = new URLSearchParams(window.location.search);
   const filterParam = urlParams.get('filter');
@@ -1837,6 +1866,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const productsSection = document.getElementById('shop');
     if (productsSection) productsSection.scrollIntoView({ behavior: 'smooth' });
   } else {
-    renderProducts('all');
+    renderProducts('featured');
   }
 });
