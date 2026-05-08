@@ -1787,7 +1787,7 @@ function setupDailySpecial() {
 }
 
 
-// Welcome Promo Logic
+/* // Welcome Promo Logic
 function closePromo() {
   const overlay = document.getElementById('promoOverlay');
   if (overlay) {
@@ -1852,7 +1852,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Initial Render
+ */// Initial Render
 document.addEventListener('DOMContentLoaded', () => {
   setupDailySpecial();
   
