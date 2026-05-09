@@ -1956,11 +1956,11 @@ function renderFiltered() {
       const offerPrice = Math.round(p.price * 0.9);
       priceHTML = `
         <div class="product-price-old" style="text-decoration: line-through; color: #888; font-size: 0.85rem;">KES ${p.price.toLocaleString()}</div>
-        <div class="product-price" style="color: #e63946;">KES ${offerPrice.toLocaleString()} ${isLaptop ? '<span style="font-size:0.7rem; color:#28a745; font-weight:900; margin-left:5px;">💼🖱️</span>' : ''}</div>
+        <div class="product-price" style="color: #e63946;">KES ${offerPrice.toLocaleString()} ${isLaptop ? '<span style="font-size:0.9rem; color:#28a745; margin-left:8px; vertical-align: middle;"><i class="ph-bold ph-briefcase"></i><i class="ph-bold ph-mouse-simple"></i></span>' : ''}</div>
       `;
       badgeHTML += `<div class="flash-badge" style="position: absolute; top: 10px; right: 10px; background: #e63946; color: white; padding: 4px 8px; font-size: 0.7rem; font-weight: 800; border-radius: 4px; animation: pulse 2s infinite;">10% OFF</div>`;
     } else {
-      priceHTML = `<div class="product-price">KES ${p.price.toLocaleString()} ${isLaptop ? '<span style="font-size:0.7rem; color:#28a745; font-weight:900; margin-left:5px;">💼🖱️</span>' : ''}</div>`;
+      priceHTML = `<div class="product-price">KES ${p.price.toLocaleString()} ${isLaptop ? '<span style="font-size:0.9rem; color:#28a745; margin-left:8px; vertical-align: middle;"><i class="ph-bold ph-briefcase"></i><i class="ph-bold ph-mouse-simple"></i></span>' : ''}</div>`;
     }
 
     return `
@@ -2053,7 +2053,7 @@ function setupDailySpecial() {
     if (oldPriceEl) oldPriceEl.innerText = `KES ${p.price.toLocaleString()}`;
     if (newPriceEl) {
       const isLaptop = p.category.toLowerCase().includes('laptop') || p.category.toLowerCase().includes('macbook') || p.category.toLowerCase().includes('hp') || p.category.toLowerCase().includes('dell') || p.category.toLowerCase().includes('lenovo');
-      newPriceEl.innerHTML = `KES ${Math.round(p.price * 0.9).toLocaleString()} ${isLaptop ? '<span style="font-size:0.8rem; color:#28a745; margin-left:5px;">💼🖱️</span>' : ''}`;
+      newPriceEl.innerHTML = `KES ${Math.round(p.price * 0.9).toLocaleString()} ${isLaptop ? '<span style="font-size:1rem; color:#28a745; margin-left:8px; vertical-align: middle;"><i class="ph-bold ph-briefcase"></i><i class="ph-bold ph-mouse-simple"></i></span>' : ''}`;
     }
     if (imgEl) imgEl.src = p.img;
     
