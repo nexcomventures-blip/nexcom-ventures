@@ -130,7 +130,7 @@ const ALL_PRODUCTS = [
     "price": 39000,
     "category": "exuk business hp laptop",
     "badge": "hot",
-    "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
+    "img": "images/hp_840_g6.jpg"
   },
   {
     "id": "l-1",
