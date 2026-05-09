@@ -4,7 +4,7 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "Dell XPS 13 9330",
     "specs": "Intel Core i7 13th Gen \u2022 16GB RAM \u2022 512GB SSD",
-    "price": 157500,
+    "price": 158500,
     "category": "exuk business featured dell laptop",
     "badge": "new",
     "img": "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=800"
@@ -14,7 +14,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "MacBook Pro 13 M2",
     "specs": "Apple M2 Chip \u2022 8GB RAM \u2022 512GB SSD",
-    "price": 163000,
+    "price": 164000,
     "onFlashSale": true,
     "category": "exuk apple featured macbook laptop",
     "badge": "hot",
@@ -25,7 +25,7 @@ const ALL_PRODUCTS = [
     "brand": "Lenovo",
     "name": "ThinkPad X1 Carbon Gen 10",
     "specs": "i7 12th Gen \u2022 16GB RAM \u2022 512GB SSD",
-    "price": 95000,
+    "price": 96000,
     "category": "exuk business featured lenovo laptop",
     "badge": "hot",
     "img": "images/x1_carbon_gen10.jpg"
@@ -35,7 +35,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteBook 840 G8",
     "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD",
-    "price": 66000,
+    "price": 67000,
     "onFlashSale": true,
     "category": "exuk business featured hp laptop",
     "badge": "hot",
@@ -46,7 +46,7 @@ const ALL_PRODUCTS = [
     "brand": "Lenovo",
     "name": "Lenovo 11E Core M5",
     "specs": "8GB RAM \u2022 128GB SSD \u2022 11.6\"",
-    "price": 13500,
+    "price": 14500,
     "onFlashSale": true,
     "category": "exuk student budget",
     "badge": "student",
@@ -57,7 +57,7 @@ const ALL_PRODUCTS = [
     "brand": "Lenovo",
     "name": "Lenovo 11E Celeron",
     "specs": "4GB RAM \u2022 128GB SSD \u2022 Rugged",
-    "price": 10500,
+    "price": 11500,
     "category": "exuk student budget",
     "badge": "student",
     "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
@@ -67,7 +67,7 @@ const ALL_PRODUCTS = [
     "brand": "Lenovo",
     "name": "Lenovo Yoga N23S",
     "specs": "Celeron \u2022 4GB RAM \u2022 128GB SSD \u2022 Touch",
-    "price": 14500,
+    "price": 15500,
     "category": "exuk student budget",
     "badge": "student",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e520b?q=80&w=800"
@@ -77,7 +77,7 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "Dell Latitude 5400 i5",
     "specs": "8th Gen \u2022 8GB \u2022 256GB SSD",
-    "price": 25000,
+    "price": 26000,
     "category": "exuk business featured dell laptop",
     "badge": "exuk",
     "img": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800"
@@ -87,7 +87,7 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "Dell Precision 5550 i7",
     "specs": "10th Gen \u2022 16GB \u2022 512GB \u2022 4GB Nvidia",
-    "price": 81500,
+    "price": 82500,
     "category": "exuk business dell laptop",
     "badge": "pro",
     "img": "https://images.unsplash.com/photo-1661961111184-11317b40adb2?q=80&w=800"
@@ -97,7 +97,7 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "Dell XPS 13 9310 i7",
     "specs": "11th Gen \u2022 16GB \u2022 512GB \u2022 Touch",
-    "price": 76000,
+    "price": 77000,
     "category": "exuk business dell laptop",
     "badge": "premium",
     "img": "https://images.unsplash.com/photo-1661961112134-fbce0fdf3d99?q=80&w=800"
@@ -107,7 +107,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP ProBook 640 G5 i5",
     "specs": "8th Gen \u2022 8GB \u2022 256GB SSD",
-    "price": 27000,
+    "price": 28000,
     "category": "exuk business hp laptop",
     "badge": "exuk",
     "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
@@ -117,7 +117,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteBook 840 G6 i5",
     "specs": "8th Gen \u2022 16GB \u2022 256GB SSD",
-    "price": 38000,
+    "price": 39000,
     "category": "exuk business featured hp laptop",
     "badge": "hot",
     "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
@@ -127,7 +127,7 @@ const ALL_PRODUCTS = [
     "brand": "Lenovo",
     "name": "ThinkPad T490s i5",
     "specs": "8th Gen \u2022 8GB \u2022 256GB SSD",
-    "price": 26000,
+    "price": 27000,
     "category": "exuk business lenovo laptop",
     "badge": "exuk",
     "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
@@ -137,7 +137,7 @@ const ALL_PRODUCTS = [
     "brand": "Lenovo",
     "name": "ThinkPad X1 Yoga i7",
     "specs": "8th Gen \u2022 16GB \u2022 512GB \u2022 Touch",
-    "price": 46500,
+    "price": 47500,
     "category": "exuk business featured lenovo laptop",
     "badge": "exuk",
     "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
@@ -147,7 +147,7 @@ const ALL_PRODUCTS = [
     "brand": "Lenovo",
     "name": "Lenovo IdeaPad Slim 3",
     "specs": "Ryzen 5 \u2022 8GB RAM \u2022 512GB SSD",
-    "price": 50500,
+    "price": 51500,
     "category": "exuk student business lenovo laptop",
     "badge": "new",
     "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
@@ -157,7 +157,7 @@ const ALL_PRODUCTS = [
     "brand": "Lenovo",
     "name": "ThinkPad E14 Gen 2",
     "specs": "i5 11th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 39500,
+    "price": 40500,
     "category": "exuk business lenovo laptop",
     "badge": "exuk",
     "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
@@ -167,7 +167,7 @@ const ALL_PRODUCTS = [
     "brand": "Lenovo",
     "name": "Lenovo ThinkBook 15",
     "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD",
-    "price": 57500,
+    "price": 58500,
     "category": "exuk business featured lenovo laptop",
     "badge": "hot",
     "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
@@ -177,7 +177,7 @@ const ALL_PRODUCTS = [
     "brand": "Lenovo",
     "name": "ThinkPad L13 Yoga",
     "specs": "i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touch",
-    "price": 37500,
+    "price": 38500,
     "category": "exuk business lenovo laptop",
     "badge": "exuk",
     "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
@@ -187,7 +187,7 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "PowerEdge T150 Server",
     "specs": "Intel Xeon \u2022 16GB ECC \u2022 2TB HDD",
-    "price": 151500,
+    "price": 152500,
     "category": "server enterprise new",
     "badge": "server",
     "img": "https://images.unsplash.com/photo-1558494949-ef010978911e?q=80&w=800"
@@ -197,7 +197,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "ProLiant DL380 Gen10",
     "specs": "Dual Xeon \u2022 64GB RAM \u2022 Rack Server",
-    "price": 292500,
+    "price": 293500,
     "category": "server enterprise exuk",
     "badge": "server",
     "img": "https://images.unsplash.com/photo-1594065296416-aed7ae708d58?q=80&w=800"
@@ -207,7 +207,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "MacBook Air M1",
     "specs": "Apple M1 Chip \u2022 8GB RAM \u2022 256GB SSD \u2022 13.3-inch Retina",
-    "price": 99000,
+    "price": 100000,
     "category": "exuk apple macbook laptop",
     "badge": "new",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -217,7 +217,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "MacBook Pro 14 M3",
     "specs": "Apple M3 Chip \u2022 16GB RAM \u2022 512GB SSD \u2022 Liquid Retina XDR",
-    "price": 332500,
+    "price": 333500,
     "category": "new apple macbook premium laptop",
     "badge": "hot",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -227,7 +227,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 16 2019 i9 64/1tb with 8 graphics",
     "specs": "macbook pro 16 2019 i9 64/1tb with 8 graphics",
-    "price": 133000,
+    "price": 134000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -237,7 +237,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 16 i9 32/2tb with 8gb graphics",
     "specs": "macbook pro 16 i9 32/2tb with 8gb graphics",
-    "price": 133000,
+    "price": 134000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -247,7 +247,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 16 2019 i9 32/1tb with 4gn graphics",
     "specs": "macbook pro 16 2019 i9 32/1tb with 4gn graphics",
-    "price": 119000,
+    "price": 120000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -257,7 +257,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 16 2019 i7 32/512gb",
     "specs": "macbook pro 16 2019 i7 32/512gb",
-    "price": 98000,
+    "price": 99000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -267,7 +267,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 15 2019 i7 16/512gb 4gb graphics",
     "specs": "macbook pro 15 2019 i7 16/512gb 4gb graphics",
-    "price": 88000,
+    "price": 89000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -277,7 +277,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 15 2018 i7 16/512gb 4gb graphics",
     "specs": "macbook pro 15 2018 i7 16/512gb 4gb graphics",
-    "price": 77000,
+    "price": 78000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -287,7 +287,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 15 2017 i7 16/512gb 4gb graphics",
     "specs": "macbook pro 15 2017 i7 16/512gb 4gb graphics",
-    "price": 73000,
+    "price": 74000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -297,7 +297,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 15 2017 i7 16/512gb 2gb graphics",
     "specs": "macbook pro 15 2017 i7 16/512gb 2gb graphics",
-    "price": 70000,
+    "price": 71000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -307,7 +307,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 15 2015 i7 16/512gb 2gb graphics",
     "specs": "macbook pro 15 2015 i7 16/512gb 2gb graphics",
-    "price": 49000,
+    "price": 50000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -317,7 +317,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro m1 13 2020 16/512gb",
     "specs": "macbook pro m1 13 2020 16/512gb",
-    "price": 140000,
+    "price": 141000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -327,7 +327,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro m1 13 2020 8/256gb",
     "specs": "macbook pro m1 13 2020 8/256gb",
-    "price": 105000,
+    "price": 106000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -337,7 +337,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 i7 2020 16/1tb",
     "specs": "macbook pro 13 i7 2020 16/1tb",
-    "price": 91000,
+    "price": 92000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -347,7 +347,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 i7 2020 32/512gb",
     "specs": "macbook pro 13 i7 2020 32/512gb",
-    "price": 91000,
+    "price": 92000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -357,7 +357,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 i7 2020 16/512gb",
     "specs": "macbook pro 13 i7 2020 16/512gb",
-    "price": 84000,
+    "price": 85000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -367,7 +367,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2019 i7 16/1tb",
     "specs": "macbook pro 13 2019 i7 16/1tb",
-    "price": 98000,
+    "price": 99000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -377,7 +377,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2019 i7 16/512gb",
     "specs": "macbook pro 13 2019 i7 16/512gb",
-    "price": 77000,
+    "price": 78000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -387,7 +387,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2019 i7 16/256gb",
     "specs": "macbook pro 13 2019 i7 16/256gb",
-    "price": 70000,
+    "price": 71000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -397,7 +397,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2019 i5 16/256gb",
     "specs": "macbook pro 13 2019 i5 16/256gb",
-    "price": 63000,
+    "price": 64000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -407,7 +407,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2019 i5 8/256gb",
     "specs": "macbook pro 13 2019 i5 8/256gb",
-    "price": 59000,
+    "price": 60000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -417,7 +417,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2018 i7 16/256gb",
     "specs": "macbook pro 13 2018 i7 16/256gb",
-    "price": 67000,
+    "price": 68000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -427,7 +427,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2017 i7 16/1tb",
     "specs": "macbook pro 13 2017 i7 16/1tb",
-    "price": 70000,
+    "price": 71000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -437,7 +437,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2017 i7 16/512gb",
     "specs": "macbook pro 13 2017 i7 16/512gb",
-    "price": 63000,
+    "price": 64000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -447,7 +447,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2017 i7 16/256gb",
     "specs": "macbook pro 13 2017 i7 16/256gb",
-    "price": 56000,
+    "price": 57000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -457,7 +457,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2017 i5 8/512gb",
     "specs": "macbook pro 13 2017 i5 8/512gb",
-    "price": 53000,
+    "price": 54000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -467,7 +467,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2017 i5 8/256gb",
     "specs": "macbook pro 13 2017 i5 8/256gb",
-    "price": 45000,
+    "price": 46000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -477,7 +477,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2015 i7 8/256gb",
     "specs": "macbook pro 13 2015 i7 8/256gb",
-    "price": 42000,
+    "price": 43000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -487,7 +487,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2015 i5 16/512gb",
     "specs": "macbook pro 13 2015 i5 16/512gb",
-    "price": 45000,
+    "price": 46000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -497,7 +497,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2015 i5 16/256gb",
     "specs": "macbook pro 13 2015 i5 16/256gb",
-    "price": 38000,
+    "price": 39000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -507,7 +507,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2015 i5 8/256gb",
     "specs": "macbook pro 13 2015 i5 8/256gb",
-    "price": 35000,
+    "price": 36000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -517,7 +517,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2014 i5 8/256gb",
     "specs": "macbook pro 13 2014 i5 8/256gb",
-    "price": 32000,
+    "price": 33000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -527,7 +527,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2013 i5 8/256gb",
     "specs": "macbook pro 13 2013 i5 8/256gb",
-    "price": 29500,
+    "price": 30500,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -537,7 +537,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2013 i7 8/256gb",
     "specs": "macbook pro 13 2013 i7 8/256gb",
-    "price": 35000,
+    "price": 36000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -547,7 +547,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2012 i7 8/256gb",
     "specs": "macbook pro 13 2012 i7 8/256gb",
-    "price": 26500,
+    "price": 27500,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -557,7 +557,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2012 i5 8/256gb",
     "specs": "macbook pro 13 2012 i5 8/256gb",
-    "price": 24000,
+    "price": 25000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -567,7 +567,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook pro 13 2011 i5 8/256gb",
     "specs": "macbook pro 13 2011 i5 8/256gb",
-    "price": 21000,
+    "price": 22000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
@@ -577,7 +577,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook air laptops macbook air m1 2022 8/512gb",
     "specs": "macbook air laptops macbook air m1 2022 8/512gb",
-    "price": 139000,
+    "price": 140000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -587,7 +587,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook air m1 2022 8/256gb",
     "specs": "macbook air m1 2022 8/256gb",
-    "price": 112000,
+    "price": 113000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -597,7 +597,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook air m1 2020 8/256gb",
     "specs": "macbook air m1 2020 8/256gb",
-    "price": 84000,
+    "price": 85000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -607,7 +607,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook air 13 2019 i5 16/256gb",
     "specs": "macbook air 13 2019 i5 16/256gb",
-    "price": 59000,
+    "price": 60000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -617,7 +617,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook air 13 2019 i58/256gb",
     "specs": "macbook air 13 2019 i58/256gb",
-    "price": 56000,
+    "price": 57000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -627,7 +627,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook air 13 2018 i5 8/256gb",
     "specs": "macbook air 13 2018 i5 8/256gb",
-    "price": 53000,
+    "price": 54000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -637,7 +637,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook air 13 2017 i7 8/256gb",
     "specs": "macbook air 13 2017 i7 8/256gb",
-    "price": 42000,
+    "price": 43000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -647,7 +647,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "macbook air 13 2017 i5 8/256gb",
     "specs": "macbook air 13 2017 i5 8/256gb",
-    "price": 35000,
+    "price": 36000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -657,7 +657,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "MacBook Air 13 2015 i5 8/256",
     "specs": "MacBook Air 13 2015 i5 8/256",
-    "price": 31000,
+    "price": 32000,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -667,7 +667,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "MacBook Air 13 2014 i7 8/256",
     "specs": "MacBook Air 13 2014 i7 8/256",
-    "price": 29500,
+    "price": 30500,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -677,7 +677,7 @@ const ALL_PRODUCTS = [
     "brand": "Apple",
     "name": "MacBook Air 13 2013 i5 8/128",
     "specs": "MacBook Air 13 2013 i5 8/128",
-    "price": 26500,
+    "price": 27500,
     "category": "apple macbook exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
@@ -687,7 +687,7 @@ const ALL_PRODUCTS = [
     "brand": "Samsung",
     "name": "sam 930 i7 11th 16/512gb",
     "specs": "sam 930 i7 11th 16/512gb",
-    "price": 75000,
+    "price": 76000,
     "category": "samsung laptop exuk",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
@@ -697,7 +697,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp spectre x360 convertible 15t -df100 i7 10th with 2gb graphics",
     "specs": "hp spectre x360 convertible 15t -df100 i7 10th with 2gb graphics",
-    "price": 139000,
+    "price": 140000,
     "category": "hp exuk workstation premium premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
@@ -707,7 +707,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp spectre x360 convertible 15-df0xxx i7 8th 16/512gb with 2gb graphics",
     "specs": "hp spectre x360 convertible 15-df0xxx i7 8th 16/512gb with 2gb graphics",
-    "price": 98000,
+    "price": 99000,
     "category": "hp exuk workstation premium premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
@@ -717,7 +717,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp. spectre x360 convertible 15-bl0xx i7 7th 16/512gb with 2gb graphics",
     "specs": "hp. spectre x360 convertible 15-bl0xx i7 7th 16/512gb with 2gb graphics",
-    "price": 90000,
+    "price": 91000,
     "category": "hp exuk workstation premium premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
@@ -727,7 +727,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp envy x360 convertible 15m i7 8th 16/512gb",
     "specs": "hp envy x360 convertible 15m i7 8th 16/512gb",
-    "price": 81500,
+    "price": 82500,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -737,7 +737,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp zbook studio 15 g7 mobile workstation i7 10th 32/512gb with 4gb graphics",
     "specs": "hp zbook studio 15 g7 mobile workstation i7 10th 32/512gb with 4gb graphics",
-    "price": 122500,
+    "price": 123500,
     "category": "hp exuk workstation premium laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -747,7 +747,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp zbook 15 studio g5 i7 9th 16/512gb with 4gb nvidia Quadro p1000",
     "specs": "hp zbook 15 studio g5 i7 9th 16/512gb with 4gb nvidia Quadro p1000",
-    "price": 98000,
+    "price": 99000,
     "category": "hp exuk workstation premium laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -757,7 +757,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp zbook 15 studio i7 8th 16/512gb with 4gb nvidia Quadro p1000",
     "specs": "hp zbook 15 studio i7 8th 16/512gb with 4gb nvidia Quadro p1000",
-    "price": 90000,
+    "price": 91000,
     "category": "hp exuk workstation premium laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -767,7 +767,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp zbook 15 g5 i7 8th 16/512gb with 4gb nvidia Quadro p1000",
     "specs": "hp zbook 15 g5 i7 8th 16/512gb with 4gb nvidia Quadro p1000",
-    "price": 90000,
+    "price": 91000,
     "category": "hp exuk workstation premium laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -777,7 +777,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp zbook 15u g6 i7 8th 16/512gb with 4gb AMD Radeon pro wx3200 graphics",
     "specs": "hp zbook 15u g6 i7 8th 16/512gb with 4gb AMD Radeon pro wx3200 graphics",
-    "price": 81500,
+    "price": 82500,
     "category": "hp exuk workstation premium laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -787,7 +787,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp zbook 15 studio g5 i7 8th 16/512gb with 4gb nvidia quadro p1000",
     "specs": "hp zbook 15 studio g5 i7 8th 16/512gb with 4gb nvidia quadro p1000",
-    "price": 90000,
+    "price": 91000,
     "category": "hp exuk workstation premium laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -797,7 +797,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp zbook g4 i7 7th 16/512gb with 4gb nvidia quadro m1200",
     "specs": "hp zbook g4 i7 7th 16/512gb with 4gb nvidia quadro m1200",
-    "price": 65500,
+    "price": 66500,
     "category": "hp exuk workstation premium laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -807,7 +807,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp zbook 15 g3 i7 6th 16/512gb with 4gb nvidia Quadro m1200",
     "specs": "hp zbook 15 g3 i7 6th 16/512gb with 4gb nvidia Quadro m1200",
-    "price": 57000,
+    "price": 58000,
     "category": "hp exuk workstation premium laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -817,7 +817,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp zbook 14 firefly g7 mobile workstation 32/512gb with 4gb nvidia graphics touchscreen",
     "specs": "hp zbook 14 firefly g7 mobile workstation 32/512gb with 4gb nvidia graphics touchscreen",
-    "price": 114500,
+    "price": 115500,
     "category": "hp exuk workstation premium laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -827,7 +827,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp zbook 14u g6 i7 8th 16/512gb with 4gb AMD Radeon pro wx3200 graphics",
     "specs": "hp zbook 14u g6 i7 8th 16/512gb with 4gb AMD Radeon pro wx3200 graphics",
-    "price": 73500,
+    "price": 74500,
     "category": "hp exuk workstation premium laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -837,7 +837,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp zbook 14u i7 8/256gb with 4gb graphics",
     "specs": "hp zbook 14u i7 8/256gb with 4gb graphics",
-    "price": 65500,
+    "price": 66500,
     "category": "hp exuk workstation premium laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -847,7 +847,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp zbook 14u g5 i7 8th 16/512gb with 2gb AMD Radeon pro wx 3100",
     "specs": "hp zbook 14u g5 i7 8th 16/512gb with 2gb AMD Radeon pro wx 3100",
-    "price": 65500,
+    "price": 66500,
     "category": "hp exuk workstation premium laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -857,7 +857,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1040 g8 i7 11th 16/512gb",
     "specs": "hp 1040 g8 i7 11th 16/512gb",
-    "price": 80500,
+    "price": 81500,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -867,7 +867,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1040 g7 i7 10th 16/512gb x360 touchscreen",
     "specs": "hp 1040 g7 i7 10th 16/512gb x360 touchscreen",
-    "price": 73000,
+    "price": 74000,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -877,7 +877,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1040 g6 i7 8th 16/52gb x360 touchscreen",
     "specs": "hp 1040 g6 i7 8th 16/52gb x360 touchscreen",
-    "price": 62500,
+    "price": 63500,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -887,7 +887,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1040 g5 i5 8th 16/512gb x360 touchscreen",
     "specs": "hp 1040 g5 i5 8th 16/512gb x360 touchscreen",
-    "price": 53000,
+    "price": 54000,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -897,7 +897,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1040 g5 i5 8/256gb x360 touchscreen",
     "specs": "hp 1040 g5 i5 8/256gb x360 touchscreen",
-    "price": 48000,
+    "price": 49000,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -907,7 +907,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1040 g3 i5 6th 16/256gb",
     "specs": "hp 1040 g3 i5 6th 16/256gb",
-    "price": 35000,
+    "price": 36000,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -917,7 +917,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1040 g3 i5 6th 8/256gb",
     "specs": "hp 1040 g3 i5 6th 8/256gb",
-    "price": 32500,
+    "price": 33500,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -927,7 +927,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1040 g3 i7 6th 16/512gb",
     "specs": "hp 1040 g3 i7 6th 16/512gb",
-    "price": 36500,
+    "price": 37500,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -937,7 +937,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1030 g8 i7 11th 16/512gb x360 touchscreen",
     "specs": "hp 1030 g8 i7 11th 16/512gb x360 touchscreen",
-    "price": 80500,
+    "price": 81500,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -947,7 +947,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1030 g8 i5 11th 16/512gb x360 touchscreen",
     "specs": "hp 1030 g8 i5 11th 16/512gb x360 touchscreen",
-    "price": 73000,
+    "price": 74000,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -957,7 +957,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1030 g3 i7 16/512gb",
     "specs": "hp 1030 g3 i7 16/512gb",
-    "price": 62500,
+    "price": 63500,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -967,7 +967,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1030 g3 i7 8th 16/256gb",
     "specs": "hp 1030 g3 i7 8th 16/256gb",
-    "price": 58500,
+    "price": 59500,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -977,7 +977,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1030 g3 i7 8th 8/256gb",
     "specs": "hp 1030 g3 i7 8th 8/256gb",
-    "price": 51000,
+    "price": 52000,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -987,7 +987,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1030 g3 i5 8th 16/512gb",
     "specs": "hp 1030 g3 i5 8th 16/512gb",
-    "price": 53000,
+    "price": 54000,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -997,7 +997,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1030 g3 i5 8/256gb",
     "specs": "hp 1030 g3 i5 8/256gb",
-    "price": 48000,
+    "price": 49000,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1007,7 +1007,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1030 g2 i7 7th 8/256gb",
     "specs": "hp 1030 g2 i7 7th 8/256gb",
-    "price": 49500,
+    "price": 50500,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1017,7 +1017,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1030 g2 i5 16/256gb",
     "specs": "hp 1030 g2 i5 16/256gb",
-    "price": 48000,
+    "price": 49000,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1027,7 +1027,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1030 g2 i5 7th 8/256gb",
     "specs": "hp 1030 g2 i5 7th 8/256gb",
-    "price": 45500,
+    "price": 46500,
     "category": "hp exuk premium touchscreen laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1037,7 +1037,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1020 g2 i5 7th 16/512gb x360 touchscreen",
     "specs": "hp 1020 g2 i5 7th 16/512gb x360 touchscreen",
-    "price": 51000,
+    "price": 52000,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1047,7 +1047,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 1020 g2 i5 7th 8/256gb touchscreen",
     "specs": "hp 1020 g2 i5 7th 8/256gb touchscreen",
-    "price": 44000,
+    "price": 45000,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1057,7 +1057,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp elite x2 g4 i7 8th touchscreen",
     "specs": "hp elite x2 g4 i7 8th touchscreen",
-    "price": 58500,
+    "price": 59500,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1067,7 +1067,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp elite x2 g2 i5 7th 16/256gb",
     "specs": "hp elite x2 g2 i5 7th 16/256gb",
-    "price": 47000,
+    "price": 48000,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1077,7 +1077,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 840 g10 i7 13th. 16/512gb",
     "specs": "hp 840 g10 i7 13th. 16/512gb",
-    "price": 88000,
+    "price": 89000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1087,7 +1087,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 840 g9 i7 12th 16/512gb",
     "specs": "hp 840 g9 i7 12th 16/512gb",
-    "price": 80500,
+    "price": 81500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1097,7 +1097,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 840 g8 i5 11th 8/256gb touchscreen",
     "specs": "hp 840 g8 i5 11th 8/256gb touchscreen",
-    "price": 51000,
+    "price": 52000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1107,7 +1107,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 840 g8 i5 11th 8/256gb",
     "specs": "hp 840 g8 i5 11th 8/256gb",
-    "price": 48000,
+    "price": 49000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1117,7 +1117,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 840 g7 i7 10th 8/256gb touchscreen",
     "specs": "hp 840 g7 i7 10th 8/256gb touchscreen",
-    "price": 58500,
+    "price": 59500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1127,7 +1127,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 840 g7 i5 10th 8/256gb touchscreen",
     "specs": "hp 840 g7 i5 10th 8/256gb touchscreen",
-    "price": 49500,
+    "price": 50500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1137,7 +1137,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 840 g7 i5 10th 8/256gb",
     "specs": "hp 840 g7 i5 10th 8/256gb",
-    "price": 47000,
+    "price": 48000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1147,7 +1147,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 840 g5 i7 8th 8/256gb touchscreen",
     "specs": "hp 840 g5 i7 8th 8/256gb touchscreen",
-    "price": 47000,
+    "price": 48000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1157,7 +1157,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 840 g5 i7 8th 8/256gb",
     "specs": "hp 840 g5 i7 8th 8/256gb",
-    "price": 44000,
+    "price": 45000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1167,7 +1167,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 840 g5 i5 8th 8/256gb touchscreen",
     "specs": "hp 840 g5 i5 8th 8/256gb touchscreen",
-    "price": 41000,
+    "price": 42000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1177,7 +1177,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 840 g5 i5 7th 8/256gb touchscreen",
     "specs": "hp 840 g5 i5 7th 8/256gb touchscreen",
-    "price": 39500,
+    "price": 40500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1187,7 +1187,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 840 g5 i5 8th 8/256gb",
     "specs": "hp 840 g5 i5 8th 8/256gb",
-    "price": 38000,
+    "price": 39000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1197,7 +1197,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 840 g5 i5 7th 8/256gb",
     "specs": "hp 840 g5 i5 7th 8/256gb",
-    "price": 36500,
+    "price": 37500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1207,7 +1207,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 840 g2 i5 8/500gb",
     "specs": "hp 840 g2 i5 8/500gb",
-    "price": 21500,
+    "price": 22500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1217,7 +1217,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 840 g1 i7 8/256gb",
     "specs": "hp 840 g1 i7 8/256gb",
-    "price": 24000,
+    "price": 25000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1227,7 +1227,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g8 i7 11th 32/512gb x360 touchscreen",
     "specs": "hp 830 g8 i7 11th 32/512gb x360 touchscreen",
-    "price": 83500,
+    "price": 84500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1237,7 +1237,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g8 i7 11th 16/512gb x360 touchscreen",
     "specs": "hp 830 g8 i7 11th 16/512gb x360 touchscreen",
-    "price": 77500,
+    "price": 78500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1247,7 +1247,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g8 i5 11th 16/256gb x360 touchscreen",
     "specs": "hp 830 g8 i5 11th 16/256gb x360 touchscreen",
-    "price": 58500,
+    "price": 59500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1257,7 +1257,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g8 i5 11th 8/256gb x360 touchscreen",
     "specs": "hp 830 g8 i5 11th 8/256gb x360 touchscreen",
-    "price": 55500,
+    "price": 56500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1267,7 +1267,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g8 i7 11th 8/256gb touchscreen",
     "specs": "hp 830 g8 i7 11th 8/256gb touchscreen",
-    "price": 58500,
+    "price": 59500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1277,7 +1277,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g8 i5 11th 8/256gb touchscreen",
     "specs": "hp 830 g8 i5 11th 8/256gb touchscreen",
-    "price": 49500,
+    "price": 50500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1287,7 +1287,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g8 i5 11th 8/256gb",
     "specs": "hp 830 g8 i5 11th 8/256gb",
-    "price": 47000,
+    "price": 48000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1297,7 +1297,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g7 i7 8/256gb touchscreen",
     "specs": "hp 830 g7 i7 8/256gb touchscreen",
-    "price": 55500,
+    "price": 56500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1307,7 +1307,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g7 i7 10th 8/256gb",
     "specs": "hp 830 g7 i7 10th 8/256gb",
-    "price": 48000,
+    "price": 49000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1317,7 +1317,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g7 i5 10th 8/256gb touchscreen",
     "specs": "hp 830 g7 i5 10th 8/256gb touchscreen",
-    "price": 48000,
+    "price": 49000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1327,7 +1327,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g7 i5 8/256gb",
     "specs": "hp 830 g7 i5 8/256gb",
-    "price": 45500,
+    "price": 46500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1337,7 +1337,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g6 i7 8th 16/512gb touchscreen",
     "specs": "hp 830 g6 i7 8th 16/512gb touchscreen",
-    "price": 53000,
+    "price": 54000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1347,7 +1347,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g5 i7 8th 8/256gb",
     "specs": "hp 830 g5 i7 8th 8/256gb",
-    "price": 44000,
+    "price": 45000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1357,7 +1357,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g5 i7 8th 8/256gb touchscreen",
     "specs": "hp 830 g5 i7 8th 8/256gb touchscreen",
-    "price": 47000,
+    "price": 48000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1367,7 +1367,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g6 i5 8/256gb touchscreen",
     "specs": "hp 830 g6 i5 8/256gb touchscreen",
-    "price": 38000,
+    "price": 39000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1377,7 +1377,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g5 i5 8th 8/256gb",
     "specs": "hp 830 g5 i5 8th 8/256gb",
-    "price": 36500,
+    "price": 37500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1387,7 +1387,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g7 i7 10th 8/256gb x360 touchscreen",
     "specs": "hp 830 g7 i7 10th 8/256gb x360 touchscreen",
-    "price": 54500,
+    "price": 55500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1397,7 +1397,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g6 i7 8th 8/256gb x360 touchscreen",
     "specs": "hp 830 g6 i7 8th 8/256gb x360 touchscreen",
-    "price": 53000,
+    "price": 54000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1407,7 +1407,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 830 g6 i5 8th 8/256gb x360 touchscreen",
     "specs": "hp 830 g6 i5 8th 8/256gb x360 touchscreen",
-    "price": 47000,
+    "price": 48000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1417,7 +1417,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 450 g8 i5 11th 8/256gb",
     "specs": "hp 450 g8 i5 11th 8/256gb",
-    "price": 51000,
+    "price": 52000,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1427,7 +1427,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 850 g8 i5 11th 8/256gb touchscreen",
     "specs": "hp 850 g8 i5 11th 8/256gb touchscreen",
-    "price": 61500,
+    "price": 62500,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1437,7 +1437,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 850 g8 i5 11th 8/256gb",
     "specs": "hp 850 g8 i5 11th 8/256gb",
-    "price": 58500,
+    "price": 59500,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1447,7 +1447,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 850 g7 i5 10th 8/256gb",
     "specs": "hp 850 g7 i5 10th 8/256gb",
-    "price": 51000,
+    "price": 52000,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1457,7 +1457,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "Hp 850 G5 I5 8th 8/256",
     "specs": "Hp 850 G5 I5 8th 8/256",
-    "price": 44000,
+    "price": 45000,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1467,7 +1467,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp dreagonfly i5 8th 16/512gb",
     "specs": "hp dreagonfly i5 8th 16/512gb",
-    "price": 66000,
+    "price": 67000,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1477,7 +1477,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 845 g7 ryzen ryzen 7 8/256gb",
     "specs": "hp 845 g7 ryzen ryzen 7 8/256gb",
-    "price": 44000,
+    "price": 45000,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1487,7 +1487,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 835 g8 ryzen 7. 8/256gb",
     "specs": "hp 835 g8 ryzen 7. 8/256gb",
-    "price": 47000,
+    "price": 48000,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1497,7 +1497,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "Hp 745 G6 Ryzen 7 8/256 2gb graphics",
     "specs": "Hp 745 G6 Ryzen 7 8/256 2gb graphics",
-    "price": 45500,
+    "price": 46500,
     "category": "hp exuk workstation premium laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1507,7 +1507,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "Hp 745 Ryzen 5 8/256 touchscreen 2gb graphics",
     "specs": "Hp 745 Ryzen 5 8/256 touchscreen 2gb graphics",
-    "price": 44500,
+    "price": 45500,
     "category": "hp exuk workstation premium laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1517,7 +1517,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 745 g6 ryzen 5 nontouch 8/256gb",
     "specs": "hp 745 g6 ryzen 5 nontouch 8/256gb",
-    "price": 36500,
+    "price": 37500,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1527,7 +1527,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 735 g6 ryzen 7 8/256gb 2gb graphics",
     "specs": "hp 735 g6 ryzen 7 8/256gb 2gb graphics",
-    "price": 45500,
+    "price": 46500,
     "category": "hp exuk workstation premium laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1537,7 +1537,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp 640 g9 i5 12th 8/256gb",
     "specs": "hp 640 g9 i5 12th 8/256gb",
-    "price": 58500,
+    "price": 59500,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1547,7 +1547,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp probook 630 g8 i5 11th 8/256gb touchscreen",
     "specs": "hp probook 630 g8 i5 11th 8/256gb touchscreen",
-    "price": 51000,
+    "price": 52000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1557,7 +1557,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp probook 430 g7 i5 10th 8/256gb",
     "specs": "hp probook 430 g7 i5 10th 8/256gb",
-    "price": 44000,
+    "price": 45000,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1567,7 +1567,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp probook 430 g5 i5 8th 8/256gb",
     "specs": "hp probook 430 g5 i5 8th 8/256gb",
-    "price": 33500,
+    "price": 34500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1577,7 +1577,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp probook g4 i5 8th 8/256gb x360 touchscreen",
     "specs": "hp probook g4 i5 8th 8/256gb x360 touchscreen",
-    "price": 33500,
+    "price": 34500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1587,7 +1587,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp probook g2 i5 7th 8/256gb x360 touchscreen",
     "specs": "hp probook g2 i5 7th 8/256gb x360 touchscreen",
-    "price": 28500,
+    "price": 29500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1597,7 +1597,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp probook 440 g1 i5 7th 8/256gb touchscreen",
     "specs": "hp probook 440 g1 i5 7th 8/256gb touchscreen",
-    "price": 36500,
+    "price": 37500,
     "category": "hp exuk student business laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1607,7 +1607,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp folio 9470 i7 4th 8/500gb",
     "specs": "hp folio 9470 i7 4th 8/500gb",
-    "price": 24000,
+    "price": 25000,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1617,7 +1617,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp folio 9480 i5 5th 8/500gb",
     "specs": "hp folio 9480 i5 5th 8/500gb",
-    "price": 22500,
+    "price": 23500,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1627,7 +1627,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp stream celeron 4/32gb",
     "specs": "hp stream celeron 4/32gb",
-    "price": 13000,
+    "price": 14000,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1637,7 +1637,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "hp stream celeron 2/32gb",
     "specs": "hp stream celeron 2/32gb",
-    "price": 12500,
+    "price": 13500,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1647,7 +1647,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteBook 745 G6 Ryzen 5",
     "specs": "Ryzen 5 \u2022 16GB RAM \u2022 256GB SSD \u2022 Touchscreen",
-    "price": 34500,
+    "price": 35500,
     "category": "exuk business hp laptop",
     "badge": "restocked",
     "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
@@ -1657,7 +1657,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP ProBook 640 G5",
     "specs": "i5 8th Gen \u2022 16GB RAM \u2022 256GB SSD",
-    "price": 32500,
+    "price": 33500,
     "category": "exuk business hp laptop",
     "badge": "restocked",
     "img": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=800"
@@ -1667,7 +1667,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteBook 840 G6 i5",
     "specs": "i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 32500,
+    "price": 33500,
     "category": "exuk business hp laptop",
     "badge": "restocked",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1677,7 +1677,7 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "Dell Latitude 7390 x360",
     "specs": "i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
-    "price": 31500,
+    "price": 32500,
     "category": "exuk business dell laptop",
     "badge": "restocked",
     "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
@@ -1687,7 +1687,7 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "Dell Latitude 3420",
     "specs": "i5 11th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 35500,
+    "price": 36500,
     "category": "exuk business dell laptop",
     "badge": "restocked",
     "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
@@ -1697,7 +1697,7 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "Dell Latitude 5410",
     "specs": "i5 10th Gen \u2022 16GB RAM \u2022 512GB SSD",
-    "price": 35500,
+    "price": 36500,
     "category": "exuk business dell laptop",
     "badge": "restocked",
     "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
@@ -1707,7 +1707,7 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "Dell Latitude 7420",
     "specs": "i5 11th Gen \u2022 16GB RAM \u2022 256GB SSD",
-    "price": 35500,
+    "price": 36500,
     "category": "exuk business dell laptop",
     "badge": "restocked",
     "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
@@ -1717,7 +1717,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteBook 820 G1 i7",
     "specs": "i7 4th Gen \u2022 8GB RAM \u2022 128GB SSD \u2022 Touchscreen",
-    "price": 26000,
+    "price": 27000,
     "category": "exuk business hp laptop",
     "badge": "restocked",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1727,7 +1727,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteBook 850 G6",
     "specs": "i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 32500,
+    "price": 33500,
     "category": "exuk business hp laptop",
     "badge": "restocked",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1737,7 +1737,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP ProBook 11 G10",
     "specs": "i5 12th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 31500,
+    "price": 32500,
     "category": "exuk business hp laptop",
     "badge": "restocked",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1747,7 +1747,7 @@ const ALL_PRODUCTS = [
     "brand": "Lenovo",
     "name": "Lenovo Thinkpad E580",
     "specs": "i3 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 30500,
+    "price": 31500,
     "category": "exuk business lenovo laptop",
     "badge": "restocked",
     "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
@@ -1757,7 +1757,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP Elite x2 G8",
     "specs": "i5 11th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 41000,
+    "price": 42000,
     "category": "exuk business hp laptop",
     "badge": "restocked",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1767,7 +1767,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteBook 840 G6 i7 Touch",
     "specs": "i7 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
-    "price": 42000,
+    "price": 43000,
     "category": "exuk business hp laptop",
     "badge": "restocked",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1777,7 +1777,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteBook 840 G6 i7",
     "specs": "i7 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 37500,
+    "price": 38500,
     "category": "exuk business hp laptop",
     "badge": "restocked",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1787,7 +1787,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteBook 840 G8",
     "specs": "i5 11th Gen \u2022 16GB RAM \u2022 256GB SSD",
-    "price": 43000,
+    "price": 44000,
     "category": "exuk business hp laptop",
     "badge": "restocked",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1797,7 +1797,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP ZBook Firefly 14 G7 i7 Touch",
     "specs": "i7 10th Gen \u2022 16GB RAM \u2022 256GB SSD \u2022 Touchscreen",
-    "price": 52500,
+    "price": 53500,
     "category": "exuk workstation hp laptop",
     "badge": "workstation",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1807,7 +1807,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteOne 800 G5 All-in-One",
     "specs": "i5 9th Gen \u2022 16GB RAM \u2022 256GB SSD \u2022 24\" Display",
-    "price": 65000,
+    "price": 66000,
     "category": "exuk desktop hp laptop",
     "badge": "all-in-one",
     "img": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=800"
@@ -1817,7 +1817,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteOne 800 G4 All-in-One",
     "specs": "i5 8th Gen \u2022 16GB RAM \u2022 256GB SSD \u2022 24\" Display",
-    "price": 58500,
+    "price": 59500,
     "category": "exuk desktop hp laptop",
     "badge": "all-in-one",
     "img": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=800"
@@ -1827,7 +1827,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteBook 1040 G8 i7 x360",
     "specs": "i7 11th Gen \u2022 32GB RAM \u2022 512GB SSD \u2022 Touchscreen",
-    "price": 79000,
+    "price": 80000,
     "category": "exuk business hp laptop",
     "badge": "premium",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1837,7 +1837,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteBook 1040 G8 i7 x360",
     "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 Touchscreen",
-    "price": 72000,
+    "price": 73000,
     "category": "exuk business hp laptop",
     "badge": "premium",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1847,7 +1847,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteBook 1040 G7 i7 x360",
     "specs": "i7 10th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 Touchscreen",
-    "price": 65000,
+    "price": 66000,
     "category": "exuk business hp laptop",
     "badge": "premium",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1857,7 +1857,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteBook 1030 G8 i7 x360",
     "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 Touchscreen",
-    "price": 68000,
+    "price": 69000,
     "category": "exuk business hp laptop",
     "badge": "premium",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1867,7 +1867,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteBook 1030 G7 i7 x360",
     "specs": "i7 10th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 Touchscreen",
-    "price": 63500,
+    "price": 64500,
     "category": "exuk business hp laptop",
     "badge": "premium",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1877,7 +1877,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP ZBook 15 G7 Workstation",
     "specs": "i7 10th Gen \u2022 32GB RAM \u2022 512GB SSD \u2022 4GB Graphics",
-    "price": 89000,
+    "price": 90000,
     "category": "exuk workstation hp laptop",
     "badge": "workstation",
     "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
@@ -1887,7 +1887,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP ZBook 15 G7 Workstation",
     "specs": "i7 10th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 4GB Graphics",
-    "price": 87000,
+    "price": 88000,
     "category": "exuk workstation hp laptop",
     "badge": "workstation",
     "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
@@ -1897,7 +1897,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "HP EliteBook 850 G8",
     "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 2GB Graphics",
-    "price": 67000,
+    "price": 68000,
     "category": "exuk business hp laptop",
     "badge": "premium",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
@@ -1907,7 +1907,7 @@ const ALL_PRODUCTS = [
     "brand": "Lenovo",
     "name": "Lenovo Legion 5 Gaming",
     "specs": "i7 14th Gen \u2022 32GB RAM \u2022 1TB SSD \u2022 RTX 4070 8GB",
-    "price": 322000,
+    "price": 323000,
     "category": "gaming lenovo laptop",
     "badge": "new-arrival",
     "img": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=800"
