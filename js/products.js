@@ -240,7 +240,7 @@ const ALL_PRODUCTS = [
     "price": 333500,
     "category": "new apple macbook premium laptop",
     "badge": "hot",
-    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+    "img": "images/macbook_pro.jpg"
   },
   {
     "id": "mb-100",
@@ -1080,7 +1080,7 @@ const ALL_PRODUCTS = [
     "price": 59500,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
-    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+    "img": "images/hp_elite_x2.jpg"
   },
   {
     "id": "hp-537",
@@ -1090,7 +1090,7 @@ const ALL_PRODUCTS = [
     "price": 48000,
     "category": "hp exuk laptop",
     "badge": "ex-uk",
-    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+    "img": "images/hp_elite_x2.jpg"
   },
   {
     "id": "hp-538",
