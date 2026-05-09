@@ -1,24 +1,24 @@
 const ALL_PRODUCTS = [
   {
     "id": "feat-1",
-    "brand": "Dell",
-    "name": "Dell XPS 13 9330",
-    "specs": "Intel Core i7 13th Gen \u2022 16GB RAM \u2022 512GB SSD",
-    "price": 158500,
-    "category": "exuk business featured dell laptop",
-    "badge": "new",
-    "img": "images/dell_xps_13_new.jpg"
-  },
-  {
-    "id": "feat-2",
     "brand": "Apple",
     "name": "MacBook Pro 13 M2",
     "specs": "Apple M2 Chip \u2022 8GB RAM \u2022 512GB SSD",
     "price": 164000,
     "onFlashSale": true,
-    "category": "exuk apple featured macbook laptop",
+    "category": "exuk apple macbook laptop featured",
     "badge": "hot",
     "img": "images/macbook_m2.jpg"
+  },
+  {
+    "id": "feat-2",
+    "brand": "HP",
+    "name": "HP EliteBook 840 G8",
+    "specs": "i5 11th Gen \u2022 16GB RAM \u2022 256GB SSD",
+    "price": 44000,
+    "category": "exuk business hp laptop featured",
+    "badge": "restocked",
+    "img": "images/hp_840_g8.jpg"
   },
   {
     "id": "feat-3",
@@ -26,7 +26,7 @@ const ALL_PRODUCTS = [
     "name": "ThinkPad X1 Carbon Gen 10",
     "specs": "i7 12th Gen \u2022 16GB RAM \u2022 512GB SSD",
     "price": 96000,
-    "category": "exuk business featured lenovo laptop",
+    "category": "exuk business lenovo laptop featured",
     "badge": "hot",
     "img": "images/x1_carbon_gen10.jpg"
   },
@@ -37,9 +37,19 @@ const ALL_PRODUCTS = [
     "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD",
     "price": 67000,
     "onFlashSale": true,
-    "category": "exuk business featured hp laptop",
+    "category": "exuk business hp laptop featured",
     "badge": "hot",
     "img": "images/hp_840_g8.jpg"
+  },
+  {
+    "id": "tmp-4082",
+    "brand": "Dell",
+    "name": "Dell XPS 13 9330",
+    "specs": "Intel Core i7 13th Gen \u2022 16GB RAM \u2022 512GB SSD",
+    "price": 158500,
+    "category": "exuk business dell laptop",
+    "badge": "new",
+    "img": "images/dell_xps_13_new.jpg"
   },
   {
     "id": "bud-1",
@@ -78,7 +88,7 @@ const ALL_PRODUCTS = [
     "name": "Dell Latitude 5400 i5",
     "specs": "8th Gen \u2022 8GB \u2022 256GB SSD",
     "price": 26000,
-    "category": "exuk business featured dell laptop",
+    "category": "exuk business dell laptop",
     "badge": "exuk",
     "img": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800"
   },
@@ -118,7 +128,7 @@ const ALL_PRODUCTS = [
     "name": "HP EliteBook 840 G6 i5",
     "specs": "8th Gen \u2022 16GB \u2022 256GB SSD",
     "price": 39000,
-    "category": "exuk business featured hp laptop",
+    "category": "exuk business hp laptop",
     "badge": "hot",
     "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
   },
@@ -138,7 +148,7 @@ const ALL_PRODUCTS = [
     "name": "ThinkPad X1 Yoga i7",
     "specs": "8th Gen \u2022 16GB \u2022 512GB \u2022 Touch",
     "price": 47500,
-    "category": "exuk business featured lenovo laptop",
+    "category": "exuk business lenovo laptop",
     "badge": "exuk",
     "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
   },
@@ -168,7 +178,7 @@ const ALL_PRODUCTS = [
     "name": "Lenovo ThinkBook 15",
     "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD",
     "price": 58500,
-    "category": "exuk business featured lenovo laptop",
+    "category": "exuk business lenovo laptop",
     "badge": "hot",
     "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
   },
@@ -1781,16 +1791,6 @@ const ALL_PRODUCTS = [
     "category": "exuk business hp laptop",
     "badge": "restocked",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
-  },
-  {
-    "id": "hp-840g8-i5",
-    "brand": "HP",
-    "name": "HP EliteBook 840 G8",
-    "specs": "i5 11th Gen \u2022 16GB RAM \u2022 256GB SSD",
-    "price": 44000,
-    "category": "exuk business hp laptop",
-    "badge": "restocked",
-    "img": "images/hp_840_g8.jpg"
   },
   {
     "id": "hp-zbook-ff14-g7",
