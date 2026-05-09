@@ -1642,7 +1642,117 @@ const ALL_PRODUCTS = [
     "badge": "ex-uk",
     "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
   }
-];
+,
+  {
+  "id": "hp-745g6-r5",
+  "brand": "HP",
+  "name": "HP EliteBook 745 G6 Ryzen 5",
+  "specs": "Ryzen 5 \u2022 16GB RAM \u2022 256GB SSD \u2022 Touchscreen",
+  "price": 32999,
+  "category": "exuk business hp",
+  "badge": "restocked",
+  "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
+},
+  {
+  "id": "hp-640g5-i5",
+  "brand": "HP",
+  "name": "HP ProBook 640 G5",
+  "specs": "i5 8th Gen \u2022 16GB RAM \u2022 256GB SSD",
+  "price": 30999,
+  "category": "exuk business hp",
+  "badge": "restocked",
+  "img": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=800"
+},
+  {
+  "id": "hp-840g6-i5",
+  "brand": "HP",
+  "name": "HP EliteBook 840 G6 i5",
+  "specs": "i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
+  "price": 30999,
+  "category": "exuk business hp",
+  "badge": "restocked",
+  "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+},
+  {
+  "id": "dell-7390-x360",
+  "brand": "Dell",
+  "name": "Dell Latitude 7390 x360",
+  "specs": "i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
+  "price": 29999,
+  "category": "exuk business dell",
+  "badge": "restocked",
+  "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
+},
+  {
+  "id": "dell-3420-i5",
+  "brand": "Dell",
+  "name": "Dell Latitude 3420",
+  "specs": "i5 11th Gen \u2022 8GB RAM \u2022 256GB SSD",
+  "price": 33999,
+  "category": "exuk business dell",
+  "badge": "restocked",
+  "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
+},
+  {
+  "id": "dell-5410-i5",
+  "brand": "Dell",
+  "name": "Dell Latitude 5410",
+  "specs": "i5 10th Gen \u2022 16GB RAM \u2022 512GB SSD",
+  "price": 33999,
+  "category": "exuk business dell",
+  "badge": "restocked",
+  "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
+},
+  {
+  "id": "dell-7420-i5",
+  "brand": "Dell",
+  "name": "Dell Latitude 7420",
+  "specs": "i5 11th Gen \u2022 16GB RAM \u2022 256GB SSD",
+  "price": 33999,
+  "category": "exuk business dell",
+  "badge": "restocked",
+  "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
+},
+  {
+  "id": "hp-820g1-i7",
+  "brand": "HP",
+  "name": "HP EliteBook 820 G1 i7",
+  "specs": "i7 4th Gen \u2022 8GB RAM \u2022 128GB SSD \u2022 Touchscreen",
+  "price": 24999,
+  "category": "exuk business hp",
+  "badge": "restocked",
+  "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+},
+  {
+  "id": "hp-850g6-i5",
+  "brand": "HP",
+  "name": "HP EliteBook 850 G6",
+  "specs": "i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
+  "price": 30999,
+  "category": "exuk business hp",
+  "badge": "restocked",
+  "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+},
+  {
+  "id": "hp-pb11g10-i5",
+  "brand": "HP",
+  "name": "HP ProBook 11 G10",
+  "specs": "i5 12th Gen \u2022 8GB RAM \u2022 256GB SSD",
+  "price": 29999,
+  "category": "exuk business hp",
+  "badge": "restocked",
+  "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+},
+  {
+  "id": "len-e580-i3",
+  "brand": "Lenovo",
+  "name": "Lenovo Thinkpad E580",
+  "specs": "i3 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
+  "price": 28999,
+  "category": "exuk business lenovo",
+  "badge": "restocked",
+  "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+}];
 
 let currentLimit = 8;
 let currentProducts = [];
