@@ -1908,7 +1908,7 @@ const ALL_PRODUCTS = [
   "brand": "Lenovo",
   "name": "Lenovo Legion 5 Gaming",
   "specs": "i7 14th Gen \u2022 32GB RAM \u2022 1TB SSD \u2022 RTX 4070 8GB",
-  "price": 250999,
+  "price": 276000,
   "category": "gaming lenovo",
   "badge": "new-arrival",
   "img": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=800"
