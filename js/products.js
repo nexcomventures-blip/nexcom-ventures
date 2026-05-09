@@ -28,7 +28,7 @@ const ALL_PRODUCTS = [
     "price": 91000,
     "category": "exuk business featured lenovo",
     "badge": "hot",
-    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+    "img": "images/x1_carbon_gen10.jpg"
   },
   {
     "id": "feat-4",
