@@ -39,7 +39,7 @@ const ALL_PRODUCTS = [
     "onFlashSale": true,
     "category": "exuk business featured hp laptop",
     "badge": "hot",
-    "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
+    "img": "images/hp_840_g8.jpg"
   },
   {
     "id": "bud-1",
@@ -1790,7 +1790,7 @@ const ALL_PRODUCTS = [
     "price": 44000,
     "category": "exuk business hp laptop",
     "badge": "restocked",
-    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+    "img": "images/hp_840_g8.jpg"
   },
   {
     "id": "hp-zbook-ff14-g7",
