@@ -110,7 +110,7 @@ const ALL_PRODUCTS = [
     "price": 82500,
     "category": "exuk business dell laptop",
     "badge": "pro",
-    "img": "https://images.unsplash.com/photo-1661961111184-11317b40adb2?q=80&w=800"
+    "img": "images/dell_precision_5550.jpg"
   },
   {
     "id": "d-3",
@@ -130,7 +130,7 @@ const ALL_PRODUCTS = [
     "price": 28000,
     "category": "exuk business hp laptop",
     "badge": "exuk",
-    "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800"
+    "img": "images/hp_probook_640_g5.jpg"
   },
   {
     "id": "h-2",
@@ -150,7 +150,7 @@ const ALL_PRODUCTS = [
     "price": 27000,
     "category": "exuk business lenovo laptop",
     "badge": "exuk",
-    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+    "img": "images/thinkpad_t490s.jpg"
   },
   {
     "id": "l-2",
@@ -160,7 +160,7 @@ const ALL_PRODUCTS = [
     "price": 47500,
     "category": "exuk business lenovo laptop",
     "badge": "exuk",
-    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+    "img": "images/thinkpad_x1_yoga.jpg"
   },
   {
     "id": "l-new-1",
@@ -170,7 +170,7 @@ const ALL_PRODUCTS = [
     "price": 51500,
     "category": "exuk student business lenovo laptop",
     "badge": "new",
-    "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
+    "img": "images/lenovo_ideapad_slim3.jpg"
   },
   {
     "id": "l-new-2",
@@ -190,7 +190,7 @@ const ALL_PRODUCTS = [
     "price": 58500,
     "category": "exuk business lenovo laptop",
     "badge": "hot",
-    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+    "img": "images/lenovo_thinkbook_15.jpg"
   },
   {
     "id": "l-new-4",
@@ -230,7 +230,7 @@ const ALL_PRODUCTS = [
     "price": 100000,
     "category": "exuk apple macbook laptop",
     "badge": "new",
-    "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800"
+    "img": "images/macbook_air_m1.jpg"
   },
   {
     "id": "m-2",
