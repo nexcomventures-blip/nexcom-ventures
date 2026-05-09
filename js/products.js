@@ -1949,16 +1949,18 @@ function renderFiltered() {
     let badgeHTML = `<div class="product-badge">${p.badge}</div>`;
     const isLaptop = p.category.toLowerCase().includes('laptop') || p.category.toLowerCase().includes('macbook') || p.category.toLowerCase().includes('hp') || p.category.toLowerCase().includes('dell') || p.category.toLowerCase().includes('lenovo');
     if (isLaptop) {
-      badgeHTML += `<div class="gift-badge" style="position: absolute; top: 35px; left: 10px; background: #28a745; color: white; padding: 4px 8px; font-size: 0.65rem; font-weight: 800; border-radius: 4px; z-index: 10; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">+ FREE BAG & MOUSE 🎁</div>`;
+      // badgeHTML += `<div class="gift-badge" style="position: absolute; top: 35px; left: 10px; background: #28a745; color: white; padding: 4px 8px; font-size: 0.65rem; font-weight: 800; border-radius: 4px; z-index: 10; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">+ FREE BAG & MOUSE 🎁</div>`;
     }
 
     if (isFlash) {
       const offerPrice = Math.round(p.price * 0.9);
       priceHTML = `
         <div class="product-price-old" style="text-decoration: line-through; color: #888; font-size: 0.85rem;">KES ${p.price.toLocaleString()}</div>
-        <div class="product-price" style="color: #e63946;">KES ${offerPrice.toLocaleString()}</div>
+        <div class="product-price" style="color: #e63946;">KES ${offerPrice.toLocaleString()} ${isLaptop ? '<span style="font-size:0.7rem; color:#28a745; font-weight:900; margin-left:5px;">💼🖱️</span>' : ''}</div>
       `;
       badgeHTML += `<div class="flash-badge" style="position: absolute; top: 10px; right: 10px; background: #e63946; color: white; padding: 4px 8px; font-size: 0.7rem; font-weight: 800; border-radius: 4px; animation: pulse 2s infinite;">10% OFF</div>`;
+    } else {
+      priceHTML = `<div class="product-price">KES ${p.price.toLocaleString()} ${isLaptop ? '<span style="font-size:0.7rem; color:#28a745; font-weight:900; margin-left:5px;">💼🖱️</span>' : ''}</div>`;
     }
 
     return `
