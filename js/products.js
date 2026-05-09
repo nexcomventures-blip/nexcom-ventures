@@ -2051,7 +2051,10 @@ function setupDailySpecial() {
     if (titleEl) titleEl.innerText = p.name;
     if (specsEl) specsEl.innerText = p.specs;
     if (oldPriceEl) oldPriceEl.innerText = `KES ${p.price.toLocaleString()}`;
-    if (newPriceEl) newPriceEl.innerText = `KES ${Math.round(p.price * 0.9).toLocaleString()}`;
+    if (newPriceEl) {
+      const isLaptop = p.category.toLowerCase().includes('laptop') || p.category.toLowerCase().includes('macbook') || p.category.toLowerCase().includes('hp') || p.category.toLowerCase().includes('dell') || p.category.toLowerCase().includes('lenovo');
+      newPriceEl.innerHTML = `KES ${Math.round(p.price * 0.9).toLocaleString()} ${isLaptop ? '<span style="font-size:0.8rem; color:#28a745; margin-left:5px;">💼🖱️</span>' : ''}`;
+    }
     if (imgEl) imgEl.src = p.img;
     
     if (bannerEl) {
