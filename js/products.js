@@ -1822,6 +1822,96 @@ const ALL_PRODUCTS = [
   "category": "exuk desktop hp",
   "badge": "all-in-one",
   "img": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=800"
+},
+  {
+  "id": "hp-1040g8-i7-32",
+  "brand": "HP",
+  "name": "HP EliteBook 1040 G8 i7 x360",
+  "specs": "i7 11th Gen \u2022 32GB RAM \u2022 512GB SSD \u2022 Touchscreen",
+  "price": 75499,
+  "category": "exuk business hp",
+  "badge": "premium",
+  "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+},
+  {
+  "id": "hp-1040g8-i7-16",
+  "brand": "HP",
+  "name": "HP EliteBook 1040 G8 i7 x360",
+  "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 Touchscreen",
+  "price": 68999,
+  "category": "exuk business hp",
+  "badge": "premium",
+  "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+},
+  {
+  "id": "hp-1040g7-i7",
+  "brand": "HP",
+  "name": "HP EliteBook 1040 G7 i7 x360",
+  "specs": "i7 10th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 Touchscreen",
+  "price": 61999,
+  "category": "exuk business hp",
+  "badge": "premium",
+  "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+},
+  {
+  "id": "hp-1030g8-i7",
+  "brand": "HP",
+  "name": "HP EliteBook 1030 G8 i7 x360",
+  "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 Touchscreen",
+  "price": 64999,
+  "category": "exuk business hp",
+  "badge": "premium",
+  "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+},
+  {
+  "id": "hp-1030g7-i7",
+  "brand": "HP",
+  "name": "HP EliteBook 1030 G7 i7 x360",
+  "specs": "i7 10th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 Touchscreen",
+  "price": 60999,
+  "category": "exuk business hp",
+  "badge": "premium",
+  "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+},
+  {
+  "id": "hp-zbook-15g7-32",
+  "brand": "HP",
+  "name": "HP ZBook 15 G7 Workstation",
+  "specs": "i7 10th Gen \u2022 32GB RAM \u2022 512GB SSD \u2022 4GB Graphics",
+  "price": 76499,
+  "category": "exuk workstation hp",
+  "badge": "workstation",
+  "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
+},
+  {
+  "id": "hp-zbook-15g7-16",
+  "brand": "HP",
+  "name": "HP ZBook 15 G7 Workstation",
+  "specs": "i7 10th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 4GB Graphics",
+  "price": 74499,
+  "category": "exuk workstation hp",
+  "badge": "workstation",
+  "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800"
+},
+  {
+  "id": "hp-850g8-i7",
+  "brand": "HP",
+  "name": "HP EliteBook 850 G8",
+  "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 2GB Graphics",
+  "price": 63999,
+  "category": "exuk business hp",
+  "badge": "premium",
+  "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+},
+  {
+  "id": "len-legion5-14th",
+  "brand": "Lenovo",
+  "name": "Lenovo Legion 5 Gaming",
+  "specs": "i7 14th Gen \u2022 32GB RAM \u2022 1TB SSD \u2022 RTX 4070 8GB",
+  "price": 243499,
+  "category": "gaming lenovo",
+  "badge": "new-arrival",
+  "img": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=800"
 }];
 
 let currentLimit = 8;
