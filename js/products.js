@@ -1752,6 +1752,56 @@ const ALL_PRODUCTS = [
   "category": "exuk business lenovo",
   "badge": "restocked",
   "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800"
+},
+  {
+  "id": "hp-x2-g8-i5",
+  "brand": "HP",
+  "name": "HP Elite x2 G8",
+  "specs": "i5 11th Gen \u2022 8GB RAM \u2022 256GB SSD",
+  "price": 38999,
+  "category": "exuk business hp",
+  "badge": "restocked",
+  "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+},
+  {
+  "id": "hp-840g6-i7-touch",
+  "brand": "HP",
+  "name": "HP EliteBook 840 G6 i7 Touch",
+  "specs": "i7 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
+  "price": 39999,
+  "category": "exuk business hp",
+  "badge": "restocked",
+  "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+},
+  {
+  "id": "hp-840g6-i7",
+  "brand": "HP",
+  "name": "HP EliteBook 840 G6 i7",
+  "specs": "i7 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
+  "price": 35999,
+  "category": "exuk business hp",
+  "badge": "restocked",
+  "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+},
+  {
+  "id": "hp-840g8-i5",
+  "brand": "HP",
+  "name": "HP EliteBook 840 G8",
+  "specs": "i5 11th Gen \u2022 16GB RAM \u2022 256GB SSD",
+  "price": 40999,
+  "category": "exuk business hp",
+  "badge": "restocked",
+  "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+},
+  {
+  "id": "hp-zbook-ff14-g7",
+  "brand": "HP",
+  "name": "HP ZBook Firefly 14 G7 i7 Touch",
+  "specs": "i7 10th Gen \u2022 16GB RAM \u2022 256GB SSD \u2022 Touchscreen",
+  "price": 44999,
+  "category": "exuk workstation hp",
+  "badge": "workstation",
+  "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
 }];
 
 let currentLimit = 8;
