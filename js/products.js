@@ -1949,18 +1949,18 @@ function renderFiltered() {
     let badgeHTML = `<div class="product-badge">${p.badge}</div>`;
     const isLaptop = p.category.toLowerCase().includes('laptop') || p.category.toLowerCase().includes('macbook') || p.category.toLowerCase().includes('hp') || p.category.toLowerCase().includes('dell') || p.category.toLowerCase().includes('lenovo');
     if (isLaptop) {
-      // badgeHTML += `<div class="gift-badge" style="position: absolute; top: 35px; left: 10px; background: #28a745; color: white; padding: 4px 8px; font-size: 0.65rem; font-weight: 800; border-radius: 4px; z-index: 10; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">+ FREE BAG & MOUSE 🎁</div>`;
+      badgeHTML += `<div class="gift-badge" style="position: absolute; top: 35px; left: 10px; background: rgba(40, 167, 69, 0.9); color: white; padding: 3px 8px; font-size: 0.6rem; font-weight: 800; border-radius: 4px; z-index: 10; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.2); letter-spacing: 0.5px;">+ BAG & MOUSE</div>`;
     }
 
     if (isFlash) {
       const offerPrice = Math.round(p.price * 0.9);
       priceHTML = `
         <div class="product-price-old" style="text-decoration: line-through; color: #888; font-size: 0.85rem;">KES ${p.price.toLocaleString()}</div>
-        <div class="product-price" style="color: #e63946;">KES ${offerPrice.toLocaleString()} ${isLaptop ? '<span style="font-size:0.9rem; color:#28a745; margin-left:8px; vertical-align: middle;"><i class="ph-bold ph-briefcase"></i><i class="ph-bold ph-mouse-simple"></i></span>' : ''}</div>
+        <div class="product-price" style="color: #e63946;">KES ${offerPrice.toLocaleString()}</div>
       `;
       badgeHTML += `<div class="flash-badge" style="position: absolute; top: 10px; right: 10px; background: #e63946; color: white; padding: 4px 8px; font-size: 0.7rem; font-weight: 800; border-radius: 4px; animation: pulse 2s infinite;">10% OFF</div>`;
     } else {
-      priceHTML = `<div class="product-price">KES ${p.price.toLocaleString()} ${isLaptop ? '<span style="font-size:0.9rem; color:#28a745; margin-left:8px; vertical-align: middle;"><i class="ph-bold ph-briefcase"></i><i class="ph-bold ph-mouse-simple"></i></span>' : ''}</div>`;
+      priceHTML = `<div class="product-price">KES ${p.price.toLocaleString()}</div>`;
     }
 
     return `
@@ -2052,8 +2052,7 @@ function setupDailySpecial() {
     if (specsEl) specsEl.innerText = p.specs;
     if (oldPriceEl) oldPriceEl.innerText = `KES ${p.price.toLocaleString()}`;
     if (newPriceEl) {
-      const isLaptop = p.category.toLowerCase().includes('laptop') || p.category.toLowerCase().includes('macbook') || p.category.toLowerCase().includes('hp') || p.category.toLowerCase().includes('dell') || p.category.toLowerCase().includes('lenovo');
-      newPriceEl.innerHTML = `KES ${Math.round(p.price * 0.9).toLocaleString()} ${isLaptop ? '<span style="font-size:1rem; color:#28a745; margin-left:8px; vertical-align: middle;"><i class="ph-bold ph-briefcase"></i><i class="ph-bold ph-mouse-simple"></i></span>' : ''}`;
+      newPriceEl.innerHTML = `KES ${Math.round(p.price * 0.9).toLocaleString()}`;
     }
     if (imgEl) imgEl.src = p.img;
     
