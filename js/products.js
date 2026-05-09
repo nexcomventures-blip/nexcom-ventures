@@ -90,7 +90,7 @@ const ALL_PRODUCTS = [
     "price": 26000,
     "category": "exuk business dell laptop",
     "badge": "exuk",
-    "img": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800"
+    "img": "images/dell_latitude_5400.jpg"
   },
   {
     "id": "d-2",
