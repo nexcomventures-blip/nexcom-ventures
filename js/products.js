@@ -1770,7 +1770,7 @@ const ALL_PRODUCTS = [
     "price": 42000,
     "category": "exuk business hp laptop",
     "badge": "restocked",
-    "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+    "img": "images/hp_elite_x2_g8.jpg"
   },
   {
     "id": "hp-840g6-i7-touch",
