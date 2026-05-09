@@ -7,7 +7,7 @@ const ALL_PRODUCTS = [
     "price": 158500,
     "category": "exuk business featured dell laptop",
     "badge": "new",
-    "img": "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=800"
+    "img": "images/dell_xps_13_new.jpg"
   },
   {
     "id": "feat-2",
@@ -100,7 +100,7 @@ const ALL_PRODUCTS = [
     "price": 77000,
     "category": "exuk business dell laptop",
     "badge": "premium",
-    "img": "https://images.unsplash.com/photo-1661961112134-fbce0fdf3d99?q=80&w=800"
+    "img": "images/dell_xps_13_new.jpg"
   },
   {
     "id": "h-1",
