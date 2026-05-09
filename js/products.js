@@ -1802,6 +1802,26 @@ const ALL_PRODUCTS = [
   "category": "exuk workstation hp",
   "badge": "workstation",
   "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800"
+},
+  {
+  "id": "hp-aio-800g5-i5",
+  "brand": "HP",
+  "name": "HP EliteOne 800 G5 All-in-One",
+  "specs": "i5 9th Gen \u2022 16GB RAM \u2022 256GB SSD \u2022 24\" Display",
+  "price": 61999,
+  "category": "exuk desktop hp",
+  "badge": "all-in-one",
+  "img": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=800"
+},
+  {
+  "id": "hp-aio-800g4-i5",
+  "brand": "HP",
+  "name": "HP EliteOne 800 G4 All-in-One",
+  "specs": "i5 8th Gen \u2022 16GB RAM \u2022 256GB SSD \u2022 24\" Display",
+  "price": 55999,
+  "category": "exuk desktop hp",
+  "badge": "all-in-one",
+  "img": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=800"
 }];
 
 let currentLimit = 8;
