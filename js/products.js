@@ -1920,7 +1920,7 @@ const ALL_PRODUCTS = [
     "price": 323000,
     "category": "gaming lenovo laptop",
     "badge": "new-arrival",
-    "img": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=800"
+    "img": "images/lenovo_legion_5.jpg"
   }
 ];
 
