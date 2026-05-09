@@ -83,6 +83,16 @@ const ALL_PRODUCTS = [
     "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e520b?q=80&w=800"
   },
   {
+    "id": "dell-7250-i7",
+    "brand": "Dell",
+    "name": "Dell Latitude 7250",
+    "specs": "i7 5th Gen \u2022 8GB RAM \u2022 256GB SSD",
+    "price": 14000,
+    "category": "exuk student budget",
+    "badge": "student",
+    "img": "images/dell_7250.jpg"
+  },
+  {
     "id": "d-1",
     "brand": "Dell",
     "name": "Dell Latitude 5400 i5",
