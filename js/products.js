@@ -18,7 +18,7 @@ const ALL_PRODUCTS = [
     "price": 44000,
     "category": "exuk business hp laptop featured",
     "badge": "restocked",
-    "img": "images/hp_840_g8.jpg"
+    "img": "images/hp_840_g8_v2.jpg"
   },
   {
     "id": "feat-3",
