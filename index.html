@@ -82,6 +82,13 @@
     ]
   }
   </script>
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    .gift-badge { animation: pulse 2s infinite; }
+  </style>
 </head>
 <body>
 
@@ -203,6 +210,9 @@
   <div class="hero-content">
     <div class="hero-text">
       <div class="hero-badge">🇰🇪 Nairobi's #1 Laptop Store</div>
+      <div class="promo-banner" style="background: #28a745; color: white; padding: 12px 20px; border-radius: 12px; margin: 15px 0 25px; font-weight: 800; display: inline-block; box-shadow: 0 10px 20px rgba(40, 167, 69, 0.2); border: 2px solid rgba(255,255,255,0.2); animation: float 3s ease-in-out infinite;">
+        🎁 FREE LAPTOP BAG & WIRELESS MOUSE WITH EVERY LAPTOP!
+      </div>
       <h1>Power Your Ambition.<br/><span class="gradient-text">Premium Tech.</span></h1>
       <p class="hero-sub">Nairobi's most trusted hub for laptops, servers, and tech solutions. We help you find the perfect machine or turn your current one into cash—instantly.</p>
       <div class="hero-btns">
