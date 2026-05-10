@@ -335,3 +335,72 @@ function toggleDetails(id) {
         btn.innerText = details.classList.contains('active') ? 'Hide Breakdown' : 'View Breakdown';
     }
 }
+
+const serviceData = {
+    transfers: {
+        title: "Airport Transfers & Ground Logistics",
+        info: "Secure, vetted, and punctual. We provide private transfers from JKIA, Wilson, and Moi International airports with professional drivers who understand the needs of high-value travelers.",
+        bullets: ["Meet-and-greet services inside the arrivals hall", "WIFI-enabled executive vehicles", "Armed security escort (available on request)", "Inter-city private chauffeur services"],
+        formType: "transfers"
+    },
+    stays: {
+        title: "Boutique Stays & Luxury Lodges",
+        info: "We skip the mass-market hotels. Our portfolio features exclusive-use villas, eco-conscious boutique lodges, and heritage city hotels that offer a genuine sense of place.",
+        bullets: ["Early check-in/Late check-out prioritization", "Preferred rates at world-class safari lodges", "Hidden gems in Nairobi, Mombasa, and the bush", "Personalized welcome amenities"],
+        formType: "stays"
+    },
+    tickets: {
+        title: "Air Ticketing & Flight Management",
+        info: "Navigating regional flight schedules can be complex. We handle your domestic bush flights and international connections, ensuring your itinerary flows perfectly without long layovers.",
+        bullets: ["Domestic bush flight bookings (Safarilink/AirKenya)", "International airline reservation management", "Excess baggage pre-clearance", "Schedule monitoring and 24/7 flight support"],
+        formType: "tickets"
+    },
+    charters: {
+        title: "Private Aviation & Helicopter Charters",
+        info: "For the ultimate privacy and speed. Access remote conservancies where commercial planes don't land. From luxury private jets to agile helicopters for aerial photography.",
+        bullets: ["Point-to-point private helicopter transfers", "Fixed-wing charters for private groups", "Scenic flight excursions over Mt. Kenya/Mara", "VIP lounge access and rapid ground handling"],
+        formType: "charters"
+    }
+};
+
+function openServiceDetail(key) {
+    const data = serviceData[key];
+    const inner = document.getElementById('serviceDetailInner');
+    
+    let bulletsHtml = '<ul>' + data.bullets.map(b => `<li>${b}</li>`).join('') + '</ul>';
+    
+    let formHtml = `
+        <form class="service-detail-form" onsubmit="handleServiceRequest(event, '${key}')">
+            <h3>Request Information</h3>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number (WhatsApp preferred)">
+            <input type="text" placeholder="Approximate Date(s)">
+            <textarea placeholder="Specific Requirements (e.g., Number of passengers, flight numbers, special requests)"></textarea>
+            <button type="submit">Submit Inquiry</button>
+        </form>
+    `;
+
+    inner.innerHTML = `
+        <div class="service-detail-info">
+            <h2>${data.title}</h2>
+            <p>${data.info}</p>
+            ${bulletsHtml}
+        </div>
+        ${formHtml}
+    `;
+    
+    document.getElementById('serviceDetailOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent scroll
+}
+
+function closeServiceDetail() {
+    document.getElementById('serviceDetailOverlay').classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+function handleServiceRequest(e, type) {
+    e.preventDefault();
+    alert('Thank you for your inquiry. A Roam Kenya specialist will contact you shortly with a personalized quote.');
+    closeServiceDetail();
+}
