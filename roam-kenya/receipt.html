@@ -116,6 +116,44 @@
             border-radius: 16px;
             text-align: center;
         }
+        
+        /* Interactive Calendar Style */
+        .calendar-box {
+            margin: 0 30px 30px;
+            background: #111;
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid #222;
+        }
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            text-align: center;
+        }
+        .day-name { font-size: 0.6rem; color: #444; padding-bottom: 5px; }
+        .day {
+            font-size: 0.7rem;
+            padding: 8px 0;
+            border-radius: 4px;
+            color: #666;
+        }
+        .day.today {
+            background: var(--secondary);
+            color: #fff;
+            font-weight: 700;
+        }
+        .day.active { color: #ccc; }
         .qr-code {
             width: 180px;
             height: 180px;
@@ -181,7 +219,7 @@
                     <div class="value" id="userName">Valued Client</div>
                 </div>
                 <div>
-                    <div class="label">Date</div>
+                    <div class="label">Issued Date</div>
                     <div class="value" id="currentDate">May 10, 2026</div>
                 </div>
                 <div>
@@ -189,8 +227,8 @@
                     <div class="value">Lover's Edition</div>
                 </div>
                 <div>
-                    <div class="label">Method</div>
-                    <div class="value">Visa / USD</div>
+                    <div class="label">Validity</div>
+                    <div class="value" id="validityDate">June 2026</div>
                 </div>
             </div>
         </div>
@@ -199,6 +237,17 @@
             <!-- Simplified QR using a public API for demo -->
             <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://nexcomventures.co.ke/roam-kenya&bgcolor=ffffff" alt="Scan to Verify">
             <div class="scan-text">SCAN TO VERIFY AUTHENTICITY</div>
+        </div>
+
+        <!-- Auto-Calendar Section -->
+        <div class="calendar-box">
+            <div class="calendar-header">
+                <span id="calMonth">May 2026</span>
+                <i class="far fa-calendar-alt"></i>
+            </div>
+            <div class="calendar-grid" id="calGrid">
+                <!-- Days injected by JS -->
+            </div>
         </div>
 
         <div class="footer-note">
@@ -218,11 +267,56 @@
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         document.getElementById('currentDate').innerText = d.toLocaleDateString('en-US', options);
 
+        // Set validity (3 months from now)
+        const validity = new Date();
+        validity.setMonth(validity.getMonth() + 3);
+        document.getElementById('validityDate').innerText = validity.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
         // Get user name from URL if present
         const urlParams = new URLSearchParams(window.location.search);
         if(urlParams.has('name')) {
             document.getElementById('userName').innerText = urlParams.get('name');
         }
+
+        // Auto Calendar Generation
+        function generateCalendar() {
+            const now = new Date();
+            const month = now.getMonth();
+            const year = now.getFullYear();
+            
+            document.getElementById('calMonth').innerText = now.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+            
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            
+            const grid = document.getElementById('calGrid');
+            const dayNames = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+            
+            // Day names
+            dayNames.forEach(name => {
+                const el = document.createElement('div');
+                el.className = 'day-name';
+                el.innerText = name;
+                grid.appendChild(el);
+            });
+            
+            // Empty slots
+            for (let i = 0; i < firstDay; i++) {
+                const el = document.createElement('div');
+                el.className = 'day';
+                grid.appendChild(el);
+            }
+            
+            // Actual days
+            for (let i = 1; i <= daysInMonth; i++) {
+                const el = document.createElement('div');
+                el.className = 'day active';
+                if (i === now.getDate()) el.className = 'day today';
+                el.innerText = i;
+                grid.appendChild(el);
+            }
+        }
+        generateCalendar();
     </script>
 </body>
 </html>
