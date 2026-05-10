@@ -676,36 +676,38 @@ h1, h2, h3, .brand {
     position: relative;
 }
 
-/* Tooltip style */
-.tag[data-tip]::after {
-    content: attr(data-tip);
-    position: absolute;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    background: #000;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 4px;
-    font-size: 0.7rem;
-    line-height: 1.4;
-    text-transform: none;
-    letter-spacing: 0;
-    white-space: normal;
-    width: 180px;
-    text-align: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    border: 1px solid var(--secondary);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    z-index: 999;
-}
+/* Tooltip style - Only for devices with hover capability */
+@media (hover: hover) {
+    .tag[data-tip]::after {
+        content: attr(data-tip);
+        position: absolute;
+        bottom: 120%;
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        background: #000;
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        line-height: 1.4;
+        text-transform: none;
+        letter-spacing: 0;
+        white-space: normal;
+        width: 180px;
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        border: 1px solid var(--secondary);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        z-index: 999;
+    }
 
-.tag[data-tip]:hover::after {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
+    .tag[data-tip]:hover::after {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
 .tag:hover, .tag.active {
