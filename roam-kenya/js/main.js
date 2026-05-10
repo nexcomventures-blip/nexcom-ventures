@@ -360,8 +360,26 @@ const serviceData = {
         info: "For the ultimate privacy and speed. Access remote conservancies where commercial planes don't land. From luxury private jets to agile helicopters for aerial photography.",
         bullets: ["Point-to-point private helicopter transfers", "Fixed-wing charters for private groups", "Scenic flight excursions over Mt. Kenya/Mara", "VIP lounge access and rapid ground handling"],
         formType: "charters"
+    },
+    int_payment: {
+        title: "International Wire & Card Payments",
+        info: "For our international explorers, we accept direct wire transfers to our USD Dollar Account or secure card payments via encrypted links.",
+        bullets: ["Secure Visa & Mastercard Processing", "International SWIFT/BIC Wire Transfers", "Apple Pay & Google Pay Supported", "Automated Digital Receipting"],
+        formType: "payment"
     }
 };
+
+function generateTicket(method, status) {
+    document.getElementById('ticketMethod').innerText = method;
+    document.getElementById('ticketRef').innerText = 'RK-' + Math.floor(1000 + Math.random() * 9000) + '-X';
+    document.getElementById('ticketOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeTicket() {
+    document.getElementById('ticketOverlay').classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
 
 function openServiceDetail(key) {
     const data = serviceData[key];
