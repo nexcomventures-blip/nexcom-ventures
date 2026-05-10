@@ -121,6 +121,15 @@
                     <div class="card-info">
                         <h3 data-i18n="exp_honeymoon">Lover's Edition</h3>
                         <p data-i18n="exp_honeymoon_p">Intimate coastal escapes and sunset savannah dinners.</p>
+                        <button class="details-btn" onclick="toggleDetails('details-honeymoon')">View Breakdown</button>
+                        <div id="details-honeymoon" class="package-details">
+                            <ul>
+                                <li>Private Sundowners in the Mara</li>
+                                <li>Candlelit Dinners on Diani Beach</li>
+                                <li>Luxury Tented Suite Upgrades</li>
+                                <li>Professional Couples' Photoshoot</li>
+                            </ul>
+                        </div>
                         <span class="price" data-i18n="price_custom">Custom Curation</span>
                         <a href="#curate" class="card-btn" data-i18n="btn_explore_card">Explore</a>
                     </div>
@@ -130,6 +139,15 @@
                     <div class="card-info">
                         <h3 data-i18n="exp_student">Academic Field Labs</h3>
                         <p data-i18n="exp_student_p">Vetted logistics for university research and student safety.</p>
+                        <button class="details-btn" onclick="toggleDetails('details-academic')">View Breakdown</button>
+                        <div id="details-academic" class="package-details">
+                            <ul>
+                                <li>Vetted Secure Student Transport</li>
+                                <li>Research Site Permitting Support</li>
+                                <li>Budget-Friendly Group Lodging</li>
+                                <li>24/7 Field Emergency Support</li>
+                            </ul>
+                        </div>
                         <span class="price" data-i18n="price_group">Group Rates</span>
                         <a href="#curate" class="card-btn" data-i18n="btn_explore_card">Explore</a>
                     </div>
@@ -139,6 +157,15 @@
                     <div class="card-info">
                         <h3 data-i18n="exp_vacation">Curated Vacations</h3>
                         <p data-i18n="exp_vacation_p">Stress-free family and private group wilderness getaways.</p>
+                        <button class="details-btn" onclick="toggleDetails('details-vacation')">View Breakdown</button>
+                        <div id="details-vacation" class="package-details">
+                            <ul>
+                                <li>Custom Family Itinerary Design</li>
+                                <li>Child-Friendly Safari Activities</li>
+                                <li>Private Professional Guide</li>
+                                <li>All-Inclusive Ground Handling</li>
+                            </ul>
+                        </div>
                         <span class="price" data-i18n="price_starts">From $250/day</span>
                         <a href="#curate" class="card-btn" data-i18n="btn_explore_card">Explore</a>
                     </div>
@@ -172,12 +199,66 @@
                 <div class="builder-column">
                     <h4 data-i18n="builder_regions">Choose Regions</h4>
                     <div class="tag-cloud">
-                        <span class="tag">Maasai Mara</span>
-                        <span class="tag">Diani & Coast</span>
-                        <span class="tag">Samburu & North</span>
-                        <span class="tag">Mt. Kenya</span>
-                        <span class="tag">Amboseli</span>
-                        <span class="tag">Rift Valley</span>
+                        <div class="tag-wrapper">
+                            <span class="tag" onclick="toggleDetails('reg-mara')">Maasai Mara</span>
+                            <div id="reg-mara" class="package-details">
+                                <ul>
+                                    <li>Migration Discovery (Aug-Oct)</li>
+                                    <li>Hot Air Balloon Safaris</li>
+                                    <li>Maasai Cultural Tours</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tag-wrapper">
+                            <span class="tag" onclick="toggleDetails('reg-coast')">Diani & Coast</span>
+                            <div id="reg-coast" class="package-details">
+                                <ul>
+                                    <li>Watamu Marine Reserve</li>
+                                    <li>Lamu Old Town Heritage</li>
+                                    <li>Deep Sea Fishing Charters</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tag-wrapper">
+                            <span class="tag" onclick="toggleDetails('reg-north')">Samburu & North</span>
+                            <div id="reg-north" class="package-details">
+                                <ul>
+                                    <li>Reteti Elephant Sanctuary</li>
+                                    <li>Camel Trekking Safaris</li>
+                                    <li>Samburu Special 5 Search</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tag-wrapper">
+                            <span class="tag" onclick="toggleDetails('reg-mtk')">Mt. Kenya</span>
+                            <div id="reg-mtk" class="package-details">
+                                <ul>
+                                    <li>Ol Pejeta Conservancy</li>
+                                    <li>Mountain Peak Trekking</li>
+                                    <li>Trout Fishing Expeditions</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tag-wrapper">
+                            <span class="tag" onclick="toggleDetails('reg-amboseli')">Amboseli</span>
+                            <div id="reg-amboseli" class="package-details">
+                                <ul>
+                                    <li>Kilimanjaro Viewpoints</li>
+                                    <li>Large Tuskers Photography</li>
+                                    <li>Observation Hill Picnic</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tag-wrapper">
+                            <span class="tag" onclick="toggleDetails('reg-rift')">Rift Valley</span>
+                            <div id="reg-rift" class="package-details">
+                                <ul>
+                                    <li>Lake Nakuru Flamingos</li>
+                                    <li>Hell's Gate Cycling</li>
+                                    <li>Naivasha Boat Safaris</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="builder-column">
