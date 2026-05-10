@@ -334,7 +334,7 @@
                         <i class="fab fa-cc-mastercard"></i>
                         <i class="fab fa-cc-apple-pay"></i>
                     </div>
-                    <a href="javascript:void(0)" onclick="openServiceDetail('int_payment')" class="btn-pay">Request Link</a>
+                    <a href="javascript:void(0)" onclick="generateTicket('Card', 'In-Process')" class="btn-pay">Pay Securely</a>
                 </div>
 
                 <!-- Local/M-PESA -->
@@ -349,44 +349,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Digital Ticket Overlay -->
-    <div id="ticketOverlay" class="ticket-overlay" onclick="closeTicket(event)">
-        <div class="digital-ticket" onclick="event.stopPropagation()">
-            <div class="ticket-header">
-                <img src="img/logo.png" alt="Roam Kenya" style="height: 40px; filter: brightness(0) invert(1);">
-                <div style="font-size: 0.8rem; margin-top: 10px; letter-spacing: 2px;">OFFICIAL EXPEDITION RECEIPT</div>
-            </div>
-            <div class="ticket-body">
-                <div class="ticket-info">
-                    <div class="ticket-label">Expedition Reference</div>
-                    <div class="ticket-value" id="ticketRef">RK-7749-X</div>
-                </div>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                    <div class="ticket-info">
-                        <div class="ticket-label">Method</div>
-                        <div class="ticket-value" id="ticketMethod">Visa/USD</div>
-                    </div>
-                    <div class="ticket-info">
-                        <div class="ticket-label">Status</div>
-                        <div class="ticket-value" style="color: green;">VERIFIED</div>
-                    </div>
-                </div>
-                <div class="ticket-qr">
-                    <i class="fas fa-qrcode fa-5x" style="color: #ddd;"></i>
-                </div>
-                <div class="text-center">
-                    <div class="ticket-label">Confirmation Hash</div>
-                    <div style="font-size: 0.6rem; word-break: break-all;">0x83f...a2931fe0fa69ab0636e0d7b6499476ee8bdf8707e</div>
-                    <button class="btn-download-ticket" onclick="window.print()">Print / Save PDF</button>
-                </div>
-            </div>
-            <div class="ticket-footer">
-                Thank you for choosing Roam Kenya.<br>
-                Present this digital receipt to your ground handler upon arrival.
-            </div>
-        </div>
-    </div>
 
     <footer class="footer-v3">
         <div class="container">
