@@ -343,6 +343,37 @@ h1, h2, h3, .brand {
     margin-bottom: 25px;
 }
 
+.tag { cursor: pointer; transition: all 0.3s; position: relative; }
+.tag:hover { border-color: var(--secondary); color: var(--secondary); }
+.tag-wrapper { width: 100%; margin-bottom: 5px; }
+
+/* Package Details Style */
+.package-details {
+    display: none;
+    margin-top: 15px;
+    text-align: left;
+    font-size: 0.9rem;
+    background: rgba(0,0,0,0.03);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--secondary);
+    animation: fadeIn 0.3s ease-out;
+}
+.package-details.active { display: block; }
+.package-details ul { list-style: none; padding: 0; }
+.package-details li { margin-bottom: 5px; position: relative; padding-left: 20px; }
+.package-details li::before { content: '→'; position: absolute; left: 0; color: var(--secondary); }
+.details-btn { 
+    background: none; border: none; color: var(--secondary); 
+    cursor: pointer; font-family: inherit; font-weight: 600; 
+    text-decoration: underline; margin-top: 10px; display: inline-block;
+    padding: 0;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .service-item h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
