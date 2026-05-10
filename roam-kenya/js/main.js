@@ -17,7 +17,12 @@ const translations = {
         service_tickets: "Air Tickets",
         service_tickets_p: "Hassle-free domestic and international flight curation.",
         service_charters: "Private Charters",
-        service_charters_p: "Exclusive aerial access to remote conservancies."
+        service_charters_p: "Exclusive aerial access to remote conservancies.",
+        builder_subtitle: "Bespoke Curation",
+        builder_h2: "Design Your Unique Path.",
+        builder_p: "Every soul seeks a different wilderness. Choose your elements, and we'll weave them into a singular Kenyan tapestry.",
+        builder_regions: "Choose Regions",
+        builder_focus: "Focus Areas"
     },
     es: {
         experience: "La Experiencia",
@@ -37,7 +42,12 @@ const translations = {
         service_tickets: "Billetes de Avión",
         service_tickets_p: "Curaduría de vuelos nacionales e internacionales sin complicaciones.",
         service_charters: "Chárteres Privados",
-        service_charters_p: "Acceso aéreo exclusivo a reservas remotas."
+        service_charters_p: "Acceso aéreo exclusivo a reservas remotas.",
+        builder_subtitle: "Curaduría a Medida",
+        builder_h2: "Diseña tu Camino Único.",
+        builder_p: "Cada alma busca una naturaleza diferente. Elige tus elementos y los entretejeremos en un tapiz keniano singular.",
+        builder_regions: "Elige Regiones",
+        builder_focus: "Áreas de Enfoque"
     },
     zh: {
         experience: "体验",
@@ -53,11 +63,16 @@ const translations = {
         service_transfers: "机场接送",
         service_transfers_p: "由经过审核的专业人员提供无缝的私人接送服务。",
         service_hotels: "精品住宿",
-        service_hotels_p: "精心挑选的豪华旅馆和城市秘境。",
+        service_hotels_p: "精心挑选的豪华旅馆 and 城市秘境。",
         service_tickets: "机票",
         service_tickets_p: "无忧的国内和国际航班策划。",
         service_charters: "私人包机",
-        service_charters_p: "独家空中前往偏远保护区。"
+        service_charters_p: "独家空中前往偏远保护区。",
+        builder_subtitle: "定制策划",
+        builder_h2: "设计您的独特路径。",
+        builder_p: "每个灵魂都在寻找不同的荒野。选择您的元素，我们将把它们编织成独特的肯尼亚挂毯。",
+        builder_regions: "选择地区",
+        builder_focus: "重点领域"
     },
     fr: {
         experience: "L'Expérience",
@@ -77,7 +92,12 @@ const translations = {
         service_tickets: "Billets d'Avion",
         service_tickets_p: "Organisation sans tracas de vols domestiques et internationaux.",
         service_charters: "Vols Privés",
-        service_charters_p: "Accès aérien exclusif aux réserves isolées."
+        service_charters_p: "Accès aérien exclusif aux réserves isolées.",
+        builder_subtitle: "Curateur Sur Mesure",
+        builder_h2: "Concevez Votre Chemin Unique.",
+        builder_p: "Chaque âme cherche une nature sauvage différente. Choisissez vos éléments, et nous les tisserons dans une tapisserie kenyane singulière.",
+        builder_regions: "Choisissez les Régions",
+        builder_focus: "Domaines d'Intérêt"
     },
     de: {
         experience: "Das Erlebnis",
@@ -97,7 +117,12 @@ const translations = {
         service_tickets: "Flugtickets",
         service_tickets_p: "Problemlose Organisation von Inlands- und Auslandsflügen.",
         service_charters: "Privatcharter",
-        service_charters_p: "Exklusiver Luftzugang zu entlegenen Schutzgebieten."
+        service_charters_p: "Exklusiver Luftzugang zu entlegenen Schutzgebieten.",
+        builder_subtitle: "Individuelle Kuration",
+        builder_h2: "Gestalten Sie Ihren Pfad.",
+        builder_p: "Jede Seele sucht eine andere Wildnis. Wählen Sie Ihre Elemente, und wir weben sie zu einem einzigartigen kenianischen Wandteppich.",
+        builder_regions: "Regionen Wählen",
+        builder_focus: "Schwerpunkte"
     }
 };
 
@@ -187,5 +212,19 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('[data-i18n="service_tickets_p"]').textContent = t.service_tickets_p;
         document.querySelector('[data-i18n="service_charters"]').textContent = t.service_charters;
         document.querySelector('[data-i18n="service_charters_p"]').textContent = t.service_charters_p;
+
+        // Builder Translations
+        document.querySelector('[data-i18n="builder_subtitle"]').textContent = t.builder_subtitle;
+        document.querySelector('[data-i18n="builder_h2"]').textContent = t.builder_h2;
+        document.querySelector('[data-i18n="builder_p"]').textContent = t.builder_p;
+        document.querySelector('[data-i18n="builder_regions"]').textContent = t.builder_regions;
+        document.querySelector('[data-i18n="builder_focus"]').textContent = t.builder_focus;
     };
+
+    // 6. Tag Toggle
+    document.querySelectorAll('.tag').forEach(tag => {
+        tag.addEventListener('click', () => {
+            tag.classList.toggle('active');
+        });
+    });
 });
