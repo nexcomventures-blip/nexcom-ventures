@@ -370,10 +370,8 @@ const serviceData = {
 };
 
 function generateTicket(method, status) {
-    document.getElementById('ticketMethod').innerText = method;
-    document.getElementById('ticketRef').innerText = 'RK-' + Math.floor(1000 + Math.random() * 9000) + '-X';
-    document.getElementById('ticketOverlay').classList.add('active');
-    document.body.style.overflow = 'hidden';
+    const name = prompt("Please enter the name for the receipt:") || "Valued Client";
+    window.location.href = `receipt.html?name=${encodeURIComponent(name)}&method=${method}`;
 }
 
 function closeTicket() {
