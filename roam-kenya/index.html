@@ -274,11 +274,36 @@
                 <div class="builder-column">
                     <h4 data-i18n="builder_focus">Focus Areas</h4>
                     <div class="tag-cloud">
-                        <span class="tag" data-tip="Master the art of capturing wildlife with expert-led photography sessions.">Wildlife Photography</span>
-                        <span class="tag" data-tip="Deep dive into wildlife protection and field monitoring with biologists.">Conservation Research</span>
-                        <span class="tag" data-tip="Meaningful cultural immersion with Kenya's diverse ethnic communities.">Tribal Heritage</span>
-                        <span class="tag" data-tip="Guided expeditions to scale the iconic peaks of the East African Rift.">Mountain Trekking</span>
-                        <span class="tag" data-tip="Rejuvenate your spirit with spa treatments and meditation in the wild.">Luxury Wellness</span>
+                        <div class="tag-wrapper">
+                            <span class="tag" onclick="toggleDetails('foc-photo')" data-tip="Master the art of capturing wildlife with expert-led photography sessions.">Wildlife Photography</span>
+                            <div id="foc-photo" class="package-details">
+                                <p>Professional field techniques, night photography, and specialized gear support.</p>
+                            </div>
+                        </div>
+                        <div class="tag-wrapper">
+                            <span class="tag" onclick="toggleDetails('foc-cons')" data-tip="Deep dive into wildlife protection and field monitoring with biologists.">Conservation Research</span>
+                            <div id="foc-cons" class="package-details">
+                                <p>Ranger patrol participation, tracking sessions, and local conservation briefings.</p>
+                            </div>
+                        </div>
+                        <div class="tag-wrapper">
+                            <span class="tag" onclick="toggleDetails('foc-tribal')" data-tip="Meaningful cultural immersion with Kenya's diverse ethnic communities.">Tribal Heritage</span>
+                            <div id="foc-tribal" class="package-details">
+                                <p>Homestays, traditional craft workshops, and authentic oral history sessions.</p>
+                            </div>
+                        </div>
+                        <div class="tag-wrapper">
+                            <span class="tag" onclick="toggleDetails('foc-trek')" data-tip="Guided expeditions to scale the iconic peaks of the East African Rift.">Mountain Trekking</span>
+                            <div id="foc-trek" class="package-details">
+                                <p>Peak ascents, high-altitude logistics, and expert mountain guides.</p>
+                            </div>
+                        </div>
+                        <div class="tag-wrapper">
+                            <span class="tag" onclick="toggleDetails('foc-well')" data-tip="Rejuvenate your spirit with spa treatments and meditation in the wild.">Luxury Wellness</span>
+                            <div id="foc-well" class="package-details">
+                                <p>Bush spas, wilderness meditation, and organic farm-to-table cuisine.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
