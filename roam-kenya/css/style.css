@@ -447,6 +447,50 @@ h1, h2, h3, .brand {
     font-size: 0.8rem;
 }
 
+/* ===== BUILDER V3 ===== */
+.builder-v3 {
+    padding: 120px 0;
+    background: #fdfbf7;
+}
+
+.builder-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+.builder-column h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: var(--primary);
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tag {
+    padding: 10px 22px;
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,0.1);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tag:hover, .tag.active {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
 /* ===== CURATE ===== */
 .curate {
     padding: 150px 0;
