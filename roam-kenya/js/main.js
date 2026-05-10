@@ -319,3 +319,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+function toggleDetails(id) {
+    const details = document.getElementById(id);
+    const allDetails = document.querySelectorAll('.package-details');
+    
+    // Optional: Close others if you want only one open
+    // allDetails.forEach(d => { if(d.id !== id) d.classList.remove('active'); });
+
+    details.classList.toggle('active');
+    
+    // Change button text if it exists
+    const btn = details.previousElementSibling;
+    if (btn && btn.classList.contains('details-btn')) {
+        btn.innerText = details.classList.contains('active') ? 'Hide Breakdown' : 'View Breakdown';
+    }
+}
