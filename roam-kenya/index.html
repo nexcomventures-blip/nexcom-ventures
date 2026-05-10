@@ -28,9 +28,11 @@
             </ul>
             <div class="nav-extras">
                 <div class="lang-selector">
-                    <span class="active">EN</span>
-                    <span>ES</span>
-                    <span>ZH</span>
+                    <span class="active" onclick="setLanguage('en')">EN</span>
+                    <span onclick="setLanguage('es')">ES</span>
+                    <span onclick="setLanguage('zh')">ZH</span>
+                    <span onclick="setLanguage('fr')">FR</span>
+                    <span onclick="setLanguage('de')">DE</span>
                 </div>
                 <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
             </div>
@@ -49,12 +51,12 @@
         </div>
         <div class="hero-stats">
             <div class="stat-item">
-                <span class="stat-label">Nairobi</span>
-                <span class="stat-val">24°C</span>
+                <span class="stat-label" id="weather-location">Nairobi</span>
+                <span class="stat-val" id="weather-temp">24°C</span>
             </div>
             <div class="stat-item">
-                <span class="stat-label">Maasai Mara</span>
-                <span class="stat-val">26°C</span>
+                <span class="stat-label" data-i18n="condition">Sunny</span>
+                <span class="stat-val" id="weather-desc"><i class="fas fa-sun"></i></span>
             </div>
         </div>
     </header>
