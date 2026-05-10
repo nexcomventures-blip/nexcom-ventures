@@ -85,22 +85,22 @@
     <section id="services" class="services-v3">
         <div class="container">
             <div class="services-grid">
-                <div class="service-item reveal">
+                <div class="service-item reveal" onclick="openServiceDetail('transfers')">
                     <i class="fas fa-plane-arrival"></i>
                     <h3 data-i18n="service_transfers">Airport Transfers</h3>
                     <p data-i18n="service_transfers_p">Seamless private arrivals with vetted professional handlers.</p>
                 </div>
-                <div class="service-item reveal">
+                <div class="service-item reveal" onclick="openServiceDetail('stays')">
                     <i class="fas fa-hotel"></i>
                     <h3 data-i18n="service_hotels">Boutique Stays</h3>
                     <p data-i18n="service_hotels_p">Hand-picked luxury lodges and hidden city gems.</p>
                 </div>
-                <div class="service-item reveal">
+                <div class="service-item reveal" onclick="openServiceDetail('tickets')">
                     <i class="fas fa-ticket-alt"></i>
                     <h3 data-i18n="service_tickets">Air Tickets</h3>
                     <p data-i18n="service_tickets_p">Hassle-free domestic and international flight curation.</p>
                 </div>
-                <div class="service-item reveal">
+                <div class="service-item reveal" onclick="openServiceDetail('charters')">
                     <i class="fas fa-helicopter"></i>
                     <h3 data-i18n="service_charters">Private Charters</h3>
                     <p data-i18n="service_charters_p">Exclusive aerial access to remote conservancies.</p>
@@ -108,6 +108,16 @@
             </div>
         </div>
     </section>
+
+    <!-- Service Detail Overlay -->
+    <div id="serviceDetailOverlay" class="service-detail-overlay">
+        <div class="detail-content">
+            <span class="close-detail" onclick="closeServiceDetail()">&times;</span>
+            <div id="serviceDetailInner">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
 
     <section id="expeditions" class="expeditions">
         <div class="container">
