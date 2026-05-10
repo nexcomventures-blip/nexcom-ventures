@@ -22,7 +22,17 @@ const translations = {
         builder_h2: "Design Your Unique Path.",
         builder_p: "Every soul seeks a different wilderness. Choose your elements, and we'll weave them into a singular Kenyan tapestry.",
         builder_regions: "Choose Regions",
-        builder_focus: "Focus Areas"
+        builder_focus: "Focus Areas",
+        exp_honeymoon: "Lover's Edition",
+        exp_honeymoon_p: "Intimate coastal escapes and sunset savannah dinners.",
+        exp_student: "Academic Field Labs",
+        exp_student_p: "Vetted logistics for university research and student safety.",
+        exp_vacation: "Curated Vacations",
+        exp_vacation_p: "Stress-free family and private group wilderness getaways.",
+        price_custom: "Custom Curation",
+        price_group: "Group Rates",
+        price_starts: "From $250/day",
+        btn_explore_card: "Explore"
     },
     es: {
         experience: "La Experiencia",
@@ -47,7 +57,17 @@ const translations = {
         builder_h2: "Diseña tu Camino Único.",
         builder_p: "Cada alma busca una naturaleza diferente. Elige tus elementos y los entretejeremos en un tapiz keniano singular.",
         builder_regions: "Elige Regiones",
-        builder_focus: "Áreas de Enfoque"
+        builder_focus: "Áreas de Enfoque",
+        exp_honeymoon: "Edición Amantes",
+        exp_honeymoon_p: "Escapadas costeras íntimas y cenas en la sabana al atardecer.",
+        exp_student: "Laboratorios de Campo Académicos",
+        exp_student_p: "Logística verificada para investigación universitaria y seguridad estudiantil.",
+        exp_vacation: "Vacaciones Curadas",
+        exp_vacation_p: "Escapadas a la naturaleza sin estrés para familias y grupos privados.",
+        price_custom: "Curaduría a Medida",
+        price_group: "Tarifas de Grupo",
+        price_starts: "Desde $250/día",
+        btn_explore_card: "Explorar"
     },
     zh: {
         experience: "体验",
@@ -72,7 +92,17 @@ const translations = {
         builder_h2: "设计您的独特路径。",
         builder_p: "每个灵魂都在寻找不同的荒野。选择您的元素，我们将把它们编织成独特的肯尼亚挂毯。",
         builder_regions: "选择地区",
-        builder_focus: "重点领域"
+        builder_focus: "重点领域",
+        exp_honeymoon: "情人节限定版",
+        exp_honeymoon_p: "亲密的海岸逃亡和日落大草原晚餐。",
+        exp_student: "学术实地实验室",
+        exp_student_p: "为大学研究和学生安全提供经过审核的物流。",
+        exp_vacation: "策划假期",
+        exp_vacation_p: "无压力的家庭和私人团体野外度假。",
+        price_custom: "定制策划",
+        price_group: "团体价格",
+        price_starts: "每人每天 250 美元起",
+        btn_explore_card: "探索"
     },
     fr: {
         experience: "L'Expérience",
@@ -97,7 +127,17 @@ const translations = {
         builder_h2: "Concevez Votre Chemin Unique.",
         builder_p: "Chaque âme cherche une nature sauvage différente. Choisissez vos éléments, et nous les tisserons dans une tapisserie kenyane singulière.",
         builder_regions: "Choisissez les Régions",
-        builder_focus: "Domaines d'Intérêt"
+        builder_focus: "Domaines d'Intérêt",
+        exp_honeymoon: "Édition des Amoureux",
+        exp_honeymoon_p: "Escapades côtières intimes et dîners dans la savane au coucher du soleil.",
+        exp_student: "Laboratoires de Terrain Académiques",
+        exp_student_p: "Logistique vérifiée pour la recherche universitaire et la sécurité des étudiants.",
+        exp_vacation: "Vacances Organisées",
+        exp_vacation_p: "Escapades en pleine nature sans stress pour les familles et les groupes privés.",
+        price_custom: "Organisation sur Mesure",
+        price_group: "Tarifs de Groupe",
+        price_starts: "À partir de 250 $/jour",
+        btn_explore_card: "Explorer"
     },
     de: {
         experience: "Das Erlebnis",
@@ -122,7 +162,17 @@ const translations = {
         builder_h2: "Gestalten Sie Ihren Pfad.",
         builder_p: "Jede Seele sucht eine andere Wildnis. Wählen Sie Ihre Elemente, und wir weben sie zu einem einzigartigen kenianischen Wandteppich.",
         builder_regions: "Regionen Wählen",
-        builder_focus: "Schwerpunkte"
+        builder_focus: "Schwerpunkte",
+        exp_honeymoon: "Lover's Edition",
+        exp_honeymoon_p: "Intime Küstenausflüge und Abendessen in der Savanne bei Sonnenuntergang.",
+        exp_student: "Akademische Feldlabore",
+        exp_student_p: "Geprüfte Logistik für Universitätsforschung und Studentensicherheit.",
+        exp_vacation: "Kuratierte Urlaube",
+        exp_vacation_p: "Stressfreie Naturerlebnisse für Familien und private Gruppen.",
+        price_custom: "Individuelle Kuration",
+        price_group: "Gruppenpreise",
+        price_starts: "Ab 250 $/Tag",
+        btn_explore_card: "Erkunden"
     }
 };
 
@@ -219,6 +269,19 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('[data-i18n="builder_p"]').textContent = t.builder_p;
         document.querySelector('[data-i18n="builder_regions"]').textContent = t.builder_regions;
         document.querySelector('[data-i18n="builder_focus"]').textContent = t.builder_focus;
+
+        // Expedition Card Translations
+        document.querySelectorAll('.exp-card').forEach(card => {
+            const h3 = card.querySelector('h3');
+            const p = card.querySelector('p');
+            const price = card.querySelector('.price');
+            const btn = card.querySelector('.card-btn');
+            
+            if(h3 && h3.dataset.i18n) h3.textContent = t[h3.dataset.i18n];
+            if(p && p.dataset.i18n) p.textContent = t[p.dataset.i18n];
+            if(price && price.dataset.i18n) price.textContent = t[price.dataset.i18n];
+            if(btn) btn.textContent = t.btn_explore_card;
+        });
     };
 
     // 6. Tag Toggle
