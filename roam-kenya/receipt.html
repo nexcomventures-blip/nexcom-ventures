@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Expedition Ticket | Roam Kenya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #000000;
+            --secondary: #800000; /* Maroon */
+            --accent: #C0A080; /* Gold/Sand */
+            --text-main: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #050505;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .ticket-container {
+            width: 100%;
+            max-width: 400px;
+            background: linear-gradient(145deg, #111, #000);
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid #222;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+            position: relative;
+        }
+        .ticket-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(128,0,0,0.05) 0%, transparent 70%);
+            z-index: 0;
+        }
+        .header {
+            padding: 40px 30px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            letter-spacing: 4px;
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 0.6rem;
+            letter-spacing: 3px;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #333, transparent);
+            margin: 20px 0;
+        }
+        .main-info {
+            padding: 0 30px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .ref-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        .status-badge {
+            display: inline-block;
+            background: rgba(0, 255, 0, 0.1);
+            color: #00ff00;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+        .label {
+            font-size: 0.6rem;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .value {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .qr-section {
+            background: #fff;
+            padding: 30px;
+            margin: 0 30px 30px;
+            border-radius: 16px;
+            text-align: center;
+        }
+        .qr-code {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto;
+        }
+        .scan-text {
+            color: #000;
+            font-size: 0.7rem;
+            margin-top: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .footer-note {
+            padding: 0 30px 40px;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #444;
+            line-height: 1.5;
+        }
+        .actions {
+            display: flex;
+            gap: 10px;
+            padding: 0 30px 30px;
+        }
+        .btn {
+            flex: 1;
+            padding: 15px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.8rem;
+            transition: 0.3s;
+        }
+        .btn-primary { background: var(--secondary); color: #fff; }
+        .btn-secondary { background: #1a1a1a; color: #fff; }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        @media print {
+            .actions { display: none; }
+            body { background: #fff; color: #000; }
+            .ticket-container { border: none; box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ticket-container">
+        <div class="header">
+            <div class="logo">ROAM KENYA</div>
+            <div class="subtitle">Boutique Safari Curators</div>
+            <div class="divider"></div>
+        </div>
+
+        <div class="main-info">
+            <div class="label">Expedition Pass</div>
+            <div class="ref-number">RK-8821</div>
+            <div class="status-badge">PAYMENT VERIFIED</div>
+
+            <div class="grid">
+                <div>
+                    <div class="label">Explorer</div>
+                    <div class="value" id="userName">Valued Client</div>
+                </div>
+                <div>
+                    <div class="label">Date</div>
+                    <div class="value" id="currentDate">May 10, 2026</div>
+                </div>
+                <div>
+                    <div class="label">Package</div>
+                    <div class="value">Lover's Edition</div>
+                </div>
+                <div>
+                    <div class="label">Method</div>
+                    <div class="value">Visa / USD</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qr-section">
+            <!-- Simplified QR using a public API for demo -->
+            <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://nexcomventures.co.ke/roam-kenya&bgcolor=ffffff" alt="Scan to Verify">
+            <div class="scan-text">SCAN TO VERIFY AUTHENTICITY</div>
+        </div>
+
+        <div class="footer-note">
+            This digital pass is your official entry to all Roam Kenya curated locations. 
+            Keep it on your device or print for ground handling verification.
+        </div>
+
+        <div class="actions">
+            <button class="btn btn-secondary" onclick="window.print()"><i class="fas fa-print"></i> Save PDF</button>
+            <button class="btn btn-primary" onclick="location.href='index.html'"><i class="fas fa-home"></i> Back Home</button>
+        </div>
+    </div>
+
+    <script>
+        // Set current date
+        const d = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('currentDate').innerText = d.toLocaleDateString('en-US', options);
+
+        // Get user name from URL if present
+        const urlParams = new URLSearchParams(window.location.search);
+        if(urlParams.has('name')) {
+            document.getElementById('userName').innerText = urlParams.get('name');
+        }
+    </script>
+</body>
+</html>
