@@ -9,7 +9,15 @@ const translations = {
         hero_p: "We don't just book tours. We curate soulful expeditions for academic minds, romantic souls, and private groups seeking the authentic pulse of Kenya.",
         btn_explore: "Explore Expeditions",
         btn_chat: "Chat with a Concierge",
-        condition: "Condition"
+        condition: "Condition",
+        service_transfers: "Airport Transfers",
+        service_transfers_p: "Seamless private arrivals with vetted professional handlers.",
+        service_hotels: "Boutique Stays",
+        service_hotels_p: "Hand-picked luxury lodges and hidden city gems.",
+        service_tickets: "Air Tickets",
+        service_tickets_p: "Hassle-free domestic and international flight curation.",
+        service_charters: "Private Charters",
+        service_charters_p: "Exclusive aerial access to remote conservancies."
     },
     es: {
         experience: "La Experiencia",
@@ -21,7 +29,15 @@ const translations = {
         hero_p: "No solo reservamos tours. Curamos expediciones con alma para mentes académicas, almas románticas y grupos privados que buscan el pulso auténtico de Kenia.",
         btn_explore: "Explorar Expediciones",
         btn_chat: "Hablar con un Conserje",
-        condition: "Condición"
+        condition: "Condición",
+        service_transfers: "Traslados al Aeropuerto",
+        service_transfers_p: "Llegadas privadas sin interrupciones con manejadores profesionales.",
+        service_hotels: "Estancias Boutique",
+        service_hotels_p: "Alojamientos de lujo seleccionados y joyas ocultas de la ciudad.",
+        service_tickets: "Billetes de Avión",
+        service_tickets_p: "Curaduría de vuelos nacionales e internacionales sin complicaciones.",
+        service_charters: "Chárteres Privados",
+        service_charters_p: "Acceso aéreo exclusivo a reservas remotas."
     },
     zh: {
         experience: "体验",
@@ -33,7 +49,15 @@ const translations = {
         hero_p: "我们不仅仅是预订旅游。我们为学术头脑、浪漫灵魂和寻求肯尼亚真实脉搏的私人团体策划充满灵魂的探险。",
         btn_explore: "探索远征",
         btn_chat: "与礼宾部聊天",
-        condition: "状况"
+        condition: "状况",
+        service_transfers: "机场接送",
+        service_transfers_p: "由经过审核的专业人员提供无缝的私人接送服务。",
+        service_hotels: "精品住宿",
+        service_hotels_p: "精心挑选的豪华旅馆和城市秘境。",
+        service_tickets: "机票",
+        service_tickets_p: "无忧的国内和国际航班策划。",
+        service_charters: "私人包机",
+        service_charters_p: "独家空中前往偏远保护区。"
     },
     fr: {
         experience: "L'Expérience",
@@ -45,7 +69,15 @@ const translations = {
         hero_p: "Nous ne nous contentons pas de réserver des visites. Nous organisons des expéditions inspirantes pour les esprits académiques, les âmes romantiques et les groupes privés.",
         btn_explore: "Explorer les Expéditions",
         btn_chat: "Discuter avec un Concierge",
-        condition: "Condition"
+        condition: "Condition",
+        service_transfers: "Transferts Aéroport",
+        service_transfers_p: "Arrivées privées fluides avec des agents professionnels agréés.",
+        service_hotels: "Séjours Boutique",
+        service_hotels_p: "Lodges de luxe triés sur le volet et perles cachées de la ville.",
+        service_tickets: "Billets d'Avion",
+        service_tickets_p: "Organisation sans tracas de vols domestiques et internationaux.",
+        service_charters: "Vols Privés",
+        service_charters_p: "Accès aérien exclusif aux réserves isolées."
     },
     de: {
         experience: "Das Erlebnis",
@@ -57,7 +89,15 @@ const translations = {
         hero_p: "Wir buchen nicht nur Touren. Wir kuratieren seelenvolle Expeditionen für akademische Köpfe, romantische Seelen und private Gruppen.",
         btn_explore: "Expeditionen Erkunden",
         btn_chat: "Mit dem Concierge Chatten",
-        condition: "Zustand"
+        condition: "Zustand",
+        service_transfers: "Flughafentransfer",
+        service_transfers_p: "Reibungslose private Ankunft mit geprüften professionellen Begleitern.",
+        service_hotels: "Boutique-Aufenthalte",
+        service_hotels_p: "Handverlesene Luxus-Lodges und versteckte Stadjuwelen.",
+        service_tickets: "Flugtickets",
+        service_tickets_p: "Problemlose Organisation von Inlands- und Auslandsflügen.",
+        service_charters: "Privatcharter",
+        service_charters_p: "Exklusiver Luftzugang zu entlegenen Schutzgebieten."
     }
 };
 
@@ -138,5 +178,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.btn-outline-gold').textContent = t.btn_explore;
         document.querySelector('.btn-wa').innerHTML = `<i class="fab fa-whatsapp"></i> ${t.btn_chat}`;
         document.querySelector('[data-i18n="condition"]').textContent = t.condition;
+        
+        document.querySelector('[data-i18n="service_transfers"]').textContent = t.service_transfers;
+        document.querySelector('[data-i18n="service_transfers_p"]').textContent = t.service_transfers_p;
+        document.querySelector('[data-i18n="service_hotels"]').textContent = t.service_hotels;
+        document.querySelector('[data-i18n="service_hotels_p"]').textContent = t.service_hotels_p;
+        document.querySelector('[data-i18n="service_tickets"]').textContent = t.service_tickets;
+        document.querySelector('[data-i18n="service_tickets_p"]').textContent = t.service_tickets_p;
+        document.querySelector('[data-i18n="service_charters"]').textContent = t.service_charters;
+        document.querySelector('[data-i18n="service_charters_p"]').textContent = t.service_charters_p;
     };
 });
