@@ -1,4 +1,4 @@
-<!-- Refresh v2.1 -->
+<!-- Refresh v2.2 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,154 +19,145 @@
         <a href="#" class="logo">
             <div class="logo-icon">R</div>
             <div class="logo-text">
-                <span class="brand">ROAM <span style="color: var(--secondary);">KENYA</span></span>
-                <span class="sub" data-i18n="nav-subtitle">Tours & Safaris</span>
+                <span class="logo-main">Roam Kenya</span>
+                <span class="logo-sub">Tours & Safaris</span>
             </div>
         </a>
+
         <div class="nav-links">
             <a href="#safaris" data-i18n="nav-safaris">Safaris</a>
             <a href="#logistics" data-i18n="nav-logistics">Logistics</a>
             <a href="#fleet" data-i18n="nav-fleet">Join Fleet</a>
             <a href="#contact" data-i18n="nav-contact">Contact</a>
         </div>
-        <div class="nav-extra">
-            <div class="lang-switch" id="lang-switcher">
-                <a onclick="setLanguage('en')" class="active" data-lang="en">EN</a>
-                <a onclick="setLanguage('zh')" data-lang="zh">中文</a>
-                <a onclick="setLanguage('es')" data-lang="es">ES</a>
-                <a onclick="setLanguage('fr')" data-lang="fr">FR</a>
-                <a onclick="setLanguage('de')" data-lang="de">DE</a>
+
+        <div class="nav-actions">
+            <div class="lang-switcher">
+                <button onclick="setLanguage('en')">EN</button>
+                <button onclick="setLanguage('zh')">中文</button>
+                <button onclick="setLanguage('es')">ES</button>
             </div>
-            <a href="https://wa.me/254721585784" class="btn-primary" style="padding: 0.8rem 1.5rem; font-size: 0.8rem; border-radius: 50px;" data-i18n="nav-concierge">Concierge</a>
-        </div>
-        <!-- Hamburger for Mobile -->
-        <div class="hamburger" id="hamburger" onclick="toggleMobileNav()">
-            <span></span>
-            <span></span>
-            <span></span>
+            <a href="https://wa.me/254721585784" class="btn-concierge">
+                <i class="fab fa-whatsapp"></i>
+                <span data-i18n="nav-concierge">Concierge</span>
+            </a>
+            <button class="mobile-toggle" onclick="toggleMobileNav()">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
-    <!-- Mobile Nav Drawer -->
-    <div class="mobile-nav" id="mobile-nav">
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="close-nav" onclick="toggleMobileNav()">&times;</button>
         <a href="#safaris" onclick="toggleMobileNav()" data-i18n="nav-safaris">Safaris</a>
         <a href="#logistics" onclick="toggleMobileNav()" data-i18n="nav-logistics">Logistics</a>
         <a href="#fleet" onclick="toggleMobileNav()" data-i18n="nav-fleet">Join Fleet</a>
         <a href="#contact" onclick="toggleMobileNav()" data-i18n="nav-contact">Contact</a>
-        <div class="lang-switch" style="margin-top: 2rem;">
-            <a onclick="setLanguage('en'); toggleMobileNav();" data-lang="en">EN</a>
-            <a onclick="setLanguage('zh'); toggleMobileNav();" data-lang="zh">中文</a>
-            <a onclick="setLanguage('es'); toggleMobileNav();" data-lang="es">ES</a>
-        </div>
     </div>
 
-    <!-- ===== HERO ===== -->
-    <section id="hero">
-        <video autoplay muted loop playsinline id="hero-video">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-safari-jeep-driving-through-the-savannah-34533-large.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-
-        <div class="hero-content">
-            <div class="hero-tag" data-i18n="hero-tag">Est. 2026 — Nairobi, Kenya</div>
-            <h1 data-i18n="hero-title">The Art of <br><span>African Travel.</span></h1>
-            <p data-i18n="hero-p">Curated safari experiences designed for the modern soul. From romantic escapes to academic expeditions.</p>
-            <div class="hero-btns">
-                <a href="#safaris" class="btn-primary" data-i18n="hero-btn-1">Explore Collections</a>
-                <a href="#contact" class="btn-secondary" data-i18n="hero-btn-2">Request Itinerary</a>
+    <!-- ===== HERO SECTION ===== -->
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-header-info">
+                    <span class="est-tag">Est. 2026 — Nairobi, Kenya</span>
+                    <div class="weather-widget">
+                        <span>Nairobi: <span id="temp-nbo">24°C</span></span>
+                        <span class="sep">|</span>
+                        <span>Maasai Mara: <span id="temp-mara">26°C</span></span>
+                    </div>
+                </div>
+                <h1 data-i18n="hero-h1">The Art of <br>African Travel.</h1>
+                <p class="hero-lead" data-i18n="hero-p">Curated safari experiences designed for the modern soul. From romantic escapes to academic expeditions.</p>
+                <div class="hero-btns">
+                    <a href="#safaris" class="btn-primary" data-i18n="hero-btn-1">Explore Collections</a>
+                    <a href="#contact" class="btn-secondary" data-i18n="hero-btn-2">Request Itinerary</a>
+                </div>
             </div>
         </div>
-
-        <!-- Live Weather Bar -->
-        <div class="weather-bar">
-            <div class="weather-item" id="weather-nairobi">
-                <span class="city">Nairobi:</span>
-                <span id="nairobi-temp">--°C</span>
-            </div>
-            <div class="weather-item" id="weather-mara">
-                <span class="city">Maasai Mara:</span>
-                <span id="mara-temp">--°C</span>
-            </div>
+        <div class="hero-scroll">
+            <div class="mouse"></div>
         </div>
-    </section>
+    </header>
 
-    <!-- ===== SAFARI PACKAGES ===== -->
-    <section id="safaris" class="reveal">
+    <!-- ===== SAFARI COLLECTIONS ===== -->
+    <section id="safaris" class="collections">
         <div class="container">
             <div class="section-header">
                 <div class="hero-tag" data-i18n="safaris-tag">Our Collections</div>
                 <h2 data-i18n="safaris-title">Curated Journeys</h2>
             </div>
-            <div class="grid">
-                
-                <div class="package-category" data-i18n="cat-romance">Romance & Elegance</div>
 
-                <!-- Package 1 -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1000&auto=format&fit=crop" alt="Honeymoon" class="card-img">
-                        <span class="card-badge" data-i18n="pkg1-tag">Luxury</span>
+            <div class="safari-grid">
+                <!-- Honeymoon -->
+                <div class="safari-card reveal">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1000&auto=format&fit=crop" alt="Honeymoon">
+                        <span class="category-tag">Romance & Elegance</span>
                     </div>
-                    <div class="card-content">
-                        <h3 data-i18n="pkg1-title">The Savannah Romance</h3>
-                        <p data-i18n="pkg1-p">Private bush dinners and sunrise hot air balloon rides. A dream start to forever.</p>
-                        <div class="card-footer">
-                            <span class="card-price" data-i18n="pkg1-price">Bespoke</span>
-                            <a href="https://wa.me/254721585784?text=Inquiry: Honeymoon" class="btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;" data-i18n="pkg-btn-romance">Inquire</a>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="level">Luxury</span>
+                            <span class="duration">Bespoke</span>
                         </div>
+                        <h3 data-i18n="safari1-title">The Savannah Romance</h3>
+                        <p data-i18n="safari1-p">Private bush dinners and sunrise hot air balloon rides. A dream start to forever.</p>
+                        <a href="https://wa.me/254721585784?text=Inquiry:%20Honeymoon" class="card-link">Inquire <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Package 2 -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1000&auto=format&fit=crop" alt="Couple" class="card-img">
-                        <span class="card-badge" data-i18n="pkg2-tag">Escape</span>
+                <!-- Couples -->
+                <div class="safari-card reveal">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1000&auto=format&fit=crop" alt="Escape">
+                        <span class="category-tag">Escape</span>
                     </div>
-                    <div class="card-content">
-                        <h3 data-i18n="pkg2-title">Sunset & Serenity</h3>
-                        <p data-i18n="pkg2-p">A quiet, curated escape for two in Lamu or Diani. Private dhow cruises.</p>
-                        <div class="card-footer">
-                            <span class="card-price" data-i18n="pkg2-price">$450+</span>
-                            <a href="https://wa.me/254721585784?text=Inquiry: Couple Retreat" class="btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;" data-i18n="pkg-btn-retreat">Book</a>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="level">Curated</span>
+                            <span class="duration">$450+</span>
                         </div>
+                        <h3 data-i18n="safari2-title">Sunset & Serenity</h3>
+                        <p data-i18n="safari2-p">A quiet, curated escape for two in Lamu or Diani. Private dhow cruises.</p>
+                        <a href="https://wa.me/254721585784?text=Inquiry:%20Couple%20Retreat" class="card-link">Book <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <div class="package-category" data-i18n="cat-nairobi">Capital Excursions</div>
-
-                <!-- Package 3 -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1000&auto=format&fit=crop" alt="Nairobi" class="card-img">
-                        <span class="card-badge" data-i18n="pkg3-tag">Full Day</span>
+                <!-- Nairobi Full -->
+                <div class="safari-card reveal">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1000&auto=format&fit=crop" alt="Nairobi">
+                        <span class="category-tag">Capital Excursions</span>
                     </div>
-                    <div class="card-content">
-                        <h3 data-i18n="pkg3-title">Nairobi Heritage</h3>
-                        <p data-i18n="pkg3-p">National Park, Elephant Orphanage, and Giraffe Centre. Lunch included.</p>
-                        <div class="card-footer">
-                            <span class="card-price" data-i18n="pkg3-price">$180</span>
-                            <a href="https://wa.me/254721585784?text=Inquiry: Nairobi Full Day" class="btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;" data-i18n="pkg-btn-full">Book</a>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="level">Full Day</span>
+                            <span class="duration">$180</span>
                         </div>
+                        <h3 data-i18n="safari3-title">Nairobi Heritage</h3>
+                        <p data-i18n="safari3-p">National Park, Elephant Orphanage, and Giraffe Centre. Lunch included.</p>
+                        <a href="https://wa.me/254721585784?text=Inquiry:%20Nairobi%20Full%20Day" class="card-link">Book <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Package 4 -->
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1514905552197-0610a4d8fd73?q=80&w=1000&auto=format&fit=crop" alt="Elephant" class="card-img">
-                        <span class="card-badge" data-i18n="pkg4-tag">Half Day</span>
+                <!-- Nairobi Half -->
+                <div class="safari-card reveal">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1514905552197-0610a4d8fd73?q=80&w=1000&auto=format&fit=crop" alt="Elephant">
+                        <span class="category-tag">Wildlife Express</span>
                     </div>
-                    <div class="card-content">
-                        <h3 data-i18n="pkg4-title">Wildlife Express</h3>
-                        <p data-i18n="pkg4-p">4-hour tour. Visit the Giraffe Centre and Elephant Orphanage. Seamless.</p>
-                        <div class="card-footer">
-                            <span class="card-price" data-i18n="pkg4-price">$95</span>
-                            <a href="https://wa.me/254721585784?text=Inquiry: Nairobi Half Day" class="btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;" data-i18n="pkg-btn-half">Book</a>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="level">Half Day</span>
+                            <span class="duration">$95</span>
                         </div>
+                        <h3 data-i18n="safari4-title">Wildlife Express</h3>
+                        <p data-i18n="safari4-p">4-hour tour. Visit the Giraffe Centre and Elephant Orphanage. Seamless.</p>
+                        <a href="https://wa.me/254721585784?text=Inquiry:%20Nairobi%20Half%20Day" class="card-link">Book <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -178,189 +169,194 @@
                 <div class="hero-tag" data-i18n="logistics-tag">Logistics</div>
                 <h2 data-i18n="logistics-title">Seamless Movement</h2>
             </div>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-content" style="text-align: center;">
-                        <i class="fas fa-heart" style="color: var(--secondary); font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
-                        <h3 data-i18n="log1-title">Honeymoon Concierge</h3>
-                        <p data-i18n="log1-p">Personalized surprises and private handlers for our couples.</p>
-                    </div>
+            <div class="logistics-grid">
+                <div class="log-card">
+                    <h3 data-i18n="log1-title">Honeymoon Concierge</h3>
+                    <p data-i18n="log1-p">Personalized surprises and private handlers for our couples.</p>
                 </div>
-                <div class="card">
-                    <div class="card-content" style="text-align: center;">
-                        <i class="fas fa-graduation-cap" style="color: var(--secondary); font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
-                        <h3 data-i18n="log3-title">Student Safety</h3>
-                        <p data-i18n="log3-p">Vetted drivers and 24/7 check-ins for academic group peace of mind.</p>
-                    </div>
+                <div class="log-card">
+                    <h3 data-i18n="log3-title">Student Safety</h3>
+                    <p data-i18n="log3-p">Vetted drivers and 24/7 check-ins for academic group peace of mind.</p>
                 </div>
-                <div class="card">
-                    <div class="card-content" style="text-align: center;">
-                        <i class="fas fa-users" style="color: var(--secondary); font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
-                        <h3 data-i18n="log2-title">Group Coords</h3>
-                        <p data-i18n="log2-p">Dedicated logistics lead for large family or corporate groups.</p>
-                    </div>
+                <div class="log-card">
+                    <h3 data-i18n="log2-title">Group Coords</h3>
+                    <p data-i18n="log2-p">Dedicated logistics lead for large family or corporate groups.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===== JOIN FLEET ===== -->
+    <section id="fleet" style="background: var(--primary); color: var(--white); padding: 100px 0;">
+        <div class="container" style="text-align: center;">
+            <div class="hero-tag" style="background: rgba(255,255,255,0.1); color: var(--secondary);" data-i18n="nav-fleet">Join Fleet</div>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; margin-top: 20px;" data-i18n="fleet-title">Expand the Horizon</h2>
+            <p style="max-width: 600px; margin: 20px auto 40px; opacity: 0.8; font-size: 1.1rem;" data-i18n="fleet-p">Join the Roam Kenya network as a transport partner and help us redefine African travel.</p>
+            <a href="https://wa.me/254721585784?text=Fleet%20Inquiry" class="btn-primary" style="background: var(--secondary); border-color: var(--secondary); color: var(--primary);" data-i18n="fleet-btn">Partner With Us</a>
+        </div>
+    </section>
+
     <!-- ===== CONTACT ===== -->
-    <section id="contact" class="reveal">
+    <section id="contact" class="contact">
         <div class="container">
-            <div class="section-header">
-                <div class="hero-tag" data-i18n="contact-tag">Inquiry</div>
-                <h2 data-i18n="contact-title">Start Your Journey</h2>
-            </div>
-            <div class="form-container">
-                <form id="inquiry-form" onsubmit="submitToWhatsApp(event)">
-                    <div class="form-group">
-                        <label data-i18n="form-name">Your Name</label>
-                        <input type="text" placeholder="Full Name" id="input-name" required>
+            <div class="contact-box reveal">
+                <div class="contact-info">
+                    <h2 data-i18n="contact-h2">Start Your <br>Journey</h2>
+                    <p data-i18n="contact-p">Tell us your vision, and we will handle the rest.</p>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Mama Ngina St, Nairobi</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+254 721 585 784</span>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label data-i18n="form-type">Traveler Type</label>
-                        <select id="select-type">
-                            <option data-i18n="opt1">Honeymoon / Couple</option>
-                            <option data-i18n="opt2">Nairobi Excursion</option>
-                            <option data-i18n="opt3">Student / Academic</option>
-                            <option data-i18n="opt4">Group / Family</option>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" data-i18n="form-name" placeholder="Your Name" required>
+                        <select required>
+                            <option value="" disabled selected data-i18n="form-type">Traveler Type</option>
+                            <option>Honeymoon / Couple</option>
+                            <option>Nairobi Excursion</option>
+                            <option>Student / Academic</option>
+                            <option>Group / Family</option>
                         </select>
-                    </div>
-                    <div class="form-group">
-                        <label data-i18n="form-details">Your Vision</label>
-                        <textarea rows="4" placeholder="Dates, group size, special requests..." id="input-details"></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit" data-i18n="form-btn">Request Itinerary</button>
-                </form>
+                        <textarea data-i18n="form-vision" placeholder="Your Vision" rows="4"></textarea>
+                        <button type="submit" class="btn-primary w-full" data-i18n="form-btn">Request Itinerary</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ===== FOOTER ===== -->
-    <footer>
-        <div class="footer-links">
-            <a href="https://www.instagram.com/nexcomventures__" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/254721585784"><i class="fab fa-whatsapp"></i></a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Roam Kenya</h3>
+                    <p>The Art of Safari</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#safaris" data-i18n="nav-safaris">Safaris</a>
+                    <a href="#logistics" data-i18n="nav-logistics">Logistics</a>
+                    <a href="#fleet" data-i18n="nav-fleet">Join Fleet</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Roam Kenya. All rights reserved.</p>
+            </div>
         </div>
-        <p style="opacity: 0.7; font-size: 0.85rem;" data-i18n="footer-cp">&copy; 2026 Roam Kenya Tours & Safaris. A Nexcom Ventures Partner.</p>
     </footer>
 
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/254721585784" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
+    <!-- Scripts -->
     <script>
-        // Scroll Effect
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            if (window.scrollY > 50) nav.classList.add('scrolled');
-            else nav.classList.remove('scrolled');
-        });
-
-        // Mobile Nav
-        function toggleMobileNav() {
-            document.getElementById('mobile-nav').classList.toggle('open');
-            document.getElementById('hamburger').classList.toggle('open');
-        }
-
-        // Reveal Animation
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        // Weather
-        async function fetchWeather() {
-            const locations = [
-                { id: 'nairobi', lat: -1.28, lon: 36.81, el: 'nairobi-temp' },
-                { id: 'mara', lat: -1.5, lon: 35.15, el: 'mara-temp' }
-            ];
-            for (const loc of locations) {
-                try {
-                    const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${loc.lat}&longitude=${loc.lon}&current_weather=true`);
-                    const data = await res.json();
-                    document.getElementById(loc.el).innerText = `${Math.round(data.current_weather.temperature)}°C`;
-                } catch (e) {
-                    document.getElementById(loc.el).innerText = "22°C";
-                }
-            }
-        }
-        fetchWeather();
-
-        // Form
-        function submitToWhatsApp(e) {
-            e.preventDefault();
-            const name = document.getElementById('input-name').value;
-            const type = document.getElementById('select-type').value;
-            const details = document.getElementById('input-details').value;
-            const msg = `Hello Roam Kenya! 👋\n\nName: ${name}\nInterest: ${type}\nDetails: ${details}`;
-            window.open(`https://wa.me/254721585784?text=${encodeURIComponent(msg)}`, '_blank');
-        }
-
-        // Translations (Simplified for brevity in write call)
         const translations = {
-            en: {
-                "nav-subtitle": "Tours & Safaris", "nav-safaris": "Safaris", "nav-logistics": "Logistics",
-                "nav-fleet": "Join Fleet", "nav-contact": "Contact", "nav-concierge": "Concierge",
-                "hero-tag": "Est. 2026 — Nairobi, Kenya", "hero-title": "The Art of <br><span>African Travel.</span>",
-                "hero-p": "Curated safari experiences designed for the modern soul. From romantic escapes to academic expeditions.",
+            'en': {
+                "nav-safaris": "Safaris", "nav-logistics": "Logistics", "nav-fleet": "Join Fleet", "nav-contact": "Contact", "nav-concierge": "Concierge",
+                "hero-h1": "The Art of African Travel.", "hero-p": "Curated safari experiences designed for the modern soul. From romantic escapes to academic expeditions.",
                 "hero-btn-1": "Explore Collections", "hero-btn-2": "Request Itinerary",
                 "safaris-tag": "Our Collections", "safaris-title": "Curated Journeys",
-                "cat-romance": "Romance & Elegance", "pkg1-tag": "Luxury", "pkg1-title": "The Savannah Romance",
-                "pkg1-p": "Private bush dinners and sunrise hot air balloon rides. A dream start to forever.",
-                "pkg1-price": "Bespoke", "pkg-btn-romance": "Inquire",
-                "pkg2-tag": "Escape", "pkg2-title": "Sunset & Serenity", "pkg2-p": "A quiet, curated escape for two in Lamu or Diani.",
-                "pkg2-price": "$450+", "pkg-btn-retreat": "Book",
-                "cat-nairobi": "Capital Excursions", "pkg3-tag": "Full Day", "pkg3-title": "Nairobi Heritage",
-                "pkg3-p": "National Park, Elephant Orphanage, and Giraffe Centre.", "pkg3-price": "$180", "pkg-btn-full": "Book",
-                "pkg4-tag": "Half Day", "pkg4-title": "Wildlife Express", "pkg4-p": "4-hour tour. Visit the Giraffe Centre and Elephant Orphanage.",
-                "pkg4-price": "$95", "pkg-btn-half": "Book",
+                "safari1-title": "The Savannah Romance", "safari1-p": "Private bush dinners and sunrise hot air balloon rides. A dream start to forever.",
+                "safari2-title": "Sunset & Serenity", "safari2-p": "A quiet, curated escape for two in Lamu or Diani. Private dhow cruises.",
+                "safari3-title": "Nairobi Heritage", "safari3-p": "National Park, Elephant Orphanage, and Giraffe Centre. Lunch included.",
+                "safari4-title": "Wildlife Express", "safari4-p": "4-hour tour. Visit the Giraffe Centre and Elephant Orphanage. Seamless.",
                 "logistics-tag": "Logistics", "logistics-title": "Seamless Movement",
-                "log1-title": "Honeymoon Concierge", "log1-p": "Personalized surprises and private handlers.",
-                "log3-title": "Student Safety", "log3-p": "Vetted drivers and 24/7 check-ins.",
-                "log2-title": "Group Coords", "log2-p": "Dedicated logistics lead for large family groups.",
-                "contact-tag": "Inquiry", "contact-title": "Start Your Journey",
-                "form-name": "Your Name", "form-type": "Traveler Type", "form-details": "Your Vision",
-                "form-btn": "Request Itinerary", "footer-cp": "© 2026 Roam Kenya Tours & Safaris. A Nexcom Ventures Partner."
+                "log1-title": "Honeymoon Concierge", "log1-p": "Personalized surprises and private handlers for our couples.",
+                "log2-title": "Group Coords", "log2-p": "Dedicated logistics lead for large family or corporate groups.",
+                "log3-title": "Student Safety", "log3-p": "Vetted drivers and 24/7 check-ins for academic group peace of mind.",
+                "fleet-title": "Expand the Horizon", "fleet-p": "Join the Roam Kenya network as a transport partner and help us redefine African travel.", "fleet-btn": "Partner With Us",
+                "contact-h2": "Start Your Journey", "contact-p": "Tell us your vision, and we will handle the rest.",
+                "form-name": "Your Name", "form-type": "Traveler Type", "form-vision": "Your Vision", "form-btn": "Request Itinerary"
             },
-            zh: {
-                "nav-subtitle": "旅游与游猎", "nav-safaris": "游猎", "nav-logistics": "后勤",
-                "nav-fleet": "加入车队", "nav-contact": "联系", "nav-concierge": "礼宾部",
-                "hero-tag": "成立于 2026 年 — 肯尼亚内罗毕", "hero-title": "非洲旅行的<br><span>艺术。</span>",
-                "hero-p": "为现代灵魂设计的精心策划的游猎体验。从浪漫之旅到学术探险。",
-                "hero-btn-1": "探索收藏", "hero-btn-2": "索取行程",
-                "safaris-tag": "我们的收藏", "safaris-title": "精心策划的旅程",
-                "cat-romance": "浪漫与优雅", "pkg1-tag": "奢华", "pkg1-title": "萨凡纳浪漫",
-                "pkg1-p": "私人丛林晚餐和日出热气球。永恒的梦想开始。",
-                "pkg1-price": "定制", "pkg-btn-romance": "咨询",
-                "pkg2-tag": "逃离", "pkg2-title": "日落与宁静", "pkg2-p": "在拉穆或迪亚尼为两人准备的安静、策划的逃离。",
-                "pkg2-price": "$450+", "pkg-btn-retreat": "预订",
-                "cat-nairobi": "首都短途旅行", "pkg3-tag": "全天", "pkg3-title": "内罗毕遗产",
-                "pkg3-p": "国家公园、大象孤儿院和长颈鹿中心。", "pkg3-price": "$180", "pkg-btn-full": "预订",
-                "pkg4-tag": "半天", "pkg4-title": "野生动物快递", "pkg4-p": "4 小时游览。参观长颈鹿中心和大象孤儿院。",
-                "pkg4-price": "$95", "pkg-btn-half": "预订",
+            'zh': {
+                "nav-safaris": "探险之旅", "nav-logistics": "后勤保障", "nav-fleet": "加入车队", "nav-contact": "联系", "nav-concierge": "礼宾部",
+                "hero-h1": "非洲旅行的艺术", "hero-p": "为现代灵魂打造的精选野生动物游。从浪漫之旅到学术考察。",
+                "hero-btn-1": "探索系列", "hero-btn-2": "索取行程",
+                "safaris-tag": "我们的系列", "safaris-title": "精选旅程",
+                "safari1-title": "大草原浪漫", "safari1-p": "私人丛林晚餐和日出热气球。梦想的永恒起点。",
+                "safari2-title": "日落与宁静", "safari2-p": "拉穆或迪亚尼的双人宁静逃离。私人单桅帆船巡航。",
+                "safari3-title": "内罗毕文化遗产", "safari3-p": "国家公园、大象孤儿院和长颈鹿中心。含午餐。",
+                "safari4-title": "野生动物快线", "safari4-p": "4小时行程。参观长颈鹿中心和大象孤儿院。无缝衔接。",
                 "logistics-tag": "后勤", "logistics-title": "无缝移动",
-                "log1-title": "蜜月礼宾", "log1-p": "个性化的惊喜和私人处理程序。",
-                "log3-title": "学生安全", "log3-p": "经过审查的司机和 24/7 入住。",
-                "log2-title": "团体协调", "log2-p": "大型家庭团体的专门后勤主管。",
-                "contact-tag": "咨询", "contact-title": "开启您的旅程",
-                "form-name": "您的名字", "form-type": "旅客类型", "form-details": "您的愿景",
-                "form-btn": "索取行程", "footer-cp": "© 2026 Roam Kenya Tours & Safaris. Nexcom Ventures 合作伙伴。"
+                "log1-title": "蜜月礼宾", "log1-p": "为新人准备的个性化惊喜和私人管家。",
+                "log2-title": "团队协调", "log2-p": "为大型家庭或企业团队提供专门的后勤负责人。",
+                "log3-title": "学生安全", "log3-p": "经过审查的司机和24/7全天候签到，确保学术团体安心。",
+                "fleet-title": "扩大视野", "fleet-p": "加入 Roam Kenya 网络作为运输合作伙伴，共同重新定义非洲旅行。", "fleet-btn": "合作伙伴",
+                "contact-h2": "开始您的旅程", "contact-p": "告诉我们您的愿景，剩下的交给我们。",
+                "form-name": "您的姓名", "form-type": "旅行者类型", "form-vision": "您的愿景", "form-btn": "索取行程"
+            },
+            'es': {
+                "nav-safaris": "Safaris", "nav-logistics": "Logística", "nav-fleet": "Únete a la Flota", "nav-contact": "Contacto", "nav-concierge": "Conserjería",
+                "hero-h1": "El Arte de Viajar por África.", "hero-p": "Experiencias de safari seleccionadas para el alma moderna. Desde escapadas románticas hasta expediciones académicas.",
+                "hero-btn-1": "Explorar Colecciones", "hero-btn-2": "Solicitar Itinerario",
+                "safaris-tag": "Nuestras Colecciones", "safaris-title": "Viajes Curados",
+                "safari1-title": "Romance en la Sabana", "safari1-p": "Cenas privadas en la selva y paseos en globo al amanecer. Un comienzo de ensueño.",
+                "safari2-title": "Atardecer y Serenidad", "safari2-p": "Una escapada tranquila para dos en Lamu o Diani. Cruceros privados en dhow.",
+                "safari3-title": "Herencia de Nairobi", "safari3-p": "Parque Nacional, Orfanato de Elefantes y Centro de Jirafas. Almuerzo incluido.",
+                "safari4-title": "Expreso de Vida Silvestre", "safari4-p": "Tour de 4 horas. Visita al Centro de Jirafas y Orfanato de Elefantes. Sin complicaciones.",
+                "logistics-tag": "Logística", "logistics-title": "Movimiento Fluido",
+                "log1-title": "Conserjería de Bodas", "log1-p": "Sorpresas personalizadas y asistentes privados para nuestras parejas.",
+                "log2-title": "Coord. de Grupos", "log2-p": "Líder de logística dedicado para familias grandes o grupos corporativos.",
+                "log3-title": "Seguridad Estudiantil", "log3-p": "Conductores verificados y controles 24/7 para la tranquilidad de los grupos académicos.",
+                "fleet-title": "Expandir el Horizonte", "fleet-p": "Únete a la red de Roam Kenya como socio de transporte y ayúdanos a redefinir los viajes en África.", "fleet-btn": "Asóciate con Nosotros",
+                "contact-h2": "Inicia tu Viaje", "contact-p": "Cuéntanos tu visión y nosotros nos encargamos del resto.",
+                "form-name": "Tu Nombre", "form-type": "Tipo de Viajero", "form-vision": "Tu Visión", "form-btn": "Solicitar Itinerario"
             }
         };
 
         function setLanguage(lang) {
-            document.querySelectorAll('.lang-switch a').forEach(a => {
-                a.classList.toggle('active', a.getAttribute('data-lang') === lang);
-            });
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) el.innerHTML = translations[lang][key];
+                if (translations[lang][key]) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = translations[lang][key];
+                    } else if (el.tagName === 'SELECT') {
+                        el.options[0].text = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
             });
+            document.documentElement.lang = lang;
+            localStorage.setItem('preferredLang', lang);
         }
+
+        function toggleMobileNav() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Initialize Language
+        const savedLang = localStorage.getItem('preferredLang') || 'en';
+        setLanguage(savedLang);
     </script>
 </body>
 </html>
