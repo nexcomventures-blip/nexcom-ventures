@@ -1,4 +1,24 @@
 const ALL_PRODUCTS = [
+{
+  "id": "hp-elitebook-840-g10-brand-new",
+  "brand": "HP",
+  "name": "HP EliteBook 840 G10",
+  "specs": "Intel Core i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" WUXGA \u2022 BRAND NEW",
+  "price": 224000,
+  "category": "business hp featured",
+  "badge": "new",
+  "img": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08483861.png"
+},
+{
+  "id": "hp-zbook-firefly-g10-brand-new",
+  "brand": "HP",
+  "name": "HP ZBook Firefly G10",
+  "specs": "Intel Core i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 NVIDIA RTX A500 4GB \u2022 14\" \u2022 BRAND NEW",
+  "price": 235000,
+  "category": "business hp featured",
+  "badge": "new",
+  "img": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08483842.png"
+},
   {
     "id": "feat-1",
     "brand": "Dell",
