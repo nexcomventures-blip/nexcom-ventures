@@ -156,9 +156,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 descEl.innerHTML = `<i class="fas ${data.icon}"></i>`;
                 locEl.style.opacity = 1;
                 tempEl.style.opacity = 1;
-            }, 500);
+            }, 300);
         }
-    }, 4000);
+    }, 2000);
 
     // 5. Language Handling
     window.setLanguage = (lang) => {
