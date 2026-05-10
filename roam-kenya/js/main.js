@@ -58,12 +58,12 @@ const translations = {
         builder_p: "Cada alma busca una naturaleza diferente. Elige tus elementos y los entretejeremos en un tapiz keniano singular.",
         builder_regions: "Elige Regiones",
         builder_focus: "Áreas de Enfoque",
-        exp_honeymoon: "Edición Amantes",
-        exp_honeymoon_p: "Escapadas costeras íntimas y cenas en la sabana al atardecer.",
-        exp_student: "Laboratorios de Campo Académicos",
-        exp_student_p: "Logística verificada para investigación universitaria y seguridad estudiantil.",
-        exp_vacation: "Vacaciones Curadas",
-        exp_vacation_p: "Escapadas a la naturaleza sin estrés para familias y grupos privados.",
+        exp_honeymoon: "Safari Luna de Miel",
+        exp_honeymoon_p: "Escapes costeros íntimos y suites de lujo en la sabana.",
+        exp_student: "Migración Maasai Mara",
+        exp_student_p: "El mayor espectáculo salvaje. Sea testigo del cruce del río Mara.",
+        exp_vacation: "Herencia de los Cinco Grandes",
+        exp_vacation_p: "Una inmersión profunda en los territorios de Simba, Ndovu y Kifaru.",
         price_custom: "Curaduría a Medida",
         price_group: "Tarifas de Grupo",
         price_starts: "Desde $250/día",
@@ -93,12 +93,12 @@ const translations = {
         builder_p: "每个灵魂都在寻找不同的荒野。选择您的元素，我们将把它们编织成独特的肯尼亚挂毯。",
         builder_regions: "选择地区",
         builder_focus: "重点领域",
-        exp_honeymoon: "情人节限定版",
-        exp_honeymoon_p: "亲密的海岸逃亡和日落大草原晚餐。",
-        exp_student: "学术实地实验室",
-        exp_student_p: "为大学研究和学生安全提供经过审核的物流。",
-        exp_vacation: "策划假期",
-        exp_vacation_p: "无压力的家庭和私人团体野外度假。",
+        exp_honeymoon: "萨法里蜜月旅行",
+        exp_honeymoon_p: "亲密的海岸逃亡和肯尼亚豪华萨法里套房。",
+        exp_student: "马赛马拉大迁徙",
+        exp_student_p: "终极荒野壮观。见证角马穿越马拉河。",
+        exp_vacation: "五大兽遗产探险",
+        exp_vacation_p: "深入探索辛巴、恩多武和基法鲁的领地。",
         price_custom: "定制策划",
         price_group: "团体价格",
         price_starts: "每人每天 250 美元起",
@@ -318,6 +318,23 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // 8. Image Gallery Auto-Rotation
+    const initImageRotation = () => {
+        const containers = document.querySelectorAll('.card-media');
+        containers.forEach(container => {
+            const images = container.querySelectorAll('img');
+            if (images.length <= 1) return;
+
+            let currentIndex = 0;
+            setInterval(() => {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }, 4000); // Rotate every 4 seconds
+        });
+    };
+    initImageRotation();
 });
 
 function toggleDetails(id) {
