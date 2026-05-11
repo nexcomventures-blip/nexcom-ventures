@@ -1284,7 +1284,68 @@ function setupDailySpecial() {
 
   const today = new Date();
   const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
-  const p = ALL_PRODUCTS[dateSeed % ALL_PRODUCTS.length];
+  const p = ALL_PRODUCTS[dateSeed % ALL_PRODUCTS.length,
+  {
+  "id": "hp-840g7-i5-10th",
+  "brand": "HP",
+  "name": "HP EliteBook 840 G7 i5",
+  "specs": "i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD",
+  "price": 33000,
+  "category": "exuk business hp",
+  "badge": "restocked",
+  "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+840+G7"
+},
+  {
+  "id": "lenovo-t14s-i5-10th",
+  "brand": "Lenovo",
+  "name": "Lenovo ThinkPad T14s i5",
+  "specs": "i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD",
+  "price": 31000,
+  "category": "exuk business lenovo",
+  "badge": "restocked",
+  "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T14s"
+},
+  {
+  "id": "lenovo-t480s-i5-8th-touch",
+  "brand": "Lenovo",
+  "name": "Lenovo ThinkPad T480s i5 Touch",
+  "specs": "i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
+  "price": 28500,
+  "category": "exuk business lenovo",
+  "badge": "restocked",
+  "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+Touch"
+},
+  {
+  "id": "lenovo-t480s-i5-8th-nontouch",
+  "brand": "Lenovo",
+  "name": "Lenovo ThinkPad T480s i5 Non-Touch",
+  "specs": "i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Non-Touch",
+  "price": 26500,
+  "category": "exuk business lenovo",
+  "badge": "restocked",
+  "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+Non-Touch"
+},
+  {
+  "id": "lenovo-t480s-i5-7th-touch",
+  "brand": "Lenovo",
+  "name": "Lenovo ThinkPad T480s i5 7th Gen Touch",
+  "specs": "i5 7th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
+  "price": 24000,
+  "category": "exuk business lenovo",
+  "badge": "restocked",
+  "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+i5+7th"
+},
+  {
+  "path_id": "lenovo-t480s-i7-8th-nontouch",
+  "id": "lenovo-t480s-i7-8th-nontouch",
+  "brand": "Lenovo",
+  "name": "Lenovo ThinkPad T480s i7 Non-Touch",
+  "specs": "i7 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Non-Touch",
+  "price": 29000,
+  "category": "exuk business lenovo",
+  "badge": "restocked",
+  "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+i7"
+}];
 
   if (p) {
     const titleEl = document.getElementById('promoTitle');
