@@ -1,61 +1,101 @@
 const ALL_PRODUCTS = [
-{
-  "id": "hp-elitebook-840-g10-brand-new",
-  "brand": "HP",
-  "name": "HP EliteBook 840 G10",
-  "specs": "Intel Core i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" WUXGA \u2022 BRAND NEW",
-  "price": 224000,
-  "category": "business hp featured",
-  "badge": "new",
-  "img": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08483861.png"
-},
-{
-  "id": "hp-zbook-firefly-g10-brand-new",
-  "brand": "HP",
-  "name": "HP ZBook Firefly G10",
-  "specs": "Intel Core i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 NVIDIA RTX A500 4GB \u2022 14\" \u2022 BRAND NEW",
-  "price": 235000,
-  "category": "business hp featured",
-  "badge": "new",
-  "img": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08483842.png"
-},
   {
     "id": "feat-1",
     "brand": "Dell",
-    "name": "Dell Xps 13 9320 I7 12Th 16/512Gb",
-    "specs": "xps 13 9320 i7 12th 16/512gb",
-    "price": 95000,
+    "name": "Dell Latitude 5400 i5",
+    "specs": "Intel Core i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 14\" FHD",
+    "price": 24000,
     "category": "exuk business dell featured",
     "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+xps+13+9320+i7"
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=1000"
   },
   {
     "id": "feat-2",
     "brand": "Lenovo",
+    "name": "Lenovo Thinkbook 13S G2 Itl I7 11Th 16/512 Touchscreen",
+    "specs": "thinkbook 13s G2 ITL i7 11th 16/512 touchscreen",
+    "price": 50000,
+    "category": "exuk business lenovo featured",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+thinkbook+13s+G2+ITL"
+  },
+  {
+    "id": "feat-3",
+    "brand": "Dell",
+    "name": "Dell Precision 5550 I7 10Th 16/512Gb With 4Gb Nvidia T1000 Graphics",
+    "specs": "precision 5550 i7 10th 16/512gb with 4gb nvidia T1000 graphics",
+    "price": 70000,
+    "category": "exuk business dell featured",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+precision+5550+i7+10th"
+  },
+  {
+    "id": "feat-4",
+    "brand": "Dell",
+    "name": "Dell Latitude 5300 I5 8Th 8/256 Touchscreen",
+    "specs": "latitude 5300 i5 8th 8/256 touchscreen",
+    "price": 22000,
+    "category": "exuk business dell featured",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+latitude+5300+i5+8th"
+  },
+  {
+    "id": "hp-elitebook-840-g10-brand-new",
+    "brand": "HP",
+    "name": "HP EliteBook 840 G10",
+    "specs": "Intel Core i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" WUXGA \u2022 BRAND NEW",
+    "price": 224000,
+    "category": "business hp",
+    "badge": "new",
+    "img": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08483861.png"
+  },
+  {
+    "id": "hp-zbook-firefly-g10-brand-new",
+    "brand": "HP",
+    "name": "HP ZBook Firefly G10",
+    "specs": "Intel Core i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 NVIDIA RTX A500 4GB \u2022 14\" \u2022 BRAND NEW",
+    "price": 235000,
+    "category": "business hp",
+    "badge": "new",
+    "img": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08483842.png"
+  },
+  {
+    "id": "tmp-8547",
+    "brand": "Dell",
+    "name": "Dell Xps 13 9320 I7 12Th 16/512Gb",
+    "specs": "xps 13 9320 i7 12th 16/512gb",
+    "price": 95000,
+    "category": "exuk business dell",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+xps+13+9320+i7"
+  },
+  {
+    "id": "tmp-4627",
+    "brand": "Lenovo",
     "name": "Lenovo X1 Carbon I7 8Th 16/512Gb.",
     "specs": "x1 carbon i7 8th 16/512gb.",
     "price": 35000,
-    "category": "exuk business lenovo featured",
+    "category": "exuk business lenovo",
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x1+carbon+i7+8th"
   },
   {
-    "id": "feat-3",
+    "id": "tmp-7041",
     "brand": "Lenovo",
     "name": "Lenovo X390 I5 8Th 8/256Gb",
     "specs": "x390 i5 8th 8/256gb",
     "price": 22000,
-    "category": "exuk business lenovo featured",
+    "category": "exuk business lenovo",
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x390+i5+8th+8/256gb"
   },
   {
-    "id": "feat-4",
+    "id": "tmp-3831",
     "brand": "Apple",
     "name": "MacBook Pro 13 M2 (2022)",
     "specs": "Apple M2 Chip \u2022 8GB RAM \u2022 512GB SSD \u2022 Retina Display",
     "price": 140000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "hot",
     "img": "https://www.apple.com/v/macbook-pro-13/m/images/overview/hero_endframe__e953p4v88ce2_large.jpg"
   },
@@ -160,16 +200,6 @@ const ALL_PRODUCTS = [
     "img": "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
   },
   {
-    "id": "exuk-dell5400",
-    "brand": "Dell",
-    "name": "Dell Latitude 5400 i5",
-    "specs": "Intel Core i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 14\" FHD",
-    "price": 24000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=1000"
-  },
-  {
     "id": "part-mac-a2337-battery",
     "brand": "Apple",
     "name": "MacBook Air A2337 Battery",
@@ -238,16 +268,6 @@ const ALL_PRODUCTS = [
     "category": "exuk business lenovo",
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x1+yoga+i7+7th"
-  },
-  {
-    "id": "exuk-lenovo-thinkbook13sg2itl-50000",
-    "brand": "Lenovo",
-    "name": "Lenovo Thinkbook 13S G2 Itl I7 11Th 16/512 Touchscreen",
-    "specs": "thinkbook 13s G2 ITL i7 11th 16/512 touchscreen",
-    "price": 50000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+thinkbook+13s+G2+ITL"
   },
   {
     "id": "exuk-lenovo-x1carboni710th-45000",
@@ -620,16 +640,6 @@ const ALL_PRODUCTS = [
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+precision+3561+i7+11th"
   },
   {
-    "id": "exuk-dell-precision5550i710th-70000",
-    "brand": "Dell",
-    "name": "Dell Precision 5550 I7 10Th 16/512Gb With 4Gb Nvidia T1000 Graphics",
-    "specs": "precision 5550 i7 10th 16/512gb with 4gb nvidia T1000 graphics",
-    "price": 70000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+precision+5550+i7+10th"
-  },
-  {
     "id": "exuk-dell-precision5540i99th-60000",
     "brand": "Dell",
     "name": "Dell Precision 5540 I9 9Th 16/512Gb With 4Gb T2000 Nvidia Graphics",
@@ -828,16 +838,6 @@ const ALL_PRODUCTS = [
     "category": "exuk business dell",
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+7390+i5+8th.+8/256gb"
-  },
-  {
-    "id": "exuk-dell-latitude5300i58th-22000",
-    "brand": "Dell",
-    "name": "Dell Latitude 5300 I5 8Th 8/256 Touchscreen",
-    "specs": "latitude 5300 i5 8th 8/256 touchscreen",
-    "price": 22000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+latitude+5300+i5+8th"
   },
   {
     "id": "exuk-dell-5300i58th8256gb-20000",
