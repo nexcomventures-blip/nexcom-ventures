@@ -1345,6 +1345,66 @@ function setupDailySpecial() {
   "category": "exuk business lenovo",
   "badge": "restocked",
   "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+i7"
+  {
+    "id": "exuk-hp-840-g7-i5-10th-8-256",
+    "brand": "HP",
+    "name": "HP EliteBook 840 G7",
+    "specs": "Intel Core i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD",
+    "price": 33000,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+EliteBook+840+G7"
+  },
+  {
+    "id": "exuk-lenovo-t14s-i5-10th-8-256",
+    "brand": "Lenovo",
+    "name": "ThinkPad T14s",
+    "specs": "Intel Core i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD",
+    "price": 31000,
+    "category": "exuk business lenovo",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T14s"
+  },
+  {
+    "id": "exuk-lenovo-t480s-i5-8th-8-256-touch",
+    "brand": "Lenovo",
+    "name": "ThinkPad T480s (Touch)",
+    "specs": "Intel Core i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
+    "price": 28500,
+    "category": "exuk business lenovo",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+Touch"
+  },
+  {
+    "id": "exuk-lenovo-t480s-i5-8th-8-256-non-touch",
+    "brand": "Lenovo",
+    "name": "ThinkPad T480s",
+    "specs": "Intel Core i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
+    "price": 26500,
+    "category": "exuk business lenovo",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s"
+  },
+  {
+    "id": "exuk-lenovo-t480s-i5-7th-8-256-touch",
+    "brand": "Lenovo",
+    "name": "ThinkPad T480s i5 (7th Gen)",
+    "specs": "Intel Core i5 7th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
+    "price": 24000,
+    "category": "exuk business lenovo",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+i5+7th"
+  },
+  {
+    "id": "exuk-lenovo-t480s-i7-8th-8-256-non-touch",
+    "brand": "Lenovo",
+    "name": "ThinkPad T480s i7",
+    "specs": "Intel Core i7 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
+    "price": 29000,
+    "category": "exuk business lenovo",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+i7"
+  },
 }];
 
   if (p) {
