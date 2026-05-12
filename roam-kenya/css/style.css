@@ -575,7 +575,7 @@ h1, h2, h3, .brand {
     overflow: hidden;
 }
 
-.card-media img {
+.card-media img, .card-media video {
     position: absolute;
     top: 0;
     left: 0;
@@ -586,7 +586,7 @@ h1, h2, h3, .brand {
     transition: opacity 1.5s ease-in-out;
 }
 
-.card-media img.active {
+.card-media img.active, .card-media video.active {
     opacity: 1;
 }
 
