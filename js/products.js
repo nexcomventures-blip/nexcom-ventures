@@ -1,1425 +1,935 @@
 const ALL_PRODUCTS = [
-  {
-    "id": "feat-1",
-    "brand": "Lenovo",
-    "name": "Lenovo X390 I5 8Th 8/256Gb",
-    "specs": "x390 i5 8th 8/256gb",
-    "price": 22000,
-    "category": "exuk business lenovo featured",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x390+i5+8th+8/256gb"
-  },
-  {
-    "id": "feat-2",
-    "brand": "Lenovo",
-    "name": "Lenovo X13 I7 10Th 16/512Gb",
-    "specs": "x13 i7 10th 16/512gb",
-    "price": 32000,
-    "category": "exuk business lenovo featured",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x13+i7+10th+16/512gb"
-  },
-  {
-    "id": "feat-3",
-    "brand": "Dell",
-    "name": "Dell Xps 15 9570 I7 8Th 16/512Gb 4Gb Graphics",
-    "specs": "xps 15 9570 i7 8th 16/512gb 4gb Graphics",
-    "price": 50000,
-    "category": "exuk business dell featured",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+xps+15+9570+i7"
-  },
-  {
-    "id": "feat-4",
-    "brand": "Dell",
-    "name": "Dell Xps 13 9305 I7 11Th 16/512Gb",
-    "specs": "xps 13 9305 i7 11th 16/512gb",
-    "price": 60000,
-    "category": "exuk business dell featured",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+xps+13+9305+i7"
-  },
-  {
-    "id": "tmp-6898",
-    "brand": "Dell",
-    "name": "Dell 5320 I7 11Th 16/512Gb Touchscreen",
-    "specs": "5320 i7 11th 16/512gb touchscreen",
-    "price": 40000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+5320+i7+11th+16/512gb"
-  },
-  {
-    "id": "tmp-7844",
-    "brand": "Lenovo",
-    "name": "Lenovo X1 Carbon I7 8Th 16/512Gb.",
-    "specs": "x1 carbon i7 8th 16/512gb.",
-    "price": 35000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x1+carbon+i7+8th"
-  },
-  {
-    "id": "tmp-8108",
-    "brand": "Dell",
-    "name": "Dell Latitude 9410 2In1 I7 10Th 16/512",
-    "specs": "latitude 9410 2in1 i7 10th 16/512",
-    "price": 45000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+latitude+9410+2in1+i7"
-  },
-  {
-    "id": "tmp-5610",
-    "brand": "Dell",
-    "name": "Dell Xps 13 9305",
-    "specs": "xps 13 9305 i7 11th",
-    "price": 60000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+9305"
-  },
-  {
-    "id": "tmp-9209",
-    "brand": "Dell",
-    "name": "Dell Latitude 5400 i5",
-    "specs": "Intel Core i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 14\" FHD",
-    "price": 24000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=1000"
-  },
-  {
-    "id": "tmp-2594",
-    "brand": "Lenovo",
-    "name": "Lenovo Thinkbook 13S G2 Itl I7 11Th 16/512 Touchscreen",
-    "specs": "thinkbook 13s G2 ITL i7 11th 16/512 touchscreen",
-    "price": 50000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+thinkbook+13s+G2+ITL"
-  },
-  {
-    "id": "tmp-2095",
-    "brand": "Dell",
-    "name": "Dell Precision 5550 I7 10Th 16/512Gb With 4Gb Nvidia T1000 Graphics",
-    "specs": "precision 5550 i7 10th 16/512gb with 4gb nvidia T1000 graphics",
-    "price": 70000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+precision+5550+i7+10th"
-  },
-  {
-    "id": "tmp-2691",
-    "brand": "Dell",
-    "name": "Dell Latitude 5300 I5 8Th 8/256 Touchscreen",
-    "specs": "latitude 5300 i5 8th 8/256 touchscreen",
-    "price": 22000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+latitude+5300+i5+8th"
-  },
-  {
-    "id": "hp-elitebook-840-g10-brand-new",
-    "brand": "HP",
-    "name": "HP EliteBook 840 G10",
-    "specs": "Intel Core i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" WUXGA \u2022 BRAND NEW",
-    "price": 224000,
-    "category": "business hp",
-    "badge": "new",
-    "img": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08483861.png"
-  },
-  {
-    "id": "hp-zbook-firefly-g10-brand-new",
-    "brand": "HP",
-    "name": "HP ZBook Firefly G10",
-    "specs": "Intel Core i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 NVIDIA RTX A500 4GB \u2022 14\" \u2022 BRAND NEW",
-    "price": 235000,
-    "category": "business hp",
-    "badge": "new",
-    "img": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08483842.png"
-  },
-  {
-    "id": "tmp-8547",
-    "brand": "Dell",
-    "name": "Dell Xps 13 9320 I7 12Th 16/512Gb",
-    "specs": "xps 13 9320 i7 12th 16/512gb",
-    "price": 95000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+xps+13+9320+i7"
-  },
-  {
-    "id": "tmp-3831",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 M2 (2022)",
-    "specs": "Apple M2 Chip \u2022 8GB RAM \u2022 512GB SSD \u2022 Retina Display",
-    "price": 140000,
-    "category": "exuk apple macbook",
-    "badge": "hot",
-    "img": "https://www.apple.com/v/macbook-pro-13/m/images/overview/hero_endframe__e953p4v88ce2_large.jpg"
-  },
-  {
-    "id": "featured-dell-xps-9330",
-    "brand": "Dell",
-    "name": "Dell XPS 13 9330",
-    "specs": "Intel Core i7 13th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 InfinityEdge",
-    "price": 135000,
-    "category": "exuk business dell",
-    "badge": "new",
-    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9340/media-gallery/laptop-xps-13-9340-platinum-gallery-1.psd?fmt=png-alpha&wid=1000"
-  },
-  {
-    "id": "featured-dell-xps-9320",
-    "brand": "Dell",
-    "name": "Dell XPS 13 Plus 9320",
-    "specs": "Intel Core i7 12th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 OLED Touch",
-    "price": 110000,
-    "category": "exuk business dell",
-    "badge": "hot",
-    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9320/media-gallery/laptop-xps-9320-t-silver-gallery-1.psd?fmt=png-alpha&wid=1000"
-  },
-  {
-    "id": "featured-macbook-air-m2",
-    "brand": "Apple",
-    "name": "MacBook Air 13 M2 (2022)",
-    "specs": "Apple M2 Chip \u2022 8GB RAM \u2022 256GB SSD \u2022 Liquid Retina",
-    "price": 115000,
-    "category": "exuk apple macbook",
-    "badge": "new",
-    "img": "https://www.apple.com/v/macbook-air-m2/c/images/overview/hero/hero_static__f9clv6u74u6u_large.jpg"
-  },
-  {
-    "id": "featured-lenovo-x1-g10",
-    "brand": "Lenovo",
-    "name": "ThinkPad X1 Carbon Gen 10",
-    "specs": "Intel Core i7 12th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" Touch",
-    "price": 91000,
-    "category": "exuk business lenovo",
-    "badge": "hot",
-    "img": "https://p2-ofp.static.pub/fes/cms/2022/03/18/v7l068r6z9k4z9k4z9k4z9k4z9k4z9763529.png"
-  },
-  {
-    "id": "featured-dell-xps-9310",
-    "brand": "Dell",
-    "name": "Dell XPS 13 9310",
-    "specs": "Intel Core i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 FHD+ Touch",
-    "price": 85000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9310/media-gallery/laptop-xps-13-9310-silver-gallery-1.psd?fmt=png-alpha&wid=1000"
-  },
-  {
-    "id": "featured-hp840g8-i7",
-    "brand": "HP",
-    "name": "HP EliteBook 840 G8 i7",
-    "specs": "Intel Core i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" FHD",
-    "price": 63000,
-    "category": "exuk business hp",
-    "badge": "hot",
-    "img": "https://www.hp.com/ca-en/shop/Html/Merch/Images/c07010411_1750x1285.jpg"
-  },
-  {
-    "id": "featured-dell-xps-7390",
-    "brand": "Dell",
-    "name": "Dell XPS 13 7390",
-    "specs": "Intel Core i7 10th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 13.3\" FHD",
-    "price": 49500,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9315/media-gallery/laptop-xps-13-9315-silver-gallery-1.psd?fmt=png-alpha&wid=1000"
-  },
-  {
-    "id": "lenovo-t490",
-    "brand": "Lenovo",
-    "name": "ThinkPad T490",
-    "specs": "i5 8th Gen \u2022 16GB RAM \u2022 512GB SSD",
-    "price": 49500,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
-  },
-  {
-    "id": "lenovo-x280",
-    "brand": "Lenovo",
-    "name": "ThinkPad X280 i5",
-    "specs": "i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 29500,
-    "category": "exuk business lenovo",
-    "badge": "hot",
-    "img": "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
-  },
-  {
-    "id": "exuk-hp840g6",
-    "brand": "HP",
-    "name": "HP EliteBook 840 G6 i5",
-    "specs": "Intel Core i5 8th Gen \u2022 16GB RAM \u2022 256GB SSD \u2022 14\" FHD",
-    "price": 36500,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png"
-  },
-  {
-    "id": "part-mac-a2337-battery",
-    "brand": "Apple",
-    "name": "MacBook Air A2337 Battery",
-    "specs": "Original Replacement \u2022 For M1 MacBook Air",
-    "price": 14000,
-    "category": "parts battery apple macbook",
-    "badge": "new",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=MacBook+Battery"
-  },
-  {
-    "id": "part-mac-a2337-screen",
-    "brand": "Apple",
-    "name": "MacBook Air A2337 Screen",
-    "specs": "13.3\" Liquid Retina \u2022 M1 Replacement",
-    "price": 39900,
-    "category": "parts screen apple macbook",
-    "badge": "new",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=MacBook+Screen"
-  },
-  {
-    "id": "exuk-lenovo-x1yogai711th-60000",
-    "brand": "Lenovo",
-    "name": "Lenovo X1 Yoga I7 11Th 16/512Gb",
-    "specs": "x1 yoga i7 11th 16/512gb",
-    "price": 60000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x1+yoga+i7+11th"
-  },
-  {
-    "id": "exuk-lenovo-x1yogai78th-40000",
-    "brand": "Lenovo",
-    "name": "Lenovo X1 Yoga I7 8Th 16/512Gb Grey Metal",
-    "specs": "x1 yoga i7 8th 16/512gb grey metal",
-    "price": 40000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x1+yoga+i7+8th"
-  },
-  {
-    "id": "exuk-lenovo-x1yogai78th-35000",
-    "brand": "Lenovo",
-    "name": "Lenovo X1 Yoga I7 8Th 16/256Gb Grey Plastic",
-    "specs": "x1 yoga i7 8th 16/256gb grey plastic",
-    "price": 35000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x1+yoga+i7+8th"
-  },
-  {
-    "id": "exuk-lenovo-x1yogai78th-30000",
-    "brand": "Lenovo",
-    "name": "Lenovo X1 Yoga I7 8Th 8/256Gb",
-    "specs": "x1 yoga i7 8th 8/256gb",
-    "price": 30000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x1+yoga+i7+8th"
-  },
-  {
-    "id": "exuk-lenovo-x1yogai77th-26000",
-    "brand": "Lenovo",
-    "name": "Lenovo X1 Yoga I7 7Th 16/256Gb",
-    "specs": "x1 yoga i7 7th 16/256gb",
-    "price": 26000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x1+yoga+i7+7th"
-  },
-  {
-    "id": "exuk-lenovo-x1carboni710th-45000",
-    "brand": "Lenovo",
-    "name": "Lenovo X1 Carbon I7 10Th 16/512Gb",
-    "specs": "x1 carbon i7 10th 16/512gb",
-    "price": 45000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x1+carbon+i7+10th"
-  },
-  {
-    "id": "exuk-lenovo-x1carboni58th-32000",
-    "brand": "Lenovo",
-    "name": "Lenovo X1 Carbon I5 8Th 16/512Gb",
-    "specs": "x1 carbon i5 8th 16/512gb",
-    "price": 32000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x1+carbon+i5+8th"
-  },
-  {
-    "id": "exuk-lenovo-x1carboni77th-27000",
-    "brand": "Lenovo",
-    "name": "Lenovo X1 Carbon I7 7Th. 16/256Gb",
-    "specs": "x1 carbon i7 7th. 16/256gb",
-    "price": 27000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x1+carbon+i7+7th."
-  },
-  {
-    "id": "exuk-lenovo-p50i76th16512gb-35000",
-    "brand": "Lenovo",
-    "name": "Lenovo P50 I7 6Th 16/512Gb With 4Gb Nvidia",
-    "specs": "p50 i7 6th 16/512gb with 4gb nvidia",
-    "price": 35000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+p50+i7+6th+16/512gb"
-  },
-  {
-    "id": "exuk-lenovo-p51si77th16512gb-35000",
-    "brand": "Lenovo",
-    "name": "Lenovo P51S I7 7Th 16/512Gb 2Gb Graphics",
-    "specs": "p51s i7 7th 16/512gb 2gb graphics",
-    "price": 35000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+p51s+i7+7th+16/512gb"
-  },
-  {
-    "id": "exuk-lenovo-t15i710th16512gb-45000",
-    "brand": "Lenovo",
-    "name": "Lenovo T15 I7 10Th 16/512Gb 2Gb Graphics",
-    "specs": "t15 i7 10th 16/512gb 2gb graphics",
-    "price": 45000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+t15+i7+10th+16/512gb"
-  },
-  {
-    "id": "exuk-lenovo-t490si78th16512gb-35000",
-    "brand": "Lenovo",
-    "name": "Lenovo T490S I7 8Th 16/512Gb Touchscreen",
-    "specs": "t490s i7 8th 16/512gb touchscreen",
-    "price": 35000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+t490s+i7+8th+16/512gb"
-  },
-  {
-    "id": "exuk-lenovo-t490si58th8256gb-25000",
-    "brand": "Lenovo",
-    "name": "Lenovo T490S I5 8Th 8/256Gb",
-    "specs": "t490s i5 8th 8/256gb",
-    "price": 25000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+t490s+i5+8th+8/256gb"
-  },
-  {
-    "id": "exuk-lenovo-t490si58th16256gb-27000",
-    "brand": "Lenovo",
-    "name": "Lenovo T490S I5 8Th 16/256Gb Touchscreen",
-    "specs": "t490s i5 8th 16/256gb touchscreen",
-    "price": 27000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+t490s+i5+8th+16/256gb"
-  },
-  {
-    "id": "exuk-lenovo-t480si58th8256gb-23000",
-    "brand": "Lenovo",
-    "name": "Lenovo T480S I5 8Th 8/256Gb",
-    "specs": "t480s i5 8th 8/256gb",
-    "price": 23000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+t480s+i5+8th+8/256gb"
-  },
-  {
-    "id": "exuk-lenovo-x390i78th1625gb-26000",
-    "brand": "Lenovo",
-    "name": "Lenovo X390 I7 8Th 16/25Gb",
-    "specs": "x390 i7 8th 16/25gb",
-    "price": 26000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x390+i7+8th+16/25gb"
-  },
-  {
-    "id": "exuk-lenovo-yoga390i58th-25000",
-    "brand": "Lenovo",
-    "name": "Lenovo Yoga 390 I5 8Th 8/256Gb",
-    "specs": "yoga 390 i5 8th 8/256gb",
-    "price": 25000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+yoga+390+i5+8th"
-  },
-  {
-    "id": "exuk-lenovo-x390i516256gb-24000",
-    "brand": "Lenovo",
-    "name": "Lenovo X390 I5 16/256Gb",
-    "specs": "x390 i5 16/256gb",
-    "price": 24000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x390+i5+16/256gb"
-  },
-  {
-    "id": "exuk-lenovo-yoga380i78th-26000",
-    "brand": "Lenovo",
-    "name": "Lenovo Yoga 380 I7 8Th 8/256Gb",
-    "specs": "yoga 380 i7 8th 8/256gb",
-    "price": 26000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+yoga+380+i7+8th"
-  },
-  {
-    "id": "exuk-lenovo-yoga380i58th-25000",
-    "brand": "Lenovo",
-    "name": "Lenovo Yoga 380 I5 8Th 8/256Gb",
-    "specs": "yoga 380 i5 8th 8/256gb",
-    "price": 25000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+yoga+380+i5+8th"
-  },
-  {
-    "id": "exuk-lenovo-t14i710th8256-30000",
-    "brand": "Lenovo",
-    "name": "Lenovo T14 I7 10Th 8/256",
-    "specs": "T14 i7 10th 8/256",
-    "price": 30000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T14+i7+10th+8/256"
-  },
-  {
-    "id": "exuk-lenovo-x13i710th16512-35000",
-    "brand": "Lenovo",
-    "name": "Lenovo X13 I7 10Th 16/512 Touchscreen",
-    "specs": "X13 i7 10th 16/512 touchscreen",
-    "price": 35000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+X13+i7+10th+16/512"
-  },
-  {
-    "id": "exuk-lenovo-x280i57th8256gb-20000",
-    "brand": "Lenovo",
-    "name": "Lenovo X280 I5 7Th 8/256Gb",
-    "specs": "x280 i5 7th 8/256gb",
-    "price": 20000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x280+i5+7th+8/256gb"
-  },
-  {
-    "id": "exuk-lenovo-x280i58th8256gb-21000",
-    "brand": "Lenovo",
-    "name": "Lenovo X280 I5 8Th 8/256Gb",
-    "specs": "x280 i5 8th 8/256gb",
-    "price": 21000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x280+i5+8th+8/256gb"
-  },
-  {
-    "id": "exuk-lenovo-x280i58th16256gb-22000",
-    "brand": "Lenovo",
-    "name": "Lenovo X280 I5 8Th 16/256Gb",
-    "specs": "x280 i5 8th 16/256gb",
-    "price": 22000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x280+i5+8th+16/256gb"
-  },
-  {
-    "id": "exuk-lenovo-x270i56th8256gb-16000",
-    "brand": "Lenovo",
-    "name": "Lenovo X270 I5 6Th 8/256Gb",
-    "specs": "x270 i5 6th 8/256gb",
-    "price": 16000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x270+i5+6th+8/256gb"
-  },
-  {
-    "id": "exuk-lenovo-x260i76th8256gb-17000",
-    "brand": "Lenovo",
-    "name": "Lenovo X260 I7 6Th 8/256Gb",
-    "specs": "x260 i7 6th 8/256gb",
-    "price": 17000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x260+i7+6th+8/256gb"
-  },
-  {
-    "id": "exuk-lenovo-x250i75th8256gb-16000",
-    "brand": "Lenovo",
-    "name": "Lenovo X250 I7 5Th 8/256Gb",
-    "specs": "x250 i7 5th 8/256gb",
-    "price": 16000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x250+i7+5th+8/256gb"
-  },
-  {
-    "id": "exuk-lenovo-t470si57th8256gb-21000",
-    "brand": "Lenovo",
-    "name": "Lenovo T470S I5 7Th 8/256Gb Touchscreen",
-    "specs": "t470s i5 7th 8/256gb touchscreen",
-    "price": 21000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+t470s+i5+7th+8/256gb"
-  },
-  {
-    "id": "exuk-lenovo-t470si57th8256gb-19500",
-    "brand": "Lenovo",
-    "name": "Lenovo T470S I5 7Th 8/256Gb",
-    "specs": "t470s i5 7th 8/256gb",
-    "price": 19500,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+t470s+i5+7th+8/256gb"
-  },
-  {
-    "id": "exuk-lenovo-t470si56th8256gb-18500",
-    "brand": "Lenovo",
-    "name": "Lenovo T470S I5 6Th 8/256Gb",
-    "specs": "t470s i5 6th 8/256gb",
-    "price": 18500,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+t470s+i5+6th+8/256gb"
-  },
-  {
-    "id": "exuk-lenovo-t470si77th8256gb-22000",
-    "brand": "Lenovo",
-    "name": "Lenovo T470S I7 7Th 8/256Gb Touchscreen",
-    "specs": "t470s i7 7th 8/256gb touchscreen",
-    "price": 22000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+t470s+i7+7th+8/256gb"
-  },
-  {
-    "id": "exuk-lenovo-t470si76th8256gb-20000",
-    "brand": "Lenovo",
-    "name": "Lenovo T470S I7 6Th 8/256Gb",
-    "specs": "t470s i7 6th 8/256gb",
-    "price": 20000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+t470s+i7+6th+8/256gb"
-  },
-  {
-    "id": "exuk-lenovo-t460si56th8256gb-18000",
-    "brand": "Lenovo",
-    "name": "Lenovo T460S I5 6Th 8/256Gb Touchscreen",
-    "specs": "t460s i5 6th 8/256gb touchscreen",
-    "price": 18000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+t460s+i5+6th+8/256gb"
-  },
-  {
-    "id": "exuk-lenovo-t460si56th8256gb-17000",
-    "brand": "Lenovo",
-    "name": "Lenovo T460S I5 6Th 8/256Gb",
-    "specs": "t460s i5 6th 8/256gb",
-    "price": 17000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+t460s+i5+6th+8/256gb"
-  },
-  {
-    "id": "exuk-lenovo-t460si76th8256gb-19000",
-    "brand": "Lenovo",
-    "name": "Lenovo T460S I7 6Th 8/256Gb",
-    "specs": "t460s i7 6th 8/256gb",
-    "price": 19000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+t460s+i7+6th+8/256gb"
-  },
-  {
-    "id": "exuk-lenovo-yogan23scel4128gb-12000",
-    "brand": "Lenovo",
-    "name": "Lenovo Yoga N23S Cel 4/128Gb",
-    "specs": "yoga n23s cel 4/128gb",
-    "price": 12000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+yoga+n23s+cel+4/128gb"
-  },
-  {
-    "id": "exuk-lenovo-11e4128gb-10000",
-    "brand": "Lenovo",
-    "name": "Lenovo 11E 4/128Gb",
-    "specs": "11e 4/128gb",
-    "price": 10000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+11e+4/128gb"
-  },
-  {
-    "id": "exuk-lenovo-11ecorem58128gb-13000",
-    "brand": "Lenovo",
-    "name": "Lenovo 11E Core M5 8/128Gb",
-    "specs": "11e core m5 8/128gb",
-    "price": 13000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+11e+core+m5+8/128gb"
-  },
-  {
-    "id": "exuk-lenovo-yoga11e4128gbtouchscreen-13000",
-    "brand": "Lenovo",
-    "name": "Lenovo Yoga 11E 4/128Gb Touchscreen",
-    "specs": "yoga 11e 4/128gb touchscreen",
-    "price": 13000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+yoga+11e+4/128gb+touchscreen"
-  },
-  {
-    "id": "exuk-dell-precision3561i711th-55000",
-    "brand": "Dell",
-    "name": "Dell Precision 3561 I7 11Th 16/512Gb With 4Gb Nvidia Graphics",
-    "specs": "precision 3561 i7 11th 16/512gb with 4gb nvidia graphics",
-    "price": 55000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+precision+3561+i7+11th"
-  },
-  {
-    "id": "exuk-dell-precision5540i99th-60000",
-    "brand": "Dell",
-    "name": "Dell Precision 5540 I9 9Th 16/512Gb With 4Gb T2000 Nvidia Graphics",
-    "specs": "precision 5540 i9 9th 16/512gb with 4gb T2000 nvidia graphics",
-    "price": 60000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+precision+5540+i9+9th"
-  },
-  {
-    "id": "exuk-dell-precision5540xeon16512gb-55000",
-    "brand": "Dell",
-    "name": "Dell Precision 5540 Xeon 16/512Gb With 4Gb Nvidia Graphics",
-    "specs": "precision 5540 xeon 16/512gb with 4gb nvidia graphics",
-    "price": 55000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+precision+5540+xeon+16/512gb"
-  },
-  {
-    "id": "exuk-dell-precision5540i79th-55000",
-    "brand": "Dell",
-    "name": "Dell Precision 5540 I7 9Th 16/512Gb With 4Gb Nvidia Graphics",
-    "specs": "precision 5540 i7 9th 16/512gb with 4gb nvidia graphics",
-    "price": 55000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+precision+5540+i7+9th"
-  },
-  {
-    "id": "exuk-dell-precision5530i78th-50000",
-    "brand": "Dell",
-    "name": "Dell Precision 5530 I7 8Th 16/512Gb With 4Gb Nvidia Graphics Ksh",
-    "specs": "precision 5530 i7 8th 16/512gb with 4gb nvidia graphics ksh",
-    "price": 50000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+precision+5530+i7+8th"
-  },
-  {
-    "id": "exuk-dell-inspiron15x360i7-45000",
-    "brand": "Dell",
-    "name": "Dell Inspiron 15 X360 I7 8Th 16/512Gb With 2Gb Nvidia Graphics",
-    "specs": "inspiron 15 x360 i7 8th 16/512gb with 2gb nvidia graphics",
-    "price": 45000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+inspiron+15+x360+i7"
-  },
-  {
-    "id": "exuk-dell-inspiron7375ryzen7-30000",
-    "brand": "Dell",
-    "name": "Dell Inspiron 7375 Ryzen 7 8/256Gb X360 Touchscreen",
-    "specs": "inspiron 7375 ryzen 7 8/256gb x360 touchscreen",
-    "price": 30000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+inspiron+7375+ryzen+7"
-  },
-  {
-    "id": "exuk-dell-inspironryzen58256gb-26000",
-    "brand": "Dell",
-    "name": "Dell Inspiron Ryzen 5 8/256Gb X360 Touchscreen",
-    "specs": "inspiron ryzen 5 8/256gb x360 touchscreen",
-    "price": 26000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+inspiron+ryzen+5+8/256gb"
-  },
-  {
-    "id": "exuk-dell-latitude9420i711th-55000",
-    "brand": "Dell",
-    "name": "Dell Latitude 9420 I7 11Th 16/512Gb.",
-    "specs": "latitude 9420 i7 11th 16/512gb.",
-    "price": 55000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+latitude+9420+i7+11th"
-  },
-  {
-    "id": "exuk-dell-xps139330i7-110000",
-    "brand": "Dell",
-    "name": "Dell Xps 13 9330 I7 16/512Gb",
-    "specs": "xps 13 9330 i7 16/512gb",
-    "price": 110000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+xps+13+9330+i7"
-  },
-  {
-    "id": "exuk-dell-xps139310i7-65000",
-    "brand": "Dell",
-    "name": "Dell Xps 13 9310 I7 11Th 16/512Gb",
-    "specs": "xps 13 9310 i7 11th 16/512gb",
-    "price": 65000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+xps+13+9310+i7"
-  },
-  {
-    "id": "exuk-dell-delxps137390-50000",
-    "brand": "Dell",
-    "name": "Dell Del Xps 13 7390 I7 10Th 16/512Gb",
-    "specs": "del xps 13 7390 i7 10th 16/512gb",
-    "price": 50000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+del+xps+13+7390"
-  },
-  {
-    "id": "exuk-dell-xps139380i7-40000",
-    "brand": "Dell",
-    "name": "Dell Xps 13 9380 I7 16/512Gb",
-    "specs": "xps 13 9380 i7 16/512gb",
-    "price": 40000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+xps+13+9380+i7"
-  },
-  {
-    "id": "exuk-dell-latitude52902in1i5-25000",
-    "brand": "Dell",
-    "name": "Dell Latitude 5290 2In1 I5 8Th 8/256 Detachable",
-    "specs": "latitude 5290 2in1 i5 8th 8/256 detachable",
-    "price": 25000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+latitude+5290+2in1+i5"
-  },
-  {
-    "id": "exuk-dell-7400i78th16512gb-40000",
-    "brand": "Dell",
-    "name": "Dell 7400 I7 8Th 16/512Gb X360 Touchscreen",
-    "specs": "7400 i7 8th 16/512gb x360 touchscreen",
-    "price": 40000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+7400+i7+8th+16/512gb"
-  },
-  {
-    "id": "exuk-dell-5320i511th8256gb-25000",
-    "brand": "Dell",
-    "name": "Dell 5320 I5 11Th 8/256Gb",
-    "specs": "5320 i5 11th 8/256gb",
-    "price": 25000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+5320+i5+11th+8/256gb"
-  },
-  {
-    "id": "exuk-dell-7390i58th8256gb-25000",
-    "brand": "Dell",
-    "name": "Dell 7390 I5 8Th. 8/256Gb X360 Touchscreen",
-    "specs": "7390 i5 8th. 8/256gb x360 touchscreen",
-    "price": 25000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+7390+i5+8th.+8/256gb"
-  },
-  {
-    "id": "exuk-dell-5300i58th8256gb-20000",
-    "brand": "Dell",
-    "name": "Dell 5300 I5 8Th 8/256Gb",
-    "specs": "5300 i5 8th 8/256gb",
-    "price": 20000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+5300+i5+8th+8/256gb"
-  },
-  {
-    "id": "exuk-dell-5300i78th8256-25000",
-    "brand": "Dell",
-    "name": "Dell 5300 I7 8Th 8/256",
-    "specs": "5300 i7 8th 8/256",
-    "price": 25000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+5300+i7+8th+8/256"
-  },
-  {
-    "id": "exuk-dell-7300i58th8256gb-18000",
-    "brand": "Dell",
-    "name": "Dell 7300 I5 8Th 8/256Gb",
-    "specs": "7300 i5 8th 8/256gb",
-    "price": 18000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+7300+i5+8th+8/256gb"
-  },
-  {
-    "id": "exuk-dell-7250i75th8256gb-14000",
-    "brand": "Dell",
-    "name": "Dell 7250 I7 5Th 8/256Gb",
-    "specs": "7250 i7 5th 8/256gb",
-    "price": 14000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+7250+i7+5th+8/256gb"
-  },
-  {
-    "id": "exuk-dell-acerlaptopacertravelmate-13000",
-    "brand": "Dell",
-    "name": "Dell Acer Laptop Acer Travelmate 4/128Gb X360 Touchscreen",
-    "specs": "Acer laptop acer travelmate 4/128gb x360 touchscreen",
-    "price": 13000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+Acer+laptop+acer+travelmate"
-  },
-  {
-    "id": "exuk-lenovo-lenovox1yoga-60000",
-    "brand": "Lenovo",
-    "name": "Lenovo X1 Yoga",
-    "specs": "x1 yoga i7 11th 16/512gb",
-    "price": 60000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+Yoga"
-  },
-  {
-    "id": "exuk-lenovo-lenovox1yoga-40000",
-    "brand": "Lenovo",
-    "name": "Lenovo X1 Yoga",
-    "specs": "x1 yoga i7 8th 16/512gb",
-    "price": 40000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+Yoga"
-  },
-  {
-    "id": "exuk-lenovo-lenovox1yoga-35000",
-    "brand": "Lenovo",
-    "name": "Lenovo X1 Yoga",
-    "specs": "x1 yoga i7 8th 16/256gb",
-    "price": 35000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+Yoga"
-  },
-  {
-    "id": "exuk-lenovo-lenovox1carbo-35000",
-    "brand": "Lenovo",
-    "name": "Lenovo X1 Carbon",
-    "specs": "x1 carbon i7 8th",
-    "price": 35000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+Carbon"
-  },
-  {
-    "id": "exuk-lenovo-lenovop50-35000",
-    "brand": "Lenovo",
-    "name": "Lenovo P50",
-    "specs": "p50 i7 6th 16/512gb",
-    "price": 35000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+P50"
-  },
-  {
-    "id": "exuk-lenovo-lenovop51s-35000",
-    "brand": "Lenovo",
-    "name": "Lenovo P51S",
-    "specs": "p51s i7 7th 16/512gb",
-    "price": 35000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+P51S"
-  },
-  {
-    "id": "exuk-lenovo-lenovot15-45000",
-    "brand": "Lenovo",
-    "name": "Lenovo T15",
-    "specs": "t15 i7 10th 16/512gb",
-    "price": 45000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T15"
-  },
-  {
-    "id": "exuk-lenovo-lenovot490s-35000",
-    "brand": "Lenovo",
-    "name": "Lenovo T490S",
-    "specs": "t490s i7 8th 16/512gb",
-    "price": 35000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T490S"
-  },
-  {
-    "id": "exuk-lenovo-lenovot490s-27000",
-    "brand": "Lenovo",
-    "name": "Lenovo T490S",
-    "specs": "t490s i5 8th 16/256gb",
-    "price": 27000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T490S"
-  },
-  {
-    "id": "exuk-lenovo-lenovoyoga390-25000",
-    "brand": "Lenovo",
-    "name": "Lenovo Yoga 390",
-    "specs": "yoga 390 i5 8th",
-    "price": 25000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+390"
-  },
-  {
-    "id": "exuk-lenovo-lenovox13-35000",
-    "brand": "Lenovo",
-    "name": "Lenovo X13",
-    "specs": "X13 i7 10th 16/512",
-    "price": 35000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+X13"
-  },
-  {
-    "id": "exuk-lenovo-lenovot470s-21000",
-    "brand": "Lenovo",
-    "name": "Lenovo T470S",
-    "specs": "t470s i5 7th 8/256gb",
-    "price": 21000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T470S"
-  },
-  {
-    "id": "exuk-lenovo-lenovot470s-22000",
-    "brand": "Lenovo",
-    "name": "Lenovo T470S",
-    "specs": "t470s i7 7th 8/256gb",
-    "price": 22000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T470S"
-  },
-  {
-    "id": "exuk-lenovo-lenovot460s-18000",
-    "brand": "Lenovo",
-    "name": "Lenovo T460S",
-    "specs": "t460s i5 6th 8/256gb",
-    "price": 18000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T460S"
-  },
-  {
-    "id": "exuk-lenovo-lenovoyoga11e-13000",
-    "brand": "Lenovo",
-    "name": "Lenovo Yoga 11E 4/128Gb",
-    "specs": "yoga 11e 4/128gb",
-    "price": 13000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+4/128Gb"
-  },
-  {
-    "id": "exuk-dell-dellxps15957-50000",
-    "brand": "Dell",
-    "name": "Dell Xps 15 9570",
-    "specs": "xps 15 9570 i7 8th 16/512gb",
-    "price": 50000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+9570"
-  },
-  {
-    "id": "exuk-dell-dell8256gbx3-30000",
-    "brand": "Dell",
-    "name": "Dell 8/256Gb X360",
-    "specs": "8/256gb x360",
-    "price": 30000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+X360"
-  },
-  {
-    "id": "exuk-dell-dellinspiron-26000",
-    "brand": "Dell",
-    "name": "Dell Inspiron",
-    "specs": "inspiron ryzen 5 8/256gb",
-    "price": 26000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+Inspiron"
-  },
-  {
-    "id": "exuk-dell-dell7400-40000",
-    "brand": "Dell",
-    "name": "Dell 7400",
-    "specs": "7400 i7 8th 16/512gb",
-    "price": 40000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+7400"
-  },
-  {
-    "id": "exuk-dell-dell5320-40000",
-    "brand": "Dell",
-    "name": "Dell 5320",
-    "specs": "5320 i7 11th 16/512gb",
-    "price": 40000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+5320"
-  },
-  {
-    "id": "exuk-dell-dell7390-25000",
-    "brand": "Dell",
-    "name": "Dell 7390",
-    "specs": "7390 i5 8th. 8/256gb",
-    "price": 25000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+7390"
-  },
-  {
-    "id": "exuk-dell-delllatitude5-22000",
-    "brand": "Dell",
-    "name": "Dell Latitude 5300",
-    "specs": "latitude 5300 i5 8th 8/256",
-    "price": 22000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+5300"
-  },
-  {
-    "id": "exuk-acer-acertravelmate-13000",
-    "brand": "Acer",
-    "name": "Acer Travelmate 4/128Gb",
-    "specs": "travelmate 4/128gb",
-    "price": 13000,
-    "category": "exuk business acer",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Acer+4/128Gb"
-  },
-  {
-    "id": "hpe-dl380-gen11-16core-elite",
-    "brand": "HPE",
-    "name": "HPE ProLiant DL380 Gen11 (16-Core)",
-    "specs": "Intel Xeon Gold 5416S \u2022 32GB RAM \u2022 2U Rack \u2022 3 Year Warranty \u2022 BRAND NEW",
-    "price": 945000,
-    "category": "server enterprise hpe",
-    "badge": "elite",
-    "img": "https://webobjects2.cdw.com/is/image/CDW/7931767?$product-main$"
-  },
-  {
-    "id": "dell-r360-rack-elite",
-    "brand": "Dell",
-    "name": "Dell PowerEdge R360 Rack Server",
-    "specs": "Intel Xeon E-2434 \u2022 32GB RAM \u2022 480GB SSD \u2022 1U Rack \u2022 3 Year Warranty \u2022 BRAND NEW",
-    "price": 285000,
-    "category": "server enterprise dell",
-    "badge": "elite",
-    "img": "https://i.dell.com/is/image/DellContent/content/dam/images/products/servers/poweredge/r360/dell-per360-8x2-5-no-bezel-lf-31.psd?fmt=png-alpha&wid=1653"
-  },
-  {
-    "id": "dell-t160-tower-elite",
-    "brand": "Dell",
-    "name": "Dell PowerEdge T160 Tower Server",
-    "specs": "Intel Xeon E-2414 \u2022 16GB RAM \u2022 2TB HDD \u2022 Tower \u2022 3 Year Warranty \u2022 BRAND NEW",
-    "price": 255000,
-    "category": "server enterprise dell",
-    "badge": "elite",
-    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png"
-  },
-  {
-    "id": "thinkpad-l14-gen5-elite",
-    "brand": "Lenovo",
-    "name": "ThinkPad L14 Gen 5",
-    "specs": "Intel Core Ultra 5 \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" WUXGA \u2022 3 Year Warranty \u2022 BRAND NEW",
-    "price": 215000,
-    "category": "business lenovo",
-    "badge": "elite",
-    "img": "https://p3-ofp.static.pub/fes/cms/2023/02/09/p9x68r6z9k4z9k4z9k4z9k4z9k4z9763529.png"
-  },
-  {
-    "id": "latitude-3450-i7-elite",
-    "brand": "Dell",
-    "name": "Dell Latitude 3450 i7",
-    "specs": "Intel Core i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" FHD \u2022 3 Year Warranty \u2022 BRAND NEW",
-    "price": 198000,
-    "category": "business dell",
-    "badge": "elite",
-    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-computing/laptops/latitude/3450/media-gallery/laptop-latitude-3450-non-touch-plastic-gray-gallery-1.psd?fmt=png-alpha&wid=500"
-  },
-  {
-  "id": "hp-840g7-i5-10th",
-  "brand": "HP",
-  "name": "HP EliteBook 840 G7 i5",
-  "specs": "i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD",
-  "price": 33000,
-  "category": "exuk business hp",
-  "badge": "restocked",
-  "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+840+G7"
-},
-  {
-  "id": "lenovo-t14s-i5-10th",
-  "brand": "Lenovo",
-  "name": "Lenovo ThinkPad T14s i5",
-  "specs": "i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD",
-  "price": 31000,
-  "category": "exuk business lenovo",
-  "badge": "restocked",
-  "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T14s"
-},
-  {
-  "id": "lenovo-t480s-i5-8th-touch",
-  "brand": "Lenovo",
-  "name": "Lenovo ThinkPad T480s i5 Touch",
-  "specs": "i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
-  "price": 28500,
-  "category": "exuk business lenovo",
-  "badge": "restocked",
-  "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+Touch"
-},
-  {
-  "id": "lenovo-t480s-i5-8th-nontouch",
-  "brand": "Lenovo",
-  "name": "Lenovo ThinkPad T480s i5 Non-Touch",
-  "specs": "i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Non-Touch",
-  "price": 26500,
-  "category": "exuk business lenovo",
-  "badge": "restocked",
-  "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+Non-Touch"
-},
-  {
-  "id": "lenovo-t480s-i5-7th-touch",
-  "brand": "Lenovo",
-  "name": "Lenovo ThinkPad T480s i5 7th Gen Touch",
-  "specs": "i5 7th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
-  "price": 24000,
-  "category": "exuk business lenovo",
-  "badge": "restocked",
-  "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+i5+7th"
-},
-  {
-  "path_id": "lenovo-t480s-i7-8th-nontouch",
-  "id": "lenovo-t480s-i7-8th-nontouch",
-  "brand": "Lenovo",
-  "name": "Lenovo ThinkPad T480s i7 Non-Touch",
-  "specs": "i7 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Non-Touch",
-  "price": 29000,
-  "category": "exuk business lenovo",
-  "badge": "restocked",
-  "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+i7"
-  },
-  {
-    "id": "exuk-hp-840-g7-i5-10th-8-256",
-    "brand": "HP",
-    "name": "HP EliteBook 840 G7",
-    "specs": "Intel Core i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 33000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+EliteBook+840+G7"
-  },
-  {
-    "id": "exuk-lenovo-t14s-i5-10th-8-256",
-    "brand": "Lenovo",
-    "name": "ThinkPad T14s",
-    "specs": "Intel Core i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 31000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T14s"
-  },
-  {
-    "id": "exuk-lenovo-t480s-i5-8th-8-256-touch",
-    "brand": "Lenovo",
-    "name": "ThinkPad T480s (Touch)",
-    "specs": "Intel Core i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
-    "price": 28500,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+Touch"
-  },
-  {
-    "id": "exuk-lenovo-t480s-i5-8th-8-256-non-touch",
-    "brand": "Lenovo",
-    "name": "ThinkPad T480s",
-    "specs": "Intel Core i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 26500,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s"
-  },
-  {
-    "id": "exuk-lenovo-t480s-i5-7th-8-256-touch",
-    "brand": "Lenovo",
-    "name": "ThinkPad T480s i5 (7th Gen)",
-    "specs": "Intel Core i5 7th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
-    "price": 24000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+i5+7th"
-  },
-  {
-    "id": "exuk-lenovo-t480s-i7-8th-8-256-non-touch",
-    "brand": "Lenovo",
-    "name": "ThinkPad T480s i7",
-    "specs": "Intel Core i7 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 29000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+i7"
-  },
-  {
-    "id": "exuk-hp-pb640g9-i5-12-36000",
-    "brand": "HP",
-    "name": "HP ProBook 640 G9",
-    "specs": "Intel Core i5 12th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 36000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+640+G9"
-  },
-  {
-    "id": "exuk-hp-pb630g8-i5-11-touch-32500",
-    "brand": "HP",
-    "name": "HP ProBook 630 G8 Touch",
-    "specs": "Intel Core i5 11th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
-    "price": 32500,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+630+G8+Touch"
-  },
-  {
-    "id": "exuk-hp-pb430g7-i5-10-26000",
-    "brand": "HP",
-    "name": "HP ProBook 430 G7",
-    "specs": "Intel Core i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 26000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+430+G7"
-  },
-  {
-    "id": "exuk-hp-pb430g5-i5-8-22000",
-    "brand": "HP",
-    "name": "HP ProBook 430 G5",
-    "specs": "Intel Core i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 22000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+430+G5"
-  },
-  {
-    "id": "exuk-hp-pb11g4x360-i5-8-19500",
-    "brand": "HP",
-    "name": "HP ProBook 11 G4 x360",
-    "specs": "Intel Core i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
-    "price": 19500,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+11+G4+x360"
-  },
-  {
-    "id": "exuk-hp-pb11g2x360-i5-7-18000",
-    "brand": "HP",
-    "name": "HP ProBook 11 G2 x360",
-    "specs": "Intel Core i5 7th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
-    "price": 18000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+11+G2+x360"
-  },
-  {
-    "id": "exuk-hp-pb640g3-i5-7-19500",
-    "brand": "HP",
-    "name": "HP ProBook 640 G3",
-    "specs": "Intel Core i5 7th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 19500,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+640+G3"
-  },
-  {
-    "id": "exuk-hp-pb640g2-i5-6-16500",
-    "brand": "HP",
-    "name": "HP ProBook 640 G2",
-    "specs": "Intel Core i5 6th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 16500,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+640+G2"
-  },
-  {
-    "id": "exuk-hp-pb440g3-i5-6-touch-20000",
-    "brand": "HP",
-    "name": "HP ProBook 440 G3 Touch",
-    "specs": "Intel Core i5 6th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
-    "price": 20000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+440+G3+Touch"
-  },
-  {
-    "id": "exuk-hp-pb440g3-i5-6-18000",
-    "brand": "HP",
-    "name": "HP ProBook 440 G3",
-    "specs": "Intel Core i5 6th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 18000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+440+G3"
-  },
-  {
-    "id": "exuk-hp-pb430g3-i5-6-touch-20000",
-    "brand": "HP",
-    "name": "HP ProBook 430 G3 Touch",
-    "specs": "Intel Core i5 6th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
-    "price": 20000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+430+G3+Touch"
-  },
-  {
-    "id": "exuk-hp-pb430g3-i5-6-18000",
-    "brand": "HP",
-    "name": "HP ProBook 430 G3",
-    "specs": "Intel Core i5 6th Gen \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 18000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+430+G3"
-  },
+    {
+        "id": "feat-1",
+        "brand": "Lenovo",
+        "name": "Lenovo X390 I5 8Th 8/256Gb",
+        "specs": "x390 i5 8th 8/256gb",
+        "price": 22000,
+        "category": "exuk business lenovo featured",
+        "badge": "exuk",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x390+i5+8th+8/256gb"
+    },
+    {
+        "id": "feat-2",
+        "brand": "Lenovo",
+        "name": "Lenovo X13 I7 10Th 16/512Gb",
+        "specs": "x13 i7 10th 16/512gb",
+        "price": 32000,
+        "category": "exuk business lenovo featured",
+        "badge": "exuk",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x13+i7+10th+16/512gb"
+    },
+    {
+        "id": "feat-3",
+        "brand": "Dell",
+        "name": "Dell Xps 15 9570 I7 8Th 16/512Gb 4Gb Graphics",
+        "specs": "xps 15 9570 i7 8th 16/512gb 4gb Graphics",
+        "price": 50000,
+        "category": "exuk business dell featured",
+        "badge": "exuk",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+xps+15+9570+i7"
+    },
+    {
+        "id": "feat-4",
+        "brand": "Dell",
+        "name": "Dell Xps 13 9305 I7 11Th 16/512Gb",
+        "specs": "xps 13 9305 i7 11th 16/512gb",
+        "price": 60000,
+        "category": "exuk business dell featured",
+        "badge": "exuk",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+xps+13+9305+i7"
+    },
+    {
+        "id": "tmp-6898",
+        "brand": "Dell",
+        "name": "Dell 5320 I7 11Th 16/512Gb Touchscreen",
+        "specs": "5320 i7 11th 16/512gb touchscreen",
+        "price": 40000,
+        "category": "exuk business dell",
+        "badge": "exuk",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+5320+i7+11th+16/512gb"
+    },
+    {
+        "id": "tmp-7844",
+        "brand": "Lenovo",
+        "name": "Lenovo X1 Carbon I7 8Th 16/512Gb.",
+        "specs": "x1 carbon i7 8th 16/512gb.",
+        "price": 35000,
+        "category": "exuk business lenovo",
+        "badge": "exuk",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x1+carbon+i7+8th"
+    },
+    {
+        "id": "tmp-8108",
+        "brand": "Dell",
+        "name": "Dell Latitude 9410 2In1 I7 10Th 16/512",
+        "specs": "latitude 9410 2in1 i7 10th 16/512",
+        "price": 45000,
+        "category": "exuk business dell",
+        "badge": "exuk",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+latitude+9410+2in1+i7"
+    },
+    {
+        "id": "tmp-5610",
+        "brand": "Dell",
+        "name": "Dell Xps 13 9305",
+        "specs": "xps 13 9305 i7 11th",
+        "price": 60000,
+        "category": "exuk business dell",
+        "badge": "exuk",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+9305"
+    },
+    {
+        "id": "tmp-9209",
+        "brand": "Dell",
+        "name": "Dell Latitude 5400 i5",
+        "specs": "Intel Core i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 14\" FHD",
+        "price": 24000,
+        "category": "exuk business dell",
+        "badge": "exuk",
+        "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/latitude-5440-laptop-gallery-1.psd?fmt=png-alpha&wid=1000"
+    },
+    {
+        "id": "tmp-2594",
+        "brand": "Lenovo",
+        "name": "Lenovo Thinkbook 13S G2 Itl I7 11Th 16/512 Touchscreen",
+        "specs": "thinkbook 13s G2 ITL i7 11th 16/512 touchscreen",
+        "price": 50000,
+        "category": "exuk business lenovo",
+        "badge": "exuk",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+thinkbook+13s+G2+ITL"
+    },
+    {
+        "id": "tmp-2095",
+        "brand": "Dell",
+        "name": "Dell Precision 5550 I7 10Th 16/512Gb With 4Gb Nvidia T1000 Graphics",
+        "specs": "precision 5550 i7 10th 16/512gb with 4gb nvidia T1000 graphics",
+        "price": 70000,
+        "category": "exuk business dell",
+        "badge": "exuk",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+precision+5550+i7+10th"
+    },
+    {
+        "id": "tmp-2691",
+        "brand": "Dell",
+        "name": "Dell Latitude 5300 I5 8Th 8/256 Touchscreen",
+        "specs": "latitude 5300 i5 8th 8/256 touchscreen",
+        "price": 22000,
+        "category": "exuk business dell",
+        "badge": "exuk",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+latitude+5300+i5+8th"
+    },
+    {
+        "id": "hp-elitebook-840-g10-brand-new",
+        "brand": "HP",
+        "name": "HP EliteBook 840 G10",
+        "specs": "Intel Core i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" WUXGA \u2022 BRAND NEW",
+        "price": 224000,
+        "category": "business hp",
+        "badge": "new",
+        "img": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08483861.png"
+    },
+    {
+        "id": "hp-zbook-firefly-g10-brand-new",
+        "brand": "HP",
+        "name": "HP ZBook Firefly G10",
+        "specs": "Intel Core i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 NVIDIA RTX A500 4GB \u2022 14\" \u2022 BRAND NEW",
+        "price": 235000,
+        "category": "business hp",
+        "badge": "new",
+        "img": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08483842.png"
+    },
+    {
+        "id": "tmp-8547",
+        "brand": "Dell",
+        "name": "Dell Xps 13 9320 I7 12Th 16/512Gb",
+        "specs": "xps 13 9320 i7 12th 16/512gb",
+        "price": 95000,
+        "category": "exuk business dell",
+        "badge": "exuk",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+xps+13+9320+i7"
+    },
+    {
+        "id": "tmp-3831",
+        "brand": "Apple",
+        "name": "MacBook Pro 13 M2 (2022)",
+        "specs": "Apple M2 Chip \u2022 8GB RAM \u2022 512GB SSD \u2022 Retina Display",
+        "price": 140000,
+        "category": "exuk apple macbook",
+        "badge": "hot",
+        "img": "https://www.apple.com/v/macbook-pro-13/m/images/overview/hero_endframe__e953p4v88ce2_large.jpg"
+    },
+    {
+        "id": "featured-dell-xps-9330",
+        "brand": "Dell",
+        "name": "Dell XPS 13 9330",
+        "specs": "Intel Core i7 13th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 InfinityEdge",
+        "price": 135000,
+        "category": "exuk business dell",
+        "badge": "new",
+        "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9340/media-gallery/laptop-xps-13-9340-platinum-gallery-1.psd?fmt=png-alpha&wid=1000"
+    },
+    {
+        "id": "featured-dell-xps-9320",
+        "brand": "Dell",
+        "name": "Dell XPS 13 Plus 9320",
+        "specs": "Intel Core i7 12th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 OLED Touch",
+        "price": 110000,
+        "category": "exuk business dell",
+        "badge": "hot",
+        "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9320/media-gallery/laptop-xps-9320-t-silver-gallery-1.psd?fmt=png-alpha&wid=1000"
+    },
+    {
+        "id": "featured-macbook-air-m2",
+        "brand": "Apple",
+        "name": "MacBook Air 13 M2 (2022)",
+        "specs": "Apple M2 Chip \u2022 8GB RAM \u2022 256GB SSD \u2022 Liquid Retina",
+        "price": 115000,
+        "category": "exuk apple macbook",
+        "badge": "new",
+        "img": "https://www.apple.com/v/macbook-air-m2/c/images/overview/hero/hero_static__f9clv6u74u6u_large.jpg"
+    },
+    {
+        "id": "featured-lenovo-x1-g10",
+        "brand": "Lenovo",
+        "name": "ThinkPad X1 Carbon Gen 10",
+        "specs": "Intel Core i7 12th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" Touch",
+        "price": 91000,
+        "category": "exuk business lenovo",
+        "badge": "hot",
+        "img": "https://p2-ofp.static.pub/fes/cms/2022/03/18/v7l068r6z9k4z9k4z9k4z9k4z9k4z9763529.png"
+    },
+    {
+        "id": "featured-dell-xps-9310",
+        "brand": "Dell",
+        "name": "Dell XPS 13 9310",
+        "specs": "Intel Core i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 FHD+ Touch",
+        "price": 85000,
+        "category": "exuk business dell",
+        "badge": "exuk",
+        "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9310/media-gallery/laptop-xps-13-9310-silver-gallery-1.psd?fmt=png-alpha&wid=1000"
+    },
+    {
+        "id": "featured-hp840g8-i7",
+        "brand": "HP",
+        "name": "HP EliteBook 840 G8 i7",
+        "specs": "Intel Core i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" FHD",
+        "price": 63000,
+        "category": "exuk business hp",
+        "badge": "hot",
+        "img": "https://www.hp.com/ca-en/shop/Html/Merch/Images/c07010411_1750x1285.jpg"
+    },
+    {
+        "id": "featured-dell-xps-7390",
+        "brand": "Dell",
+        "name": "Dell XPS 13 7390",
+        "specs": "Intel Core i7 10th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 13.3\" FHD",
+        "price": 49500,
+        "category": "exuk business dell",
+        "badge": "exuk",
+        "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9315/media-gallery/laptop-xps-13-9315-silver-gallery-1.psd?fmt=png-alpha&wid=1000"
+    },
+    {
+        "id": "lenovo-t490",
+        "brand": "Lenovo",
+        "name": "ThinkPad T490",
+        "specs": "i5 8th Gen \u2022 16GB RAM \u2022 512GB SSD",
+        "price": 49500,
+        "category": "exuk business lenovo",
+        "badge": "exuk",
+        "img": "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
+    },
+    {
+        "id": "lenovo-x280",
+        "brand": "Lenovo",
+        "name": "ThinkPad X280 i5",
+        "specs": "i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
+        "price": 29500,
+        "category": "exuk business lenovo",
+        "badge": "hot",
+        "img": "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png"
+    },
+    {
+        "id": "part-mac-a2337-battery",
+        "brand": "Apple",
+        "name": "MacBook Air A2337 Battery",
+        "specs": "Original Replacement \u2022 For M1 MacBook Air",
+        "price": 14000,
+        "category": "parts battery apple macbook",
+        "badge": "new",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=MacBook+Battery"
+    },
+    {
+        "id": "part-mac-a2337-screen",
+        "brand": "Apple",
+        "name": "MacBook Air A2337 Screen",
+        "specs": "13.3\" Liquid Retina \u2022 M1 Replacement",
+        "price": 39900,
+        "category": "parts screen apple macbook",
+        "badge": "new",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=MacBook+Screen"
+    },
+    {
+        "id": "hpe-dl380-gen11-16core-elite",
+        "brand": "HPE",
+        "name": "HPE ProLiant DL380 Gen11 (16-Core)",
+        "specs": "Intel Xeon Gold 5416S \u2022 32GB RAM \u2022 2U Rack \u2022 3 Year Warranty \u2022 BRAND NEW",
+        "price": 945000,
+        "category": "server enterprise hpe",
+        "badge": "elite",
+        "img": "https://webobjects2.cdw.com/is/image/CDW/7931767?$product-main$"
+    },
+    {
+        "id": "dell-r360-rack-elite",
+        "brand": "Dell",
+        "name": "Dell PowerEdge R360 Rack Server",
+        "specs": "Intel Xeon E-2434 \u2022 32GB RAM \u2022 480GB SSD \u2022 1U Rack \u2022 3 Year Warranty \u2022 BRAND NEW",
+        "price": 285000,
+        "category": "server enterprise dell",
+        "badge": "elite",
+        "img": "https://i.dell.com/is/image/DellContent/content/dam/images/products/servers/poweredge/r360/dell-per360-8x2-5-no-bezel-lf-31.psd?fmt=png-alpha&wid=1653"
+    },
+    {
+        "id": "dell-t160-tower-elite",
+        "brand": "Dell",
+        "name": "Dell PowerEdge T160 Tower Server",
+        "specs": "Intel Xeon E-2414 \u2022 16GB RAM \u2022 2TB HDD \u2022 Tower \u2022 3 Year Warranty \u2022 BRAND NEW",
+        "price": 255000,
+        "category": "server enterprise dell",
+        "badge": "elite",
+        "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png"
+    },
+    {
+        "id": "thinkpad-l14-gen5-elite",
+        "brand": "Lenovo",
+        "name": "ThinkPad L14 Gen 5",
+        "specs": "Intel Core Ultra 5 \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" WUXGA \u2022 3 Year Warranty \u2022 BRAND NEW",
+        "price": 215000,
+        "category": "business lenovo",
+        "badge": "elite",
+        "img": "https://p3-ofp.static.pub/fes/cms/2023/02/09/p9x68r6z9k4z9k4z9k4z9k4z9k4z9763529.png"
+    },
+    {
+        "id": "latitude-3450-i7-elite",
+        "brand": "Dell",
+        "name": "Dell Latitude 3450 i7",
+        "specs": "Intel Core i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" FHD \u2022 3 Year Warranty \u2022 BRAND NEW",
+        "price": 198000,
+        "category": "business dell",
+        "badge": "elite",
+        "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-computing/laptops/latitude/3450/media-gallery/laptop-latitude-3450-non-touch-plastic-gray-gallery-1.psd?fmt=png-alpha&wid=500"
+    },
+    {
+        "id": "hp-840g7-i5-10th",
+        "brand": "HP",
+        "name": "HP EliteBook 840 G7 i5",
+        "specs": "i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD",
+        "price": 33000,
+        "category": "exuk business hp",
+        "badge": "restocked",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+840+G7"
+    },
+    {
+        "id": "lenovo-t14s-i5-10th",
+        "brand": "Lenovo",
+        "name": "Lenovo ThinkPad T14s i5",
+        "specs": "i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD",
+        "price": 31000,
+        "category": "exuk business lenovo",
+        "badge": "restocked",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T14s"
+    },
+    {
+        "id": "lenovo-t480s-i5-8th-touch",
+        "brand": "Lenovo",
+        "name": "Lenovo ThinkPad T480s i5 Touch",
+        "specs": "i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
+        "price": 28500,
+        "category": "exuk business lenovo",
+        "badge": "restocked",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+Touch"
+    },
+    {
+        "id": "lenovo-t480s-i5-8th-nontouch",
+        "brand": "Lenovo",
+        "name": "Lenovo ThinkPad T480s i5 Non-Touch",
+        "specs": "i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Non-Touch",
+        "price": 26500,
+        "category": "exuk business lenovo",
+        "badge": "restocked",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+Non-Touch"
+    },
+    {
+        "id": "lenovo-t480s-i5-7th-touch",
+        "brand": "Lenovo",
+        "name": "Lenovo ThinkPad T480s i5 7th Gen Touch",
+        "specs": "i5 7th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
+        "price": 24000,
+        "category": "exuk business lenovo",
+        "badge": "restocked",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+i5+7th"
+    },
+    {
+        "path_id": "lenovo-t480s-i7-8th-nontouch",
+        "id": "lenovo-t480s-i7-8th-nontouch",
+        "brand": "Lenovo",
+        "name": "Lenovo ThinkPad T480s i7 Non-Touch",
+        "specs": "i7 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Non-Touch",
+        "price": 29000,
+        "category": "exuk business lenovo",
+        "badge": "restocked",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+i7"
+    },
+    {
+        "id": "exuk-hp-0",
+        "brand": "HP",
+        "name": "HP 830 g8 i7 11th touch 16/512",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 54000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-1",
+        "brand": "HP",
+        "name": "HP 830 g8 i7 11th non touch 16/512",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 50400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-2",
+        "brand": "HP",
+        "name": "HP 840 g7 i7 10th non 16/512",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 46800,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-3",
+        "brand": "HP",
+        "name": "HP 830 g7 i7 10th non 16/512",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 45000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-4",
+        "brand": "HP",
+        "name": "HP 840 g8  i5 11th gen non 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 39600,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-5",
+        "brand": "HP",
+        "name": "HP 830 g8 i5 11th non 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 37200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-6",
+        "brand": "HP",
+        "name": "HP \ufe0f830 g7 i5 10th generation non touch 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 34800,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-7",
+        "brand": "HP",
+        "name": "HP 830 g7 i5 10th touch 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 37800,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-8",
+        "brand": "HP",
+        "name": "HP \ufe0f840 g7 i5 10th gen non touch 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 37200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-9",
+        "brand": "HP",
+        "name": "HP \ufe0f845 g8 (11th) Ryzen 5 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 35400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-10",
+        "brand": "HP",
+        "name": "HP 1040 g6 i7 8th touch x360 16/512",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 50400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-11",
+        "brand": "HP",
+        "name": "HP 1030 G4 core i7 8 generion 16ram  512ssd  touch screen",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 50400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-12",
+        "brand": "HP",
+        "name": "HP 1030 g3/4 i5 8th 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 39600,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-13",
+        "brand": "HP",
+        "name": "HP \ufe0fHp 830 g6 i5 8th touch x360 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 36000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-14",
+        "brand": "HP",
+        "name": "HP 1030 g2 i5 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 36000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-15",
+        "brand": "HP",
+        "name": "HP \ufe0fHp probook 116 i5 10th touch x360 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 25200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-16",
+        "brand": "HP",
+        "name": "HP proBook 11g4  i5 8th gen touch x360 8ram 256ssd @",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 22200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-17",
+        "brand": "HP",
+        "name": "HP probook 11g1 celeron touch x360 4/128",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 15000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-18",
+        "brand": "HP",
+        "name": "HP 840g3 i5 8 256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 24000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-19",
+        "brand": "HP",
+        "name": "HP 840 g4 i5 7th non 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 25200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-20",
+        "brand": "HP",
+        "name": "HP 840 G3 i7 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 26400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-21",
+        "brand": "HP",
+        "name": "HP 830 g5 i5 8/256 touch frameless",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 33000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-22",
+        "brand": "HP",
+        "name": "HP 830 g5 i5 8th touch with frame 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 32400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-23",
+        "brand": "HP",
+        "name": "HP 830 g5/6 i7 8th non 16/512",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 41400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-24",
+        "brand": "HP",
+        "name": "HP 830 g5 i7 8th touch frameless 16/512",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 43200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-25",
+        "brand": "HP",
+        "name": "HP 840 g5 i7 16/512 non touch",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 41400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-26",
+        "brand": "HP",
+        "name": "HP 745 g6 Ryzen 5 with 2gb graphics   8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 30000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-27",
+        "brand": "HP",
+        "name": "HP 840 g5/g6  i5 8th touch 8/256 frameless",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 33600,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-28",
+        "brand": "HP",
+        "name": "HP \ufe0fHp probook 640 g5 i5 8th 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 25800,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-29",
+        "brand": "HP",
+        "name": "HP \ufe0f640 g4 i5 7th 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 22800,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-30",
+        "brand": "HP",
+        "name": "HP 640 g3 i5 7th 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 21600,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-31",
+        "brand": "HP",
+        "name": "HP 640 g2 i7 6th 8/256 SSD",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 22200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-32",
+        "brand": "HP",
+        "name": "HP 640 g2 i5 6th 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 20400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-33",
+        "brand": "HP",
+        "name": "HP 840g1 i5 8/500",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 18600,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-34",
+        "brand": "HP",
+        "name": "HP 840g2 i5 8/500",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 18000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-35",
+        "brand": "HP",
+        "name": "HP 820g3 i5 8ram 256ssd @",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 26400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-36",
+        "brand": "HP",
+        "name": "HP 820 G3 i5 touch 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 25200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-37",
+        "brand": "HP",
+        "name": "HP 820 g3 i7 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 24000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-38",
+        "brand": "HP",
+        "name": "HP 820g2 i5 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 19800,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-39",
+        "brand": "HP",
+        "name": "HP 820 g2 i5 8/500",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 17400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-40",
+        "brand": "HP",
+        "name": "HP 820 g1 i5 8/500 14,5k",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 43200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-41",
+        "brand": "Lenovo",
+        "name": "Lenovo \ufe0fX1 Carbon i7 8th non 16/512",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 33000,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-42",
+        "brand": "Lenovo",
+        "name": "Lenovo \ufe0fYoga 390 i5 8th 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 42000,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-43",
+        "brand": "Lenovo",
+        "name": "Lenovo Yoga x380 i7 8th touch x360 16/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 26400,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-44",
+        "brand": "Lenovo",
+        "name": "Lenovo Yoga 370 i5 7th touch x360 16/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 27600,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-45",
+        "brand": "Lenovo",
+        "name": "Lenovo T480s i5 8th non touch 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 25200,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-46",
+        "brand": "Lenovo",
+        "name": "Lenovo T490s i5 8th touch 16/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 31200,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-47",
+        "brand": "Lenovo",
+        "name": "Lenovo T460s i5 6th gen 8ram 256ssd @",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 21000,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-48",
+        "brand": "Lenovo",
+        "name": "Lenovo X270 i5 7th 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 27000,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-49",
+        "brand": "Lenovo",
+        "name": "Lenovo X280 i5 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 25200,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-50",
+        "brand": "Lenovo",
+        "name": "Lenovo X250 i5 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 17400,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-51",
+        "brand": "Lenovo",
+        "name": "Lenovo X240 i5 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 17400,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-52",
+        "brand": "Lenovo",
+        "name": "Lenovo \ufe0fYoga 11e i5 8th touch x360 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 22800,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-53",
+        "brand": "Lenovo",
+        "name": "Lenovo Yoga 11e m3 7th 8/128",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 15600,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-54",
+        "brand": "Lenovo",
+        "name": "Lenovo Yoga 11e  4ram 128ssd @10,k",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 30000,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    }
 ];
 
 
