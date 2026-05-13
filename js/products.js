@@ -1239,6 +1239,7 @@ const ALL_PRODUCTS = [
   "category": "exuk business lenovo",
   "badge": "restocked",
   "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+i7"
+  },
   {
     "id": "exuk-hp-840-g7-i5-10th-8-256",
     "brand": "HP",
