@@ -1178,113 +1178,7 @@ const ALL_PRODUCTS = [
     "category": "business dell",
     "badge": "elite",
     "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-computing/laptops/latitude/3450/media-gallery/laptop-latitude-3450-non-touch-plastic-gray-gallery-1.psd?fmt=png-alpha&wid=500"
-  }
-];
-
-
-let currentLimit = 24;
-let currentProducts = [];
-
-function searchProducts() {
-  const query = document.getElementById('productSearch').value.toLowerCase();
-  const container = document.getElementById("productsGrid");
-  if (!container) return;
-
-  currentProducts = ALL_PRODUCTS.filter(p => {
-    return p.name.toLowerCase().includes(query) || 
-           p.brand.toLowerCase().includes(query) || 
-           p.specs.toLowerCase().includes(query);
-  });
-
-  currentLimit = 24;
-  renderFiltered();
-}
-
-function loadMoreProducts() {
-  currentLimit += 24;
-  renderFiltered();
-}
-
-function renderFiltered() {
-  const container = document.getElementById("productsGrid");
-  if (!container) return;
-
-  const displayList = currentProducts.slice(0, currentLimit);
-  
-  container.innerHTML = displayList.map(p => {
-    const isFlash = p.onFlashSale || false;
-    let priceHTML = `<div class="product-price">KES ${p.price.toLocaleString()}</div>`;
-    let badgeHTML = `<div class="product-badge ${p.badge}">${p.badge}</div>`;
-    
-    return `
-      <div class="product-card ${p.category}">
-        <div class="product-img-container">
-          <div class="product-img">
-            <img src="${p.img}" alt="${p.name}" loading="lazy">
-            ${badgeHTML}
-            <div class="product-actions">
-              <button class="action-btn" onclick="window.open('https://wa.me/254721585784?text=Hi%20Nexcom!%20I%20want%20to%20order%20the%20${p.name}', '_blank')">
-                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.766-5.764-5.766m3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.001.332.005c.109.004.258-.041.404.311.159.387.542 1.32.59 1.416s.079.21.014.339c-.065.129-.098.21-.195.324-.097.114-.204.256-.292.348-.107.113-.219.236-.095.449.124.214.55.908 1.185 1.472.818.729 1.505.955 1.719 1.062s.346.079.475-.069c.129-.148.556-.648.705-.871.149-.223.298-.187.502-.112s1.288.608 1.512.72c.224.112.374.168.43.264.056.096.056.556-.088.961m-3.392-11.244c-5.452 0-9.887 4.435-9.889 9.888-.002 2.028.513 4.003 1.49 5.772l-1.583 5.786 5.922-1.553a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="product-info">
-          <div class="product-brand">${p.brand}</div>
-          <h3 class="product-name">${p.name}</h3>
-          <p class="product-specs">${p.specs}</p>
-          <div class="price-container">
-            ${priceHTML}
-          </div>
-        </div>
-      </div>
-    `;
-  }).join('');
-
-  const btn = document.getElementById('loadMoreBtn');
-  if (btn) {
-    btn.style.display = currentLimit >= currentProducts.length ? 'none' : 'block';
-  }
-}
-
-function renderProducts(filter = "all", btn = null) {
-  const container = document.getElementById("productsGrid");
-  if (!container) return;
-  
-  if (btn) {
-    const btns = document.querySelectorAll('.filter-btn');
-    btns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-  }
-  
-  currentProducts = ALL_PRODUCTS.filter(p => {
-    const cat = p.category.toLowerCase();
-    const brand = p.brand.toLowerCase();
-    const f = filter.toLowerCase();
-
-    if (f === "all") return true;
-    if (f === "featured") return cat.includes("featured");
-    if (f === "student") return cat.includes("student") || cat.includes("budget");
-    if (f === "server") return cat.includes("server");
-    if (f === "new") return cat.includes("new");
-    return brand === f || cat.includes(f);
-  });
-
-  currentLimit = 24;
-  renderFiltered();
-}
-
-function filterCategory(cat) {
-  renderProducts(cat);
-}
-
-function setupDailySpecial() {
-  const overlay = document.getElementById('promoOverlay');
-  if (!overlay) return;
-
-  const today = new Date();
-  const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
-  const p = ALL_PRODUCTS[dateSeed % ALL_PRODUCTS.length,
+  },
   {
   "id": "hp-840g7-i5-10th",
   "brand": "HP",
@@ -1525,7 +1419,112 @@ function setupDailySpecial() {
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+430+G3"
   },
-}];
+];
+
+
+let currentLimit = 24;
+let currentProducts = [];
+
+function searchProducts() {
+  const query = document.getElementById('productSearch').value.toLowerCase();
+  const container = document.getElementById("productsGrid");
+  if (!container) return;
+
+  currentProducts = ALL_PRODUCTS.filter(p => {
+    return p.name.toLowerCase().includes(query) || 
+           p.brand.toLowerCase().includes(query) || 
+           p.specs.toLowerCase().includes(query);
+  });
+
+  currentLimit = 24;
+  renderFiltered();
+}
+
+function loadMoreProducts() {
+  currentLimit += 24;
+  renderFiltered();
+}
+
+function renderFiltered() {
+  const container = document.getElementById("productsGrid");
+  if (!container) return;
+
+  const displayList = currentProducts.slice(0, currentLimit);
+  
+  container.innerHTML = displayList.map(p => {
+    const isFlash = p.onFlashSale || false;
+    let priceHTML = `<div class="product-price">KES ${p.price.toLocaleString()}</div>`;
+    let badgeHTML = `<div class="product-badge ${p.badge}">${p.badge}</div>`;
+    
+    return `
+      <div class="product-card ${p.category}">
+        <div class="product-img-container">
+          <div class="product-img">
+            <img src="${p.img}" alt="${p.name}" loading="lazy">
+            ${badgeHTML}
+            <div class="product-actions">
+              <button class="action-btn" onclick="window.open('https://wa.me/254721585784?text=Hi%20Nexcom!%20I%20want%20to%20order%20the%20${p.name}', '_blank')">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.766-5.764-5.766m3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.001.332.005c.109.004.258-.041.404.311.159.387.542 1.32.59 1.416s.079.21.014.339c-.065.129-.098.21-.195.324-.097.114-.204.256-.292.348-.107.113-.219.236-.095.449.124.214.55.908 1.185 1.472.818.729 1.505.955 1.719 1.062s.346.079.475-.069c.129-.148.556-.648.705-.871.149-.223.298-.187.502-.112s1.288.608 1.512.72c.224.112.374.168.43.264.056.096.056.556-.088.961m-3.392-11.244c-5.452 0-9.887 4.435-9.889 9.888-.002 2.028.513 4.003 1.49 5.772l-1.583 5.786 5.922-1.553a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-brand">${p.brand}</div>
+          <h3 class="product-name">${p.name}</h3>
+          <p class="product-specs">${p.specs}</p>
+          <div class="price-container">
+            ${priceHTML}
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  const btn = document.getElementById('loadMoreBtn');
+  if (btn) {
+    btn.style.display = currentLimit >= currentProducts.length ? 'none' : 'block';
+  }
+}
+
+function renderProducts(filter = "all", btn = null) {
+  const container = document.getElementById("productsGrid");
+  if (!container) return;
+  
+  if (btn) {
+    const btns = document.querySelectorAll('.filter-btn');
+    btns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  
+  currentProducts = ALL_PRODUCTS.filter(p => {
+    const cat = p.category.toLowerCase();
+    const brand = p.brand.toLowerCase();
+    const f = filter.toLowerCase();
+
+    if (f === "all") return true;
+    if (f === "featured") return cat.includes("featured");
+    if (f === "student") return cat.includes("student") || cat.includes("budget");
+    if (f === "server") return cat.includes("server");
+    if (f === "new") return cat.includes("new");
+    return brand === f || cat.includes(f);
+  });
+
+  currentLimit = 24;
+  renderFiltered();
+}
+
+function filterCategory(cat) {
+  renderProducts(cat);
+}
+
+function setupDailySpecial() {
+  const overlay = document.getElementById('promoOverlay');
+  if (!overlay) return;
+
+  const today = new Date();
+  const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+  const p = ALL_PRODUCTS[dateSeed % ALL_PRODUCTS.length];
 
   if (p) {
     const titleEl = document.getElementById('promoTitle');
