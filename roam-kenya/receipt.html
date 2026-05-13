@@ -197,6 +197,11 @@
             body { background: #fff; color: #000; }
             .ticket-container { border: none; box-shadow: none; }
         }
+        @media print {
+            .actions, .footer-note { display: none; }
+            body { background: white; padding: 0; }
+            .ticket-container { border: none; box-shadow: none; max-width: 100%; }
+        }
     </style>
 </head>
 <body>
@@ -256,8 +261,8 @@
         </div>
 
         <div class="actions">
-            <button class="btn btn-secondary" onclick="window.print()"><i class="fas fa-print"></i> Save PDF</button>
-            <button class="btn btn-primary" onclick="location.href='index.html'"><i class="fas fa-home"></i> Back Home</button>
+            <button class="btn btn-secondary" onclick="window.print()"><i class="fas fa-file-pdf"></i> Save PDF</button>
+            <button class="btn btn-primary" onclick="window.location.href='index.html'"><i class="fas fa-home"></i> Back Home</button>
         </div>
     </div>
 
