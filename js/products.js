@@ -1405,6 +1405,126 @@ function setupDailySpecial() {
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T480s+i7"
   },
+  {
+    "id": "exuk-hp-pb640g9-i5-12-36000",
+    "brand": "HP",
+    "name": "HP ProBook 640 G9",
+    "specs": "Intel Core i5 12th Gen \u2022 8GB RAM \u2022 256GB SSD",
+    "price": 36000,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+640+G9"
+  },
+  {
+    "id": "exuk-hp-pb630g8-i5-11-touch-32500",
+    "brand": "HP",
+    "name": "HP ProBook 630 G8 Touch",
+    "specs": "Intel Core i5 11th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
+    "price": 32500,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+630+G8+Touch"
+  },
+  {
+    "id": "exuk-hp-pb430g7-i5-10-26000",
+    "brand": "HP",
+    "name": "HP ProBook 430 G7",
+    "specs": "Intel Core i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD",
+    "price": 26000,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+430+G7"
+  },
+  {
+    "id": "exuk-hp-pb430g5-i5-8-22000",
+    "brand": "HP",
+    "name": "HP ProBook 430 G5",
+    "specs": "Intel Core i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD",
+    "price": 22000,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+430+G5"
+  },
+  {
+    "id": "exuk-hp-pb11g4x360-i5-8-19500",
+    "brand": "HP",
+    "name": "HP ProBook 11 G4 x360",
+    "specs": "Intel Core i5 8th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
+    "price": 19500,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+11+G4+x360"
+  },
+  {
+    "id": "exuk-hp-pb11g2x360-i5-7-18000",
+    "brand": "HP",
+    "name": "HP ProBook 11 G2 x360",
+    "specs": "Intel Core i5 7th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
+    "price": 18000,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+11+G2+x360"
+  },
+  {
+    "id": "exuk-hp-pb640g3-i5-7-19500",
+    "brand": "HP",
+    "name": "HP ProBook 640 G3",
+    "specs": "Intel Core i5 7th Gen \u2022 8GB RAM \u2022 256GB SSD",
+    "price": 19500,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+640+G3"
+  },
+  {
+    "id": "exuk-hp-pb640g2-i5-6-16500",
+    "brand": "HP",
+    "name": "HP ProBook 640 G2",
+    "specs": "Intel Core i5 6th Gen \u2022 8GB RAM \u2022 256GB SSD",
+    "price": 16500,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+640+G2"
+  },
+  {
+    "id": "exuk-hp-pb440g3-i5-6-touch-20000",
+    "brand": "HP",
+    "name": "HP ProBook 440 G3 Touch",
+    "specs": "Intel Core i5 6th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
+    "price": 20000,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+440+G3+Touch"
+  },
+  {
+    "id": "exuk-hp-pb440g3-i5-6-18000",
+    "brand": "HP",
+    "name": "HP ProBook 440 G3",
+    "specs": "Intel Core i5 6th Gen \u2022 8GB RAM \u2022 256GB SSD",
+    "price": 18000,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+440+G3"
+  },
+  {
+    "id": "exuk-hp-pb430g3-i5-6-touch-20000",
+    "brand": "HP",
+    "name": "HP ProBook 430 G3 Touch",
+    "specs": "Intel Core i5 6th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touchscreen",
+    "price": 20000,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+430+G3+Touch"
+  },
+  {
+    "id": "exuk-hp-pb430g3-i5-6-18000",
+    "brand": "HP",
+    "name": "HP ProBook 430 G3",
+    "specs": "Intel Core i5 6th Gen \u2022 8GB RAM \u2022 256GB SSD",
+    "price": 18000,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+430+G3"
+  },
 }];
 
   if (p) {
