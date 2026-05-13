@@ -1,8 +1,8 @@
 :root {
-    --primary: #1b3022;      /* Jungle Green */
-    --secondary: #c29d59;    /* Safari Gold */
-    --accent: #5d4037;       /* Earthy Brown */
-    --bg-light: #fdfbf7;
+    --primary: #800000;      /* Maroon/Dark Red - Nexcom Standard */
+    --secondary: #d4af37;    /* Premium Gold */
+    --accent: #1a1a1a;       /* Deep Black */
+    --bg-light: #f8f9fa;     /* Light Gray - Nexcom Standard */
     --text-main: #1a1a1a;
     --white: #ffffff;
     --transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
