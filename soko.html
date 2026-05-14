@@ -380,7 +380,7 @@
                     </div>
                     <div>
                         <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Price (KSh)</label>
-                        <input type="number" id="postPrice" placeholder="e.g. 45000" class="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl text-sm outline-none focus:border-blue-500">
+                        <input type="text" id="postPrice" placeholder="e.g. 45,000" oninput="formatInputPrice(this)" class="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl text-sm outline-none focus:border-blue-500">
                     </div>
                 </div>
 
@@ -854,51 +854,83 @@
         function closeM() { document.getElementById('modal').classList.add('hidden'); document.body.style.overflow = 'auto'; }
         function toggleDark() { document.documentElement.classList.toggle('dark'); }
 
+        // Merchant Portal Functions
+        let selectedCond = 'Refurbished';
+        let selectedBoost = 'silver';
+        let uploadedImageBase64 = '';
+
         function previewImage(input) {
             if (input.files && input.files[0]) {
                 const reader = new FileReader();
                 reader.onload = function(e) {
                     const preview = document.getElementById('imagePreview');
                     preview.style.backgroundImage = `url(${e.target.result})`;
+                    preview.style.backgroundSize = 'cover';
                     preview.innerHTML = '';
-                    preview.dataset.base64 = e.target.result;
+                    uploadedImageBase64 = e.target.result;
                 }
                 reader.readAsDataURL(input.files[0]);
             }
         }
 
-        let selectedCond = 'Refurbished';
-        function setCond(btn, cond) {
-            document.querySelectorAll('.cond-btn').forEach(b => b.classList.remove('bg-blue-600', 'text-white'));
-            btn.classList.add('bg-blue-600', 'text-white');
-            selectedCond = cond;
+        function setCond(btn, val) {
+            document.querySelectorAll('.cond-btn').forEach(b => {
+                b.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
+                b.classList.add('bg-slate-50', 'text-slate-500', 'border-slate-200');
+            });
+            btn.classList.add('bg-blue-600', 'text-white', 'border-blue-600');
+            btn.classList.remove('bg-slate-50', 'text-slate-500', 'border-slate-200');
+            selectedCond = val;
         }
+
+        function formatInputPrice(input) {
+            let val = input.value.replace(/\D/g, '');
+            input.value = val ? Number(val).toLocaleString() : '';
+        }
+
+        function postAd() { document.getElementById('postModal').classList.remove('hidden'); }
+        function closePost() { document.getElementById('postModal').classList.add('hidden'); }
 
         function publishAd() {
             const name = document.getElementById('postName').value;
             const price = document.getElementById('postPrice').value;
             const specs = document.getElementById('postSpecs').value;
             const cat = document.getElementById('postCat').value;
-            const img = document.getElementById('imagePreview').dataset.base64 || '';
-            if (!name || !price) return alert('Fill name/price');
             
-            const waMsg = `*Soko Mpya Ad Request*%0A*Name:* ${name}%0A*Price:* KSh ${price}%0A*Specs:* ${specs}%0A*Cat:* ${cat}%0A*Cond:* ${selectedCond}`;
-            window.open(`https://wa.me/254721585784?text=${waMsg}`, '_blank');
-            alert('Sending ad data... Please share the image in the WhatsApp chat too!');
-        }
-        function search() { filter(cur); }
+            if (!name || !price) return alert('Please enter both Name and Price');
 
-        // M-Pesa & GPS & Price Check Implementation
-        function detectMyLocation() {
-            const btn = document.querySelector('[onclick="detectMyLocation()"]');
-            const icon = btn.querySelector('i');
-            icon.classList.replace('fa-location-crosshairs', 'fa-spinner'); icon.classList.add('fa-spin');
-            navigator.geolocation.getCurrentPosition((p) => {
-                setTimeout(() => {
-                    icon.classList.replace('fa-spinner', 'fa-location-crosshairs'); icon.classList.remove('fa-spin');
-                    currentLoc = 'Nairobi'; filter(cur); alert("Location Detected: Nairobi CBD");
-                }, 1000);
-            }, () => { alert("Unable to detect location. Enable GPS."); });
+            const newAd = {
+                id: Date.now(),
+                cat: cat,
+                name: name,
+                price: 'KSh ' + price,
+                img: uploadedImageBase64 || 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=50',
+                specs: specs,
+                badge: selectedCond,
+                loc: 'Nairobi',
+                phone: '254721585784',
+                isBoosted: false
+            };
+
+            ADS.unshift(newAd);
+            filter('all');
+            closePost();
+            
+            // Show Boost Modal
+            setTimeout(() => {
+                document.getElementById('upgradeModal').classList.remove('hidden');
+            }, 500);
+        }
+
+        function selectUpgrade(id, level) {
+            document.querySelectorAll('.upgrade-card').forEach(c => c.classList.remove('selected'));
+            document.getElementById(id).classList.add('selected');
+            selectedBoost = level;
+        }
+
+        function skipUpgrade() {
+            document.getElementById('upgradeModal').classList.add('hidden');
+            alert("Your ad is live! Check the top of the list.");
         }
 
         function initMpesaPayment(plan, amount) {
@@ -907,49 +939,58 @@
             document.getElementById('paymentModal').classList.remove('hidden');
         }
 
-        function closePaymentModal() { document.getElementById('paymentModal').classList.add('hidden'); }
-
         function verifyPayment() {
             alert("Payment Verified! Your ad is now boosted.");
-            closePaymentModal(); document.getElementById('upgradeModal').classList.add('hidden');
-            const ad = ADS[0]; ad.isBoosted = true; ad.boostLevel = selectedBoost; filter('all');
+            closePaymentModal();
+            document.getElementById('upgradeModal').classList.add('hidden');
+            // Apply boost to the last added ad
+            if (ADS.length > 0) {
+                ADS[0].isBoosted = true;
+                ADS[0].boostLevel = selectedBoost;
+                filter('all');
+            }
+        }
+
+        function closePaymentModal() { document.getElementById('paymentModal').classList.add('hidden'); }
+        function search() { filter(cur); }
+
+        function detectMyLocation() {
+            const btn = document.querySelector('[onclick="detectMyLocation()"]');
+            const icon = btn.querySelector('i');
+            icon.classList.replace('fa-location-crosshairs', 'fa-spinner');
+            icon.classList.add('fa-spin');
+            
+            navigator.geolocation.getCurrentPosition((p) => {
+                setTimeout(() => {
+                    icon.classList.replace('fa-spinner', 'fa-location-crosshairs');
+                    icon.classList.remove('fa-spin');
+                    currentLoc = 'Nairobi';
+                    filter(cur);
+                    alert("Location Detected: Nairobi CBD");
+                }, 1000);
+            }, () => {
+                alert("GPS error. Using default location.");
+            });
         }
 
         function estimatePrice() {
-            const m = document.getElementById('priceModel').value; if(!m) return;
+            const m = document.getElementById('priceModel').value;
+            if (!m) return;
             const res = document.getElementById('priceResult'), val = document.getElementById('estValue');
             res.classList.add('hidden');
             setTimeout(() => {
-                let p = 45000; if(m.toLowerCase().includes('macbook')) p = 85000;
-                val.innerText = 'KSh ' + p.toLocaleString(); res.classList.remove('hidden');
+                let p = 45000;
+                if (m.toLowerCase().includes('macbook')) p = 85000;
+                val.innerText = 'KSh ' + p.toLocaleString();
+                res.classList.remove('hidden');
             }, 800);
         }
 
-        let lastCreatedAdId = null, selectedBoost = 'silver', selectedCond = 'New';
-        function setCond(btn, val) {
-            document.querySelectorAll('.cond-btn').forEach(b => {
-                b.classList.remove('border-blue-600', 'bg-blue-50', 'text-blue-600', 'border-2');
-                b.classList.add('border-slate-200', 'bg-slate-50', 'text-slate-500');
-            });
-            btn.classList.remove('border-slate-200', 'bg-slate-50', 'text-slate-500');
-            btn.classList.add('border-blue-600', 'bg-blue-50', 'text-blue-600', 'border-2');
-            selectedCond = val;
-        }
-        function postAd() { document.getElementById('postModal').classList.remove('hidden'); }
-        function closePost() { document.getElementById('postModal').classList.add('hidden'); }
-        function selectUpgrade(id, level) {
-            document.querySelectorAll('.upgrade-card').forEach(c => c.classList.remove('selected'));
-            document.getElementById(id).classList.add('selected'); selectedBoost = level;
-        }
-        function skipUpgrade() { document.getElementById('upgradeModal').classList.add('hidden'); alert("Ad published successfully!"); }
+        function showSafety() { alert("Protected by Soko Mpya Escrow. Inspect before paying."); }
+        function call() { window.location.href = 'tel:254721585784'; }
+        function wpp() { window.location.href = 'https://wa.me/254721585784'; }
 
-        function publishAd() {
-            const n = document.getElementById('postName').value, p = document.getElementById('postPrice').value;
-            if(!n || !p) return alert("Fill Name and Price");
-            const newAd = { id: Date.now(), cat: document.getElementById('postCat').value, name: n, price: 'KSh ' + Number(p).toLocaleString(), img: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=50', specs: document.getElementById('postSpecs').value, badge: selectedCond, loc: 'Nairobi', phone: '254721585784' };
-            ADS.unshift(newAd); filter('all'); closePost();
-            setTimeout(() => document.getElementById('upgradeModal').classList.remove('hidden'), 400);
-        }
+        init();
 
         function showSafety() { alert("Protected by Soko Mpya Escrow. Inspect before paying."); }
         function call() { window.location.href = 'tel:254721585784'; }
