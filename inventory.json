@@ -1,0 +1,26 @@
+[
+  {
+    "id": "hp-elitebook-840-g8",
+    "brand": "HP",
+    "model": "EliteBook 840 G8",
+    "specs": "Core i7 11th Gen, 16GB RAM, 512GB SSD, 14\" FHD",
+    "price": "65,000",
+    "category": "Premium",
+    "condition": "Ex-UK",
+    "status": "In Stock",
+    "featured": true,
+    "image": "images/products/hp-840-g8.jpg"
+  },
+  {
+    "id": "macbook-air-m1",
+    "brand": "Apple",
+    "model": "MacBook Air M1",
+    "specs": "M1 Chip, 8GB RAM, 256GB SSD, Space Gray",
+    "price": "105,000",
+    "category": "Premium",
+    "condition": "New",
+    "status": "In Stock",
+    "featured": true,
+    "image": "images/products/mac-air-m1.jpg"
+  }
+]
