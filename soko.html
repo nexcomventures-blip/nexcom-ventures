@@ -820,6 +820,9 @@
                         <img src="${a.img}" class="ad-img" loading="lazy">
                         ${a.isBoosted ? `<div class="absolute top-2 left-2 boost-badge ${a.boostLevel}"><i class="fa-solid fa-rocket"></i> ${a.boostLevel}</div>` : ''}
                         ${badgeHTML}
+                        <button onclick="event.stopPropagation(); editAd(${a.id})" class="absolute bottom-2 right-2 bg-white/90 backdrop-blur w-7 h-7 rounded-full shadow flex items-center justify-center text-slate-700 hover:text-blue-600 transition">
+                            <i class="fa-solid fa-pen-to-square text-[10px]"></i>
+                        </button>
                     </div>
                     <div class="px-1">
                         ${priceHTML}
@@ -858,6 +861,7 @@
         let selectedCond = 'Refurbished';
         let selectedBoost = 'silver';
         let uploadedImageBase64 = '';
+        let currentEditingId = null;
 
         function previewImage(input) {
             if (input.files && input.files[0]) {
@@ -888,7 +892,39 @@
             input.value = val ? Number(val).toLocaleString() : '';
         }
 
-        function postAd() { document.getElementById('postModal').classList.remove('hidden'); }
+        function postAd() { 
+            currentEditingId = null;
+            document.getElementById('postName').value = '';
+            document.getElementById('postPrice').value = '';
+            document.getElementById('postSpecs').value = '';
+            document.getElementById('imagePreview').style.backgroundImage = '';
+            document.getElementById('imagePreview').innerHTML = '<div class="flex flex-col items-center gap-2"><i class="fa-solid fa-camera"></i><span class="text-[8px]">Tap to Upload</span></div>';
+            uploadedImageBase64 = '';
+            document.getElementById('postModal').classList.remove('hidden'); 
+        }
+
+        function editAd(id) {
+            currentEditingId = id;
+            const ad = ADS.find(a => a.id === id);
+            if (!ad) return;
+
+            document.getElementById('postName').value = ad.name;
+            document.getElementById('postPrice').value = ad.price.replace('KSh ', '');
+            document.getElementById('postSpecs').value = ad.specs;
+            document.getElementById('postCat').value = ad.cat;
+            
+            const condBtn = Array.from(document.querySelectorAll('.cond-btn')).find(b => b.innerText === ad.badge);
+            if (condBtn) setCond(condBtn, ad.badge);
+
+            const preview = document.getElementById('imagePreview');
+            preview.style.backgroundImage = `url(${ad.img})`;
+            preview.style.backgroundSize = 'cover';
+            preview.innerHTML = '';
+            uploadedImageBase64 = ad.img;
+
+            document.getElementById('postModal').classList.remove('hidden');
+        }
+
         function closePost() { document.getElementById('postModal').classList.add('hidden'); }
 
         function publishAd() {
@@ -899,27 +935,38 @@
             
             if (!name || !price) return alert('Please enter both Name and Price');
 
-            const newAd = {
-                id: Date.now(),
-                cat: cat,
-                name: name,
-                price: 'KSh ' + price,
-                img: uploadedImageBase64 || 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=50',
-                specs: specs,
-                badge: selectedCond,
-                loc: 'Nairobi',
-                phone: '254721585784',
-                isBoosted: false
-            };
-
-            ADS.unshift(newAd);
-            filter('all');
+            if (currentEditingId) {
+                const index = ADS.findIndex(a => a.id === currentEditingId);
+                if (index !== -1) {
+                    ADS[index].name = name;
+                    ADS[index].price = 'KSh ' + price;
+                    ADS[index].specs = specs;
+                    ADS[index].cat = cat;
+                    ADS[index].badge = selectedCond;
+                    ADS[index].img = uploadedImageBase64 || ADS[index].img;
+                    filter('all');
+                    alert("Ad updated successfully!");
+                }
+            } else {
+                const newAd = {
+                    id: Date.now(),
+                    cat: cat,
+                    name: name,
+                    price: 'KSh ' + price,
+                    img: uploadedImageBase64 || 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=50',
+                    specs: specs,
+                    badge: selectedCond,
+                    loc: 'Nairobi',
+                    phone: '254721585784',
+                    isBoosted: false
+                };
+                ADS.unshift(newAd);
+                filter('all');
+                setTimeout(() => {
+                    document.getElementById('upgradeModal').classList.remove('hidden');
+                }, 500);
+            }
             closePost();
-            
-            // Show Boost Modal
-            setTimeout(() => {
-                document.getElementById('upgradeModal').classList.remove('hidden');
-            }, 500);
         }
 
         function selectUpgrade(id, level) {
