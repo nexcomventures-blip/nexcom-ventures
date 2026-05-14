@@ -1220,15 +1220,31 @@
                 const pass = document.getElementById('regPass').value;
                 if (!name || !phone || !pass) return alert('Fill all fields');
                 
-                currentUser = { name, phone, id: 'seller-' + Date.now() };
+                // Save user locally for simple persistence
+                const users = JSON.parse(localStorage.getItem('sokoUsers') || '[]');
+                if (users.find(u => u.phone === phone)) return alert('User already exists');
+                
+                const newUser = { name, phone, pass, id: 'seller-' + Date.now() };
+                users.push(newUser);
+                localStorage.setItem('sokoUsers', JSON.stringify(users));
+                
+                currentUser = newUser;
                 localStorage.setItem('sokoUser', JSON.stringify(currentUser));
                 alert('Account created! Welcome ' + name);
             } else {
                 const phone = document.getElementById('loginPhone').value;
-                if (!phone) return alert('Enter phone number');
-                // Mock login for now
-                currentUser = { name: 'Seller', phone: phone, id: 'seller-1' };
-                localStorage.setItem('sokoUser', JSON.stringify(currentUser));
+                const pass = document.getElementById('loginPass').value;
+                if (!phone || !pass) return alert('Enter phone and password');
+
+                const users = JSON.parse(localStorage.getItem('sokoUsers') || '[]');
+                const user = users.find(u => u.phone === phone && u.pass === pass);
+                
+                if (user) {
+                    currentUser = user;
+                    localStorage.setItem('sokoUser', JSON.stringify(currentUser));
+                } else {
+                    return alert('Invalid phone or password. Please sign up if you don\'t have an account.');
+                }
             }
             updateAuthUI();
             document.getElementById('authModal').classList.add('hidden');
