@@ -1,1 +1,1498 @@
-<!DOCTYPE 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soko Mpya | Fast, Secure Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js');
+            });
+        }
+    </script>
+    <style>
+        :root {
+            --brand: #2563eb;
+            --bg: #ffffff;
+            --surface: #f8fafc;
+            --text: #0f172a;
+            --border: #e2e8f0;
+            --card: #ffffff;
+            --muted: #64748b;
+        }
+
+        .dark {
+            --bg: #0f172a;
+            --surface: #1e293b;
+            --text: #f8fafc;
+            --border: #334155;
+            --card: #1e293b;
+            --muted: #94a3b8;
+        }
+
+        /* Nexcom Merchant Portal UI */
+        #postAdModal .input-group { margin-bottom: 12px; }
+        #postAdModal label { display: block; font-size: 10px; font-weight: 800; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+        #postAdModal input, #postAdModal textarea, #postAdModal select {
+            width: 100%; background: var(--surface); border: 1px solid var(--border);
+            padding: 10px; border-radius: 8px; font-size: 13px; color: var(--text); outline: none;
+        }
+        #imagePreview {
+            width: 100%; height: 160px; border: 2px dashed var(--border); border-radius: 12px;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            background-size: cover; background-position: center; cursor: pointer; color: var(--muted);
+            font-size: 10px; font-weight: 700; text-transform: uppercase;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.5;
+            transition: 0.3s;
+        }
+
+        /* Content Layout */
+        .content-width { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+
+        /* Logo Design */
+        .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+        .logo-box {
+            width: 32px;
+            height: 32px;
+            background: var(--brand);
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 18px;
+        }
+        .logo-text { line-height: 1; }
+        .logo-top { display: block; font-weight: 800; font-size: 16px; color: var(--text); letter-spacing: -0.5px; }
+        .logo-bottom { display: block; font-weight: 700; font-size: 8px; color: var(--brand); letter-spacing: 2px; text-transform: uppercase; }
+
+        /* Navigation */
+        .nav-sticky { 
+            position: sticky; 
+            top: 0; 
+            z-index: 50; 
+            background: var(--bg);
+            border-bottom: 1px solid var(--border); 
+        }
+
+        /* Modern Category Scroller */
+        .cat-scroll { display: flex; gap: 8px; overflow-x: auto; padding: 12px 0; scrollbar-width: none; }
+        .cat-scroll::-webkit-scrollbar { display: none; }
+        .cat-btn {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 99px;
+            white-space: nowrap;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+            transition: 0.2s;
+        }
+        .cat-btn.active { background: var(--brand); border-color: var(--brand); color: white; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Performance Grid */
+        .ad-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        @media (min-width: 768px) { .ad-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; } }
+
+        .ad-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 8px;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        .ad-price { font-weight: 800; font-size: 14px; color: var(--brand); }
+        .ad-name { font-size: 12px; font-weight: 600; color: var(--text); display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+
+        .ad-img { aspect-ratio: 1; width: 100%; border-radius: 10px; margin-bottom: 8px; object-fit: cover; background: var(--surface); }
+        
+        .ad-card.boost-gold { border: 2px solid #fbbf24; background: var(--surface); box-shadow: 0 4px 20px rgba(251, 191, 36, 0.15); }
+        .ad-card.boost-silver { border: 2px solid #1e293b; background: var(--surface); }
+        .ad-card.boost-bronze { border: 2px solid #b45309; background: var(--surface); }
+
+        .boost-badge {
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 7px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .boost-badge.gold { background: #fbbf24; color: #000; }
+        .boost-badge.silver { background: #1e293b; color: #fff; }
+        .boost-badge.bronze { background: #b45309; color: #fff; }
+
+        /* Search */
+        .search-wrap { position: relative; margin: 12px 0; }
+        .search-input {
+            width: 100%;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 10px 40px;
+            border-radius: 12px;
+            font-size: 13px;
+            outline: none;
+            color: var(--text);
+        }
+
+        /* Modal Theme */
+        .modal-bg { background: var(--card); color: var(--text); }
+
+        /* M-Pesa Colors */
+        .mpesa-green { color: #49B04D; }
+        .mpesa-bg { background-color: #49B04D; }
+
+        .upgrade-card {
+            padding: 12px;
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .upgrade-card.selected { border-color: var(--brand); background: rgba(37, 99, 235, 0.05); }
+
+    </style>
+</head>
+<body>
+
+    <nav class="nav-sticky">
+        <div class="content-width h-14 flex items-center justify-between px-4">
+            <a href="#" class="logo">
+                <div class="logo-box">S</div>
+                <div class="logo-text">
+                    <span class="logo-top">SOKO</span>
+                    <span class="logo-bottom">MPYA</span>
+                </div>
+            </a>
+            <div class="flex items-center gap-2">
+                <div id="authNav" class="flex items-center gap-2">
+                    <button onclick="openAuth('login')" class="text-[10px] font-black uppercase text-slate-500 px-2">Sign In</button>
+                    <button onclick="postAd()" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide">Post Ad</button>
+                </div>
+                <button onclick="toggleDark()" class="w-8 h-8 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-full">
+                    <i class="fa-solid fa-moon text-slate-600 dark:text-slate-300 text-sm"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-width px-4">
+        <div class="search-wrap">
+            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+            <input type="text" class="search-input" id="qInput" placeholder="Search laptops, phones, cars..." onkeyup="search(this.value)">
+            <div class="absolute right-3.5 top-1/2 -translate-y-1/2 flex items-center gap-2">
+                <button onclick="detectMyLocation()" class="w-7 h-7 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center hover:bg-blue-100 transition" title="Near Me">
+                    <i class="fa-solid fa-location-crosshairs text-[10px]"></i>
+                </button>
+                <button onclick="document.getElementById('requestModal').classList.remove('hidden')" class="w-7 h-7 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center hover:bg-blue-100 transition">
+                    <i class="fa-solid fa-hand-holding-heart text-[10px]"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Promotional Moving Banner -->
+        <div class="bg-blue-600 text-white overflow-hidden whitespace-nowrap py-1.5 mb-2 -mx-4">
+            <div class="inline-block animate-marquee font-black text-[9px] uppercase tracking-[3px]">
+                🔥 flash sale: 10% off all items today! &nbsp;•&nbsp; 🚀 boost your ads for faster sales &nbsp;•&nbsp; 🛡️ secure escrow payments enabled &nbsp;•&nbsp; 📍 finding deals near you &nbsp;•&nbsp;
+                🔥 flash sale: 10% off all items today! &nbsp;•&nbsp; 🚀 boost your ads for faster sales &nbsp;•&nbsp; 🛡️ secure escrow payments enabled &nbsp;•&nbsp; 📍 finding deals near you &nbsp;•&nbsp;
+            </div>
+        </div>
+
+        <style>
+            @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+            .animate-marquee { display: inline-block; animation: marquee 20s linear infinite; }
+        </style>
+
+        <!-- New Hero Ad Banner -->
+        <div class="relative overflow-hidden rounded-2xl mb-6 shadow-lg group cursor-pointer" onclick="document.getElementById('boostInfoModal').classList.remove('hidden')">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" class="w-full h-32 object-cover transition duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-800/40 to-transparent flex flex-col justify-center px-6">
+                <span class="bg-amber-400 text-blue-900 text-[8px] font-black px-2 py-0.5 rounded-full w-max mb-1 uppercase tracking-wider">Seller Center</span>
+                <h2 class="text-white text-lg font-black leading-tight uppercase italic tracking-tighter">Boost Your Sales<br><span class="text-amber-400">Reach 10,000+ Buyers Today</span></h2>
+                <button class="mt-2 text-white/80 text-[8px] font-bold uppercase tracking-widest flex items-center gap-1">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="absolute right-4 bottom-4 w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center border border-white/30">
+                <i class="fa-solid fa-rocket text-white animate-bounce"></i>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-2 mb-4">
+            <button onclick="document.getElementById('postModal').classList.remove('hidden')" class="flex-1 bg-slate-900 text-white p-3.5 rounded-xl flex items-center justify-center gap-2 shadow-xl hover:bg-slate-800 transition">
+                <i class="fa-solid fa-plus text-sm"></i>
+                <span class="text-[10px] font-black uppercase tracking-widest">Post Your Ad Now</span>
+            </button>
+        </div>
+
+        <div class="cat-scroll" id="cats"></div>
+
+        <div class="flex items-center justify-between py-4">
+            <h2 class="text-base font-black text-slate-800 dark:text-slate-100 tracking-tight" id="title">Featured Market</h2>
+            <span class="text-[9px] font-black uppercase text-blue-600 bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded" id="stats"></span>
+        </div>
+
+        <div class="ad-grid fast-load" id="grid"></div>
+        <div class="h-20"></div>
+    </main>
+
+    <!-- Ad Detail Modal -->
+    <div id="modal" class="fixed inset-0 z-[100] hidden flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/60 backdrop-blur-md">
+        <div class="modal-bg w-full max-w-lg rounded-t-3xl sm:rounded-3xl shadow-2xl relative animate-in slide-in-from-bottom duration-300 max-h-[95vh] overflow-y-auto no-scrollbar pb-10">
+            <div class="sticky top-0 right-0 flex justify-end p-4 z-[110] pointer-events-none">
+                <div class="flex gap-2 pointer-events-auto">
+                    <button id="detailCompareBtn" class="w-8 h-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur rounded-full flex items-center justify-center text-slate-700 dark:text-slate-200 shadow-md border border-slate-200/50 dark:border-slate-700/50"><i class="fa-solid fa-scale-balanced text-sm"></i></button>
+                    <button onclick="closeM()" class="w-8 h-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur rounded-full flex items-center justify-center text-slate-700 dark:text-slate-200 shadow-md border border-slate-200/50 dark:border-slate-700/50"><i class="fa-solid fa-xmark text-sm"></i></button>
+                </div>
+            </div>
+            
+            <div class="p-4 sm:p-6 -mt-10">
+                <div class="relative w-full aspect-square bg-slate-100 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden shadow-inner">
+                    <div id="carousel" class="flex transition-transform duration-500 h-full cursor-pointer"></div>
+                    <div id="carouselDots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5"></div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="flex justify-between items-start">
+                        <div class="flex-1 pr-4">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span id="m-badge" class="px-2 py-0.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 text-[8px] font-black uppercase rounded tracking-widest border border-blue-100 dark:border-blue-800"></span>
+                                <div class="flex items-center gap-1 bg-green-50 text-green-700 px-2 py-0.5 rounded text-[7px] font-black uppercase border border-green-100">
+                                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span> Verified
+                                </div>
+                            </div>
+                            <h2 id="m-name" class="text-xl font-black text-slate-800 dark:text-white leading-tight"></h2>
+                            <div class="flex items-center gap-1 text-amber-400 text-[9px] mt-1">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span class="text-slate-400 font-bold ml-1 uppercase tracking-tighter">Top Rated Merchant</span>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <p id="m-price" class="text-2xl font-black text-blue-600"></p>
+                            <p id="m-oldPrice" class="text-sm text-slate-400 line-through font-bold"></p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-700/50 shadow-sm">
+                        <h3 class="text-[9px] font-black uppercase text-slate-400 mb-3 tracking-widest">Description & Specs</h3>
+                        <p id="m-specs" class="text-xs font-bold text-slate-600 dark:text-slate-300 leading-relaxed"></p>
+                    </div>
+
+                    <div class="bg-blue-600 rounded-3xl p-6 text-white shadow-xl shadow-blue-600/20">
+                        <h3 class="text-[9px] font-black uppercase text-blue-200 mb-4 tracking-widest">Merchant Details</h3>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center text-2xl font-black border border-white/10" id="m-sellerInit"></div>
+                            <div>
+                                <p id="m-seller" class="font-black text-lg leading-tight mb-0.5"></p>
+                                <div id="sellerBadges"></div>
+                                <p class="text-[10px] font-bold text-blue-100 flex items-center gap-1.5 opacity-90">
+                                    <i class="fa-solid fa-location-dot"></i> <span id="m-loc"></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="space-y-3" id="contactSection">
+                            <button onclick="openChat()" class="w-full py-4 bg-white text-blue-600 rounded-xl font-black text-[10px] uppercase tracking-wider active:scale-95 transition shadow-lg flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-comments"></i> Chat to Negotiate
+                            </button>
+                            <p class="text-[7px] text-blue-100 font-black uppercase text-center opacity-70">Agree on price via Soko Chat to reveal seller number</p>
+                        </div>
+                        <div id="revealSection" class="hidden animate-in slide-in-from-bottom-2">
+                            <div class="bg-green-500/20 rounded-2xl p-3 mb-3 border border-white/10 flex items-center gap-3">
+                                <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-[10px]">✓</div>
+                                <p class="text-[9px] font-black uppercase tracking-tight">Deal Agreed! Contact Info Revealed</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button onclick="call()" class="flex items-center justify-center gap-2 bg-white text-blue-600 py-3.5 rounded-xl font-black text-[10px] uppercase tracking-wider active:scale-95 transition shadow-lg">
+                                    <i class="fa-solid fa-phone"></i> Call Now
+                                </button>
+                                <button onclick="wpp()" class="flex items-center justify-center gap-2 bg-green-500 text-white py-3.5 rounded-xl font-black text-[10px] uppercase tracking-wider active:scale-95 transition shadow-lg">
+                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div onclick="showSafety()" class="flex items-center gap-3 p-4 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 cursor-pointer hover:bg-slate-100 transition">
+                        <div class="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-600">
+                            <i class="fa-solid fa-shield-check"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-[9px] font-black text-slate-700 dark:text-slate-200 uppercase tracking-widest">Buyer Protection Active</p>
+                            <p class="text-[7px] text-slate-500 font-bold uppercase">Safe payments & 48h return window</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-slate-300 text-xs"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Concierge Modal -->
+    <div id="conciergeModal" class="fixed inset-0 z-[150] hidden flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/60 backdrop-blur-md">
+        <div class="modal-bg w-full max-w-md rounded-t-3xl sm:rounded-3xl overflow-hidden shadow-2xl relative animate-in slide-in-from-bottom duration-300">
+            <div class="bg-blue-600 p-6 text-white text-center">
+                <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-white/30">
+                    <i class="fa-solid fa-user-tie text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-black mb-1">Soko Concierge</h3>
+                <p class="text-[10px] uppercase font-black opacity-70 tracking-widest">Private & Secure Support</p>
+            </div>
+            <div class="p-6">
+                <p class="text-xs text-slate-500 font-bold mb-4">How can our team help you today?</p>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Inquiry Type</label>
+                        <input type="text" id="con-type" readonly class="w-full p-4 bg-slate-50 rounded-xl outline-none text-sm font-black text-blue-600 border border-slate-100">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Your Message</label>
+                        <textarea id="con-msg" rows="4" placeholder="Describe what you need..." class="w-full p-4 bg-slate-50 rounded-xl outline-none text-sm font-bold border border-slate-100 focus:border-blue-500"></textarea>
+                    </div>
+                    <button onclick="submitConcierge()" class="w-full py-4 bg-blue-600 text-white rounded-xl font-black text-[10px] uppercase tracking-widest shadow-lg shadow-blue-600/20 active:scale-95 transition">Send Private Message</button>
+                    <button onclick="document.getElementById('conciergeModal').classList.add('hidden')" class="w-full text-slate-400 text-[10px] font-bold uppercase tracking-widest">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post Ad Modal -->
+    <div id="postModal" class="fixed inset-0 z-[110] hidden flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/50 backdrop-blur-sm">
+        <div class="modal-bg w-full max-w-lg rounded-t-3xl sm:rounded-3xl overflow-hidden shadow-2xl relative max-h-[95vh] flex flex-col">
+            <div class="p-4 border-b flex items-center justify-between">
+                <h3 class="font-black text-lg">Post New Ad</h3>
+                <button onclick="document.getElementById('priceModal').classList.remove('hidden')" class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-[8px] font-black uppercase tracking-widest border border-purple-100">
+                    <i class="fa-solid fa-sparkles mr-1"></i> AI Price Check
+                </button>
+                <div class="flex items-center gap-2">
+                    <button onclick="closePost()" title="Minimize" class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-200 transition">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <button onclick="closePost()" title="Close" class="w-8 h-8 bg-red-50 rounded-full flex items-center justify-center text-red-500 hover:bg-red-100 transition">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="p-6 overflow-y-auto space-y-4 no-scrollbar">
+                <div id="syncDropzone" class="bg-blue-50 border-2 border-dashed border-blue-200 rounded-xl p-4 text-center cursor-pointer hover:bg-blue-100 transition" onclick="document.getElementById('syncInput').click()">
+                    <i class="fa-solid fa-cloud-arrow-up text-blue-500 text-xl mb-1"></i>
+                    <p class="text-[9px] font-black text-blue-700 uppercase">Inventory Sync</p>
+                    <p class="text-[8px] text-blue-500 mt-0.5">Drop CSV/JSON for bulk upload</p>
+                    <input type="file" id="syncInput" class="hidden" accept=".csv,.json" onchange="handleSync(this)">
+                </div>
+
+                <div id="imagePreviewArea" class="space-y-2">
+                    <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Add Photos (Unlimited)</label>
+                    <div class="flex gap-2 overflow-x-auto no-scrollbar py-1">
+                        <div id="imagePreview" onclick="document.getElementById('postImage').click()" class="flex-shrink-0 w-24 h-24 border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-xl flex flex-col items-center justify-center gap-2 text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition">
+                            <i class="fa-solid fa-camera"></i>
+                            <span class="text-[8px]">Add Photo</span>
+                        </div>
+                        <div id="additionalPreviews" class="flex gap-2"></div>
+                    </div>
+                    <input type="file" id="postImage" class="hidden" accept="image/*" multiple onchange="previewImages(this)">
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="col-span-2">
+                        <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">What are you selling?</label>
+                        <input type="text" id="postName" placeholder="e.g. MacBook Pro M1" class="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl text-sm outline-none focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Category</label>
+                        <select id="postCat" onchange="showLaptopFields(this.value)" class="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl text-sm outline-none appearance-none">
+                            <option value="laptops">Laptops (New)</option>
+                            <option value="laptops">Laptops (Ex-UK)</option>
+                            <option value="laptops">Laptops (Refurbished)</option>
+                            <option value="phones">Phones & Tablets</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="gaming">Video Games</option>
+                            <option value="cameras">Cameras</option>
+                            <option value="computing">Computer Parts</option>
+                            <option value="vehicles">Vehicles</option>
+                            <option value="bikes">Motorbikes</option>
+                            <option value="parts">Auto Parts</option>
+                            <option value="property-rent">Rentals</option>
+                            <option value="property-sale">Property for Sale</option>
+                            <option value="land">Land & Plots</option>
+                            <option value="furniture">Furniture</option>
+                            <option value="appliances">Home Appliances</option>
+                            <option value="decor">Home & Garden</option>
+                            <option value="fashion-men">Mens Fashion</option>
+                            <option value="fashion-women">Womens Fashion</option>
+                            <option value="watches">Watches</option>
+                            <option value="shoes">Shoes</option>
+                            <option value="beauty">Health & Beauty</option>
+                            <option value="kids">Kids & Toys</option>
+                            <option value="sports">Sports & Gym</option>
+                            <option value="hobbies">Hobbies & Art</option>
+                            <option value="agriculture">Agriculture</option>
+                            <option value="livestock">Livestock</option>
+                            <option value="pets">Pets</option>
+                            <option value="services">Services</option>
+                            <option value="jobs">Jobs</option>
+                            <option value="industrial">Industrial Equipment</option>
+                            <option value="other">Others</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Price (KSh)</label>
+                        <input type="text" id="postPrice" placeholder="e.g. 45,000" oninput="formatInputPrice(this)" class="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl text-sm outline-none focus:border-blue-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Condition</label>
+                    <div class="flex gap-2">
+                        <button onclick="setCond(this, 'New')" class="cond-btn flex-1 py-2 rounded-lg border border-slate-200 text-[9px] font-black uppercase tracking-wider bg-slate-50 text-slate-500">New</button>
+                        <button onclick="setCond(this, 'Ex-UK')" class="cond-btn flex-1 py-2 rounded-lg border border-slate-200 text-[9px] font-black uppercase tracking-wider bg-slate-50 text-slate-500">Ex-UK</button>
+                        <button onclick="setCond(this, 'Refurbished')" class="cond-btn flex-1 py-2 rounded-lg border border-slate-200 text-[9px] font-black uppercase tracking-wider bg-slate-50 text-slate-500">Refurbished</button>
+                    </div>
+                </div>
+
+                <div id="laptopFields" class="hidden grid grid-cols-3 gap-3 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-700">
+                    <div>
+                        <label class="block text-[8px] font-black uppercase text-slate-400 mb-1">RAM</label>
+                        <select id="postRam" class="w-full bg-white dark:bg-slate-700 border border-slate-200 p-2 rounded-lg text-xs outline-none">
+                            <option value="">Select</option>
+                            <option value="4GB">4GB</option>
+                            <option value="8GB">8GB</option>
+                            <option value="16GB">16GB</option>
+                            <option value="32GB">32GB</option>
+                            <option value="64GB">64GB</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[8px] font-black uppercase text-slate-400 mb-1">Storage</label>
+                        <select id="postStorage" class="w-full bg-white dark:bg-slate-700 border border-slate-200 p-2 rounded-lg text-xs outline-none">
+                            <option value="">Select</option>
+                            <option value="128GB SSD">128GB SSD</option>
+                            <option value="256GB SSD">256GB SSD</option>
+                            <option value="512GB SSD">512GB SSD</option>
+                            <option value="1TB SSD">1TB SSD</option>
+                            <option value="500GB HDD">500GB HDD</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[8px] font-black uppercase text-slate-400 mb-1">Processor</label>
+                        <select id="postProcessor" class="w-full bg-white dark:bg-slate-700 border border-slate-200 p-2 rounded-lg text-xs outline-none">
+                            <option value="">Select</option>
+                            <option value="Core i3">Core i3</option>
+                            <option value="Core i5">Core i5</option>
+                            <option value="Core i7">Core i7</option>
+                            <option value="Core i9">Core i9</option>
+                            <option value="Ryzen 5">Ryzen 5</option>
+                            <option value="Ryzen 7">Ryzen 7</option>
+                            <option value="Apple M1">Apple M1</option>
+                            <option value="Apple M2">Apple M2</option>
+                            <option value="Apple M3">Apple M3</option>
+                        </select>
+                    </div>
+                </div>
+
+                <textarea id="postSpecs" rows="2" placeholder="Describe other details (Condition, Battery life, etc.)" class="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl text-sm outline-none focus:border-blue-500"></textarea>
+
+                <button onclick="publishAd()" class="w-full bg-blue-600 text-white py-4 rounded-xl font-black uppercase text-[10px] tracking-widest shadow-lg active:scale-95 transition">Publish Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upgrade Ad Modal (Analytics Included) -->
+    <div id="upgradeModal" class="fixed inset-0 z-[120] hidden flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/50 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-lg rounded-t-3xl sm:rounded-3xl overflow-hidden shadow-2xl relative p-6 animate-in slide-in-from-bottom duration-300">
+            <h3 class="font-black text-xl mb-1">🚀 Boost Your Ad</h3>
+            <p class="text-slate-500 text-xs mb-6">Reach up to 20x more buyers instantly.</p>
+
+            <!-- Analytics Preview -->
+            <div class="mb-6 p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                <div class="flex justify-between items-center mb-3">
+                    <p class="text-[9px] font-black uppercase text-slate-400 tracking-widest">Platform Insights</p>
+                    <span class="text-[8px] bg-green-100 text-green-700 px-2 py-0.5 rounded font-black uppercase">Live</span>
+                </div>
+                <div class="grid grid-cols-3 gap-2">
+                    <div class="text-center">
+                        <p class="text-lg font-black text-blue-600">1.2k</p>
+                        <p class="text-[8px] text-slate-500 uppercase font-bold">Views</p>
+                    </div>
+                    <div class="text-center border-x border-slate-200">
+                        <p class="text-lg font-black text-green-500">84</p>
+                        <p class="text-[8px] text-slate-500 uppercase font-bold">Leads</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-lg font-black text-orange-500">12</p>
+                        <p class="text-[8px] text-slate-500 uppercase font-bold">Sold</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="space-y-3 mb-8">
+                <div class="upgrade-card selected" id="up-silver" onclick="selectUpgrade('up-silver', 'silver')">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-bold text-sm">Silver Standard (14 Days)</p>
+                            <p class="text-[9px] text-slate-400">2 weeks of top-tier visibility.</p>
+                        </div>
+                        <span class="font-black text-blue-600 text-sm">KSh 749</span>
+                    </div>
+                </div>
+                <div class="upgrade-card" id="up-gold" onclick="selectUpgrade('up-gold', 'gold')">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-bold text-sm">Gold Diamond (30 Days)</p>
+                            <p class="text-[9px] text-slate-400">Omnipresent position + Social push.</p>
+                        </div>
+                        <span class="font-black text-blue-600 text-sm">KSh 2,499</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <button onclick="skipUpgrade()" class="text-slate-400 font-bold text-[10px] uppercase tracking-widest">Maybe Later</button>
+                <button onclick="initMpesaPayment(selectedBoost, selectedBoost === 'silver' ? 749 : 2499)" class="bg-blue-600 text-white py-4 rounded-xl font-black uppercase text-[10px] tracking-widest shadow-lg">Pay & Boost</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- M-Pesa Payment Simulation -->
+    <div id="paymentModal" class="fixed inset-0 z-[150] hidden flex items-center justify-center p-6">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closePaymentModal()"></div>
+        <div class="relative w-full max-w-sm bg-white rounded-[32px] overflow-hidden shadow-2xl">
+            <div class="mpesa-bg p-5 text-white text-center">
+                <i class="fa-solid fa-mobile-screen-button text-2xl mb-2"></i>
+                <h3 class="text-lg font-black">M-PESA STK PUSH</h3>
+            </div>
+            <div class="p-8 text-center">
+                <p class="text-slate-500 text-[10px] uppercase font-black mb-1">Plan: <span id="paymentPlan" class="text-slate-900">Silver</span></p>
+                <p id="paymentAmount" class="text-3xl font-black mb-6 text-slate-900">KSh 749</p>
+                <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl mb-6">
+                    <i class="fa-solid fa-spinner fa-spin mpesa-green text-xl"></i>
+                    <p class="text-[9px] font-bold text-slate-600 text-left">Requesting M-Pesa prompt on your phone... Check your screen now.</p>
+                </div>
+                <button onclick="verifyPayment()" class="w-full py-4 mpesa-bg text-white rounded-xl font-bold text-[10px] uppercase tracking-widest">I have Paid</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Price Check Modal -->
+    <div id="priceModal" class="fixed inset-0 z-[160] hidden flex items-center justify-center p-6 bg-black/80 backdrop-blur-md">
+        <div class="relative w-full max-w-sm bg-white dark:bg-slate-900 rounded-3xl p-6 shadow-2xl">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-8 h-8 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center"><i class="fa-solid fa-sparkles"></i></div>
+                <h3 class="text-lg font-black">AI Price Check</h3>
+            </div>
+            <input type="text" id="priceModel" placeholder="e.g. MacBook Pro M1 2020" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl mb-4 outline-none text-sm">
+            <button onclick="estimatePrice()" class="w-full py-4 bg-purple-600 text-white rounded-xl font-black text-[10px] uppercase tracking-widest mb-6">Get Estimate</button>
+            <div id="priceResult" class="hidden p-4 bg-purple-50 rounded-xl border border-purple-100">
+                <p class="text-[8px] font-black uppercase text-purple-400 mb-1">Market Value</p>
+                <p id="estValue" class="text-2xl font-black text-purple-600"></p>
+                <p class="text-[8px] text-purple-400 mt-1 italic uppercase">Based on real listings across Kenya</p>
+            </div>
+            <button onclick="document.getElementById('priceModal').classList.add('hidden')" class="w-full text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-4">Close</button>
+        </div>
+    </div>
+
+    <!-- Seller Auth Modal -->
+    <div id="authModal" class="fixed inset-0 z-[200] hidden flex items-center justify-center p-6 bg-black/80 backdrop-blur-md">
+        <div class="relative w-full max-w-sm bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-2xl overflow-hidden">
+            <div id="authContent">
+                <!-- Login View -->
+                <div id="loginView">
+                    <h3 class="text-2xl font-black mb-1">Welcome Back</h3>
+                    <p class="text-slate-500 text-xs mb-8 font-medium">Log in to manage your inventory</p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div>
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Phone Number</label>
+                            <input type="text" id="loginPhone" placeholder="0712 345 678" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">PIN / Password</label>
+                            <input type="password" id="loginPass" placeholder="••••" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                        </div>
+                    </div>
+                    
+                    <button onclick="handleAuth('login')" class="w-full py-4 bg-blue-600 text-white rounded-xl font-black text-[10px] uppercase tracking-widest shadow-xl active:scale-95 transition mb-6">Sign In</button>
+                    
+                    <p class="text-center text-xs font-bold text-slate-500">
+                        Don't have an account? 
+                        <button onclick="toggleAuthView('signup')" class="text-blue-600 font-black uppercase text-[10px] ml-1">Create One</button>
+                    </p>
+                </div>
+
+                <!-- Signup View -->
+                <div id="signupView" class="hidden">
+                    <h3 class="text-2xl font-black mb-1">Join Soko Mpya</h3>
+                    <p class="text-slate-500 text-xs mb-8 font-medium">Start selling to 10k+ buyers today</p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div>
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Shop / Business Name</label>
+                            <input type="text" id="regName" placeholder="e.g. Nexcom Ventures" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">M-Pesa Number</label>
+                            <input type="text" id="regPhone" placeholder="0712 345 678" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Create PIN</label>
+                            <input type="password" id="regPass" placeholder="4-6 Digits" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                        </div>
+                    </div>
+                    
+                    <button onclick="handleAuth('signup')" class="w-full py-4 bg-blue-600 text-white rounded-xl font-black text-[10px] uppercase tracking-widest shadow-xl active:scale-95 transition mb-6">Create Account</button>
+                    
+                    <p class="text-center text-xs font-bold text-slate-500">
+                        Already a seller? 
+                        <button onclick="toggleAuthView('login')" class="text-blue-600 font-black uppercase text-[10px] ml-1">Sign In</button>
+                    </p>
+                </div>
+            </div>
+            
+            <button onclick="document.getElementById('authModal').classList.add('hidden')" class="absolute top-6 right-6 w-8 h-8 flex items-center justify-center bg-slate-100 rounded-full text-slate-500">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+        </div>
+    </div>
+
+    <!-- Comparisons, Requests modals (keeping them) -->
+    <div id="requestModal" class="fixed inset-0 z-[120] hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl relative flex flex-col max-h-[80vh]">
+            <div class="p-6 border-b flex items-center justify-between bg-slate-50 dark:bg-slate-800">
+                <h3 class="font-black text-xl">🔎 "I'm Looking For..."</h3>
+                <button onclick="document.getElementById('requestModal').classList.add('hidden')" class="w-8 h-8 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center shadow-md"><i class="fa-solid fa-xmark text-sm"></i></button>
+            </div>
+            <div class="p-6 overflow-y-auto" id="requestBoard"></div>
+            <div class="p-6 border-t bg-slate-50 dark:bg-slate-800 flex gap-2">
+                <input type="text" id="reqInput" placeholder="e.g. MacBook under 90k..." class="flex-1 bg-white dark:bg-slate-700 border border-slate-200 p-3 rounded-xl text-sm outline-none">
+                <button onclick="postRequest()" class="bg-blue-600 text-white px-6 rounded-xl font-black text-[10px] uppercase">Post</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison Table (keeping it) -->
+    <div id="compareModal" class="fixed inset-0 z-[120] hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
+            <div class="p-6 border-b flex items-center justify-between bg-slate-50 dark:bg-slate-800">
+                <h3 class="font-black text-xl">⚖️ Item Comparison</h3>
+                <button onclick="closeCompareTable()" class="w-8 h-8 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center shadow-md"><i class="fa-solid fa-xmark text-sm"></i></button>
+            </div>
+            <div class="p-6 overflow-x-auto"><table class="w-full text-left border-collapse" id="compareTable"></table></div>
+        </div>
+    </div>
+
+    <div id="compareBar" class="fixed bottom-0 left-0 right-0 z-[100] hidden bg-white dark:bg-slate-900 border-t border-slate-200 shadow-2xl">
+        <div class="content-width p-4 flex items-center justify-between">
+            <div class="flex items-center gap-3 overflow-x-auto no-scrollbar py-1" id="compareList"></div>
+            <div class="flex items-center gap-4 ml-4">
+                <button onclick="clearCompare()" class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Clear</button>
+                <button onclick="showCompareTable()" class="bg-blue-600 text-white px-5 py-3 rounded-xl font-black uppercase text-[10px] tracking-widest shadow-lg shadow-blue-500/30">Compare</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seller Boost Info -->
+    <div id="boostInfoModal" class="fixed inset-0 z-[110] hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-md rounded-3xl overflow-hidden shadow-2xl relative">
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 text-white text-center">
+                <i class="fa-solid fa-rocket text-3xl mb-2"></i>
+                <h3 class="text-lg font-black">Boost Your Listings</h3>
+            </div>
+            <div class="p-6 space-y-4">
+                <!-- Analytics Preview for Sellers -->
+                <div class="p-4 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-100 flex items-center justify-around text-center">
+                    <div><p class="text-xl font-black text-blue-600">8.4k</p><p class="text-[8px] text-slate-500 uppercase font-bold">Total Reach</p></div>
+                    <div class="w-px h-8 bg-slate-200"></div>
+                    <div><p class="text-xl font-black text-green-500">142</p><p class="text-[8px] text-slate-500 uppercase font-bold">Conversions</p></div>
+                </div>
+
+                <div class="flex items-center gap-4 p-3 border-2 border-amber-400 rounded-2xl bg-amber-50">
+                    <div class="w-10 h-10 bg-amber-400 text-white rounded-full flex items-center justify-center font-black">G</div>
+                    <div class="flex-1"><p class="text-[10px] font-black uppercase text-amber-600">Gold Tier</p><p class="text-[8px] text-slate-500">Always top + Spotlight badge</p></div>
+                    <p class="text-xs font-black">KES 500/wk</p>
+                </div>
+                <button onclick="openConcierge('Boost Inquiry')" class="w-full bg-blue-600 text-white p-4 rounded-2xl font-black text-xs shadow-lg hover:bg-blue-700 transition uppercase tracking-widest flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-headset"></i> Soko Concierge
+                </button>
+                <button onclick="document.getElementById('boostInfoModal').classList.add('hidden')" class="w-full text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-2">Maybe Later</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const CATEGORIES = [
+            { id: 'all', name: 'All Items' }, 
+            { id: 'laptops', name: 'Laptops' }, 
+            { id: 'phones', name: 'Phones' },
+            { id: 'electronics', name: 'Electronics' }, 
+            { id: 'gaming', name: 'Video Games' },
+            { id: 'cameras', name: 'Cameras' },
+            { id: 'computing', name: 'Computer Parts' },
+            { id: 'vehicles', name: 'Vehicles' },
+            { id: 'bikes', name: 'Motorbikes' },
+            { id: 'parts', name: 'Auto Parts' },
+            { id: 'property-rent', name: 'Rentals' },
+            { id: 'property-sale', name: 'Property for Sale' },
+            { id: 'land', name: 'Land & Plots' },
+            { id: 'furniture', name: 'Furniture' },
+            { id: 'appliances', name: 'Home Appliances' },
+            { id: 'decor', name: 'Home & Garden' },
+            { id: 'fashion-men', name: 'Mens Fashion' },
+            { id: 'fashion-women', name: 'Womens Fashion' },
+            { id: 'watches', name: 'Watches' },
+            { id: 'shoes', name: 'Shoes' },
+            { id: 'beauty', name: 'Health & Beauty' },
+            { id: 'kids', name: 'Kids & Toys' },
+            { id: 'sports', name: 'Sports & Gym' },
+            { id: 'hobbies', name: 'Hobbies & Art' },
+            { id: 'agriculture', name: 'Agriculture' },
+            { id: 'livestock', name: 'Livestock' },
+            { id: 'pets', name: 'Pets' },
+            { id: 'services', name: 'Services' },
+            { id: 'jobs', name: 'Jobs' },
+            { id: 'industrial', name: 'Industrial Equipment' },
+            { id: 'other', name: 'Others' }
+        ];
+
+        let ADS = [
+{"id": "nx-new-hp-1", "cat": "laptops", "name": "HP EliteBook 840 G10", "price": "KSh 224,000", "img": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08483861.png", "specs": "Intel Core i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 BRAND NEW", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+{"id": "nx-new-hp-2", "cat": "laptops", "name": "HP ZBook Firefly G10", "price": "KSh 235,000", "img": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08483842.png", "specs": "i7-1355U \u2022 16GB RAM \u2022 RTX A500 4GB \u2022 BRAND NEW", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+{"id": "nx-new-dell-1", "cat": "laptops", "name": "Dell Latitude 3450 i7", "price": "KSh 198,000", "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-computing/laptops/latitude/3450/media-gallery/laptop-latitude-3450-non-touch-plastic-gray-gallery-1.psd?fmt=png-alpha&wid=500", "specs": "i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 BRAND NEW", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-feat-1", "cat": "laptops", "name": "Dell XPS 13 9330", "price": "KSh 135,000", "img": "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=800", "specs": "Intel Core i7 13th Gen \u2022 16GB RAM \u2022 512GB SSD", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-feat-2", "cat": "laptops", "name": "MacBook Pro 13 M2", "price": "KSh 140,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "Apple M2 Chip \u2022 8GB RAM \u2022 512GB SSD", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": true, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-feat-3", "cat": "laptops", "name": "ThinkPad X1 Carbon Gen 10", "price": "KSh 91,000", "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800", "specs": "i7 12th Gen \u2022 16GB RAM \u2022 512GB SSD", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-feat-4", "cat": "laptops", "name": "HP EliteBook 840 G8", "price": "KSh 63,000", "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800", "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": true, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-bud-1", "cat": "laptops", "name": "Lenovo 11E Core M5", "price": "KSh 13,000", "img": "https://images.unsplash.com/photo-1525547718571-03b05761ad91?q=80&w=800", "specs": "8GB RAM \u2022 128GB SSD \u2022 11.6\"", "badge": "Refurbished", "isBoosted": false, "onFlashSale": true, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-bud-2", "cat": "laptops", "name": "Lenovo 11E Celeron", "price": "KSh 10,000", "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800", "specs": "4GB RAM \u2022 128GB SSD \u2022 Rugged", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-bud-3", "cat": "laptops", "name": "Lenovo Yoga N23S", "price": "KSh 12,500", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e520b?q=80&w=800", "specs": "Celeron \u2022 4GB RAM \u2022 128GB SSD \u2022 Touch", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-d-1", "cat": "laptops", "name": "Dell Latitude 5400 i5", "price": "KSh 24,000", "img": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800", "specs": "8th Gen \u2022 8GB \u2022 256GB SSD", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-d-2", "cat": "laptops", "name": "Dell Precision 5550 i7", "price": "KSh 70,000", "img": "https://images.unsplash.com/photo-1661961111184-11317b40adb2?q=80&w=800", "specs": "10th Gen \u2022 16GB \u2022 512GB \u2022 4GB Nvidia", "badge": "Foreign Used", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-d-3", "cat": "laptops", "name": "Dell XPS 13 9310 i7", "price": "KSh 65,000", "img": "https://images.unsplash.com/photo-1661961112134-fbce0fdf3d99?q=80&w=800", "specs": "11th Gen \u2022 16GB \u2022 512GB \u2022 Touch", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-h-1", "cat": "laptops", "name": "HP ProBook 640 G5 i5", "price": "KSh 25,800", "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800", "specs": "8th Gen \u2022 8GB \u2022 256GB SSD", "badge": "Ex-UK", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-h-2", "cat": "laptops", "name": "HP EliteBook 840 G6 i5", "price": "KSh 36,500", "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800", "specs": "8th Gen \u2022 16GB \u2022 256GB SSD", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-l-1", "cat": "laptops", "name": "ThinkPad T490s i5", "price": "KSh 25,000", "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800", "specs": "8th Gen \u2022 8GB \u2022 256GB SSD", "badge": "Ex-UK", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-l-2", "cat": "laptops", "name": "ThinkPad X1 Yoga i7", "price": "KSh 40,000", "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800", "specs": "8th Gen \u2022 16GB \u2022 512GB \u2022 Touch", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-l-new-1", "cat": "laptops", "name": "Lenovo IdeaPad Slim 3", "price": "KSh 48,500", "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800", "specs": "Ryzen 5 \u2022 8GB RAM \u2022 512GB SSD", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-l-new-2", "cat": "laptops", "name": "ThinkPad E14 Gen 2", "price": "KSh 38,000", "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800", "specs": "i5 11th Gen \u2022 8GB RAM \u2022 256GB SSD", "badge": "Ex-UK", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-l-new-3", "cat": "laptops", "name": "Lenovo ThinkBook 15", "price": "KSh 55,000", "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800", "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-l-new-4", "cat": "laptops", "name": "ThinkPad L13 Yoga", "price": "KSh 32,000", "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800", "specs": "i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touch", "badge": "Ex-UK", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-s-1", "cat": "laptops", "name": "PowerEdge T150 Server", "price": "KSh 145,000", "img": "https://images.unsplash.com/photo-1558494949-ef010978911e?q=80&w=800", "specs": "Intel Xeon \u2022 16GB ECC \u2022 2TB HDD", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-s-2", "cat": "laptops", "name": "ProLiant DL380 Gen10", "price": "KSh 280,000", "img": "https://images.unsplash.com/photo-1594065296416-aed7ae708d58?q=80&w=800", "specs": "Dual Xeon \u2022 64GB RAM \u2022 Rack Server", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-m-1", "cat": "laptops", "name": "MacBook Air M1", "price": "KSh 85,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "Apple M1 Chip \u2022 8GB RAM \u2022 256GB SSD \u2022 13.3-inch Retina", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-m-2", "cat": "laptops", "name": "MacBook Pro 14 M3", "price": "KSh 285,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "Apple M3 Chip \u2022 16GB RAM \u2022 512GB SSD \u2022 Liquid Retina XDR", "badge": "Ex-UK", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-100", "cat": "laptops", "name": "macbook pro 16 2019 i9 64/1tb with 8 graphics", "price": "KSh 133,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 16 2019 i9 64/1tb with 8 graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-101", "cat": "laptops", "name": "macbook pro 16 i9 32/2tb with 8gb graphics", "price": "KSh 133,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 16 i9 32/2tb with 8gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-102", "cat": "laptops", "name": "macbook pro 16 2019 i9 32/1tb with 4gn graphics", "price": "KSh 119,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 16 2019 i9 32/1tb with 4gn graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-103", "cat": "laptops", "name": "macbook pro 16 2019 i7 32/512gb", "price": "KSh 98,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 16 2019 i7 32/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-104", "cat": "laptops", "name": "macbook pro 15 2019 i7 16/512gb 4gb graphics", "price": "KSh 88,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 15 2019 i7 16/512gb 4gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-105", "cat": "laptops", "name": "macbook pro 15 2018 i7 16/512gb 4gb graphics", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 15 2018 i7 16/512gb 4gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-106", "cat": "laptops", "name": "macbook pro 15 2017 i7 16/512gb 4gb graphics", "price": "KSh 73,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 15 2017 i7 16/512gb 4gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-107", "cat": "laptops", "name": "macbook pro 15 2017 i7 16/512gb 2gb graphics", "price": "KSh 70,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 15 2017 i7 16/512gb 2gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-108", "cat": "laptops", "name": "macbook pro 15 2015 i7 16/512gb 2gb graphics", "price": "KSh 49,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 15 2015 i7 16/512gb 2gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-109", "cat": "laptops", "name": "macbook pro m1 13 2020 16/512gb", "price": "KSh 140,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro m1 13 2020 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-110", "cat": "laptops", "name": "macbook pro m1 13 2020 8/256gb", "price": "KSh 105,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro m1 13 2020 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-111", "cat": "laptops", "name": "macbook pro 13 i7 2020 16/1tb", "price": "KSh 91,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 i7 2020 16/1tb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-112", "cat": "laptops", "name": "macbook pro 13 i7 2020 32/512gb", "price": "KSh 91,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 i7 2020 32/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-113", "cat": "laptops", "name": "macbook pro 13 i7 2020 16/512gb", "price": "KSh 84,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 i7 2020 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-114", "cat": "laptops", "name": "macbook pro 13 2019 i7 16/1tb", "price": "KSh 98,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2019 i7 16/1tb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-115", "cat": "laptops", "name": "macbook pro 13 2019 i7 16/512gb", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2019 i7 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-116", "cat": "laptops", "name": "macbook pro 13 2019 i7 16/256gb", "price": "KSh 70,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2019 i7 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-117", "cat": "laptops", "name": "macbook pro 13 2019 i5 16/256gb", "price": "KSh 63,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2019 i5 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-118", "cat": "laptops", "name": "macbook pro 13 2019 i5 8/256gb", "price": "KSh 59,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2019 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-119", "cat": "laptops", "name": "macbook pro 13 2018 i7 16/256gb", "price": "KSh 67,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2018 i7 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-120", "cat": "laptops", "name": "macbook pro 13 2017 i7 16/1tb", "price": "KSh 70,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2017 i7 16/1tb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-121", "cat": "laptops", "name": "macbook pro 13 2017 i7 16/512gb", "price": "KSh 63,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2017 i7 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-122", "cat": "laptops", "name": "macbook pro 13 2017 i7 16/256gb", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2017 i7 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-123", "cat": "laptops", "name": "macbook pro 13 2017 i5 8/512gb", "price": "KSh 53,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2017 i5 8/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-124", "cat": "laptops", "name": "macbook pro 13 2017 i5 8/256gb", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2017 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-125", "cat": "laptops", "name": "macbook pro 13 2015 i7 8/256gb", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2015 i7 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-126", "cat": "laptops", "name": "macbook pro 13 2015 i5 16/512gb", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2015 i5 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-127", "cat": "laptops", "name": "macbook pro 13 2015 i5 16/256gb", "price": "KSh 38,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2015 i5 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-128", "cat": "laptops", "name": "macbook pro 13 2015 i5 8/256gb", "price": "KSh 35,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2015 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-129", "cat": "laptops", "name": "macbook pro 13 2014 i5 8/256gb", "price": "KSh 32,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2014 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-130", "cat": "laptops", "name": "macbook pro 13 2013 i5 8/256gb", "price": "KSh 29,500", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2013 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-131", "cat": "laptops", "name": "macbook pro 13 2013 i7 8/256gb", "price": "KSh 35,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2013 i7 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-132", "cat": "laptops", "name": "macbook pro 13 2012 i7 8/256gb", "price": "KSh 26,500", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2012 i7 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-133", "cat": "laptops", "name": "macbook pro 13 2012 i5 8/256gb", "price": "KSh 24,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2012 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-134", "cat": "laptops", "name": "macbook pro 13 2011 i5 8/256gb", "price": "KSh 21,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2011 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-135", "cat": "laptops", "name": "macbook air laptops macbook air m1 2022 8/512gb", "price": "KSh 119,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "macbook air laptops macbook air m1 2022 8/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-136", "cat": "laptops", "name": "macbook air m1 2022 8/256gb", "price": "KSh 112,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "macbook air m1 2022 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-137", "cat": "laptops", "name": "macbook air m1 2020 8/256gb", "price": "KSh 84,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "macbook air m1 2020 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-138", "cat": "laptops", "name": "macbook air 13 2019 i5 16/256gb", "price": "KSh 59,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "macbook air 13 2019 i5 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-139", "cat": "laptops", "name": "macbook air 13 2019 i58/256gb", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "macbook air 13 2019 i58/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-140", "cat": "laptops", "name": "macbook air 13 2018 i5 8/256gb", "price": "KSh 53,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "macbook air 13 2018 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-141", "cat": "laptops", "name": "macbook air 13 2017 i7 8/256gb", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "macbook air 13 2017 i7 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-142", "cat": "laptops", "name": "macbook air 13 2017 i5 8/256gb", "price": "KSh 35,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "macbook air 13 2017 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-143", "cat": "laptops", "name": "MacBook Air 13 2015 i5 8/256", "price": "KSh 31,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "MacBook Air 13 2015 i5 8/256", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-144", "cat": "laptops", "name": "MacBook Air 13 2014 i7 8/256", "price": "KSh 29,500", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "MacBook Air 13 2014 i7 8/256", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-145", "cat": "laptops", "name": "MacBook Air 13 2013 i5 8/128", "price": "KSh 26,500", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "MacBook Air 13 2013 i5 8/128", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-mb-146", "cat": "laptops", "name": "sam 930 i7 11th 16/512gb", "price": "KSh 84,000", "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800", "specs": "sam 930 i7 11th 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-500", "cat": "laptops", "name": "hp spectre x360 convertible 15t -df100 i7 10th with 2gb graphics", "price": "KSh 119,000", "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800", "specs": "hp spectre x360 convertible 15t -df100 i7 10th with 2gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-501", "cat": "laptops", "name": "hp spectre x360 convertible 15-df0xxx i7 8th 16/512gb with 2gb graphics", "price": "KSh 84,000", "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800", "specs": "hp spectre x360 convertible 15-df0xxx i7 8th 16/512gb with 2gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-502", "cat": "laptops", "name": "hp. spectre x360 convertible 15-bl0xx i7 7th 16/512gb with 2gb graphics", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800", "specs": "hp. spectre x360 convertible 15-bl0xx i7 7th 16/512gb with 2gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-503", "cat": "laptops", "name": "hp envy x360 convertible 15m i7 8th 16/512gb", "price": "KSh 70,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp envy x360 convertible 15m i7 8th 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-504", "cat": "laptops", "name": "hp zbook studio 15 g7 mobile workstation i7 10th 32/512gb with 4gb graphics", "price": "KSh 105,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook studio 15 g7 mobile workstation i7 10th 32/512gb with 4gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-505", "cat": "laptops", "name": "hp zbook 15 studio g5 i7 9th 16/512gb with 4gb nvidia Quadro p1000", "price": "KSh 84,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 15 studio g5 i7 9th 16/512gb with 4gb nvidia Quadro p1000", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-506", "cat": "laptops", "name": "hp zbook 15 studio i7 8th 16/512gb with 4gb nvidia Quadro p1000", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 15 studio i7 8th 16/512gb with 4gb nvidia Quadro p1000", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-507", "cat": "laptops", "name": "hp zbook 15 g5 i7 8th 16/512gb with 4gb nvidia Quadro p1000", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 15 g5 i7 8th 16/512gb with 4gb nvidia Quadro p1000", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-508", "cat": "laptops", "name": "hp zbook 15u g6 i7 8th 16/512gb with 4gb AMD Radeon pro wx3200 graphics", "price": "KSh 70,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 15u g6 i7 8th 16/512gb with 4gb AMD Radeon pro wx3200 graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-509", "cat": "laptops", "name": "hp zbook 15 studio g5 i7 8th 16/512gb with 4gb nvidia quadro p1000", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 15 studio g5 i7 8th 16/512gb with 4gb nvidia quadro p1000", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-510", "cat": "laptops", "name": "hp zbook g4 i7 7th 16/512gb with 4gb nvidia quadro m1200", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook g4 i7 7th 16/512gb with 4gb nvidia quadro m1200", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-511", "cat": "laptops", "name": "hp zbook 15 g3 i7 6th 16/512gb with 4gb nvidia Quadro m1200", "price": "KSh 49,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 15 g3 i7 6th 16/512gb with 4gb nvidia Quadro m1200", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-512", "cat": "laptops", "name": "hp zbook 14 firefly g7 mobile workstation 32/512gb with 4gb nvidia graphics touchscreen", "price": "KSh 98,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 14 firefly g7 mobile workstation 32/512gb with 4gb nvidia graphics touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-513", "cat": "laptops", "name": "hp zbook 14u g6 i7 8th 16/512gb with 4gb AMD Radeon pro wx3200 graphics", "price": "KSh 63,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 14u g6 i7 8th 16/512gb with 4gb AMD Radeon pro wx3200 graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-514", "cat": "laptops", "name": "hp zbook 14u i7 8/256gb with 4gb graphics", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 14u i7 8/256gb with 4gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-515", "cat": "laptops", "name": "hp zbook 14u g5 i7 8th 16/512gb with 2gb AMD Radeon pro wx 3100", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 14u g5 i7 8th 16/512gb with 2gb AMD Radeon pro wx 3100", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-516", "cat": "laptops", "name": "hp 1040 g8 i7 11th 16/512gb", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1040 g8 i7 11th 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-517", "cat": "laptops", "name": "hp 1040 g7 i7 10th 16/512gb x360 touchscreen", "price": "KSh 70,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1040 g7 i7 10th 16/512gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-518", "cat": "laptops", "name": "hp 1040 g6 i7 8th 16/52gb x360 touchscreen", "price": "KSh 60,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1040 g6 i7 8th 16/52gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-519", "cat": "laptops", "name": "hp 1040 g5 i5 8th 16/512gb x360 touchscreen", "price": "KSh 50,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1040 g5 i5 8th 16/512gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-520", "cat": "laptops", "name": "hp 1040 g5 i5 8/256gb x360 touchscreen", "price": "KSh 46,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1040 g5 i5 8/256gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-521", "cat": "laptops", "name": "hp 1040 g3 i5 6th 16/256gb", "price": "KSh 33,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1040 g3 i5 6th 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-522", "cat": "laptops", "name": "hp 1040 g3 i5 6th 8/256gb", "price": "KSh 31,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1040 g3 i5 6th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-523", "cat": "laptops", "name": "hp 1040 g3 i7 6th 16/512gb", "price": "KSh 35,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1040 g3 i7 6th 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-524", "cat": "laptops", "name": "hp 1030 g8 i7 11th 16/512gb x360 touchscreen", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g8 i7 11th 16/512gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-525", "cat": "laptops", "name": "hp 1030 g8 i5 11th 16/512gb x360 touchscreen", "price": "KSh 70,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g8 i5 11th 16/512gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-526", "cat": "laptops", "name": "hp 1030 g3 i7 16/512gb", "price": "KSh 60,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g3 i7 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-527", "cat": "laptops", "name": "hp 1030 g3 i7 8th 16/256gb", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g3 i7 8th 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-528", "cat": "laptops", "name": "hp 1030 g3 i7 8th 8/256gb", "price": "KSh 49,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g3 i7 8th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-529", "cat": "laptops", "name": "hp 1030 g3 i5 8th 16/512gb", "price": "KSh 50,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g3 i5 8th 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-530", "cat": "laptops", "name": "hp 1030 g3 i5 8/256gb", "price": "KSh 46,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g3 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-531", "cat": "laptops", "name": "hp 1030 g2 i7 7th 8/256gb", "price": "KSh 47,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g2 i7 7th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-532", "cat": "laptops", "name": "hp 1030 g2 i5 16/256gb", "price": "KSh 46,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g2 i5 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-533", "cat": "laptops", "name": "hp 1030 g2 i5 7th 8/256gb", "price": "KSh 43,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g2 i5 7th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-534", "cat": "laptops", "name": "hp 1020 g2 i5 7th 16/512gb x360 touchscreen", "price": "KSh 49,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1020 g2 i5 7th 16/512gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-535", "cat": "laptops", "name": "hp 1020 g2 i5 7th 8/256gb touchscreen", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1020 g2 i5 7th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-536", "cat": "laptops", "name": "hp elite x2 g4 i7 8th touchscreen", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp elite x2 g4 i7 8th touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-537", "cat": "laptops", "name": "hp elite x2 g2 i5 7th 16/256gb", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp elite x2 g2 i5 7th 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-538", "cat": "laptops", "name": "hp 840 g10 i7 13th. 16/512gb", "price": "KSh 84,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g10 i7 13th. 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-539", "cat": "laptops", "name": "hp 840 g9 i7 12th 16/512gb", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g9 i7 12th 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-540", "cat": "laptops", "name": "hp 840 g8 i5 11th 8/256gb touchscreen", "price": "KSh 49,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g8 i5 11th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-541", "cat": "laptops", "name": "hp 840 g8 i5 11th 8/256gb", "price": "KSh 46,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g8 i5 11th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-542", "cat": "laptops", "name": "hp 840 g7 i7 10th 8/256gb touchscreen", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g7 i7 10th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-543", "cat": "laptops", "name": "hp 840 g7 i5 10th 8/256gb touchscreen", "price": "KSh 47,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g7 i5 10th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-544", "cat": "laptops", "name": "hp 840 g7 i5 10th 8/256gb", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g7 i5 10th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-545", "cat": "laptops", "name": "hp 840 g5 i7 8th 8/256gb touchscreen", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g5 i7 8th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-546", "cat": "laptops", "name": "hp 840 g5 i7 8th 8/256gb", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g5 i7 8th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-547", "cat": "laptops", "name": "hp 840 g5 i5 8th 8/256gb touchscreen", "price": "KSh 39,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g5 i5 8th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-548", "cat": "laptops", "name": "hp 840 g5 i5 7th 8/256gb touchscreen", "price": "KSh 38,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g5 i5 7th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-549", "cat": "laptops", "name": "hp 840 g5 i5 8th 8/256gb", "price": "KSh 36,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g5 i5 8th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-550", "cat": "laptops", "name": "hp 840 g5 i5 7th 8/256gb", "price": "KSh 35,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g5 i5 7th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-551", "cat": "laptops", "name": "hp 840 g2 i5 8/500gb", "price": "KSh 20,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g2 i5 8/500gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-552", "cat": "laptops", "name": "hp 840 g1 i7 8/256gb", "price": "KSh 23,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g1 i7 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-553", "cat": "laptops", "name": "hp 830 g8 i7 11th 32/512gb x360 touchscreen", "price": "KSh 80,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g8 i7 11th 32/512gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-554", "cat": "laptops", "name": "hp 830 g8 i7 11th 16/512gb x360 touchscreen", "price": "KSh 74,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g8 i7 11th 16/512gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-555", "cat": "laptops", "name": "hp 830 g8 i5 11th 16/256gb x360 touchscreen", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g8 i5 11th 16/256gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-556", "cat": "laptops", "name": "hp 830 g8 i5 11th 8/256gb x360 touchscreen", "price": "KSh 53,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g8 i5 11th 8/256gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-557", "cat": "laptops", "name": "hp 830 g8 i7 11th 8/256gb touchscreen", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g8 i7 11th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-558", "cat": "laptops", "name": "hp 830 g8 i5 11th 8/256gb touchscreen", "price": "KSh 47,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g8 i5 11th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-559", "cat": "laptops", "name": "hp 830 g8 i5 11th 8/256gb", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g8 i5 11th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-560", "cat": "laptops", "name": "hp 830 g7 i7 8/256gb touchscreen", "price": "KSh 53,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g7 i7 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-561", "cat": "laptops", "name": "hp 830 g7 i7 10th 8/256gb", "price": "KSh 46,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g7 i7 10th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-562", "cat": "laptops", "name": "hp 830 g7 i5 10th 8/256gb touchscreen", "price": "KSh 46,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g7 i5 10th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-563", "cat": "laptops", "name": "hp 830 g7 i5 8/256gb", "price": "KSh 43,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g7 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-564", "cat": "laptops", "name": "hp 830 g6 i7 8th 16/512gb touchscreen", "price": "KSh 50,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g6 i7 8th 16/512gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-565", "cat": "laptops", "name": "hp 830 g5 i7 8th 8/256gb", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g5 i7 8th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-566", "cat": "laptops", "name": "hp 830 g5 i7 8th 8/256gb touchscreen", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g5 i7 8th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-567", "cat": "laptops", "name": "hp 830 g6 i5 8/256gb touchscreen", "price": "KSh 36,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g6 i5 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-568", "cat": "laptops", "name": "hp 830 g5 i5 8th 8/256gb", "price": "KSh 35,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g5 i5 8th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-569", "cat": "laptops", "name": "hp 830 g7 i7 10th 8/256gb x360 touchscreen", "price": "KSh 52,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g7 i7 10th 8/256gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-570", "cat": "laptops", "name": "hp 830 g6 i7 8th 8/256gb x360 touchscreen", "price": "KSh 50,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g6 i7 8th 8/256gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-571", "cat": "laptops", "name": "hp 830 g6 i5 8th 8/256gb x360 touchscreen", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g6 i5 8th 8/256gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-572", "cat": "laptops", "name": "hp 450 g8 i5 11th 8/256gb", "price": "KSh 49,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 450 g8 i5 11th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-573", "cat": "laptops", "name": "hp 850 g8 i5 11th 8/256gb touchscreen", "price": "KSh 59,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 850 g8 i5 11th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-574", "cat": "laptops", "name": "hp 850 g8 i5 11th 8/256gb", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 850 g8 i5 11th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-575", "cat": "laptops", "name": "hp 850 g7 i5 10th 8/256gb", "price": "KSh 49,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 850 g7 i5 10th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-576", "cat": "laptops", "name": "Hp 850 G5 I5 8th 8/256", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "Hp 850 G5 I5 8th 8/256", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-577", "cat": "laptops", "name": "hp dreagonfly i5 8th 16/512gb", "price": "KSh 63,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp dreagonfly i5 8th 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-578", "cat": "laptops", "name": "hp 845 g7 ryzen ryzen 7 8/256gb", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 845 g7 ryzen ryzen 7 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-579", "cat": "laptops", "name": "hp 835 g8 ryzen 7. 8/256gb", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 835 g8 ryzen 7. 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-580", "cat": "laptops", "name": "Hp 745 G6 Ryzen 7 8/256 2gb graphics", "price": "KSh 39,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "Hp 745 G6 Ryzen 7 8/256 2gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-581", "cat": "laptops", "name": "Hp 745 Ryzen 5 8/256 touchscreen 2gb graphics", "price": "KSh 38,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "Hp 745 Ryzen 5 8/256 touchscreen 2gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-582", "cat": "laptops", "name": "hp 745 g6 ryzen 5 nontouch 8/256gb", "price": "KSh 35,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 745 g6 ryzen 5 nontouch 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-583", "cat": "laptops", "name": "hp 735 g6 ryzen 7 8/256gb 2gb graphics", "price": "KSh 39,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 735 g6 ryzen 7 8/256gb 2gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-584", "cat": "laptops", "name": "hp 640 g9 i5 12th 8/256gb", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 640 g9 i5 12th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-585", "cat": "laptops", "name": "hp probook 630 g8 i5 11th 8/256gb touchscreen", "price": "KSh 49,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp probook 630 g8 i5 11th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-586", "cat": "laptops", "name": "hp probook 430 g7 i5 10th 8/256gb", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp probook 430 g7 i5 10th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-587", "cat": "laptops", "name": "hp probook 430 g5 i5 8th 8/256gb", "price": "KSh 32,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp probook 430 g5 i5 8th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-588", "cat": "laptops", "name": "hp probook g4 i5 8th 8/256gb x360 touchscreen", "price": "KSh 32,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp probook g4 i5 8th 8/256gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-589", "cat": "laptops", "name": "hp probook g2 i5 7th 8/256gb x360 touchscreen", "price": "KSh 27,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp probook g2 i5 7th 8/256gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-590", "cat": "laptops", "name": "hp probook 440 g1 i5 7th 8/256gb touchscreen", "price": "KSh 35,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp probook 440 g1 i5 7th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-591", "cat": "laptops", "name": "hp folio 9470 i7 4th 8/500gb", "price": "KSh 23,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp folio 9470 i7 4th 8/500gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-592", "cat": "laptops", "name": "hp folio 9480 i5 5th 8/500gb", "price": "KSh 21,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp folio 9480 i5 5th 8/500gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-593", "cat": "laptops", "name": "hp stream celeron 4/32gb", "price": "KSh 12,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp stream celeron 4/32gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "nx-hp-594", "cat": "laptops", "name": "hp stream celeron 2/32gb", "price": "KSh 12,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp stream celeron 2/32gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"}
+        ];
+
+        let cur = 'all', compareItems = [], currentLoc = 'all';
+
+        function init() { 
+            // Add status/views to existing mock data if missing
+            ADS.forEach(a => {
+                if(!a.status) a.status = 'active';
+                if(!a.views) a.views = Math.floor(Math.random() * 500);
+            });
+            renderCats(); 
+            filter('all'); 
+            updateAuthUI(); 
+        }
+
+        const LOCS = ["All Kenya", "Nairobi", "Mombasa", "Kisumu", "Eldoret", "Nakuru", "Thika"];
+
+        function renderCats() {
+            const locOptions = LOCS.map(l => `<option value="${l === "All Kenya" ? 'all' : l}" ${currentLoc === l ? 'selected' : ''}>${l}</option>`).join('');
+            const locFilter = `
+                <div class="px-0 py-2 mb-2 flex items-center gap-2">
+                    <div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-3 py-2 rounded-xl">
+                        <i class="fa-solid fa-location-dot text-blue-600 text-[10px]"></i>
+                        <select id="locFilter" onchange="currentLoc=this.value; filter(cur)" class="bg-transparent text-[10px] font-black uppercase tracking-widest text-slate-500 outline-none cursor-pointer">
+                            ${locOptions}
+                        </select>
+                    </div>
+                </div>
+            `;
+            const catsHtml = CATEGORIES.map(c => `<button class="cat-btn ${cur === c.id ? 'active' : ''}" onclick="filter('${c.id}')">${c.name}</button>`).join('');
+            document.getElementById('cats').innerHTML = locFilter + `<div class="flex gap-2 overflow-x-auto no-scrollbar">${catsHtml}</div>`;
+        }
+
+        function filter(id) {
+            cur = id; 
+            const q = document.getElementById('qInput').value.toLowerCase();
+            const loc = document.getElementById('locFilter').value;
+            
+            const filtered = ADS.filter(a => {
+                const mc = id === 'all' || a.cat === id;
+                const mq = a.name.toLowerCase().includes(q) || a.specs.toLowerCase().includes(q);
+                const ml = !loc || a.loc === loc;
+                return mc && mq && ml;
+            });
+
+            document.getElementById('stats').innerText = `${filtered.length} items found`;
+            
+            // Update cat button active states
+            const buttons = document.querySelectorAll('.cat-btn');
+            buttons.forEach(btn => {
+                if (btn.innerText.toLowerCase().includes(id) || (id === 'all' && btn.innerText === 'All')) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            render(filtered);
+        }
+
+        function render(ads) {
+            const boostOrder = { 'gold': 3, 'silver': 2, 'bronze': 1, 'none': 0 };
+            const sortedAds = [...ads].sort((a, b) => {
+                const bBoost = boostOrder[b.boostLevel || 'none'];
+                const aBoost = boostOrder[a.boostLevel || 'none'];
+                return bBoost - aBoost;
+            });
+
+            document.getElementById('grid').innerHTML = sortedAds.map(a => {
+                const isFlash = a.onFlashSale || false;
+                const isSold = a.status === 'sold';
+                const isOwner = currentUser && (a.seller === currentUser.name || a.phone === currentUser.phone);
+                
+                let priceHTML = `<p class="ad-price">${a.price}</p>`;
+                let badgeHTML = '';
+
+                if (isFlash) {
+                    const priceVal = parseInt(a.price.replace(/\D/g, ''));
+                    const offerPrice = 'KSh ' + Math.round(priceVal * 0.9).toLocaleString();
+                    priceHTML = `
+                        <p class="text-[9px] text-slate-400 line-through font-bold">${a.price}</p>
+                        <p class="ad-price text-red-600">${offerPrice}</p>
+                    `;
+                    badgeHTML = `<div class="absolute top-2 right-2 bg-red-600 text-white text-[7px] font-black px-1.5 py-0.5 rounded animate-pulse">10% OFF</div>`;
+                }
+
+                const soldOverlay = isSold ? `<div class="absolute inset-0 bg-black/60 flex items-center justify-center z-10 rounded-xl"><span class="border-4 border-white text-white font-black text-xl px-4 py-1 -rotate-12 uppercase tracking-widest">SOLD</span></div>` : '';
+                
+                const ownerTools = isOwner ? `
+                    <div class="absolute top-2 left-2 flex flex-col gap-1 z-20">
+                        <button onclick="event.stopPropagation(); toggleSold('${a.id}')" title="Mark as ${isSold ? 'Active' : 'Sold'}" class="bg-white/95 backdrop-blur text-slate-800 p-2 rounded-lg shadow-sm hover:bg-blue-600 hover:text-white transition">
+                            <i class="fa-solid ${isSold ? 'fa-rotate-left' : 'fa-check'} text-[10px]"></i>
+                        </button>
+                        <button onclick="event.stopPropagation(); deleteAd('${a.id}')" title="Delete Ad" class="bg-white/95 backdrop-blur text-red-600 p-2 rounded-lg shadow-sm hover:bg-red-600 hover:text-white transition">
+                            <i class="fa-solid fa-trash text-[10px]"></i>
+                        </button>
+                    </div>
+                ` : '';
+
+                return `
+                    <div class="ad-card relative group ${isSold ? 'opacity-80' : ''}" onclick="openM('${a.id}')">
+                        ${soldOverlay}
+                        ${ownerTools}
+                        <div class="relative w-full aspect-square bg-slate-50 rounded-xl mb-3 overflow-hidden shadow-sm">
+                            <img src="${a.img}" alt="${a.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            ${a.isBoosted ? `<div class="absolute top-2 right-2 bg-blue-600 text-white text-[6px] font-black px-1.5 py-0.5 rounded uppercase tracking-tighter shadow-sm"><i class="fa-solid fa-rocket mr-0.5"></i> Featured</div>` : ''}
+                            ${badgeHTML}
+                            <div class="absolute bottom-2 right-2 bg-black/60 backdrop-blur text-white text-[7px] font-bold px-1.5 py-0.5 rounded flex items-center gap-1">
+                                <i class="fa-solid fa-eye text-[6px]"></i> ${a.views || 0}
+                            </div>
+                        </div>
+                        <p class="text-[9px] font-black uppercase text-blue-600 mb-0.5 tracking-tight">${a.badge || 'New'}</p>
+                        <h3 class="ad-name mb-1 line-clamp-2 min-h-[2.4em] leading-tight">${a.name}</h3>
+                        ${priceHTML}
+                        <div class="flex items-center gap-1 text-slate-400 mt-2">
+                            <i class="fa-solid fa-location-dot text-[8px]"></i>
+                            <span class="text-[8px] font-bold uppercase tracking-tight">${a.loc || 'Nairobi'}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function toggleSold(id) {
+            const ad = ADS.find(a => a.id === id);
+            if (ad) {
+                ad.status = ad.status === 'sold' ? 'active' : 'sold';
+                filter(cur);
+            }
+        }
+
+        function deleteAd(id) {
+            if (confirm('Permanently delete this ad?')) {
+                const idx = ADS.findIndex(a => a.id === id);
+                if (idx > -1) {
+                    ADS.splice(idx, 1);
+                    filter(cur);
+                }
+            }
+        }
+
+        function viewMyAds() {
+            if (!currentUser) return document.getElementById('authModal').classList.remove('hidden');
+            cur = 'my-ads';
+            const myAds = ADS.filter(a => a.seller === currentUser.name || a.phone === currentUser.phone);
+            render(myAds);
+            document.getElementById('stats').innerText = `${myAds.length} of your ads`;
+            
+            document.querySelectorAll('.cat-btn').forEach(el => el.classList.remove('active'));
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openM(id) {
+            const a = ADS.find(ad => ad.id === id);
+            if (!a) return;
+            
+            // Increment view count locally for demo
+            a.views = (a.views || 0) + 1;
+            
+            let displayPrice = a.price;
+            let oldPrice = '';
+
+            if (a.onFlashSale) {
+                const priceVal = parseInt(a.price.replace(/\D/g, ''));
+                displayPrice = 'KSh ' + Math.round(priceVal * 0.9).toLocaleString();
+                oldPrice = a.price;
+            }
+
+            // Handle multiple images in carousel
+            const carousel = document.getElementById('carousel');
+            const dots = document.getElementById('carouselDots');
+            const images = Array.isArray(a.img) ? a.img : [a.img];
+            
+            if (carousel && dots) {
+                carousel.style.transform = 'translateX(0)';
+                carousel.style.width = `${images.length * 100}%`;
+                carousel.innerHTML = images.map(src => `<img src="${src}" class="w-full h-full object-cover flex-shrink-0" style="width: ${100/images.length}%">`).join('');
+                
+                dots.innerHTML = images.map((_, i) => `
+                    <div class="w-1 h-1 rounded-full ${i === 0 ? 'bg-blue-600 w-3' : 'bg-slate-300'} transition-all"></div>
+                `).join('');
+
+                let currentIdx = 0;
+                carousel.onclick = () => {
+                    if (images.length <= 1) return;
+                    currentIdx = (currentIdx + 1) % images.length;
+                    carousel.style.transform = `translateX(-${currentIdx * (100/images.length)}%)`;
+                    Array.from(dots.children).forEach((dot, i) => {
+                        dot.className = `w-1 h-1 rounded-full ${i === currentIdx ? 'bg-blue-600 w-3' : 'bg-slate-300'} transition-all`;
+                    });
+                };
+            }
+
+            document.getElementById('m-name').innerText = a.name;
+            document.getElementById('m-price').innerText = displayPrice;
+            document.getElementById('m-oldPrice').innerText = oldPrice;
+            document.getElementById('m-specs').innerText = a.specs;
+            document.getElementById('m-seller').innerText = a.seller || 'Verified Merchant';
+            document.getElementById('m-loc').innerText = a.loc || 'Nairobi CBD';
+            document.getElementById('m-sellerInit').innerText = (a.seller || 'V').charAt(0);
+            
+            // Seller Stats / Badges
+            const isVerified = a.seller === 'Nexcom Ventures' || Math.random() > 0.5;
+            const sellerBadges = `
+                <div class="flex flex-wrap gap-1 mt-2">
+                    ${isVerified ? '<span class="bg-green-100 text-green-700 text-[8px] font-black px-1.5 py-0.5 rounded uppercase flex items-center gap-1"><i class="fa-solid fa-circle-check"></i> Verified</span>' : ''}
+                    <span class="bg-blue-100 text-blue-700 text-[8px] font-black px-1.5 py-0.5 rounded uppercase flex items-center gap-1"><i class="fa-solid fa-star"></i> 4.9 (150+)</span>
+                    <span class="bg-slate-100 text-slate-700 text-[8px] font-black px-1.5 py-0.5 rounded uppercase flex items-center gap-1"><i class="fa-solid fa-clock"></i> 2y on Soko</span>
+                </div>
+            `;
+            const badgesEl = document.getElementById('sellerBadges');
+            if (badgesEl) badgesEl.innerHTML = sellerBadges;
+
+            const modal = document.getElementById('modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+            window.aPhone = a.phone;
+            window.aName = a.name;
+            window.aPrice = displayPrice;
+            
+            // Reset contact section
+            document.getElementById('contactSection').classList.remove('hidden');
+            document.getElementById('revealSection').classList.add('hidden');
+        }
+
+        function openConcierge(type = 'General Support') {
+            document.getElementById('con-type').value = type;
+            document.getElementById('conciergeModal').classList.remove('hidden');
+        }
+
+        function submitConcierge() {
+            const msg = document.getElementById('con-msg').value;
+            if (!msg) return alert("Please enter your message.");
+            
+            alert("Message sent privately to Soko Agents. We will notify you once an agent responds.");
+            document.getElementById('con-msg').value = '';
+            document.getElementById('conciergeModal').classList.add('hidden');
+        }
+
+        function openChat() {
+            if (!currentUser) return openAuth('signup');
+            const msg = prompt(`Negotiate with ${document.getElementById('m-seller').innerText}:\nEnter your offer price (KSh):`);
+            if (msg) {
+                alert("Offer sent to seller! For this demo, clicking 'OK' simulates the seller accepting your offer.");
+                document.getElementById('contactSection').classList.add('hidden');
+                document.getElementById('revealSection').classList.remove('hidden');
+            }
+        }
+
+        function closeM() { document.getElementById('modal').classList.add('hidden'); document.body.style.overflow = 'auto'; }
+        function toggleDark() { document.documentElement.classList.toggle('dark'); }
+
+        // Auth Logic
+        let currentUser = JSON.parse(localStorage.getItem('sokoUser')) || null;
+
+        function openAuth(view = 'login') {
+            toggleAuthView(view);
+            document.getElementById('authModal').classList.remove('hidden');
+        }
+
+        function toggleAuthView(view) {
+            document.getElementById('loginView').classList.toggle('hidden', view !== 'login');
+            document.getElementById('signupView').classList.toggle('hidden', view !== 'signup');
+        }
+
+        function handleAuth(type) {
+            if (type === 'signup') {
+                const name = document.getElementById('regName').value;
+                const phone = document.getElementById('regPhone').value;
+                const pass = document.getElementById('regPass').value;
+                if (!name || !phone || !pass) return alert('Fill all fields');
+                
+                currentUser = { name, phone, id: 'seller-' + Date.now() };
+                localStorage.setItem('sokoUser', JSON.stringify(currentUser));
+                alert('Account created! Welcome ' + name);
+            } else {
+                const phone = document.getElementById('loginPhone').value;
+                if (!phone) return alert('Enter phone number');
+                // Mock login for now
+                currentUser = { name: 'Seller', phone: phone, id: 'seller-1' };
+                localStorage.setItem('sokoUser', JSON.stringify(currentUser));
+            }
+            updateAuthUI();
+            document.getElementById('authModal').classList.add('hidden');
+        }
+
+        function updateAuthUI() {
+            const nav = document.getElementById('authNav');
+            if (currentUser) {
+                nav.innerHTML = `
+                    <div class="flex items-center gap-2">
+                        <div class="flex flex-col items-end">
+                            <span class="text-[8px] font-black uppercase text-blue-600">Active Seller</span>
+                            <span class="text-[10px] font-bold">${currentUser.name}</span>
+                        </div>
+                        <button onclick="viewMyAds()" class="text-blue-600 px-2 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide border border-blue-100 bg-blue-50">My Ads</button>
+                        <button onclick="postAd()" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide">Post Ad</button>
+                        <button onclick="logout()" class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-400"><i class="fa-solid fa-right-from-bracket text-xs"></i></button>
+                    </div>
+                `;
+            } else {
+                nav.innerHTML = `
+                    <button onclick="openAuth('login')" class="text-[10px] font-black uppercase text-slate-500 px-2">Sign In</button>
+                    <button onclick="postAd()" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide">Post Ad</button>
+                `;
+            }
+        }
+
+        function showLaptopFields(cat) {
+            const fields = document.getElementById('laptopFields');
+            if (fields) {
+                if (cat === 'laptops') {
+                    fields.classList.remove('hidden');
+                } else {
+                    fields.classList.add('hidden');
+                }
+            }
+        }
+            localStorage.removeItem('sokoUser');
+            currentUser = null;
+            updateAuthUI();
+        }
+
+        // Merchant Portal Functions
+        let selectedCond = 'Refurbished';
+        let selectedBoost = 'silver';
+        let uploadedImages = []; // Array to store multiple images
+        let currentEditingId = null;
+
+        function previewImages(input) {
+            if (input.files) {
+                const files = Array.from(input.files);
+                files.forEach(file => {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        uploadedImages.push(e.target.result);
+                        renderImagePreviews();
+                    }
+                    reader.readAsDataURL(file);
+                });
+            }
+        }
+
+        function renderImagePreviews() {
+            const container = document.getElementById('additionalPreviews');
+            container.innerHTML = uploadedImages.map((img, idx) => `
+                <div class="relative flex-shrink-0 w-24 h-24 rounded-xl border border-slate-200 overflow-hidden group">
+                    <img src="${img}" class="w-full h-full object-cover">
+                    <button onclick="removeImage(${idx})" class="absolute top-1 right-1 w-5 h-5 bg-black/50 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <i class="fa-solid fa-xmark text-[10px]"></i>
+                    </button>
+                </div>
+            `).join('');
+            
+            // Hide the "Add" button if we hit 3 images
+            document.getElementById('imagePreview').style.display = uploadedImages.length >= 3 ? 'none' : 'flex';
+        }
+
+        function removeImage(idx) {
+            uploadedImages.splice(idx, 1);
+            renderImagePreviews();
+        }
+
+        function setCond(btn, val) {
+            document.querySelectorAll('.cond-btn').forEach(b => {
+                b.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
+                b.classList.add('bg-slate-50', 'text-slate-500', 'border-slate-200');
+            });
+            btn.classList.add('bg-blue-600', 'text-white', 'border-blue-600');
+            btn.classList.remove('bg-slate-50', 'text-slate-500', 'border-slate-200');
+            selectedCond = val;
+        }
+
+        function formatInputPrice(input) {
+            let val = input.value.replace(/\D/g, '');
+            input.value = val ? Number(val).toLocaleString() : '';
+        }
+
+        function postAd() { 
+            currentEditingId = null;
+            document.getElementById('postName').value = '';
+            document.getElementById('postPrice').value = '';
+            document.getElementById('postSpecs').value = '';
+            uploadedImages = [];
+            renderImagePreviews();
+            document.getElementById('postModal').classList.remove('hidden'); 
+        }
+
+        function editAd(id) {
+            currentEditingId = id;
+            const ad = ADS.find(a => a.id === id);
+            if (!ad) return;
+
+            document.getElementById('postName').value = ad.name;
+            document.getElementById('postPrice').value = ad.price.replace('KSh ', '');
+            document.getElementById('postSpecs').value = ad.specs;
+            document.getElementById('postCat').value = ad.cat;
+            
+            const condBtn = Array.from(document.querySelectorAll('.cond-btn')).find(b => b.innerText === ad.badge);
+            if (condBtn) setCond(condBtn, ad.badge);
+
+            // Handle legacy single-image or multi-image formats
+            uploadedImages = Array.isArray(ad.img) ? [...ad.img] : [ad.img];
+            renderImagePreviews();
+
+            document.getElementById('postModal').classList.remove('hidden');
+        }
+
+        function closePost() { document.getElementById('postModal').classList.add('hidden'); }
+
+        function publishAd() {
+            const name = document.getElementById('postName').value;
+            const price = document.getElementById('postPrice').value;
+            let specs = document.getElementById('postSpecs').value;
+            const cat = document.getElementById('postCat').value;
+
+            if (cat === 'laptops') {
+                const ram = document.getElementById('postRam').value;
+                const storage = document.getElementById('postStorage').value;
+                const cpu = document.getElementById('postCpu').value;
+                if (ram || storage || cpu) {
+                    specs = `RAM: ${ram}, Storage: ${storage}, CPU: ${cpu}. ` + specs;
+                }
+            }
+            
+            if (!name || !price) return alert('Please enter both Name and Price');
+            if (uploadedImages.length === 0) return alert('Please upload at least one photo');
+
+            if (currentEditingId) {
+                const index = ADS.findIndex(a => a.id === currentEditingId);
+                if (index !== -1) {
+                    ADS[index].name = name;
+                    ADS[index].price = 'KSh ' + price;
+                    ADS[index].specs = specs;
+                    ADS[index].cat = cat;
+                    ADS[index].badge = selectedCond;
+                    ADS[index].img = uploadedImages.length > 1 ? [...uploadedImages] : uploadedImages[0];
+                    filter('all');
+                    alert("Ad updated successfully!");
+                }
+            } else {
+                const newAd = {
+                    id: Date.now(),
+                    cat: cat,
+                    name: name,
+                    price: 'KSh ' + price,
+                    img: uploadedImages.length > 1 ? [...uploadedImages] : uploadedImages[0],
+                    specs: specs,
+                    badge: selectedCond,
+                    loc: 'Nairobi',
+                    phone: '254721585784',
+                    isBoosted: false
+                };
+                ADS.unshift(newAd);
+                filter('all');
+                setTimeout(() => {
+                    document.getElementById('upgradeModal').classList.remove('hidden');
+                }, 500);
+            }
+            // Clear form for next use
+            postAd();
+            closePost();
+        }
+
+        function selectUpgrade(id, level) {
+            document.querySelectorAll('.upgrade-card').forEach(c => c.classList.remove('selected'));
+            document.getElementById(id).classList.add('selected');
+            selectedBoost = level;
+        }
+
+        function skipUpgrade() {
+            document.getElementById('upgradeModal').classList.add('hidden');
+            alert("Your ad is live! Check the top of the list.");
+        }
+
+        function initMpesaPayment(plan, amount) {
+            document.getElementById('paymentPlan').innerText = plan.toUpperCase();
+            document.getElementById('paymentAmount').innerText = 'KSh ' + amount.toLocaleString();
+            document.getElementById('paymentModal').classList.remove('hidden');
+        }
+
+        function verifyPayment() {
+            alert("Payment Verified! Your ad is now boosted.");
+            closePaymentModal();
+            document.getElementById('upgradeModal').classList.add('hidden');
+            // Apply boost to the last added ad
+            if (ADS.length > 0) {
+                ADS[0].isBoosted = true;
+                ADS[0].boostLevel = selectedBoost;
+                filter('all');
+            }
+        }
+
+        function closePaymentModal() { document.getElementById('paymentModal').classList.add('hidden'); }
+        function search() { filter(cur); }
+
+        function detectMyLocation() {
+            const btn = document.querySelector('[onclick="detectMyLocation()"]');
+            const icon = btn.querySelector('i');
+            icon.classList.replace('fa-location-crosshairs', 'fa-spinner');
+            icon.classList.add('fa-spin');
+            
+            navigator.geolocation.getCurrentPosition((p) => {
+                setTimeout(() => {
+                    icon.classList.replace('fa-spinner', 'fa-location-crosshairs');
+                    icon.classList.remove('fa-spin');
+                    currentLoc = 'Nairobi';
+                    filter(cur);
+                    alert("Location Detected: Nairobi CBD");
+                }, 1000);
+            }, () => {
+                alert("GPS error. Using default location.");
+            });
+        }
+
+        function estimatePrice() {
+            const m = document.getElementById('priceModel').value.toLowerCase();
+            if (!m) return;
+            const res = document.getElementById('priceResult'), val = document.getElementById('estValue');
+            res.classList.add('hidden');
+            
+            setTimeout(() => {
+                let min = 20000, max = 35000;
+                
+                if (m.includes('macbook')) { min = 65000; max = 140000; }
+                else if (m.includes('840 g3')) { min = 24000; max = 28000; }
+                else if (m.includes('11e')) { min = 11000; max = 15000; }
+                else if (m.includes('820') || m.includes('840')) { min = 22000; max = 35000; }
+                else if (m.includes('i7')) { min = 35000; max = 55000; }
+                else if (m.includes('i3')) { min = 15000; max = 22000; }
+                else if (m.includes('iphone')) { min = 30000; max = 120000; }
+                
+                val.innerText = `KSh ${min.toLocaleString()} - KSh ${max.toLocaleString()}`;
+                res.classList.remove('hidden');
+            }, 800);
+        }
+
+        function showSafety() { alert("Protected by Soko Mpya Escrow. Inspect before paying."); }
+        function call() { window.location.href = `tel:${window.aPhone || '254721585784'}`; }
+        function wpp() { 
+            const msg = encodeURIComponent(`Hi! I'm interested in the *${window.aName}* priced at *${window.aPrice}* I saw on Soko. Is it available?`);
+            window.location.href = `https://wa.me/${window.aPhone || '254721585784'}?text=${msg}`; 
+        }
+
+        init();
+    </script>
+</body>
+</html>
