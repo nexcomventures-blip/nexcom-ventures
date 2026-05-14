@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soko Mpya | Fast, Secure Marketplace</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -948,7 +948,7 @@
             {"id": "nx-hp-594", "cat": "laptops", "name": "hp stream celeron 2/32gb", "price": "KSh 12,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp stream celeron 2/32gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"}
         ];
 
-        let cur = 'all', compareItems = [], currentLoc = 'all';
+        let cur = 'all', compareItems = [], currentLoc = '';
 
         function init() { 
             // Add status/views to existing mock data if missing
@@ -964,7 +964,7 @@
         const LOCS = ["All Kenya", "Nairobi", "Mombasa", "Kisumu", "Eldoret", "Nakuru", "Thika"];
 
         function renderCats() {
-            const locOptions = LOCS.map(l => `<option value="${l === "All Kenya" ? 'all' : l}" ${currentLoc === l ? 'selected' : ''}>${l}</option>`).join('');
+            const locOptions = LOCS.map(l => `<option value="${l === "All Kenya" ? '' : l}" ${currentLoc === (l === "All Kenya" ? '' : l) ? 'selected' : ''}>${l}</option>`).join('');
             const locFilter = `
                 <div class="px-0 py-2 mb-2 flex items-center gap-2">
                     <div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-3 py-2 rounded-xl">
@@ -987,7 +987,7 @@
             const filtered = ADS.filter(a => {
                 const mc = id === 'all' || a.cat === id;
                 const mq = a.name.toLowerCase().includes(q) || a.specs.toLowerCase().includes(q);
-                const ml = !loc || a.loc === loc;
+                const ml = !loc || a.loc.includes(loc);
                 return mc && mq && ml;
             });
 
@@ -1266,6 +1266,7 @@
                 }
             }
         }
+        function logout() {
             localStorage.removeItem('sokoUser');
             currentUser = null;
             updateAuthUI();
