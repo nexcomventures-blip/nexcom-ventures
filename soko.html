@@ -190,7 +190,10 @@
                 </div>
             </a>
             <div class="flex items-center gap-2">
-                <button onclick="postAd()" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide">Post Ad</button>
+                <div id="authNav" class="flex items-center gap-2">
+                    <button onclick="openAuth('login')" class="text-[10px] font-black uppercase text-slate-500 px-2">Sign In</button>
+                    <button onclick="postAd()" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide">Post Ad</button>
+                </div>
                 <button onclick="toggleDark()" class="w-8 h-8 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-full">
                     <i class="fa-solid fa-moon text-slate-600 dark:text-slate-300 text-sm"></i>
                 </button>
@@ -502,6 +505,71 @@
         </div>
     </div>
 
+    <!-- Seller Auth Modal -->
+    <div id="authModal" class="fixed inset-0 z-[200] hidden flex items-center justify-center p-6 bg-black/80 backdrop-blur-md">
+        <div class="relative w-full max-w-sm bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-2xl overflow-hidden">
+            <div id="authContent">
+                <!-- Login View -->
+                <div id="loginView">
+                    <h3 class="text-2xl font-black mb-1">Welcome Back</h3>
+                    <p class="text-slate-500 text-xs mb-8 font-medium">Log in to manage your inventory</p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div>
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Phone Number</label>
+                            <input type="text" id="loginPhone" placeholder="0712 345 678" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">PIN / Password</label>
+                            <input type="password" id="loginPass" placeholder="••••" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                        </div>
+                    </div>
+                    
+                    <button onclick="handleAuth('login')" class="w-full py-4 bg-blue-600 text-white rounded-xl font-black text-[10px] uppercase tracking-widest shadow-xl active:scale-95 transition mb-6">Sign In</button>
+                    
+                    <p class="text-center text-xs font-bold text-slate-500">
+                        Don't have an account? 
+                        <button onclick="toggleAuthView('signup')" class="text-blue-600 font-black uppercase text-[10px] ml-1">Create One</button>
+                    </p>
+                </div>
+
+                <!-- Signup View -->
+                <div id="signupView" class="hidden">
+                    <h3 class="text-2xl font-black mb-1">Join Soko Mpya</h3>
+                    <p class="text-slate-500 text-xs mb-8 font-medium">Start selling to 10k+ buyers today</p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div>
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Shop / Business Name</label>
+                            <input type="text" id="regName" placeholder="e.g. Nexcom Ventures" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">M-Pesa Number</label>
+                            <input type="text" id="regPhone" placeholder="0712 345 678" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Create PIN</label>
+                            <input type="password" id="regPass" placeholder="4-6 Digits" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                        </div>
+                    </div>
+                    
+                    <button onclick="handleAuth('signup')" class="w-full py-4 bg-blue-600 text-white rounded-xl font-black text-[10px] uppercase tracking-widest shadow-xl active:scale-95 transition mb-6">Create Account</button>
+                    
+                    <p class="text-center text-xs font-bold text-slate-500">
+                        Already a seller? 
+                        <button onclick="toggleAuthView('login')" class="text-blue-600 font-black uppercase text-[10px] ml-1">Sign In</button>
+                    </p>
+                </div>
+            </div>
+            
+            <button onclick="document.getElementById('authModal').classList.add('hidden')" class="absolute top-6 right-6 w-8 h-8 flex items-center justify-center bg-slate-100 rounded-full text-slate-500">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+        </div>
+    </div>
+
     <!-- Comparisons, Requests modals (keeping them) -->
     <div id="requestModal" class="fixed inset-0 z-[120] hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
         <div class="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl relative flex flex-col max-h-[80vh]">
@@ -771,7 +839,7 @@
 
         let cur = 'all', compareItems = [], currentLoc = 'all';
 
-        function init() { renderCats(); filter('all'); }
+        function init() { renderCats(); filter('all'); updateAuthUI(); }
 
         const LOCS = ["All Kenya", "Nairobi", "Mombasa", "Kisumu", "Eldoret", "Nakuru", "Thika"];
 
@@ -886,6 +954,67 @@
 
         function closeM() { document.getElementById('modal').classList.add('hidden'); document.body.style.overflow = 'auto'; }
         function toggleDark() { document.documentElement.classList.toggle('dark'); }
+
+        // Auth Logic
+        let currentUser = JSON.parse(localStorage.getItem('sokoUser')) || null;
+
+        function openAuth(view = 'login') {
+            toggleAuthView(view);
+            document.getElementById('authModal').classList.remove('hidden');
+        }
+
+        function toggleAuthView(view) {
+            document.getElementById('loginView').classList.toggle('hidden', view !== 'login');
+            document.getElementById('signupView').classList.toggle('hidden', view !== 'signup');
+        }
+
+        function handleAuth(type) {
+            if (type === 'signup') {
+                const name = document.getElementById('regName').value;
+                const phone = document.getElementById('regPhone').value;
+                const pass = document.getElementById('regPass').value;
+                if (!name || !phone || !pass) return alert('Fill all fields');
+                
+                currentUser = { name, phone, id: 'seller-' + Date.now() };
+                localStorage.setItem('sokoUser', JSON.stringify(currentUser));
+                alert('Account created! Welcome ' + name);
+            } else {
+                const phone = document.getElementById('loginPhone').value;
+                if (!phone) return alert('Enter phone number');
+                // Mock login for now
+                currentUser = { name: 'Seller', phone: phone, id: 'seller-1' };
+                localStorage.setItem('sokoUser', JSON.stringify(currentUser));
+            }
+            updateAuthUI();
+            document.getElementById('authModal').classList.add('hidden');
+        }
+
+        function updateAuthUI() {
+            const nav = document.getElementById('authNav');
+            if (currentUser) {
+                nav.innerHTML = `
+                    <div class="flex items-center gap-2">
+                        <div class="flex flex-col items-end">
+                            <span class="text-[8px] font-black uppercase text-blue-600">Active Seller</span>
+                            <span class="text-[10px] font-bold">${currentUser.name}</span>
+                        </div>
+                        <button onclick="postAd()" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide">Post Ad</button>
+                        <button onclick="logout()" class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-400"><i class="fa-solid fa-right-from-bracket text-xs"></i></button>
+                    </div>
+                `;
+            } else {
+                nav.innerHTML = `
+                    <button onclick="openAuth('login')" class="text-[10px] font-black uppercase text-slate-500 px-2">Sign In</button>
+                    <button onclick="postAd()" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide">Post Ad</button>
+                `;
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('sokoUser');
+            currentUser = null;
+            updateAuthUI();
+        }
 
         // Merchant Portal Functions
         let selectedCond = 'Refurbished';
