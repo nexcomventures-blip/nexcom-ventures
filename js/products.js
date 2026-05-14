@@ -330,6 +330,16 @@ const ALL_PRODUCTS = [
         "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=HP+840+G7"
     },
     {
+        "id": "lenovo-t14s-i5-10th",
+        "brand": "Lenovo",
+        "name": "Lenovo ThinkPad T14s i5",
+        "specs": "i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD",
+        "price": 31000,
+        "category": "exuk business lenovo",
+        "badge": "restocked",
+        "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+T14s"
+    },
+    {
         "id": "lenovo-t480s-i5-8th-touch",
         "brand": "Lenovo",
         "name": "Lenovo ThinkPad T480s i5 Touch",
@@ -381,11 +391,541 @@ const ALL_PRODUCTS = [
         "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
     },
     {
+        "id": "exuk-hp-1",
+        "brand": "HP",
+        "name": "HP 830 g8 i7 11th non touch 16/512",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 50400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-2",
+        "brand": "HP",
+        "name": "HP 840 g7 i7 10th non 16/512",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 46800,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-3",
+        "brand": "HP",
+        "name": "HP 830 g7 i7 10th non 16/512",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 45000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-4",
+        "brand": "HP",
+        "name": "HP 840 g8  i5 11th gen non 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 39600,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-5",
+        "brand": "HP",
+        "name": "HP 830 g8 i5 11th non 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 37200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-6",
+        "brand": "HP",
+        "name": "HP \ufe0f830 g7 i5 10th generation non touch 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 34800,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-7",
+        "brand": "HP",
+        "name": "HP 830 g7 i5 10th touch 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 37800,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-8",
+        "brand": "HP",
+        "name": "HP \ufe0f840 g7 i5 10th gen non touch 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 37200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-9",
+        "brand": "HP",
+        "name": "HP \ufe0f845 g8 (11th) Ryzen 5 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 35400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-10",
+        "brand": "HP",
+        "name": "HP 1040 g6 i7 8th touch x360 16/512",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 50400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-11",
+        "brand": "HP",
+        "name": "HP 1030 G4 core i7 8 generion 16ram  512ssd  touch screen",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 50400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-12",
+        "brand": "HP",
+        "name": "HP 1030 g3/4 i5 8th 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 39600,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-13",
+        "brand": "HP",
+        "name": "HP \ufe0fHp 830 g6 i5 8th touch x360 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 36000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-14",
+        "brand": "HP",
+        "name": "HP 1030 g2 i5 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 36000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-15",
+        "brand": "HP",
+        "name": "HP \ufe0fHp probook 116 i5 10th touch x360 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 25200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-16",
+        "brand": "HP",
+        "name": "HP proBook 11g4  i5 8th gen touch x360 8ram 256ssd @",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 22200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-17",
+        "brand": "HP",
+        "name": "HP probook 11g1 celeron touch x360 4/128",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 15000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-18",
+        "brand": "HP",
+        "name": "HP 840g3 i5 8 256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 24000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-19",
+        "brand": "HP",
+        "name": "HP 840 g4 i5 7th non 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 25200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-20",
+        "brand": "HP",
+        "name": "HP 840 G3 i7 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 26400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-21",
+        "brand": "HP",
+        "name": "HP 830 g5 i5 8/256 touch frameless",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 33000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-22",
+        "brand": "HP",
+        "name": "HP 830 g5 i5 8th touch with frame 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 32400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-23",
+        "brand": "HP",
+        "name": "HP 830 g5/6 i7 8th non 16/512",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 41400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-24",
+        "brand": "HP",
+        "name": "HP 830 g5 i7 8th touch frameless 16/512",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 43200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-25",
+        "brand": "HP",
+        "name": "HP 840 g5 i7 16/512 non touch",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 41400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-26",
+        "brand": "HP",
+        "name": "HP 745 g6 Ryzen 5 with 2gb graphics   8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 30000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-27",
+        "brand": "HP",
+        "name": "HP 840 g5/g6  i5 8th touch 8/256 frameless",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 33600,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-28",
+        "brand": "HP",
+        "name": "HP \ufe0fHp probook 640 g5 i5 8th 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 25800,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-29",
+        "brand": "HP",
+        "name": "HP \ufe0f640 g4 i5 7th 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 22800,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-30",
+        "brand": "HP",
+        "name": "HP 640 g3 i5 7th 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 21600,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-31",
+        "brand": "HP",
+        "name": "HP 640 g2 i7 6th 8/256 SSD",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 22200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-32",
+        "brand": "HP",
+        "name": "HP 640 g2 i5 6th 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 20400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-33",
+        "brand": "HP",
+        "name": "HP 840g1 i5 8/500",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 18600,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-34",
+        "brand": "HP",
+        "name": "HP 840g2 i5 8/500",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 18000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-35",
+        "brand": "HP",
+        "name": "HP 820g3 i5 8ram 256ssd @",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 26400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-36",
+        "brand": "HP",
+        "name": "HP 820 G3 i5 touch 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 25200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-37",
+        "brand": "HP",
+        "name": "HP 820 g3 i7 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 24000,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-38",
+        "brand": "HP",
+        "name": "HP 820g2 i5 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 19800,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-39",
+        "brand": "HP",
+        "name": "HP 820 g2 i5 8/500",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 17400,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-hp-40",
+        "brand": "HP",
+        "name": "HP 820 g1 i5 8/500 14,5k",
+        "specs": "Ex-UK Premium Grade \u2022 HP Business Series",
+        "price": 43200,
+        "category": "exuk hp laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://www.hp.com/content/dam/sites/worldwide/homepage/images/EliteBook_840_G8.png&w=300&output=webp"
+    },
+    {
         "id": "exuk-lenovo-41",
         "brand": "Lenovo",
         "name": "Lenovo \ufe0fX1 Carbon i7 8th non 16/512",
         "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
         "price": 33000,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-42",
+        "brand": "Lenovo",
+        "name": "Lenovo \ufe0fYoga 390 i5 8th 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 42000,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-43",
+        "brand": "Lenovo",
+        "name": "Lenovo Yoga x380 i7 8th touch x360 16/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 26400,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-44",
+        "brand": "Lenovo",
+        "name": "Lenovo Yoga 370 i5 7th touch x360 16/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 27600,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-45",
+        "brand": "Lenovo",
+        "name": "Lenovo T480s i5 8th non touch 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 25200,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-46",
+        "brand": "Lenovo",
+        "name": "Lenovo T490s i5 8th touch 16/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 31200,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-47",
+        "brand": "Lenovo",
+        "name": "Lenovo T460s i5 6th gen 8ram 256ssd @",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 21000,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-48",
+        "brand": "Lenovo",
+        "name": "Lenovo X270 i5 7th 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 27000,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-49",
+        "brand": "Lenovo",
+        "name": "Lenovo X280 i5 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 25200,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-50",
+        "brand": "Lenovo",
+        "name": "Lenovo X250 i5 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 17400,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-51",
+        "brand": "Lenovo",
+        "name": "Lenovo X240 i5 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 17400,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-52",
+        "brand": "Lenovo",
+        "name": "Lenovo \ufe0fYoga 11e i5 8th touch x360 8/256",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 22800,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-53",
+        "brand": "Lenovo",
+        "name": "Lenovo Yoga 11e m3 7th 8/128",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 15600,
+        "category": "exuk lenovo laptop",
+        "badge": "exuk",
+        "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
+    },
+    {
+        "id": "exuk-lenovo-54",
+        "brand": "Lenovo",
+        "name": "Lenovo Yoga 11e  4ram 128ssd @10,k",
+        "specs": "Ex-UK Premium Grade \u2022 Lenovo Business Series",
+        "price": 30000,
         "category": "exuk lenovo laptop",
         "badge": "exuk",
         "img": "https://images.weserv.nl/?url=https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjY0MDUwfGltYWdlL3BuZ3xoYmYvaGEyLzExMDY4NzAzODUwMDE0LnBuZ3w3MmY1ZjY0MzA0M2Y0ZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5ZjU0MjY0MzM0ZTU4MzRiNmY0ZjQzZjM5/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png&w=300&output=webp"
@@ -537,3 +1077,4 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProducts('featured', featuredBtn);
   }
 });
+
