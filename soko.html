@@ -314,7 +314,14 @@
                 <button onclick="document.getElementById('priceModal').classList.remove('hidden')" class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-[8px] font-black uppercase tracking-widest border border-purple-100">
                     <i class="fa-solid fa-sparkles mr-1"></i> AI Price Check
                 </button>
-                <button onclick="closePost()" class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-600"><i class="fa-solid fa-xmark"></i></button>
+                <div class="flex items-center gap-2">
+                    <button onclick="closePost()" title="Minimize" class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-200 transition">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <button onclick="closePost()" title="Close" class="w-8 h-8 bg-red-50 rounded-full flex items-center justify-center text-red-500 hover:bg-red-100 transition">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
             </div>
             
             <div class="p-6 overflow-y-auto space-y-4 no-scrollbar">
@@ -326,14 +333,15 @@
                 </div>
 
                 <div id="imagePreviewArea" class="space-y-2">
-                    <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Add Photos</label>
-                    <div id="imagePreview" onclick="document.getElementById('postImage').click()">
-                        <div class="flex flex-col items-center gap-2">
+                    <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Add Photos (Max 3)</label>
+                    <div class="flex gap-2 overflow-x-auto no-scrollbar py-1">
+                        <div id="imagePreview" onclick="document.getElementById('postImage').click()" class="flex-shrink-0 w-24 h-24 border-2 border-dashed border-slate-200 rounded-xl flex flex-col items-center justify-center gap-2 text-slate-400 hover:bg-slate-50 cursor-pointer transition">
                             <i class="fa-solid fa-camera"></i>
-                            <span class="text-[8px]">Tap to Upload</span>
+                            <span class="text-[8px]">Add Photo</span>
                         </div>
+                        <div id="additionalPreviews" class="flex gap-2"></div>
                     </div>
-                    <input type="file" id="postImage" class="hidden" accept="image/*" onchange="previewImage(this)">
+                    <input type="file" id="postImage" class="hidden" accept="image/*" multiple onchange="previewImages(this)">
                 </div>
 
                 <div class="grid grid-cols-2 gap-4">
@@ -844,7 +852,29 @@
                 oldPrice = a.price;
             }
             
-            document.getElementById('carousel').innerHTML = `<img src="${a.img}" class="w-full h-full object-cover">`;
+            // Handle multiple images in carousel
+            const carousel = document.getElementById('carousel');
+            const dots = document.getElementById('carouselDots');
+            const images = Array.isArray(a.img) ? a.img : [a.img];
+            
+            carousel.style.transform = 'translateX(0)';
+            carousel.style.width = `${images.length * 100}%`;
+            carousel.innerHTML = images.map(src => `<img src="${src}" class="w-full h-full object-cover flex-shrink-0" style="width: ${100/images.length}%">`).join('');
+            
+            dots.innerHTML = images.map((_, i) => `
+                <div class="w-1 h-1 rounded-full ${i === 0 ? 'bg-blue-600 w-3' : 'bg-slate-300'} transition-all"></div>
+            `).join('');
+
+            let currentIdx = 0;
+            carousel.onclick = () => {
+                if (images.length <= 1) return;
+                currentIdx = (currentIdx + 1) % images.length;
+                carousel.style.transform = `translateX(-${currentIdx * (100/images.length)}%)`;
+                Array.from(dots.children).forEach((dot, i) => {
+                    dot.className = `w-1 h-1 rounded-full ${i === currentIdx ? 'bg-blue-600 w-3' : 'bg-slate-300'} transition-all`;
+                });
+            };
+
             document.getElementById('m-name').innerText = a.name;
             document.getElementById('m-price').innerText = displayPrice;
             document.getElementById('m-oldPrice').innerText = oldPrice;
@@ -860,21 +890,41 @@
         // Merchant Portal Functions
         let selectedCond = 'Refurbished';
         let selectedBoost = 'silver';
-        let uploadedImageBase64 = '';
+        let uploadedImages = []; // Array to store multiple images
         let currentEditingId = null;
 
-        function previewImage(input) {
-            if (input.files && input.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const preview = document.getElementById('imagePreview');
-                    preview.style.backgroundImage = `url(${e.target.result})`;
-                    preview.style.backgroundSize = 'cover';
-                    preview.innerHTML = '';
-                    uploadedImageBase64 = e.target.result;
-                }
-                reader.readAsDataURL(input.files[0]);
+        function previewImages(input) {
+            if (input.files) {
+                const files = Array.from(input.files).slice(0, 3 - uploadedImages.length);
+                files.forEach(file => {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        uploadedImages.push(e.target.result);
+                        renderImagePreviews();
+                    }
+                    reader.readAsDataURL(file);
+                });
             }
+        }
+
+        function renderImagePreviews() {
+            const container = document.getElementById('additionalPreviews');
+            container.innerHTML = uploadedImages.map((img, idx) => `
+                <div class="relative flex-shrink-0 w-24 h-24 rounded-xl border border-slate-200 overflow-hidden group">
+                    <img src="${img}" class="w-full h-full object-cover">
+                    <button onclick="removeImage(${idx})" class="absolute top-1 right-1 w-5 h-5 bg-black/50 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <i class="fa-solid fa-xmark text-[10px]"></i>
+                    </button>
+                </div>
+            `).join('');
+            
+            // Hide the "Add" button if we hit 3 images
+            document.getElementById('imagePreview').style.display = uploadedImages.length >= 3 ? 'none' : 'flex';
+        }
+
+        function removeImage(idx) {
+            uploadedImages.splice(idx, 1);
+            renderImagePreviews();
         }
 
         function setCond(btn, val) {
@@ -897,9 +947,8 @@
             document.getElementById('postName').value = '';
             document.getElementById('postPrice').value = '';
             document.getElementById('postSpecs').value = '';
-            document.getElementById('imagePreview').style.backgroundImage = '';
-            document.getElementById('imagePreview').innerHTML = '<div class="flex flex-col items-center gap-2"><i class="fa-solid fa-camera"></i><span class="text-[8px]">Tap to Upload</span></div>';
-            uploadedImageBase64 = '';
+            uploadedImages = [];
+            renderImagePreviews();
             document.getElementById('postModal').classList.remove('hidden'); 
         }
 
@@ -916,11 +965,9 @@
             const condBtn = Array.from(document.querySelectorAll('.cond-btn')).find(b => b.innerText === ad.badge);
             if (condBtn) setCond(condBtn, ad.badge);
 
-            const preview = document.getElementById('imagePreview');
-            preview.style.backgroundImage = `url(${ad.img})`;
-            preview.style.backgroundSize = 'cover';
-            preview.innerHTML = '';
-            uploadedImageBase64 = ad.img;
+            // Handle legacy single-image or multi-image formats
+            uploadedImages = Array.isArray(ad.img) ? [...ad.img] : [ad.img];
+            renderImagePreviews();
 
             document.getElementById('postModal').classList.remove('hidden');
         }
@@ -934,6 +981,7 @@
             const cat = document.getElementById('postCat').value;
             
             if (!name || !price) return alert('Please enter both Name and Price');
+            if (uploadedImages.length === 0) return alert('Please upload at least one photo');
 
             if (currentEditingId) {
                 const index = ADS.findIndex(a => a.id === currentEditingId);
@@ -943,7 +991,7 @@
                     ADS[index].specs = specs;
                     ADS[index].cat = cat;
                     ADS[index].badge = selectedCond;
-                    ADS[index].img = uploadedImageBase64 || ADS[index].img;
+                    ADS[index].img = uploadedImages.length > 1 ? [...uploadedImages] : uploadedImages[0];
                     filter('all');
                     alert("Ad updated successfully!");
                 }
@@ -953,7 +1001,7 @@
                     cat: cat,
                     name: name,
                     price: 'KSh ' + price,
-                    img: uploadedImageBase64 || 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=50',
+                    img: uploadedImages.length > 1 ? [...uploadedImages] : uploadedImages[0],
                     specs: specs,
                     badge: selectedCond,
                     loc: 'Nairobi',
@@ -966,6 +1014,8 @@
                     document.getElementById('upgradeModal').classList.remove('hidden');
                 }, 500);
             }
+            // Clear form for next use
+            postAd();
             closePost();
         }
 
