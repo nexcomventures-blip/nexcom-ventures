@@ -548,30 +548,62 @@
                 </div>
             </div>
             
-            <div class="space-y-3 mb-8">
+            <div class="space-y-2 mb-8">
+                <!-- Diamond Tier -->
+                <div class="upgrade-card" id="up-diamond" onclick="selectUpgrade('up-diamond', 'diamond')">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-bold text-sm">💎 Diamond Tier (30 Days)</p>
+                            <p class="text-[9px] text-slate-400">Absolute top priority + Blue badge.</p>
+                        </div>
+                        <span class="font-black text-blue-600 text-sm">KSh 4,999</span>
+                    </div>
+                </div>
+                <!-- Gold Tier -->
+                <div class="upgrade-card" id="up-gold" onclick="selectUpgrade('up-gold', 'gold')">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-bold text-sm">⭐ Gold Member (30 Days)</p>
+                            <p class="text-[9px] text-slate-400">Omnipresent position + Social push.</p>
+                        </div>
+                        <span class="font-black text-blue-600 text-sm">KSh 2,499</span>
+                    </div>
+                </div>
+                <!-- Silver Tier -->
                 <div class="upgrade-card selected" id="up-silver" onclick="selectUpgrade('up-silver', 'silver')">
                     <div class="flex justify-between items-start">
                         <div>
                             <p class="font-bold text-sm">Silver Standard (14 Days)</p>
-                            <p class="text-[9px] text-slate-400">2 weeks of top-tier visibility.</p>
+                            <p class="text-[9px] text-slate-400">2 weeks of mid-tier visibility.</p>
                         </div>
                         <span class="font-black text-blue-600 text-sm">KSh 749</span>
                     </div>
                 </div>
-                <div class="upgrade-card" id="up-gold" onclick="selectUpgrade('up-gold', 'gold')">
+                <!-- Bronze Tier -->
+                <div class="upgrade-card" id="up-bronze" onclick="selectUpgrade('up-bronze', 'bronze')">
                     <div class="flex justify-between items-start">
                         <div>
-                            <p class="font-bold text-sm">Gold Diamond (30 Days)</p>
-                            <p class="text-[9px] text-slate-400">Omnipresent position + Social push.</p>
+                            <p class="font-bold text-sm">Bronze Boost (7 Days)</p>
+                            <p class="text-[9px] text-slate-400">Steady reach for a week.</p>
                         </div>
-                        <span class="font-black text-blue-600 text-sm">KSh 2,499</span>
+                        <span class="font-black text-blue-600 text-sm">KSh 299</span>
+                    </div>
+                </div>
+                <!-- Urgent Sale -->
+                <div class="upgrade-card border-red-100 bg-red-50" id="up-urgent" onclick="selectUpgrade('up-urgent', 'urgent')">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-bold text-sm text-red-600">🔥 Urgent Sale (48 Hours)</p>
+                            <p class="text-[9px] text-red-400 font-bold">Fastest way to sell your item.</p>
+                        </div>
+                        <span class="font-black text-red-600 text-sm">KSh 199</span>
                     </div>
                 </div>
             </div>
 
             <div class="grid grid-cols-2 gap-4">
                 <button onclick="skipUpgrade()" class="text-slate-400 font-bold text-[10px] uppercase tracking-widest">Maybe Later</button>
-                <button onclick="initMpesaPayment(selectedBoost, selectedBoost === 'silver' ? 749 : 2499)" class="bg-blue-600 text-white py-4 rounded-xl font-black uppercase text-[10px] tracking-widest shadow-lg">Pay & Boost</button>
+                <button onclick="const prices={'diamond':4999,'gold':2499,'silver':749,'bronze':299,'urgent':199}; initMpesaPayment(selectedBoost, prices[selectedBoost])" class="bg-blue-600 text-white py-4 rounded-xl font-black uppercase text-[10px] tracking-widest shadow-lg">Pay & Boost</button>
             </div>
         </div>
     </div>
@@ -1007,7 +1039,7 @@
         }
 
         function render(ads) {
-            const boostOrder = { 'gold': 3, 'silver': 2, 'bronze': 1, 'none': 0 };
+            const boostOrder = { 'diamond': 4, 'gold': 3, 'silver': 2, 'bronze': 1, 'urgent': 1, 'none': 0 };
             const sortedAds = [...ads].sort((a, b) => {
                 const bBoost = boostOrder[b.boostLevel || 'none'];
                 const aBoost = boostOrder[a.boostLevel || 'none'];
@@ -1022,6 +1054,19 @@
                 let priceHTML = `<p class="ad-price">${a.price}</p>`;
                 let badgeHTML = '';
 
+                // Handle Boost Badges
+                if (a.boostLevel === 'diamond') {
+                    badgeHTML = `<div class="absolute top-2 left-2 bg-slate-900 text-white text-[7px] font-black px-2 py-0.5 rounded shadow-lg border border-slate-700 z-10 flex items-center gap-1"><i class="fa-solid fa-gem text-blue-400"></i> DIAMOND</div>`;
+                } else if (a.boostLevel === 'gold') {
+                    badgeHTML = `<div class="absolute top-2 left-2 bg-amber-400 text-black text-[7px] font-black px-2 py-0.5 rounded shadow-lg z-10 flex items-center gap-1"><i class="fa-solid fa-star"></i> GOLD</div>`;
+                } else if (a.boostLevel === 'silver') {
+                    badgeHTML = `<div class="absolute top-2 left-2 bg-slate-200 text-slate-700 text-[7px] font-black px-2 py-0.5 rounded shadow-lg z-10">SILVER</div>`;
+                } else if (a.boostLevel === 'bronze') {
+                    badgeHTML = `<div class="absolute top-2 left-2 bg-orange-200 text-orange-800 text-[7px] font-black px-2 py-0.5 rounded shadow-lg z-10">BRONZE</div>`;
+                } else if (a.boostLevel === 'urgent') {
+                    badgeHTML = `<div class="absolute top-2 left-2 bg-red-600 text-white text-[7px] font-black px-2 py-0.5 rounded shadow-lg z-10 animate-pulse">🔥 URGENT</div>`;
+                }
+
                 if (isFlash) {
                     const priceVal = parseInt(a.price.replace(/\D/g, ''));
                     const offerPrice = 'KSh ' + Math.round(priceVal * 0.9).toLocaleString();
@@ -1029,7 +1074,8 @@
                         <p class="text-[9px] text-slate-400 line-through font-bold">${a.price}</p>
                         <p class="ad-price text-red-600">${offerPrice}</p>
                     `;
-                    badgeHTML = `<div class="absolute top-2 right-2 bg-red-600 text-white text-[7px] font-black px-1.5 py-0.5 rounded animate-pulse">10% OFF</div>`;
+                    // Flash badge appears on the right so it doesn't collide with boost badges
+                    badgeHTML += `<div class="absolute top-2 right-2 bg-red-600 text-white text-[7px] font-black px-1.5 py-0.5 rounded animate-pulse z-10">10% OFF</div>`;
                 }
 
                 const soldOverlay = isSold ? `<div class="absolute inset-0 bg-black/60 flex items-center justify-center z-10 rounded-xl"><span class="border-4 border-white text-white font-black text-xl px-4 py-1 -rotate-12 uppercase tracking-widest">SOLD</span></div>` : '';
