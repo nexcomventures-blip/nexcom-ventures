@@ -336,9 +336,9 @@
                 </div>
 
                 <div id="imagePreviewArea" class="space-y-2">
-                    <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Add Photos (Max 3)</label>
+                    <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Add Photos (Unlimited)</label>
                     <div class="flex gap-2 overflow-x-auto no-scrollbar py-1">
-                        <div id="imagePreview" onclick="document.getElementById('postImage').click()" class="flex-shrink-0 w-24 h-24 border-2 border-dashed border-slate-200 rounded-xl flex flex-col items-center justify-center gap-2 text-slate-400 hover:bg-slate-50 cursor-pointer transition">
+                        <div id="imagePreview" onclick="document.getElementById('postImage').click()" class="flex-shrink-0 w-24 h-24 border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-xl flex flex-col items-center justify-center gap-2 text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition">
                             <i class="fa-solid fa-camera"></i>
                             <span class="text-[8px]">Add Photo</span>
                         </div>
@@ -1024,7 +1024,7 @@
 
         function previewImages(input) {
             if (input.files) {
-                const files = Array.from(input.files).slice(0, 3 - uploadedImages.length);
+                const files = Array.from(input.files);
                 files.forEach(file => {
                     const reader = new FileReader();
                     reader.onload = function(e) {
