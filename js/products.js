@@ -1,13 +1,73 @@
 const ALL_PRODUCTS = [
   {
+    "id": "feat-1",
+    "brand": "Apple",
+    "name": "MacBook Pro 13 i7 (2017)",
+    "specs": "Intel i7 \u2022 16GB RAM \u2022 1TB SSD",
+    "price": 58000,
+    "category": "exuk apple macbook pro 13 featured",
+    "badge": "premium",
+    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
+  },
+  {
+    "id": "feat-2",
+    "brand": "Apple",
+    "name": "MacBook Pro 15 (2019)",
+    "specs": "Intel i7 \u2022 16GB RAM \u2022 512GB SSD \u2022 4GB Graphics",
+    "price": 70000,
+    "category": "exuk apple macbook pro 15 featured",
+    "badge": "premium",
+    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
+  },
+  {
+    "id": "feat-3",
+    "brand": "Apple",
+    "name": "MacBook Pro 13 i7 (2020)",
+    "specs": "Intel i7 \u2022 16GB RAM \u2022 1TB SSD \u2022 Touch Bar",
+    "price": 82000,
+    "category": "exuk apple macbook pro 13 featured",
+    "badge": "premium",
+    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
+  },
+  {
+    "id": "feat-4",
+    "brand": "Apple",
+    "name": "MacBook Pro 13 i7 (2015)",
+    "specs": "Intel i7 \u2022 8GB RAM \u2022 256GB SSD",
+    "price": 35000,
+    "category": "exuk apple macbook pro 13 budget featured",
+    "badge": "value",
+    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
+  },
+  {
     "id": "mb-0",
     "brand": "Apple",
     "name": "MacBook Pro 16 M1 (2021)",
     "specs": "Apple M1 Pro \u2022 32GB RAM \u2022 512GB SSD",
     "price": 155000,
-    "category": "exuk apple macbook pro 16 featured",
+    "category": "exuk apple macbook pro 16",
     "badge": "premium",
     "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-16-inch-2019.jpg"
+  },
+  {
+    "id": "len-t495s-r7",
+    "brand": "Lenovo",
+    "name": "ThinkPad T495s Ryzen 7",
+    "specs": "AMD Ryzen 7 Pro \u2022 16GB RAM \u2022 256GB SSD \u2022 Non-Touch",
+    "price": 33000,
+    "category": "exuk lenovo thinkpad",
+    "badge": "wholesale floor price",
+    "img": "https://p1-ofp.static.pub/medias/bWFkY29tcG9uZW50czoxNTU1NTYxNTM3ODUyLmpwZw/lenovo-thinkpad-t495s-hero.jpg"
+  },
+  {
+    "id": "len-x395-r7",
+    "brand": "Lenovo",
+    "name": "ThinkPad X395 Ryzen 7",
+    "specs": "AMD Ryzen 7 Pro \u2022 16GB RAM \u2022 256GB SSD \u2022 Non-Touch",
+    "price": 35000,
+    "category": "exuk lenovo thinkpad",
+    "badge": "price beat",
+    "img": "https://p1-ofp.static.pub/medias/bWFkY29tcG9uZW50czoxNTU1NzA3MTUyNTMyLmpwZw/lenovo-thinkpad-x395-hero.jpg"
   },
   {
     "id": "mb-1",
@@ -40,16 +100,6 @@ const ALL_PRODUCTS = [
     "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-16-inch-2019.jpg"
   },
   {
-    "id": "mb-4",
-    "brand": "Apple",
-    "name": "MacBook Pro 15 (2019)",
-    "specs": "Intel i7 \u2022 16GB RAM \u2022 512GB SSD \u2022 4GB Graphics",
-    "price": 70000,
-    "category": "exuk apple macbook pro 15",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
     "id": "mb-5",
     "brand": "Apple",
     "name": "MacBook Pro 15 (2018)",
@@ -80,16 +130,6 @@ const ALL_PRODUCTS = [
     "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
   },
   {
-    "id": "mb-8",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i7 (2020)",
-    "specs": "Intel i7 \u2022 16GB RAM \u2022 1TB SSD \u2022 Touch Bar",
-    "price": 82000,
-    "category": "exuk apple macbook pro 13",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
     "id": "mb-9",
     "brand": "Apple",
     "name": "MacBook Pro 13 i7 (2020)",
@@ -105,7 +145,7 @@ const ALL_PRODUCTS = [
     "name": "MacBook Pro 13 i7 (2020)",
     "specs": "Intel i7 \u2022 16GB RAM \u2022 512GB SSD \u2022 Space Gray",
     "price": 78000,
-    "category": "exuk apple macbook pro 13 featured",
+    "category": "exuk apple macbook pro 13",
     "badge": "premium",
     "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
   },
@@ -160,16 +200,6 @@ const ALL_PRODUCTS = [
     "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
   },
   {
-    "id": "mb-16",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i7 (2017)",
-    "specs": "Intel i7 \u2022 16GB RAM \u2022 1TB SSD",
-    "price": 58000,
-    "category": "exuk apple macbook pro 13",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
     "id": "mb-17",
     "brand": "Apple",
     "name": "MacBook Pro 13 i7 (2017)",
@@ -186,16 +216,6 @@ const ALL_PRODUCTS = [
     "specs": "Intel i5 \u2022 16GB RAM \u2022 256GB SSD",
     "price": 42000,
     "category": "exuk apple macbook pro 13",
-    "badge": "value",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
-    "id": "mb-19",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i7 (2015)",
-    "specs": "Intel i7 \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 35000,
-    "category": "exuk apple macbook pro 13 budget",
     "badge": "value",
     "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
   },
@@ -245,7 +265,7 @@ const ALL_PRODUCTS = [
     "name": "MacBook Air M1 (2022)",
     "specs": "Apple M1 \u2022 8GB RAM \u2022 256GB SSD \u2022 Midnight",
     "price": 100000,
-    "category": "exuk apple macbook air featured",
+    "category": "exuk apple macbook air",
     "badge": "premium",
     "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2017.jpg"
   },
@@ -255,7 +275,7 @@ const ALL_PRODUCTS = [
     "name": "MacBook Air M1 (2020)",
     "specs": "Apple M1 \u2022 8GB RAM \u2022 256GB SSD \u2022 Space Gray",
     "price": 78000,
-    "category": "exuk apple macbook air featured",
+    "category": "exuk apple macbook air",
     "badge": "premium",
     "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2017.jpg"
   },
@@ -305,7 +325,7 @@ const ALL_PRODUCTS = [
     "name": "MacBook Air 13 (2017)",
     "specs": "Intel i5 \u2022 8GB RAM \u2022 256GB SSD",
     "price": 29000,
-    "category": "exuk apple macbook air budget featured",
+    "category": "exuk apple macbook air budget",
     "badge": "value",
     "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2017.jpg"
   },
