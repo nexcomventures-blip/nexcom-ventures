@@ -740,7 +740,12 @@
                         </div>
                         <div>
                             <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Password</label>
-                            <input type="password" id="loginPass" placeholder="Enter your password" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                            <div class="relative">
+                                <input type="password" id="loginPass" placeholder="Enter your password" class="w-full p-4 pr-12 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                                <button type="button" onclick="togglePassword('loginPass', this)" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-blue-600 transition">
+                                    <i class="fa-solid fa-eye text-xs"></i>
+                                </button>
+                            </div>
                             <div class="flex justify-end mt-1">
                                 <button type="button" onclick="forgotPassword()" class="text-[9px] font-black uppercase text-blue-600 tracking-wider hover:underline active:opacity-50">Forgot Password?</button>
                             </div>
@@ -779,7 +784,12 @@
                         </div>
                         <div>
                             <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Set Password</label>
-                            <input type="password" id="regPass" placeholder="Choose a strong password" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                            <div class="relative">
+                                <input type="password" id="regPass" placeholder="Choose a strong password" class="w-full p-4 pr-12 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                                <button type="button" onclick="togglePassword('regPass', this)" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-blue-600 transition">
+                                    <i class="fa-solid fa-eye text-xs"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                     
@@ -1561,6 +1571,18 @@
             }
             updateAuthUI();
             document.getElementById('authModal').classList.add('hidden');
+        }
+
+        function togglePassword(fieldId, btn) {
+            const input = document.getElementById(fieldId);
+            const icon = btn.querySelector('i');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.replace('fa-eye', 'fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.replace('fa-eye-slash', 'fa-eye');
+            }
         }
 
         function updateAuthUI() {
