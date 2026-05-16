@@ -94,8 +94,24 @@
         }
 
         /* Modern Category Scroller */
-        .cat-scroll { display: flex; gap: 8px; overflow-x: auto; padding: 12px 0; scrollbar-width: none; }
+        .cat-scroll { display: flex; gap: 8px; overflow-x: auto; padding: 4px 0; scrollbar-width: none; }
         .cat-scroll::-webkit-scrollbar { display: none; }
+
+        .tier-btn {
+            flex-shrink: 0;
+            padding: 6px 12px;
+            border-radius: 99px;
+            font-size: 9px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: white;
+            color: #64748b;
+            border: 1px solid #f1f5f9;
+            transition: all 0.2s;
+        }
+        .dark .tier-btn { background: #1e293b; color: #94a3b8; border-color: #334155; }
+        .tier-btn.active { background: #2563eb; color: white; border-color: #2563eb; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); }
         .cat-btn {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -176,6 +192,14 @@
         }
         .upgrade-card.selected { border-color: var(--brand); background: rgba(37, 99, 235, 0.05); }
 
+        input, select, textarea {
+            color: #1e293b;
+            transition: all 0.2s ease;
+        }
+        .dark input, .dark select, .dark textarea {
+            color: #f8fafc;
+        }
+
     </style>
 </head>
 <body>
@@ -249,6 +273,14 @@
         </div>
 
         <div class="cat-scroll" id="cats"></div>
+        
+        <!-- Price Tiers -->
+        <div class="flex items-center gap-2 mb-2 overflow-x-auto no-scrollbar py-2">
+            <button onclick="setPriceTier('all')" id="tier-all" class="tier-btn active">All Prices</button>
+            <button onclick="setPriceTier('budget')" id="tier-budget" class="tier-btn">Budget (<30k)</button>
+            <button onclick="setPriceTier('value')" id="tier-value" class="tier-btn">Value (30-80k)</button>
+            <button onclick="setPriceTier('premium')" id="tier-premium" class="tier-btn">Premium (80k+)</button>
+        </div>
 
         <div class="flex items-center justify-between py-4">
             <h2 class="text-base font-black text-slate-800 dark:text-slate-100 tracking-tight" id="title">Featured Market</h2>
@@ -264,8 +296,12 @@
         <div class="modal-bg w-full max-w-lg rounded-t-3xl sm:rounded-3xl shadow-2xl relative animate-in slide-in-from-bottom duration-300 max-h-[95vh] overflow-y-auto no-scrollbar pb-10">
             <div class="sticky top-0 right-0 flex justify-end p-4 z-[110] pointer-events-none">
                 <div class="flex gap-2 pointer-events-auto">
-                    <button id="detailCompareBtn" class="w-8 h-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur rounded-full flex items-center justify-center text-slate-700 dark:text-slate-200 shadow-md border border-slate-200/50 dark:border-slate-700/50"><i class="fa-solid fa-scale-balanced text-sm"></i></button>
-                    <button onclick="closeM()" class="w-8 h-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur rounded-full flex items-center justify-center text-slate-700 dark:text-slate-200 shadow-md border border-slate-200/50 dark:border-slate-700/50"><i class="fa-solid fa-xmark text-sm"></i></button>
+                    <button id="detailCompareBtn" class="w-10 h-10 bg-white/95 dark:bg-slate-800/95 backdrop-blur rounded-full flex items-center justify-center text-slate-700 dark:text-slate-200 shadow-md border border-slate-200/50 dark:border-slate-700/50 hover:bg-blue-600 hover:text-white transition-all transform active:scale-90" title="Add to Compare">
+                        <i class="fa-solid fa-scale-balanced text-sm"></i>
+                    </button>
+                    <button onclick="closeM()" class="w-10 h-10 bg-white/95 dark:bg-slate-800/95 backdrop-blur rounded-full flex items-center justify-center text-slate-700 dark:text-slate-200 shadow-md border border-slate-200/50 dark:border-slate-700/50 hover:bg-red-600 hover:text-white transition-all transform active:scale-90">
+                        <i class="fa-solid fa-xmark text-sm"></i>
+                    </button>
                 </div>
             </div>
             
@@ -305,14 +341,33 @@
                         <h3 class="text-[9px] font-black uppercase text-blue-200 mb-4 tracking-widest">Merchant Details</h3>
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center text-2xl font-black border border-white/10" id="m-sellerInit"></div>
-                            <div>
-                                <p id="m-seller" class="font-black text-lg leading-tight mb-0.5"></p>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <p id="m-seller" class="font-black text-lg leading-tight mb-0.5"></p>
+                                    <button onclick="openReviewModal()" class="text-[8px] font-black uppercase bg-white/10 px-2 py-1 rounded-lg border border-white/10">Review</button>
+                                </div>
                                 <div id="sellerBadges"></div>
                                 <p class="text-[10px] font-bold text-blue-100 flex items-center gap-1.5 opacity-90">
                                     <i class="fa-solid fa-location-dot"></i> <span id="m-loc"></span>
                                 </p>
                             </div>
                         </div>
+                        
+                        <!-- Seller Ratings Mini-Stats -->
+                        <div class="grid grid-cols-2 gap-2 mb-6">
+                            <div class="bg-white/5 rounded-2xl p-3 border border-white/5">
+                                <p class="text-[7px] font-black uppercase text-blue-200 mb-1">Avg Rating</p>
+                                <div class="flex items-center gap-1">
+                                    <span class="text-sm font-black" id="m-ratingVal">4.8</span>
+                                    <i class="fa-solid fa-star text-[10px] text-amber-400"></i>
+                                </div>
+                            </div>
+                            <div class="bg-white/5 rounded-2xl p-3 border border-white/5">
+                                <p class="text-[7px] font-black uppercase text-blue-200 mb-1">Total Reviews</p>
+                                <p class="text-sm font-black" id="m-reviewCount">24</p>
+                            </div>
+                        </div>
+
                         <div class="space-y-3" id="contactSection">
                             <button onclick="openChat()" class="w-full py-4 bg-white text-blue-600 rounded-xl font-black text-[10px] uppercase tracking-wider active:scale-95 transition shadow-lg flex items-center justify-center gap-2">
                                 <i class="fa-solid fa-comments"></i> Chat to Negotiate
@@ -346,6 +401,29 @@
                         <i class="fa-solid fa-chevron-right text-slate-300 text-xs"></i>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="fixed inset-0 z-[250] hidden flex items-center justify-center p-6 bg-black/80 backdrop-blur-md">
+        <div class="relative w-full max-w-sm bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-2xl">
+            <h3 class="text-xl font-black mb-1">Rate the Seller</h3>
+            <p class="text-slate-500 text-xs mb-6 font-medium">How was your experience with <span id="r-sellerName" class="text-blue-600"></span>?</p>
+            
+            <div class="flex justify-center gap-2 mb-8" id="starRating">
+                <button onclick="setRating(1)" class="w-10 h-10 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-300 transition-all"><i class="fa-solid fa-star"></i></button>
+                <button onclick="setRating(2)" class="w-10 h-10 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-300 transition-all"><i class="fa-solid fa-star"></i></button>
+                <button onclick="setRating(3)" class="w-10 h-10 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-300 transition-all"><i class="fa-solid fa-star"></i></button>
+                <button onclick="setRating(4)" class="w-10 h-10 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-300 transition-all"><i class="fa-solid fa-star"></i></button>
+                <button onclick="setRating(5)" class="w-10 h-10 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-300 transition-all"><i class="fa-solid fa-star"></i></button>
+            </div>
+
+            <textarea id="reviewText" placeholder="Write your review... (e.g. Fast response, laptop was in great condition)" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-2xl mb-6 outline-none text-xs font-medium border border-transparent focus:border-blue-500 min-h-[100px]"></textarea>
+            
+            <div class="flex gap-2">
+                <button onclick="closeReviewModal()" class="flex-1 py-4 bg-slate-100 dark:bg-slate-800 text-slate-400 rounded-xl font-black text-[10px] uppercase tracking-widest">Cancel</button>
+                <button onclick="submitReview()" class="flex-[2] py-4 bg-blue-600 text-white rounded-xl font-black text-[10px] uppercase tracking-widest shadow-lg shadow-blue-500/30">Post Review</button>
             </div>
         </div>
     </div>
@@ -419,11 +497,11 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div class="col-span-2">
                         <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">What are you selling?</label>
-                        <input type="text" id="postName" placeholder="e.g. MacBook Pro M1" class="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl text-sm outline-none focus:border-blue-500">
+                        <input type="text" id="postName" placeholder="e.g. MacBook Pro M1" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-3 rounded-xl text-sm outline-none focus:border-blue-500 text-slate-900 dark:text-white">
                     </div>
                     <div>
                         <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Category</label>
-                        <select id="postCat" onchange="showLaptopFields(this.value)" class="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl text-sm outline-none appearance-none">
+                        <select id="postCat" onchange="showLaptopFields(this.value)" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-3 rounded-xl text-sm outline-none appearance-none text-slate-900 dark:text-white">
                             <option value="laptops">Laptops (New)</option>
                             <option value="laptops">Laptops (Ex-UK)</option>
                             <option value="laptops">Laptops (Refurbished)</option>
@@ -460,23 +538,23 @@
                     </div>
                     <div>
                         <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Price (KSh)</label>
-                        <input type="text" id="postPrice" placeholder="e.g. 45,000" oninput="formatInputPrice(this)" class="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl text-sm outline-none focus:border-blue-500">
+                        <input type="text" id="postPrice" placeholder="e.g. 45,000" oninput="formatInputPrice(this)" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-3 rounded-xl text-sm outline-none focus:border-blue-500 text-slate-900 dark:text-white">
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Condition</label>
                     <div class="flex gap-2">
-                        <button onclick="setCond(this, 'New')" class="cond-btn flex-1 py-2 rounded-lg border border-slate-200 text-[9px] font-black uppercase tracking-wider bg-slate-50 text-slate-500">New</button>
-                        <button onclick="setCond(this, 'Ex-UK')" class="cond-btn flex-1 py-2 rounded-lg border border-slate-200 text-[9px] font-black uppercase tracking-wider bg-slate-50 text-slate-500">Ex-UK</button>
-                        <button onclick="setCond(this, 'Refurbished')" class="cond-btn flex-1 py-2 rounded-lg border border-slate-200 text-[9px] font-black uppercase tracking-wider bg-slate-50 text-slate-500">Refurbished</button>
+                        <button onclick="setCond(this, 'New')" class="cond-btn flex-1 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-[9px] font-black uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-500">New</button>
+                        <button onclick="setCond(this, 'Ex-UK')" class="cond-btn flex-1 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-[9px] font-black uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-500">Ex-UK</button>
+                        <button onclick="setCond(this, 'Refurbished')" class="cond-btn flex-1 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-[9px] font-black uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-500">Refurbished</button>
                     </div>
                 </div>
 
-                <div id="laptopFields" class="hidden grid grid-cols-3 gap-3 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-700">
+                <div id="laptopFields" class="hidden grid grid-cols-3 gap-3 p-4 bg-slate-100 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-700">
                     <div>
                         <label class="block text-[8px] font-black uppercase text-slate-400 mb-1">RAM</label>
-                        <select id="postRam" class="w-full bg-white dark:bg-slate-700 border border-slate-200 p-2 rounded-lg text-xs outline-none">
+                        <select id="postRam" class="w-full bg-white dark:bg-slate-700 border border-slate-200 p-2 rounded-lg text-xs outline-none text-slate-900 dark:text-white">
                             <option value="">Select</option>
                             <option value="4GB">4GB</option>
                             <option value="8GB">8GB</option>
@@ -487,7 +565,7 @@
                     </div>
                     <div>
                         <label class="block text-[8px] font-black uppercase text-slate-400 mb-1">Storage</label>
-                        <select id="postStorage" class="w-full bg-white dark:bg-slate-700 border border-slate-200 p-2 rounded-lg text-xs outline-none">
+                        <select id="postStorage" class="w-full bg-white dark:bg-slate-700 border border-slate-200 p-2 rounded-lg text-xs outline-none text-slate-900 dark:text-white">
                             <option value="">Select</option>
                             <option value="128GB SSD">128GB SSD</option>
                             <option value="256GB SSD">256GB SSD</option>
@@ -498,7 +576,7 @@
                     </div>
                     <div>
                         <label class="block text-[8px] font-black uppercase text-slate-400 mb-1">Processor</label>
-                        <select id="postProcessor" class="w-full bg-white dark:bg-slate-700 border border-slate-200 p-2 rounded-lg text-xs outline-none">
+                        <select id="postProcessor" class="w-full bg-white dark:bg-slate-700 border border-slate-200 p-2 rounded-lg text-xs outline-none text-slate-900 dark:text-white">
                             <option value="">Select</option>
                             <option value="Core i3">Core i3</option>
                             <option value="Core i5">Core i5</option>
@@ -513,7 +591,7 @@
                     </div>
                 </div>
 
-                <textarea id="postSpecs" rows="2" placeholder="Describe other details (Condition, Battery life, etc.)" class="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl text-sm outline-none focus:border-blue-500"></textarea>
+                <textarea id="postSpecs" rows="2" placeholder="Describe other details (Condition, Battery life, etc.)" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-3 rounded-xl text-sm outline-none focus:border-blue-500 text-slate-900 dark:text-white"></textarea>
 
                 <button onclick="publishAd()" class="w-full bg-blue-600 text-white py-4 rounded-xl font-black uppercase text-[10px] tracking-widest shadow-lg active:scale-95 transition">Publish Now</button>
             </div>
@@ -657,16 +735,23 @@
                     
                     <div class="space-y-4 mb-8">
                         <div>
-                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Phone Number</label>
-                            <input type="text" id="loginPhone" placeholder="0712 345 678" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Email Address</label>
+                            <input type="email" id="loginEmail" placeholder="name@business.com" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
                         </div>
                         <div>
-                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">PIN / Password</label>
-                            <input type="password" id="loginPass" placeholder="••••" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">6-Digit PIN</label>
+                            <input type="tel" id="loginPass" placeholder="••••••" maxlength="6" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold tracking-[1em] text-center">
+                            <div class="flex justify-end mt-1">
+                                <button type="button" onclick="forgotPIN()" class="text-[9px] font-black uppercase text-blue-600 tracking-wider hover:underline active:opacity-50">Forgot PIN?</button>
+                            </div>
                         </div>
                     </div>
                     
                     <button onclick="handleAuth('login')" class="w-full py-4 bg-blue-600 text-white rounded-xl font-black text-[10px] uppercase tracking-widest shadow-xl active:scale-95 transition mb-6">Sign In</button>
+                    
+                    <button onclick="quickLoginNexcom()" class="w-full py-3 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-white rounded-xl font-bold text-[9px] uppercase tracking-widest flex items-center justify-center gap-2 mb-6">
+                        <i class="fa-solid fa-user-shield text-blue-600"></i> Login as Nexcom
+                    </button>
                     
                     <p class="text-center text-xs font-bold text-slate-500">
                         Don't have an account? 
@@ -685,12 +770,16 @@
                             <input type="text" id="regName" placeholder="e.g. Nexcom Ventures" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
                         </div>
                         <div>
-                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">M-Pesa Number</label>
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Email Address</label>
+                            <input type="email" id="regEmail" placeholder="name@business.com" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">M-Pesa / Phone Number</label>
                             <input type="text" id="regPhone" placeholder="0712 345 678" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
                         </div>
                         <div>
-                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Create PIN</label>
-                            <input type="password" id="regPass" placeholder="4-6 Digits" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Set 6-Digit PIN</label>
+                            <input type="tel" id="regPass" placeholder="••••••" maxlength="6" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold tracking-[1em] text-center">
                         </div>
                     </div>
                     
@@ -737,7 +826,7 @@
         </div>
     </div>
 
-    <div id="compareBar" class="fixed bottom-0 left-0 right-0 z-[100] hidden bg-white dark:bg-slate-900 border-t border-slate-200 shadow-2xl">
+    <div id="compareBar" class="fixed bottom-0 left-0 right-0 z-[260] hidden bg-white dark:bg-slate-900 border-t border-slate-200 shadow-2xl">
         <div class="content-width p-4 flex items-center justify-between">
             <div class="flex items-center gap-3 overflow-x-auto no-scrollbar py-1" id="compareList"></div>
             <div class="flex items-center gap-4 ml-4">
@@ -811,11 +900,18 @@
         ];
 
         let ADS = [
-{"id": "nx-new-hp-1", "cat": "laptops", "name": "HP EliteBook 840 G10", "price": "KSh 224,000", "img": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08483861.png", "specs": "Intel Core i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 BRAND NEW", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-{"id": "nx-new-hp-2", "cat": "laptops", "name": "HP ZBook Firefly G10", "price": "KSh 235,000", "img": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08483842.png", "specs": "i7-1355U \u2022 16GB RAM \u2022 RTX A500 4GB \u2022 BRAND NEW", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-{"id": "nx-new-dell-1", "cat": "laptops", "name": "Dell Latitude 3450 i7", "price": "KSh 198,000", "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-computing/laptops/latitude/3450/media-gallery/laptop-latitude-3450-non-touch-plastic-gray-gallery-1.psd?fmt=png-alpha&wid=500", "specs": "i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 BRAND NEW", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+{"id": "nx-new-hp-1", "cat": "laptops", "name": "HP EliteBook 840 G10", "price": "KSh 224,000", "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800", "specs": "Intel Core i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 BRAND NEW", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+{"id": "nx-new-hp-2", "cat": "laptops", "name": "HP ZBook Firefly G10", "price": "KSh 235,000", "img": "https://images.unsplash.com/photo-1544006659-f0b21f04cb1d?q=80&w=800", "specs": "i7-1355U \u2022 16GB RAM \u2022 RTX A500 4GB \u2022 BRAND NEW", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+{"id": "nx-new-dell-1", "cat": "laptops", "name": "Dell Latitude 3450 i7", "price": "KSh 198,000", "img": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=800", "specs": "i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 BRAND NEW", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
             {"id": "nx-feat-1", "cat": "laptops", "name": "Dell XPS 13 9330", "price": "KSh 135,000", "img": "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=800", "specs": "Intel Core i7 13th Gen \u2022 16GB RAM \u2022 512GB SSD", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
             {"id": "nx-feat-2", "cat": "laptops", "name": "MacBook Pro 13 M2", "price": "KSh 140,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "Apple M2 Chip \u2022 8GB RAM \u2022 512GB SSD", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": true, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
+            {"id": "vh-toyota", "cat": "vehicles", "name": "Toyota Axio 2018", "price": "KSh 1,650,000", "img": "https://images.unsplash.com/photo-1590362891991-f776e747a588?q=80&w=800", "specs": "1500cc \u2022 Silver \u2022 Low Mileage \u2022 Foreign Used", "badge": "Verified", "isBoosted": true, "onFlashSale": false, "seller": "Auto World", "loc": "Mombasa Rd", "phone": "254700000000"},
+            {"id": "land-kajiado", "cat": "land", "name": "50x100 Plot in Kajiado", "price": "KSh 450,000", "img": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800", "specs": "Ready Title Deed \u2022 Water & Electricity Available", "badge": "Title Deed", "isBoosted": false, "onFlashSale": false, "seller": "Prime Lands", "loc": "Kajiado", "phone": "254711111111"},
+            {"id": "fs-suit", "cat": "fashion-men", "name": "Slim Fit Official Suit", "price": "KSh 8,500", "img": "https://images.unsplash.com/photo-1594932224010-74f43a29612c?q=80&w=800", "specs": "Navy Blue \u2022 All Sizes \u2022 Premium Material", "badge": "Hot", "isBoosted": false, "onFlashSale": false, "seller": "Sartorial", "loc": "Nairobi CBD", "phone": "254722222222"},
+            {"id": "vh-bike", "cat": "bikes", "name": "Bajaj Boxer 150", "price": "KSh 145,000", "img": "https://images.unsplash.com/photo-1558981403-c5f91cbba527?q=80&w=800", "specs": "Brand New \u2022 Black \u2022 Fuel Efficient", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Boda Central", "loc": "Nairobi", "phone": "254733333333"},
+            {"id": "hp-fridge", "cat": "appliances", "name": "Samsung Double Door Fridge", "price": "KSh 85,000", "img": "https://images.unsplash.com/photo-1571175432244-904599de7f1f?q=80&w=800", "specs": "350L \u2022 Silver \u2022 Digital Inverter \u2022 10 Year Warranty", "badge": "Premium", "isBoosted": true, "onFlashSale": false, "seller": "Global Electronics", "loc": "Nairobi CBD", "phone": "254744444444"},
+            {"id": "el-iphone15", "cat": "phones", "name": "iPhone 15 Pro Max 256GB", "price": "KSh 185,000", "img": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=800", "specs": "Natural Titanium \u2022 Sealed Box \u2022 Local Warranty", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "iStore KE", "loc": "Westlands", "phone": "254755555555"},
+            {"id": "el-budget-tecno", "cat": "phones", "name": "Tecno Pop 7", "price": "KSh 12,500", "img": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=800", "specs": "2GB RAM \u2022 64GB ROM \u2022 5000mAh", "badge": "Budget", "isBoosted": false, "onFlashSale": false, "seller": "Mobile Hub", "loc": "River Road", "phone": "254766666666"},
             {"id": "nx-feat-3", "cat": "laptops", "name": "ThinkPad X1 Carbon Gen 10", "price": "KSh 91,000", "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800", "specs": "i7 12th Gen \u2022 16GB RAM \u2022 512GB SSD", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
             {"id": "nx-feat-4", "cat": "laptops", "name": "HP EliteBook 840 G8", "price": "KSh 63,000", "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800", "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": true, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
             {"id": "nx-bud-1", "cat": "laptops", "name": "Lenovo 11E Core M5", "price": "KSh 13,000", "img": "https://images.unsplash.com/photo-1525547718571-03b05761ad91?q=80&w=800", "specs": "8GB RAM \u2022 128GB SSD \u2022 11.6\"", "badge": "Refurbished", "isBoosted": false, "onFlashSale": true, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
@@ -980,7 +1076,109 @@
             {"id": "nx-hp-594", "cat": "laptops", "name": "hp stream celeron 2/32gb", "price": "KSh 12,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp stream celeron 2/32gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"}
         ];
 
-        let cur = 'all', compareItems = [], currentLoc = '';
+        function updateCompareBar() {
+            const bar = document.getElementById('compareBar');
+            const list = document.getElementById('compareList');
+            if (compareItems.length > 0) {
+                bar.classList.remove('hidden');
+                list.innerHTML = compareItems.map(item => `
+                    <div class="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden border-2 border-blue-100 dark:border-slate-700 shadow-sm relative">
+                        <img src="${item.img}" class="w-full h-full object-cover">
+                        <button onclick="removeFromCompare('${item.id}')" class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white rounded-full flex items-center justify-center text-[8px]"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                `).join('');
+            } else {
+                bar.classList.add('hidden');
+            }
+        }
+
+        function removeFromCompare(id) {
+            compareItems = compareItems.filter(i => i.id !== id);
+            updateCompareBar();
+        }
+
+        function clearCompare() {
+            compareItems = [];
+            updateCompareBar();
+        }
+
+        function showCompareTable() {
+            if (compareItems.length < 2) return alert("Select at least 2 items to compare.");
+            const table = document.getElementById('compareTable');
+            const modal = document.getElementById('compareModal');
+            
+            // Extract common attributes for row generation
+            const attributes = [
+                { label: 'Model', key: 'name', class: 'font-black text-blue-600' },
+                { label: 'Price', key: 'price', class: 'font-bold text-red-600' },
+                { label: 'Display/Inch', key: 'specs', regex: /(\d+(\.\d+)?-?(inch|["”]))/i },
+                { label: 'Processor', key: 'specs', regex: /(i[3579]|M[123]|Ryzen \d+|Celeron|Xeon|Pentium|Apple [M123]|Core [M1235])/i },
+                { label: 'RAM', key: 'specs', regex: /(\d+GB RAM|\d+GB(?= (RAM|DDR)))/i },
+                { label: 'Storage', key: 'specs', regex: /(\d+(GB|TB) (SSD|HDD|ROM|NVMe))/i },
+                { label: 'OS/Version', key: 'specs', regex: /(Windows \d+|macOS|ChromeOS|Linux|Android)/i },
+                { label: 'Full Specs', key: 'specs', format: v => v.replace(/\u2022/g, '<br>•') }
+            ];
+
+            let tableHtml = '<thead class="sticky top-0 bg-white dark:bg-slate-900 z-10">';
+            
+            // Image Header
+            tableHtml += '<tr><th class="p-3 bg-slate-50 dark:bg-slate-800 font-bold border dark:border-slate-700">Product</th>';
+            compareItems.forEach(item => {
+                tableHtml += `<th class="p-3 border dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-center">
+                    <img src="${item.img}" class="w-20 h-20 mx-auto rounded-xl mb-2 object-cover shadow-sm">
+                </th>`;
+            });
+            tableHtml += '</tr></thead><tbody>';
+
+            // Feature Rows
+            attributes.forEach(attr => {
+                tableHtml += `<tr><td class="p-3 font-bold border dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50 text-[10px] uppercase tracking-wider">${attr.label}</td>`;
+                compareItems.forEach(item => {
+                    let val = item[attr.key] || '-';
+                    
+                    if (attr.regex) {
+                        const match = val.match(attr.regex);
+                        val = match ? match[0] : '-';
+                    } else if (attr.format) {
+                        val = attr.format(val);
+                    }
+
+                    tableHtml += `<td class="p-3 border dark:border-slate-700 text-[11px] ${attr.class || ''}">${val}</td>`;
+                });
+                tableHtml += '</tr>';
+            });
+
+            // Action Row
+            tableHtml += '<tr><td class="p-3 border dark:border-slate-700"></td>';
+            compareItems.forEach(item => {
+                tableHtml += `<td class="p-3 border dark:border-slate-700 text-center">
+                    <button onclick="removeFromCompare('${item.id}'); showCompareTable()" class="bg-red-50 text-red-500 px-3 py-1 rounded-full text-[9px] uppercase font-black hover:bg-red-500 hover:text-white transition-colors">Remove</button>
+                </td>`;
+            });
+            tableHtml += '</tr></tbody>';
+
+            table.innerHTML = tableHtml;
+            modal.classList.remove('hidden');
+        }
+
+        function openReviewModal() {
+            alert("Reviewing seller: " + (window.aSeller || 'Nexcom Ventures'));
+            // In a real app, this would open a form to submit stars/text
+        }
+
+        function closeCompareTable() {
+            document.getElementById('compareModal').classList.add('hidden');
+        }
+
+        let cur = 'all', compareItems = [], currentLoc = '', currentTier = 'all';
+
+        function setPriceTier(tier) {
+            currentTier = tier;
+            document.querySelectorAll('.tier-btn').forEach(b => {
+                b.id === `tier-${tier}` ? b.classList.add('active') : b.classList.remove('active');
+            });
+            filter(cur);
+        }
 
         function init() { 
             // Add status/views to existing mock data if missing
@@ -1020,21 +1218,20 @@
                 const mc = id === 'all' || a.cat === id;
                 const mq = a.name.toLowerCase().includes(q) || a.specs.toLowerCase().includes(q);
                 const ml = !loc || a.loc.includes(loc);
-                return mc && mq && ml;
+
+                // Price Tier Logic
+                const price = parseInt(a.price.replace(/[^0-9]/g, ''));
+                let mt = true;
+                if (currentTier === 'budget') mt = price < 30000;
+                else if (currentTier === 'value') mt = price >= 30000 && price <= 80000;
+                else if (currentTier === 'premium') mt = price > 80000;
+
+                return mc && mq && ml && mt;
             });
 
             document.getElementById('stats').innerText = `${filtered.length} items found`;
             
-            // Update cat button active states
-            const buttons = document.querySelectorAll('.cat-btn');
-            buttons.forEach(btn => {
-                if (btn.innerText.toLowerCase().includes(id) || (id === 'all' && btn.innerText === 'All')) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-
+            renderCats(); 
             render(filtered);
         }
 
@@ -1081,25 +1278,37 @@
                 const soldOverlay = isSold ? `<div class="absolute inset-0 bg-black/60 flex items-center justify-center z-10 rounded-xl"><span class="border-4 border-white text-white font-black text-xl px-4 py-1 -rotate-12 uppercase tracking-widest">SOLD</span></div>` : '';
                 
                 const ownerTools = isOwner ? `
-                    <div class="absolute top-2 left-2 flex flex-col gap-1 z-20">
-                        <button onclick="event.stopPropagation(); toggleSold('${a.id}')" title="Mark as ${isSold ? 'Active' : 'Sold'}" class="bg-white/95 backdrop-blur text-slate-800 p-2 rounded-lg shadow-sm hover:bg-blue-600 hover:text-white transition">
-                            <i class="fa-solid ${isSold ? 'fa-rotate-left' : 'fa-check'} text-[10px]"></i>
+                    <div class="absolute top-2 left-2 flex gap-1 z-[60]">
+                        <button onclick="event.stopPropagation(); editAd('${a.id}')" title="Edit Ad" class="w-7 h-7 flex items-center justify-center bg-white/95 backdrop-blur text-slate-800 rounded-full shadow-lg border border-slate-200/50 hover:bg-blue-600 hover:text-white transition-all transform active:scale-90">
+                            <i class="fa-solid fa-pen-to-square text-[9px]"></i>
                         </button>
-                        <button onclick="event.stopPropagation(); deleteAd('${a.id}')" title="Delete Ad" class="bg-white/95 backdrop-blur text-red-600 p-2 rounded-lg shadow-sm hover:bg-red-600 hover:text-white transition">
-                            <i class="fa-solid fa-trash text-[10px]"></i>
+                        <button onclick="event.stopPropagation(); toggleSold('${a.id}')" title="Mark as ${isSold ? 'Active' : 'Sold'}" class="w-7 h-7 flex items-center justify-center bg-white/95 backdrop-blur text-slate-800 rounded-full shadow-lg border border-slate-200/50 hover:bg-green-600 hover:text-white transition-all transform active:scale-90">
+                            <i class="fa-solid ${isSold ? 'fa-rotate-left' : 'fa-check'} text-[9px]"></i>
+                        </button>
+                        <button onclick="event.stopPropagation(); deleteAd('${a.id}')" title="Delete Ad" class="w-7 h-7 flex items-center justify-center bg-white/95 backdrop-blur text-red-600 rounded-full shadow-lg border border-slate-200/50 hover:bg-red-600 hover:text-white transition-all transform active:scale-90">
+                            <i class="fa-solid fa-trash text-[9px]"></i>
                         </button>
                     </div>
                 ` : '';
 
+                const category = CATEGORIES.find(c => c.id === a.cat);
+                const categoryTag = category ? `<span class="bg-slate-100 dark:bg-slate-800 text-slate-500 text-[6px] font-black px-1.5 py-0.5 rounded uppercase tracking-tighter shadow-sm ml-1">${category.name}</span>` : '';
+
                 return `
                     <div class="ad-card relative group ${isSold ? 'opacity-80' : ''}" onclick="openM('${a.id}')">
                         ${soldOverlay}
-                        ${ownerTools}
-                        <div class="relative w-full aspect-square bg-slate-50 rounded-xl mb-3 overflow-hidden shadow-sm">
-                            <img src="${a.img}" alt="${a.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            ${a.isBoosted ? `<div class="absolute top-2 right-2 bg-blue-600 text-white text-[6px] font-black px-1.5 py-0.5 rounded uppercase tracking-tighter shadow-sm"><i class="fa-solid fa-rocket mr-0.5"></i> Featured</div>` : ''}
+                        <div class="relative w-full aspect-square bg-slate-100 dark:bg-slate-800 rounded-xl mb-3 overflow-hidden shadow-sm">
+                            <img src="${a.img}" 
+                                 alt="${a.name}" 
+                                 onerror="this.src='https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800'"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            ${ownerTools}
+                            <div class="absolute top-2 right-2 flex flex-col items-end gap-1">
+                                ${a.isBoosted ? `<div class="bg-blue-600 text-white text-[6px] font-black px-1.5 py-0.5 rounded uppercase tracking-tighter shadow-sm"><i class="fa-solid fa-rocket mr-0.5"></i> Featured</div>` : ''}
+                                ${categoryTag}
+                            </div>
                             ${badgeHTML}
-                            <div class="absolute bottom-2 right-2 bg-black/60 backdrop-blur text-white text-[7px] font-bold px-1.5 py-0.5 rounded flex items-center gap-1">
+                            <div class="absolute bottom-2 left-2 bg-black/60 backdrop-blur text-white text-[7px] font-bold px-1.5 py-0.5 rounded flex items-center gap-1 z-10">
                                 <i class="fa-solid fa-eye text-[6px]"></i> ${a.views || 0}
                             </div>
                         </div>
@@ -1113,6 +1322,14 @@
                     </div>
                 `;
             }).join('');
+        }
+
+        function editAd(id) {
+            const ad = ADS.find(a => a.id === id);
+            if (ad) {
+                alert(`Editing ${ad.name}. (Simulated: This opens the Merchant Portal to edit details.)`);
+                // In a real implementation, this would populate the merchant portal form and switch tabs
+            }
         }
 
         function toggleSold(id) {
@@ -1163,12 +1380,12 @@
             // Handle multiple images in carousel
             const carousel = document.getElementById('carousel');
             const dots = document.getElementById('carouselDots');
-            const images = Array.isArray(a.img) ? a.img : [a.img];
+            const images = a.gallery && a.gallery.length > 0 ? a.gallery : (Array.isArray(a.img) ? a.img : [a.img]);
             
             if (carousel && dots) {
                 carousel.style.transform = 'translateX(0)';
                 carousel.style.width = `${images.length * 100}%`;
-                carousel.innerHTML = images.map(src => `<img src="${src}" class="w-full h-full object-cover flex-shrink-0" style="width: ${100/images.length}%">`).join('');
+                carousel.innerHTML = images.map(src => `<img src="${src}" onerror="this.src='https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800'" class="w-full h-full object-cover flex-shrink-0" style="width: ${100/images.length}%">`).join('');
                 
                 dots.innerHTML = images.map((_, i) => `
                     <div class="w-1 h-1 rounded-full ${i === 0 ? 'bg-blue-600 w-3' : 'bg-slate-300'} transition-all"></div>
@@ -1192,6 +1409,20 @@
             document.getElementById('m-seller').innerText = a.seller || 'Verified Merchant';
             document.getElementById('m-loc').innerText = a.loc || 'Nairobi CBD';
             document.getElementById('m-sellerInit').innerText = (a.seller || 'V').charAt(0);
+            
+            // Compare Logic
+            const compareBtn = document.getElementById('detailCompareBtn');
+            if (compareBtn) {
+                compareBtn.onclick = () => {
+                    if (!compareItems.find(item => item.id === a.id)) {
+                        compareItems.push(a);
+                        updateCompareBar();
+                        alert(`${a.name} added to comparison!`);
+                    } else {
+                        alert("Already in comparison list.");
+                    }
+                };
+            }
             
             // Seller Stats / Badges
             const isVerified = a.seller === 'Nexcom Ventures' || Math.random() > 0.5;
@@ -1233,6 +1464,41 @@
             document.getElementById('conciergeModal').classList.add('hidden');
         }
 
+        let currentRating = 0;
+        function openReviewModal() {
+            document.getElementById('r-sellerName').innerText = document.getElementById('m-seller').innerText;
+            document.getElementById('reviewModal').classList.remove('hidden');
+            setRating(0);
+        }
+
+        function closeReviewModal() {
+            document.getElementById('reviewModal').classList.add('hidden');
+        }
+
+        function setRating(val) {
+            currentRating = val;
+            const stars = document.getElementById('starRating').children;
+            for (let i = 0; i < stars.length; i++) {
+                if (i < val) {
+                    stars[i].classList.replace('text-slate-300', 'text-amber-400');
+                    stars[i].classList.add('bg-amber-50', 'dark:bg-amber-900/20', 'scale-110');
+                } else {
+                    stars[i].classList.replace('text-amber-400', 'text-slate-300');
+                    stars[i].classList.remove('bg-amber-50', 'dark:bg-amber-900/20', 'scale-110');
+                }
+            }
+        }
+
+        function submitReview() {
+            const text = document.getElementById('reviewText').value;
+            if (currentRating === 0) return alert("Please select a star rating.");
+            if (!text) return alert("Please write a short review.");
+            
+            alert(`Thank you! Your ${currentRating}-star review for ${document.getElementById('r-sellerName').innerText} has been submitted.`);
+            document.getElementById('reviewText').value = '';
+            closeReviewModal();
+        }
+
         function openChat() {
             if (!currentUser) return openAuth('signup');
             const msg = prompt(`Negotiate with ${document.getElementById('m-seller').innerText}:\nEnter your offer price (KSh):`);
@@ -1262,15 +1528,17 @@
         function handleAuth(type) {
             if (type === 'signup') {
                 const name = document.getElementById('regName').value;
+                const email = document.getElementById('regEmail').value;
                 const phone = document.getElementById('regPhone').value;
                 const pass = document.getElementById('regPass').value;
-                if (!name || !phone || !pass) return alert('Fill all fields');
+                if (!name || !email || !phone || !pass) return alert('Fill all fields');
+                if (pass.length !== 6 || !/^\d+$/.test(pass)) return alert('PIN must be exactly 6 digits');
                 
                 // Save user locally for simple persistence
                 const users = JSON.parse(localStorage.getItem('sokoUsers') || '[]');
-                if (users.find(u => u.phone === phone)) return alert('User already exists');
+                if (users.find(u => u.email === email)) return alert('Email already registered');
                 
-                const newUser = { name, phone, pass, id: 'seller-' + Date.now() };
+                const newUser = { name, email, phone, pass, id: 'seller-' + Date.now() };
                 users.push(newUser);
                 localStorage.setItem('sokoUsers', JSON.stringify(users));
                 
@@ -1278,18 +1546,18 @@
                 localStorage.setItem('sokoUser', JSON.stringify(currentUser));
                 alert('Account created! Welcome ' + name);
             } else {
-                const phone = document.getElementById('loginPhone').value;
+                const email = document.getElementById('loginEmail').value;
                 const pass = document.getElementById('loginPass').value;
-                if (!phone || !pass) return alert('Enter phone and password');
+                if (!email || !pass) return alert('Enter email and PIN');
 
                 const users = JSON.parse(localStorage.getItem('sokoUsers') || '[]');
-                const user = users.find(u => u.phone === phone && u.pass === pass);
+                const user = users.find(u => u.email === email && u.pass === pass);
                 
                 if (user) {
                     currentUser = user;
                     localStorage.setItem('sokoUser', JSON.stringify(currentUser));
                 } else {
-                    return alert('Invalid phone or password. Please sign up if you don\'t have an account.');
+                    return alert('Invalid email or PIN. Please sign up if you don\'t have an account.');
                 }
             }
             updateAuthUI();
@@ -1332,6 +1600,22 @@
             localStorage.removeItem('sokoUser');
             currentUser = null;
             updateAuthUI();
+        }
+
+        function quickLoginNexcom() {
+            currentUser = { name: 'Nexcom Ventures', phone: '254721585784', pin: '123456' };
+            localStorage.setItem('sokoUser', JSON.stringify(currentUser));
+            updateAuthUI();
+            closeAuth();
+            filter(cur);
+            alert("Logged in as Nexcom Ventures. Management tools are now active.");
+        }
+
+        function forgotPIN() {
+            const phoneField = document.getElementById('loginPhone');
+            const phone = phoneField ? phoneField.value : '';
+            if (!phone) return alert("Please enter your phone number first so we know where to send the reset PIN.");
+            alert(`A reset PIN has been sent via WhatsApp to ${phone}. \n\n(Simulated: Check your WhatsApp!)`);
         }
 
         // Merchant Portal Functions
@@ -1422,23 +1706,49 @@
         function closePost() { document.getElementById('postModal').classList.add('hidden'); }
 
         function publishAd() {
+            // Helper to highlight error
+            const validate = (id) => {
+                const el = document.getElementById(id);
+                if (!el.value || el.value === "") {
+                    el.classList.add('border-red-500', 'bg-red-50', 'dark:bg-red-900/10');
+                    return false;
+                }
+                el.classList.remove('border-red-500', 'bg-red-50', 'dark:bg-red-900/10');
+                return true;
+            };
+
+            const nameValid = validate('postName');
+            const priceValid = validate('postPrice');
+            const catValid = validate('postCat');
+            
+            let laptopValid = true;
+            const cat = document.getElementById('postCat').value;
+            if (cat === 'laptops') {
+                const r = validate('postRam');
+                const s = validate('postStorage');
+                const p = validate('postProcessor'); // Corrected from postCpu to postProcessor
+                laptopValid = r && s && p;
+            }
+
+            if (!nameValid || !priceValid || !catValid || !laptopValid) {
+                return alert('Please fill in all required fields highlighted in red.');
+            }
+
+            if (uploadedImages.length === 0) {
+                return alert('Please upload at least one photo for your product.');
+            }
+
             const name = document.getElementById('postName').value;
             const price = document.getElementById('postPrice').value;
             let specs = document.getElementById('postSpecs').value;
-            const cat = document.getElementById('postCat').value;
 
             if (cat === 'laptops') {
                 const ram = document.getElementById('postRam').value;
                 const storage = document.getElementById('postStorage').value;
-                const cpu = document.getElementById('postCpu').value;
-                if (ram || storage || cpu) {
-                    specs = `RAM: ${ram}, Storage: ${storage}, CPU: ${cpu}. ` + specs;
-                }
+                const cpu = document.getElementById('postProcessor').value;
+                specs = `RAM: ${ram}, Storage: ${storage}, CPU: ${cpu}. ` + specs;
             }
             
-            if (!name || !price) return alert('Please enter both Name and Price');
-            if (uploadedImages.length === 0) return alert('Please upload at least one photo');
-
             if (currentEditingId) {
                 const index = ADS.findIndex(a => a.id === currentEditingId);
                 if (index !== -1) {
@@ -1447,7 +1757,8 @@
                     ADS[index].specs = specs;
                     ADS[index].cat = cat;
                     ADS[index].badge = selectedCond;
-                    ADS[index].img = uploadedImages.length > 1 ? [...uploadedImages] : uploadedImages[0];
+                    ADS[index].img = uploadedImages[0] || 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800';
+                    ADS[index].gallery = [...uploadedImages];
                     filter('all');
                     alert("Ad updated successfully!");
                 }
@@ -1457,7 +1768,8 @@
                     cat: cat,
                     name: name,
                     price: 'KSh ' + price,
-                    img: uploadedImages.length > 1 ? [...uploadedImages] : uploadedImages[0],
+                    img: uploadedImages[0] || 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800',
+                    gallery: [...uploadedImages],
                     specs: specs,
                     badge: selectedCond,
                     loc: 'Nairobi',
