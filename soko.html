@@ -1256,7 +1256,11 @@
             document.getElementById('grid').innerHTML = sortedAds.map(a => {
                 const isFlash = a.onFlashSale || false;
                 const isSold = a.status === 'sold';
-                const isOwner = currentUser && (a.seller === currentUser.name || a.phone === currentUser.phone);
+                const isOwner = currentUser && (
+                    (a.seller === currentUser.name) || 
+                    (a.phone === currentUser.phone) || 
+                    (a.email === currentUser.email)
+                );
                 
                 let priceHTML = `<p class="ad-price">${a.price}</p>`;
                 let badgeHTML = '';
@@ -1334,14 +1338,6 @@
             }).join('');
         }
 
-        function editAd(id) {
-            const ad = ADS.find(a => a.id === id);
-            if (ad) {
-                alert(`Editing ${ad.name}. (Simulated: This opens the Merchant Portal to edit details.)`);
-                // In a real implementation, this would populate the merchant portal form and switch tabs
-            }
-        }
-
         function toggleSold(id) {
             const ad = ADS.find(a => a.id === id);
             if (ad) {
@@ -1363,9 +1359,13 @@
         function viewMyAds() {
             if (!currentUser) return document.getElementById('authModal').classList.remove('hidden');
             cur = 'my-ads';
-            const myAds = ADS.filter(a => a.seller === currentUser.name || a.phone === currentUser.phone);
+            const myAds = ADS.filter(a => 
+                (a.seller === currentUser.name) || 
+                (a.phone === currentUser.phone) || 
+                (a.email === currentUser.email)
+            );
             render(myAds);
-            document.getElementById('stats').innerText = `${myAds.length} of your ads`;
+            document.getElementById('stats').innerText = `${myAds.length} of your products`;
             
             document.querySelectorAll('.cat-btn').forEach(el => el.classList.remove('active'));
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1594,7 +1594,7 @@
                             <span class="text-[8px] font-black uppercase text-blue-600">Active Seller</span>
                             <span class="text-[10px] font-bold">${currentUser.name}</span>
                         </div>
-                        <button onclick="viewMyAds()" class="text-blue-600 px-2 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide border border-blue-100 bg-blue-50">My Ads</button>
+                        <button onclick="viewMyAds()" class="text-blue-600 px-2 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide border border-blue-100 bg-blue-50">Edit Products</button>
                         <button onclick="postAd()" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide">Post Ad</button>
                         <button onclick="logout()" class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-400"><i class="fa-solid fa-right-from-bracket text-xs"></i></button>
                     </div>
@@ -1793,8 +1793,10 @@
                     gallery: [...uploadedImages],
                     specs: specs,
                     badge: selectedCond,
+                    seller: currentUser ? currentUser.name : 'Guest Seller',
+                    email: currentUser ? currentUser.email : '',
                     loc: 'Nairobi',
-                    phone: '254721585784',
+                    phone: currentUser ? (currentUser.phone || '254721585784') : '254721585784',
                     isBoosted: false
                 };
                 ADS.unshift(newAd);
