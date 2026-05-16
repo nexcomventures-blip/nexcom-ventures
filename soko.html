@@ -739,10 +739,10 @@
                             <input type="email" id="loginEmail" placeholder="name@business.com" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
                         </div>
                         <div>
-                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">6-Digit PIN</label>
-                            <input type="tel" id="loginPass" placeholder="••••••" maxlength="6" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold tracking-[1em] text-center">
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Password</label>
+                            <input type="password" id="loginPass" placeholder="Enter your password" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
                             <div class="flex justify-end mt-1">
-                                <button type="button" onclick="forgotPIN()" class="text-[9px] font-black uppercase text-blue-600 tracking-wider hover:underline active:opacity-50">Forgot PIN?</button>
+                                <button type="button" onclick="forgotPassword()" class="text-[9px] font-black uppercase text-blue-600 tracking-wider hover:underline active:opacity-50">Forgot Password?</button>
                             </div>
                         </div>
                     </div>
@@ -778,8 +778,8 @@
                             <input type="text" id="regPhone" placeholder="0712 345 678" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
                         </div>
                         <div>
-                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Set 6-Digit PIN</label>
-                            <input type="tel" id="regPass" placeholder="••••••" maxlength="6" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold tracking-[1em] text-center">
+                            <label class="block text-[10px] font-black uppercase text-slate-400 mb-1">Set Password</label>
+                            <input type="password" id="regPass" placeholder="Choose a strong password" class="w-full p-4 bg-slate-50 dark:bg-slate-800 rounded-xl outline-none border border-transparent focus:border-blue-500 text-sm font-bold">
                         </div>
                     </div>
                     
@@ -1532,7 +1532,6 @@
                 const phone = document.getElementById('regPhone').value;
                 const pass = document.getElementById('regPass').value;
                 if (!name || !email || !phone || !pass) return alert('Fill all fields');
-                if (pass.length !== 6 || !/^\d+$/.test(pass)) return alert('PIN must be exactly 6 digits');
                 
                 // Save user locally for simple persistence
                 const users = JSON.parse(localStorage.getItem('sokoUsers') || '[]');
@@ -1548,7 +1547,7 @@
             } else {
                 const email = document.getElementById('loginEmail').value;
                 const pass = document.getElementById('loginPass').value;
-                if (!email || !pass) return alert('Enter email and PIN');
+                if (!email || !pass) return alert('Enter email and password');
 
                 const users = JSON.parse(localStorage.getItem('sokoUsers') || '[]');
                 const user = users.find(u => u.email === email && u.pass === pass);
@@ -1557,7 +1556,7 @@
                     currentUser = user;
                     localStorage.setItem('sokoUser', JSON.stringify(currentUser));
                 } else {
-                    return alert('Invalid email or PIN. Please sign up if you don\'t have an account.');
+                    return alert('Invalid email or password. Please sign up if you don\'t have an account.');
                 }
             }
             updateAuthUI();
@@ -1611,11 +1610,11 @@
             alert("Logged in as Nexcom Ventures. Management tools are now active.");
         }
 
-        function forgotPIN() {
-            const phoneField = document.getElementById('loginPhone');
-            const phone = phoneField ? phoneField.value : '';
-            if (!phone) return alert("Please enter your phone number first so we know where to send the reset PIN.");
-            alert(`A reset PIN has been sent via WhatsApp to ${phone}. \n\n(Simulated: Check your WhatsApp!)`);
+        function forgotPassword() {
+            const emailField = document.getElementById('loginEmail');
+            const email = emailField ? emailField.value : '';
+            if (!email) return alert("Please enter your email address first so we can send the reset link.");
+            alert(`A password reset link has been sent to ${email}. \n\n(Simulated: Check your inbox!)`);
         }
 
         // Merchant Portal Functions
