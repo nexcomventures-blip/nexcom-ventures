@@ -323,14 +323,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const initImageRotation = () => {
         const containers = document.querySelectorAll('.card-media');
         containers.forEach(container => {
-            const images = container.querySelectorAll('img');
-            if (images.length <= 1) return;
+            const media = container.querySelectorAll('img, video');
+            if (media.length <= 1) return;
 
             let currentIndex = 0;
             setInterval(() => {
-                images[currentIndex].classList.remove('active');
-                currentIndex = (currentIndex + 1) % images.length;
-                images[currentIndex].classList.add('active');
+                media[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % media.length;
+                media[currentIndex].classList.add('active');
             }, 4000); // Rotate every 4 seconds
         });
     };
