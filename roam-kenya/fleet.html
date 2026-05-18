@@ -23,6 +23,7 @@
         .fleet-card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
         .fleet-card:hover { transform: translateY(-10px); }
         .fleet-img { width: 100%; height: 250px; background-size: cover; background-position: center; position: relative; }
+        .photo-courtesy { position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.5); color: white; font-size: 0.65rem; padding: 3px 8px; border-radius: 4px; backdrop-filter: blur(2px); }
         .fleet-tag { position: absolute; top: 15px; right: 15px; background: var(--accent); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
         .fleet-info { padding: 25px; }
         .fleet-info h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; color: var(--primary); }
@@ -63,8 +64,9 @@
 
             <!-- Safari Van -->
             <div class="fleet-card">
-                <div class="fleet-img" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                <div class="fleet-img" style="background-image: url('images/safari-van.jpg');">
                     <span class="fleet-tag">Best Value</span>
+                    <span class="photo-courtesy">Photo Courtesy</span>
                 </div>
                 <div class="fleet-info">
                     <h3>Luxury Safari Van</h3>
