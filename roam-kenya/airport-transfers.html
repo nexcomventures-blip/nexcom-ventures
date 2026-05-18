@@ -61,6 +61,18 @@
             .event { font-size: 0.65rem; padding: 2px 4px; }
             .header h1 { font-size: 1.8rem; }
         }
+
+        /* Arrival Protocol */
+        .arrival-protocol { margin-top: 50px; margin-bottom: 40px; }
+        .protocol-header { text-align: center; margin-bottom: 30px; }
+        .protocol-header h2 { font-family: 'Playfair Display', serif; color: var(--primary); font-size: 1.8rem; margin-bottom: 10px; }
+        .protocol-header p { color: #666; }
+        .protocol-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .protocol-item { background: var(--white); padding: 25px; border-radius: 15px; border: 1px solid var(--border); transition: all 0.3s; }
+        .protocol-item:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .protocol-item i { color: var(--accent); font-size: 1.5rem; margin-bottom: 15px; display: block; }
+        .protocol-item h4 { margin-bottom: 10px; color: var(--primary); }
+        .protocol-item p { font-size: 0.85rem; color: #666; line-height: 1.5; }
     </style>
 </head>
 <body>
@@ -124,6 +136,35 @@
                 <div class="calendar-day active"><span class="day-number">29</span><div class="event available">JKIA Slot</div></div>
                 <div class="calendar-day active"><span class="day-number">30</span></div>
                 <div class="calendar-day active"><span class="day-number">31</span></div>
+            </div>
+        </div>
+
+        <div class="arrival-protocol">
+            <div class="protocol-header">
+                <h2>Seamless Arrivals: How to Find Your Guide</h2>
+                <p>We ensure a stress-free transition from the terminal to the wild.</p>
+            </div>
+            <div class="protocol-grid">
+                <div class="protocol-item">
+                    <i class="fas fa-id-badge"></i>
+                    <h4>The Welcome</h4>
+                    <p>Look for the Roam Kenya paging board with your name at the Arrivals Exit.</p>
+                </div>
+                <div class="protocol-item">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Identification</h4>
+                    <p>Our guides wear professional branded safari attire and hats for easy spotting.</p>
+                </div>
+                <div class="protocol-item">
+                    <i class="fas fa-whatsapp"></i>
+                    <h4>Digital Intro</h4>
+                    <p>You'll receive your driver's name, photo, and car plate via WhatsApp 24hrs prior.</p>
+                </div>
+                <div class="protocol-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Live Updates</h4>
+                    <p>Upon landing, your guide will share their live location to guide you to the pick-up zone.</p>
+                </div>
             </div>
         </div>
 
