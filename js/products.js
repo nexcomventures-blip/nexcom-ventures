@@ -1,377 +1,121 @@
 const ALL_PRODUCTS = [
   {
     "id": "feat-1",
-    "brand": "Apple",
-    "name": "MacBook Pro 15 (2019)",
-    "specs": "Intel i7 \u2022 16GB RAM \u2022 512GB SSD \u2022 4GB Graphics",
-    "price": 70000,
-    "category": "exuk apple macbook pro 15 featured",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
+    "brand": "HP",
+    "name": "HP EliteBook 840 G8 i7",
+    "specs": "Intel Core i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD \u2022 14\" FHD",
+    "price": 63000,
+    "category": "exuk business hp featured",
+    "badge": "hot",
+    "img": "https://www.hp.com/ca-en/shop/Html/Merch/Images/c07010411_1750x1285.jpg"
   },
   {
     "id": "feat-2",
     "brand": "Apple",
-    "name": "MacBook Pro 13 i7 (2017)",
-    "specs": "Intel i7 \u2022 16GB RAM \u2022 512GB SSD",
-    "price": 53000,
-    "category": "exuk apple macbook pro 13 featured",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
+    "name": "MacBook Air 13 M2 (2022)",
+    "specs": "Apple M2 Chip \u2022 8GB RAM \u2022 256GB SSD \u2022 Liquid Retina",
+    "price": 115000,
+    "category": "exuk apple macbook featured",
+    "badge": "new",
+    "img": "https://www.apple.com/v/macbook-air-m2/c/images/overview/hero/hero_static__f9clv6u74u6u_large.jpg"
   },
   {
     "id": "feat-3",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i7 (2020)",
-    "specs": "Intel i7 \u2022 16GB RAM \u2022 512GB SSD \u2022 Space Gray",
-    "price": 78000,
-    "category": "exuk apple macbook pro 13 featured",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
+    "brand": "Lenovo",
+    "name": "Lenovo X1 Carbon I7 8Th 16/512Gb.",
+    "specs": "x1 carbon i7 8th 16/512gb.",
+    "price": 35000,
+    "category": "exuk business lenovo featured",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x1+carbon+i7+8th"
   },
   {
     "id": "feat-4",
-    "brand": "Apple",
-    "name": "MacBook Air 13 (2017)",
-    "specs": "Intel i5 \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 29000,
-    "category": "exuk apple macbook air budget featured",
-    "badge": "value",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2017.jpg"
+    "brand": "Lenovo",
+    "name": "Lenovo X390 I5 8Th 8/256Gb",
+    "specs": "x390 i5 8th 8/256gb",
+    "price": 22000,
+    "category": "exuk business lenovo featured",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x390+i5+8th+8/256gb"
   },
   {
-    "id": "tmp-9597",
-    "brand": "Apple",
-    "name": "MacBook Air 13 (2013)",
-    "specs": "Intel i5 \u2022 8GB RAM \u2022 128GB SSD",
-    "price": 21000,
-    "category": "exuk apple macbook air budget",
-    "badge": "value",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2017.jpg"
+    "id": "tmp-4572",
+    "brand": "Lenovo",
+    "name": "Lenovo X13 I7 10Th 16/512Gb",
+    "specs": "x13 i7 10th 16/512gb",
+    "price": 32000,
+    "category": "exuk business lenovo",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x13+i7+10th+16/512gb"
   },
   {
-    "id": "tmp-2597",
-    "brand": "Apple",
-    "name": "MacBook Pro 15 (2017)",
-    "specs": "Intel i7 \u2022 16GB RAM \u2022 512GB SSD \u2022 4GB Graphics",
-    "price": 58000,
-    "category": "exuk apple macbook pro 15",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
-    "id": "tmp-5242",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i5 (2019)",
-    "specs": "Intel i5 \u2022 8GB RAM \u2022 256GB SSD",
+    "id": "tmp-9498",
+    "brand": "Dell",
+    "name": "Dell Xps 15 9570 I7 8Th 16/512Gb 4Gb Graphics",
+    "specs": "xps 15 9570 i7 8th 16/512gb 4gb Graphics",
     "price": 50000,
-    "category": "exuk apple macbook pro 13",
-    "badge": "value",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
+    "category": "exuk business dell",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+xps+15+9570+i7"
   },
   {
-    "id": "tmp-5902",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i7 (2017)",
-    "specs": "Intel i7 \u2022 16GB RAM \u2022 1TB SSD",
-    "price": 58000,
-    "category": "exuk apple macbook pro 13",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
+    "id": "tmp-2119",
+    "brand": "Dell",
+    "name": "Dell Xps 13 9305 I7 11Th 16/512Gb",
+    "specs": "xps 13 9305 i7 11th 16/512gb",
+    "price": 60000,
+    "category": "exuk business dell",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+xps+13+9305+i7"
   },
   {
-    "id": "tmp-6918",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i7 (2020)",
-    "specs": "Intel i7 \u2022 16GB RAM \u2022 1TB SSD \u2022 Touch Bar",
-    "price": 82000,
-    "category": "exuk apple macbook pro 13",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
-    "id": "tmp-9003",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i7 (2015)",
-    "specs": "Intel i7 \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 35000,
-    "category": "exuk apple macbook pro 13 budget",
-    "badge": "value",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
-    "id": "mb-0",
-    "brand": "Apple",
-    "name": "MacBook Pro 16 M1 (2021)",
-    "specs": "Apple M1 Pro \u2022 32GB RAM \u2022 512GB SSD",
-    "price": 155000,
-    "category": "exuk apple macbook pro 16",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-16-inch-2019.jpg"
-  },
-  {
-    "id": "len-t495s-r7",
-    "brand": "Lenovo",
-    "name": "ThinkPad T495s Ryzen 7",
-    "specs": "AMD Ryzen 7 Pro \u2022 16GB RAM \u2022 256GB SSD \u2022 Non-Touch",
-    "price": 33000,
-    "category": "exuk lenovo thinkpad",
-    "badge": "wholesale floor price",
-    "img": "https://p1-ofp.static.pub/medias/bWFkY29tcG9uZW50czoxNTU1NTYxNTM3ODUyLmpwZw/lenovo-thinkpad-t495s-hero.jpg"
-  },
-  {
-    "id": "len-x395-r7",
-    "brand": "Lenovo",
-    "name": "ThinkPad X395 Ryzen 7",
-    "specs": "AMD Ryzen 7 Pro \u2022 16GB RAM \u2022 256GB SSD \u2022 Non-Touch",
-    "price": 35000,
-    "category": "exuk lenovo thinkpad",
-    "badge": "price beat",
-    "img": "https://p1-ofp.static.pub/medias/bWFkY29tcG9uZW50czoxNTU1NzA3MTUyNTMyLmpwZw/lenovo-thinkpad-x395-hero.jpg"
-  },
-  {
-    "id": "mb-1",
-    "brand": "Apple",
-    "name": "MacBook Pro 16 i9 (2019)",
-    "specs": "Intel i9 \u2022 32GB RAM \u2022 2TB SSD \u2022 8GB Graphics",
-    "price": 105000,
-    "category": "exuk apple macbook pro 16",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-16-inch-2019.jpg"
-  },
-  {
-    "id": "mb-2",
-    "brand": "Apple",
-    "name": "MacBook Pro 16 i9 (2019)",
-    "specs": "Intel i9 \u2022 32GB RAM \u2022 1TB SSD \u2022 4GB Graphics",
-    "price": 95000,
-    "category": "exuk apple macbook pro 16",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-16-inch-2019.jpg"
-  },
-  {
-    "id": "mb-3",
-    "brand": "Apple",
-    "name": "MacBook Pro 16 i7 (2019)",
-    "specs": "Intel i7 \u2022 32GB RAM \u2022 512GB SSD \u2022 4GB Graphics",
-    "price": 80000,
-    "category": "exuk apple macbook pro 16",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-16-inch-2019.jpg"
-  },
-  {
-    "id": "mb-5",
-    "brand": "Apple",
-    "name": "MacBook Pro 15 (2018)",
-    "specs": "Intel i7 \u2022 16GB RAM \u2022 512GB SSD \u2022 4GB Graphics",
-    "price": 62000,
-    "category": "exuk apple macbook pro 15",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
-    "id": "mb-7",
-    "brand": "Apple",
-    "name": "MacBook Pro 15 (2015)",
-    "specs": "Intel i7 \u2022 16GB RAM \u2022 512GB SSD \u2022 2GB Graphics",
-    "price": 42000,
-    "category": "exuk apple macbook pro 15",
-    "badge": "value",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
-    "id": "mb-9",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i7 (2020)",
-    "specs": "Intel i7 \u2022 32GB RAM \u2022 512GB SSD \u2022 Touch Bar",
-    "price": 85000,
-    "category": "exuk apple macbook pro 13",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
-    "id": "mb-11",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i7 (2019)",
-    "specs": "Intel i7 \u2022 16GB RAM \u2022 1TB SSD \u2022 Space Gray",
-    "price": 88000,
-    "category": "exuk apple macbook pro 13",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
-    "id": "mb-12",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i7 (2019)",
-    "specs": "Intel i7 \u2022 16GB RAM \u2022 512GB SSD \u2022 Space Gray",
-    "price": 68000,
-    "category": "exuk apple macbook pro 13",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
-    "id": "mb-13",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i7 (2019)",
-    "specs": "Intel i7 \u2022 16GB RAM \u2022 256GB SSD",
-    "price": 63000,
-    "category": "exuk apple macbook pro 13",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
-    "id": "mb-14",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i5 (2019)",
-    "specs": "Intel i5 \u2022 16GB RAM \u2022 256GB SSD",
-    "price": 53000,
-    "category": "exuk apple macbook pro 13",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
-    "id": "mb-18",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i5 (2017)",
-    "specs": "Intel i5 \u2022 16GB RAM \u2022 256GB SSD",
-    "price": 42000,
-    "category": "exuk apple macbook pro 13",
-    "badge": "value",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
-    "id": "mb-20",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i5 (2015)",
-    "specs": "Intel i5 \u2022 16GB RAM \u2022 512GB SSD",
-    "price": 38000,
-    "category": "exuk apple macbook pro 13 budget",
-    "badge": "value",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
-    "id": "mb-21",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i5 (2015)",
-    "specs": "Intel i5 \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 30000,
-    "category": "exuk apple macbook pro 13 budget",
-    "badge": "value",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
-    "id": "mb-22",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i5 (2012)",
-    "specs": "Intel i5 \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 21000,
-    "category": "exuk apple macbook pro 13 budget",
-    "badge": "value",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
-    "id": "mb-23",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 i5 (2011)",
-    "specs": "Intel i5 \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 19000,
-    "category": "exuk apple macbook pro 13 budget",
-    "badge": "value",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-13-inch-2020.jpg"
-  },
-  {
-    "id": "mb-24",
-    "brand": "Apple",
-    "name": "MacBook Air M1 (2022)",
-    "specs": "Apple M1 \u2022 8GB RAM \u2022 256GB SSD \u2022 Midnight",
-    "price": 100000,
-    "category": "exuk apple macbook air",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2017.jpg"
-  },
-  {
-    "id": "mb-25",
-    "brand": "Apple",
-    "name": "MacBook Air M1 (2020)",
-    "specs": "Apple M1 \u2022 8GB RAM \u2022 256GB SSD \u2022 Space Gray",
-    "price": 78000,
-    "category": "exuk apple macbook air",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2017.jpg"
-  },
-  {
-    "id": "mb-26",
-    "brand": "Apple",
-    "name": "MacBook Air 13 (2019)",
-    "specs": "Intel i5 \u2022 16GB RAM \u2022 256GB SSD",
-    "price": 52000,
-    "category": "exuk apple macbook air",
-    "badge": "premium",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2017.jpg"
-  },
-  {
-    "id": "mb-27",
-    "brand": "Apple",
-    "name": "MacBook Air 13 (2019)",
-    "specs": "Intel i5 \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 48000,
-    "category": "exuk apple macbook air",
-    "badge": "value",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2017.jpg"
-  },
-  {
-    "id": "mb-28",
-    "brand": "Apple",
-    "name": "MacBook Air 13 (2018)",
-    "specs": "Intel i5 \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 45000,
-    "category": "exuk apple macbook air",
-    "badge": "value",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2017.jpg"
-  },
-  {
-    "id": "mb-29",
-    "brand": "Apple",
-    "name": "MacBook Air 13 (2017)",
-    "specs": "Intel i7 \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 35000,
-    "category": "exuk apple macbook air budget",
-    "badge": "value",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2017.jpg"
-  },
-  {
-    "id": "mb-31",
-    "brand": "Apple",
-    "name": "MacBook Air 13 (2015)",
-    "specs": "Intel i5 \u2022 8GB RAM \u2022 256GB SSD",
-    "price": 26000,
-    "category": "exuk apple macbook air budget",
-    "badge": "value",
-    "img": "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2017.jpg"
+    "id": "tmp-6898",
+    "brand": "Dell",
+    "name": "Dell 5320 I7 11Th 16/512Gb Touchscreen",
+    "specs": "5320 i7 11th 16/512gb touchscreen",
+    "price": 40000,
+    "category": "exuk business dell",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+5320+i7+11th+16/512gb"
   }
 ];
 
-function renderProducts(filter = 'all', targetBtn = null) {
-  const container = document.getElementById('productGrid');
+let currentFilter = 'featured';
+let currentLimit = 12;
+
+function renderProducts(filter = 'featured', targetBtn = null) {
+  currentFilter = filter;
+  const container = document.getElementById('productsGrid');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
   if (!container) return;
 
-  container.innerHTML = '';
-  
   if (targetBtn) {
     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
     targetBtn.classList.add('active');
+  } else {
+    // If no targetBtn provided (e.g. from URL param), try to find the matching button
+    const btn = document.querySelector(`.filter-btn[onclick*="'${filter}'"]`);
+    if (btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
   }
+
+  container.innerHTML = '';
 
   const filtered = filter === 'all' 
     ? ALL_PRODUCTS 
     : ALL_PRODUCTS.filter(p => p.category.includes(filter));
 
-  filtered.forEach(p => {
+  const itemsToShow = filtered.slice(0, currentLimit);
+
+  itemsToShow.forEach(p => {
     const card = document.createElement('div');
     card.className = 'product-card';
     card.innerHTML = `
       <div class="product-img" style="background-image: url('${p.img}')">
-        ${p.badge ? `<span class="badge">${p.badge}</span>` : ''}
+        ${p.badge ? `<span class="badge ${p.badge}">${p.badge}</span>` : ''}
       </div>
       <div class="product-info">
         <div class="brand">${p.brand}</div>
@@ -385,32 +129,86 @@ function renderProducts(filter = 'all', targetBtn = null) {
     `;
     container.appendChild(card);
   });
+
+  if (loadMoreBtn) {
+    loadMoreBtn.style.display = currentLimit >= filtered.length ? 'none' : 'block';
+  }
+}
+
+function loadMoreProducts() {
+  currentLimit += 12;
+  renderProducts(currentFilter);
+}
+
+function searchProducts() {
+  const query = document.getElementById('productSearch').value.toLowerCase();
+  const container = document.getElementById('productsGrid');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  if (!container) return;
+
+  if (!query) {
+    renderProducts(currentFilter);
+    return;
+  }
+
+  container.innerHTML = '';
+  const filtered = ALL_PRODUCTS.filter(p => 
+    p.name.toLowerCase().includes(query) || 
+    p.brand.toLowerCase().includes(query) || 
+    p.specs.toLowerCase().includes(query)
+  );
+
+  filtered.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.innerHTML = `
+      <div class="product-img" style="background-image: url('${p.img}')">
+        ${p.badge ? `<span class="badge ${p.badge}">${p.badge}</span>` : ''}
+      </div>
+      <div class="product-info">
+        <div class="brand">${p.brand}</div>
+        <h3 class="name">${p.name}</h3>
+        <p class="specs">${p.specs}</p>
+        <div class="price-row">
+          <span class="price">KES ${p.price.toLocaleString()}</span>
+          <a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I'm%20interested%20in%20the%20${encodeURIComponent(p.name)}" class="buy-btn">Enquire</a>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+
+  if (loadMoreBtn) loadMoreBtn.style.display = 'none';
 }
 
 function setupDailySpecial() {
-  const overlay = document.getElementById('promoOverlay');
+  const overlay = document.getElementById('daily-special');
   if (!overlay) return;
 
   const featured = ALL_PRODUCTS.filter(p => p.category.includes('featured'));
   if (featured.length > 0) {
     const p = featured[Math.floor(Math.random() * featured.length)];
-    const titleEl = overlay.querySelector('.promo-title');
-    const specsEl = overlay.querySelector('.promo-specs');
-    const priceEl = overlay.querySelector('.promo-price');
-    const waEl = overlay.querySelector('.claim-btn');
-    const imgEl = overlay.querySelector('.promo-img');
+    const titleEl = document.getElementById('special-title');
+    const specsEl = document.getElementById('special-specs');
+    const priceEl = document.getElementById('special-new-price');
+    const oldPriceEl = document.getElementById('special-old-price');
+    const imgEl = document.getElementById('special-img');
+    const bannerEl = document.getElementById('special-banner');
     
-    if (titleEl) titleEl.innerHTML = p.name.replace(' ', '<br/>');
+    if (titleEl) titleEl.innerText = p.name;
     if (specsEl) specsEl.innerText = p.specs;
-    if (priceEl) priceEl.innerText = `KES ${p.price.toLocaleString()}`;
-    if (imgEl) imgEl.style.backgroundImage = `url('${p.img}')`;
-    if (waEl) waEl.href = `https://wa.me/254721585784?text=Hi%20Nexcom!%20I%20want%20to%20order%20the%20Special:%20${encodeURIComponent(p.name)}`;
+    if (priceEl) priceEl.innerText = `KES ${(p.price * 0.9).toLocaleString()}`;
+    if (oldPriceEl) oldPriceEl.innerText = `KES ${p.price.toLocaleString()}`;
+    if (imgEl) imgEl.src = p.img;
+    
+    if (bannerEl) {
+      bannerEl.onclick = () => {
+        window.location.href = `https://wa.me/254721585784?text=Hi%20Nexcom!%20I%20want%20to%20order%20the%20Special:%20${encodeURIComponent(p.name)}`;
+      };
+    }
   }
 
-  setTimeout(() => {
-    overlay.style.display = 'flex';
-    setTimeout(() => overlay.classList.add('active'), 100);
-  }, 2000);
+  overlay.style.display = 'block';
 }
 
 function closePromo() {
@@ -426,10 +224,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
   const filterParam = urlParams.get('filter');
   if (filterParam) {
-    const targetBtn = document.querySelector(`.filter-btn[onclick*="${filterParam}"]`);
-    renderProducts(filterParam, targetBtn);
+    renderProducts(filterParam);
+    // Smooth scroll to laptops section if filter is present
+    setTimeout(() => {
+      const laptopsEl = document.getElementById('laptops');
+      if (laptopsEl) laptopsEl.scrollIntoView({ behavior: 'smooth' });
+    }, 500);
   } else {
-    const featuredBtn = document.querySelector('.filter-btn[onclick*="featured"]');
-    renderProducts('featured', featuredBtn);
+    renderProducts('featured');
   }
 });
