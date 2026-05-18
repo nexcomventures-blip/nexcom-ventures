@@ -406,7 +406,10 @@
                                 <option>Nairobi Excursion</option>
                                 <option>Private Fleet Request</option>
                             </select>
-                            <input type="date" placeholder="Preferred Date" required style="flex: 1; padding: 12px; border: 1px solid rgba(27,48,34,0.1); border-radius: 8px; color: #1b3022;">
+                            <div style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
+                                <input type="date" required style="width: 100%; padding: 12px; border: 1px solid rgba(27,48,34,0.1); border-radius: 8px; color: #1b3022;">
+                                <span style="font-size: 0.65rem; color: #666; margin-left: 4px;">Format: DD/MM/YYYY</span>
+                            </div>
                         </div>
                         <textarea placeholder="Tell us about your dream journey..." rows="5" style="margin-top: 15px;"></textarea>
                         <button type="submit" class="btn-gold-full">Request Proposal</button>
