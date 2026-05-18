@@ -168,6 +168,10 @@
                 <span class="label">Client:</span>
                 <span class="bold" id="userName">Valued Guest</span>
             </div>
+            <div class="flex">
+                <span class="label">Reference:</span>
+                <span class="bold" id="payRef">---</span>
+            </div>
             
             <div class="divider"></div>
             
@@ -231,6 +235,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         if(urlParams.has('name')) document.getElementById('userName').innerText = urlParams.get('name');
         if(urlParams.has('method')) document.getElementById('payMethod').innerText = urlParams.get('method');
+        if(urlParams.has('ref')) document.getElementById('payRef').innerText = urlParams.get('ref');
 
         function saveAsPDF() {
             const element = document.getElementById('receipt');
