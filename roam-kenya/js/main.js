@@ -387,8 +387,11 @@ const serviceData = {
 };
 
 function generateTicket(method, status) {
-    const name = prompt("Please enter the name for the receipt:") || "Valued Client";
-    window.location.href = `receipt.html?name=${encodeURIComponent(name)}&method=${method}`;
+    const name = prompt("Please enter the name for the receipt:");
+    if (name === null) return; // User clicked Cancel
+    
+    const finalName = name.trim() || "Valued Client";
+    window.location.href = `receipt.html?name=${encodeURIComponent(finalName)}&method=${method}`;
 }
 
 function closeTicket() {
