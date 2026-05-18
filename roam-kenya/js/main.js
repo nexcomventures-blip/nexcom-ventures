@@ -387,11 +387,20 @@ const serviceData = {
 };
 
 function generateTicket(method, status) {
-    const name = prompt("Please enter the name for the receipt:");
-    if (name === null) return; // User clicked Cancel
+    const ref = prompt(`Please enter your ${method} Transaction Reference (e.g., M-PESA Code or Bank Ref):`);
+    if (ref === null) return; // User clicked Cancel
     
-    const finalName = name.trim() || "Valued Client";
-    window.location.href = `receipt.html?name=${encodeURIComponent(finalName)}&method=${method}`;
+    const finalRef = ref.trim();
+    if (!finalRef) {
+        alert("A Transaction Reference is required to identify your payment.");
+        return;
+    }
+
+    const name = prompt("Please enter the name for the receipt (Optional):");
+    if (name === null) return;
+    
+    const finalName = name.trim() || "Valued Guest";
+    window.location.href = `receipt.html?name=${encodeURIComponent(finalName)}&method=${method}&ref=${encodeURIComponent(finalRef)}`;
 }
 
 function closeTicket() {
