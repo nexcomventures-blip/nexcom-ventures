@@ -85,10 +85,11 @@
         <div class="nav-container">
             <a href="#" class="brand">ROAM KENYA</a>
             <ul class="nav-menu">
-                <li><a href="#experience">The Experience</a></li>
-                <li><a href="#expeditions">Expeditions</a></li>
-                <li><a href="#logistics">Logistics</a></li>
-                <li><a href="#curate" class="nav-cta">Curate My Journey</a></li>
+                <li><a href="#experience" data-i18n="experience">The Experience</a></li>
+                <li><a href="#tours" data-i18n="tours">Tours & Safaris</a></li>
+                <li><a href="#expeditions" data-i18n="expeditions">Expeditions</a></li>
+                <li><a href="#logistics" data-i18n="logistics">Logistics</a></li>
+                <li><a href="#curate" class="nav-cta" data-i18n="curate_nav">Curate My Journey</a></li>
             </ul>
             <div class="nav-extras">
                 <div class="lang-selector">
@@ -249,6 +250,77 @@
                         </div>
                         <span class="price" data-i18n="price_starts">From $250/day</span>
                         <a href="#curate" class="card-btn" data-i18n="btn_explore_card">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tours" class="expeditions" style="background-color: #f1f4f1;">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 data-i18n="tours_h2">Popular Tours & Safaris</h2>
+                <p data-i18n="tours_p">Hand-picked itineraries combining Kenya's most iconic wildlife and landscapes.</p>
+            </div>
+            <div class="grid-v3">
+                <div class="exp-card reveal">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=800" alt="Maasai Mara" class="active" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-info">
+                        <h3>3-Day Maasai Mara Express</h3>
+                        <p>Perfect for those with limited time but seeking maximum impact. Witness the Big Five in their natural habitat.</p>
+                        <button class="details-btn" onclick="toggleDetails('details-tour-mara')">View Itinerary</button>
+                        <div id="details-tour-mara" class="package-details">
+                            <ul>
+                                <li>Round-trip Transport from Nairobi</li>
+                                <li>Full Board Accommodation</li>
+                                <li>4x4 Game Drives with Expert Guide</li>
+                                <li>Park Entry Fees Included</li>
+                            </ul>
+                        </div>
+                        <span class="price">From $750 / person</span>
+                        <a href="https://wa.me/254721585784?text=I'm%20interested%20in%20the%203-Day%20Maasai%20Mara%20Express" class="card-btn">Inquire Now</a>
+                    </div>
+                </div>
+                <div class="exp-card reveal">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=800" alt="Lake Nakuru" class="active" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-info">
+                        <h3>5-Day Wildlife Heritage</h3>
+                        <p>Explore the pink-hued Lake Nakuru and the legendary plains of the Maasai Mara in one seamless journey.</p>
+                        <button class="details-btn" onclick="toggleDetails('details-tour-heritage')">View Itinerary</button>
+                        <div id="details-tour-heritage" class="package-details">
+                            <ul>
+                                <li>Lake Nakuru Rhino Sanctuary</li>
+                                <li>Boat Safari on Lake Naivasha</li>
+                                <li>Two Full Days in Maasai Mara</li>
+                                <li>Boutique Lodge Stays</li>
+                            </ul>
+                        </div>
+                        <span class="price">From $1,450 / person</span>
+                        <a href="https://wa.me/254721585784?text=I'm%20interested%20in%20the%205-Day%20Wildlife%20Heritage" class="card-btn">Inquire Now</a>
+                    </div>
+                </div>
+                <div class="exp-card reveal">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=800" alt="Diani Beach" class="active" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-info">
+                        <h3>8-Day Bush & Beach Bliss</h3>
+                        <p>The ultimate Kenyan combo: world-class safari followed by the pristine white sands of Diani Beach.</p>
+                        <button class="details-btn" onclick="toggleDetails('details-tour-bliss')">View Itinerary</button>
+                        <div id="details-tour-bliss" class="package-details">
+                            <ul>
+                                <li>4 Days Luxury Safari (Mara)</li>
+                                <li>Internal Flight to Diani</li>
+                                <li>4 Days Beach Relaxation</li>
+                                <li>Private Transfers Throughout</li>
+                            </ul>
+                        </div>
+                        <span class="price">From $2,800 / person</span>
+                        <a href="https://wa.me/254721585784?text=I'm%20interested%20in%20the%208-Day%20Bush%20%26%20Beach%20Bliss" class="card-btn">Inquire Now</a>
                     </div>
                 </div>
             </div>
