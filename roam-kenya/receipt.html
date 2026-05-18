@@ -88,12 +88,14 @@
         .barcode-section {
             text-align: center;
             margin: 12px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .barcode-section img {
+        /* CSS Barcode fallback to prevent broken images */
+        .barcode-svg {
             width: 100%;
-            height: auto;
-            max-height: 30px;
-            filter: contrast(150%);
+            height: 35px;
         }
         .footer {
             text-align: center;
@@ -183,7 +185,7 @@
             <div class="divider"></div>
             
             <div class="barcode-section">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Barcode-39.svg/800px-Barcode-39.svg.png" alt="Barcode">
+                <svg id="barcode" class="barcode-svg"></svg>
                 <div style="font-size: 7px; margin-top: 2px;" id="barcodeText"></div>
             </div>
         </div>
@@ -204,12 +206,24 @@
         </a>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
         // Generate values
-        document.getElementById('receiptNo').innerText = 'RK-' + Math.floor(1000 + Math.random() * 9000);
-        const timestamp = Date.now();
-        document.getElementById('barcodeText').innerText = '*' + timestamp + '*';
+        const rNo = 'RK-' + Math.floor(1000 + Math.random() * 9000);
+        document.getElementById('receiptNo').innerText = rNo;
+        
+        const timestamp = Date.now().toString().slice(-10);
+        document.getElementById('barcodeText').innerText = timestamp;
+
+        // Generate barcode using JsBarcode to ensure it's not broken
+        JsBarcode("#barcode", timestamp, {
+            format: "CODE128",
+            lineColor: "#000",
+            width: 2,
+            height: 40,
+            displayValue: false
+        });
 
         const d = new Date();
         document.getElementById('currentDate').innerText = d.toLocaleDateString('en-GB') + ' ' + d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
@@ -227,7 +241,7 @@
                 html2canvas: { scale: 3, useCORS: true },
                 jsPDF: { unit: 'mm', format: [58, 140], orientation: 'portrait' },
                 pagebreak: { mode: 'avoid-all' }
-            };
+            }
             html2pdf().set(opt).from(element).save();
         }
     </script>
