@@ -369,51 +369,94 @@
         </div>
     </section>
     <!-- Payment Section -->
-    <section id="payment" class="payment-section">
+    <section id="payment" class="payment-section" style="background: linear-gradient(135deg, #1b3022 0%, #2c4a35 100%); padding: 100px 0; position: relative; overflow: hidden;">
+        <!-- Subtle Leaf Decoration -->
+        <div style="position: absolute; top: -50px; right: -50px; font-size: 20rem; color: rgba(255,255,255,0.03); transform: rotate(15deg); pointer-events: none;"><i class="fas fa-leaf"></i></div>
+        
         <div class="container">
-            <div class="section-header text-center">
-                <h2 data-i18n="payment_h1" style="color: #ffffff;">Secure Your Expedition</h2>
-                <p data-i18n="payment_p" style="color: rgba(255, 255, 255, 0.9);">Global payment options for the modern traveler.</p>
+            <div class="section-header text-center" style="margin-bottom: 60px;">
+                <span style="color: var(--secondary); text-transform: uppercase; letter-spacing: 3px; font-weight: 700; font-size: 0.9rem; display: block; margin-bottom: 10px;">Investment & Trust</span>
+                <h2 data-i18n="payment_h1" style="color: #ffffff; font-size: 3rem; margin-bottom: 20px;">Secure Your Expedition</h2>
+                <div style="width: 80px; height: 3px; background: var(--secondary); margin: 0 auto 25px;"></div>
+                <p data-i18n="payment_p" style="color: rgba(255, 255, 255, 0.85); max-width: 600px; margin: 0 auto; font-size: 1.1rem; line-height: 1.6;">Global payment infrastructure designed for the modern explorer. Seamless, secure, and transparent.</p>
             </div>
-            <div class="payment-grid">
-                <!-- International -->
-                <div class="payment-card reveal">
-                    <i class="fas fa-globe-africa fa-3x mb-3" style="color: var(--secondary);"></i>
-                    <h3>International Payments</h3>
-                    <p>Secure global wire transfers for our international guests and partners.</p>
+
+            <div class="payment-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; max-width: 1100px; margin: 0 auto;">
+                
+                <!-- International Bank Wire -->
+                <div class="payment-card reveal" style="background: #ffffff; padding: 45px 35px; border-radius: 20px; box-shadow: 0 25px 50px rgba(0,0,0,0.2); transition: transform 0.3s ease; display: flex; flex-direction: column; position: relative; border-top: 5px solid var(--secondary);">
+                    <div style="background: rgba(194, 157, 89, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                        <i class="fas fa-landmark fa-2x" style="color: var(--secondary);"></i>
+                    </div>
+                    <h3 style="color: var(--primary); font-size: 1.6rem; margin-bottom: 15px;">Global Bank Wire</h3>
+                    <p style="color: #666; margin-bottom: 25px; line-height: 1.5;">Direct SWIFT transfers for international guests. Secure, low-fee, and preferred for large expeditions.</p>
                     
-                    <div class="bank-info" style="margin: 15px 0; background: #ffffff; padding: 18px; border-radius: 10px; border: 2px solid var(--secondary); text-align: left; font-size: 0.95rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                        <div style="margin-bottom: 7px; border-bottom: 1px solid #f0f0f0; padding-bottom: 4px;"><strong style="color: var(--secondary);">Bank:</strong> <span style="color: #1b3022; font-weight: 600;">NCBA Bank Kenya PLC</span></div>
-                        <div style="margin-bottom: 7px; border-bottom: 1px solid #f0f0f0; padding-bottom: 4px;"><strong style="color: var(--secondary);">Branch:</strong> <span style="color: #1b3022; font-weight: 600;">Mama Ngina (003)</span></div>
-                        <div style="margin-bottom: 7px; border-bottom: 1px solid #f0f0f0; padding-bottom: 4px;"><strong style="color: var(--secondary);">Acc Name:</strong> <span style="color: #1b3022; font-weight: 600;">Nexcom Ventures Ltd</span></div>
-                        <div style="margin-bottom: 7px; border-bottom: 1px solid #f0f0f0; padding-bottom: 4px;"><strong style="color: var(--secondary);">Acc No:</strong> <span style="color: #1b3022; font-weight: 700;">9346560018</span></div>
-                        <div><strong style="color: var(--secondary);">SWIFT:</strong> <span style="font-weight: 800; color: #1b3022; background: #fff9e6; padding: 2px 6px; border-radius: 4px;">CBAFKENX</span></div>
+                    <div style="background: #fdfaf4; padding: 25px; border-radius: 12px; border: 1px dashed var(--secondary); margin-bottom: 30px;">
+                        <div style="display: grid; gap: 12px;">
+                            <div style="display: flex; flex-direction: column;">
+                                <span style="font-size: 0.75rem; color: #999; text-transform: uppercase; font-weight: 700;">Account Holder</span>
+                                <span style="color: var(--primary); font-weight: 600;">Nexcom Ventures Ltd</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 10px;">
+                                <div style="display: flex; flex-direction: column;">
+                                    <span style="font-size: 0.75rem; color: #999; text-transform: uppercase; font-weight: 700;">Bank & Branch</span>
+                                    <span style="color: var(--primary); font-weight: 600;">NCBA Mama Ngina</span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; text-align: right;">
+                                    <span style="font-size: 0.75rem; color: #999; text-transform: uppercase; font-weight: 700;">Acc Number</span>
+                                    <span style="color: var(--primary); font-weight: 700;">9346560018</span>
+                                </div>
+                            </div>
+                            <div style="background: var(--primary); color: #fff; padding: 12px; border-radius: 8px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;">SWIFT Code</span>
+                                <span style="font-weight: 800; font-size: 1.1rem; letter-spacing: 1px;">CBAFKENX</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="payment-methods-icons" style="margin-bottom: 15px;">
-                        <i class="fab fa-cc-visa"></i>
-                        <i class="fab fa-cc-mastercard"></i>
-                        <i class="fab fa-cc-apple-pay"></i>
-                    </div>
-                    <a href="javascript:void(0)" onclick="generateTicket('Bank Wire', 'In-Process')" class="btn-pay">Generate Receipt</a>
+                    <a href="javascript:void(0)" onclick="generateTicket('Bank Wire', 'In-Process')" class="btn-pay" style="margin-top: auto; background: var(--secondary); color: #fff; padding: 15px; border-radius: 10px; text-decoration: none; font-weight: 700; text-align: center; transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-file-invoice-dollar"></i> Get Payment Advice
+                    </a>
                 </div>
 
-                <!-- Local/M-PESA -->
-                <div class="payment-card reveal">
-                    <i class="fas fa-mobile-alt fa-3x mb-3" style="color: var(--secondary);"></i>
-                    <h3>Local & M-PESA</h3>
-                    <p>Convenient mobile payments for East African residents and regional partners.</p>
-                    <div class="paybill-info" style="margin: 15px 0; background: #ffffff; padding: 18px; border-radius: 10px; border: 2px solid var(--secondary); box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                        <div class="info-row" style="display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 6px;">
-                            <span style="font-weight: bold; color: var(--secondary);">Paybill:</span>
-                            <span style="font-weight: 800; color: #1b3022; font-size: 1.1rem;">880100</span>
-                        </div>
-                        <div class="info-row" style="display: flex; justify-content: space-between; padding-top: 4px;">
-                            <span style="font-weight: bold; color: var(--secondary);">Account:</span>
-                            <span style="font-weight: 800; color: #1b3022; font-size: 1.1rem;">816001</span>
+                <!-- Local / M-PESA -->
+                <div class="payment-card reveal" style="background: #ffffff; padding: 45px 35px; border-radius: 20px; box-shadow: 0 25px 50px rgba(0,0,0,0.2); transition: transform 0.3s ease; display: flex; flex-direction: column; position: relative; border-top: 5px solid #28a745;">
+                    <div style="background: rgba(40, 167, 69, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                        <i class="fas fa-mobile-alt fa-2x" style="color: #28a745;"></i>
+                    </div>
+                    <h3 style="color: var(--primary); font-size: 1.6rem; margin-bottom: 15px;">M-PESA / Local</h3>
+                    <p style="color: #666; margin-bottom: 25px; line-height: 1.5;">Instant mobile payments for East African residents. Fast, secure, and officially verified.</p>
+                    
+                    <div style="background: #f6fff8; padding: 25px; border-radius: 12px; border: 1px dashed #28a745; margin-bottom: 30px;">
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 12px 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.03);">
+                                <span style="font-size: 0.75rem; color: #999; text-transform: uppercase; font-weight: 700;">Business Paybill</span>
+                                <span style="color: #1b3022; font-weight: 800; font-size: 1.3rem;">880100</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 12px 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.03);">
+                                <span style="font-size: 0.75rem; color: #999; text-transform: uppercase; font-weight: 700;">Account Number</span>
+                                <span style="color: #1b3022; font-weight: 800; font-size: 1.3rem;">816001</span>
+                            </div>
                         </div>
                     </div>
-                    <a href="javascript:void(0)" onclick="generateTicket('M-PESA', 'In-Process')" class="btn-pay">Generate Receipt</a>
+
+                    <a href="javascript:void(0)" onclick="generateTicket('M-PESA', 'In-Process')" class="btn-pay" style="margin-top: auto; background: #28a745; color: #fff; padding: 15px; border-radius: 10px; text-decoration: none; font-weight: 700; text-align: center; transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-receipt"></i> Generate Digital Receipt
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Trust Badges -->
+            <div style="margin-top: 60px; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; opacity: 0.7;">
+                <div style="color: #fff; display: flex; align-items: center; gap: 10px; font-size: 0.85rem;">
+                    <i class="fas fa-shield-alt" style="color: var(--secondary);"></i> 256-bit SSL Encrypted
+                </div>
+                <div style="color: #fff; display: flex; align-items: center; gap: 10px; font-size: 0.85rem;">
+                    <i class="fas fa-lock" style="color: var(--secondary);"></i> Official Business Verification
+                </div>
+                <div style="color: #fff; display: flex; align-items: center; gap: 10px; font-size: 0.85rem;">
+                    <i class="fas fa-check-circle" style="color: var(--secondary);"></i> Instant Confirmation
                 </div>
             </div>
         </div>
