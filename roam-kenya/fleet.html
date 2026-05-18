@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Safari Fleet | Roam Kenya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1b3022;
+            --accent: #c29d59;
+            --bg-light: #f9fbf9;
+            --text-dark: #1b3022;
+            --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-dark); }
+        .header { background: var(--primary); padding: 40px 20px; text-align: center; color: var(--white); }
+        .header h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px; }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .fleet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .fleet-card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
+        .fleet-card:hover { transform: translateY(-10px); }
+        .fleet-img { width: 100%; height: 250px; background-size: cover; background-position: center; position: relative; }
+        .fleet-tag { position: absolute; top: 15px; right: 15px; background: var(--accent); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+        .fleet-info { padding: 25px; }
+        .fleet-info h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; color: var(--primary); }
+        .fleet-features { list-style: none; margin-bottom: 20px; }
+        .fleet-features li { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 0.9rem; color: #555; }
+        .fleet-features i { color: var(--accent); width: 20px; }
+        .btn-book { display: block; width: 100%; background: var(--primary); color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
+        .btn-book:hover { background: #2a4a35; }
+        .back-btn { display: inline-block; margin-bottom: 20px; color: var(--accent); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" style="color: var(--accent); text-decoration: none; margin-bottom: 20px; display: inline-block;">← Back to Roam Kenya</a>
+        <h1>Our Premium Fleet</h1>
+        <p>Reliable, luxury transport for the ultimate Kenya Safari experience.</p>
+    </div>
+
+    <div class="container">
+        <div class="fleet-grid">
+            <!-- Land Cruiser -->
+            <div class="fleet-card">
+                <div class="fleet-img" style="background-image: url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                    <span class="fleet-tag">Most Popular</span>
+                </div>
+                <div class="fleet-info">
+                    <h3>4x4 Safari Land Cruiser</h3>
+                    <ul class="fleet-features">
+                        <li><i class="fas fa-users"></i> Seats 5-7 Passengers</li>
+                        <li><i class="fas fa-arrow-up"></i> Pop-up Roof for 360° Viewing</li>
+                        <li><i class="fas fa-battery-full"></i> On-board Charging Points</li>
+                        <li><i class="fas fa-snowflake"></i> Cooler Box / Fridge</li>
+                        <li><i class="fas fa-shield-alt"></i> Heavy Duty Off-road Suspension</li>
+                    </ul>
+                    <a href="https://wa.me/254721585784?text=I'm%20interested%20in%20the%204x4%20Land%20Cruiser" class="btn-book">Inquire Now</a>
+                </div>
+            </div>
+
+            <!-- Safari Van -->
+            <div class="fleet-card">
+                <div class="fleet-img" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                    <span class="fleet-tag">Best Value</span>
+                </div>
+                <div class="fleet-info">
+                    <h3>Luxury Safari Van</h3>
+                    <ul class="fleet-features">
+                        <li><i class="fas fa-users"></i> Seats 7-8 Passengers</li>
+                        <li><i class="fas fa-arrow-up"></i> Custom Pop-up Roof</li>
+                        <li><i class="fas fa-wifi"></i> On-board Wi-Fi (Optional)</li>
+                        <li><i class="fas fa-couch"></i> Reclining Safari Seats</li>
+                        <li><i class="fas fa-check-circle"></i> Perfect for Group Logistics</li>
+                    </ul>
+                    <a href="https://wa.me/254721585784?text=I'm%20interested%20in%20the%20Safari%20Van" class="btn-book">Inquire Now</a>
+                </div>
+            </div>
+
+            <!-- Overland Truck -->
+            <div class="fleet-card">
+                <div class="fleet-img" style="background-image: url('https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                    <span class="fleet-tag">Expedition Ready</span>
+                </div>
+                <div class="fleet-info">
+                    <h3>Overland Expedition Truck</h3>
+                    <ul class="fleet-features">
+                        <li><i class="fas fa-users"></i> Seats 12-24 Passengers</li>
+                        <li><i class="fas fa-mountain"></i> Built for Remote Frontiers</li>
+                        <li><i class="fas fa-utensils"></i> Full Camping & Kitchen Kit</li>
+                        <li><i class="fas fa-suitcase"></i> Massive Storage Capacity</li>
+                        <li><i class="fas fa-map-marked-alt"></i> Ideal for Academic Groups</li>
+                    </ul>
+                    <a href="https://wa.me/254721585784?text=I'm%20interested%20in%20the%20Overland%20Truck" class="btn-book">Inquire Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
