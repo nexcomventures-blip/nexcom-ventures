@@ -501,6 +501,8 @@ function handleChatKey(e) {
     if (e.key === 'Enter') sendChatMessage();
 }
 
+let chatStep = 0;
+
 function sendChatMessage() {
     const input = document.getElementById('chatInput');
     const body = document.getElementById('chatBody');
@@ -508,6 +510,7 @@ function sendChatMessage() {
     
     if (!text) return;
 
+    // Append User Message
     const userDiv = document.createElement('div');
     userDiv.className = 'message user-msg';
     userDiv.innerHTML = `<p>${text}</p><span class="time">Just now</span>`;
@@ -515,11 +518,22 @@ function sendChatMessage() {
     input.value = '';
     body.scrollTop = body.scrollHeight;
 
+    chatStep++;
+
+    // Alibaba-style Auto Reply Logic
     setTimeout(() => {
         const botDiv = document.createElement('div');
         botDiv.className = 'message bot-msg';
+        
+        let replyText = "";
+        if (chatStep === 1) {
+            replyText = "Thank you for contacting Roam Kenya! We're delighted to assist you. How can we help curate your experience today?";
+        } else {
+            replyText = "<strong>[Auto-Reply]</strong> Received! A concierge specialist is reviewing your request and will respond directly in a moment. We typically reply within 5-10 minutes during business hours.";
+        }
+
         botDiv.innerHTML = `
-            <p><strong>[Auto-Reply]</strong> Thanks for your message! A concierge specialist has been notified. We typically respond within 5-10 minutes during Nairobi business hours.</p>
+            <p>${replyText}</p>
             <span class="time">Just now</span>
         `;
         body.appendChild(botDiv);
