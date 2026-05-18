@@ -586,19 +586,146 @@
 
     <footer class="footer-v3">
         <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">ROAM KENYA</div>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="footer-col">
+                    <div class="footer-brand" style="margin-bottom: 20px;">ROAM KENYA</div>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.6;">Boutique safari curators dedicated to academic minds, romantic souls, and private groups seeking the authentic pulse of Kenya's wild heritage.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 style="color: var(--secondary); margin-bottom: 20px; font-size: 1.1rem;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="#experience" style="color: #fff; text-decoration: none; font-size: 0.9rem;">The Experience</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#tours" style="color: #fff; text-decoration: none; font-size: 0.9rem;">Tours & Safaris</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#logistics" style="color: #fff; text-decoration: none; font-size: 0.9rem;">Logistics</a></li>
+                        <li style="margin-bottom: 10px;"><a href="javascript:void(0)" onclick="openContact()" style="color: #fff; text-decoration: none; font-size: 0.9rem;">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 style="color: var(--secondary); margin-bottom: 20px; font-size: 1.1rem;">Contact Us</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: start;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--secondary); margin-top: 4px;"></i>
+                            <span style="color: #fff; font-size: 0.9rem;">Mama Ngina St, Nairobi, Kenya</span>
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: center;">
+                            <i class="fas fa-phone-alt" style="color: var(--secondary);"></i>
+                            <span style="color: #fff; font-size: 0.9rem;">0722 816 001</span>
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: center;">
+                            <i class="fas fa-envelope" style="color: var(--secondary);"></i>
+                            <span style="color: #fff; font-size: 0.9rem;">nexcomventures@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 style="color: var(--secondary); margin-bottom: 20px; font-size: 1.1rem;">Follow Our Journey</h4>
+                    <div class="footer-social" style="display: flex; gap: 15px;">
+                        <a href="#" style="color: #fff; background: rgba(255,255,255,0.1); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: #fff; background: rgba(255,255,255,0.1); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/254721585784" style="color: #fff; background: rgba(255,255,255,0.1); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s;"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Roam Kenya. A Nexcom Ventures Partner.</p>
+            <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; text-align: center;">
+                <p style="color: rgba(255,255,255,0.4); font-size: 0.8rem;">&copy; 2026 Roam Kenya. All Rights Reserved. A Nexcom Ventures Partner.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Overlays -->
+    <div id="serviceDetailOverlay" class="service-detail-overlay">
+        <div class="detail-content">
+            <span class="close-detail" onclick="closeServiceDetail()">&times;</span>
+            <div id="serviceDetailInner"></div>
+        </div>
+    </div>
+
+    <!-- Contact Page Overlay -->
+    <div id="contactOverlay" class="contact-overlay">
+        <div class="contact-modal">
+            <span class="close-modal" onclick="closeContact()">&times;</span>
+            <div class="contact-grid">
+                <div class="contact-info-panel">
+                    <h2>Get in Touch</h2>
+                    <p>Experience the heart of Kenya with personalized service.</p>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Our Office</h4>
+                            <p>Mama Ngina St, Nairobi, Kenya</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>0722 816 001</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>nexcomventures@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-panel">
+                    <form id="mainContactForm" onsubmit="handleGeneralInquiry(event)">
+                        <div class="form-group">
+                            <input type="text" id="contactName" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="contactEmail" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="contactSubject" required>
+                                <option value="" disabled selected>Subject of Inquiry</option>
+                                <option value="safari">Safari / Expedition</option>
+                                <option value="transfer">Airport Transfer</option>
+                                <option value="fleet">Fleet Rental</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="contactMessage" placeholder="Tell us more about your travel plans..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-gold">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Chat Widget -->
+    <div id="chatWidget" class="chat-widget">
+        <div id="chatBubble" class="chat-bubble" onclick="toggleChat()">
+            <i class="fas fa-comment-dots"></i>
+            <span class="chat-badge">1</span>
+        </div>
+        <div id="chatWindow" class="chat-window">
+            <div class="chat-header">
+                <div class="header-info">
+                    <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?q=80&w=100&h=100&fit=crop" alt="Concierge">
+                    <div>
+                        <h4>Roam Kenya Concierge</h4>
+                        <p><span class="online-status"></span> Online</p>
+                    </div>
+                </div>
+                <button onclick="toggleChat()" class="close-chat-btn">&times;</button>
+            </div>
+            <div id="chatBody" class="chat-body">
+                <div class="message bot-msg">
+                    <p>Welcome to Roam Kenya! How can I assist you with your safari planning today?</p>
+                    <span class="time">Just now</span>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatKey(event)">
+                <button onclick="sendChatMessage()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>
