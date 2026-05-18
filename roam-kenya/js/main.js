@@ -467,3 +467,62 @@ function handleServiceRequest(e, type) {
     alert('Thank you for your inquiry. A Roam Kenya specialist will contact you shortly with a personalized quote.');
     closeServiceDetail();
 }
+
+// Contact & Chat Functionality
+function openContact() {
+    document.getElementById('contactOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeContact() {
+    document.getElementById('contactOverlay').classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+function handleGeneralInquiry(e) {
+    e.preventDefault();
+    const name = document.getElementById('contactName').value;
+    const email = document.getElementById('contactEmail').value;
+    alert(`Thank you, ${name}! Your inquiry regarding ${document.getElementById('contactSubject').value} has been sent. We will reply to ${email} within 24 hours.`);
+    closeContact();
+    e.target.reset();
+}
+
+function toggleChat() {
+    const window = document.getElementById('chatWindow');
+    const badge = document.querySelector('.chat-badge');
+    window.classList.toggle('active');
+    if (window.classList.contains('active') && badge) {
+        badge.style.display = 'none';
+    }
+}
+
+function handleChatKey(e) {
+    if (e.key === 'Enter') sendChatMessage();
+}
+
+function sendChatMessage() {
+    const input = document.getElementById('chatInput');
+    const body = document.getElementById('chatBody');
+    const text = input.value.trim();
+    
+    if (!text) return;
+
+    const userDiv = document.createElement('div');
+    userDiv.className = 'message user-msg';
+    userDiv.innerHTML = `<p>${text}</p><span class="time">Just now</span>`;
+    body.appendChild(userDiv);
+    input.value = '';
+    body.scrollTop = body.scrollHeight;
+
+    setTimeout(() => {
+        const botDiv = document.createElement('div');
+        botDiv.className = 'message bot-msg';
+        botDiv.innerHTML = `
+            <p><strong>[Auto-Reply]</strong> Thanks for your message! A concierge specialist has been notified. We typically respond within 5-10 minutes during Nairobi business hours.</p>
+            <span class="time">Just now</span>
+        `;
+        body.appendChild(botDiv);
+        body.scrollTop = body.scrollHeight;
+    }, 1000);
+}
