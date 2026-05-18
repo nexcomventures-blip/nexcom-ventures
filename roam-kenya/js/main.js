@@ -426,11 +426,20 @@ function openServiceDetail(key) {
         </form>
     `;
 
+    let calendarBtn = key === 'transfers' ? `
+        <div style="margin: 20px 0;">
+            <a href="airport-transfers.html" style="display: inline-block; background: var(--accent); color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; border: none; cursor: pointer;">
+                <i class="fas fa-calendar-alt"></i> View Availability Calendar
+            </a>
+        </div>
+    ` : '';
+
     inner.innerHTML = `
         <div class="service-detail-info">
             <h2>${data.title}</h2>
             <p>${data.info}</p>
             ${bulletsHtml}
+            ${calendarBtn}
         </div>
         ${formHtml}
     `;
