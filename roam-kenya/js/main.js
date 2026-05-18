@@ -1,6 +1,7 @@
 const translations = {
     en: {
         experience: "The Experience",
+        tours: "Tours & Safaris",
         expeditions: "Expeditions",
         logistics: "Logistics",
         curate_nav: "Curate My Journey",
@@ -18,6 +19,8 @@ const translations = {
         service_tickets_p: "Hassle-free domestic and international flight curation.",
         service_charters: "Private Helicopter Charters",
         service_charters_p: "Exclusive aerial access to remote conservancies and northern frontiers.",
+        tours_h2: "Popular Tours & Safaris",
+        tours_p: "Hand-picked itineraries combining Kenya's most iconic wildlife and landscapes.",
         builder_subtitle: "Bespoke Curation",
         builder_h2: "Design Your Unique Path.",
         builder_p: "Every soul seeks a different wilderness. Choose your elements, and we'll weave them into a singular Kenyan tapestry.",
@@ -36,6 +39,7 @@ const translations = {
     },
     es: {
         experience: "La Experiencia",
+        tours: "Tours y Safaris",
         expeditions: "Expediciones",
         logistics: "Logística",
         curate_nav: "Curar Mi Viaje",
@@ -53,6 +57,8 @@ const translations = {
         service_tickets_p: "Curaduría de vuelos nacionales e internacionales sin complicaciones.",
         service_charters: "Chárteres Privados",
         service_charters_p: "Acceso aéreo exclusivo a reservas remotas.",
+        tours_h2: "Tours y Safaris Populares",
+        tours_p: "Itinerarios seleccionados que combinan la vida silvestre y los paisajes más icónicos de Kenia.",
         builder_subtitle: "Curaduría a Medida",
         builder_h2: "Diseña tu Camino Único.",
         builder_p: "Cada alma busca una naturaleza diferente. Elige tus elementos y los entretejeremos en un tapiz keniano singular.",
@@ -71,6 +77,7 @@ const translations = {
     },
     zh: {
         experience: "体验",
+        tours: "旅游与萨法里",
         expeditions: "远征",
         logistics: "物流",
         curate_nav: "策划我的旅程",
@@ -106,6 +113,7 @@ const translations = {
     },
     fr: {
         experience: "L'Expérience",
+        tours: "Tours et Safaris",
         expeditions: "Expéditions",
         logistics: "Logistique",
         curate_nav: "Organiser Mon Voyage",
@@ -141,6 +149,7 @@ const translations = {
     },
     de: {
         experience: "Das Erlebnis",
+        tours: "Touren & Safaris",
         expeditions: "Expeditionen",
         logistics: "Logistik",
         curate_nav: "Meine Reise Kuratieren",
