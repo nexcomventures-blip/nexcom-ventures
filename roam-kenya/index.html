@@ -398,14 +398,17 @@
                             <input type="text" placeholder="Full Name" required>
                             <input type="email" placeholder="Email Address" required>
                         </div>
-                        <select required>
-                            <option value="" disabled selected>Nature of Expedition</option>
-                            <option>Honeymoon / Couple</option>
-                            <option>Academic / Student Group</option>
-                            <option>Nairobi Excursion</option>
-                            <option>Private Fleet Request</option>
-                        </select>
-                        <textarea placeholder="Tell us about your dream journey..." rows="5"></textarea>
+                        <div class="form-row" style="margin-top: 15px;">
+                            <select required style="flex: 1;">
+                                <option value="" disabled selected>Nature of Expedition</option>
+                                <option>Honeymoon / Couple</option>
+                                <option>Academic / Student Group</option>
+                                <option>Nairobi Excursion</option>
+                                <option>Private Fleet Request</option>
+                            </select>
+                            <input type="date" placeholder="Preferred Date" required style="flex: 1; padding: 12px; border: 1px solid rgba(27,48,34,0.1); border-radius: 8px; color: #1b3022;">
+                        </div>
+                        <textarea placeholder="Tell us about your dream journey..." rows="5" style="margin-top: 15px;"></textarea>
                         <button type="submit" class="btn-gold-full">Request Proposal</button>
                     </form>
                 </div>
