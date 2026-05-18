@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Transfers Calendar | Roam Kenya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1b3022;
+            --accent: #c29d59;
+            --bg-light: #f9fbf9;
+            --text-dark: #1b3022;
+            --white: #ffffff;
+            --border: #e0e6e0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        .header { background: var(--primary); padding: 40px 20px; text-align: center; color: var(--white); }
+        .header h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 10px; }
+        
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; color: var(--accent); text-decoration: none; font-weight: bold; margin-bottom: 25px; transition: gap 0.3s; }
+        .back-btn:hover { gap: 12px; }
+
+        /* Calendar Styling */
+        .calendar-wrapper { background: var(--white); border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); overflow: hidden; }
+        .calendar-header { background: #f1f4f1; padding: 25px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
+        .calendar-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--primary); }
+        .calendar-nav { display: flex; gap: 15px; }
+        .nav-btn { background: var(--white); border: 1px solid var(--border); width: 40px; height: 40px; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--primary); transition: all 0.2s; }
+        .nav-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+        .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); background: var(--white); }
+        .day-name { padding: 15px; text-align: center; font-weight: bold; font-size: 0.8rem; color: #888; text-transform: uppercase; border-bottom: 1px solid var(--border); }
+        .calendar-day { min-height: 100px; padding: 10px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); position: relative; transition: background 0.2s; cursor: pointer; }
+        .calendar-day:nth-child(7n) { border-right: none; }
+        .calendar-day:hover { background: #f9fbf9; }
+        .day-number { font-weight: bold; font-size: 0.9rem; margin-bottom: 5px; color: #aaa; }
+        .calendar-day.active .day-number { color: var(--primary); }
+        .calendar-day.today { background: #fffdf5; }
+        .calendar-day.today .day-number { color: var(--accent); }
+
+        /* Events */
+        .event { font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; margin-bottom: 4px; border-left: 3px solid var(--accent); background: #fdf8ed; color: #8a6d3b; }
+        .event.booked { border-left-color: #e74c3c; background: #fdeaea; color: #c0392b; }
+        .event.available { border-left-color: #27ae60; background: #eafaf1; color: #2ecc71; }
+
+        /* Booking Card */
+        .booking-card { margin-top: 30px; background: var(--primary); color: white; border-radius: 15px; padding: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+        .booking-info h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 5px; }
+        .booking-info p { color: #a9b7ad; font-size: 0.9rem; }
+        .btn-whatsapp { background: var(--accent); color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 10px; transition: transform 0.2s; }
+        .btn-whatsapp:hover { transform: scale(1.05); }
+
+        @media (max-width: 768px) {
+            .calendar-day { min-height: 80px; padding: 5px; }
+            .day-name { padding: 10px 5px; font-size: 0.7rem; }
+            .event { font-size: 0.65rem; padding: 2px 4px; }
+            .header h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Airport Transfers Calendar</h1>
+        <p>Seamlessly schedule your arrivals & departures.</p>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Main Site</a>
+
+        <div class="calendar-wrapper">
+            <div class="calendar-header">
+                <div class="calendar-title" id="monthYear">May 2026</div>
+                <div class="calendar-nav">
+                    <button class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="calendar-grid">
+                <div class="day-name">Sun</div>
+                <div class="day-name">Mon</div>
+                <div class="day-name">Tue</div>
+                <div class="day-name">Wed</div>
+                <div class="day-name">Thu</div>
+                <div class="day-name">Fri</div>
+                <div class="day-name">Sat</div>
+                
+                <!-- Blank days -->
+                <div class="calendar-day"></div><div class="calendar-day"></div><div class="calendar-day"></div><div class="calendar-day"></div><div class="calendar-day"></div>
+                
+                <!-- May 1st to 31st -->
+                <div class="calendar-day active"><span class="day-number">1</span><div class="event available">JKIA Slot</div></div>
+                <div class="calendar-day active"><span class="day-number">2</span></div>
+                <div class="calendar-day active"><span class="day-number">3</span><div class="event booked">Wilson Full</div></div>
+                <div class="calendar-day active"><span class="day-number">4</span></div>
+                <div class="calendar-day active"><span class="day-number">5</span><div class="event available">JKIA Slot</div></div>
+                <div class="calendar-day active"><span class="day-number">6</span></div>
+                <div class="calendar-day active"><span class="day-number">7</span></div>
+                <div class="calendar-day active"><span class="day-number">8</span><div class="event available">JKIA Slot</div></div>
+                <div class="calendar-day active"><span class="day-number">9</span></div>
+                <div class="calendar-day active"><span class="day-number">10</span></div>
+                <div class="calendar-day active"><span class="day-number">11</span></div>
+                <div class="calendar-day active"><span class="day-number">12</span><div class="event available">Wilson Slot</div></div>
+                <div class="calendar-day active"><span class="day-number">13</span></div>
+                <div class="calendar-day active"><span class="day-number">14</span></div>
+                <div class="calendar-day active"><span class="day-number">15</span><div class="event booked">Full Logistics</div></div>
+                <div class="calendar-day active"><span class="day-number">16</span></div>
+                <div class="calendar-day active"><span class="day-number">17</span></div>
+                <div class="calendar-day active today"><span class="day-number">18</span><div class="event available">Current Day</div></div>
+                <div class="calendar-day active"><span class="day-number">19</span><div class="event available">JKIA Slot</div></div>
+                <div class="calendar-day active"><span class="day-number">20</span></div>
+                <div class="calendar-day active"><span class="day-number">21</span></div>
+                <div class="calendar-day active"><span class="day-number">22</span><div class="event available">JKIA Slot</div></div>
+                <div class="calendar-day active"><span class="day-number">23</span></div>
+                <div class="calendar-day active"><span class="day-number">24</span></div>
+                <div class="calendar-day active"><span class="day-number">25</span><div class="event available">Wilson Slot</div></div>
+                <div class="calendar-day active"><span class="day-number">26</span></div>
+                <div class="calendar-day active"><span class="day-number">27</span></div>
+                <div class="calendar-day active"><span class="day-number">28</span></div>
+                <div class="calendar-day active"><span class="day-number">29</span><div class="event available">JKIA Slot</div></div>
+                <div class="calendar-day active"><span class="day-number">30</span></div>
+                <div class="calendar-day active"><span class="day-number">31</span></div>
+            </div>
+        </div>
+
+        <div class="booking-card">
+            <div class="booking-info">
+                <h3>Select a date to request?</h3>
+                <p>Or chat with our concierge for a custom logistics plan.</p>
+            </div>
+            <a href="https://wa.me/254721585784?text=Hi%20Roam%20Kenya,%20I'd%20like%20to%20book%20an%20airport%20transfer" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Chat Now
+            </a>
+        </div>
+    </div>
+</body>
+</html>
