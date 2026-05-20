@@ -12,12 +12,12 @@ const ALL_PRODUCTS = [
   {
     "id": "feat-2",
     "brand": "Dell",
-    "name": "Dell Xps 15 9570 I7 8Th 16/512Gb 4Gb Graphics",
-    "specs": "xps 15 9570 i7 8th 16/512gb 4gb Graphics",
-    "price": 50000,
+    "name": "Dell 5320 I7 11Th 16/512Gb Touchscreen",
+    "specs": "5320 i7 11th 16/512gb touchscreen",
+    "price": 40000,
     "category": "exuk business dell featured",
     "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+xps+15+9570+i7"
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+5320+i7+11th+16/512gb"
   },
   {
     "id": "feat-3",
@@ -31,11 +31,31 @@ const ALL_PRODUCTS = [
   },
   {
     "id": "feat-4",
+    "brand": "Lenovo",
+    "name": "Lenovo X13 I7 10Th 16/512Gb",
+    "specs": "x13 i7 10th 16/512gb",
+    "price": 32000,
+    "category": "exuk business lenovo featured",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x13+i7+10th+16/512gb"
+  },
+  {
+    "id": "tmp-7830",
+    "brand": "Dell",
+    "name": "Dell Xps 15 9570 I7 8Th 16/512Gb 4Gb Graphics",
+    "specs": "xps 15 9570 i7 8th 16/512gb 4gb Graphics",
+    "price": 50000,
+    "category": "exuk business dell",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+xps+15+9570+i7"
+  },
+  {
+    "id": "tmp-9150",
     "brand": "Dell",
     "name": "Dell Xps 13 9305 I7 11Th 16/512Gb",
     "specs": "xps 13 9305 i7 11th 16/512gb",
     "price": 60000,
-    "category": "exuk business dell featured",
+    "category": "exuk business dell",
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+xps+13+9305+i7"
   },
@@ -58,26 +78,6 @@ const ALL_PRODUCTS = [
     "category": "exuk business lenovo",
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x390+i5+8th+8/256gb"
-  },
-  {
-    "id": "tmp-4572",
-    "brand": "Lenovo",
-    "name": "Lenovo X13 I7 10Th 16/512Gb",
-    "specs": "x13 i7 10th 16/512gb",
-    "price": 32000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+x13+i7+10th+16/512gb"
-  },
-  {
-    "id": "tmp-6898",
-    "brand": "Dell",
-    "name": "Dell 5320 I7 11Th 16/512Gb Touchscreen",
-    "specs": "5320 i7 11th 16/512gb touchscreen",
-    "price": 40000,
-    "category": "exuk business dell",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Dell+5320+i7+11th+16/512gb"
   }
 ];
 
