@@ -140,7 +140,7 @@ function updateCartUI() {
     const totalsMsg = totalStrings.join(' %26 ');
     const podNote = "%0A%0A*I'd prefer Pay on Delivery* 🤝";
     const waMessage = `*NEW ORDER: ${orderId}*%0A%0AHi Nexcom! 👋 I'd like to order:%0A%0A${itemsList}%0A%0A*Delivery: ${deliveryName}*%0A*Total: ${totalsMsg} (Excl. VAT)*${podNote}%0A%0AKindly confirm availability. Thank you!`;
-    if (checkoutWA) checkoutWA.href = `https://wa.me/254722816001?text=${waMessage}`;
+    if (checkoutWA) checkoutWA.href = `https://wa.me/254721585784?text=${waMessage}`;
   }
 }
 
@@ -177,7 +177,7 @@ function requestMpesaPrompt() {
   
   setTimeout(() => {
     alert(`M-Pesa STK Push has been sent to ${phone}.\n\nPlease enter your PIN on your phone to complete the payment.\n\nOnce paid, you will be redirected to WhatsApp to send your payment confirmation.`);
-    window.open(`https://wa.me/254722816001?text=${paymentMsg}`, '_blank');
+    window.open(`https://wa.me/254721585784?text=${paymentMsg}`, '_blank');
     showToast("✅ Prompt sent! Check your phone.");
   }, 1500);
 }
@@ -212,7 +212,7 @@ function openModal(name, price, specs, img, priceNum) {
   document.getElementById('modalImg').alt = name;
 
   const waMsg = `Hi Nexcom! 👋 I'm interested in the *${name}* (${price} Excl. VAT). Is it available?`;
-  document.getElementById('modalWhatsApp').href = `https://wa.me/254722816001?text=${encodeURIComponent(waMsg)}`;
+  document.getElementById('modalWhatsApp').href = `https://wa.me/254721585784?text=${encodeURIComponent(waMsg)}`;
 
   document.getElementById('modalAddCart').onclick = () => {
     addToCart(name, priceNum, currency);
@@ -262,7 +262,7 @@ function submitForm(e) {
   }
 
   const waMsg = `Hi Nexcom! 👋%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AInterest: ${encodeURIComponent(service)}%0AMessage: ${encodeURIComponent(message || 'N/A')}`;
-  window.open(`https://wa.me/254722816001?text=${waMsg}`, '_blank');
+  window.open(`https://wa.me/254721585784?text=${waMsg}`, '_blank');
   showToast('✅ Redirecting to WhatsApp...');
 
   // Reset form
@@ -312,6 +312,7 @@ function animateCount(el, target, duration = 1500) {
 }
 
 // ====== PARALLAX HERO ORB ======
+/* 
 window.addEventListener('mousemove', (e) => {
   const orb1 = document.querySelector('.orb1');
   const orb2 = document.querySelector('.orb2');
@@ -322,6 +323,7 @@ window.addEventListener('mousemove', (e) => {
     orb2.style.transform = `translate(${-x}px, ${-y}px)`;
   }
 });
+*/
 
 // ====== UPDATE CART BADGE ON INIT ======
 updateCartUI();
