@@ -212,7 +212,7 @@ body {
   top: 40px; left: 0; right: 0;
   z-index: 1000;
   padding: 0 2rem;
-  background: rgba(242,244,247,0.85);
+  background: #f2f4f7;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
@@ -220,7 +220,7 @@ body {
   transition: var(--transition);
 }
 #navbar.scrolled {
-  background: rgba(242,244,247,0.98);
+  background: #f2f4f7;
   box-shadow: 0 4px 30px rgba(0,0,0,0.5);
 }
 
@@ -1433,6 +1433,7 @@ section {
   }
   .cart-sidebar {
     right: calc(50% - 750px) !important;
+    left: auto !important;
     transform: translateX(100%) !important;
   }
   .cart-sidebar.open {
