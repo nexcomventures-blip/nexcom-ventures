@@ -1422,6 +1422,18 @@ section {
     left: 50%;
     transform: translateX(-50%);
   }
+  /* Constrain floating elements */
+  .float-wa,
+  .toast,
+  .promo-overlay {
+    right: calc(50% - 750px + 2rem) !important;
+  }
+  #backToTop {
+    left: calc(50% - 750px + 30px) !important;
+  }
+  .cart-sidebar {
+    right: calc(50% - 750px) !important;
+  }
 }
 
 /* ====== ACCESSORIES ====== */
