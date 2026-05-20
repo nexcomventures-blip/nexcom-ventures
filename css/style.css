@@ -1433,6 +1433,10 @@ section {
   }
   .cart-sidebar {
     right: calc(50% - 750px) !important;
+    transform: translateX(100%);
+  }
+  .cart-sidebar.open {
+    transform: translateX(0) !important;
   }
 }
 
