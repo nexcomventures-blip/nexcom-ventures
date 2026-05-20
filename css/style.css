@@ -1396,7 +1396,7 @@ section {
 /* ============================================
    CENTERED BOXED LAYOUT (DESKTOP)
    ============================================ */
-@media (min-width: 1550px) {
+@media (min-width: 1500px) {
   html {
     background-color: #d1d5db; /* Outer margin color */
   }
@@ -1433,7 +1433,7 @@ section {
   }
   .cart-sidebar {
     right: calc(50% - 750px) !important;
-    transform: translateX(100%);
+    transform: translateX(100%) !important;
   }
   .cart-sidebar.open {
     transform: translateX(0) !important;
