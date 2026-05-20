@@ -213,8 +213,6 @@ body {
   z-index: 1000;
   padding: 0 2rem;
   background: #f2f4f7;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   border-top: 3px solid var(--primary);
   transition: var(--transition);
