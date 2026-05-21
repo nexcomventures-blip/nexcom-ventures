@@ -854,7 +854,7 @@ const ALL_PRODUCTS = [
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad X1 yoga i7 12th 16/512",
     "specs": "X1 yoga i7 12th 16/512",
-    "price": 130000,
+    "price": 135000,
     "category": "exuk business lenovo featured",
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+X1+yoga+i7+12th+16/512"
@@ -864,7 +864,7 @@ const ALL_PRODUCTS = [
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad X1 yoga i7 11th 16/512",
     "specs": "X1 yoga i7 11th 16/512",
-    "price": 70000,
+    "price": 75000,
     "category": "exuk business lenovo featured",
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+X1+yoga+i7+11th+16/512"
@@ -874,7 +874,7 @@ const ALL_PRODUCTS = [
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad X1 yoga i5 11th 16/512",
     "specs": "X1 yoga i5 11th 16/512",
-    "price": 60000,
+    "price": 65000,
     "category": "exuk business lenovo featured",
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+X1+yoga+i5+11th+16/512"
