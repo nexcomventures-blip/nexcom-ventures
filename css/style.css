@@ -2058,8 +2058,8 @@ footer {
   position: fixed;
   bottom: calc(2rem + env(safe-area-inset-bottom));
   right: 2rem;
-  width: 58px;
-  height: 58px;
+  width: 50px;
+  height: 50px;
   background: var(--whatsapp);
   border-radius: 50%;
   display: flex;
@@ -2070,7 +2070,7 @@ footer {
   transition: var(--transition);
   animation: wa-pulse 2s ease-in-out infinite;
 }
-.float-wa svg { width: 28px; height: 28px; color: white; }
+.float-wa svg { width: 24px; height: 24px; color: white; }
 .float-wa:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.7); }
 @keyframes wa-pulse {
   0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,0.5) }
