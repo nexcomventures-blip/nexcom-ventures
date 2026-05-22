@@ -89,21 +89,29 @@
       50% { transform: translateY(-5px); }
     }
     .gift-badge { animation: pulse 2s infinite; }
-  </style>
+    /* SPECIAL BANNER MOBILE */
+  @media (max-width: 768px) {
+    #special-banner {
+      grid-template-columns: 1fr !important;
+      min-height: auto !important;
+    }
+    #special-banner > div {
+      padding: 30px !important;
+    }
+    #special-title {
+      font-size: 1.5rem !important;
+    }
+    #special-new-price {
+      font-size: 2rem !important;
+    }
+    .photo-decor {
+      display: none !important;
+    }
+  }
+</style>
 </head>
 <body>
 
-<!-- ===== PRELOADER ===== -->
-<div id="preloader">
-  <div class="preloader-inner">
-    <div class="logo-anim" style="display: flex; flex-direction: column; align-items: center;">
-      <img src="assets/nexcom-logo-new.jpg" alt="Nexcom Logo" style="height: 80px; width: auto; border-radius: 8px;">
-    </div>
-    <div class="preloader-bar"><div class="preloader-fill"></div></div>
-  </div>
-</div>
-
-<!-- ===== ANNOUNCEMENT BAR ===== -->
 <div id="announcement-bar">
   🚚 NATIONWIDE DELIVERY via G4S & Wells Fargo | Shop Wholesale Prices Online
 </div>
@@ -132,11 +140,6 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-actions">
-      <button class="cart-btn" onclick="toggleCart()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-        <span class="cart-count" id="cartCount">0</span>
-      </button>
-      <a href="tel:0721585784" class="cta-nav">Call Now</a>
       <button class="hamburger" id="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
@@ -144,17 +147,88 @@
   </div>
 </nav>
 
-<!-- COMPACT TODAY'S SPECIAL -->
-<section id="daily-special" style="display:none; padding: 30px 0; background: var(--bg); border-bottom: 1px solid var(--border);">
-  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-    <div id="special-banner" class="offer-card" style="display: grid; grid-template-columns: 1.2fr 1fr; background: var(--bg2); border-radius: 24px; overflow: hidden; cursor: pointer; border: 1px solid var(--border); box-shadow: 0 20px 40px rgba(0,0,0,0.3); min-height: 350px;">
+
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="hp/" onclick="toggleMenu()">HP Laptops</a>
+  <a href="dell/" onclick="toggleMenu()">Dell Laptops</a>
+  <a href="lenovo/" onclick="toggleMenu()">Lenovo Laptops</a>
+  <a href="macbook/" onclick="toggleMenu()">🍎 MacBooks</a>
+  <a href="budget-laptops.html" onclick="toggleMenu()">🎓 Student & Budget</a>
+  <a href="#sell" onclick="toggleMenu()">Sell Your Laptop</a>
+  <a href="repairs.html" onclick="toggleMenu()">Repairs</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  
+  <div class="hero-bg">
+    <div class="hero-orb orb1"></div>
+    <div class="hero-orb orb2"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">🇰🇪 Nairobi's #1 Laptop Store</div>
+      <h1>Wholesale Prices. <span class="gradient-text">Fast Delivery.</span></h1>
+      <p class="hero-sub">Ex-UK MacBooks & ThinkPads on Mama Ngina St. Shipping via G4S & Wells Fargo.</p>
+      <div class="hero-btns">
+        <a href="#shop" class="btn-primary">Shop Now</a>
+        <a href="#sell" class="btn-secondary">Sell Laptop →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span>500+</span><p>Happy Customers</p></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span>50+</span><p>Laptops in Stock</p></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span>5★</span><p>Rated in Nairobi</p></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="visual-inner">
+        <div class="floating-badge top-right">
+          <div class="badge-icon">⭐</div>
+          <div class="badge-text">
+            <strong>4.9/5 Rating</strong>
+            <span>Verified on Google</span>
+          </div>
+        </div>
+        <div class="floating-badge bottom-left">
+          <div class="badge-icon">📍</div>
+          <div class="badge-text">
+            <strong>Mama Ngina St</strong>
+            <span>Nairobi CBD</span>
+          </div>
+        </div>
+          <div class="laptop-card floating" id="heroCard">
+          <div class="laptop-img-wrap">
+            <img id="heroImage" src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=1200&auto=format&fit=crop" alt="Premium Laptops Nexcom" style="width: 100%; height: 100%; object-fit: cover;"/>
+          </div>
+          <div class="price-tag-badge">
+            <span class="price-from" id="heroLabel">Starting from</span>
+            <span class="price-amount" id="heroPrice">KES 35,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-dot"></div>
+    <p>Scroll to explore</p>
+  </div>
+</section>
+
+<section id="daily-special" style="display: none; padding: 60px 5%; background: var(--bg);">
+    <div id="special-banner" class="offer-card" style="display: grid; grid-template-columns: 1.2fr 1fr; background: var(--bg2); border-radius: 24px; overflow: hidden; cursor: pointer; border: 1px solid var(--border); box-shadow: 0 20px 40px rgba(0,0,0,0.3); min-height: 300px;">
       
       <!-- LEFT: Image Gallery / Visual -->
       <div style="position: relative; overflow: hidden; background: #fff; display: flex; align-items: center; justify-content: center; padding: 40px;">
         <div style="position: absolute; top: 20px; left: 20px; z-index: 2; background: var(--primary); color: white; padding: 6px 15px; border-radius: 50px; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">🔥 Best Price Guarantee</div>
         <img id="special-img" src="" alt="Featured Laptop" style="width: 100%; height: auto; object-fit: contain; z-index: 1; transition: transform 0.5s ease;">
         
-        <!-- Decorative overlapping images to satisfy "shows laptop photos" -->
+        <!-- Decorative overlapping images -->
         <div class="photo-decor" style="position: absolute; bottom: -20px; right: -20px; width: 150px; height: 100px; background: #f0f0f0; border-radius: 12px; transform: rotate(-10deg); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border: 4px solid #fff; overflow: hidden; opacity: 0.8;">
            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=400&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
@@ -209,103 +283,27 @@
         </div>
       </div>
     </div>
-  </div>
 </section>
 
-
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="hp/" onclick="toggleMenu()">HP Laptops</a>
-  <a href="dell/" onclick="toggleMenu()">Dell Laptops</a>
-  <a href="lenovo/" onclick="toggleMenu()">Lenovo Laptops</a>
-  <a href="macbook/" onclick="toggleMenu()">🍎 MacBooks</a>
-  <a href="budget-laptops.html" onclick="toggleMenu()">🎓 Student & Budget</a>
-  <a href="#sell" onclick="toggleMenu()">Sell Your Laptop</a>
-  <a href="repairs.html" onclick="toggleMenu()">Repairs</a>
-  <a href="#contact" onclick="toggleMenu()">Contact</a>
-</div>
-
-<!-- ===== HERO ===== -->
-<section id="hero">
-  
-  <div class="hero-bg">
-    <div class="hero-orb orb1"></div>
-    <div class="hero-orb orb2"></div>
-    <div class="hero-grid"></div>
-  </div>
-  <div class="hero-content">
-    <div class="hero-text">
-      <div class="hero-badge">🇰🇪 Nairobi's #1 Laptop Store</div>
-      <div class="promo-banner" style="background: #28a745; color: white; padding: 12px 20px; border-radius: 12px; margin: 10px 0 15px; font-weight: 800; display: inline-block; box-shadow: 0 10px 20px rgba(40, 167, 69, 0.2); border: 2px solid rgba(255,255,255,0.2); animation: float 3s ease-in-out infinite;">
-        <i class="ph-bold ph-briefcase" style="vertical-align: middle; margin-right: 2px;"></i> Bag & <i class="ph-bold ph-mouse-simple" style="vertical-align: middle; margin-right: 2px;"></i> Wireless Mouse INCLUDED with every laptop!
-      </div>
-      <h1>Wholesale Laptop Prices.<br/><span class="gradient-text">Nationwide Delivery.</span></h1>
-      <p class="hero-sub">The #1 source for Ex-UK MacBooks and ThinkPads on Mama Ngina St. We ship countrywide via G4S & Wells Fargo with 100% safety guarantee.</p>
-      <div class="hero-btns">
-        <a href="#shop" class="btn-primary">Browse Catalogue</a>
-        <a href="#sell" class="btn-secondary">Sell Your Device →</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><span>500+</span><p>Happy Customers</p></div>
-        <div class="stat-div"></div>
-        <div class="stat"><span>50+</span><p>Laptops in Stock</p></div>
-        <div class="stat-div"></div>
-        <div class="stat"><span>5★</span><p>Rated in Nairobi</p></div>
-      </div>
+    <!-- QUICK CATEGORIES -->
+    <div style="display: flex; justify-content: center; gap: 15px; margin-top: 30px; flex-wrap: wrap;">
+      <a href="macbook/" class="btn-secondary" style="padding: 10px 25px; border-radius: 50px; text-decoration: none; display: flex; align-items: center; gap: 8px; font-weight: 700; border: 1px solid var(--border);">🍎 MacBooks</a>
+      <a href="hp/" class="btn-secondary" style="padding: 10px 25px; border-radius: 50px; text-decoration: none; display: flex; align-items: center; gap: 8px; font-weight: 700; border: 1px solid var(--border);">💻 HP Laptops</a>
+      <a href="dell/" class="btn-secondary" style="padding: 10px 25px; border-radius: 50px; text-decoration: none; display: flex; align-items: center; gap: 8px; font-weight: 700; border: 1px solid var(--border);">💻 Dell Laptops</a>
+      <a href="lenovo/" class="btn-secondary" style="padding: 10px 25px; border-radius: 50px; text-decoration: none; display: flex; align-items: center; gap: 8px; font-weight: 700; border: 1px solid var(--border);">💻 Lenovo</a>
     </div>
-    <div class="hero-visual">
-      <div class="visual-inner">
-        <div class="floating-badge top-right">
-          <div class="badge-icon">⭐</div>
-          <div class="badge-text">
-            <strong>4.9/5 Rating</strong>
-            <span>Verified on Google</span>
-          </div>
-        </div>
-        <div class="floating-badge bottom-left">
-          <div class="badge-icon">📍</div>
-          <div class="badge-text">
-            <strong>Mama Ngina St</strong>
-            <span>Nairobi CBD</span>
-          </div>
-        </div>
-          <div class="laptop-card floating" id="heroCard">
-          <div class="laptop-img-wrap">
-            <img id="heroImage" src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=1200&auto=format&fit=crop" alt="Premium Laptops Nexcom" style="width: 100%; height: 100%; object-fit: cover;"/>
-          </div>
-          <div class="price-tag-badge">
-            <span class="price-from" id="heroLabel">Starting from</span>
-            <span class="price-amount" id="heroPrice">KES 35,000</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-indicator">
-    <div class="scroll-dot"></div>
-    <p>Scroll to explore</p>
-  </div>
-</section>
 
-<!-- ===== TRUST BAR ===== -->
-<section class="trust-bar">
-  <div class="trust-container">
-    <div class="trust-item"><span class="trust-icon">🛡️</span> Certified Quality</div>
-    <div class="trust-item"><span class="trust-icon">⚡</span> Instant Cash Payments</div>
-    <div class="trust-item"><span class="trust-icon">📍</span> CBD Convenience</div>
-    <div class="trust-item"><span class="trust-icon">🚚</span> Swift Nairobi Delivery</div>
-    <div class="trust-item"><span class="trust-icon">🤝</span> Lifetime Tech Support</div>
   </div>
 </section>
 
 <!-- ===== SHOP SECTION ===== -->
 <section id="shop">
   <div id="laptops" style="position: relative; top: -100px;"></div>
-  <div class="section-header">
-    <div class="section-tag">— Our Full Catalogue —</div>
-    <h2>Wholesale Laptop Prices in Nairobi</h2>
-    <p>New • Ex-UK • Refurbished • Servers • Accessories. Every device tested & verified.</p>
-  </div>
+    <div class="section-header" style="margin-bottom: 20px;">
+      <div class="section-tag">— Our Full Catalogue —</div>
+      <h2 style="font-size: 1.8rem;">Wholesale Prices in Nairobi</h2>
+      <p style="font-size: 0.9rem;">New • Ex-UK • Refurbished • Servers.</p>
+    </div>
 
   <!-- Search & Filter -->
   <div class="shop-controls">
@@ -395,133 +393,45 @@
   </div>
 </section>
 
-<!-- ===== ACCESSORIES TEASER ===== -->
-<section id="accessories-teaser" class="section-padding" style="background: var(--bg);">
+<!-- ===== OUR SERVICES ===== -->
+<section id="services" class="section-padding" style="background: var(--bg);">
   <div class="container" style="text-align: center;">
-    <div class="section-tag">— Essential Add-ons —</div>
-    <h2 class="section-title">Complete Your <span class="gradient-text">Workspace.</span></h2>
-    <p class="section-sub">
-      Enhance your performance and protect your investment with our premium selection of original accessories. High-quality chargers, bags, and storage solutions.
-    </p>
+    <div class="section-tag">— Repairs & Accessories —</div>
+    <h2 class="section-title">Complete Tech <span class="gradient-text">Support.</span></h2>
+    <p class="section-sub">Expert repairs and essential upgrades to keep you productive.</p>
     
-    <div class="workspace-grid">
-      <a href="catalogue.html?filter=charger" class="workspace-card">
+    <div class="workspace-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+      <a href="repairs.html" class="workspace-card">
         <div class="workspace-card-inner">
           <div class="workspace-img">
-            <img src="https://images.unsplash.com/photo-1625766763788-95dcce9bf5ac?q=80&w=400&auto=format&fit=crop" alt="Chargers" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1588508065123-287b28e013da?q=80&w=400&auto=format&fit=crop" alt="Repairs">
           </div>
           <div class="workspace-info">
-            <h4>Chargers</h4>
-            <span class="workspace-price">From KES 3,000</span>
+            <h4>Expert Repairs</h4>
+            <span class="workspace-price">Screens, Battery, Boards</span>
           </div>
         </div>
       </a>
-      <a href="catalogue.html?filter=bag" class="workspace-card">
+      <a href="catalogue.html?filter=accessory" class="workspace-card">
         <div class="workspace-card-inner">
           <div class="workspace-img">
-            <img src="https://images.unsplash.com/photo-1553062407-98eeb94c6a62?q=80&w=400&auto=format&fit=crop" alt="Bags" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1625766763788-95dcce9bf5ac?q=80&w=400&auto=format&fit=crop" alt="Accessories">
           </div>
           <div class="workspace-info">
-            <h4>Bags</h4>
-            <span class="workspace-price">From KES 2,500</span>
-          </div>
-        </div>
-      </a>
-      <a href="catalogue.html?filter=ram" class="workspace-card">
-        <div class="workspace-card-inner">
-          <div class="workspace-img">
-            <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?q=80&w=400&auto=format&fit=crop" alt="Hubs" loading="lazy">
-          </div>
-          <div class="workspace-info">
-            <h4>RAM</h4>
-            <span class="workspace-price">From KES 2,500</span>
-          </div>
-        </div>
-      </a>
-      <a href="catalogue.html?filter=ssd" class="workspace-card">
-        <div class="workspace-card-inner">
-          <div class="workspace-img">
-            <img src="https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80&w=400&auto=format&fit=crop" alt="Storage" loading="lazy">
-          </div>
-          <div class="workspace-info">
-            <h4>SSD Storage</h4>
-            <span class="workspace-price">From KES 3,500</span>
+            <h4>Premium Parts</h4>
+            <span class="workspace-price">RAM, SSD, Chargers</span>
           </div>
         </div>
       </a>
     </div>
     
-    <a href="catalogue.html?filter=accessory" class="btn-primary" style="padding: 1rem 2.5rem;">Explore All Accessories</a>
-  </div>
-</section>
-
-
-<!-- ===== REPAIRS TEASER ===== -->
-<section id="repairs-teaser" class="section-padding" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-  <div class="container" style="text-align: center;">
-    <div class="section-tag">— Expert Service Center —</div>
-    <h2 class="section-title">Professional Laptop <br/><span class="gradient-text">Repair Services.</span></h2>
-    <p class="section-sub">
-      Fast, reliable, and affordable solutions for all your laptop issues. From Screen Replacements and Data Recovery to complex Motherboard Repair.
-    </p>
-
-    <div class="workspace-grid">
-      <a href="repairs.html" class="workspace-card">
-        <div class="workspace-card-inner">
-          <div class="workspace-img">
-            <img src="https://images.unsplash.com/photo-1588508065123-287b28e013da?q=80&w=400&auto=format&fit=crop" alt="Screens" loading="lazy">
-          </div>
-          <div class="workspace-info">
-            <h4>Screens</h4>
-            <span class="workspace-price">From KES 6,500</span>
-          </div>
-        </div>
-      </a>
-      <a href="repairs.html" class="workspace-card">
-        <div class="workspace-card-inner">
-          <div class="workspace-img">
-            <img src="https://images.unsplash.com/photo-1558494949-ef010978911e?q=80&w=400&auto=format&fit=crop" alt="Data" loading="lazy">
-          </div>
-          <div class="workspace-info">
-            <h4>Data</h4>
-            <span class="workspace-price">From KES 4,500</span>
-          </div>
-        </div>
-      </a>
-      <a href="repairs.html" class="workspace-card">
-        <div class="workspace-card-inner">
-          <div class="workspace-img">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=400&auto=format&fit=crop" alt="Motherboard" loading="lazy">
-          </div>
-          <div class="workspace-info">
-            <h4>Motherboard</h4>
-            <span class="workspace-price">From KES 6,000</span>
-          </div>
-        </div>
-      </a>
-      <a href="repairs.html" class="workspace-card">
-        <div class="workspace-card-inner">
-          <div class="workspace-img">
-            <img src="https://images.unsplash.com/photo-1595931343734-738981f9397f?q=80&w=400&auto=format&fit=crop" alt="Battery" loading="lazy">
-          </div>
-          <div class="workspace-info">
-            <h4>Battery</h4>
-            <span class="workspace-price">From KES 3,500</span>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <div style="display: flex; gap: 1rem; justify-content: center;">
-      <a href="repairs.html" class="btn-primary" style="padding: 1rem 2.5rem;">View All Services</a>
-      <a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I%20need%20help%20with%20a%20laptop%20repair." class="btn-outline" style="padding: 1rem 2.5rem;">Talk to a Tech</a>
+    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+      <a href="repairs.html" class="btn-primary">View All Services</a>
+      <a href="https://wa.me/254721585784" class="btn-outline">WhatsApp Support</a>
     </div>
   </div>
 </section>
 
-<!-- ===== WHY NEXCOM ===== -->
-<section id="about">
-  <div class="why-container">
     <div class="why-content">
       <div class="section-tag">— Our Commitment —</div>
       <h2>Your Partner in<br/><span class="gradient-text">Nairobi Tech.</span></h2>
@@ -773,91 +683,6 @@
   ↑
 </button>
 
-<!-- ===== CART SIDEBAR ===== -->
-<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
-<div class="cart-sidebar" id="cartSidebar">
-  <div class="cart-header">
-    <h3>Your Cart 🛒</h3>
-    <button onclick="toggleCart()" class="cart-close">✕</button>
-  </div>
-  <div class="cart-items" id="cartItems">
-    <div class="cart-empty">
-      <div style="font-size:3rem">🛒</div>
-      <p>Your cart is empty</p>
-      <a href="#shop" onclick="toggleCart()" class="btn-outline">Start Shopping</a>
-    </div>
-  </div>
-  <div class="cart-footer" id="cartFooter" style="display:none">
-    <div class="delivery-section" style="margin-bottom:1rem; padding-bottom:1rem; border-bottom:1px solid var(--border)">
-      <label style="font-size:0.8rem; color:var(--gray); display:block; margin-bottom:0.5rem">Delivery Option:</label>
-      <select id="deliveryOption" class="form-control" onchange="updateCartUI()" style="width:100%; background:var(--bg3); color:var(--text); border:1px solid var(--border); padding:0.5rem; border-radius:8px">
-        <option value="0">Pickup - Nairobi CBD (Free)</option>
-        <option value="400">Westlands, Kilimani, Upper Hill - KES 400</option>
-        <option value="500">Kasarani, Embakasi, South C, etc. - KES 500</option>
-        <option value="1200">Utawala, Rongai, Syokimau, Ngong - KES 1,200</option>
-        <option value="1500">Kiambu, Ruiru, Thika - KES 1,500</option>
-        <option value="700">Upcountry (G4S / Courier Office Pickup) - KES 700</option>
-      </select>
-    </div>
-    <div class="cart-total" style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1rem">
-      <span>Total:</span>
-      <strong id="cartTotal" style="font-size:1.4rem; color:var(--primary)">KES 0</strong>
-    </div>
-    <div class="checkout-actions" style="display:flex; flex-direction:column; gap:0.75rem">
-      <div style="background:var(--bg3); padding:0.75rem; border-radius:8px; border:1px dashed var(--border); margin-bottom:0.25rem">
-        <p style="font-size:0.7rem; color:var(--gray); margin-bottom:0.4rem; text-transform:uppercase; font-weight:bold; letter-spacing:0.05rem">Payment Options</p>
-        <div style="display:flex; justify-content:space-between; margin-bottom:0.2rem">
-          <span style="font-size:0.8rem">Paybill:</span>
-          <strong style="color:var(--text)">880100</strong>
-        </div>
-        <div style="display:flex; justify-content:space-between; margin-bottom:0.2rem">
-          <span style="font-size:0.8rem">Account:</span>
-          <strong style="color:var(--text)">585784</strong>
-        </div>
-        <div style="display:flex; justify-content:space-between; margin-top:0.4rem; padding-top:0.4rem; border-top:1px solid var(--border)">
-          <span style="font-size:0.8rem">Card / Visa:</span>
-          <strong style="color:var(--text)">Accepted</strong>
-        </div>
-        <div style="margin-top:0.4rem; border-top:1px solid var(--border); padding-top:0.4rem">
-           <p style="font-size:0.75rem; color:#2ecc71; font-weight:bold; margin: 0">🤝 Pay on Delivery Available</p>
-           <p style="font-size:0.65rem; color:var(--gray); margin: 0">(Available Countrywide 🇰🇪)</p>
-        </div>
-      </div>
-
-      <a id="checkoutWhatsApp" href="#" target="_blank" class="btn-whatsapp full-width">Checkout via WhatsApp</a>
-    </div>
-    <p style="text-align:center;font-size:0.75rem;color:var(--gray);margin-top:0.5rem">Pay via Paybill or Card in-store / on delivery</p>
-  </div>
-</div>
-
-<!-- ===== PRODUCT MODAL ===== -->
-<div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
-<div class="product-modal" id="productModal">
-  <button class="modal-close" onclick="closeModal()">✕</button>
-  <div class="modal-body">
-    <div class="modal-img">
-      <img id="modalImg" src="" alt=""/>
-    </div>
-    <div class="modal-info">
-      <h2 id="modalName"></h2>
-      <div class="modal-price" id="modalPrice"></div>
-      <p id="modalSpecs"></p>
-      <ul class="modal-features">
-        <li>✅ Tested & Certified</li>
-        <li>✅ 6-Month Warranty</li>
-        <li>✅ Paybill & Card Accepted</li>
-        <li>✅ Same-Day Available</li>
-      </ul>
-      <div class="modal-actions">
-        <button class="btn-primary" id="modalAddCart">Add to Cart</button>
-        <a id="modalWhatsApp" href="#" target="_blank" class="btn-whatsapp">Enquire on WhatsApp</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ===== FLOATING WA BUTTON ===== -->
-<a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I%27m%20interested%20in%20your%20laptops." target="_blank" class="float-wa" title="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
@@ -890,52 +715,31 @@ const heroData = [
 ];
 
 let currentIndex = 0;
-const heroImage = document.getElementById('heroImage');
-const heroLabel = document.getElementById('heroLabel');
-const heroPrice = document.getElementById('heroPrice');
-const heroCard = document.getElementById('heroCard');
-
 function rotateHero() {
-  if (!heroCard || !heroImage) return;
+  const card = document.getElementById('heroCard');
+  const img = document.getElementById('heroImage');
+  const label = document.getElementById('heroLabel');
+  const price = document.getElementById('heroPrice');
   
   currentIndex = (currentIndex + 1) % heroData.length;
-  const data = heroData[currentIndex];
+  const item = heroData[currentIndex];
   
-  heroCard.style.opacity = '0';
-  heroCard.style.transform = 'translateY(10px)';
+  card.style.opacity = '0';
+  card.style.transform = 'translateY(20px)';
   
   setTimeout(() => {
-    heroImage.src = data.img;
-    heroLabel.textContent = data.label;
-    heroPrice.textContent = data.price;
-    
-    heroCard.style.opacity = '1';
-    heroCard.style.transform = 'translateY(0)';
+    img.src = item.img;
+    label.innerText = item.label;
+    price.innerText = item.price;
+    card.style.opacity = '1';
+    card.style.transform = 'translateY(0)';
   }, 500);
 }
 
-if(heroCard) {
-  heroCard.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  setInterval(rotateHero, 5000);
-}
-
-// Back to Top functionality
-const backToTopBtn = document.getElementById("backToTop");
-window.onscroll = function() {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    backToTopBtn.style.display = "block";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
-};
-backToTopBtn.onclick = function() {
-  window.scrollTo({top: 0, behavior: 'smooth'});
-};
+setInterval(rotateHero, 5000);
 </script>
 
-<script src="js/main.js"></script>
 <script src="js/products.js"></script>
+<script src="js/products_logic.js"></script>
 </body>
 </html>
-
-
