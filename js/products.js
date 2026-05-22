@@ -2,40 +2,80 @@ const ALL_PRODUCTS = [
   {
     "id": "feat-1",
     "brand": "Apple",
-    "name": "Macbook Pro 13 2015 I5 16/512Gb",
-    "specs": "macbook pro 13  2015 i5 16/512gb",
-    "price": 43000,
+    "name": "Macbook Pro 13 2018 I7 16/256Gb",
+    "specs": "macbook pro 13 2018 i7 16/256gb",
+    "price": 58000,
     "category": "exuk apple macbook featured",
     "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Pro+13+2015+I5+16/512Gb"
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Pro+13+2018+I7+16/256Gb"
   },
   {
     "id": "feat-2",
     "brand": "Apple",
-    "name": "Macbook Pro 13 2019 I5 16/256Gb",
-    "specs": "macbook pro 13 2019 i5 16/256gb",
-    "price": 55000,
+    "name": "Macbook Air M1 2022 8/256Gb",
+    "specs": "macbook air m1  2022 8/256gb",
+    "price": 98000,
     "category": "exuk apple macbook featured",
     "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Pro+13+2019+I5+16/256Gb"
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Air+M1+2022+8/256Gb"
   },
   {
     "id": "feat-3",
-    "brand": "HP",
-    "name": "Hp 830 G6 I7 8Th 8/256Gb x360 Touchscreen",
-    "specs": "hp 830 g6 i7 8th 8/256gb\nx360 touchscreen",
-    "price": 42499,
-    "category": "exuk business hp featured",
+    "brand": "Apple",
+    "name": "Macbook Pro 15 2017 I7 16/512Gb 4Gb Graphics",
+    "specs": "macbook pro 15 2017 i7 16/512gb 4gb graphics",
+    "price": 61000,
+    "category": "exuk apple macbook featured",
     "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Hp+830+G6+I7+8Th+8/256Gb+x360+Touchscreen"
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Pro+15+2017+I7+16/512Gb+4Gb+Graphics"
   },
   {
     "id": "feat-4",
     "brand": "Apple",
+    "name": "Macbook Pro 13 2014 I5 8/256Gb",
+    "specs": "macbook pro 13 2014 i5 8/256gb",
+    "price": 35000,
+    "category": "exuk apple macbook featured",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Pro+13+2014+I5+8/256Gb"
+  },
+  {
+    "id": "tmp-2131",
+    "brand": "Apple",
+    "name": "Macbook Pro 13 2015 I5 16/512Gb",
+    "specs": "macbook pro 13  2015 i5 16/512gb",
+    "price": 43000,
+    "category": "exuk apple macbook",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Pro+13+2015+I5+16/512Gb"
+  },
+  {
+    "id": "tmp-2424",
+    "brand": "Apple",
+    "name": "Macbook Pro 13 2019 I5 16/256Gb",
+    "specs": "macbook pro 13 2019 i5 16/256gb",
+    "price": 55000,
+    "category": "exuk apple macbook",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Pro+13+2019+I5+16/256Gb"
+  },
+  {
+    "id": "tmp-2524",
+    "brand": "HP",
+    "name": "Hp 830 G6 I7 8Th 8/256Gb x360 Touchscreen",
+    "specs": "hp 830 g6 i7 8th 8/256gb\nx360 touchscreen",
+    "price": 42499,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Hp+830+G6+I7+8Th+8/256Gb+x360+Touchscreen"
+  },
+  {
+    "id": "tmp-8455",
+    "brand": "Apple",
     "name": "Macbook Pro 13 2015 I7 8/256Gb",
     "specs": "macbook pro 13 2015 i7 8/256gb",
     "price": 41000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Pro+13+2015+I7+8/256Gb"
   },
@@ -500,16 +540,6 @@ const ALL_PRODUCTS = [
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Pro+15+2018+I7+16/512Gb+4Gb+Graphics"
   },
   {
-    "id": "apple-macbook-pro-15-2017-i7-16/512gb-4gb-graphics",
-    "brand": "Apple",
-    "name": "Macbook Pro 15 2017 I7 16/512Gb 4Gb Graphics",
-    "specs": "macbook pro 15 2017 i7 16/512gb 4gb graphics",
-    "price": 61000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Pro+15+2017+I7+16/512Gb+4Gb+Graphics"
-  },
-  {
     "id": "apple-macbook-pro-15-2017-i7-16/512gb-2gb-graphics",
     "brand": "Apple",
     "name": "Macbook Pro 15 2017 I7 16/512Gb 2Gb Graphics",
@@ -610,16 +640,6 @@ const ALL_PRODUCTS = [
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Pro+13+2019+I5+8/256Gb"
   },
   {
-    "id": "apple-macbook-pro-13-2018-i7-16/256gb",
-    "brand": "Apple",
-    "name": "Macbook Pro 13 2018 I7 16/256Gb",
-    "specs": "macbook pro 13 2018 i7 16/256gb",
-    "price": 58000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Pro+13+2018+I7+16/256Gb"
-  },
-  {
     "id": "apple-macbook-pro-13-2017-i7-16/1tb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2017 I7 16/1Tb",
@@ -680,16 +700,6 @@ const ALL_PRODUCTS = [
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Pro+13+2015+I5+8/256Gb"
   },
   {
-    "id": "apple-macbook-pro-13-2014-i5-8/256gb",
-    "brand": "Apple",
-    "name": "Macbook Pro 13 2014 I5 8/256Gb",
-    "specs": "macbook pro 13 2014 i5 8/256gb",
-    "price": 35000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Pro+13+2014+I5+8/256Gb"
-  },
-  {
     "id": "apple-macbook-pro-13-2013-i5-8/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2013 I5 8/256Gb",
@@ -738,16 +748,6 @@ const ALL_PRODUCTS = [
     "category": "exuk apple macbook budget",
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Pro+13+2011+I5+8/256Gb"
-  },
-  {
-    "id": "apple-macbook-air-m1-2022-8/256gb",
-    "brand": "Apple",
-    "name": "Macbook Air M1 2022 8/256Gb",
-    "specs": "macbook air m1  2022 8/256gb",
-    "price": 98000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Macbook+Air+M1+2022+8/256Gb"
   },
   {
     "id": "apple-macbook-air-m1-2020-8/256gb",
@@ -845,7 +845,7 @@ const ALL_PRODUCTS = [
     "name": "Hp Spectre 15 2 In1 Intel Coi7 10Th Gen 16/512 2Gb Graphics /= Only",
     "specs": "hp spectre 15\n2 in1\nintel  coi7\n10th gen\n16/512 2gb graphics \n/= only",
     "price": 125000,
-    "category": "exuk business hp featured",
+    "category": "exuk business hp",
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Hp+Spectre+15+2+In1+Intel+Coi7+10Th+Gen+16/512+2Gb+Graphics+/=+Only"
   },
@@ -855,7 +855,7 @@ const ALL_PRODUCTS = [
     "name": "Lenovo ThinkPad X1 yoga i7 12th 16/512",
     "specs": "X1 yoga i7 12th 16/512",
     "price": 135000,
-    "category": "exuk business lenovo featured",
+    "category": "exuk business lenovo",
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+X1+yoga+i7+12th+16/512"
   },
@@ -865,7 +865,7 @@ const ALL_PRODUCTS = [
     "name": "Lenovo ThinkPad X1 yoga i7 11th 16/512",
     "specs": "X1 yoga i7 11th 16/512",
     "price": 75000,
-    "category": "exuk business lenovo featured",
+    "category": "exuk business lenovo",
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+X1+yoga+i7+11th+16/512"
   },
@@ -875,7 +875,7 @@ const ALL_PRODUCTS = [
     "name": "Lenovo ThinkPad X1 yoga i5 11th 16/512",
     "specs": "X1 yoga i5 11th 16/512",
     "price": 65000,
-    "category": "exuk business lenovo featured",
+    "category": "exuk business lenovo",
     "badge": "exuk",
     "img": "https://via.placeholder.com/300x200/0a0a0a/f01a24?text=Lenovo+X1+yoga+i5+11th+16/512"
   }
