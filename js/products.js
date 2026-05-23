@@ -7,7 +7,7 @@ const ALL_PRODUCTS = [
     "price": 40499,
     "category": "exuk business hp ryzen featured",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+835+G8+Ryzen+7+8/256Gb"
+    "img": "images/hp_840_g8_v2.jpg"
   },
   {
     "id": "feat-2",
@@ -207,7 +207,7 @@ const ALL_PRODUCTS = [
     "price": 40499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G8+I5+11Th+8/256Gb"
+    "img": "images/hp_840_g8.jpg"
   },
   {
     "id": "hp-hp-840-g7-i7-10th-8/256gb-touchscreen",
