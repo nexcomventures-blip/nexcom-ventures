@@ -2,40 +2,80 @@ const ALL_PRODUCTS = [
   {
     "id": "feat-1",
     "brand": "HP",
-    "name": "Hp 835 G8 Ryzen 7 8/256Gb",
-    "specs": "hp 835 g8 ryzen 7 8/256gb",
-    "price": 40499,
-    "category": "exuk business hp ryzen featured",
+    "name": "Hp 840 G6 I5 8/256Gb",
+    "specs": "hp 840 g6 i5 8/256gb",
+    "price": 30499,
+    "category": "exuk business hp featured",
     "badge": "exuk",
-    "img": "images/hp_840_g8_v2.jpg"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G6+I5+8/256Gb"
   },
   {
     "id": "feat-2",
-    "brand": "HP",
-    "name": "Hp 830 G7 I7 11Th 8/256Gb Touchscreen",
-    "specs": "hp 830 g7 i7 11th 8/256gb\ntouchscreen",
-    "price": 43499,
-    "category": "exuk business hp featured",
+    "brand": "Apple",
+    "name": "Macbook Pro 13 2013 I7 8/256Gb",
+    "specs": "macbook pro 13 2013 i7 8/256gb",
+    "price": 36000,
+    "category": "exuk apple macbook featured",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G7+I7+11Th+8/256Gb+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2013+I7+8/256Gb"
   },
   {
     "id": "feat-3",
     "brand": "Apple",
-    "name": "Macbook Pro 13 2015 I5 16/256Gb",
-    "specs": "macbook pro 13 2015 i5 16/256gb",
-    "price": 41000,
+    "name": "Macbook Pro 13 I7 2020 16/512Gb",
+    "specs": "macbook pro 13 i7 2020 16/512gb",
+    "price": 78000,
     "category": "exuk apple macbook featured",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I5+16/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+I7+2020+16/512Gb"
   },
   {
     "id": "feat-4",
     "brand": "Apple",
+    "name": "Macbook Air 13 2013 I5 8/128",
+    "specs": "MacBook Air 13 2013 i5 8/128",
+    "price": 30000,
+    "category": "exuk apple macbook featured",
+    "badge": "exuk",
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2013+I5+8/128"
+  },
+  {
+    "id": "tmp-6308",
+    "brand": "HP",
+    "name": "Hp 835 G8 Ryzen 7 8/256Gb",
+    "specs": "hp 835 g8 ryzen 7 8/256gb",
+    "price": 40499,
+    "category": "exuk business hp ryzen",
+    "badge": "exuk",
+    "img": "images/hp_840_g8_v2.jpg"
+  },
+  {
+    "id": "tmp-3392",
+    "brand": "HP",
+    "name": "Hp 830 G7 I7 11Th 8/256Gb Touchscreen",
+    "specs": "hp 830 g7 i7 11th 8/256gb\ntouchscreen",
+    "price": 43499,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G7+I7+11Th+8/256Gb+Touchscreen"
+  },
+  {
+    "id": "tmp-4266",
+    "brand": "Apple",
+    "name": "Macbook Pro 13 2015 I5 16/256Gb",
+    "specs": "macbook pro 13 2015 i5 16/256gb",
+    "price": 41000,
+    "category": "exuk apple macbook",
+    "badge": "exuk",
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I5+16/256Gb"
+  },
+  {
+    "id": "tmp-9530",
+    "brand": "Apple",
     "name": "Macbook Air 13 2019 I58/256Gb",
     "specs": "macbook air 13 2019 i58/256gb",
     "price": 51000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2019+I58/256Gb"
   },
@@ -258,16 +298,6 @@ const ALL_PRODUCTS = [
     "category": "exuk business hp",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I7+8Th+8/256Gb"
-  },
-  {
-    "id": "hp-hp-840-g6-i5-8/256gb",
-    "brand": "HP",
-    "name": "Hp 840 G6 I5 8/256Gb",
-    "specs": "hp 840 g6 i5 8/256gb",
-    "price": 30499,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G6+I5+8/256Gb"
   },
   {
     "id": "hp-hp-840-g5-i5-8th-8/256gb-touchscreen",
@@ -600,16 +630,6 @@ const ALL_PRODUCTS = [
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+I7+2020+32/512Gb"
   },
   {
-    "id": "apple-macbook-pro-13-i7-2020-16/512gb",
-    "brand": "Apple",
-    "name": "Macbook Pro 13 I7 2020 16/512Gb",
-    "specs": "macbook pro 13 i7 2020 16/512gb",
-    "price": 78000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+I7+2020+16/512Gb"
-  },
-  {
     "id": "apple-macbook-pro-13-2019-i7-16/1tb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2019 I7 16/1Tb",
@@ -720,16 +740,6 @@ const ALL_PRODUCTS = [
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2013+I5+8/256Gb"
   },
   {
-    "id": "apple-macbook-pro-13-2013-i7-8/256gb",
-    "brand": "Apple",
-    "name": "Macbook Pro 13 2013 I7 8/256Gb",
-    "specs": "macbook pro 13 2013 i7 8/256gb",
-    "price": 36000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2013+I7+8/256Gb"
-  },
-  {
     "id": "apple-macbook-pro-13-2012-i7-8/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2012 I7 8/256Gb",
@@ -828,16 +838,6 @@ const ALL_PRODUCTS = [
     "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2015+I5+8/256"
-  },
-  {
-    "id": "apple-macbook-air-13-2013-i5-8/128",
-    "brand": "Apple",
-    "name": "Macbook Air 13 2013 I5 8/128",
-    "specs": "MacBook Air 13 2013 i5 8/128",
-    "price": 30000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2013+I5+8/128"
   },
   {
     "id": "hp-hp-spectre-15-2-in1-intel-coi7-10th-gen-16/512-2gb-graphics-/=-only",
