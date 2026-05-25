@@ -130,6 +130,16 @@ const ALL_PRODUCTS = [
     "img": "images/macbook_pro.jpg"
   },
   {
+    "id": "new-m3-air-2024",
+    "brand": "Apple",
+    "name": "MacBook Air 15\" 2024 M3 8/256GB",
+    "specs": "Apple M3 Chip | 8GB RAM | 256GB SSD | 15.3\" Retina Display | 2024",
+    "price": 144999,
+    "category": "new apple macbook",
+    "badge": "new",
+    "img": "images/macbook_air_m1.jpg"
+  },
+  {
     "id": "tmp-2958",
     "brand": "Apple",
     "name": "Macbook Air M1 2022 8/256Gb",
