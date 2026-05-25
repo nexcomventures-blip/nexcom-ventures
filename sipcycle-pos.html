@@ -6,428 +6,308 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>SipCycle POS</title>
-    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
     <style>
         :root {
-            --primary: #00BDD6;
-            --secondary: #003B73;
-            --bg: #020617;
-            --card-bg: #0f172a;
-            --text: #ffffff;
-            --text-dim: #94a3b8;
-            --success: #22c55e;
-            --danger: #ef4444;
+            --cyan: #00BDD6;
+            --navy: #003B73;
+            --dark: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
         }
-
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        
         body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
-            padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom) 0;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .header {
-            padding: 20px;
+            padding: env(safe-area-inset-top) 20px 20px 20px;
+            background: var(--dark);
+            color: white;
+            font-family: -apple-system, system-ui, sans-serif;
             text-align: center;
-            border-bottom: 1px solid rgba(0, 189, 214, 0.1);
+            overflow-x: hidden;
+        }
+        .container { max-width: 500px; margin: 0 auto; }
+        
+        /* Logo & Header */
+        .header { margin: 20px 0; }
+        .logo-icon { width: 60px; height: 60px; }
+        .brand-name { font-size: 28px; font-weight: 800; color: var(--cyan); margin: 0; }
+        .tagline { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; opacity: 0.6; }
+
+        /* Status Area */
+        .status-pill {
+            display: inline-block;
+            background: rgba(0, 189, 214, 0.1);
+            color: var(--cyan);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 189, 214, 0.2);
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-            font-weight: 900;
-            letter-spacing: -1px;
-        }
-
-        .header span { color: var(--primary); }
-
-        .content {
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
+        /* Main Card */
         .card {
             background: var(--card-bg);
             border-radius: 24px;
-            padding: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            margin-bottom: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
 
-        .main-action {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, var(--secondary), #001f3d);
-            border: none;
-        }
-
-        .btn {
-            background: var(--primary);
+        /* Camera / Scanner */
+        #v { width: 100%; border-radius: 16px; background: #000; border: 2px solid var(--cyan); display: none; margin-bottom: 15px; }
+        .scanner-btn {
+            background: var(--cyan);
             color: #000;
             border: none;
-            border-radius: 16px;
             padding: 18px;
-            font-size: 18px;
+            border-radius: 16px;
             font-weight: 800;
+            font-size: 18px;
             width: 100%;
             cursor: pointer;
-            transition: transform 0.1s, opacity 0.1s;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
         }
-
-        .btn:active { transform: scale(0.97); opacity: 0.9; }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-        }
-
-        .btn-ghost {
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text);
-            border: none;
-        }
-
-        .btn-danger {
-            background: var(--danger);
+        
+        /* Customer Panel */
+        .panel { display: none; animation: fadeIn 0.3s ease; }
+        .cust-name { font-size: 24px; font-weight: 700; margin: 0; }
+        .cust-balance { font-size: 42px; font-weight: 800; color: var(--cyan); margin: 10px 0; }
+        
+        .action-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 25px; }
+        .pay-btn {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
             color: white;
-        }
-
-        #scanner-container {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: #000;
-            z-index: 1000;
-            display: none;
-            flex-direction: column;
-        }
-
-        #video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .scanner-overlay {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            pointer-events: none;
-        }
-
-        .scanner-box {
-            width: 250px;
-            height: 250px;
-            border: 2px solid var(--primary);
-            border-radius: 24px;
-            box-shadow: 0 0 0 1000px rgba(0,0,0,0.5);
-            position: relative;
-        }
-
-        .scanner-box::after {
-            content: '';
-            position: absolute;
-            top: 50%; left: 0; right: 0;
-            height: 2px;
-            background: var(--primary);
-            box-shadow: 0 0 15px var(--primary);
-            animation: scan 2s infinite ease-in-out;
-        }
-
-        @keyframes scan {
-            0%, 100% { top: 5%; }
-            50% { top: 95%; }
-        }
-
-        .scanner-controls {
-            position: absolute;
-            bottom: 50px;
-            left: 20px; right: 20px;
-            pointer-events: auto;
-        }
-
-        .balance-display {
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        .balance-amount {
-            font-size: 48px;
-            font-weight: 900;
-            color: var(--primary);
-            margin: 10px 0;
-        }
-
-        .refill-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .refill-btn {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 20px;
-            text-align: center;
+            padding: 15px 5px;
+            border-radius: 12px;
             cursor: pointer;
         }
+        .pay-btn b { display: block; font-size: 18px; color: var(--cyan); }
+        .pay-btn span { font-size: 12px; opacity: 0.7; }
+        .pay-btn:active { background: var(--cyan); color: #000; }
+        .pay-btn:active b { color: #000; }
 
-        .refill-btn h3 { margin: 0; font-size: 20px; color: var(--primary); }
-        .refill-btn p { margin: 5px 0 0 0; color: var(--text-dim); font-size: 14px; }
-        .refill-btn:active { border-color: var(--primary); background: rgba(0, 189, 214, 0.05); }
-
-        .hidden { display: none !important; }
-
-        input {
-            width: 100%;
-            padding: 16px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(0, 0, 0, 0.2);
+        /* Secondary Buttons */
+        .btn-sec {
+            background: none;
+            border: 1px solid rgba(255,255,255,0.2);
             color: white;
-            font-size: 16px;
-            margin-bottom: 15px;
-            outline: none;
+            padding: 14px;
+            border-radius: 12px;
+            width: 100%;
+            margin-top: 15px;
+            font-weight: 600;
         }
 
-        input:focus { border-color: var(--primary); }
-
-        .history-item {
+        /* Logs */
+        .logs-title { text-align: left; font-size: 14px; opacity: 0.5; margin: 10px 0; font-weight: 600; }
+        .log-item {
+            background: rgba(255,255,255,0.03);
+            padding: 12px 16px;
+            border-radius: 12px;
             display: flex;
             justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .history-item:last-child { border: none; }
-
-        .modal {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.8);
-            display: none;
             align-items: center;
-            justify-content: center;
-            padding: 20px;
-            z-index: 2000;
+            margin-bottom: 8px;
+            font-size: 14px;
         }
+        .log-amt { color: var(--cyan); font-weight: 700; }
 
-        .modal-content {
-            background: var(--card-bg);
-            border-radius: 28px;
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .hidden { display: none; }
+        
+        input {
             width: 100%;
-            max-width: 400px;
-            padding: 30px;
-            position: relative;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+            margin-bottom: 10px;
+            outline: none;
         }
-
-        .success-overlay {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: var(--bg);
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 3000;
-            text-align: center;
-        }
-
-        .checkmark {
-            width: 100px; height: 100px;
-            border-radius: 50%;
-            background: var(--success);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 50px;
-        }
+        input:focus { border-color: var(--cyan); }
     </style>
 </head>
 <body>
 
-    <div id="app">
-        <header class="header">
-            <h1>SIP<span>CYCLE</span></h1>
-        </header>
+    <div class="container">
+        <div class="header">
+            <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 5C35 5 15 25 15 50C15 69.33 30.67 85 50 85C69.33 85 85 69.33 85 50" stroke="#00BDD6" stroke-width="10" stroke-linecap="round"/>
+                <path d="M50 5C65 5 85 25 85 50" stroke="#00BDD6" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 2"/>
+                <path d="M75 50L85 60L95 50" stroke="#00BDD6" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h1 class="brand-name">SipCycle</h1>
+            <div class="tagline">POS TERMINAL</div>
+        </div>
 
-        <div class="content" id="view-home">
-            <div class="card main-action" onclick="openScanner()">
-                <div style="font-size: 50px;">📷</div>
-                <h2 style="margin:0">TAP OR SCAN CARD</h2>
-                <p style="margin:0; opacity:0.6; font-size:14px;">Point camera at Card QR</p>
-            </div>
+        <div id="status" class="status-pill">⚡ STANDALONE MODE ACTIVE</div>
 
-            <div class="card">
-                <h3 style="margin:0 0 15px 0; font-size:16px; color:var(--text-dim)">RECENT SALES</h3>
-                <div id="recent-list">
-                    <p style="text-align:center; opacity:0.3; padding:20px;">No sales today</p>
+        <div class="card">
+            <!-- Home Panel -->
+            <div id="home-panel">
+                <video id="v" playsinline></video>
+                <button onclick="startScan()" class="scanner-btn" id="scan-btn">
+                    <span>📷 SCAN MEMBER CARD</span>
+                </button>
+                <div style="margin-top: 15px; font-size: 12px; opacity: 0.5;">
+                    Point camera at QR code or tap NFC card
                 </div>
             </div>
 
-            <div style="margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                <button class="btn btn-ghost" onclick="showView('view-customers')">👥 CLIENTS</button>
-                <button class="btn btn-ghost" onclick="exportData()">💾 BACKUP</button>
-            </div>
-        </div>
-
-        <div class="content hidden" id="view-customer-details">
-            <button class="btn btn-ghost" style="width: auto; align-self: flex-start; padding: 10px 15px;" onclick="showHome()">← BACK</button>
-            
-            <div class="card balance-display">
-                <h2 id="det-name" style="margin:0">---</h2>
-                <p id="det-id" style="font-family: monospace; font-size: 12px; color: var(--primary); margin: 5px 0 20px 0;">---</p>
-                <div class="balance-amount" id="det-balance">KSh 0</div>
-                <p style="margin:0; color:var(--text-dim)">Available Balance</p>
-            </div>
-
-            <div class="refill-grid">
-                <div class="refill-btn" onclick="processDeduction(50, '5L')">
-                    <h3>5L</h3>
-                    <p>KSh 50</p>
+            <!-- Customer Panel -->
+            <div id="customer-panel" class="panel">
+                <p style="opacity: 0.5; margin: 0; font-size: 12px; text-transform: uppercase;">Customer Active</p>
+                <h2 class="cust-name" id="display-name">---</h2>
+                <div class="cust-balance" id="display-balance">KSh 0</div>
+                
+                <div class="action-grid">
+                    <button class="pay-btn" onclick="deduct(50, 5)"><b>5L</b><span>50/-</span></button>
+                    <button class="pay-btn" onclick="deduct(100, 10)"><b>10L</b><span>100/-</span></button>
+                    <button class="pay-btn" onclick="deduct(150, 20)"><b>20L</b><span>150/-</span></button>
                 </div>
-                <div class="refill-btn" onclick="processDeduction(100, '10L')">
-                    <h3>10L</h3>
-                    <p>KSh 100</p>
-                </div>
-                <div class="refill-btn" onclick="processDeduction(150, '20L')" style="grid-column: span 2;">
-                    <h3 style="font-size: 28px;">20L</h3>
-                    <p>KSh 150</p>
-                </div>
+                
+                <button onclick="goHome()" class="btn-sec">DONE / NEXT CLIENT</button>
             </div>
 
-            <button class="btn btn-outline" onclick="openTopUp()">➕ TOP UP BALANCE</button>
-        </div>
-
-        <div class="content hidden" id="view-customers">
-            <div style="display:flex; justify-content: space-between; align-items: center;">
-                <button class="btn btn-ghost" style="width: auto; padding: 10px 15px;" onclick="showHome()">← BACK</button>
-                <h3 style="margin:0">CLIENT LIST</h3>
+            <!-- Register Panel -->
+            <div id="register-panel" class="panel">
+                <h3 style="margin-top:0">Register New Card</h3>
+                <p id="new-card-id" style="color:var(--cyan); font-family:monospace"></p>
+                <input id="reg-name" type="text" placeholder="Full Name">
+                <input id="reg-phone" type="tel" placeholder="Phone Number">
+                <input id="reg-amt" type="number" placeholder="Initial Balance (KSh)">
+                <button onclick="register()" class="scanner-btn">ACTIVATE CARD</button>
+                <button onclick="goHome()" class="btn-sec">CANCEL</button>
             </div>
-            <div id="customer-list-full" style="display: flex; flex-direction: column; gap: 10px;">
-                <!-- List populated by JS -->
-            </div>
         </div>
+
+        <div class="logs-title">RECENT ACTIVITY</div>
+        <div id="logs">
+            <div style="padding:20px; opacity:0.3; font-size:12px">No transactions yet.</div>
+        </div>
+        
+        <button onclick="clearAllData()" style="margin-top:40px; background:none; border:none; color:red; opacity:0.3; font-size:10px">RESET SYSTEM</button>
     </div>
 
-    <!-- Scanner Overlay -->
-    <div id="scanner-container">
-        <video id="video" playsinline></video>
-        <div class="scanner-overlay">
-            <div class="scanner-box"></div>
-            <p style="color:white; margin-top: 20px; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">ALIGN QR CODE</p>
-        </div>
-        <div class="scanner-controls">
-            <button class="btn btn-danger" onclick="closeScanner()">CANCEL SCAN</button>
-        </div>
-    </div>
-
-    <!-- Registration Modal -->
-    <div id="modal-register" class="modal">
-        <div class="modal-content">
-            <h2 style="margin-top:0">New Card!</h2>
-            <p id="reg-id" style="font-family: monospace; color:var(--primary);"></p>
-            <input type="text" id="reg-name" placeholder="Client Name">
-            <input type="tel" id="reg-phone" placeholder="Phone Number">
-            <input type="number" id="reg-balance" placeholder="Initial Top-up (KSh)">
-            <button class="btn" onclick="submitRegistration()">ACTIVATE CARD</button>
-            <button class="btn btn-ghost" style="margin-top:10px" onclick="closeModal('modal-register')">CANCEL</button>
-        </div>
-    </div>
-
-    <!-- Top Up Modal -->
-    <div id="modal-topup" class="modal">
-        <div class="modal-content">
-            <h2 style="margin-top:0">Top Up</h2>
-            <p id="topup-name" style="color:var(--text-dim)"></p>
-            <input type="number" id="topup-amount" placeholder="Amount (KSh)">
-            <button class="btn" onclick="submitTopUp()">ADD BALANCE</button>
-            <button class="btn btn-ghost" style="margin-top:10px" onclick="closeModal('modal-topup')">CANCEL</button>
-        </div>
-    </div>
-
-    <!-- Success Feedback -->
-    <div id="success-screen" class="success-overlay">
-        <div class="checkmark">✓</div>
-        <h1 id="success-title">SUCCESS</h1>
-        <p id="success-msg" style="font-size: 20px; opacity: 0.8;"></p>
-        <div style="margin-top: 40px; width: 100%; padding: 0 40px;">
-            <button class="btn btn-outline" onclick="closeSuccess()">DONE</button>
-        </div>
-    </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
     <script>
-        // --- DATA STORE ---
-        let db = {
-            customers: JSON.parse(localStorage.getItem('sip_customers') || '{"1B41122D": {"name": "Test Card", "phone": "0700000000", "balance": 1000, "registered": "2026-05-25T19:00:00Z"}}'),
-            transactions: JSON.parse(localStorage.getItem('sip_transactions') || '[]')
-        };
-
-        function save() {
-            localStorage.setItem('sip_customers', JSON.stringify(db.customers));
-            localStorage.setItem('sip_transactions', JSON.stringify(db.transactions));
-            updateUI();
-        }
-
-        // --- NAVIGATION ---
-        function showView(id) {
-            document.querySelectorAll('.content').forEach(v => v.classList.add('hidden'));
-            document.getElementById(id).classList.remove('hidden');
-        }
-
-        function showHome() { showView('view-home'); }
-
-        // --- SCANNER ---
-        let video = document.getElementById('video');
+        let video = document.getElementById('v');
+        let scanBtn = document.getElementById('scan-btn');
         let canvas = document.createElement('canvas');
         let ctx = canvas.getContext('2d');
         let scanning = false;
+        let activeCardId = null;
 
-        async function openScanner() {
-            document.getElementById('scanner-container').style.display = 'flex';
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
-                video.srcObject = stream;
-                video.setAttribute("playsinline", true);
-                video.play();
-                scanning = true;
-                requestAnimationFrame(tick);
-            } catch (err) {
-                alert("Camera error: Please ensure you are using HTTPS and have granted camera permissions.");
-                closeScanner();
+        // --- Database Logic (LocalStorage) ---
+        function getDB() { return JSON.parse(localStorage.getItem('sipcycle_db') || '{}'); }
+        function saveDB(db) { localStorage.setItem('sipcycle_db', JSON.stringify(db)); }
+        function getLogs() { return JSON.parse(localStorage.getItem('sipcycle_logs') || '[]'); }
+        function addLog(msg, amt) {
+            let logs = getLogs();
+            logs.unshift({ time: new Date().toLocaleTimeString(), msg, amt });
+            localStorage.setItem('sipcycle_logs', JSON.stringify(logs.slice(0, 10)));
+            renderLogs();
+        }
+
+        // --- UI Logic ---
+        function goHome() {
+            stopScan();
+            document.querySelectorAll('.panel').forEach(p => p.classList.add('hidden'));
+            document.getElementById('home-panel').classList.remove('hidden');
+            document.getElementById('customer-panel').style.display = 'none';
+            document.getElementById('register-panel').style.display = 'none';
+            document.getElementById('home-panel').style.display = 'block';
+            activeCardId = null;
+        }
+
+        function showCustomer(id, data) {
+            activeCardId = id;
+            document.getElementById('display-name').innerText = data.name;
+            document.getElementById('display-balance').innerText = 'KSh ' + data.balance;
+            document.getElementById('home-panel').style.display = 'none';
+            document.getElementById('customer-panel').style.display = 'block';
+        }
+
+        function showRegister(id) {
+            activeCardId = id;
+            document.getElementById('new-card-id').innerText = 'ID: ' + id;
+            document.getElementById('home-panel').style.display = 'none';
+            document.getElementById('register-panel').style.display = 'block';
+        }
+
+        // --- Core Actions ---
+        function lookup(id) {
+            const db = getDB();
+            if (db[id]) {
+                showCustomer(id, db[id]);
+            } else {
+                showRegister(id);
             }
         }
 
-        function closeScanner() {
-            scanning = false;
-            if (video.srcObject) {
-                video.srcObject.getTracks().forEach(track => track.stop());
+        function deduct(amt, ltr) {
+            const db = getDB();
+            if (db[activeCardId].balance < amt) {
+                alert('❌ INSUFFICIENT BALANCE\nCurrent: KSh ' + db[activeCardId].balance);
+                return;
             }
-            document.getElementById('scanner-container').style.display = 'none';
+            db[activeCardId].balance -= amt;
+            saveDB(db);
+            addLog(db[activeCardId].name + ' - Refill', amt);
+            alert('✅ SUCCESS: ' + ltr + 'L Refill\nNew Balance: KSh ' + db[activeCardId].balance);
+            goHome();
+        }
+
+        function register() {
+            const name = document.getElementById('reg-name').value;
+            const amt = parseFloat(document.getElementById('reg-amt').value || 0);
+            if (!name) return alert('Enter Name');
+            
+            const db = getDB();
+            db[activeCardId] = { name, phone: document.getElementById('reg-phone').value, balance: amt };
+            saveDB(db);
+            addLog(name + ' - Registered', amt);
+            goHome();
+        }
+
+        function renderLogs() {
+            const logs = getLogs();
+            const container = document.getElementById('logs');
+            if (logs.length === 0) return;
+            container.innerHTML = logs.map(l => `
+                <div class="log-item">
+                    <div><b>${l.time}</b><br><span style="opacity:0.6">${l.msg}</span></div>
+                    <div class="log-amt">${l.amt > 0 ? '-' : ''}KSh ${l.amt}</div>
+                </div>
+            `).join('');
+        }
+
+        // --- Scanner Logic ---
+        function startScan() {
+            navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } }).then(stream => {
+                scanning = true;
+                video.srcObject = stream;
+                video.setAttribute("playsinline", true);
+                video.play();
+                video.style.display = 'block';
+                scanBtn.style.display = 'none';
+                requestAnimationFrame(tick);
+            });
+        }
+
+        function stopScan() {
+            scanning = false;
+            if (video.srcObject) video.srcObject.getTracks().forEach(t => t.stop());
+            video.style.display = 'none';
+            scanBtn.style.display = 'flex';
         }
 
         function tick() {
@@ -435,182 +315,35 @@
                 canvas.height = video.videoHeight;
                 canvas.width = video.videoWidth;
                 ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-                var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-                var code = jsQR(imageData.data, imageData.width, imageData.height, {
-                    inversionAttempts: "dontInvert",
-                });
+                let code = jsQR(ctx.getImageData(0, 0, canvas.width, canvas.height).data, canvas.width, canvas.height);
                 if (code) {
-                    processScan(code.data);
+                    stopScan();
+                    lookup(code.data);
                     return;
                 }
             }
             if (scanning) requestAnimationFrame(tick);
         }
 
-        // --- LOGIC ---
-        let activeCardId = null;
+        // --- NFC Logic (Android) ---
+        if ('NDEFReader' in window) {
+            const ndef = new NDEFReader();
+            ndef.scan().then(() => {
+                document.getElementById('status').innerText = '⚡ NFC & SCANNER READY';
+                ndef.onreading = event => {
+                    lookup(event.serialNumber);
+                };
+            }).catch(e => console.log(e));
+        }
 
-        function processScan(id) {
-            closeScanner();
-            activeCardId = id;
-            if (db.customers[id]) {
-                showCustomer(id);
-            } else {
-                openRegistration(id);
+        function clearAllData() {
+            if (confirm("Reset everything?")) {
+                localStorage.clear();
+                location.reload();
             }
         }
 
-        function showCustomer(id) {
-            activeCardId = id;
-            const c = db.customers[id];
-            document.getElementById('det-name').innerText = c.name;
-            document.getElementById('det-id').innerText = 'CARD: ' + id;
-            document.getElementById('det-balance').innerText = 'KSh ' + c.balance;
-            showView('view-customer-details');
-        }
-
-        function processDeduction(amount, label) {
-            const c = db.customers[activeCardId];
-            if (c.balance < amount) {
-                alert('Insufficient Balance! Current: KSh ' + c.balance);
-                return;
-            }
-
-            c.balance -= amount;
-            const tx = {
-                id: Date.now(),
-                cardId: activeCardId,
-                name: c.name,
-                type: 'SALE',
-                label: label,
-                amount: amount,
-                newBalance: c.balance,
-                time: new Date().toISOString()
-            };
-            db.transactions.unshift(tx);
-            save();
-
-            showSuccess('SALE COMPLETE', `Deducted KSh ${amount} from ${c.name}`);
-        }
-
-        function openRegistration(id) {
-            document.getElementById('reg-id').innerText = id;
-            document.getElementById('modal-register').style.display = 'flex';
-        }
-
-        function submitRegistration() {
-            const name = document.getElementById('reg-name').value;
-            const phone = document.getElementById('reg-phone').value;
-            const balance = parseInt(document.getElementById('reg-balance').value || 0);
-
-            if (!name) return alert('Name is required');
-
-            db.customers[activeCardId] = {
-                name, phone, balance, registered: new Date().toISOString()
-            };
-            
-            save();
-            closeModal('modal-register');
-            showCustomer(activeCardId);
-        }
-
-        function openTopUp() {
-            document.getElementById('topup-name').innerText = db.customers[activeCardId].name;
-            document.getElementById('modal-topup').style.display = 'flex';
-        }
-
-        function submitTopUp() {
-            const amt = parseInt(document.getElementById('topup-amount').value || 0);
-            if (amt <= 0) return;
-
-            db.customers[activeCardId].balance += amt;
-            const tx = {
-                id: Date.now(),
-                cardId: activeCardId,
-                name: db.customers[activeCardId].name,
-                type: 'TOPUP',
-                amount: amt,
-                newBalance: db.customers[activeCardId].balance,
-                time: new Date().toISOString()
-            };
-            db.transactions.unshift(tx);
-            save();
-            closeModal('modal-topup');
-            showCustomer(activeCardId);
-            alert('Top up successful!');
-        }
-
-        function updateUI() {
-            // Update Recent Sales
-            const list = document.getElementById('recent-list');
-            const todayTxs = db.transactions.slice(0, 5);
-            
-            if (todayTxs.length === 0) {
-                list.innerHTML = '<p style="text-align:center; opacity:0.3; padding:20px;">No sales today</p>';
-            } else {
-                list.innerHTML = todayTxs.map(t => `
-                    <div class="history-item">
-                        <div>
-                            <div style="font-weight:bold">${t.name}</div>
-                            <div style="font-size:12px; opacity:0.5">${t.label || t.type}</div>
-                        </div>
-                        <div style="text-align:right">
-                            <div style="font-weight:bold; color:${t.type === 'SALE' ? 'var(--danger)' : 'var(--success)'}">
-                                ${t.type === 'SALE' ? '-' : '+'}${t.amount}
-                            </div>
-                            <div style="font-size:10px; opacity:0.5">${new Date(t.time).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}</div>
-                        </div>
-                    </div>
-                `).join('');
-            }
-
-            // Update Client List
-            const fullList = document.getElementById('customer-list-full');
-            const clients = Object.keys(db.customers);
-            if (clients.length === 0) {
-                fullList.innerHTML = '<p style="text-align:center; opacity:0.3;">No clients registered</p>';
-            } else {
-                fullList.innerHTML = clients.map(id => `
-                    <div class="card" style="padding:15px; display:flex; justify-content:space-between; align-items:center;" onclick="showCustomer('${id}')">
-                        <div>
-                            <div style="font-weight:bold">${db.customers[id].name}</div>
-                            <div style="font-size:12px; opacity:0.5">${db.customers[id].phone || 'No phone'}</div>
-                        </div>
-                        <div style="font-weight:900; color:var(--primary)">KSh ${db.customers[id].balance}</div>
-                    </div>
-                `).join('');
-            }
-        }
-
-        function showSuccess(title, msg) {
-            document.getElementById('success-title').innerText = title;
-            document.getElementById('success-msg').innerText = msg;
-            document.getElementById('success-screen').style.display = 'flex';
-        }
-
-        function closeSuccess() {
-            document.getElementById('success-screen').style.display = 'none';
-            showHome();
-        }
-
-        function closeModal(id) {
-            document.getElementById(id).style.display = 'none';
-        }
-
-        function exportData() {
-            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(db));
-            const downloadAnchorNode = document.createElement('a');
-            downloadAnchorNode.setAttribute("href",     dataStr);
-            downloadAnchorNode.setAttribute("download", "sipcycle_backup_" + new Date().toISOString().split('T')[0] + ".json");
-            document.body.appendChild(downloadAnchorNode);
-            downloadAnchorNode.click();
-            downloadAnchorNode.remove();
-            alert("Backup file downloaded! Keep this safe.");
-        }
-
-        // Initialize
-        updateUI();
-
+        renderLogs();
     </script>
 </body>
 </html>
