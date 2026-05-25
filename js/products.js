@@ -2,40 +2,80 @@ const ALL_PRODUCTS = [
   {
     "id": "feat-1",
     "brand": "HP",
+    "name": "Hp Spectre 15 2 In1 Intel Coi7 10Th Gen 16/512 2Gb Graphics /= Only",
+    "specs": "hp spectre 15\n2 in1\nintel  coi7\n10th gen\n16/512 2gb graphics \n/= only",
+    "price": 125000,
+    "category": "exuk business hp featured",
+    "badge": "exuk",
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+Spectre+15+2+In1+Intel+Coi7+10Th+Gen+16/512+2Gb+Graphics+/=+Only"
+  },
+  {
+    "id": "feat-2",
+    "brand": "HP",
+    "name": "Hp 830 G6 I5 8Th 16/512Gb x360 Touchscreen",
+    "specs": "hp 830 g6 i5 8th 16/512gb\nx360 touchscreen",
+    "price": 44499,
+    "category": "exuk business hp featured",
+    "badge": "exuk",
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I5+8Th+16/512Gb+x360+Touchscreen"
+  },
+  {
+    "id": "feat-3",
+    "brand": "HP",
+    "name": "Hp 840 G5 I5 7Th 8/256Gb Touchscreen",
+    "specs": "hp 840 g5 i5 7th 8/256gb \ntouchscreen",
+    "price": 31499,
+    "category": "exuk business hp featured",
+    "badge": "exuk",
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I5+7Th+8/256Gb+Touchscreen"
+  },
+  {
+    "id": "feat-4",
+    "brand": "Lenovo",
+    "name": "Lenovo ThinkPad X1 yoga i7 12th 16/512",
+    "specs": "X1 yoga i7 12th 16/512",
+    "price": 135000,
+    "category": "exuk business lenovo featured",
+    "badge": "exuk",
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+yoga+i7+12th+16/512"
+  },
+  {
+    "id": "tmp-8326",
+    "brand": "HP",
     "name": "Hp 840 G6 I5 8/256Gb",
     "specs": "hp 840 g6 i5 8/256gb",
     "price": 30499,
-    "category": "exuk business hp featured",
+    "category": "exuk business hp",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G6+I5+8/256Gb"
   },
   {
-    "id": "feat-2",
+    "id": "tmp-6651",
     "brand": "Apple",
     "name": "Macbook Pro 13 2013 I7 8/256Gb",
     "specs": "macbook pro 13 2013 i7 8/256gb",
     "price": 36000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2013+I7+8/256Gb"
   },
   {
-    "id": "feat-3",
+    "id": "tmp-4860",
     "brand": "Apple",
     "name": "Macbook Pro 13 I7 2020 16/512Gb",
     "specs": "macbook pro 13 i7 2020 16/512gb",
     "price": 78000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+I7+2020+16/512Gb"
   },
   {
-    "id": "feat-4",
+    "id": "tmp-7814",
     "brand": "Apple",
     "name": "Macbook Air 13 2013 I5 8/128",
     "specs": "MacBook Air 13 2013 i5 8/128",
     "price": 30000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2013+I5+8/128"
   },
@@ -310,16 +350,6 @@ const ALL_PRODUCTS = [
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I5+8Th+8/256Gb+Touchscreen"
   },
   {
-    "id": "hp-hp-840-g5-i5-7th-8/256gb-touchscreen",
-    "brand": "HP",
-    "name": "Hp 840 G5 I5 7Th 8/256Gb Touchscreen",
-    "specs": "hp 840 g5 i5 7th 8/256gb \ntouchscreen",
-    "price": 31499,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I5+7Th+8/256Gb+Touchscreen"
-  },
-  {
     "id": "hp-hp-840-g1-i5-8/256gb",
     "brand": "HP",
     "name": "Hp 840 G1 I5 8/256Gb",
@@ -488,16 +518,6 @@ const ALL_PRODUCTS = [
     "category": "exuk business hp budget",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I5+8/256Gb"
-  },
-  {
-    "id": "hp-hp-830-g6-i5-8th-16/512gb-x360-touchscreen",
-    "brand": "HP",
-    "name": "Hp 830 G6 I5 8Th 16/512Gb x360 Touchscreen",
-    "specs": "hp 830 g6 i5 8th 16/512gb\nx360 touchscreen",
-    "price": 44499,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I5+8Th+16/512Gb+x360+Touchscreen"
   },
   {
     "id": "hp-hp-845-g7-ryzen-7-8/256gb",
@@ -838,26 +858,6 @@ const ALL_PRODUCTS = [
     "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2015+I5+8/256"
-  },
-  {
-    "id": "hp-hp-spectre-15-2-in1-intel-coi7-10th-gen-16/512-2gb-graphics-/=-only",
-    "brand": "HP",
-    "name": "Hp Spectre 15 2 In1 Intel Coi7 10Th Gen 16/512 2Gb Graphics /= Only",
-    "specs": "hp spectre 15\n2 in1\nintel  coi7\n10th gen\n16/512 2gb graphics \n/= only",
-    "price": 125000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+Spectre+15+2+In1+Intel+Coi7+10Th+Gen+16/512+2Gb+Graphics+/=+Only"
-  },
-  {
-    "id": "lenovo-x1-yoga-i7-12th-16/512",
-    "brand": "Lenovo",
-    "name": "Lenovo ThinkPad X1 yoga i7 12th 16/512",
-    "specs": "X1 yoga i7 12th 16/512",
-    "price": 135000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+yoga+i7+12th+16/512"
   },
   {
     "id": "lenovo-x1-yoga-i7-11th-16/512",
