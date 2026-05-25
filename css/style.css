@@ -1539,11 +1539,9 @@ section {
   margin-top: 3.5rem;
 }
 
-/* ====== WHY NEXCOM ====== */
-#about { background: var(--bg2); }
 /* ====== WHY NEXCOM (DARK PREMIUM) ====== */
 #about { 
-  background: #0a0a0a; 
+  background: #0d0d0d; 
   position: relative;
   overflow: hidden;
 }
@@ -1634,7 +1632,7 @@ section {
 
 .commitment-card p {
   font-size: 0.875rem;
-  color: #888;
+  color: #c0c0c0;
   line-height: 1.6;
 }
 
