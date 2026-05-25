@@ -308,19 +308,24 @@
             </div>
 
             <div class="card">
-                <h3 style="margin:0 0 15px 0; font-size:14px; text-transform:uppercase; letter-spacing:1px;">Select Deduction</h3>
+                <h3 style="margin:0 0 15px 0; font-size:14px; text-transform:uppercase; letter-spacing:1px;">Select Water Type</h3>
+                <div style="display:flex; gap:10px; margin-bottom:20px;">
+                    <button id="tab-soft" class="btn" style="flex:1; background:var(--cyan); color:#000;" onclick="setCategory('Soft')">SOFT</button>
+                    <button id="tab-premium" class="btn btn-ghost" style="flex:1;" onclick="setCategory('Premium')">PREMIUM</button>
+                </div>
+
                 <div class="refill-grid">
-                    <div class="refill-btn" onclick="processDeduction(50, '5L')">
+                    <div class="refill-btn" onclick="processDeduction(getPrice(5), '5L')">
                         <h3>5L</h3>
-                        <p>KSh 50</p>
+                        <p id="p-5">KSh 50</p>
                     </div>
-                    <div class="refill-btn" onclick="processDeduction(100, '10L')">
+                    <div class="refill-btn" onclick="processDeduction(getPrice(10), '10L')">
                         <h3>10L</h3>
-                        <p>KSh 100</p>
+                        <p id="p-10">KSh 100</p>
                     </div>
-                    <div class="refill-btn" onclick="processDeduction(150, '20L')" style="grid-column: span 2;">
+                    <div class="refill-btn" onclick="processDeduction(getPrice(20), '20L')" style="grid-column: span 2;">
                         <h3 style="font-size: 28px;">20L</h3>
-                        <p>KSh 150</p>
+                        <p id="p-20">KSh 150</p>
                     </div>
                 </div>
             </div>
@@ -454,6 +459,30 @@
 
         // --- LOGIC ---
         let activeCardId = null;
+        let currentCategory = 'Soft';
+        const prices = {
+            'Soft': { 5: 50, 10: 100, 20: 150 },
+            'Premium': { 5: 70, 10: 130, 20: 200 } // Placeholders - verify with user
+        };
+
+        function setCategory(cat) {
+            currentCategory = cat;
+            document.getElementById('tab-soft').className = (cat === 'Soft' ? 'btn' : 'btn btn-ghost');
+            document.getElementById('tab-soft').style.background = (cat === 'Soft' ? 'var(--cyan)' : 'rgba(255, 255, 255, 0.05)');
+            document.getElementById('tab-soft').style.color = (cat === 'Soft' ? '#000' : 'var(--text)');
+            
+            document.getElementById('tab-premium').className = (cat === 'Premium' ? 'btn' : 'btn btn-ghost');
+            document.getElementById('tab-premium').style.background = (cat === 'Premium' ? 'var(--cyan)' : 'rgba(255, 255, 255, 0.05)');
+            document.getElementById('tab-premium').style.color = (cat === 'Premium' ? '#000' : 'var(--text)');
+
+            document.getElementById('p-5').innerText = 'KSh ' + prices[cat][5];
+            document.getElementById('p-10').innerText = 'KSh ' + prices[cat][10];
+            document.getElementById('p-20').innerText = 'KSh ' + prices[cat][20];
+        }
+
+        function getPrice(ltr) {
+            return prices[currentCategory][ltr];
+        }
 
         function processScan(id) {
             closeScanner();
@@ -472,6 +501,7 @@
             document.getElementById('det-name').innerText = c.name;
             document.getElementById('det-id').innerText = 'CARD ID: ' + id;
             document.getElementById('det-balance').innerText = 'KSh ' + c.balance;
+            setCategory('Soft'); // Reset to default
             showView('view-customer-details');
         }
 
@@ -489,7 +519,8 @@
                 cardId: activeCardId,
                 name: c.name,
                 type: 'SALE',
-                label: label,
+                waterType: currentCategory,
+                label: label + ' ' + currentCategory,
                 amount: amount,
                 newBalance: c.balance,
                 time: new Date().toISOString()
@@ -497,7 +528,7 @@
             db.transactions.unshift(tx);
             save();
 
-            showSuccess('SALE COMPLETE', `Refilled ${label}\nDeducted KSh ${amount}\nNew Balance: KSh ${c.balance}`);
+            showSuccess('SALE COMPLETE', `Refilled ${label} (${currentCategory})\nDeducted KSh ${amount}\nNew Balance: KSh ${c.balance}`);
         }
 
         function openRegistration(id) {
