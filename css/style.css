@@ -1300,74 +1300,109 @@ section {
   letter-spacing: 1px;
 }
 
+/* ===== SELL SECTION — CENTERED REDESIGN ===== */
 .sell-container {
-  max-width: 1300px;
+  max-width: 700px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-.sell-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 2.5rem;
   text-align: center;
-  box-shadow: var(--glow);
 }
-.sell-icon { font-size: 2.2rem; margin-bottom: 0.75rem; }
-.sell-card h3 {
+
+.sell-header { margin-bottom: 2.5rem; }
+.sell-header h2 {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-bottom: 1rem;
 }
-.sell-card ul {
-  list-style: none;
-  text-align: left;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-.sell-card li { font-size: 0.9rem; color: var(--gray); }
-
-.sell-highlight {
-  background: var(--gradient);
-  border-radius: 10px;
-  padding: 0.8rem;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--bg);
+.sell-desc {
+  color: var(--gray);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  max-width: 540px;
+  margin: 0 auto 0;
 }
 
-.sell-content .section-tag { text-align: left; }
-.sell-content h2 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 700;
-  letter-spacing: -1px;
-  margin-bottom: 1.25rem;
+/* Tags row */
+.sell-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
-.sell-desc { color: var(--gray); line-height: 1.7; margin-bottom: 2rem; }
+.sell-tags span {
+  background: rgba(128,0,0,0.08);
+  border: 1px solid rgba(128,0,0,0.2);
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 50px;
+}
 
-.sell-steps { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem; }
-.step { display: flex; gap: 1.25rem; align-items: flex-start; }
+/* Steps — horizontal row */
+.sell-steps {
+  display: flex;
+  gap: 0;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.sell-steps::before {
+  content: '';
+  position: absolute;
+  top: 1.6rem;
+  left: calc(16.6% + 1rem);
+  right: calc(16.6% + 1rem);
+  height: 1px;
+  background: rgba(128,0,0,0.2);
+}
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
 .step-num {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--primary);
-  opacity: 0.4;
-  min-width: 50px;
-  line-height: 1;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: white;
+  background: var(--primary);
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
 }
-.step-text h4 { font-weight: 700; margin-bottom: 0.25rem; }
-.step-text p { font-size: 0.875rem; color: var(--gray); }
+.step-text h4 { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.3rem; }
+.step-text p { font-size: 0.82rem; color: var(--gray); line-height: 1.5; }
 
-.sell-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+/* Policy note */
+.sell-policy {
+  font-size: 0.82rem;
+  color: var(--gray);
+  margin-bottom: 2rem;
+}
+.sell-policy a {
+  color: var(--primary);
+  text-decoration: underline;
+  margin-left: 0.25rem;
+}
+
+.sell-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .btn-whatsapp {
   display: flex;
@@ -2073,7 +2108,9 @@ footer {
   .hero-visual {
     order: -1;
   }
-  .sell-container { grid-template-columns: 1fr; }
+  .sell-steps { flex-direction: column; align-items: center; }
+  .sell-steps::before { display: none; }
+  .step { max-width: 280px; }
   .repairs-container { grid-template-columns: 1fr; gap: 3rem; }
   .repairs-visual { order: -1; }
   .why-container { grid-template-columns: 1fr; }
@@ -2099,7 +2136,7 @@ footer {
   .hero-content h1 { font-size: 3.5rem; letter-spacing: -2px; }
   .hero-stats { gap: 1rem; justify-content: center; }
   .sell-container { gap: 2.5rem; }
-  .sell-card ul { grid-template-columns: 1fr; }
+  .sell-actions { flex-direction: column; width: 100%; }
   .footer-container { grid-template-columns: 1fr; gap: 2rem; }
   .cart-sidebar { width: 100%; }
   .form-row { grid-template-columns: 1fr; }
