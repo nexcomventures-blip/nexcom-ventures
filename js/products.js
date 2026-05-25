@@ -264,7 +264,7 @@ const ALL_PRODUCTS = [
     "brand": "Lenovo",
     "name": "Lenovo X390 I5 8Th 8/256Gb",
     "specs": "x390 i5 8th 8/256gb",
-    "price": 22000,
+    "price": 32000,
     "category": "exuk business lenovo",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+x390+i5+8th+8/256gb"
