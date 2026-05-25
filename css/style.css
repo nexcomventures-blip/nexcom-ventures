@@ -53,6 +53,42 @@ body {
 .section-title { font-size: 3rem; line-height: 1.1; margin-bottom: 1.25rem; font-weight: 900; letter-spacing: -1.5px; }
 .section-sub { color: var(--gray); font-size: 1.15rem; line-height: 1.5; margin: 0 auto 3rem; max-width: 800px; }
 
+/* ===== SERVICES MINIMAL ===== */
+.services-minimal {
+  padding: 2.5rem 0 2rem;
+  background: var(--bg);
+}
+
+.services-chips {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.service-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 50px;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  background: transparent;
+}
+
+.service-chip:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139,0,0,0.18);
+}
+
 /* Grid for Workspace/Repairs (Better structure for iOS) */
 .workspace-grid {
   display: flex;
