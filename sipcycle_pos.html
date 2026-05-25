@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>SipCycle POS</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+    <style>
+        :root {
+            --primary: #00BDD6;
+            --secondary: #003B73;
+            --bg: #020617;
+            --card-bg: #0f172a;
+            --text: #ffffff;
+            --text-dim: #94a3b8;
+            --success: #22c55e;
+            --danger: #ef4444;
+        }
+
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom) 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 189, 214, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .header span { color: var(--primary); }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-action {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--secondary), #001f3d);
+            border: none;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: #000;
+            border: none;
+            border-radius: 16px;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: 800;
+            width: 100%;
+            cursor: pointer;
+            transition: transform 0.1s, opacity 0.1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn:active { transform: scale(0.97); opacity: 0.9; }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-ghost {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text);
+            border: none;
+        }
+
+        .btn-danger {
+            background: var(--danger);
+            color: white;
+        }
+
+        #scanner-container {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: #000;
+            z-index: 1000;
+            display: none;
+            flex-direction: column;
+        }
+
+        #video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .scanner-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        .scanner-box {
+            width: 250px;
+            height: 250px;
+            border: 2px solid var(--primary);
+            border-radius: 24px;
+            box-shadow: 0 0 0 1000px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        .scanner-box::after {
+            content: '';
+            position: absolute;
+            top: 50%; left: 0; right: 0;
+            height: 2px;
+            background: var(--primary);
+            box-shadow: 0 0 15px var(--primary);
+            animation: scan 2s infinite ease-in-out;
+        }
+
+        @keyframes scan {
+            0%, 100% { top: 5%; }
+            50% { top: 95%; }
+        }
+
+        .scanner-controls {
+            position: absolute;
+            bottom: 50px;
+            left: 20px; right: 20px;
+            pointer-events: auto;
+        }
+
+        .balance-display {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .balance-amount {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--primary);
+            margin: 10px 0;
+        }
+
+        .refill-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .refill-btn {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .refill-btn h3 { margin: 0; font-size: 20px; color: var(--primary); }
+        .refill-btn p { margin: 5px 0 0 0; color: var(--text-dim); font-size: 14px; }
+        .refill-btn:active { border-color: var(--primary); background: rgba(0, 189, 214, 0.05); }
+
+        .hidden { display: none !important; }
+
+        input {
+            width: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+            font-size: 16px;
+            margin-bottom: 15px;
+            outline: none;
+        }
+
+        input:focus { border-color: var(--primary); }
+
+        .history-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .history-item:last-child { border: none; }
+
+        .modal {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            border-radius: 28px;
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            position: relative;
+        }
+
+        .success-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--bg);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+            text-align: center;
+        }
+
+        .checkmark {
+            width: 100px; height: 100px;
+            border-radius: 50%;
+            background: var(--success);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <header class="header">
+            <h1>SIP<span>CYCLE</span></h1>
+        </header>
+
+        <div class="content" id="view-home">
+            <div class="card main-action" onclick="openScanner()">
+                <div style="font-size: 50px;">📷</div>
+                <h2 style="margin:0">TAP OR SCAN CARD</h2>
+                <p style="margin:0; opacity:0.6; font-size:14px;">Point camera at Card QR</p>
+            </div>
+
+            <div class="card">
+                <h3 style="margin:0 0 15px 0; font-size:16px; color:var(--text-dim)">RECENT SALES</h3>
+                <div id="recent-list">
+                    <p style="text-align:center; opacity:0.3; padding:20px;">No sales today</p>
+                </div>
+            </div>
+
+            <div style="margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <button class="btn btn-ghost" onclick="showView('view-customers')">👥 CLIENTS</button>
+                <button class="btn btn-ghost" onclick="exportData()">💾 BACKUP</button>
+            </div>
+        </div>
+
+        <div class="content hidden" id="view-customer-details">
+            <button class="btn btn-ghost" style="width: auto; align-self: flex-start; padding: 10px 15px;" onclick="showHome()">← BACK</button>
+            
+            <div class="card balance-display">
+                <h2 id="det-name" style="margin:0">---</h2>
+                <p id="det-id" style="font-family: monospace; font-size: 12px; color: var(--primary); margin: 5px 0 20px 0;">---</p>
+                <div class="balance-amount" id="det-balance">KSh 0</div>
+                <p style="margin:0; color:var(--text-dim)">Available Balance</p>
+            </div>
+
+            <div class="refill-grid">
+                <div class="refill-btn" onclick="processDeduction(50, '5L')">
+                    <h3>5L</h3>
+                    <p>KSh 50</p>
+                </div>
+                <div class="refill-btn" onclick="processDeduction(100, '10L')">
+                    <h3>10L</h3>
+                    <p>KSh 100</p>
+                </div>
+                <div class="refill-btn" onclick="processDeduction(150, '20L')" style="grid-column: span 2;">
+                    <h3 style="font-size: 28px;">20L</h3>
+                    <p>KSh 150</p>
+                </div>
+            </div>
+
+            <button class="btn btn-outline" onclick="openTopUp()">➕ TOP UP BALANCE</button>
+        </div>
+
+        <div class="content hidden" id="view-customers">
+            <div style="display:flex; justify-content: space-between; align-items: center;">
+                <button class="btn btn-ghost" style="width: auto; padding: 10px 15px;" onclick="showHome()">← BACK</button>
+                <h3 style="margin:0">CLIENT LIST</h3>
+            </div>
+            <div id="customer-list-full" style="display: flex; flex-direction: column; gap: 10px;">
+                <!-- List populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scanner Overlay -->
+    <div id="scanner-container">
+        <video id="video" playsinline></video>
+        <div class="scanner-overlay">
+            <div class="scanner-box"></div>
+            <p style="color:white; margin-top: 20px; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">ALIGN QR CODE</p>
+        </div>
+        <div class="scanner-controls">
+            <button class="btn btn-danger" onclick="closeScanner()">CANCEL SCAN</button>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div id="modal-register" class="modal">
+        <div class="modal-content">
+            <h2 style="margin-top:0">New Card!</h2>
+            <p id="reg-id" style="font-family: monospace; color:var(--primary);"></p>
+            <input type="text" id="reg-name" placeholder="Client Name">
+            <input type="tel" id="reg-phone" placeholder="Phone Number">
+            <input type="number" id="reg-balance" placeholder="Initial Top-up (KSh)">
+            <button class="btn" onclick="submitRegistration()">ACTIVATE CARD</button>
+            <button class="btn btn-ghost" style="margin-top:10px" onclick="closeModal('modal-register')">CANCEL</button>
+        </div>
+    </div>
+
+    <!-- Top Up Modal -->
+    <div id="modal-topup" class="modal">
+        <div class="modal-content">
+            <h2 style="margin-top:0">Top Up</h2>
+            <p id="topup-name" style="color:var(--text-dim)"></p>
+            <input type="number" id="topup-amount" placeholder="Amount (KSh)">
+            <button class="btn" onclick="submitTopUp()">ADD BALANCE</button>
+            <button class="btn btn-ghost" style="margin-top:10px" onclick="closeModal('modal-topup')">CANCEL</button>
+        </div>
+    </div>
+
+    <!-- Success Feedback -->
+    <div id="success-screen" class="success-overlay">
+        <div class="checkmark">✓</div>
+        <h1 id="success-title">SUCCESS</h1>
+        <p id="success-msg" style="font-size: 20px; opacity: 0.8;"></p>
+        <div style="margin-top: 40px; width: 100%; padding: 0 40px;">
+            <button class="btn btn-outline" onclick="closeSuccess()">DONE</button>
+        </div>
+    </div>
+
+    <script>
+        // --- DATA STORE ---
+        let db = {
+            customers: JSON.parse(localStorage.getItem('sip_customers') || '{"1B41122D": {"name": "Test Card", "phone": "0700000000", "balance": 1000, "registered": "2026-05-25T19:00:00Z"}}'),
+            transactions: JSON.parse(localStorage.getItem('sip_transactions') || '[]')
+        };
+
+        function save() {
+            localStorage.setItem('sip_customers', JSON.stringify(db.customers));
+            localStorage.setItem('sip_transactions', JSON.stringify(db.transactions));
+            updateUI();
+        }
+
+        // --- NAVIGATION ---
+        function showView(id) {
+            document.querySelectorAll('.content').forEach(v => v.classList.add('hidden'));
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function showHome() { showView('view-home'); }
+
+        // --- SCANNER ---
+        let video = document.getElementById('video');
+        let canvas = document.createElement('canvas');
+        let ctx = canvas.getContext('2d');
+        let scanning = false;
+
+        async function openScanner() {
+            document.getElementById('scanner-container').style.display = 'flex';
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+                video.srcObject = stream;
+                video.setAttribute("playsinline", true);
+                video.play();
+                scanning = true;
+                requestAnimationFrame(tick);
+            } catch (err) {
+                alert("Camera error: Please ensure you are using HTTPS and have granted camera permissions.");
+                closeScanner();
+            }
+        }
+
+        function closeScanner() {
+            scanning = false;
+            if (video.srcObject) {
+                video.srcObject.getTracks().forEach(track => track.stop());
+            }
+            document.getElementById('scanner-container').style.display = 'none';
+        }
+
+        function tick() {
+            if (video.readyState === video.HAVE_ENOUGH_DATA && scanning) {
+                canvas.height = video.videoHeight;
+                canvas.width = video.videoWidth;
+                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                var code = jsQR(imageData.data, imageData.width, imageData.height, {
+                    inversionAttempts: "dontInvert",
+                });
+                if (code) {
+                    processScan(code.data);
+                    return;
+                }
+            }
+            if (scanning) requestAnimationFrame(tick);
+        }
+
+        // --- LOGIC ---
+        let activeCardId = null;
+
+        function processScan(id) {
+            closeScanner();
+            activeCardId = id;
+            if (db.customers[id]) {
+                showCustomer(id);
+            } else {
+                openRegistration(id);
+            }
+        }
+
+        function showCustomer(id) {
+            activeCardId = id;
+            const c = db.customers[id];
+            document.getElementById('det-name').innerText = c.name;
+            document.getElementById('det-id').innerText = 'CARD: ' + id;
+            document.getElementById('det-balance').innerText = 'KSh ' + c.balance;
+            showView('view-customer-details');
+        }
+
+        function processDeduction(amount, label) {
+            const c = db.customers[activeCardId];
+            if (c.balance < amount) {
+                alert('Insufficient Balance! Current: KSh ' + c.balance);
+                return;
+            }
+
+            c.balance -= amount;
+            const tx = {
+                id: Date.now(),
+                cardId: activeCardId,
+                name: c.name,
+                type: 'SALE',
+                label: label,
+                amount: amount,
+                newBalance: c.balance,
+                time: new Date().toISOString()
+            };
+            db.transactions.unshift(tx);
+            save();
+
+            showSuccess('SALE COMPLETE', `Deducted KSh ${amount} from ${c.name}`);
+        }
+
+        function openRegistration(id) {
+            document.getElementById('reg-id').innerText = id;
+            document.getElementById('modal-register').style.display = 'flex';
+        }
+
+        function submitRegistration() {
+            const name = document.getElementById('reg-name').value;
+            const phone = document.getElementById('reg-phone').value;
+            const balance = parseInt(document.getElementById('reg-balance').value || 0);
+
+            if (!name) return alert('Name is required');
+
+            db.customers[activeCardId] = {
+                name, phone, balance, registered: new Date().toISOString()
+            };
+            
+            save();
+            closeModal('modal-register');
+            showCustomer(activeCardId);
+        }
+
+        function openTopUp() {
+            document.getElementById('topup-name').innerText = db.customers[activeCardId].name;
+            document.getElementById('modal-topup').style.display = 'flex';
+        }
+
+        function submitTopUp() {
+            const amt = parseInt(document.getElementById('topup-amount').value || 0);
+            if (amt <= 0) return;
+
+            db.customers[activeCardId].balance += amt;
+            const tx = {
+                id: Date.now(),
+                cardId: activeCardId,
+                name: db.customers[activeCardId].name,
+                type: 'TOPUP',
+                amount: amt,
+                newBalance: db.customers[activeCardId].balance,
+                time: new Date().toISOString()
+            };
+            db.transactions.unshift(tx);
+            save();
+            closeModal('modal-topup');
+            showCustomer(activeCardId);
+            alert('Top up successful!');
+        }
+
+        function updateUI() {
+            // Update Recent Sales
+            const list = document.getElementById('recent-list');
+            const todayTxs = db.transactions.slice(0, 5);
+            
+            if (todayTxs.length === 0) {
+                list.innerHTML = '<p style="text-align:center; opacity:0.3; padding:20px;">No sales today</p>';
+            } else {
+                list.innerHTML = todayTxs.map(t => `
+                    <div class="history-item">
+                        <div>
+                            <div style="font-weight:bold">${t.name}</div>
+                            <div style="font-size:12px; opacity:0.5">${t.label || t.type}</div>
+                        </div>
+                        <div style="text-align:right">
+                            <div style="font-weight:bold; color:${t.type === 'SALE' ? 'var(--danger)' : 'var(--success)'}">
+                                ${t.type === 'SALE' ? '-' : '+'}${t.amount}
+                            </div>
+                            <div style="font-size:10px; opacity:0.5">${new Date(t.time).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}</div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            // Update Client List
+            const fullList = document.getElementById('customer-list-full');
+            const clients = Object.keys(db.customers);
+            if (clients.length === 0) {
+                fullList.innerHTML = '<p style="text-align:center; opacity:0.3;">No clients registered</p>';
+            } else {
+                fullList.innerHTML = clients.map(id => `
+                    <div class="card" style="padding:15px; display:flex; justify-content:space-between; align-items:center;" onclick="showCustomer('${id}')">
+                        <div>
+                            <div style="font-weight:bold">${db.customers[id].name}</div>
+                            <div style="font-size:12px; opacity:0.5">${db.customers[id].phone || 'No phone'}</div>
+                        </div>
+                        <div style="font-weight:900; color:var(--primary)">KSh ${db.customers[id].balance}</div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function showSuccess(title, msg) {
+            document.getElementById('success-title').innerText = title;
+            document.getElementById('success-msg').innerText = msg;
+            document.getElementById('success-screen').style.display = 'flex';
+        }
+
+        function closeSuccess() {
+            document.getElementById('success-screen').style.display = 'none';
+            showHome();
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+
+        function exportData() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(db));
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href",     dataStr);
+            downloadAnchorNode.setAttribute("download", "sipcycle_backup_" + new Date().toISOString().split('T')[0] + ".json");
+            document.body.appendChild(downloadAnchorNode);
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+            alert("Backup file downloaded! Keep this safe.");
+        }
+
+        // Initialize
+        updateUI();
+
+    </script>
+</body>
+</html>
