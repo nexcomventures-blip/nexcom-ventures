@@ -13,12 +13,12 @@ const hidePreloader = () => {
 };
 
 if (document.readyState === 'complete') {
-  setTimeout(hidePreloader, 300);
+  setTimeout(hidePreloader, 5000);
 } else {
-  window.addEventListener('load', () => setTimeout(hidePreloader, 300));
+  window.addEventListener('load', () => setTimeout(hidePreloader, 5000));
 }
 // Fallback for preloader
-setTimeout(hidePreloader, 5000);
+setTimeout(hidePreloader, 10000);
 
 // ====== NAVBAR SCROLL ======
 window.addEventListener('scroll', () => {
@@ -195,7 +195,7 @@ function toggleCart() {
 let currentModalPrice = 0;
 let currentModalName = '';
 
-function openModal(name, price, specs, img, priceNum) {
+function openModal(name, price, specs, img, priceNum, software) {
   const isServer = specs.toLowerCase().includes('server') || name.toLowerCase().includes('server');
   const currency = isServer ? 'USD' : 'KES';
   
@@ -210,6 +210,37 @@ function openModal(name, price, specs, img, priceNum) {
   document.getElementById('modalSpecs').textContent = specs;
   document.getElementById('modalImg').src = img;
   document.getElementById('modalImg').alt = name;
+
+  // Software badges
+  const softwareContainer = document.getElementById('modalSoftware');
+  if (softwareContainer) {
+    softwareContainer.innerHTML = '';
+    const swList = Array.isArray(software) ? software : [];
+    if (swList.length > 0) {
+      softwareContainer.style.display = 'block';
+      const label = document.createElement('div');
+      label.className = 'modal-software-label';
+      label.textContent = 'Pre-installed Software';
+      softwareContainer.appendChild(label);
+      const badgesRow = document.createElement('div');
+      badgesRow.className = 'modal-software';
+      swList.forEach(sw => {
+        const badge = document.createElement('span');
+        badge.className = 'software-badge';
+        if (sw.toLowerCase().includes('windows')) {
+          badge.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg> ${sw}`;
+        } else if (sw.toLowerCase().includes('office')) {
+          badge.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.041 0H9.959A.972.972 0 009 .98v1.04l7 2.06V20l-7 2v1.02c0 .54.435.98.959.98h12.082A.972.972 0 0023 23.02V.98A.972.972 0 0022.041 0zM8 4.12L1.18 6.2A1 1 0 000 7.17v9.66a1 1 0 001.18.97L8 19.88z"/></svg> ${sw}`;
+        } else {
+          badge.textContent = sw;
+        }
+        badgesRow.appendChild(badge);
+      });
+      softwareContainer.appendChild(badgesRow);
+    } else {
+      softwareContainer.style.display = 'none';
+    }
+  }
 
   const waMsg = `Hi Nexcom! 👋 I'm interested in the *${name}* (${price} Excl. VAT). Is it available?`;
   document.getElementById('modalWhatsApp').href = `https://wa.me/254721585784?text=${encodeURIComponent(waMsg)}`;
