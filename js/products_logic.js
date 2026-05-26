@@ -25,19 +25,23 @@ function renderProducts(filter = 'featured', targetBtn = null) {
   const itemsToShow = filtered.slice(0, currentLimit);
 
   itemsToShow.forEach(p => {
+    const outOfStock = p.inStock === false;
     const card = document.createElement('div');
-    card.className = 'product-card';
+    card.className = `product-card${outOfStock ? ' out-of-stock' : ''}`;
     card.innerHTML = `
-      <div class="product-img" style="background-image: url('${p.img}')">
-        ${p.badge ? `<span class="badge ${p.badge}">${p.badge}</span>` : ''}
+      <div class="product-img" style="background-image: url('${p.img}'); ${outOfStock ? 'filter: grayscale(60%); opacity: 0.8;' : ''}">
+        ${outOfStock ? `<span class="badge out-of-stock-badge">Out of Stock</span>` : (p.badge ? `<span class="badge ${p.badge}">${p.badge}</span>` : '')}
       </div>
       <div class="product-info">
         <div class="brand">${p.brand}</div>
         <h3 class="name">${p.name}</h3>
         <p class="specs">${p.specs}</p>
         <div class="price-row">
-          <span class="price">KES ${p.price.toLocaleString()}</span>
-          <a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I'm%20interested%20in%20the%20${encodeURIComponent(p.name)}" class="buy-btn">Enquire</a>
+          <span class="price" style="${outOfStock ? 'color: #999;' : ''}">KES ${p.price.toLocaleString()}</span>
+          ${outOfStock
+            ? `<span class="buy-btn" style="background:#999; cursor:not-allowed; pointer-events:none;">Out of Stock</span>`
+            : `<a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I'm%20interested%20in%20the%20${encodeURIComponent(p.name)}" class="buy-btn">Enquire</a>`
+          }
         </div>
       </div>
     `;
@@ -73,19 +77,23 @@ function searchProducts() {
   );
 
   filtered.forEach(p => {
+    const outOfStock = p.inStock === false;
     const card = document.createElement('div');
-    card.className = 'product-card';
+    card.className = `product-card${outOfStock ? ' out-of-stock' : ''}`;
     card.innerHTML = `
-      <div class="product-img" style="background-image: url('${p.img}')">
-        ${p.badge ? `<span class="badge ${p.badge}">${p.badge}</span>` : ''}
+      <div class="product-img" style="background-image: url('${p.img}'); ${outOfStock ? 'filter: grayscale(60%); opacity: 0.8;' : ''}">
+        ${outOfStock ? `<span class="badge out-of-stock-badge">Out of Stock</span>` : (p.badge ? `<span class="badge ${p.badge}">${p.badge}</span>` : '')}
       </div>
       <div class="product-info">
         <div class="brand">${p.brand}</div>
         <h3 class="name">${p.name}</h3>
         <p class="specs">${p.specs}</p>
         <div class="price-row">
-          <span class="price">KES ${p.price.toLocaleString()}</span>
-          <a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I'm%20interested%20in%20the%20${encodeURIComponent(p.name)}" class="buy-btn">Enquire</a>
+          <span class="price" style="${outOfStock ? 'color: #999;' : ''}">KES ${p.price.toLocaleString()}</span>
+          ${outOfStock
+            ? `<span class="buy-btn" style="background:#999; cursor:not-allowed; pointer-events:none;">Out of Stock</span>`
+            : `<a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I'm%20interested%20in%20the%20${encodeURIComponent(p.name)}" class="buy-btn">Enquire</a>`
+          }
         </div>
       </div>
     `;
