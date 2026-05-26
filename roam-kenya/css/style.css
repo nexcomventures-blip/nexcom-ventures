@@ -11,15 +11,20 @@ img, .reveal, .card-media img, .hero-video-overlay, [class*="image"], [class*="m
 } h1, h2, h3, .brand { font-family: 'Cormorant Garamond', serif;
 } .container { max-width: 1300px; margin: 0 auto; padding: 0 40px;
 } /* ===== PRELOADER ===== */
-.preloader { position: fixed; inset: 0; background: #1b3022; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.5s ease; visibility: visible; opacity: 1; }
-.preloader.fade-out { opacity: 0 !important; pointer-events: none !important; visibility: hidden !important; transform: translateY(-100%); }
-} .loader-logo { color: var(--secondary); font-size: 2.5rem; font-family: 'Ojuju', sans-serif; letter-spacing: 6px; font-weight: 300; text-transform: uppercase; animation: tribe-pulse 2s ease-in-out infinite;
+.preloader { position: fixed; inset: 0; background: #0a0f0b; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1); visibility: visible; opacity: 1; }
+.preloader.fade-out { opacity: 0 !important; pointer-events: none !important; visibility: hidden !important; transform: scale(1.1); }
+.loader-logo { color: var(--secondary); font-size: 3rem; font-family: 'Ojuju', sans-serif; letter-spacing: 12px; font-weight: 300; text-transform: uppercase; animation: tribe-reveal 2.5s ease-out forwards; opacity: 0; filter: blur(10px); }
+@keyframes tribe-reveal {
+    0% { opacity: 0; filter: blur(10px); letter-spacing: 20px; transform: translateY(20px); }
+    40% { opacity: 1; filter: blur(0); letter-spacing: 12px; transform: translateY(0); }
+    100% { opacity: 1; filter: blur(0); letter-spacing: 8px; transform: translateY(0); }
 }
-@keyframes tribe-pulse {
-    0%, 100% { opacity: 0.7; letter-spacing: 6px; }
-    50% { opacity: 1; letter-spacing: 10px; }
-} .loader-line { width: 0; height: 1px; background: var(--secondary); margin-top: 10px; animation: load 1.5s forwards; }
-@keyframes load { to { width: 100%; } } /* ===== NAVIGATION ===== */
+.loader-line { width: 0; height: 1px; background: linear-gradient(to right, transparent, var(--secondary), transparent); margin-top: 20px; animation: load-border 2s cubic-bezier(0.1, 0.5, 0.5, 1) forwards; box-shadow: 0 0 15px rgba(194, 157, 89, 0.3); }
+@keyframes load-border {
+    0% { width: 0; opacity: 0; }
+    20% { width: 10%; opacity: 1; }
+    100% { width: 300px; opacity: 0; }
+}
 .main-nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 15px 0; transition: transform 0.4s ease, padding 0.3s ease, background 0.3s ease; transform: translateY(0); background: rgba(27, 48, 34, 0.95); /* Solid dark background to prevent mixture */
 } .main-nav.scrolled { background: var(--primary); padding: 10px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 } .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 30px; display: flex; justify-content: space-between; align-items: center; gap: 20px;
