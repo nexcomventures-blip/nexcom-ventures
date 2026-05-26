@@ -42,16 +42,19 @@ const translations = { en: { experience: "The Experience", tours: "Tours & Safar
         if (currentScrollY > 200) {
             if (currentScrollY > lastScrollY && !navHidden) {
                 // Scrolling down - hide nav
-                nav.style.transform = 'translateY(-100%)';
+                const isDesktop = window.innerWidth >= 1200;
+                nav.style.transform = isDesktop ? 'translateX(-50%) translateY(-100%)' : 'translateY(-100%)';
                 navHidden = true;
             } else if (currentScrollY < lastScrollY && navHidden) {
                 // Scrolling up - show nav
-                nav.style.transform = 'translateY(0)';
+                const isDesktop = window.innerWidth >= 1200;
+                nav.style.transform = isDesktop ? 'translateX(-50%) translateY(0)' : 'translateY(0)';
                 navHidden = false;
             }
         } else {
             // At top of page - always show
-            nav.style.transform = 'translateY(0)';
+            const isDesktop = window.innerWidth >= 1200;
+            nav.style.transform = isDesktop ? 'translateX(-50%) translateY(0)' : 'translateY(0)';
             navHidden = false;
         }
         
