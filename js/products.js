@@ -1,41 +1,81 @@
 const ALL_PRODUCTS = [
   {
     "id": "feat-1",
-    "brand": "HP",
-    "name": "Hp Spectre 15 2 In1 Intel Coi7 10Th Gen 16/512 2Gb Graphics /= Only",
-    "specs": "hp spectre 15\n2 in1\nintel  coi7\n10th gen\n16/512 2gb graphics \n/= only",
-    "price": 125000,
-    "category": "exuk business hp featured",
+    "brand": "Lenovo",
+    "name": "Lenovo ThinkPad X1 yoga i7 11th 16/512",
+    "specs": "X1 yoga i7 11th 16/512",
+    "price": 75000,
+    "category": "exuk business lenovo featured",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+Spectre+15+2+In1+Intel+Coi7+10Th+Gen+16/512+2Gb+Graphics+/=+Only"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+yoga+i7+11th+16/512"
   },
   {
     "id": "feat-2",
-    "brand": "HP",
-    "name": "Hp 830 G6 I5 8Th 16/512Gb x360 Touchscreen",
-    "specs": "hp 830 g6 i5 8th 16/512gb\nx360 touchscreen",
-    "price": 44499,
-    "category": "exuk business hp featured",
+    "brand": "Apple",
+    "name": "Macbook Pro 13 2019 I5 16/256Gb",
+    "specs": "macbook pro 13 2019 i5 16/256gb",
+    "price": 55000,
+    "category": "exuk apple macbook featured",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I5+8Th+16/512Gb+x360+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I5+16/256Gb"
   },
   {
     "id": "feat-3",
     "brand": "HP",
+    "name": "Hp 835 G8 Ryzen 7 8/256Gb",
+    "specs": "hp 835 g8 ryzen 7 8/256gb",
+    "price": 40499,
+    "category": "exuk business hp ryzen featured",
+    "badge": "exuk",
+    "img": "images/hp_840_g8_v2.jpg"
+  },
+  {
+    "id": "feat-4",
+    "brand": "Apple",
+    "name": "Macbook Pro 13 2011 I5 8/256Gb",
+    "specs": "macbook pro 13 2011 i5 8/256gb",
+    "price": 28000,
+    "category": "exuk apple macbook budget featured",
+    "badge": "exuk",
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2011+I5+8/256Gb"
+  },
+  {
+    "id": "tmp-8290",
+    "brand": "HP",
+    "name": "Hp Spectre 15 2 In1 Intel Coi7 10Th Gen 16/512 2Gb Graphics /= Only",
+    "specs": "hp spectre 15\n2 in1\nintel  coi7\n10th gen\n16/512 2gb graphics \n/= only",
+    "price": 125000,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+Spectre+15+2+In1+Intel+Coi7+10Th+Gen+16/512+2Gb+Graphics+/=+Only"
+  },
+  {
+    "id": "tmp-3667",
+    "brand": "HP",
+    "name": "Hp 830 G6 I5 8Th 16/512Gb x360 Touchscreen",
+    "specs": "hp 830 g6 i5 8th 16/512gb\nx360 touchscreen",
+    "price": 44499,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I5+8Th+16/512Gb+x360+Touchscreen"
+  },
+  {
+    "id": "tmp-7386",
+    "brand": "HP",
     "name": "Hp 840 G5 I5 7Th 8/256Gb Touchscreen",
     "specs": "hp 840 g5 i5 7th 8/256gb \ntouchscreen",
     "price": 31499,
-    "category": "exuk business hp featured",
+    "category": "exuk business hp",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I5+7Th+8/256Gb+Touchscreen"
   },
   {
-    "id": "feat-4",
+    "id": "tmp-5886",
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad X1 yoga i7 12th 16/512",
     "specs": "X1 yoga i7 12th 16/512",
-    "price": 84500,
-    "category": "exuk business lenovo featured",
+    "price": 135000,
+    "category": "exuk business lenovo",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+yoga+i7+12th+16/512"
   },
@@ -44,7 +84,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "Hp 840 G6 I5 8/256Gb",
     "specs": "hp 840 g6 i5 8/256gb",
-    "price": 32500,
+    "price": 30499,
     "category": "exuk business hp",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G6+I5+8/256Gb"
@@ -78,16 +118,6 @@ const ALL_PRODUCTS = [
     "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2013+I5+8/128"
-  },
-  {
-    "id": "tmp-6308",
-    "brand": "HP",
-    "name": "Hp 835 G8 Ryzen 7 8/256Gb",
-    "specs": "hp 835 g8 ryzen 7 8/256gb",
-    "price": 40499,
-    "category": "exuk business hp ryzen",
-    "badge": "exuk",
-    "img": "images/hp_840_g8_v2.jpg"
   },
   {
     "id": "tmp-3392",
@@ -180,21 +210,11 @@ const ALL_PRODUCTS = [
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I5+16/512Gb"
   },
   {
-    "id": "tmp-2424",
-    "brand": "Apple",
-    "name": "Macbook Pro 13 2019 I5 16/256Gb",
-    "specs": "macbook pro 13 2019 i5 16/256gb",
-    "price": 55000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I5+16/256Gb"
-  },
-  {
     "id": "tmp-2524",
     "brand": "HP",
     "name": "Hp 830 G6 I7 8Th 8/256Gb x360 Touchscreen",
     "specs": "hp 830 g6 i7 8th 8/256gb\nx360 touchscreen",
-    "price": 36400,
+    "price": 42499,
     "category": "exuk business hp",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I7+8Th+8/256Gb+x360+Touchscreen"
@@ -454,7 +474,7 @@ const ALL_PRODUCTS = [
     "brand": "HP",
     "name": "Hp 830 G7 I5 10Th 8/256Gb",
     "specs": "hp 830 g7 i5 10th 8/256gb",
-    "price": 39000,
+    "price": 40499,
     "category": "exuk business hp",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G7+I5+10Th+8/256Gb"
@@ -790,21 +810,11 @@ const ALL_PRODUCTS = [
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2012+I5+8/256Gb"
   },
   {
-    "id": "apple-macbook-pro-13-2011-i5-8/256gb",
-    "brand": "Apple",
-    "name": "Macbook Pro 13 2011 I5 8/256Gb",
-    "specs": "macbook pro 13 2011 i5 8/256gb",
-    "price": 28000,
-    "category": "exuk apple macbook budget",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2011+I5+8/256Gb"
-  },
-  {
     "id": "apple-macbook-air-m1-2020-8/256gb",
     "brand": "Apple",
     "name": "Macbook Air M1 2020 8/256Gb",
     "specs": "macbook air m1  2020 8/256gb",
-    "price": 97500,
+    "price": 78000,
     "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+M1+2020+8/256Gb"
@@ -870,16 +880,6 @@ const ALL_PRODUCTS = [
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2015+I5+8/256"
   },
   {
-    "id": "lenovo-x1-yoga-i7-11th-16/512",
-    "brand": "Lenovo",
-    "name": "Lenovo ThinkPad X1 yoga i7 11th 16/512",
-    "specs": "X1 yoga i7 11th 16/512",
-    "price": 84500,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+yoga+i7+11th+16/512"
-  },
-  {
     "id": "lenovo-x1-yoga-i5-11th-16/512",
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad X1 yoga i5 11th 16/512",
@@ -888,245 +888,5 @@ const ALL_PRODUCTS = [
     "category": "exuk business lenovo",
     "badge": "exuk",
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+yoga+i5+11th+16/512"
-  },
-  {
-    "id": "apple-macbook-pro-13-m1-8/256gb",
-    "brand": "Apple",
-    "name": "MacBook Pro 13 M1 8/256GB",
-    "specs": "MacBook Pro 13 M1\n8GB RAM / 256GB SSD\nApple Silicon M1",
-    "price": 97500,
-    "category": "new apple macbook featured",
-    "badge": "new",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=MacBook+Pro+13+M1+8/256GB"
-  },
-  {
-    "id": "lenovo-t490s-i5-8th-16/256-touch",
-    "brand": "Lenovo",
-    "name": "Lenovo T490s I5 8th 16/256 Touchscreen",
-    "specs": "Lenovo T490s\nIntel Core i5 8th Gen\n16GB RAM / 256GB SSD\nTouchscreen",
-    "price": 32500,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+T490s+I5+8th+16/256+Touchscreen"
-  },
-  {
-    "id": "lenovo-t490s-i5-8th-8/256",
-    "brand": "Lenovo",
-    "name": "Lenovo T490s I5 8th 8/256",
-    "specs": "Lenovo T490s\nIntel Core i5 8th Gen\n8GB RAM / 256GB SSD",
-    "price": 29900,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+T490s+I5+8th+8/256"
-  },
-  {
-    "id": "lenovo-t480s-i5-8th-8/256-touch",
-    "brand": "Lenovo",
-    "name": "Lenovo T480s I5 8th 8/256 Touchscreen",
-    "specs": "Lenovo T480s\nIntel Core i5 8th Gen\n8GB RAM / 256GB SSD\nTouchscreen",
-    "price": 29900,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+T480s+I5+8th+8/256+Touchscreen"
-  },
-  {
-    "id": "lenovo-t480s-i5-8th-8/256",
-    "brand": "Lenovo",
-    "name": "Lenovo T480s I5 8th 8/256",
-    "specs": "Lenovo T480s\nIntel Core i5 8th Gen\n8GB RAM / 256GB SSD",
-    "price": 28600,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+T480s+I5+8th+8/256"
-  },
-  {
-    "id": "lenovo-t460s-i5-6th-8/256-touch",
-    "brand": "Lenovo",
-    "name": "Lenovo T460s I5 6th 8/256 Touchscreen",
-    "specs": "Lenovo T460s\nIntel Core i5 6th Gen\n8GB RAM / 256GB SSD\nTouchscreen",
-    "price": 23400,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+T460s+I5+6th+8/256+Touchscreen"
-  },
-  {
-    "id": "lenovo-t460s-i5-6th-8/256",
-    "brand": "Lenovo",
-    "name": "Lenovo T460s I5 6th 8/256",
-    "specs": "Lenovo T460s\nIntel Core i5 6th Gen\n8GB RAM / 256GB SSD",
-    "price": 22100,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+T460s+I5+6th+8/256"
-  },
-  {
-    "id": "lenovo-yoga-9i-14itl5-i7-11th-16/512",
-    "brand": "Lenovo",
-    "name": "Lenovo Yoga 9i 14ITL5 I7 11th 16/512",
-    "specs": "Lenovo Yoga 9i 14ITL5\nIntel Core i7 11th Gen\n16GB RAM / 512GB SSD",
-    "price": 84500,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+Yoga+9i+14ITL5+I7+11th+16/512"
-  },
-  {
-    "id": "lenovo-x1-yoga-i7-12th-16/512-ws",
-    "brand": "Lenovo",
-    "name": "Lenovo X1 Yoga I7 12th 16/512",
-    "specs": "Lenovo ThinkPad X1 Yoga\nIntel Core i7 12th Gen\n16GB RAM / 512GB SSD",
-    "price": 84500,
-    "category": "exuk business lenovo featured",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+Yoga+I7+12th+16/512"
-  },
-  {
-    "id": "lenovo-x1-yoga-i5-11th-16/512-ws",
-    "brand": "Lenovo",
-    "name": "Lenovo X1 Yoga I5 11th 16/512",
-    "specs": "Lenovo ThinkPad X1 Yoga\nIntel Core i5 11th Gen\n16GB RAM / 512GB SSD",
-    "price": 65000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+Yoga+I5+11th+16/512"
-  },
-  {
-    "id": "lenovo-x390-i5-8th-16/256-touch",
-    "brand": "Lenovo",
-    "name": "Lenovo X390 I5 8th 16/256 Touchscreen",
-    "specs": "Lenovo ThinkPad X390\nIntel Core i5 8th Gen\n16GB RAM / 256GB SSD\nTouchscreen",
-    "price": 35100,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X390+I5+8th+16/256+Touchscreen"
-  },
-  {
-    "id": "lenovo-x390-i5-8th-8/256-touch",
-    "brand": "Lenovo",
-    "name": "Lenovo X390 I5 8th 8/256 Touchscreen",
-    "specs": "Lenovo ThinkPad X390\nIntel Core i5 8th Gen\n8GB RAM / 256GB SSD\nTouchscreen",
-    "price": 33800,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X390+I5+8th+8/256+Touchscreen"
-  },
-  {
-    "id": "lenovo-x380-i5-8th-16/256-touch",
-    "brand": "Lenovo",
-    "name": "Lenovo X380 I5 8th 16/256 Touchscreen",
-    "specs": "Lenovo ThinkPad X380\nIntel Core i5 8th Gen\n16GB RAM / 256GB SSD\nTouchscreen",
-    "price": 33800,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X380+I5+8th+16/256+Touchscreen"
-  },
-  {
-    "id": "lenovo-x380-i5-8th-8/256-touch",
-    "brand": "Lenovo",
-    "name": "Lenovo X380 I5 8th 8/256 Touchscreen",
-    "specs": "Lenovo ThinkPad X380\nIntel Core i5 8th Gen\n8GB RAM / 256GB SSD\nTouchscreen",
-    "price": 32500,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X380+I5+8th+8/256+Touchscreen"
-  },
-  {
-    "id": "hp-1030-g8-i7-11th-16/512-x360",
-    "brand": "HP",
-    "name": "HP 1030 G8 I7 11th 16/512 x360",
-    "specs": "HP EliteBook x360 1030 G8\nIntel Core i7 11th Gen\n16GB RAM / 512GB SSD\nx360 Touchscreen",
-    "price": 71500,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=HP+1030+G8+I7+11th+16/512+x360"
-  },
-  {
-    "id": "hp-1030-g8-i5-11th-16/512-x360",
-    "brand": "HP",
-    "name": "HP 1030 G8 I5 11th 16/512 x360",
-    "specs": "HP EliteBook x360 1030 G8\nIntel Core i5 11th Gen\n16GB RAM / 512GB SSD\nx360 Touchscreen",
-    "price": 58500,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=HP+1030+G8+I5+11th+16/512+x360"
-  },
-  {
-    "id": "hp-1030-g4-i7-8th-16/512-x360",
-    "brand": "HP",
-    "name": "HP 1030 G4 I7 8th 16/512 x360",
-    "specs": "HP EliteBook x360 1030 G4\nIntel Core i7 8th Gen\n16GB RAM / 512GB SSD\nx360 Touchscreen",
-    "price": 55900,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=HP+1030+G4+I7+8th+16/512+x360"
-  },
-  {
-    "id": "hp-1040-g9-i7-12th-16/512-x360",
-    "brand": "HP",
-    "name": "HP 1040 G9 I7 12th 16/512 x360",
-    "specs": "HP EliteBook x360 1040 G9\nIntel Core i7 12th Gen\n16GB RAM / 512GB SSD\nx360 Touchscreen",
-    "price": 84500,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=HP+1040+G9+I7+12th+16/512+x360"
-  },
-  {
-    "id": "hp-1040-g9-i5-12th-16/512-x360",
-    "brand": "HP",
-    "name": "HP 1040 G9 I5 12th 16/512 x360",
-    "specs": "HP EliteBook x360 1040 G9\nIntel Core i5 12th Gen\n16GB RAM / 512GB SSD\nx360 Touchscreen",
-    "price": 71500,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=HP+1040+G9+I5+12th+16/512+x360"
-  },
-  {
-    "id": "hp-1040-g8-i7-11th-16/512-x360",
-    "brand": "HP",
-    "name": "HP 1040 G8 I7 11th 16/512 x360",
-    "specs": "HP EliteBook x360 1040 G8\nIntel Core i7 11th Gen\n16GB RAM / 512GB SSD\nx360 Touchscreen",
-    "price": 71500,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=HP+1040+G8+I7+11th+16/512+x360"
-  },
-  {
-    "id": "hp-1040-g8-i5-11th-16/512-x360",
-    "brand": "HP",
-    "name": "HP 1040 G8 I5 11th 16/512 x360",
-    "specs": "HP EliteBook x360 1040 G8\nIntel Core i5 11th Gen\n16GB RAM / 512GB SSD\nx360 Touchscreen",
-    "price": 65000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=HP+1040+G8+I5+11th+16/512+x360"
-  },
-  {
-    "id": "hp-830-g6-i7-8th-8/256-touch-new",
-    "brand": "HP",
-    "name": "HP 830 G6 I7 8th 8/256 Touchscreen",
-    "specs": "HP EliteBook 830 G6\nIntel Core i7 8th Gen\n8GB RAM / 256GB SSD\nTouchscreen",
-    "price": 36400,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=HP+830+G6+I7+8th+8/256+Touchscreen"
-  },
-  {
-    "id": "hp-830-g5-i5-8th-8/256-touch",
-    "brand": "HP",
-    "name": "HP 830 G5 I5 8th 8/256 Touchscreen",
-    "specs": "HP EliteBook 830 G5\nIntel Core i5 8th Gen\n8GB RAM / 256GB SSD\nTouchscreen",
-    "price": 33800,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=HP+830+G5+I5+8th+8/256+Touchscreen"
-  },
-  {
-    "id": "hp-840-g6-i5-8th-8/256-new",
-    "brand": "HP",
-    "name": "HP 840 G6 I5 8th 8/256",
-    "specs": "HP EliteBook 840 G6\nIntel Core i5 8th Gen\n8GB RAM / 256GB SSD",
-    "price": 32500,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=HP+840+G6+I5+8th+8/256"
   }
 ];
