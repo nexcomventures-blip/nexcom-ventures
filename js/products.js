@@ -257,6 +257,7 @@ const ALL_PRODUCTS = [
     "price": 32000,
     "category": "exuk business lenovo",
     "badge": "exuk",
+    "inStock": false,
     "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+x13+i7+10th+16/512gb"
   },
   {
