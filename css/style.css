@@ -53,42 +53,6 @@ body {
 .section-title { font-size: 3rem; line-height: 1.1; margin-bottom: 1.25rem; font-weight: 900; letter-spacing: -1.5px; }
 .section-sub { color: var(--gray); font-size: 1.15rem; line-height: 1.5; margin: 0 auto 3rem; max-width: 800px; }
 
-/* ===== SERVICES MINIMAL ===== */
-.services-minimal {
-  padding: 2.5rem 0 2rem;
-  background: var(--bg);
-}
-
-.services-chips {
-  display: flex;
-  gap: 0.75rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-}
-
-.service-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.45rem 1.1rem;
-  border-radius: 50px;
-  border: 1.5px solid var(--primary);
-  color: var(--primary);
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.25s ease;
-  background: transparent;
-}
-
-.service-chip:hover {
-  background: var(--primary);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(139,0,0,0.18);
-}
-
 /* Grid for Workspace/Repairs (Better structure for iOS) */
 .workspace-grid {
   display: flex;
@@ -243,20 +207,104 @@ body {
 #announcement-bar {
   position: fixed;
   top: 0; left: 0; right: 0;
-  height: 40px;
-  background: var(--primary);
+  height: 36px;
+  background: linear-gradient(90deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
+  overflow: hidden;
   z-index: 1001;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(240,26,36,0.3);
+}
+#announcement-bar .ticker-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#announcement-bar .ticker-wrapper::before,
+#announcement-bar .ticker-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+#announcement-bar .ticker-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #0a0a0a, transparent);
+}
+#announcement-bar .ticker-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #0a0a0a, transparent);
+}
+#announcement-bar .ticker-label {
+  flex-shrink: 0;
+  background: var(--primary);
+  color: white;
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0 14px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  z-index: 3;
+}
+#announcement-bar .ticker-track {
+  display: flex;
+  animation: ticker-scroll 28s linear infinite;
+  white-space: nowrap;
+}
+#announcement-bar .ticker-track:hover {
+  animation-play-state: paused;
+}
+#announcement-bar .ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 0 28px;
+  color: rgba(255,255,255,0.88);
+  white-space: nowrap;
+}
+#announcement-bar .ticker-item .dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--primary);
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+#announcement-bar .ticker-item strong {
+  color: #fff;
+  font-weight: 800;
+}
+#announcement-bar .ticker-item .tag {
+  background: rgba(240,26,36,0.15);
+  color: var(--primary);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 20px;
+  border: 1px solid rgba(240,26,36,0.25);
+}
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 #navbar {
   position: fixed;
-  top: 40px; left: 0; right: 0;
+  top: 36px; left: 0; right: 0;
   z-index: 1000;
   padding: 0 2rem;
   background: #f2f4f7 !important;
