@@ -1,45 +1,54 @@
-const ALL_PRODUCTS = [
-  {
+const ALL_PRODUCTS = [{
     "id": "feat-1",
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad X1 yoga i7 11th 16/512",
     "specs": "X1 yoga i7 11th 16/512",
     "price": 75000,
-    "category": "exuk business lenovo featured",
+    "category": "exuk business lenovo",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+yoga+i7+11th+16/512"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+yoga+i7+11th+16/512",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "feat-2",
     "brand": "Apple",
     "name": "Macbook Pro 13 2019 I5 16/256Gb",
     "specs": "macbook pro 13 2019 i5 16/256gb",
     "price": 55000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I5+16/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I5+16/256Gb",
+    "software": []
   },
-  {
+{
     "id": "feat-3",
     "brand": "HP",
     "name": "Hp 835 G8 Ryzen 7 8/256Gb",
     "specs": "hp 835 g8 ryzen 7 8/256gb",
     "price": 40499,
-    "category": "exuk business hp ryzen featured",
+    "category": "exuk business hp ryzen",
     "badge": "exuk",
-    "img": "images/hp_840_g8_v2.jpg"
+    "img": "images/hp_840_g8_v2.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "feat-4",
     "brand": "Apple",
     "name": "Macbook Pro 13 2011 I5 8/256Gb",
     "specs": "macbook pro 13 2011 i5 8/256gb",
     "price": 28000,
-    "category": "exuk apple macbook budget featured",
+    "category": "exuk apple macbook budget",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2011+I5+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2011+I5+8/256Gb",
+    "software": []
   },
-  {
+{
     "id": "tmp-8290",
     "brand": "HP",
     "name": "Hp Spectre 15 2 In1 Intel Coi7 10Th Gen 16/512 2Gb Graphics /= Only",
@@ -47,9 +56,13 @@ const ALL_PRODUCTS = [
     "price": 125000,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+Spectre+15+2+In1+Intel+Coi7+10Th+Gen+16/512+2Gb+Graphics+/=+Only"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+Spectre+15+2+In1+Intel+Coi7+10Th+Gen+16/512+2Gb+Graphics+/=+Only",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "tmp-3667",
     "brand": "HP",
     "name": "Hp 830 G6 I5 8Th 16/512Gb x360 Touchscreen",
@@ -57,9 +70,13 @@ const ALL_PRODUCTS = [
     "price": 44499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I5+8Th+16/512Gb+x360+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I5+8Th+16/512Gb+x360+Touchscreen",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "tmp-7386",
     "brand": "HP",
     "name": "Hp 840 G5 I5 7Th 8/256Gb Touchscreen",
@@ -67,9 +84,13 @@ const ALL_PRODUCTS = [
     "price": 31499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I5+7Th+8/256Gb+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I5+7Th+8/256Gb+Touchscreen",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "tmp-5886",
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad X1 yoga i7 12th 16/512",
@@ -77,9 +98,13 @@ const ALL_PRODUCTS = [
     "price": 135000,
     "category": "exuk business lenovo",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+yoga+i7+12th+16/512"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+yoga+i7+12th+16/512",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "tmp-8326",
     "brand": "HP",
     "name": "Hp 840 G6 I5 8/256Gb",
@@ -87,9 +112,13 @@ const ALL_PRODUCTS = [
     "price": 30499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G6+I5+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G6+I5+8/256Gb",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "tmp-6651",
     "brand": "Apple",
     "name": "Macbook Pro 13 2013 I7 8/256Gb",
@@ -97,9 +126,10 @@ const ALL_PRODUCTS = [
     "price": 36000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2013+I7+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2013+I7+8/256Gb",
+    "software": []
   },
-  {
+{
     "id": "tmp-4860",
     "brand": "Apple",
     "name": "Macbook Pro 13 I7 2020 16/512Gb",
@@ -107,9 +137,10 @@ const ALL_PRODUCTS = [
     "price": 78000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+I7+2020+16/512Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+I7+2020+16/512Gb",
+    "software": []
   },
-  {
+{
     "id": "tmp-7814",
     "brand": "Apple",
     "name": "Macbook Air 13 2013 I5 8/128",
@@ -117,9 +148,10 @@ const ALL_PRODUCTS = [
     "price": 30000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2013+I5+8/128"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2013+I5+8/128",
+    "software": []
   },
-  {
+{
     "id": "tmp-3392",
     "brand": "HP",
     "name": "Hp 830 G7 I7 11Th 8/256Gb Touchscreen",
@@ -127,9 +159,13 @@ const ALL_PRODUCTS = [
     "price": 43499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G7+I7+11Th+8/256Gb+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G7+I7+11Th+8/256Gb+Touchscreen",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "tmp-4266",
     "brand": "Apple",
     "name": "Macbook Pro 13 2015 I5 16/256Gb",
@@ -137,9 +173,10 @@ const ALL_PRODUCTS = [
     "price": 41000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I5+16/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I5+16/256Gb",
+    "software": []
   },
-  {
+{
     "id": "tmp-9530",
     "brand": "Apple",
     "name": "Macbook Air 13 2019 I58/256Gb",
@@ -147,9 +184,10 @@ const ALL_PRODUCTS = [
     "price": 51000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2019+I58/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2019+I58/256Gb",
+    "software": []
   },
-  {
+{
     "id": "tmp-4868",
     "brand": "Apple",
     "name": "Macbook Pro 13 2018 I7 16/256Gb",
@@ -157,9 +195,10 @@ const ALL_PRODUCTS = [
     "price": 58000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "images/macbook_pro.jpg"
+    "img": "images/macbook_pro.jpg",
+    "software": []
   },
-  {
+{
     "id": "new-m3-air-2024",
     "brand": "Apple",
     "name": "MacBook Air 15\" 2024 M3 8/256GB",
@@ -167,9 +206,10 @@ const ALL_PRODUCTS = [
     "price": 144999,
     "category": "new apple macbook",
     "badge": "new",
-    "img": "images/macbook_air_m1.jpg"
+    "img": "images/macbook_air_m1.jpg",
+    "software": []
   },
-  {
+{
     "id": "tmp-2958",
     "brand": "Apple",
     "name": "Macbook Air M1 2022 8/256Gb",
@@ -177,19 +217,21 @@ const ALL_PRODUCTS = [
     "price": 98000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "images/macbook_air_m1.jpg"
+    "img": "images/macbook_air_m1.jpg",
+    "software": []
   },
-  {
+{
     "id": "tmp-4723",
     "brand": "Apple",
     "name": "Macbook Pro 15 2017 I7 16/512Gb 4Gb Graphics",
     "specs": "macbook pro 15 2017 i7 16/512gb 4gb graphics",
     "price": 61000,
-    "category": "exuk apple macbook",
+    "category": "exuk apple macbook featured",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+15+2017+I7+16/512Gb+4Gb+Graphics"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+15+2017+I7+16/512Gb+4Gb+Graphics",
+    "software": []
   },
-  {
+{
     "id": "tmp-9001",
     "brand": "Apple",
     "name": "Macbook Pro 13 2014 I5 8/256Gb",
@@ -197,9 +239,10 @@ const ALL_PRODUCTS = [
     "price": 35000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2014+I5+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2014+I5+8/256Gb",
+    "software": []
   },
-  {
+{
     "id": "tmp-2131",
     "brand": "Apple",
     "name": "Macbook Pro 13 2015 I5 16/512Gb",
@@ -207,9 +250,10 @@ const ALL_PRODUCTS = [
     "price": 43000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I5+16/512Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I5+16/512Gb",
+    "software": []
   },
-  {
+{
     "id": "tmp-2524",
     "brand": "HP",
     "name": "Hp 830 G6 I7 8Th 8/256Gb x360 Touchscreen",
@@ -217,9 +261,13 @@ const ALL_PRODUCTS = [
     "price": 42499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I7+8Th+8/256Gb+x360+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I7+8Th+8/256Gb+x360+Touchscreen",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "tmp-8455",
     "brand": "Apple",
     "name": "Macbook Pro 13 2015 I7 8/256Gb",
@@ -227,9 +275,10 @@ const ALL_PRODUCTS = [
     "price": 41000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I7+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I7+8/256Gb",
+    "software": []
   },
-  {
+{
     "id": "tmp-4959",
     "brand": "Lenovo",
     "name": "Lenovo X1 Carbon I7 8Th 16/512Gb.",
@@ -237,30 +286,42 @@ const ALL_PRODUCTS = [
     "price": 35000,
     "category": "exuk business lenovo",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+x1+carbon+i7+8th"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+x1+carbon+i7+8th",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "tmp-1487",
     "brand": "Dell",
     "name": "Dell 5320 I7 11Th 16/512Gb Touchscreen",
     "specs": "5320 i7 11th 16/512gb touchscreen",
     "price": 40000,
-    "category": "exuk business dell",
+    "category": "exuk business dell featured",
     "badge": "exuk",
-    "img": "images/dell_xps_13_new.jpg"
+    "img": "images/dell_xps_13_new.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "tmp-8197",
     "brand": "Lenovo",
     "name": "Lenovo X13 I7 10Th 16/512Gb",
     "specs": "x13 i7 10th 16/512gb",
     "price": 32000,
-    "category": "exuk business lenovo",
+    "category": "exuk business lenovo featured",
     "badge": "exuk",
     "inStock": false,
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+x13+i7+10th+16/512gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+x13+i7+10th+16/512gb",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "tmp-7830",
     "brand": "Dell",
     "name": "Dell Xps 15 9570 I7 8Th 16/512Gb 4Gb Graphics",
@@ -268,9 +329,13 @@ const ALL_PRODUCTS = [
     "price": 50000,
     "category": "exuk business dell",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Dell+xps+15+9570+i7"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Dell+xps+15+9570+i7",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "tmp-9150",
     "brand": "Dell",
     "name": "Dell Xps 13 9305 I7 11Th 16/512Gb",
@@ -278,9 +343,13 @@ const ALL_PRODUCTS = [
     "price": 60000,
     "category": "exuk business dell",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Dell+xps+13+9305+i7"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Dell+xps+13+9305+i7",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "tmp-8284",
     "brand": "Lenovo",
     "name": "Lenovo X390 I5 8Th 8/256Gb",
@@ -288,9 +357,13 @@ const ALL_PRODUCTS = [
     "price": 32000,
     "category": "exuk business lenovo",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+x390+i5+8th+8/256gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+x390+i5+8th+8/256gb",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-850-g7-i7-10th-16/512gb",
     "brand": "HP",
     "name": "Hp 850 G7 I7 10Th 16/512Gb",
@@ -298,9 +371,13 @@ const ALL_PRODUCTS = [
     "price": 53499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://images.weserv.nl/?url=https://hp.widen.net/content/zc0fv8rwlc/png/zc0fv8rwlc.png&w=600&output=webp"
+    "img": "https://images.weserv.nl/?url=https://hp.widen.net/content/zc0fv8rwlc/png/zc0fv8rwlc.png&w=600&output=webp",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-840-g10-i7-13th-16/512gb",
     "brand": "HP",
     "name": "Hp 840 G10 I7 13Th 16/512Gb",
@@ -308,9 +385,13 @@ const ALL_PRODUCTS = [
     "price": 68499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://images.weserv.nl/?url=https://hp.widen.net/content/zc0fv8rwlc/png/zc0fv8rwlc.png&w=600&output=webp"
+    "img": "https://images.weserv.nl/?url=https://hp.widen.net/content/zc0fv8rwlc/png/zc0fv8rwlc.png&w=600&output=webp",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-840-g8-i5-11th-8/256gb",
     "brand": "HP",
     "name": "Hp 840 G8 I5 11Th 8/256Gb",
@@ -318,19 +399,27 @@ const ALL_PRODUCTS = [
     "price": 40499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "images/hp_840_g8.jpg"
+    "img": "images/hp_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-840-g7-i7-10th-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 840 G7 I7 10Th 8/256Gb Touchscreen",
     "specs": "hp 840 g7  i7 10th 8/256gb\ntouchscreen",
     "price": 45499,
-    "category": "exuk business hp",
+    "category": "exuk business hp featured",
     "badge": "exuk",
-    "img": "images/hp_840_g7_i7_user.jpg"
+    "img": "images/hp_840_g7_i7_user.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-840-g7-i5-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 840 G7 I5 8/256Gb Touchscreen",
@@ -338,9 +427,13 @@ const ALL_PRODUCTS = [
     "price": 40499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "images/hp_840_g7_i7_user.jpg"
+    "img": "images/hp_840_g7_i7_user.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-840-g7-i5-10th-8/256gb",
     "brand": "HP",
     "name": "Hp 840 G7 I5 10Th 8/256Gb",
@@ -348,19 +441,27 @@ const ALL_PRODUCTS = [
     "price": 35499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "media/1779455373668.jpg"
+    "img": "media/1779455373668.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-840-g5-i7-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 840 G5 I7 8/256Gb Touchscreen",
     "specs": "hp 840 g5 i7 8/256gb\ntouchscreen",
     "price": 35499,
-    "category": "exuk business hp",
+    "category": "exuk business hp featured",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I7+8/256Gb+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I7+8/256Gb+Touchscreen",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-840-g5-i7-8th-8/256gb",
     "brand": "HP",
     "name": "Hp 840 G5 I7 8Th 8/256Gb",
@@ -368,9 +469,13 @@ const ALL_PRODUCTS = [
     "price": 33499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I7+8Th+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I7+8Th+8/256Gb",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-840-g5-i5-8th-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 840 G5 I5 8Th 8/256Gb Touchscreen",
@@ -378,9 +483,13 @@ const ALL_PRODUCTS = [
     "price": 32499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I5+8Th+8/256Gb+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I5+8Th+8/256Gb+Touchscreen",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-840-g1-i5-8/256gb",
     "brand": "HP",
     "name": "Hp 840 G1 I5 8/256Gb",
@@ -388,9 +497,13 @@ const ALL_PRODUCTS = [
     "price": 21499,
     "category": "exuk business hp budget",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G1+I5+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G1+I5+8/256Gb",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-840-g1-i7-8/256gb",
     "brand": "HP",
     "name": "Hp 840 G1 I7 8/256Gb",
@@ -398,9 +511,13 @@ const ALL_PRODUCTS = [
     "price": 22499,
     "category": "exuk business hp budget",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G1+I7+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G1+I7+8/256Gb",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-820-g1-i7-8/256gb",
     "brand": "HP",
     "name": "Hp 820 G1 I7 8/256Gb",
@@ -408,9 +525,13 @@ const ALL_PRODUCTS = [
     "price": 21999,
     "category": "exuk business hp budget",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+820+G1+I7+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+820+G1+I7+8/256Gb",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-820-g2-i7-8/256gb",
     "brand": "HP",
     "name": "Hp 820 G2 I7 8/256Gb",
@@ -418,9 +539,13 @@ const ALL_PRODUCTS = [
     "price": 22499,
     "category": "exuk business hp budget",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+820+G2+I7+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+820+G2+I7+8/256Gb",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-830-g8-i7-11th-16/512gb-x360-touchscreen",
     "brand": "HP",
     "name": "Hp 830 G8 I7 11Th 16/512Gb x360 Touchscreen",
@@ -428,9 +553,13 @@ const ALL_PRODUCTS = [
     "price": 61499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G8+I7+11Th+16/512Gb+x360+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G8+I7+11Th+16/512Gb+x360+Touchscreen",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-830-g8-i5-11th-16/512gb-x360-touchscreen",
     "brand": "HP",
     "name": "Hp 830 G8 I5 11Th 16/512Gb x360 Touchscreen",
@@ -438,9 +567,13 @@ const ALL_PRODUCTS = [
     "price": 53499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G8+I5+11Th+16/512Gb+x360+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G8+I5+11Th+16/512Gb+x360+Touchscreen",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-830-g8-i7-11th-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 830 G8 I7 11Th 8/256Gb Touchscreen",
@@ -448,9 +581,13 @@ const ALL_PRODUCTS = [
     "price": 48499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G8+I7+11Th+8/256Gb+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G8+I7+11Th+8/256Gb+Touchscreen",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-830-g8-i5-11th-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 830 G8 I5 11Th 8/256Gb Touchscreen",
@@ -458,9 +595,13 @@ const ALL_PRODUCTS = [
     "price": 42499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G8+I5+11Th+8/256Gb+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G8+I5+11Th+8/256Gb+Touchscreen",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-830-g8-i5-11th-8/256gb",
     "brand": "HP",
     "name": "Hp 830 G8 I5 11Th 8/256Gb",
@@ -468,9 +609,13 @@ const ALL_PRODUCTS = [
     "price": 40499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G8+I5+11Th+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G8+I5+11Th+8/256Gb",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-830-g7-i5-10th-8/256gb",
     "brand": "HP",
     "name": "Hp 830 G7 I5 10Th 8/256Gb",
@@ -478,9 +623,13 @@ const ALL_PRODUCTS = [
     "price": 40499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G7+I5+10Th+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G7+I5+10Th+8/256Gb",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-830-g7-i5-10th-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 830 G7 I5 10Th 8/256Gb Touchscreen",
@@ -488,9 +637,13 @@ const ALL_PRODUCTS = [
     "price": 40499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G7+I5+10Th+8/256Gb+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G7+I5+10Th+8/256Gb+Touchscreen",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-830-g7-i5-10th-8/256gb",
     "brand": "HP",
     "name": "Hp 830 G7 I5 10Th 8/256Gb",
@@ -498,9 +651,13 @@ const ALL_PRODUCTS = [
     "price": 35499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G7+I5+10Th+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G7+I5+10Th+8/256Gb",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-830-g6-i7-8th-16/512gb-touchscreen",
     "brand": "HP",
     "name": "Hp 830 G6 I7 8Th 16/512Gb Touchscreen",
@@ -508,9 +665,13 @@ const ALL_PRODUCTS = [
     "price": 44499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I7+8Th+16/512Gb+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I7+8Th+16/512Gb+Touchscreen",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-830-g6-i7-8th-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 830 G6 I7 8Th 8/256Gb Touchscreen",
@@ -518,9 +679,13 @@ const ALL_PRODUCTS = [
     "price": 35499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I7+8Th+8/256Gb+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I7+8Th+8/256Gb+Touchscreen",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-830-g6-i7-8th-8/256gb",
     "brand": "HP",
     "name": "Hp 830 G6 I7 8Th 8/256Gb",
@@ -528,9 +693,13 @@ const ALL_PRODUCTS = [
     "price": 32499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I7+8Th+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I7+8Th+8/256Gb",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-830-g6-i5-8th-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 830 G6 I5 8Th 8/256Gb Touchscreen",
@@ -538,9 +707,13 @@ const ALL_PRODUCTS = [
     "price": 31499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I5+8Th+8/256Gb+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I5+8Th+8/256Gb+Touchscreen",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-830-g6-i5-8/256gb",
     "brand": "HP",
     "name": "Hp 830 G6 I5 8/256Gb",
@@ -548,9 +721,13 @@ const ALL_PRODUCTS = [
     "price": 29499,
     "category": "exuk business hp budget",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I5+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I5+8/256Gb",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-845-g7-ryzen-7-8/256gb",
     "brand": "HP",
     "name": "Hp 845 G7 Ryzen 7 8/256Gb",
@@ -558,9 +735,13 @@ const ALL_PRODUCTS = [
     "price": 35499,
     "category": "exuk business hp ryzen",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+845+G7+Ryzen+7+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+845+G7+Ryzen+7+8/256Gb",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-735-g6-ryzen-7-8/256gb-2gb-graphics-touchscreen",
     "brand": "HP",
     "name": "Hp 735 G6 Ryzen 7 8/256Gb 2Gb Graphics Touchscreen",
@@ -568,9 +749,13 @@ const ALL_PRODUCTS = [
     "price": 31499,
     "category": "exuk business hp ryzen",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+735+G6+Ryzen+7+8/256Gb+2Gb+Graphics+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+735+G6+Ryzen+7+8/256Gb+2Gb+Graphics+Touchscreen",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "hp-hp-745-ryzen-5-8/256gb-2gb-graphics-touchscreen",
     "brand": "HP",
     "name": "Hp 745 Ryzen 5 8/256Gb 2Gb Graphics Touchscreen",
@@ -578,9 +763,13 @@ const ALL_PRODUCTS = [
     "price": 31499,
     "category": "exuk business hp ryzen",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+745+Ryzen+5+8/256Gb+2Gb+Graphics+Touchscreen"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+745+Ryzen+5+8/256Gb+2Gb+Graphics+Touchscreen",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
-  {
+{
     "id": "apple-macbook-pro-16-m1-2021-32/512gb",
     "brand": "Apple",
     "name": "Macbook Pro 16 M1 2021 32/512Gb",
@@ -588,9 +777,10 @@ const ALL_PRODUCTS = [
     "price": 155000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+16+M1+2021+32/512Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+16+M1+2021+32/512Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-16-i9-32/2tb-with-8gb-graphics",
     "brand": "Apple",
     "name": "Macbook Pro 16 I9 32/2Tb With 8Gb Graphics",
@@ -598,9 +788,10 @@ const ALL_PRODUCTS = [
     "price": 103000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+16+I9+32/2Tb+With+8Gb+Graphics"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+16+I9+32/2Tb+With+8Gb+Graphics",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-16-2019-i9-32/1tb-with-4gn-graphics",
     "brand": "Apple",
     "name": "Macbook Pro 16 2019 I9 32/1Tb With 4Gn Graphics",
@@ -608,9 +799,10 @@ const ALL_PRODUCTS = [
     "price": 98000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+16+2019+I9+32/1Tb+With+4Gn+Graphics"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+16+2019+I9+32/1Tb+With+4Gn+Graphics",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-16-2019-i7-4gb-graphics-32/512gb",
     "brand": "Apple",
     "name": "Macbook Pro 16 2019 I7 4Gb Graphics 32/512Gb",
@@ -618,9 +810,10 @@ const ALL_PRODUCTS = [
     "price": 83000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+16+2019+I7+4Gb+Graphics+32/512Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+16+2019+I7+4Gb+Graphics+32/512Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-15-2019-i7-16/512gb-4gb-graphics",
     "brand": "Apple",
     "name": "Macbook Pro 15 2019 I7 16/512Gb 4Gb Graphics",
@@ -628,9 +821,10 @@ const ALL_PRODUCTS = [
     "price": 68000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+15+2019+I7+16/512Gb+4Gb+Graphics"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+15+2019+I7+16/512Gb+4Gb+Graphics",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-15-2018-i7-16/512gb-4gb-graphics",
     "brand": "Apple",
     "name": "Macbook Pro 15 2018 I7 16/512Gb 4Gb Graphics",
@@ -638,9 +832,10 @@ const ALL_PRODUCTS = [
     "price": 63000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+15+2018+I7+16/512Gb+4Gb+Graphics"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+15+2018+I7+16/512Gb+4Gb+Graphics",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-15-2017-i7-16/512gb-2gb-graphics",
     "brand": "Apple",
     "name": "Macbook Pro 15 2017 I7 16/512Gb 2Gb Graphics",
@@ -648,9 +843,10 @@ const ALL_PRODUCTS = [
     "price": 58000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+15+2017+I7+16/512Gb+2Gb+Graphics"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+15+2017+I7+16/512Gb+2Gb+Graphics",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-15-2015-i7-16/512gb-2gb-graphics",
     "brand": "Apple",
     "name": "Macbook Pro 15 2015 I7 16/512Gb 2Gb Graphics",
@@ -658,19 +854,21 @@ const ALL_PRODUCTS = [
     "price": 46000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+15+2015+I7+16/512Gb+2Gb+Graphics"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+15+2015+I7+16/512Gb+2Gb+Graphics",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-13-i7-2020-16/1tb",
     "brand": "Apple",
     "name": "Macbook Pro 13 I7 2020 16/1Tb",
     "specs": "macbook pro 13 i7 2020 16/1tb",
     "price": 83000,
-    "category": "exuk apple macbook",
+    "category": "exuk apple macbook featured",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+I7+2020+16/1Tb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+I7+2020+16/1Tb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-13-i7-2020-32/512gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 I7 2020 32/512Gb",
@@ -678,9 +876,10 @@ const ALL_PRODUCTS = [
     "price": 83000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+I7+2020+32/512Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+I7+2020+32/512Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-13-2019-i7-16/1tb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2019 I7 16/1Tb",
@@ -688,9 +887,10 @@ const ALL_PRODUCTS = [
     "price": 88000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I7+16/1Tb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I7+16/1Tb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-13-2019-i7-16/512gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2019 I7 16/512Gb",
@@ -698,9 +898,10 @@ const ALL_PRODUCTS = [
     "price": 63000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I7+16/512Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I7+16/512Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-13-2019-i7-16/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2019 I7 16/256Gb",
@@ -708,9 +909,10 @@ const ALL_PRODUCTS = [
     "price": 60000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I7+16/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I7+16/256Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-13-2018-i7-16/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2018 I7 16/256Gb",
@@ -718,9 +920,10 @@ const ALL_PRODUCTS = [
     "price": 58000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2018+I7+16/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2018+I7+16/256Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-13-2019-i5-8/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2019 I5 8/256Gb",
@@ -728,19 +931,21 @@ const ALL_PRODUCTS = [
     "price": 53000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I5+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I5+8/256Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-13-2017-i7-16/1tb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2017 I7 16/1Tb",
     "specs": "macbook pro 13 2017 i7 16/1tb",
     "price": 58000,
-    "category": "exuk apple macbook",
+    "category": "exuk apple macbook featured",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2017+I7+16/1Tb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2017+I7+16/1Tb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-13-2017-i7-16/512gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2017 I7 16/512Gb",
@@ -748,9 +953,10 @@ const ALL_PRODUCTS = [
     "price": 55000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2017+I7+16/512Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2017+I7+16/512Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-13-2017-i5-16/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2017 I5 16/256Gb",
@@ -758,9 +964,10 @@ const ALL_PRODUCTS = [
     "price": 48000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2017+I5+16/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2017+I5+16/256Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-13-2015-i5-8/512gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2015 I5 8/512Gb",
@@ -768,9 +975,10 @@ const ALL_PRODUCTS = [
     "price": 41000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I5+8/512Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I5+8/512Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-13-2015-i5-8/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2015 I5 8/256Gb",
@@ -778,9 +986,10 @@ const ALL_PRODUCTS = [
     "price": 38000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I5+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I5+8/256Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-13-2013-i5-8/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2013 I5 8/256Gb",
@@ -788,9 +997,10 @@ const ALL_PRODUCTS = [
     "price": 33000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2013+I5+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2013+I5+8/256Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-13-2012-i7-8/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2012 I7 8/256Gb",
@@ -798,9 +1008,10 @@ const ALL_PRODUCTS = [
     "price": 31000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2012+I7+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2012+I7+8/256Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-pro-13-2012-i5-8/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2012 I5 8/256Gb",
@@ -808,9 +1019,10 @@ const ALL_PRODUCTS = [
     "price": 30000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2012+I5+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2012+I5+8/256Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-air-m1-2020-8/256gb",
     "brand": "Apple",
     "name": "Macbook Air M1 2020 8/256Gb",
@@ -818,9 +1030,10 @@ const ALL_PRODUCTS = [
     "price": 78000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+M1+2020+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+M1+2020+8/256Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-air-13-2019-i5-16/256gb",
     "brand": "Apple",
     "name": "Macbook Air 13 2019 I5 16/256Gb",
@@ -828,9 +1041,10 @@ const ALL_PRODUCTS = [
     "price": 53000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2019+I5+16/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2019+I5+16/256Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-air-13-2018-i5-8/256gb",
     "brand": "Apple",
     "name": "Macbook Air 13 2018 I5 8/256Gb",
@@ -838,19 +1052,21 @@ const ALL_PRODUCTS = [
     "price": 49000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2018+I5+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2018+I5+8/256Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-air-13-2017-i7-8/256gb",
     "brand": "Apple",
     "name": "Macbook Air 13 2017 I7 8/256Gb",
     "specs": "macbook air 13 2017 i7 8/256gb",
     "price": 40000,
-    "category": "exuk apple macbook",
+    "category": "exuk apple macbook featured",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2017+I7+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2017+I7+8/256Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-air-13-2015-i7-8/256gb",
     "brand": "Apple",
     "name": "Macbook Air 13 2015 I7 8/256Gb",
@@ -858,9 +1074,10 @@ const ALL_PRODUCTS = [
     "price": 36000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2015+I7+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2015+I7+8/256Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-air-13-2017-i5-8/256gb",
     "brand": "Apple",
     "name": "Macbook Air 13 2017 I5 8/256Gb",
@@ -868,9 +1085,10 @@ const ALL_PRODUCTS = [
     "price": 36000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2017+I5+8/256Gb"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2017+I5+8/256Gb",
+    "software": []
   },
-  {
+{
     "id": "apple-macbook-air-13-2015-i5-8/256",
     "brand": "Apple",
     "name": "Macbook Air 13 2015 I5 8/256",
@@ -878,9 +1096,10 @@ const ALL_PRODUCTS = [
     "price": 33000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2015+I5+8/256"
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2015+I5+8/256",
+    "software": []
   },
-  {
+{
     "id": "lenovo-x1-yoga-i5-11th-16/512",
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad X1 yoga i5 11th 16/512",
@@ -888,6 +1107,9 @@ const ALL_PRODUCTS = [
     "price": 65000,
     "category": "exuk business lenovo",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+yoga+i5+11th+16/512"
-  }
-];
+    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+yoga+i5+11th+16/512",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  }];
