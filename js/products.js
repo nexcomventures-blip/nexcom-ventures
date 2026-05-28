@@ -1386,7 +1386,7 @@ const ALL_PRODUCTS = [
     "name": "Hp 840 G3 I5 6Th 8/512Gb",
     "brand": "HP",
     "category": "laptops",
-    "price": 31499,
+    "price": 29999,
     "description": "HP EliteBook 840 G3 | Intel Core i5 6th Gen | 8GB RAM | 512GB SSD | 14\" FHD Display | Backlit Keyboard | Windows 11 Pro",
     "specs": {
       "processor": "Intel Core i5 6th Gen",
@@ -1404,7 +1404,7 @@ const ALL_PRODUCTS = [
     "name": "Lenovo T14S I5 10Th 8/256Gb",
     "brand": "Lenovo",
     "category": "laptops",
-    "price": 34499,
+    "price": 32999,
     "description": "Lenovo ThinkPad T14s | Intel Core i5 10th Gen | 8GB RAM | 256GB SSD | 14\" FHD Display | Backlit Keyboard | Windows 11 Pro",
     "specs": {
       "processor": "Intel Core i5 10th Gen",
@@ -1422,7 +1422,7 @@ const ALL_PRODUCTS = [
     "name": "Lenovo T480S I7 8Th 8/256Gb Touchscreen",
     "brand": "Lenovo",
     "category": "laptops",
-    "price": 33499,
+    "price": 31999,
     "description": "Lenovo ThinkPad T480s | Intel Core i7 8th Gen | 8GB RAM | 256GB SSD | 14\" FHD Touchscreen | Backlit Keyboard | Windows 11 Pro",
     "specs": {
       "processor": "Intel Core i7 8th Gen",
@@ -1440,7 +1440,7 @@ const ALL_PRODUCTS = [
     "name": "Lenovo T480S I7 8Th 8/256Gb",
     "brand": "Lenovo",
     "category": "laptops",
-    "price": 31999,
+    "price": 30499,
     "description": "Lenovo ThinkPad T480s | Intel Core i7 8th Gen | 8GB RAM | 256GB SSD | 14\" FHD Display | Backlit Keyboard | Windows 11 Pro",
     "specs": {
       "processor": "Intel Core i7 8th Gen",
