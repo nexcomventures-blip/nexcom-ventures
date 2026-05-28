@@ -689,20 +689,6 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "hp-hp-830-g7-i5-10th-8/256gb",
-    "brand": "HP",
-    "name": "Hp 830 G7 I5 10Th 8/256Gb",
-    "specs": "hp 830 g7 i5 10th 8/256gb",
-    "price": 40499,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G7+I5+10Th+8/256Gb",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
-  },
-  {
     "id": "hp-hp-830-g7-i5-10th-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 830 G7 I5 10Th 8/256Gb Touchscreen",
@@ -829,7 +815,7 @@ const ALL_PRODUCTS = [
     "id": "apple-macbook-pro-16-i9-32/2tb-with-8gb-graphics",
     "brand": "Apple",
     "name": "Macbook Pro 16 I9 32/2Tb With 8Gb Graphics",
-    "specs": "macbook pro 16 i9 32/2tb \nwith 8gb graphics",
+    "specs": "macbook pro 16 i9 32/2tb  with 8gb graphics",
     "price": 103000,
     "category": "exuk apple macbook",
     "badge": "exuk",
@@ -840,7 +826,7 @@ const ALL_PRODUCTS = [
     "id": "apple-macbook-pro-16-2019-i9-32/1tb-with-4gn-graphics",
     "brand": "Apple",
     "name": "Macbook Pro 16 2019 I9 32/1Tb With 4Gn Graphics",
-    "specs": "macbook pro 16 2019 i9 32/1tb \nwith 4gn graphics",
+    "specs": "macbook pro 16 2019 i9 32/1tb  with 4gn graphics",
     "price": 98000,
     "category": "exuk apple macbook",
     "badge": "exuk",
@@ -1376,5 +1362,23 @@ const ALL_PRODUCTS = [
       "Windows 11",
       "Microsoft Office 2024"
     ]
+  },
+  {
+    "id": "hp-830-g6-i5-8th-8256gb-x360-touchscreen",
+    "name": "Hp 830 G6 I5 8Th 8/256Gb X360 Touchscreen",
+    "brand": "HP",
+    "category": "laptops",
+    "price": 40499,
+    "description": "HP EliteBook 830 G6 | Intel Core i5 8th Gen | 8GB RAM | 256GB SSD | 13.3\" FHD IPS X360 Touchscreen | Backlit Keyboard | Windows 11 Pro",
+    "specs": {
+      "processor": "Intel Core i5 8th Gen",
+      "ram": "8GB",
+      "storage": "256GB SSD",
+      "display": "13.3\" FHD IPS X360 Touchscreen",
+      "os": "Windows 11 Pro"
+    },
+    "inStock": true,
+    "featured": false,
+    "images": []
   }
 ];
