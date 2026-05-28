@@ -1422,7 +1422,7 @@ const ALL_PRODUCTS = [
     "name": "Lenovo T480S I7 8Th 8/256Gb Touchscreen",
     "brand": "Lenovo",
     "category": "laptops",
-    "price": 31999,
+    "price": 34999,
     "description": "Lenovo ThinkPad T480s | Intel Core i7 8th Gen | 8GB RAM | 256GB SSD | 14\" FHD Touchscreen | Backlit Keyboard | Windows 11 Pro",
     "specs": {
       "processor": "Intel Core i7 8th Gen",
@@ -1440,7 +1440,7 @@ const ALL_PRODUCTS = [
     "name": "Lenovo T480S I7 8Th 8/256Gb",
     "brand": "Lenovo",
     "category": "laptops",
-    "price": 30499,
+    "price": 33499,
     "description": "Lenovo ThinkPad T480s | Intel Core i7 8th Gen | 8GB RAM | 256GB SSD | 14\" FHD Display | Backlit Keyboard | Windows 11 Pro",
     "specs": {
       "processor": "Intel Core i7 8th Gen",
