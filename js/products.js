@@ -1380,5 +1380,149 @@ const ALL_PRODUCTS = [
     "inStock": true,
     "featured": false,
     "images": []
+  },
+  {
+    "id": "hp-840-g3-i5-6th-8-512gb",
+    "name": "Hp 840 G3 I5 6Th 8/512Gb",
+    "brand": "HP",
+    "category": "laptops",
+    "price": 31499,
+    "description": "HP EliteBook 840 G3 | Intel Core i5 6th Gen | 8GB RAM | 512GB SSD | 14\" FHD Display | Backlit Keyboard | Windows 11 Pro",
+    "specs": {
+      "processor": "Intel Core i5 6th Gen",
+      "ram": "8GB",
+      "storage": "512GB SSD",
+      "display": "14\" FHD",
+      "os": "Windows 11 Pro"
+    },
+    "inStock": true,
+    "featured": false,
+    "images": []
+  },
+  {
+    "id": "lenovo-t14s-i5-10th-8-256gb",
+    "name": "Lenovo T14S I5 10Th 8/256Gb",
+    "brand": "Lenovo",
+    "category": "laptops",
+    "price": 34499,
+    "description": "Lenovo ThinkPad T14s | Intel Core i5 10th Gen | 8GB RAM | 256GB SSD | 14\" FHD Display | Backlit Keyboard | Windows 11 Pro",
+    "specs": {
+      "processor": "Intel Core i5 10th Gen",
+      "ram": "8GB",
+      "storage": "256GB SSD",
+      "display": "14\" FHD",
+      "os": "Windows 11 Pro"
+    },
+    "inStock": true,
+    "featured": false,
+    "images": []
+  },
+  {
+    "id": "lenovo-t480s-i7-8th-8-256gb-touchscreen",
+    "name": "Lenovo T480S I7 8Th 8/256Gb Touchscreen",
+    "brand": "Lenovo",
+    "category": "laptops",
+    "price": 33499,
+    "description": "Lenovo ThinkPad T480s | Intel Core i7 8th Gen | 8GB RAM | 256GB SSD | 14\" FHD Touchscreen | Backlit Keyboard | Windows 11 Pro",
+    "specs": {
+      "processor": "Intel Core i7 8th Gen",
+      "ram": "8GB",
+      "storage": "256GB SSD",
+      "display": "14\" FHD Touchscreen",
+      "os": "Windows 11 Pro"
+    },
+    "inStock": true,
+    "featured": false,
+    "images": []
+  },
+  {
+    "id": "lenovo-t480s-i7-8th-8-256gb",
+    "name": "Lenovo T480S I7 8Th 8/256Gb",
+    "brand": "Lenovo",
+    "category": "laptops",
+    "price": 31999,
+    "description": "Lenovo ThinkPad T480s | Intel Core i7 8th Gen | 8GB RAM | 256GB SSD | 14\" FHD Display | Backlit Keyboard | Windows 11 Pro",
+    "specs": {
+      "processor": "Intel Core i7 8th Gen",
+      "ram": "8GB",
+      "storage": "256GB SSD",
+      "display": "14\" FHD",
+      "os": "Windows 11 Pro"
+    },
+    "inStock": true,
+    "featured": false,
+    "images": []
+  },
+  {
+    "id": "lenovo-500w-pentium-8-128gb-x360-touchscreen",
+    "name": "Lenovo 500W Pentium 8/128Gb X360 Touchscreen",
+    "brand": "Lenovo",
+    "category": "laptops",
+    "price": 19999,
+    "description": "Lenovo 500w | Intel Pentium | 8GB RAM | 128GB SSD | 11.6\" HD X360 Touchscreen | Windows 11 Pro",
+    "specs": {
+      "processor": "Intel Pentium",
+      "ram": "8GB",
+      "storage": "128GB SSD",
+      "display": "11.6\" HD X360 Touchscreen",
+      "os": "Windows 11 Pro"
+    },
+    "inStock": true,
+    "featured": false,
+    "images": []
+  },
+  {
+    "id": "lenovo-d330-2in1-celeron-4-64gb",
+    "name": "Lenovo D330 2In1 Celeron 4/64Gb Detachable",
+    "brand": "Lenovo",
+    "category": "laptops",
+    "price": 14999,
+    "description": "Lenovo D330 2-in-1 | Intel Celeron | 4GB RAM | 64GB Storage | 10.1\" HD Touchscreen | Detachable Keyboard | Windows 11",
+    "specs": {
+      "processor": "Intel Celeron",
+      "ram": "4GB",
+      "storage": "64GB",
+      "display": "10.1\" HD Touchscreen",
+      "os": "Windows 11"
+    },
+    "inStock": true,
+    "featured": false,
+    "images": []
+  },
+  {
+    "id": "nec-versa-pro-2in1-i5-7th-8-128gb-stylus",
+    "name": "NEC Versa Pro 2In1 I5 7Th 8/128Gb Stylus Detachable",
+    "brand": "NEC",
+    "category": "laptops",
+    "price": 21999,
+    "description": "NEC Versa Pro 2-in-1 | Intel Core i5 7th Gen | 8GB RAM | 128GB SSD | Touchscreen | Stylus Pen Included | Detachable Keyboard | Windows 11 Pro",
+    "specs": {
+      "processor": "Intel Core i5 7th Gen",
+      "ram": "8GB",
+      "storage": "128GB SSD",
+      "display": "Touchscreen",
+      "os": "Windows 11 Pro"
+    },
+    "inStock": true,
+    "featured": false,
+    "images": []
+  },
+  {
+    "id": "nec-versa-pro-2in1-i5-7th-4-128gb-no-keyboard",
+    "name": "NEC Versa Pro 2In1 I5 7Th 4/128Gb No Keyboard",
+    "brand": "NEC",
+    "category": "laptops",
+    "price": 14999,
+    "description": "NEC Versa Pro 2-in-1 | Intel Core i5 7th Gen | 4GB RAM | 128GB SSD | Touchscreen | Stylus Pen Included | No Keyboard | Windows 11 Pro",
+    "specs": {
+      "processor": "Intel Core i5 7th Gen",
+      "ram": "4GB",
+      "storage": "128GB SSD",
+      "display": "Touchscreen",
+      "os": "Windows 11 Pro"
+    },
+    "inStock": true,
+    "featured": false,
+    "images": []
   }
 ];
