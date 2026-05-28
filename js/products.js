@@ -1113,5 +1113,268 @@ const ALL_PRODUCTS = [
       "Windows 11",
       "Microsoft Office 2024"
     ]
+  },
+  {
+    "id": "tmp-2574",
+    "brand": "Apple",
+    "name": "Macbook Pro 13 M1 8/256Gb",
+    "specs": "macbook pro 13 m1 8/256gb",
+    "price": 98499,
+    "category": "exuk apple macbook",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
+    "software": []
+  },
+  {
+    "id": "tmp-3500",
+    "brand": "Lenovo",
+    "name": "Lenovo T490s I5 8th 16/256Gb Touchscreen",
+    "specs": "lenovo t490s i5 8th 16/256gb touchscreen",
+    "price": 33499,
+    "category": "exuk business lenovo touchscreen",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-9712",
+    "brand": "Lenovo",
+    "name": "Lenovo T490s I5 8th 8/256Gb",
+    "specs": "lenovo t490s i5 8th 8/256gb",
+    "price": 30499,
+    "category": "exuk business lenovo",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-6928",
+    "brand": "Lenovo",
+    "name": "Lenovo T480s I5 8th 8/256Gb Touchscreen",
+    "specs": "lenovo t480s i5 8th 8/256gb touchscreen",
+    "price": 30499,
+    "category": "exuk business lenovo touchscreen",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-1107",
+    "brand": "Lenovo",
+    "name": "Lenovo T480s I5 8th 8/256Gb",
+    "specs": "lenovo t480s i5 8th 8/256gb",
+    "price": 29499,
+    "category": "exuk business lenovo",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-5150",
+    "brand": "Lenovo",
+    "name": "Lenovo T460s I5 6th 8/256Gb Touchscreen",
+    "specs": "lenovo t460s i5 6th 8/256gb touchscreen",
+    "price": 23499,
+    "category": "exuk business lenovo touchscreen",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-9897",
+    "brand": "Lenovo",
+    "name": "Lenovo T460s I5 6th 8/256Gb",
+    "specs": "lenovo t460s i5 6th 8/256gb",
+    "price": 22499,
+    "category": "exuk business lenovo",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-1691",
+    "brand": "Lenovo",
+    "name": "Lenovo Yoga 9I 14ITL5 I7 11th 16/512Gb",
+    "specs": "lenovo yoga 9i 14itl5 i7 11th 16/512gb",
+    "price": 85499,
+    "category": "exuk business lenovo yoga touchscreen",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_x1_yoga.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-5557",
+    "brand": "Lenovo",
+    "name": "Lenovo Yoga X390 I5 8th 16/256Gb",
+    "specs": "lenovo yoga x390 i5 8th 16/256gb",
+    "price": 35499,
+    "category": "exuk business lenovo yoga touchscreen",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_x1_yoga.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-7677",
+    "brand": "Lenovo",
+    "name": "Lenovo Yoga X380 I5 8th 16/256Gb",
+    "specs": "lenovo yoga x380 i5 8th 16/256gb",
+    "price": 34499,
+    "category": "exuk business lenovo yoga touchscreen",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_x1_yoga.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-1737",
+    "brand": "Lenovo",
+    "name": "Lenovo Yoga X380 I5 8th 8/256Gb",
+    "specs": "lenovo yoga x380 i5 8th 8/256gb",
+    "price": 33499,
+    "category": "exuk business lenovo yoga touchscreen",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_x1_yoga.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-6432",
+    "brand": "HP",
+    "name": "Hp 1030 G8 I7 11th 16/512Gb X360 Touchscreen",
+    "specs": "hp 1030 g8 i7 11th 16/512gb x360 touchscreen",
+    "price": 72499,
+    "category": "exuk business hp touchscreen",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-7332",
+    "brand": "HP",
+    "name": "Hp 1030 G8 I5 11th 16/512Gb X360 Touchscreen",
+    "specs": "hp 1030 g8 i5 11th 16/512gb x360 touchscreen",
+    "price": 59499,
+    "category": "exuk business hp touchscreen",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-7861",
+    "brand": "HP",
+    "name": "Hp 1030 G4 I7 8th 16/512Gb X360 Touchscreen",
+    "specs": "hp 1030 g4 i7 8th 16/512gb x360 touchscreen",
+    "price": 56499,
+    "category": "exuk business hp touchscreen",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-2133",
+    "brand": "HP",
+    "name": "Hp 1040 G9 I7 12th 16/512Gb X360 Touchscreen",
+    "specs": "hp 1040 g9 i7 12th 16/512gb x360 touchscreen",
+    "price": 85499,
+    "category": "exuk business hp touchscreen",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_elitebook_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-9083",
+    "brand": "HP",
+    "name": "Hp 1040 G9 I5 12th 16/512Gb X360 Touchscreen",
+    "specs": "hp 1040 g9 i5 12th 16/512gb x360 touchscreen",
+    "price": 72499,
+    "category": "exuk business hp touchscreen",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_elitebook_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-9431",
+    "brand": "HP",
+    "name": "Hp 1040 G8 I7 11th 16/512Gb X360 Touchscreen",
+    "specs": "hp 1040 g8 i7 11th 16/512gb x360 touchscreen",
+    "price": 72499,
+    "category": "exuk business hp touchscreen",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_elitebook_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-3714",
+    "brand": "HP",
+    "name": "Hp 1040 G8 I5 11th 16/512Gb X360 Touchscreen",
+    "specs": "hp 1040 g8 i5 11th 16/512gb x360 touchscreen",
+    "price": 65499,
+    "category": "exuk business hp touchscreen",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_elitebook_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-7794",
+    "brand": "HP",
+    "name": "Hp 830 G5 I5 8th 8/256Gb Touchscreen",
+    "specs": "hp 830 g5 i5 8th 8/256gb touchscreen",
+    "price": 34499,
+    "category": "exuk business hp touchscreen",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g6.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   }
 ];
