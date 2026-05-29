@@ -7,7 +7,7 @@ const ALL_PRODUCTS = [
     "price": 31499,
     "category": "exuk business hp featured",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I5+8Th+8/256Gb+Touchscreen",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_830_g6.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -49,7 +49,7 @@ const ALL_PRODUCTS = [
     "price": 28000,
     "category": "exuk apple macbook budget featured",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2011+I5+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -60,7 +60,7 @@ const ALL_PRODUCTS = [
     "price": 48499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G8+I7+11Th+8/256Gb+Touchscreen",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -74,7 +74,7 @@ const ALL_PRODUCTS = [
     "price": 31499,
     "category": "exuk business hp ryzen",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+735+G6+Ryzen+7+8/256Gb+2Gb+Graphics+Touchscreen",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -88,7 +88,7 @@ const ALL_PRODUCTS = [
     "price": 68000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+15+2019+I7+16/512Gb+4Gb+Graphics",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_15_usbc.jpg",
     "software": []
   },
   {
@@ -99,7 +99,7 @@ const ALL_PRODUCTS = [
     "price": 31000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2012+I7+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -110,7 +110,7 @@ const ALL_PRODUCTS = [
     "price": 35499,
     "category": "exuk business hp ryzen",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+845+G7+Ryzen+7+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -124,7 +124,7 @@ const ALL_PRODUCTS = [
     "price": 36000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2013+I7+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -135,7 +135,7 @@ const ALL_PRODUCTS = [
     "price": 36000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2015+I7+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
     "software": []
   },
   {
@@ -146,7 +146,7 @@ const ALL_PRODUCTS = [
     "price": 49000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2018+I5+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
     "software": []
   },
   {
@@ -157,7 +157,7 @@ const ALL_PRODUCTS = [
     "price": 75000,
     "category": "exuk business lenovo",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+yoga+i7+11th+16/512",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_x1_yoga.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -171,7 +171,7 @@ const ALL_PRODUCTS = [
     "price": 55000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I5+16/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -196,7 +196,7 @@ const ALL_PRODUCTS = [
     "price": 125000,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+Spectre+15+2+In1+Intel+Coi7+10Th+Gen+16/512+2Gb+Graphics+/=+Only",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -210,7 +210,7 @@ const ALL_PRODUCTS = [
     "price": 44499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I5+8Th+16/512Gb+x360+Touchscreen",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_830_g6.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -224,7 +224,7 @@ const ALL_PRODUCTS = [
     "price": 31499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I5+7Th+8/256Gb+Touchscreen",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -238,7 +238,7 @@ const ALL_PRODUCTS = [
     "price": 85499,
     "category": "exuk business lenovo",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+yoga+i7+12th+16/512",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_x1_yoga.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -252,7 +252,7 @@ const ALL_PRODUCTS = [
     "price": 30499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G6+I5+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g6.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -266,7 +266,7 @@ const ALL_PRODUCTS = [
     "price": 78000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+I7+2020+16/512Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -277,7 +277,7 @@ const ALL_PRODUCTS = [
     "price": 30000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2013+I5+8/128",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
     "software": []
   },
   {
@@ -288,7 +288,7 @@ const ALL_PRODUCTS = [
     "price": 43499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G7+I7+11Th+8/256Gb+Touchscreen",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -302,7 +302,7 @@ const ALL_PRODUCTS = [
     "price": 41000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I5+16/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -357,7 +357,7 @@ const ALL_PRODUCTS = [
     "price": 61000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+15+2017+I7+16/512Gb+4Gb+Graphics",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_15_usbc.jpg",
     "software": []
   },
   {
@@ -368,7 +368,7 @@ const ALL_PRODUCTS = [
     "price": 35000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2014+I5+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -379,7 +379,7 @@ const ALL_PRODUCTS = [
     "price": 43000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I5+16/512Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -390,7 +390,7 @@ const ALL_PRODUCTS = [
     "price": 42499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I7+8Th+8/256Gb+x360+Touchscreen",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_830_g6.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -404,7 +404,7 @@ const ALL_PRODUCTS = [
     "price": 41000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I7+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -415,7 +415,7 @@ const ALL_PRODUCTS = [
     "price": 35000,
     "category": "exuk business lenovo",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+x1+carbon+i7+8th",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -444,7 +444,7 @@ const ALL_PRODUCTS = [
     "category": "exuk business lenovo",
     "badge": "exuk",
     "inStock": false,
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+x13+i7+10th+16/512gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -458,7 +458,7 @@ const ALL_PRODUCTS = [
     "price": 50000,
     "category": "exuk business dell",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Dell+xps+15+9570+i7",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -472,7 +472,7 @@ const ALL_PRODUCTS = [
     "price": 60000,
     "category": "exuk business dell",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Dell+xps+13+9305+i7",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -486,7 +486,7 @@ const ALL_PRODUCTS = [
     "price": 32000,
     "category": "exuk business lenovo",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+x390+i5+8th+8/256gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -584,7 +584,7 @@ const ALL_PRODUCTS = [
     "price": 35499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I7+8/256Gb+Touchscreen",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -598,7 +598,7 @@ const ALL_PRODUCTS = [
     "price": 33499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I7+8Th+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -612,7 +612,7 @@ const ALL_PRODUCTS = [
     "price": 32499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G5+I5+8Th+8/256Gb+Touchscreen",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -626,7 +626,7 @@ const ALL_PRODUCTS = [
     "price": 21499,
     "category": "exuk business hp budget",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G1+I5+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -640,7 +640,7 @@ const ALL_PRODUCTS = [
     "price": 22499,
     "category": "exuk business hp budget",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+840+G1+I7+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -654,7 +654,7 @@ const ALL_PRODUCTS = [
     "price": 21999,
     "category": "exuk business hp budget",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+820+G1+I7+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -668,7 +668,7 @@ const ALL_PRODUCTS = [
     "price": 22499,
     "category": "exuk business hp budget",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+820+G2+I7+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -682,7 +682,7 @@ const ALL_PRODUCTS = [
     "price": 61499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G8+I7+11Th+16/512Gb+x360+Touchscreen",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -696,7 +696,7 @@ const ALL_PRODUCTS = [
     "price": 53499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G8+I5+11Th+16/512Gb+x360+Touchscreen",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -710,7 +710,7 @@ const ALL_PRODUCTS = [
     "price": 42499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G8+I5+11Th+8/256Gb+Touchscreen",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -724,7 +724,7 @@ const ALL_PRODUCTS = [
     "price": 40499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G8+I5+11Th+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -738,7 +738,7 @@ const ALL_PRODUCTS = [
     "price": 40499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G7+I5+10Th+8/256Gb+Touchscreen",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -752,7 +752,7 @@ const ALL_PRODUCTS = [
     "price": 35499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G7+I5+10Th+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -766,7 +766,7 @@ const ALL_PRODUCTS = [
     "price": 44499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I7+8Th+16/512Gb+Touchscreen",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_830_g6.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -780,7 +780,7 @@ const ALL_PRODUCTS = [
     "price": 35499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I7+8Th+8/256Gb+Touchscreen",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_830_g6.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -794,7 +794,7 @@ const ALL_PRODUCTS = [
     "price": 32499,
     "category": "exuk business hp",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I7+8Th+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_830_g6.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -808,7 +808,7 @@ const ALL_PRODUCTS = [
     "price": 29499,
     "category": "exuk business hp budget",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+830+G6+I5+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_830_g6.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -822,7 +822,7 @@ const ALL_PRODUCTS = [
     "price": 31499,
     "category": "exuk business hp ryzen",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Hp+745+Ryzen+5+8/256Gb+2Gb+Graphics+Touchscreen",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -836,7 +836,7 @@ const ALL_PRODUCTS = [
     "price": 155000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+16+M1+2021+32/512Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_16_2019.jpg",
     "software": []
   },
   {
@@ -847,7 +847,7 @@ const ALL_PRODUCTS = [
     "price": 103000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+16+I9+32/2Tb+With+8Gb+Graphics",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_16_2019.jpg",
     "software": []
   },
   {
@@ -858,7 +858,7 @@ const ALL_PRODUCTS = [
     "price": 98000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+16+2019+I9+32/1Tb+With+4Gn+Graphics",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_16_2019.jpg",
     "software": []
   },
   {
@@ -869,7 +869,7 @@ const ALL_PRODUCTS = [
     "price": 83000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+16+2019+I7+4Gb+Graphics+32/512Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_16_2019.jpg",
     "software": []
   },
   {
@@ -880,7 +880,7 @@ const ALL_PRODUCTS = [
     "price": 63000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+15+2018+I7+16/512Gb+4Gb+Graphics",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_15_usbc.jpg",
     "software": []
   },
   {
@@ -891,7 +891,7 @@ const ALL_PRODUCTS = [
     "price": 58000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+15+2017+I7+16/512Gb+2Gb+Graphics",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_15_usbc.jpg",
     "software": []
   },
   {
@@ -902,7 +902,7 @@ const ALL_PRODUCTS = [
     "price": 46000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+15+2015+I7+16/512Gb+2Gb+Graphics",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_15_usbc.jpg",
     "software": []
   },
   {
@@ -913,7 +913,7 @@ const ALL_PRODUCTS = [
     "price": 83000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+I7+2020+16/1Tb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -924,7 +924,7 @@ const ALL_PRODUCTS = [
     "price": 83000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+I7+2020+32/512Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -935,7 +935,7 @@ const ALL_PRODUCTS = [
     "price": 88000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I7+16/1Tb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -946,7 +946,7 @@ const ALL_PRODUCTS = [
     "price": 63000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I7+16/512Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -957,7 +957,7 @@ const ALL_PRODUCTS = [
     "price": 60000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I7+16/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -968,7 +968,7 @@ const ALL_PRODUCTS = [
     "price": 58000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2018+I7+16/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -979,7 +979,7 @@ const ALL_PRODUCTS = [
     "price": 53000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2019+I5+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -990,7 +990,7 @@ const ALL_PRODUCTS = [
     "price": 58000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2017+I7+16/1Tb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -1001,7 +1001,7 @@ const ALL_PRODUCTS = [
     "price": 55000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2017+I7+16/512Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -1012,7 +1012,7 @@ const ALL_PRODUCTS = [
     "price": 48000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2017+I5+16/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -1023,7 +1023,7 @@ const ALL_PRODUCTS = [
     "price": 41000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I5+8/512Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -1034,7 +1034,7 @@ const ALL_PRODUCTS = [
     "price": 38000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2015+I5+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -1045,7 +1045,7 @@ const ALL_PRODUCTS = [
     "price": 33000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2013+I5+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -1056,7 +1056,7 @@ const ALL_PRODUCTS = [
     "price": 30000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Pro+13+2012+I5+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
@@ -1067,7 +1067,7 @@ const ALL_PRODUCTS = [
     "price": 78000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+M1+2020+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
     "software": []
   },
   {
@@ -1089,7 +1089,7 @@ const ALL_PRODUCTS = [
     "price": 40000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2017+I7+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
     "software": []
   },
   {
@@ -1100,7 +1100,7 @@ const ALL_PRODUCTS = [
     "price": 36000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2017+I5+8/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
     "software": []
   },
   {
@@ -1111,7 +1111,7 @@ const ALL_PRODUCTS = [
     "price": 33000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2015+I5+8/256",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
     "software": []
   },
   {
@@ -1122,7 +1122,7 @@ const ALL_PRODUCTS = [
     "price": 66999,
     "category": "exuk business lenovo",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Lenovo+X1+yoga+i5+11th+16/512",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_x1_yoga.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -1357,7 +1357,7 @@ const ALL_PRODUCTS = [
     "price": 34499,
     "category": "exuk business hp touchscreen",
     "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g6.jpg",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_830_g6.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
