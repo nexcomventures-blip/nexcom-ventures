@@ -1525,4 +1525,93 @@ const ALL_PRODUCTS = [
     "featured": false,
     "images": []
   }
+,
+  {
+    "id": "new-dell-dc15250-i5-8-512",
+    "brand": "Dell",
+    "name": "Dell 15 DC15250 (Core i5 / 8GB / 512GB)",
+    "specs": "Intel Core i5-1334U | 8GB RAM | 512GB SSD | 15.6\" FHD | Ubuntu | Brand New",
+    "price": 71110,
+    "category": "new business dell",
+    "badge": "new",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
+    "software": []
+  },
+    {
+    "id": "new-dell-latitude-3450-i5-8-512",
+    "brand": "Dell",
+    "name": "Dell Latitude 3450 (Core i5 / 8GB / 512GB)",
+    "specs": "Intel Core i5-1335U | 8GB RAM | 512GB SSD | 14.0\" FHD | Ubuntu | Brand New",
+    "price": 106102,
+    "category": "new business dell",
+    "badge": "new",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
+    "software": []
+  },
+    {
+    "id": "new-dell-latitude-3450-i7-8-512",
+    "brand": "Dell",
+    "name": "Dell Latitude 3450 (Core i7 / 8GB / 512GB)",
+    "specs": "Intel Core i7-1355U | 8GB RAM | 512GB SSD | 14.0\" FHD | Ubuntu | Brand New",
+    "price": 131638,
+    "category": "new business dell",
+    "badge": "new",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
+    "software": []
+  },
+    {
+    "id": "new-dell-latitude-5450-ultra5-8-512",
+    "brand": "Dell",
+    "name": "Dell Latitude 5450 (Core Ultra 5 / 8GB / 512GB)",
+    "specs": "Intel Core Ultra 5 125U | 8GB RAM | 512GB SSD | 14.0\" FHD | Ubuntu | Brand New",
+    "price": 133289,
+    "category": "new business dell",
+    "badge": "new",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
+    "software": []
+  },
+    {
+    "id": "new-dell-pro14-pc14250-ultra7-8-512",
+    "brand": "Dell",
+    "name": "Dell Pro 14 PC14250 (Core Ultra 7 / 8GB / 512GB)",
+    "specs": "Intel Core Ultra 7 265U | 8GB RAM | 512GB SSD | 14\" FHD+ | Ubuntu | Brand New",
+    "price": 137306,
+    "category": "new business dell",
+    "badge": "new",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
+    "software": []
+  },
+    {
+    "id": "new-dell-pro14plus-pb14250-ultra5-8-512",
+    "brand": "Dell",
+    "name": "Dell Pro 14 Plus PB14250 (Core Ultra 5 / 8GB / 512GB)",
+    "specs": "Intel Core Ultra 5 235U | 8GB RAM | 512GB SSD | 14.0\" FHD+ | Ubuntu | Brand New",
+    "price": 140293,
+    "category": "new business dell",
+    "badge": "new",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
+    "software": []
+  },
+    {
+    "id": "new-dell-pro14plus-pb14250-ultra5v-16-512",
+    "brand": "Dell",
+    "name": "Dell Pro 14 Plus PB14250 (Core Ultra 5 / 16GB / 512GB)",
+    "specs": "Intel Core Ultra 5 236V | 16GB RAM | 512GB SSD | 14.0\" FHD+ | Ubuntu | Brand New",
+    "price": 148496,
+    "category": "new business dell",
+    "badge": "new",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
+    "software": []
+  },
+    {
+    "id": "new-dell-pro14plus-pb14250-ultra7-16-512",
+    "brand": "Dell",
+    "name": "Dell Pro 14 Plus PB14250 (Core Ultra 7 / 16GB / 512GB)",
+    "specs": "Intel Core Ultra 7 266V | 16GB RAM | 512GB SSD | 14.0\" FHD+ | Ubuntu | Brand New",
+    "price": 185939,
+    "category": "new business dell",
+    "badge": "new",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
+    "software": []
+  }
 ];
