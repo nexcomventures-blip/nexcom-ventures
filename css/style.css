@@ -3,10 +3,10 @@
    ============================================ */
 
 :root {
-  --primary: #800000;
-  --primary-dark: #660000;
-  --secondary: #800000;
-  --accent: #a52a2a;
+  --primary: #C5222A;
+  --primary-dark: #9E1318;
+  --secondary: #C5222A;
+  --accent: #C5222A;
   --bg: #f2f4f7;
   --bg2: #e9ecef;
   --bg3: #dee2e6;
@@ -16,8 +16,8 @@
   --gray: #6c757d;
   --success: #10b981;
   --whatsapp: #25d366;
-  --gradient: linear-gradient(135deg, #800000, #660000);
-  --glow: 0 0 40px rgba(128,0,0,0.25);
+  --gradient: linear-gradient(135deg, #C5222A, #9E1318);
+  --glow: 0 0 40px rgba(197,34,42,0.25);
   --radius: 16px;
   --radius-sm: 10px;
   --shadow: 0 10px 30px rgba(0,0,0,0.04);
@@ -214,7 +214,7 @@ body {
   align-items: center;
   overflow: hidden;
   z-index: 1001;
-  border-bottom: 1px solid rgba(240,26,36,0.3);
+  border-bottom: 1px solid rgba(197,34,42,0.3);
 }
 #announcement-bar .ticker-wrapper {
   display: flex;
@@ -288,7 +288,7 @@ body {
   font-weight: 800;
 }
 #announcement-bar .ticker-item .tag {
-  background: rgba(240,26,36,0.15);
+  background: rgba(197,34,42,0.15);
   color: var(--primary);
   font-size: 0.6rem;
   font-weight: 800;
@@ -296,7 +296,7 @@ body {
   text-transform: uppercase;
   padding: 2px 7px;
   border-radius: 20px;
-  border: 1px solid rgba(240,26,36,0.25);
+  border: 1px solid rgba(197,34,42,0.25);
 }
 @keyframes ticker-scroll {
   0%   { transform: translateX(0); }
@@ -357,7 +357,7 @@ body {
   margin: 2px 0;
 }
 .dropdown-content a:hover {
-  background-color: rgba(128,0,0,0.05) !important;
+  background-color: rgba(197,34,42,0.05) !important;
   color: var(--primary) !important;
   padding-left: 22px !important;
 }
@@ -535,12 +535,12 @@ body {
 .orb1 {
   width: 600px; height: 600px;
   top: -200px; left: -200px;
-  background: radial-gradient(circle, #660000, transparent);
+  background: radial-gradient(circle, #9E1318, transparent);
 }
 .orb2 {
   width: 500px; height: 500px;
   bottom: -100px; right: -100px;
-  background: radial-gradient(circle, #800000, transparent);
+  background: radial-gradient(circle, #C5222A, transparent);
 }
 .hero-grid {
   position: absolute; inset: 0;
@@ -668,9 +668,9 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  box-shadow: 0 10px 25px rgba(128,0,0,0.25);
+  box-shadow: 0 10px 25px rgba(197,34,42,0.25);
 }
-.btn-primary:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 15px 35px rgba(128,0,0,0.35); }
+.btn-primary:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 15px 35px rgba(197,34,42,0.35); }
 
 .btn-secondary {
   background: #fff;
@@ -685,7 +685,7 @@ body {
   display: inline-flex;
   align-items: center;
 }
-.btn-secondary:hover { border-color: var(--primary); color: var(--primary); background: rgba(128,0,0,0.02); }
+.btn-secondary:hover { border-color: var(--primary); color: var(--primary); background: rgba(197,34,42,0.02); }
 .btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
 
 .btn-outline {
@@ -887,7 +887,7 @@ body {
   font-size: 1.75rem;
   font-weight: 800;
   color: var(--primary);
-  text-shadow: 0 0 15px rgba(240,26,36,0.2);
+  text-shadow: 0 0 15px rgba(197,34,42,0.2);
 }
 
 .laptop-card {
@@ -1017,7 +1017,7 @@ section {
 .search-input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 20px rgba(240,26,36,0.1);
+  box-shadow: 0 0 20px rgba(197,34,42,0.1);
   background: var(--bg3);
 }
 
@@ -1419,8 +1419,8 @@ section {
   margin: 1rem 0;
 }
 .sell-tags span {
-  background: rgba(128,0,0,0.08);
-  border: 1px solid rgba(128,0,0,0.2);
+  background: rgba(197,34,42,0.08);
+  border: 1px solid rgba(197,34,42,0.2);
   color: var(--text);
   font-size: 0.78rem;
   font-weight: 600;
@@ -1442,7 +1442,7 @@ section {
   left: calc(16.6% + 1rem);
   right: calc(16.6% + 1rem);
   height: 1px;
-  background: rgba(128,0,0,0.2);
+  background: rgba(197,34,42,0.2);
 }
 .step {
   flex: 1;
@@ -2359,7 +2359,7 @@ footer {
   padding: 4px 10px;
   border-radius: 4px;
   z-index: 2;
-  box-shadow: 0 4px 10px rgba(128,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(197,34,42,0.3);
 }
 
 /* ====== MOVING PROMO ANIMATIONS ====== */
@@ -2370,9 +2370,9 @@ footer {
 }
 
 @keyframes glowPulse {
-  0% { box-shadow: 0 0 5px rgba(128,0,0,0.2); }
-  50% { box-shadow: 0 0 20px rgba(128,0,0,0.5); }
-  100% { box-shadow: 0 0 5px rgba(128,0,0,0.2); }
+  0% { box-shadow: 0 0 5px rgba(197,34,42,0.2); }
+  50% { box-shadow: 0 0 20px rgba(197,34,42,0.5); }
+  100% { box-shadow: 0 0 5px rgba(197,34,42,0.2); }
 }
 
 .moving-deal {
@@ -2380,7 +2380,7 @@ footer {
 }
 
 .shimmer-text {
-  background: linear-gradient(90deg, #212529 0%, #800000 50%, #212529 100%);
+  background: linear-gradient(90deg, #212529 0%, #C5222A 50%, #212529 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
