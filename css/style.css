@@ -1057,7 +1057,7 @@ section {
 /* ====== PRODUCTS GRID ====== */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   max-width: 1300px;
   margin: 0 auto;
@@ -2228,7 +2228,7 @@ footer {
   .footer-container { grid-template-columns: 1fr; gap: 2rem; }
   .cart-sidebar { width: 100%; }
   .form-row { grid-template-columns: 1fr; }
-  .products-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .products-grid { grid-template-columns: repeat(3, 1fr); }
   .accessories-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
   .why-container { gap: 3rem; }
   .trust-container { justify-content: center; }
