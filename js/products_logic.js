@@ -1,5 +1,5 @@
 let currentFilter = 'featured';
-let currentLimit = 12;
+let currentLimit = 6;
 
 function buildCard(p) {
   const outOfStock = p.inStock === false;
@@ -75,7 +75,7 @@ function renderProducts(filter = 'featured', targetBtn = null) {
 }
 
 function loadMoreProducts() {
-  currentLimit += 12;
+  currentLimit += 6;
   renderProducts(currentFilter);
 }
 
