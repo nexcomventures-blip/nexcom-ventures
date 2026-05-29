@@ -222,13 +222,22 @@ document.querySelectorAll('.reveal-text').forEach(text => {
 
 
 
-// Atmospheric Preloader Logic
-window.addEventListener('load', () => {
+
+// Guaranteed Preloader Exit Logic
+function hidePreloader() {
     const preloader = document.querySelector('.preloader');
-    setTimeout(() => {
+    if (preloader && !preloader.classList.contains('fade-out')) {
         preloader.classList.add('fade-out');
         document.body.style.overflow = 'auto';
-    }, 3500); 
-});
+        console.log('Preloader dismissed');
+    }
+}
+
+// 1. Try to hide when everything is loaded
+window.addEventListener('load', hidePreloader);
+
+// 2. Safety override: Force hide after 4 seconds regardless of load state
+setTimeout(hidePreloader, 4000);
+
 
 
