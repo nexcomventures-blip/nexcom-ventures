@@ -1093,17 +1093,15 @@ section {
 .product-card.hidden { display: none; }
 
 .product-badge {
-  position: absolute;
-  top: 15px; left: 15px;
-  padding: 0.35rem 0.8rem;
+  display: inline-block;
+  margin-bottom: 6px;
+  padding: 0.28rem 0.75rem;
   border-radius: 6px;
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 800;
   letter-spacing: 1px;
-  z-index: 5;
   text-transform: uppercase;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 .product-badge.new { background: rgba(16, 185, 129, 0.9); color: white; border: 1px solid rgba(255,255,255,0.1); }
 .product-badge.hot { background: rgba(240, 26, 36, 0.9); color: white; border: 1px solid rgba(255,255,255,0.1); }
@@ -2595,6 +2593,28 @@ footer {
 
 .reviews-marquee:hover {
   animation-play-state: paused;
+}
+
+/* ===== SOFTWARE PILLS (product card) ===== */
+.sw-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 0.6rem;
+}
+.sw-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0,189,214,0.08);
+  border: 1px solid rgba(0,189,214,0.25);
+  color: #00BDD6;
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
 }
 
 /* ===== SOFTWARE BADGES ===== */
