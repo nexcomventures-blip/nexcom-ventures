@@ -161,21 +161,7 @@ function sendMessage() {
     }, 1000);
 }
 
-window.addEventListener('load', () => { 
-    setTimeout(() => { 
-        const preloader = document.querySelector('.preloader'); 
-        if (preloader) {
-            preloader.classList.add('fade-out');
-            preloader.style.opacity = "0";
-            preloader.style.visibility = "hidden";
-            setTimeout(() => { preloader.style.display = 'none'; }, 500);
-        }
-        document.querySelectorAll('.reveal').forEach(el => {
-            el.classList.add('active');
-            el.style.opacity = "1";
-            el.style.visibility = "visible";
-            el.style.transform = "none";
-        });
+
     }, 500);
 });
 
@@ -232,4 +218,13 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal-text').forEach(text => {
     revealObserver.observe(text);
+});
+
+// Premium Preloader Logic
+window.addEventListener('load', () => {
+    const preloader = document.querySelector('.preloader');
+    setTimeout(() => {
+        preloader.classList.add('fade-out');
+        document.body.style.cursor = 'none'; // Restore custom cursor after load
+    }, 3500); // 3.5s total display time
 });
