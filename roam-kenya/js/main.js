@@ -220,11 +220,13 @@ document.querySelectorAll('.reveal-text').forEach(text => {
     revealObserver.observe(text);
 });
 
-// Premium Preloader Logic
+
+// Boutique Preloader Logic
 window.addEventListener('load', () => {
     const preloader = document.querySelector('.preloader');
     setTimeout(() => {
         preloader.classList.add('fade-out');
-        document.body.style.cursor = 'none'; // Restore custom cursor after load
-    }, 3500); // 3.5s total display time
+        document.body.style.overflow = 'auto';
+    }, 3000); 
 });
+
