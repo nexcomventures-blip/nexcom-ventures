@@ -215,3 +215,48 @@ img { max-width: 100%; display: block; opacity: 1 !important; visibility: visibl
 /* Cache bust: 1779826536 */
 
 .main-nav.nav-hidden { transform: translateY(-100%) !important; }
+
+/* Elite Tweaks */
+.ghost-number { 
+    position: absolute; 
+    top: -50px; 
+    left: -20px; 
+    font-size: 10rem; 
+    font-family: 'Ojuju', sans-serif; 
+    font-weight: 700; 
+    color: var(--primary); 
+    opacity: 0.05; 
+    z-index: -1; 
+    pointer-events: none; 
+}
+section { position: relative; }
+
+.booking-engine.glass-mode {
+    background: rgba(10, 15, 11, 0.85) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(194, 157, 89, 0.2) !important;
+    color: #fff;
+}
+.booking-engine.glass-mode h2, 
+.booking-engine.glass-mode h4,
+.booking-engine.glass-mode label,
+.booking-engine.glass-mode p,
+.booking-engine.glass-mode #summary-text {
+    color: #fff !important;
+}
+.booking-engine.glass-mode input, 
+.booking-engine.glass-mode select {
+    background: rgba(255,255,255,0.05) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    color: #fff !important;
+}
+.booking-engine.glass-mode .tier-card {
+    background: rgba(255,255,255,0.03);
+    border-color: rgba(255,255,255,0.1) !important;
+}
+.booking-engine.glass-mode .tier-card h5 { color: var(--secondary); }
+.booking-engine.glass-mode .tier-card p { color: rgba(255,255,255,0.6) !important; }
+
+.parallax-layer {
+    transition: transform 0.1s ease-out;
+}
