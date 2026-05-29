@@ -1533,7 +1533,7 @@ const ALL_PRODUCTS = [
     "specs": "Intel Core i5-1334U | 8GB RAM | 512GB SSD | 15.6\" FHD | Ubuntu | Brand New",
     "price": 93184,
     "category": "new business dell",
-    "badge": "new",
+    "badge": "1 Year Warranty",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
     "software": []
   },
@@ -1544,7 +1544,7 @@ const ALL_PRODUCTS = [
     "specs": "Intel Core i5-1335U | 8GB RAM | 512GB SSD | 14.0\" FHD | Ubuntu | Brand New",
     "price": 121913,
     "category": "new business dell",
-    "badge": "new",
+    "badge": "1 Year Warranty",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
     "software": []
   },
@@ -1555,7 +1555,7 @@ const ALL_PRODUCTS = [
     "specs": "Intel Core i7-1355U | 8GB RAM | 512GB SSD | 14.0\" FHD | Ubuntu | Brand New",
     "price": 151060,
     "category": "new business dell",
-    "badge": "new",
+    "badge": "1 Year Warranty",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
     "software": []
   },
@@ -1566,7 +1566,7 @@ const ALL_PRODUCTS = [
     "specs": "Intel Core Ultra 5 125U | 8GB RAM | 512GB SSD | 14.0\" FHD | Ubuntu | Brand New",
     "price": 152953,
     "category": "new business dell",
-    "badge": "new",
+    "badge": "1 Year Warranty",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
     "software": []
   },
@@ -1577,7 +1577,7 @@ const ALL_PRODUCTS = [
     "specs": "Intel Core Ultra 7 265U | 8GB RAM | 512GB SSD | 14\" FHD+ | Ubuntu | Brand New",
     "price": 157703,
     "category": "new business dell",
-    "badge": "new",
+    "badge": "1 Year Warranty",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
     "software": []
   },
@@ -1588,7 +1588,7 @@ const ALL_PRODUCTS = [
     "specs": "Intel Core Ultra 5 235U | 8GB RAM | 512GB SSD | 14.0\" FHD+ | Ubuntu | Brand New",
     "price": 160992,
     "category": "new business dell",
-    "badge": "new",
+    "badge": "1 Year Warranty",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
     "software": []
   },
@@ -1599,7 +1599,7 @@ const ALL_PRODUCTS = [
     "specs": "Intel Core Ultra 5 236V | 16GB RAM | 512GB SSD | 14.0\" FHD+ | Ubuntu | Brand New",
     "price": 185640,
     "category": "new business dell",
-    "badge": "new",
+    "badge": "1 Year Warranty",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
     "software": []
   },
@@ -1610,7 +1610,7 @@ const ALL_PRODUCTS = [
     "specs": "Intel Core Ultra 7 266V | 16GB RAM | 512GB SSD | 14.0\" FHD+ | Ubuntu | Brand New",
     "price": 223023,
     "category": "new business dell",
-    "badge": "new",
+    "badge": "1 Year Warranty",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
     "software": []
   }
