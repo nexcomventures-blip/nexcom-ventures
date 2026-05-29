@@ -190,3 +190,46 @@ window.addEventListener('scroll', () => {
         layer.style.transform = ;
     });
 });
+
+// Cinema Mode - Magnetic Cursor
+const cursor = document.querySelector('.custom-cursor');
+const cursorOutline = document.querySelector('.custom-cursor-outline');
+
+window.addEventListener('mousemove', (e) => {
+    const posX = e.clientX;
+    const posY = e.clientY;
+    
+    cursor.style.left = posX + 'px';
+    cursor.style.top = posY + 'px';
+    
+    // Smooth delay for outline
+    setTimeout(() => {
+        cursorOutline.style.left = posX + 'px';
+        cursorOutline.style.top = posY + 'px';
+        cursorOutline.style.transform = 'translate(-25%, -25%)';
+    }, 50);
+});
+
+document.querySelectorAll('a, button, .service-item, .tier-card, .tag, .close-detail, .close-modal, .lang-selector span').forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        cursor.classList.add('active');
+        cursorOutline.classList.add('active');
+    });
+    link.addEventListener('mouseleave', () => {
+        cursor.classList.remove('active');
+        cursorOutline.classList.remove('active');
+    });
+});
+
+// Liquid Reveal Observer
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal-text').forEach(text => {
+    revealObserver.observe(text);
+});
