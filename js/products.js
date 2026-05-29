@@ -1531,7 +1531,7 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "Dell 15 DC15250 (Core i5 / 8GB / 512GB)",
     "specs": "Intel Core i5-1334U | 8GB RAM | 512GB SSD | 15.6\" FHD | Ubuntu | Brand New",
-    "price": 71110,
+    "price": 83200,
     "category": "new business dell",
     "badge": "new",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
@@ -1542,7 +1542,7 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "Dell Latitude 3450 (Core i5 / 8GB / 512GB)",
     "specs": "Intel Core i5-1335U | 8GB RAM | 512GB SSD | 14.0\" FHD | Ubuntu | Brand New",
-    "price": 106102,
+    "price": 108851,
     "category": "new business dell",
     "badge": "new",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
@@ -1553,7 +1553,7 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "Dell Latitude 3450 (Core i7 / 8GB / 512GB)",
     "specs": "Intel Core i7-1355U | 8GB RAM | 512GB SSD | 14.0\" FHD | Ubuntu | Brand New",
-    "price": 131638,
+    "price": 134875,
     "category": "new business dell",
     "badge": "new",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
@@ -1564,7 +1564,7 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "Dell Latitude 5450 (Core Ultra 5 / 8GB / 512GB)",
     "specs": "Intel Core Ultra 5 125U | 8GB RAM | 512GB SSD | 14.0\" FHD | Ubuntu | Brand New",
-    "price": 133289,
+    "price": 136565,
     "category": "new business dell",
     "badge": "new",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
@@ -1575,7 +1575,7 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "Dell Pro 14 PC14250 (Core Ultra 7 / 8GB / 512GB)",
     "specs": "Intel Core Ultra 7 265U | 8GB RAM | 512GB SSD | 14\" FHD+ | Ubuntu | Brand New",
-    "price": 137306,
+    "price": 140806,
     "category": "new business dell",
     "badge": "new",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
@@ -1586,7 +1586,7 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "Dell Pro 14 Plus PB14250 (Core Ultra 5 / 8GB / 512GB)",
     "specs": "Intel Core Ultra 5 235U | 8GB RAM | 512GB SSD | 14.0\" FHD+ | Ubuntu | Brand New",
-    "price": 140293,
+    "price": 143743,
     "category": "new business dell",
     "badge": "new",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
@@ -1597,7 +1597,7 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "Dell Pro 14 Plus PB14250 (Core Ultra 5 / 16GB / 512GB)",
     "specs": "Intel Core Ultra 5 236V | 16GB RAM | 512GB SSD | 14.0\" FHD+ | Ubuntu | Brand New",
-    "price": 148496,
+    "price": 165750,
     "category": "new business dell",
     "badge": "new",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
@@ -1608,10 +1608,476 @@ const ALL_PRODUCTS = [
     "brand": "Dell",
     "name": "Dell Pro 14 Plus PB14250 (Core Ultra 7 / 16GB / 512GB)",
     "specs": "Intel Core Ultra 7 266V | 16GB RAM | 512GB SSD | 14.0\" FHD+ | Ubuntu | Brand New",
-    "price": 185939,
+    "price": 199128,
     "category": "new business dell",
     "badge": "new",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
     "software": []
+  }
+,
+  // ---- SERVERS ----
+  {
+    "id": "srv-001",
+    "name": "Lenovo ST45 V3 AMD EPYC 4124P (4C 3.8GHz 16MB Cache/65W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 257976,
+    "badge": "Tower Server",
+    "specs": {
+      "processor": "No RAID, 2x1TB SATA, 1x16GB",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST45%20V3%20AMD%20EPYC%204124P%20(4C%203.8GHz%2016MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-002",
+    "name": "Lenovo ST45 V3 AMD EPYC 4244P (6C 3.8GHz 32MB Cache/65W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 288362,
+    "badge": "Tower Server",
+    "specs": {
+      "processor": "No RAID, 2x2TB SATA, 1x16GB",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST45%20V3%20AMD%20EPYC%204244P%20(6C%203.8GHz%2032MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-003",
+    "name": "Lenovo ST45 V3 AMD EPYC 4344P (8C 3.8GHz 32MB Cache/65W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 309318,
+    "badge": "Tower Server",
+    "specs": {
+      "processor": "No RAID, 2x2TB SATA, 1x32GB",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST45%20V3%20AMD%20EPYC%204344P%20(8C%203.8GHz%2032MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-004",
+    "name": "Dell Dell PowerEdge T160",
+    "category": "servers",
+    "brand": "dell",
+    "price": 314726,
+    "badge": "Tower Server",
+    "specs": {
+      "processor": "Intel Xeon 6315P / 32GB RAM / 2TB HDD",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/dell-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Dell%20PowerEdge%20T160.%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-005",
+    "name": "Lenovo ST50 V3 Xeon E-2434\u00a0 (4C 3.4GHz 12MB Cache/55W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 316024,
+    "badge": "Tower Server",
+    "specs": {
+      "processor": "SW RAID, 2x1TB SATA, 1x16GB",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2434\u00a0%20(4C%203.4GHz%2012MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-006",
+    "name": "Dell Dell PowerEdge R360",
+    "category": "servers",
+    "brand": "dell",
+    "price": 350216,
+    "badge": "Rack Server 1U",
+    "specs": {
+      "processor": "Intel Xeon 6315P / 32GB RAM / 2TB HDD",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/dell-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Dell%20PowerEdge%20R360.%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-007",
+    "name": "Lenovo ST50 V3 Xeon E-2414\u00a0 (4C 2.6GHz 8MB Cache/55W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 359822,
+    "badge": "Tower Server",
+    "specs": {
+      "processor": "SW RAID, 2x960GB VA SSD, 1x16GB",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2414\u00a0%20(4C%202.6GHz%208MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-008",
+    "name": "Lenovo SR250 V3 Xeon E-2434 (4C 3.4GHz 8MB Cache/55W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 370509,
+    "badge": "Rack Server",
+    "specs": {
+      "processor": "1x16GB, O/B, 2.5\" HS (8)",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR250%20V3%20Xeon%20E-2434%20(4C%203.4GHz%208MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-009",
+    "name": "Lenovo ST50 V3 Xeon E-2434\u00a0 (4C 3.4GHz 8MB Cache/55W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 386017,
+    "badge": "Tower Server",
+    "specs": {
+      "processor": "SW RAID, 2x960GB VA SSD, 1x32GB",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2434\u00a0%20(4C%203.4GHz%208MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-010",
+    "name": "Lenovo SR250 V3 Xeon E-2436 (6C 2.9GHz 12MB Cache/65W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 424995,
+    "badge": "Rack Server",
+    "specs": {
+      "processor": "1x32GB, O/B, 2.5\" HS (8)",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR250%20V3%20Xeon%20E-2436%20(6C%202.9GHz%2012MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-011",
+    "name": "Lenovo ST250 V3 Xeon E-2436 (6C 2.9GHz 12MB Cache/65W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 438198,
+    "badge": "Tower Server",
+    "specs": {
+      "processor": "1x32GB, O/B, 2.5\" HS (8)",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST250%20V3%20Xeon%20E-2436%20(6C%202.9GHz%2012MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-012",
+    "name": "Lenovo SR250 V3 Xeon E-2468 (8C 2.6GHz 16MB Cache/65W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 449933,
+    "badge": "Rack Server",
+    "specs": {
+      "processor": "1x32GB, O/B, 2.5\" HS (8)",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR250%20V3%20Xeon%20E-2468%20(8C%202.6GHz%2016MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-013",
+    "name": "Lenovo ST250 V3 Xeon E-2468 (8C 2.6GHz 16MB Cache/65W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 463135,
+    "badge": "Tower Server",
+    "specs": {
+      "processor": "1x32GB, O/B, 2.5\" HS (8)",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST250%20V3%20Xeon%20E-2468%20(8C%202.6GHz%2016MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-014",
+    "name": "Lenovo SR630 V3 Xeon Silver 4509Y (8C 2.6GHz 22.5MB Cache/125W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 704757,
+    "badge": "Rack Server",
+    "specs": {
+      "processor": "32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Silver%204509Y%20(8C%202.6GHz%2022.5MB%20Cache/125W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-015",
+    "name": "Lenovo SR630 V3 Xeon Silver 4510 (12C 2.4GHz 30MB Cache/150W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 704757,
+    "badge": "Rack Server",
+    "specs": {
+      "processor": "32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Silver%204510%20(12C%202.4GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-016",
+    "name": "Lenovo SR650 V3 Xeon Gold 6426Y (16C 2.5GHz 37.5MB Cache/185W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 718169,
+    "badge": "Rack Server",
+    "specs": {
+      "processor": "32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), No Backplane",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Gold%206426Y%20(16C%202.5GHz%2037.5MB%20Cache/185W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-017",
+    "name": "Lenovo SR650 V3 Xeon Silver 4509Y (8C 2.6GHz 22.5MB Cache/125W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 727809,
+    "badge": "Rack Server",
+    "specs": {
+      "processor": "32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Silver%204509Y%20(8C%202.6GHz%2022.5MB%20Cache/125W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-018",
+    "name": "Lenovo SR650 V3 Xeon Silver 4510 (12C 2.4GHz 30MB Cache/150W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 727809,
+    "badge": "Rack Server",
+    "specs": {
+      "processor": "32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Silver%204510%20(12C%202.4GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-019",
+    "name": "Lenovo SR630 V3 Xeon Silver 4514Y (16C 2.0GHz 30MB Cache/150W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 732839,
+    "badge": "Rack Server",
+    "specs": {
+      "processor": "32GB (1x32GB, 5600MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Silver%204514Y%20(16C%202.0GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-020",
+    "name": "Lenovo SR665 V3 AMD EPYC 9124 (16C 3.0GHz 64MB Cache/200W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 735144,
+    "badge": "Rack Server",
+    "specs": {
+      "processor": "32GB\u00a0 (1x32GB, 4800MHz 1Rx4\u00a0 DDR5 RDIMM), No Backplane",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR665%20V3%20AMD%20EPYC%209124%20(16C%203.0GHz%2064MB%20Cache/200W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-021",
+    "name": "Lenovo SR650 V3 Xeon Silver 4514Y (16C 2.0GHz 30MB Cache/150W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 744155,
+    "badge": "Rack Server",
+    "specs": {
+      "processor": "32GB (1x32GB, 5600MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Silver%204514Y%20(16C%202.0GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-022",
+    "name": "Lenovo SR630 V3 Xeon Gold 6526Y (16C 2.8GHz 37.5MB Cache/195W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 822111,
+    "badge": "Rack Server",
+    "specs": {
+      "processor": "32GB (1x32GB, 5600MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Gold%206526Y%20(16C%202.8GHz%2037.5MB%20Cache/195W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-023",
+    "name": "Lenovo ST650 V3 Xeon Silver 4509Y (8C 2.6GHz 22.5MB Cache/125W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 832800,
+    "badge": "Tower Server",
+    "specs": {
+      "processor": "32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST650%20V3%20Xeon%20Silver%204509Y%20(8C%202.6GHz%2022.5MB%20Cache/125W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-024",
+    "name": "Lenovo ST650 V3 Xeon Silver 4510 (12C 2.4GHz 30MB Cache/150W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 832800,
+    "badge": "Tower Server",
+    "specs": {
+      "processor": "32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST650%20V3%20Xeon%20Silver%204510%20(12C%202.4GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-025",
+    "name": "Lenovo SR645 V3 AMD EPYC 9124 (16C 3.0GHz 64MB Cache/200W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 847678,
+    "badge": "Rack Server",
+    "specs": {
+      "processor": "32 GB (1x32GB, 4800MHz 2Rx8 DDR5 RDIMM), 8 SAS/SATA",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR645%20V3%20AMD%20EPYC%209124%20(16C%203.0GHz%2064MB%20Cache/200W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-026",
+    "name": "Lenovo ST650 V3 Xeon Silver 4514Y (16C 2.0GHz 30MB Cache/150W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 849145,
+    "badge": "Tower Server",
+    "specs": {
+      "processor": "32GB (1x32GB, 5600MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST650%20V3%20Xeon%20Silver%204514Y%20(16C%202.0GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-027",
+    "name": "Dell Dell PowerEdge R660xs",
+    "category": "servers",
+    "brand": "dell",
+    "price": 852653,
+    "badge": "Rack Server 2U",
+    "specs": {
+      "processor": "2x Intel Xeon Silver 4510 / 64GB RAM / 480GB SSD",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/dell-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Dell%20PowerEdge%20R660xs.%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-028",
+    "name": "Lenovo SR665 V3 AMD EPYC 9174F (16C 4.1GHz 256MB Cache/320W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 1036701,
+    "badge": "Rack Server",
+    "specs": {
+      "processor": "32GB\u00a0 (1x32GB, 4800MHz 1Rx4\u00a0 DDR5 RDIMM), No Backplane",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR665%20V3%20AMD%20EPYC%209174F%20(16C%204.1GHz%20256MB%20Cache/320W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "srv-029",
+    "name": "Lenovo SR665 V3 AMD EPYC 9274F (24C 4.05GHz 256MB Cache/320W)",
+    "category": "servers",
+    "brand": "lenovo",
+    "price": 1057657,
+    "badge": "Rack Server",
+    "specs": {
+      "processor": "32GB\u00a0 (1x32GB, 4800MHz 1Rx4\u00a0 DDR5 RDIMM), No Backplane",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR665%20V3%20AMD%20EPYC%209274F%20(24C%204.05GHz%20256MB%20Cache/320W).%20Please%20advise%20on%20availability%20and%20pricing."
   }
 ];
