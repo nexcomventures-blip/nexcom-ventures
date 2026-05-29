@@ -49,7 +49,7 @@ const ALL_PRODUCTS = [
     "price": 28000,
     "category": "exuk apple macbook budget featured",
     "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro_2011.jpg",
     "software": []
   },
   {
