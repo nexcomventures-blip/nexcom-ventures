@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>New Laptops Nairobi | Dell Business Series | Nexcom Ventures</title>
-  <meta name="keywords" content="new laptop Nairobi, Dell new laptop Kenya, buy new laptop Nairobi, brand new laptop Nairobi CBD, Dell Latitude new, Dell Pro new, Core i5 new laptop, Core i7 new laptop, Core Ultra new laptop"/>
-  <meta name="description" content="Buy brand new Dell business laptops in Nairobi. Latitude 3450, 5450 & Pro series. Core i5/i7/Ultra processors. 25% markup. Mama Ngina St. Call 0722 816 001."/>
+  <title>New Laptops Nairobi | Dell, HP, Lenovo, Infinix | Nexcom Ventures</title>
+  <meta name="keywords" content="new laptop Nairobi, brand new laptop Nairobi CBD, Dell new laptop Kenya, HP ProBook Nairobi, Lenovo ThinkBook Nairobi, Infinix laptop Nairobi, buy new laptop Kenya, Core i5 new laptop, Core Ultra new laptop"/>
+  <meta name="description" content="Buy brand new laptops in Nairobi — Dell, HP, Lenovo & Infinix. Business series with 1 year warranty. Competitive pricing at 40% markup. Mama Ngina St. Call 0722 816 001."/>
   <link rel="stylesheet" href="css/style.css?v=1.0.5"/>
   <style>
     :root { --brand-primary: #0f172a; }
@@ -19,10 +19,15 @@
     .lane-hero p { font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 0 auto; line-height: 1.6; }
     .grid-container { padding: 60px 20px; max-width: 1400px; margin: 0 auto; }
     #navbar { background: #0f172a; }
+    .brand-tabs { display: flex; gap: 12px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap; }
+    .brand-tab {
+      padding: 10px 28px; border-radius: 30px; cursor: pointer;
+      border: 2px solid #e2e8f0; font-weight: 600; font-size: 0.95rem;
+      background: white; color: #334155; transition: all 0.2s;
+    }
+    .brand-tab.active, .brand-tab:hover { background: #0f172a; color: white; border-color: #0f172a; }
+    .limited-badge { background: #fef3c7; color: #92400e; font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; font-weight: 700; display: inline-block; margin-left: 6px; }
   </style>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"ItemList","name":"New Laptops for Sale in Nairobi","description":"Buy brand new Dell business laptops in Nairobi at Nexcom Ventures","url":"https://nexcomventures.co.ke/new-laptops-nairobi.html"}
-  </script>
 </head>
 <body>
 
@@ -32,9 +37,10 @@
     <a href="/" class="nav-logo"><img src="logo.svg" alt="Nexcom Logo" style="height:44px;width:auto;"></a>
     <div class="nav-links">
       <a href="/">Home</a>
-      <a href="/sell-laptop-nairobi.html">Sell</a>
-      <a href="/repairs.html">Repairs</a>
-      <a href="/#contact">Contact</a>
+      <a href="new-laptops-nairobi.html" style="color:var(--primary);">New Laptops</a>
+      <a href="servers-nairobi.html">Servers</a>
+      <a href="sell-laptop-nairobi.html">Sell</a>
+      <a href="repairs.html">Repairs</a>
     </div>
     <a href="https://wa.me/254722816001" class="nav-cta">WhatsApp</a>
   </div>
@@ -42,33 +48,39 @@
 
 <header class="lane-hero">
   <div class="container">
-    <div class="section-tag" style="color: white; border-color: rgba(255,255,255,0.3);">Fresh Stock</div>
+    <div class="section-tag" style="color:white; border-color:rgba(255,255,255,0.3);">Fresh Stock · 1 Year Warranty</div>
     <h1>New Laptops in Nairobi</h1>
-    <p>Brand new Dell business laptops — Latitude & Pro series. Latest processors, 25% markup pricing, ready to ship.</p>
+    <p>Brand new business laptops — Dell, HP, Lenovo & Infinix. All units carry a <strong>1 year warranty</strong>. Prices in KES at 40% markup.</p>
   </div>
 </header>
 
 <section class="grid-container">
-  <div class="section-header" style="text-align: left; margin-bottom: 32px;">
-    <h2>New Inventory</h2>
-    <p>All units are brand new with 1 year warranty. Prices in KES, VAT exclusive.</p>
+  <div class="section-header" style="text-align:left; margin-bottom:32px;">
+    <h2>New Laptop Catalogue</h2>
+    <p>30 models available. VAT exclusive. WhatsApp to confirm stock before visiting.</p>
   </div>
 
-  <div class="products-grid" id="productsGrid">
-    <!-- Rendered by JS -->
+  <div class="brand-tabs">
+    <button class="brand-tab active" onclick="filterBrand('all', this)">All (30)</button>
+    <button class="brand-tab" onclick="filterBrand('Dell', this)">Dell</button>
+    <button class="brand-tab" onclick="filterBrand('HP', this)">HP</button>
+    <button class="brand-tab" onclick="filterBrand('Lenovo', this)">Lenovo</button>
+    <button class="brand-tab" onclick="filterBrand('Infinix', this)">Infinix</button>
   </div>
+
+  <div class="products-grid" id="productsGrid"></div>
 </section>
 
 <!-- FOOTER -->
-<footer style="background: #0f172a; color: #94a3b8; padding: 60px 20px; text-align: center;">
+<footer style="background:#0f172a; color:#94a3b8; padding:60px 20px; text-align:center;">
   <div class="container">
-    <h2 style="color: white; margin-bottom: 20px;">NEXCOM<span style="color:var(--primary)">.</span></h2>
-    <p style="max-width: 500px; margin: 0 auto 30px;">Nairobi's most trusted hub for laptops, servers, and tech solutions. Norwich Union House, Mama Ngina St.</p>
-    <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px;">
-      <a href="tel:0722816001" style="color: white; text-decoration: none;">📞 0722 816 001</a>
-      <a href="https://wa.me/254722816001" style="color: white; text-decoration: none;">💬 WhatsApp</a>
+    <h2 style="color:white; margin-bottom:20px;">NEXCOM<span style="color:var(--primary)">.</span></h2>
+    <p style="max-width:500px; margin:0 auto 30px;">Nairobi's most trusted hub for laptops, servers, and tech solutions. Norwich Union House, Mama Ngina St.</p>
+    <div style="display:flex; justify-content:center; gap:20px; margin-bottom:30px;">
+      <a href="tel:0722816001" style="color:white; text-decoration:none;">📞 0722 816 001</a>
+      <a href="https://wa.me/254722816001" style="color:white; text-decoration:none;">💬 WhatsApp</a>
     </div>
-    <p style="font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">&copy; 2026 Nexcom Ventures Ltd. All rights reserved.</p>
+    <p style="font-size:0.8rem; border-top:1px solid rgba(255,255,255,0.1); padding-top:30px;">&copy; 2026 Nexcom Ventures Ltd. All rights reserved.</p>
   </div>
 </footer>
 
@@ -79,29 +91,36 @@
 
 <script src="js/products.js"></script>
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
+  const NEW_CATS = ['new business dell','new business hp','new business lenovo','new business infinix'];
+
+  function filterBrand(brand, btn) {
+    document.querySelectorAll('.brand-tab').forEach(t => t.classList.remove('active'));
+    if (btn) btn.classList.add('active');
     const grid = document.getElementById('productsGrid');
-    let items = window.products ? window.products.filter(p => p.category === 'new business dell') : [];
-    if (!items.length) {
-      grid.innerHTML = '<p style="color:#64748b; padding:40px 0;">No new laptops available at this time.</p>';
-      return;
-    }
-    grid.innerHTML = items.map(p => `
-      <div class="product-card">
-        <div class="product-badge">${p.badge}</div>
-        <div class="product-image-wrap" style="background:#f1f5f9; display:flex; align-items:center; justify-content:center; min-height:200px; border-radius:10px; margin-bottom:16px;">
-          <img src="${p.img}" alt="${p.name}" style="max-height:180px; max-width:100%; object-fit:contain;">
-        </div>
-        <h3 class="product-name">${p.name}</h3>
-        <p class="product-specs">${p.specs}</p>
-        <div class="product-price">KES ${p.price.toLocaleString()}</div>
-        <p style="font-size:0.8rem; color:#94a3b8; margin-bottom:16px;">VAT Exclusive · 1 Year Warranty</p>
-        <a href="https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20${p.name.replace(/ /g, '%20')}.%20Please%20confirm%20availability%20and%20delivery%20time." target="_blank" class="btn-primary" style="display:block; text-align:center; background:#25d366; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:700;">
-          💬 Enquire on WhatsApp
-        </a>
-      </div>
-    `).join('');
-  });
+    let items = (window.products || []).filter(p => NEW_CATS.includes(p.category));
+    if (brand !== 'all') items = items.filter(p => p.brand === brand);
+    if (!items.length) { grid.innerHTML = '<p style="color:#64748b; padding:40px 0;">No laptops found.</p>'; return; }
+    grid.innerHTML = items.map(p => {
+      const limited = p.status === 'limited' ? '<span class="limited-badge">Limited Stock</span>' : '';
+      const waMsg = `Hi, I'm interested in the ${p.name} — ${p.specs.substring(0,60)}. Please confirm price and availability.`;
+      const waUrl = 'https://wa.me/254722816001?text=' + encodeURIComponent(waMsg);
+      return `
+        <div class="product-card">
+          <div class="product-badge">${p.badge}${limited}</div>
+          <div style="background:#f1f5f9; border-radius:10px; min-height:180px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; overflow:hidden;">
+            <img src="${p.img}" alt="${p.name}" style="max-height:170px; max-width:100%; object-fit:contain;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'font-size:2.5rem;\'>💻</span>'">
+          </div>
+          <p style="font-size:0.75rem; color:#94a3b8; margin-bottom:4px; text-transform:uppercase; font-weight:600;">${p.brand}</p>
+          <h3 class="product-name" style="margin-bottom:8px;">${p.name}</h3>
+          <p class="product-specs" style="font-size:0.82rem; color:#64748b; margin-bottom:12px;">${p.specs}</p>
+          <div class="product-price" style="margin-bottom:4px;">KES ${p.price.toLocaleString()}</div>
+          <p style="font-size:0.78rem; color:#94a3b8; margin-bottom:16px;">VAT Exclusive · 1 Year Warranty</p>
+          <a href="${waUrl}" target="_blank" style="display:block; text-align:center; background:#25d366; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:700;">💬 Enquire on WhatsApp</a>
+        </div>`;
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => filterBrand('all', document.querySelector('.brand-tab')));
 </script>
 
 </body>
