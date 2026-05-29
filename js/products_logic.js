@@ -50,6 +50,7 @@ function buildCard(p) {
   `;
 }
 
+function filterProducts(filter, targetBtn) { renderProducts(filter, targetBtn); }
 function renderProducts(filter = 'featured', targetBtn = null) {
   currentFilter = filter;
   const container = document.getElementById('productsGrid');
