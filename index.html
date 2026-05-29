@@ -126,19 +126,19 @@
 <body>
 
 <div id="announcement-bar">
-  <div class="ticker-wrapper">
-    <div class="ticker-label">
-      <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
+  <div class="ann-inner">
+    <span class="ann-badge">
+      <svg width="7" height="7" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
       LIVE
+    </span>
+    <div class="ann-messages">
+      <span class="ann-msg active">🚚 Countrywide delivery via <strong>G4S</strong> &amp; <strong>Wells Fargo</strong></span>
+      <span class="ann-msg">💻 New arrivals in stock — HP, Dell, Lenovo &amp; MacBook</span>
+      <span class="ann-msg">🔧 Same-day repairs at our <strong>Mama Ngina St</strong> store</span>
+      <span class="ann-msg">💰 We buy dead, broken &amp; unused laptops — <strong>best rates</strong></span>
+      <span class="ann-msg">📞 Call us: <strong>0721 585 784</strong> · Mon–Sat 9AM–6PM</span>
     </div>
-    <div class="ticker-track">
-      <!-- Set 1 -->
-      <span class="ticker-item">🚚 Countrywide delivery via <strong>G4S</strong> &amp; <strong>Wells Fargo</strong></span>
-      <span class="ticker-item"><span class="dot"></span></span>
-      <!-- Set 2 (duplicate for seamless loop) -->
-      <span class="ticker-item">🚚 Countrywide delivery via <strong>G4S</strong> &amp; <strong>Wells Fargo</strong></span>
-      <span class="ticker-item"><span class="dot"></span></span>
-    </div>
+    <a href="#laptops" class="ann-cta">Shop Now →</a>
   </div>
 </div>
 
@@ -728,6 +728,22 @@ setInterval(rotateHero, 5000);
 
 <script src="js/products.js"></script>
 <script src="js/products_logic.js"></script>
+
+<!-- Announcement Bar Rotator -->
+<script>
+(function() {
+  const msgs = document.querySelectorAll('.ann-msg');
+  if (!msgs.length) return;
+  let current = 0;
+  setInterval(() => {
+    msgs[current].classList.remove('active');
+    msgs[current].classList.add('exit');
+    setTimeout(() => { msgs[current].classList.remove('exit'); }, 500);
+    current = (current + 1) % msgs.length;
+    msgs[current].classList.add('active');
+  }, 3500);
+})();
+</script>
 </body>
 </html>
 
