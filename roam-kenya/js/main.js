@@ -178,3 +178,15 @@ window.addEventListener('load', () => {
         });
     }, 500);
 });
+
+// Elite Parallax Effect
+window.addEventListener('scroll', () => {
+    const layers = document.querySelectorAll('.parallax-layer');
+    const scrolled = window.pageYOffset;
+    
+    layers.forEach(layer => {
+        const speed = layer.getAttribute('data-speed') || 0.1;
+        const yPos = -(scrolled * speed);
+        layer.style.transform = ;
+    });
+});
