@@ -313,7 +313,7 @@ const ALL_PRODUCTS = [
     "price": 51000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2019+I58/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_2019.jpg",
     "software": []
   },
   {
@@ -1078,7 +1078,7 @@ const ALL_PRODUCTS = [
     "price": 53000,
     "category": "exuk apple macbook",
     "badge": "exuk",
-    "img": "https://placehold.co/600x400/003B73/FFFFFF?text=Macbook+Air+13+2019+I5+16/256Gb",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_2019.jpg",
     "software": []
   },
   {
