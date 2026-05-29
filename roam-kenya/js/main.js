@@ -221,12 +221,14 @@ document.querySelectorAll('.reveal-text').forEach(text => {
 });
 
 
-// Boutique Preloader Logic
+
+// Atmospheric Preloader Logic
 window.addEventListener('load', () => {
     const preloader = document.querySelector('.preloader');
     setTimeout(() => {
         preloader.classList.add('fade-out');
         document.body.style.overflow = 'auto';
-    }, 3000); 
+    }, 3500); 
 });
+
 
