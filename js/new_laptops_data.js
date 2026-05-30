@@ -26,17 +26,6 @@ const NEW_LAPTOPS = [
     "software": []
   },
   {
-    "id": "new-m3-air-2024",
-    "brand": "Apple",
-    "name": "MacBook Air 15\" 2024 M3 8/256GB",
-    "specs": "Apple M3 Chip | 8GB RAM | 256GB SSD | 15.3\" Retina Display | 2024",
-    "price": 144999,
-    "category": "new apple macbook",
-    "badge": "new",
-    "img": "images/macbook_air_m1.jpg",
-    "software": []
-  },
-  {
     "id": "infinix-71008303116",
     "brand": "Infinix",
     "name": "Infinix XL442",
@@ -400,4 +389,4 @@ const NEW_LAPTOPS = [
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20X1%20Carbon%20G13%20%28Intel%20Core%20Ultra%207%20255U%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014\"%20WUXGA%20%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   }
-];
+];;
