@@ -264,15 +264,26 @@ section { position: relative; }
 }
 
 /* Liquid Reveal */
-.reveal-mask {
+.reveal-mask { display: contents !important; overflow: visible !important; display: block; overflow: visible; display: block;
     overflow: hidden;
     display: block;
 }
-.reveal-text {
+.reveal-text { display: block; transform: none !important;
     display: block;
-    transform: translateY(110%);
+    transform: none;
     transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .reveal-text.active {
     transform: translateY(0);
 }
+
+/* Failsafe Layout Fix */
+.method-text * { 
+    transform: none !important; 
+    opacity: 1 !important; 
+    visibility: visible !important; 
+    position: relative; 
+    z-index: 1;
+}
+.method-text h2 { margin-top: 10px; margin-bottom: 25px; display: block; }
+.method-text p { margin-top: 0; display: block; }
