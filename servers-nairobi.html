@@ -3,144 +3,359 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>Servers Nairobi | Dell PowerEdge & Lenovo ThinkSystem | Nexcom Ventures</title>
-  <meta name="keywords" content="server Nairobi, Dell server Kenya, Lenovo server Nairobi, PowerEdge Kenya, rack server Nairobi, tower server Kenya, server dealer Nairobi CBD, buy server Kenya, enterprise server Nairobi, Xeon server Kenya"/>
-  <meta name="description" content="Buy Dell PowerEdge and Lenovo ThinkSystem servers in Nairobi. Tower & Rack servers for SMEs and enterprise. Competitive pricing. Mama Ngina St. Call 0722 816 001."/>
+  <title>Servers Nairobi | Dell PowerEdge, HPE ProLiant, Lenovo ThinkSystem | Nexcom Ventures</title>
+  <meta name="description" content="Buy Dell PowerEdge, HPE ProLiant & Lenovo ThinkSystem servers in Nairobi CBD. Tower & Rack servers, SME to enterprise grade. Mama Ngina St. Call 0721 585 784."/>
+  <meta name="keywords" content="server Nairobi, Dell PowerEdge Kenya, HPE ProLiant Nairobi, Lenovo ThinkSystem Kenya, rack server Nairobi, tower server Kenya, buy server Nairobi CBD, enterprise server Kenya, Xeon server Nairobi, AMD EPYC server Kenya"/>
+  <link rel="canonical" href="https://nexcomventures.co.ke/servers-nairobi.html"/>
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css?v=1.0.5"/>
+
   <style>
-    :root { --brand-primary: #0f172a; --server-accent: #1e40af; }
-    .lane-hero {
-      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #1e40af 100%);
-      padding: 100px 20px 80px;
-      text-align: center;
-      color: white;
+    :root {
+      --blue: #1e40af;
+      --blue-dark: #1e3a8a;
+      --bg: #f2f4f7;
+      --bg2: #e9ecef;
+      --card: #ffffff;
+      --text: #1e293b;
+      --gray: #64748b;
+      --border: rgba(0,0,0,0.07);
+      --wa: #25d366;
+      --red: #C5222A;
     }
-    .lane-hero h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 900; margin-bottom: 20px; }
-    .lane-hero p { font-size: 1.15rem; opacity: 0.9; max-width: 700px; margin: 0 auto; line-height: 1.6; }
-    .grid-container { padding: 60px 20px; max-width: 1400px; margin: 0 auto; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); }
     #navbar { background: #0f172a; }
-    .brand-tabs {
-      display: flex; gap: 12px; justify-content: center;
-      margin-bottom: 40px; flex-wrap: wrap;
+
+    .page-wrap {
+      max-width: 1000px; margin: 0 auto;
+      background: var(--card);
+      box-shadow: 0 0 0 1px var(--border);
+      min-height: 100vh;
     }
-    .brand-tab {
-      padding: 10px 28px; border-radius: 30px; cursor: pointer;
-      border: 2px solid #e2e8f0; font-weight: 600; font-size: 0.95rem;
-      background: white; color: #334155; transition: all 0.2s;
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, var(--blue) 100%);
+      padding: 32px 24px 28px; color: white;
+      position: relative; overflow: hidden;
     }
-    .brand-tab.active, .brand-tab:hover {
-      background: #1e40af; color: white; border-color: #1e40af;
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=50') center/cover no-repeat;
+      opacity: 0.07;
     }
-    .note-banner {
-      background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px;
-      padding: 16px 24px; margin-bottom: 36px; color: #1e40af; font-size: 0.95rem;
+    .hero-inner { position: relative; z-index: 1; }
+    .hero-eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.9); font-size: 0.72rem; font-weight: 700;
+      padding: 4px 13px; border-radius: 30px; text-transform: uppercase;
+      letter-spacing: 1px; margin-bottom: 10px;
+    }
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.7rem, 4.5vw, 2.4rem);
+      font-weight: 900; letter-spacing: -0.5px;
+      margin-bottom: 6px; line-height: 1.1;
+    }
+    .hero p { font-size: 0.88rem; color: rgba(255,255,255,0.72); margin-bottom: 16px; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 18px; }
+    .hero-tag {
+      font-size: 0.74rem; font-weight: 600;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.88); padding: 4px 12px; border-radius: 20px;
+    }
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: white; color: var(--blue);
+      padding: 10px 24px; border-radius: 40px;
+      text-decoration: none; font-weight: 800; font-size: 0.88rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25); transition: transform 0.2s;
+    }
+    .hero-cta:hover { transform: scale(1.03); }
+
+    /* SPACER BAR */
+    .spacer-bar {
+      background: var(--bg2);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      padding: 9px 20px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+    }
+    .spacer-title { font-size: 0.78rem; font-weight: 700; color: var(--text); text-transform: uppercase; letter-spacing: 0.8px; }
+    .spacer-sub { font-size: 0.73rem; color: var(--gray); }
+    .spacer-right { display: flex; gap: 12px; flex-wrap: wrap; }
+    .spacer-right span { font-size: 0.73rem; color: var(--gray); font-weight: 600; }
+
+    /* FILTER */
+    .filter-bar {
+      background: var(--card);
+      padding: 12px 20px;
+      display: flex; gap: 8px; flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+    }
+    .ftab {
+      padding: 6px 16px; border-radius: 20px; cursor: pointer;
+      border: 1px solid var(--border); font-size: 0.8rem; font-weight: 700;
+      background: var(--bg); color: var(--gray);
+      transition: all 0.15s; font-family: 'Inter', sans-serif;
+    }
+    .ftab.active, .ftab:hover { background: var(--blue); color: white; border-color: var(--blue); }
+    #resultCount { font-size: 0.75rem; color: var(--gray); margin-left: auto; align-self: center; }
+
+    /* SERVER LIST */
+    .server-list {}
+    .srow {
+      display: flex; align-items: stretch;
+      border-bottom: 1px solid var(--border);
+      background: var(--card); transition: background 0.15s;
+    }
+    .srow:hover { background: #f8faff; }
+
+    .srow-img {
+      width: 100px; flex-shrink: 0;
+      background: var(--bg);
+      border-right: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      padding: 10px;
+    }
+    .srow-img img { width: 72px; height: 56px; object-fit: contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12)); }
+
+    .srow-body {
+      flex: 1; padding: 12px 14px;
+      display: flex; flex-direction: column; justify-content: space-between; gap: 6px;
+    }
+    .srow-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+    .srow-name { font-weight: 700; font-size: 0.92rem; color: var(--text); line-height: 1.3; }
+
+    .srow-badge {
+      font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+      padding: 3px 9px; border-radius: 8px; white-space: nowrap; flex-shrink: 0;
+    }
+    .badge-dell   { background: #dbeafe; color: #1d4ed8; border: 1px solid #bfdbfe; }
+    .badge-hpe    { background: #fce7f3; color: #9d174d; border: 1px solid #fbcfe8; }
+    .badge-lenovo { background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; }
+
+    .cat-pill {
+      display: inline-block;
+      font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+      padding: 2px 8px; border-radius: 6px; margin-right: 5px;
+    }
+    .cat-tower { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+    .cat-rack  { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+
+    .srow-specs { font-size: 0.74rem; color: var(--gray); line-height: 1.6; }
+    .srow-avail { font-size: 0.7rem; color: var(--gray); font-style: italic; }
+
+    .srow-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .srow-price {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem; font-weight: 900; color: var(--blue);
+    }
+    .srow-price small { font-size: 0.72rem; color: var(--gray); font-weight: 400; font-family: 'Inter', sans-serif; display: block; }
+    .srow-cta {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--wa); color: white;
+      padding: 7px 14px; border-radius: 8px;
+      text-decoration: none; font-weight: 700; font-size: 0.78rem;
+      transition: background 0.2s; white-space: nowrap;
+    }
+    .srow-cta:hover { background: #1da851; }
+
+    .no-results { padding: 48px 24px; text-align: center; color: var(--gray); font-size: 0.9rem; }
+
+    /* FOOTER */
+    footer {
+      background: var(--bg2); border-top: 1px solid var(--border);
+      padding: 20px 24px 72px; text-align: center;
+      font-size: 0.8rem; color: var(--gray);
+    }
+    footer strong { color: var(--text); }
+    footer a { color: var(--gray); text-decoration: none; margin: 0 6px; }
+    footer a:hover { color: var(--blue); }
+
+    /* STICKY */
+    .sticky-bar {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
+      background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      padding: 10px 16px; display: flex; gap: 10px; justify-content: center;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.07);
+    }
+    .sticky-bar a {
+      flex: 1; max-width: 200px; text-align: center;
+      padding: 11px 16px; border-radius: 40px;
+      font-weight: 700; font-size: 0.85rem; text-decoration: none;
+    }
+    .s-wa   { background: var(--wa); color: white; }
+    .s-call { background: var(--blue); color: white; }
+
+    @media(max-width:480px){
+      .srow-img { width: 78px; }
+      .srow-img img { width: 56px; height: 44px; }
+      .srow-price { font-size: 0.95rem; }
     }
   </style>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"ItemList","name":"Servers for Sale in Nairobi","description":"Buy Dell PowerEdge and Lenovo ThinkSystem servers in Nairobi at Nexcom Ventures","url":"https://nexcomventures.co.ke/servers-nairobi.html"}
-  </script>
 </head>
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <nav id="navbar">
   <div class="nav-container">
-    <a href="/" class="nav-logo"><img src="logo.svg" alt="Nexcom Logo" style="height:44px;width:auto;"></a>
-    <div class="nav-links">
-      <a href="/">Home</a>
-      <a href="/sell-laptop-nairobi.html">Sell</a>
-      <a href="/repairs.html">Repairs</a>
-      <a href="/#contact">Contact</a>
-    </div>
-    <a href="https://wa.me/254722816001" class="nav-cta">WhatsApp</a>
+    <a href="/" class="nav-logo" style="display:flex;align-items:center;text-decoration:none;padding:5px 0;">
+      <img src="logo.svg" alt="Nexcom" style="height:44px;width:auto;">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#laptops">Laptops</a></li>
+      <li><a href="new-laptops-nairobi.html">🆕 New Laptops</a></li>
+      <li><a href="iphones-nairobi.html">📱 iPhones</a></li>
+      <li><a href="index.html#sell">Sell</a></li>
+      <li><a href="repairs.html">Repairs</a></li>
+      <li><a href="servers-nairobi.html" style="color:#60a5fa;">🖥️ Servers</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="https://wa.me/254721585784" class="nav-cta">WhatsApp</a>
   </div>
 </nav>
 
-<header class="lane-hero">
-  <div class="container">
-    <div class="section-tag" style="color: white; border-color: rgba(255,255,255,0.3);">Enterprise Grade</div>
-    <h1>Servers in Nairobi</h1>
-    <p>Dell PowerEdge & Lenovo ThinkSystem — Tower and Rack servers for growing businesses. Fast delivery, professional setup support.</p>
-  </div>
-</header>
+<div class="page-wrap">
 
-<section class="grid-container">
-  <div class="section-header" style="text-align: left; margin-bottom: 32px;">
-    <h2>Server Catalog</h2>
-    <p>All prices in KES, VAT exclusive. Available on order — delivery 1–2 weeks.</p>
-  </div>
-
-  <div class="note-banner">
-    💡 <strong>Need help choosing?</strong> WhatsApp us with your use case (users, workload, budget) and we'll spec the right server for you.
-  </div>
-
-  <div class="brand-tabs">
-    <button class="brand-tab active" onclick="filterBrand('all')">All Servers</button>
-    <button class="brand-tab" onclick="filterBrand('dell')">Dell PowerEdge</button>
-    <button class="brand-tab" onclick="filterBrand('lenovo')">Lenovo ThinkSystem</button>
-  </div>
-
-  <div class="products-grid" id="productsGrid">
-    <!-- Rendered by JS -->
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer style="background: #0f172a; color: #94a3b8; padding: 60px 20px; text-align: center;">
-  <div class="container">
-    <h2 style="color: white; margin-bottom: 20px;">NEXCOM<span style="color:var(--primary)">.</span></h2>
-    <p style="max-width: 500px; margin: 0 auto 30px;">Nairobi's most trusted hub for laptops, servers, and tech solutions. Norwich Union House, Mama Ngina St.</p>
-    <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px;">
-      <a href="tel:0722816001" style="color: white; text-decoration: none;">📞 0722 816 001</a>
-      <a href="https://wa.me/254722816001" style="color: white; text-decoration: none;">💬 WhatsApp</a>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">🖥️ Enterprise Grade · Gen11 / V3</div>
+      <h1>Servers in Nairobi</h1>
+      <p>Dell PowerEdge, HPE ProLiant & Lenovo ThinkSystem — SME to enterprise, tower & rack.</p>
+      <div class="hero-tags">
+        <span class="hero-tag">✅ Brand New</span>
+        <span class="hero-tag">🛡️ 3 Year Warranty</span>
+        <span class="hero-tag">⚡ Gen11 / V3</span>
+        <span class="hero-tag">📍 CBD Pickup</span>
+        <span class="hero-tag">🚚 Dell Ex-Stock</span>
+      </div>
+      <a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I%27m%20looking%20for%20a%20server%20quote." class="hero-cta" target="_blank">
+        💬 Request a Quote
+      </a>
     </div>
-    <p style="font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">&copy; 2026 Nexcom Ventures Ltd. All rights reserved.</p>
-  </div>
-</footer>
+  </header>
 
-<div class="sticky-cta">
-  <a href="https://wa.me/254722816001" style="background:#25d366; color:white; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:700;">WhatsApp Us</a>
-  <a href="tel:0722816001" style="background:white; color:#0f172a; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:700;">Call Now</a>
+  <!-- SPACER BAR -->
+  <div class="spacer-bar">
+    <div>
+      <div class="spacer-title">Server Catalogue</div>
+      <div class="spacer-sub">Prices in KES · VAT exclusive · WhatsApp for custom configs</div>
+    </div>
+    <div class="spacer-right">
+      <span>📍 Mama Ngina St</span>
+      <span>📞 0721 585 784</span>
+    </div>
+  </div>
+
+  <!-- FILTER TABS -->
+  <div class="filter-bar">
+    <button class="ftab active" onclick="filter('all',this)">All</button>
+    <button class="ftab" onclick="filter('dell',this)">Dell</button>
+    <button class="ftab" onclick="filter('hpe',this)">HPE</button>
+    <button class="ftab" onclick="filter('lenovo',this)">Lenovo</button>
+    <button class="ftab" onclick="filter('tower',this)">🏢 Tower</button>
+    <button class="ftab" onclick="filter('rack',this)">📦 Rack</button>
+    <span id="resultCount"></span>
+  </div>
+
+  <!-- SERVER LIST -->
+  <div class="server-list" id="serverList"></div>
+
+  <!-- SPACER BAR 2 -->
+  <div class="spacer-bar" style="justify-content:center;gap:20px;">
+    <span style="font-size:0.77rem;color:var(--gray);">✅ Brand new sealed units</span>
+    <span style="font-size:0.77rem;color:var(--gray);">🛡️ 3 year manufacturer warranty</span>
+    <span style="font-size:0.77rem;color:var(--gray);">🔧 Custom configs available</span>
+    <span style="font-size:0.77rem;color:var(--gray);">📍 Mama Ngina St, Nairobi CBD</span>
+  </div>
+
+  <footer>
+    <strong>NEXCOM Ventures Ltd</strong> · Norwich Union House, Mama Ngina St, Nairobi CBD<br><br>
+    <a href="tel:0721585784">📞 0721 585 784</a>
+    <a href="https://wa.me/254721585784" target="_blank">💬 WhatsApp</a>
+    <a href="index.html">← Home</a>
+    <a href="new-laptops-nairobi.html">🆕 New Laptops</a><br><br>
+    &copy; 2026 Nexcom Ventures Ltd · All rights reserved.
+  </footer>
+
 </div>
 
-<script src="js/products.js"></script>
+<!-- STICKY -->
+<div class="sticky-bar">
+  <a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I%27d%20like%20a%20server%20quote." class="s-wa" target="_blank">💬 WhatsApp Quote</a>
+  <a href="tel:0721585784" class="s-call">📞 0721 585 784</a>
+</div>
+
 <script>
-  let currentBrand = 'all';
+const SERVERS = [{"brand": "Dell", "model": "Dell PowerEdge T160 Tower Server", "category": "Tower Server", "part": "EMEA_PET160FLEXI1", "specs": "Dell PowerEdge T160 Tower Server (ENTRY LEVEL TOWER SERVER)", "usd": 1551, "kes": 282282, "avail": "Ex-Stock"}, {"brand": "Dell", "model": "Dell PowerEdge R360 Rack Server", "category": "Rack Server", "part": "EMEA_PER360FLEXI1", "specs": "Dell PowerEdge R360 Rack Server (ENTRY LEVEL RACK SERVER)", "usd": 1761, "kes": 320502, "avail": "Ex-Stock"}, {"brand": "Dell", "model": "Dell PowerEdge R760xs Rack Server", "category": "Rack Server", "part": "PER760XS1A - 01", "specs": "Dell PowerEdge R760xs Rack Server (Mid-Range RACK SERVER)", "usd": 4105, "kes": 747110, "avail": "Ex-Stock"}, {"brand": "Dell", "model": "Dell PowerEdge R760xs Rack Server", "category": "Rack Server", "part": "PER760XS1A - 02", "specs": "Dell PowerEdge R760xs Rack Server (Mid-Range RACK SERVER)", "usd": 4134, "kes": 752388, "avail": "Ex-Stock"}, {"brand": "Dell", "model": "Dell PowerEdge R660xs Rack Server", "category": "Rack Server", "part": "PER660XS1A", "specs": "Dell PowerEdge R660xs Rack Server (Mid-Range RACK SERVER)", "usd": 4734, "kes": 861588, "avail": "Ex-Stock"}, {"brand": "HPE", "model": "HPE ProLiant ML350 Gen11 Tower (16-Core)", "category": "Tower Server", "part": "P55954-421", "specs": "Xeon Silver 5416S 16C/2.0GHz | 32GB DDR5 | No HDD | MR408i-o RAID | 1x1000W Titanium PSU | 4U Tower | 3-3-3 Warranty", "usd": 5800, "kes": 1055600, "avail": "Available"}, {"brand": "HPE", "model": "HPE ProLiant DL380 Gen11 Rack (16-Core 1CPU)", "category": "Rack Server", "part": "P70457-421", "specs": "1x Xeon Silver 4514Y 16C/2.0GHz | 32GB DDR5 | MR408i-o RAID | 10Gb NIC | 1x1000W Titanium PSU | 2U Rack | 3-3-3 Warranty", "usd": 6500, "kes": 1183000, "avail": "Available"}, {"brand": "HPE", "model": "HPE ProLiant DL380 Gen11 Rack (32-Core 2CPU)", "category": "Rack Server", "part": "P70457-421", "specs": "2x Xeon Silver 4514Y 16C/2.0GHz | 64GB DDR5 | MR408i-o RAID | 10Gb NIC | 1x1000W Titanium PSU | 2U Rack | 3-3-3 Warranty", "usd": 7600, "kes": 1383200, "avail": "Available"}, {"brand": "HPE", "model": "HPE ProLiant DL380 Gen11 Rack (40-Core 2CPU)", "category": "Rack Server", "part": "P60636-421", "specs": "2x Xeon Silver 4416+ 20C/2.0GHz | 64GB DDR5 | MR408i-o RAID | 10Gb NIC | 1x1000W Titanium PSU | 2U Rack | 3-3-3 Warranty", "usd": 7800, "kes": 1419600, "avail": "Available"}, {"brand": "HPE", "model": "HPE ProLiant DL380 Gen11 Rack (32-Core 1CPU)", "category": "Rack Server", "part": "P81787-425", "specs": "1x Xeon Gold 6430 32C/2.1GHz | 64GB DDR5 | 2x480GB SSD | MR416i-p RAID | 25Gb SFP28 NIC | 2x1000W Titanium PSU | 2U Rack | 3-3-3 Warranty", "usd": 8800, "kes": 1601600, "avail": "Available"}, {"brand": "HPE", "model": "HPE ProLiant DL380 Gen11 Rack (64-Core 2CPU)", "category": "Rack Server", "part": "P81787-425", "specs": "2x Xeon Gold 6430 32C/2.1GHz | 64GB DDR5 | 2x480GB SSD | MR416i-p RAID | 25Gb SFP28 NIC | 2x1000W Titanium PSU | 2U Rack | 3-3-3 Warranty", "usd": 10000, "kes": 1820000, "avail": "Available"}, {"brand": "Lenovo", "model": "ST45 V3 AMD EPYC 4124P (4C 3.8GHz 16MB Cache/65W)", "category": "Tower Server", "part": "7DH5A00SEA", "specs": "ST45 V3 AMD EPYC 4124P (4C 3.8GHz 16MB Cache/65W), No RAID, 2x1TB SATA, 1x16GB, 500W 94% Efficiency, No DVD, 3 year", "usd": 1215.2, "kes": 221166, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "ST45 V3 AMD EPYC 4244P (6C 3.8GHz 32MB Cache/65W)", "category": "Tower Server", "part": "7DH5A00AEA", "specs": "ST45 V3 AMD EPYC 4244P (6C 3.8GHz 32MB Cache/65W), No RAID, 2x2TB SATA, 1x16GB, 500W 94% Efficiency, No DVD, 3 year", "usd": 1395.0, "kes": 253890, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "ST45 V3 AMD EPYC 4344P (8C 3.8GHz 32MB Cache/65W)", "category": "Tower Server", "part": "7DH5A00NEA", "specs": "ST45 V3 AMD EPYC 4344P (8C 3.8GHz 32MB Cache/65W), No RAID, 2x2TB SATA, 1x32GB, 500W 94% Efficiency, No DVD, 3 year", "usd": 1519.0, "kes": 276458, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "ST50 V3 Xeon E-2434\u00a0 (4C 3.4GHz 12MB Cache/55W)", "category": "Tower Server", "part": "7DF3A00TEA", "specs": "ST50 V3 Xeon E-2434\u00a0 (4C 3.4GHz 12MB Cache/55W), SW RAID, 2x1TB SATA, 1x16GB, 500W 94% Efficiency, No DVD, 3 year", "usd": 1558.68, "kes": 283680, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "ST50 V3 Xeon E-2414\u00a0 (4C 2.6GHz 8MB Cache/55W)", "category": "Tower Server", "part": "7DF3A010EA", "specs": "ST50 V3 Xeon E-2414\u00a0 (4C 2.6GHz 8MB Cache/55W), SW RAID, 2x960GB VA SSD, 1x16GB, 500W 94%, No DVD, 3 year", "usd": 1817.84, "kes": 330847, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "ST50 V3 Xeon E-2434\u00a0 (4C 3.4GHz 8MB Cache/55W)", "category": "Tower Server", "part": "7DF3A00YEA", "specs": "ST50 V3 Xeon E-2434\u00a0 (4C 3.4GHz 8MB Cache/55W), SW RAID, 2x960GB VA SSD, 1x32GB, 500W 94%, No DVD, 3 year", "usd": 1972.84, "kes": 359057, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "ST250 V3 Xeon E-2436 (6C 2.9GHz 12MB Cache/65W)", "category": "Tower Server", "part": "7DCEA02WEA", "specs": "ST250 V3 Xeon E-2436 (6C 2.9GHz 12MB Cache/65W), 1x32GB, O/B, 2.5\" HS (8), 5350-8i, HS 800W Titanium, XCC2 Platinum, No DVD", "usd": 2281.6, "kes": 415251, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "ST250 V3 Xeon E-2468 (8C 2.6GHz 16MB Cache/65W)", "category": "Tower Server", "part": "7DCEA02VEA", "specs": "ST250 V3 Xeon E-2468 (8C 2.6GHz 16MB Cache/65W), 1x32GB, O/B, 2.5\" HS (8), 5350-8i, HS 800W Titanium, XCC2 Platinum, No DVD", "usd": 2429.16, "kes": 442107, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "ST650 V3 Xeon Silver 4509Y (8C 2.6GHz 22.5MB Cache/125W)", "category": "Tower Server", "part": "7D7AA02FEA", "specs": "ST650 V3 Xeon Silver 4509Y (8C 2.6GHz 22.5MB Cache/125W), 32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA, 940-8i 4GB, 1x1100W Titanium, 3 Standard Fans, XCC2 Platinum", "usd": 4616.52, "kes": 840207, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "ST650 V3 Xeon Silver 4510 (12C 2.4GHz 30MB Cache/150W)", "category": "Tower Server", "part": "7D7AA02NEA", "specs": "ST650 V3 Xeon Silver 4510 (12C 2.4GHz 30MB Cache/150W), 32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA, 940-8i 4GB, 1x1100W Titanium, 3 Standard Fans, XCC2 Platinum", "usd": 4616.52, "kes": 840207, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "ST650 V3 Xeon Silver 4514Y (16C 2.0GHz 30MB Cache/150W)", "category": "Tower Server", "part": "7D7A100DEA", "specs": "ST650 V3 Xeon Silver 4514Y (16C 2.0GHz 30MB Cache/150W), 32GB (1x32GB, 5600MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA, 940-8i 4GB, 1x1100W Titanium, 3 Standard Fans, XCC2 Platinum", "usd": 4713.24, "kes": 857810, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "SR250 V3 Xeon E-2434 (4C 3.4GHz 8MB Cache/55W)", "category": "Rack Server", "part": "7DCLA00LEA", "specs": "SR250 V3 Xeon E-2434 (4C 3.4GHz 8MB Cache/55W), 1x16GB, O/B, 2.5\" HS (8), SW RAID, HS 800W Titanium, XCC2 Platinum, Rails", "usd": 1881.08, "kes": 342357, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "SR250 V3 Xeon E-2436 (6C 2.9GHz 12MB Cache/65W)", "category": "Rack Server", "part": "7DCLA00NEA", "specs": "SR250 V3 Xeon E-2436 (6C 2.9GHz 12MB Cache/65W), 1x32GB, O/B, 2.5\" HS (8), 5350-8i Internal, HS 800W Titanium, XCC2 Platinum, Rails", "usd": 2203.48, "kes": 401033, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "SR250 V3 Xeon E-2468 (8C 2.6GHz 16MB Cache/65W)", "category": "Rack Server", "part": "7DCLA00TEA", "specs": "SR250 V3 Xeon E-2468 (8C 2.6GHz 16MB Cache/65W), 1x32GB, O/B, 2.5\" HS (8), 5350-8i Internal, HS 800W Titanium, XCC2 Platinum, Rails", "usd": 2351.04, "kes": 427889, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "SR630 V3 Xeon Silver 4509Y (8C 2.6GHz 22.5MB Cache/125W)", "category": "Rack Server", "part": "7D73A03ZEA", "specs": "SR630 V3 Xeon Silver 4509Y (8C 2.6GHz 22.5MB Cache/125W), 32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA, 940-8i 4GB, 1x1100W Titanium, 6 Performance Fans, XCC2 Platinum, Toolless V2 Rails", "usd": 3858.88, "kes": 702316, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "SR630 V3 Xeon Silver 4510 (12C 2.4GHz 30MB Cache/150W)", "category": "Rack Server", "part": "7D73A045EA", "specs": "SR630 V3 Xeon Silver 4510 (12C 2.4GHz 30MB Cache/150W), 32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA, 940-8i 4GB, 1x1100W Titanium, 6 Performance Fans, XCC2 Platinum, Toolless V2 Rails", "usd": 3858.88, "kes": 702316, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "SR650 V3 Xeon Gold 6426Y (16C 2.5GHz 37.5MB Cache/185W)", "category": "Rack Server", "part": "7D76A04DEA", "specs": "SR650 V3 Xeon Gold 6426Y (16C 2.5GHz 37.5MB Cache/185W), 32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), No Backplane, No RAID, 1x1100W Titanium, 5 Standard Fans, XCC Platinum", "usd": 3938.24, "kes": 716760, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "SR650 V3 Xeon Silver 4509Y (8C 2.6GHz 22.5MB Cache/125W)", "category": "Rack Server", "part": "7D76A05TEA", "specs": "SR650 V3 Xeon Silver 4509Y (8C 2.6GHz 22.5MB Cache/125W), 32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA, 940-8i, 1x1100W Titanium, 5 Standard Fans, XCC2 Platinum, Toolless V2 Rails", "usd": 3995.28, "kes": 727141, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "SR650 V3 Xeon Silver 4510 (12C 2.4GHz 30MB Cache/150W)", "category": "Rack Server", "part": "7D76A058EA", "specs": "SR650 V3 Xeon Silver 4510 (12C 2.4GHz 30MB Cache/150W), 32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA, 940-8i, 1x1100W Titanium, 5 Standard Fans, XCC2 Platinum, Toolless V2 Rails", "usd": 3995.28, "kes": 727141, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "SR630 V3 Xeon Silver 4514Y (16C 2.0GHz 30MB Cache/150W)", "category": "Rack Server", "part": "7D73A04HEA", "specs": "SR630 V3 Xeon Silver 4514Y (16C 2.0GHz 30MB Cache/150W), 32GB (1x32GB, 5600MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA, 940-8i 4GB, 1x1100W Titanium, 6 Performance Fans, XCC2 Platinum, Toolless V2 Rails", "usd": 4025.04, "kes": 732557, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "SR665 V3 AMD EPYC 9124 (16C 3.0GHz 64MB Cache/200W)", "category": "Rack Server", "part": "7D9AA01TEA", "specs": "SR665 V3 AMD EPYC 9124 (16C 3.0GHz 64MB Cache/200W), 32GB\u00a0 (1x32GB, 4800MHz 1Rx4\u00a0 DDR5 RDIMM), No Backplane, No RAID, NA, 1x1100W Titanium, 5 Standard Fans, XCC Platinum, Toolless V2 Rails", "usd": 4038.68, "kes": 735040, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "SR650 V3 Xeon Silver 4514Y (16C 2.0GHz 30MB Cache/150W)", "category": "Rack Server", "part": "7D76A05MEA", "specs": "SR650 V3 Xeon Silver 4514Y (16C 2.0GHz 30MB Cache/150W), 32GB (1x32GB, 5600MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA, 940-8i 4GB, 1x1100W Titanium, 5 Standard Fans, XCC2 Platinum, Toolless V2 Rails", "usd": 4092.0, "kes": 744744, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "SR630 V3 Xeon Gold 6526Y (16C 2.8GHz 37.5MB Cache/195W)", "category": "Rack Server", "part": "7D73A06EEA", "specs": "SR630 V3 Xeon Gold 6526Y (16C 2.8GHz 37.5MB Cache/195W), 32GB (1x32GB, 5600MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA, 940-8i 4GB, 1x1100W Titanium, 6 Performance Fans, XCC2 Platinum, Toolless V2 Rails", "usd": 4553.28, "kes": 828697, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "SR645 V3 AMD EPYC 9124 (16C 3.0GHz 64MB Cache/200W)", "category": "Rack Server", "part": "7D9CA02FEA", "specs": "SR645 V3 AMD EPYC 9124 (16C 3.0GHz 64MB Cache/200W), 32 GB (1x32GB, 4800MHz 2Rx8 DDR5 RDIMM), 8 SAS/SATA, 940-8i 4GB, 1x1100W Titanium, 6 Performance Fans, XCC2 Platinum, Toolless V2 Rails", "usd": 4704.56, "kes": 856230, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "SR665 V3 AMD EPYC 9174F (16C 4.1GHz 256MB Cache/320W)", "category": "Rack Server", "part": "7D9AA01QEA", "specs": "SR665 V3 AMD EPYC 9174F (16C 4.1GHz 256MB Cache/320W), 32GB\u00a0 (1x32GB, 4800MHz 1Rx4\u00a0 DDR5 RDIMM), No Backplane, No RAID, NA, 1x1800W Titanium, 5 Performance Fans, XCC Platinum, Toolless V2 Rails", "usd": 5823.04, "kes": 1059793, "avail": "4 weeks lead time"}, {"brand": "Lenovo", "model": "SR665 V3 AMD EPYC 9274F (24C 4.05GHz 256MB Cache/320W)", "category": "Rack Server", "part": "7D9AA01XEA", "specs": "SR665 V3 AMD EPYC 9274F (24C 4.05GHz 256MB Cache/320W), 32GB\u00a0 (1x32GB, 4800MHz 1Rx4\u00a0 DDR5 RDIMM), No Backplane, No RAID, 1x1800W Titanium, 5 Performance Fans, XCC Platinum, Toolless V2 Rails", "usd": 5947.04, "kes": 1082361, "avail": "4 weeks lead time"}];
 
-  function filterBrand(brand) {
-    currentBrand = brand;
-    document.querySelectorAll('.brand-tab').forEach(t => t.classList.remove('active'));
-    event.target.classList.add('active');
-    renderServers(brand);
-  }
+const brandImg = {
+  dell:   'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Dell_logo_2016.svg/300px-Dell_logo_2016.svg.png',
+  hpe:    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Hewlett_Packard_Enterprise_logo.svg/400px-Hewlett_Packard_Enterprise_logo.svg.png',
+  lenovo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lenovo_logo_2015.svg/400px-Lenovo_logo_2015.svg.png',
+};
+function getImg(brand){ return brandImg[(brand||'').toLowerCase()] || brandImg.dell; }
+function getBadge(brand){
+  const b=(brand||'').toLowerCase();
+  if(b==='dell') return 'badge-dell';
+  if(b==='hpe') return 'badge-hpe';
+  return 'badge-lenovo';
+}
 
-  function renderServers(brand) {
-    const grid = document.getElementById('productsGrid');
-    let items = window.products ? window.products.filter(p => p.category === 'servers') : [];
-    if (brand !== 'all') items = items.filter(p => p.brand === brand);
-    if (!items.length) {
-      grid.innerHTML = '<p style="color:#64748b; padding:40px 0;">No servers found.</p>';
-      return;
-    }
-    grid.innerHTML = items.map(p => `
-      <div class="product-card">
-        <div class="product-badge">${p.badge}</div>
-        <div class="product-image-wrap" style="background:#f1f5f9; display:flex; align-items:center; justify-content:center; min-height:180px; border-radius:10px; margin-bottom:16px;">
-          <span style="font-size:3rem;">🖥️</span>
-        </div>
-        <h3 class="product-name">${p.name}</h3>
-        <p class="product-specs" style="font-size:0.85rem; color:#64748b; margin-bottom:12px;">${p.specs.processor}</p>
-        <div class="product-price">KES ${p.price.toLocaleString()}</div>
-        <p style="font-size:0.8rem; color:#94a3b8; margin-bottom:16px;">VAT Exclusive · ${p.specs.availability}</p>
-        <a href="${p.whatsapp}" target="_blank" class="btn-primary" style="display:block; text-align:center; background:#25d366; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:700;">
-          💬 Enquire on WhatsApp
-        </a>
+function render(items){
+  const list = document.getElementById('serverList');
+  document.getElementById('resultCount').textContent = `${items.length} server${items.length!==1?'s':''}`;
+  if(!items.length){ list.innerHTML='<div class="no-results">No servers found.</div>'; return; }
+  list.innerHTML = items.map(s => {
+    const isRack = s.category === 'Rack Server';
+    const wa = encodeURIComponent(`Hi Nexcom! I need a quote for the ${s.model} — ${s.part}. Please send pricing and availability.`);
+    const usdNote = `USD ${s.usd.toLocaleString()} + 40% margin`;
+    return `
+    <div class="srow">
+      <div class="srow-img">
+        <img src="${getImg(s.brand)}" alt="${s.brand}" loading="lazy">
       </div>
-    `).join('');
-  }
+      <div class="srow-body">
+        <div class="srow-top">
+          <div class="srow-name">
+            <span class="cat-pill ${isRack?'cat-rack':'cat-tower'}">${isRack?'Rack':'Tower'}</span>${s.model}
+          </div>
+          <span class="srow-badge ${getBadge(s.brand)}">${s.brand}</span>
+        </div>
+        <div class="srow-specs">${s.specs}</div>
+        <div class="srow-bottom">
+          <div class="srow-price">
+            KES ${s.kes.toLocaleString()}
+            <small>${usdNote}</small>
+          </div>
+          <a href="https://wa.me/254721585784?text=${wa}" target="_blank" class="srow-cta">💬 Get Quote</a>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
 
-  document.addEventListener('DOMContentLoaded', () => renderServers('all'));
+function filter(type, btn){
+  document.querySelectorAll('.ftab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  let items = SERVERS;
+  if(type==='dell')   items = SERVERS.filter(s=>s.brand==='Dell');
+  else if(type==='hpe')    items = SERVERS.filter(s=>s.brand==='HPE');
+  else if(type==='lenovo') items = SERVERS.filter(s=>s.brand==='Lenovo');
+  else if(type==='tower')  items = SERVERS.filter(s=>s.category==='Tower Server');
+  else if(type==='rack')   items = SERVERS.filter(s=>s.category==='Rack Server');
+  render(items);
+}
+
+render(SERVERS);
 </script>
-
 </body>
 </html>
