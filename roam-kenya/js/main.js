@@ -12,17 +12,6 @@ const translations = { en: { experience: "The Experience", tours: "Tours & Safar
         el.style.visibility = "visible";
     });
 
-    // 1. Preloader
-    const preloader = document.querySelector('.preloader');
-    if (preloader) {
-        setTimeout(() => {
-            preloader.classList.add('fade-out');
-            preloader.style.opacity = "0";
-            preloader.style.visibility = "hidden";
-            setTimeout(() => { preloader.style.display = 'none'; }, 500);
-        }, 300);
-    }
-
     // 2. Smart Navbar Scroll (Hide on down, show on up)
     const nav = document.querySelector('.main-nav');
     let lastScrollY = 0;
@@ -177,36 +166,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Cinema Mode - Magnetic Cursor
-const cursor = document.querySelector('.custom-cursor');
-const cursorOutline = document.querySelector('.custom-cursor-outline');
-
-window.addEventListener('mousemove', (e) => {
-    const posX = e.clientX;
-    const posY = e.clientY;
-    
-    cursor.style.left = posX + 'px';
-    cursor.style.top = posY + 'px';
-    
-    // Smooth delay for outline
-    setTimeout(() => {
-        cursorOutline.style.left = posX + 'px';
-        cursorOutline.style.top = posY + 'px';
-        cursorOutline.style.transform = 'translate(-25%, -25%)';
-    }, 50);
-});
-
-document.querySelectorAll('a, button, .service-item, .tier-card, .tag, .close-detail, .close-modal, .lang-selector span').forEach(link => {
-    link.addEventListener('mouseenter', () => {
-        cursor.classList.add('active');
-        cursorOutline.classList.add('active');
-    });
-    link.addEventListener('mouseleave', () => {
-        cursor.classList.remove('active');
-        cursorOutline.classList.remove('active');
-    });
-});
-
 // Liquid Reveal Observer
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -220,24 +179,6 @@ document.querySelectorAll('.reveal-text').forEach(text => {
     revealObserver.observe(text);
 });
 
-
-
-
-// Guaranteed Preloader Exit Logic
-function hidePreloader() {
-    const preloader = document.querySelector('.preloader');
-    if (preloader && !preloader.classList.contains('fade-out')) {
-        preloader.classList.add('fade-out');
-        document.body.style.overflow = 'auto';
-        console.log('Preloader dismissed');
-    }
-}
-
-// 1. Try to hide when everything is loaded
-window.addEventListener('load', hidePreloader);
-
-// 2. Safety override: Force hide after 4 seconds regardless of load state
-setTimeout(hidePreloader, 4000);
 
 
 
