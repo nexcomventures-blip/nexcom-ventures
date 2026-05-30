@@ -125,7 +125,7 @@ function setupDailySpecial() {
     if (titleEl) titleEl.innerText = p.name;
     if (specsEl) specsEl.innerText = p.specs;
     if (oldPriceEl) oldPriceEl.innerText = `KES ${p.price.toLocaleString()}`;
-    if (newPriceEl) newPriceEl.innerHTML = `KES ${Math.round(p.price * 0.9).toLocaleString()}`;
+    if (newPriceEl) newPriceEl.innerHTML = `KES ${Math.round(p.price * 0.95).toLocaleString()}`;
     if (imgEl) {
       imgEl.src = p.img;
       imgEl.onerror = () => { imgEl.src = `https://placehold.co/600x400/003B73/FFFFFF?text=${encodeURIComponent(p.name)}`; };
