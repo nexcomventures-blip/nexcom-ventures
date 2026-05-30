@@ -51,7 +51,7 @@
     .hero::before {
       content: '';
       position: absolute; inset: 0;
-      background: url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&q=60') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=900&q=60') center/cover no-repeat;
       opacity: 0.08;
     }
     .hero-inner { position: relative; z-index: 1; }
@@ -327,8 +327,14 @@
     return 'badge-other';
   }
   function getImg(brand) {
-    const b = (brand||'').toLowerCase();
-    for (const [k,v] of Object.entries(brandImg)) { if (b.includes(k)) return v; }
+  const fb = {
+    'dell':    'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=300&q=80',
+    'hp':      'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300&q=80',
+    'lenovo':  'https://images.unsplash.com/photo-1611186871525-ef747b33a9db?w=300&q=80',
+    'infinix': 'https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=300&q=80',
+  };
+  return fb[(brand||'').toLowerCase()] || 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=300&q=80';
+}
     return 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=200&q=60';
   }
 
