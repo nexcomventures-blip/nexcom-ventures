@@ -30,7 +30,7 @@ const ALL_PRODUCTS = [
     "category": "new business dell featured",
     "badge": "1 Year Warranty",
     "status": "limited",
-    "img": "images/dell_xps_13_new.jpg",
+    "img": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Pro%20Essentials%2015%20PV15250%20%28Intel%20Core%20i7-1355U%20%2F%208GB%20%2F%20512GB%20SSD%20%2F%2015.6\"%20FHD%20%2F%20Ubuntu%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -43,7 +43,7 @@ const ALL_PRODUCTS = [
     "category": "new business hp featured",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/hp_probook_new.jpg",
+    "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%20460%20G11%20%28Intel%20Core%20Ultra%207%20155U%20%2F%2016GB%20%2F%201TB%20SSD%20%2F%20DOS%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2013,7 +2013,7 @@ const ALL_PRODUCTS = [
     "category": "new business infinix",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/infinix_laptop_new.jpg",
+    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Infinix%20XL442%20%28Intel%20Core%20i7-1255U%20%2F%208GB%20%2F%20512GB%20SSD%20%2F%2014\"%20%2F%20DOS%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2026,7 +2026,7 @@ const ALL_PRODUCTS = [
     "category": "new business infinix",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/infinix_laptop_new.jpg",
+    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Infinix%20XL442%20%28Intel%20Core%20i7-1255U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014\"%20%2F%20DOS%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2039,7 +2039,7 @@ const ALL_PRODUCTS = [
     "category": "new business infinix",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/infinix_laptop_new.jpg",
+    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Infinix%20XL442%20%28Intel%20Core%20i7-1255U%20%2F%208GB%20%2F%20512GB%20SSD%20%2F%2014\"%20%2F%20Win%2011%20Home%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2052,7 +2052,7 @@ const ALL_PRODUCTS = [
     "category": "new business infinix",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/infinix_laptop_new.jpg",
+    "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Infinix%20XL442%20%28Intel%20Core%20i7-1255U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014\"%20%2F%20Win%2011%20Home%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2065,7 +2065,7 @@ const ALL_PRODUCTS = [
     "category": "new business dell",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/dell_xps_13_new.jpg",
+    "img": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%2015%20DC15250%20%28Intel%20Core%20i5-1334U%20%2F%208GB%20%2F%20512GB%20SSD%20%2F%2015.6\"%20FHD%20%2F%20Ubuntu%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2078,7 +2078,7 @@ const ALL_PRODUCTS = [
     "category": "new business lenovo",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/lenovo_thinkpad_new.jpg",
+    "img": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkBook%2014%20G8%20%28Intel%20Core%20Ultra%205%20225U%20%2F%208GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2091,7 +2091,7 @@ const ALL_PRODUCTS = [
     "category": "new business lenovo",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/lenovo_thinkpad_new.jpg",
+    "img": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkBook%2014%20G9%20%28Intel%20Core%205-210H%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%20%2F%20No%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2104,7 +2104,7 @@ const ALL_PRODUCTS = [
     "category": "new business hp",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/hp_probook_new.jpg",
+    "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%20460%20G11%20%28Intel%20Core%20Ultra%205%20125U%20%2F%208GB%20%2F%20512GB%20SSD%20%2F%2016.0\"%20WUXGA%20%2F%20DO%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2117,7 +2117,7 @@ const ALL_PRODUCTS = [
     "category": "new business lenovo",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/lenovo_thinkpad_new.jpg",
+    "img": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkBook%2014%20G8%20%28Intel%20Core%20Ultra%205%20225U%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXG%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2130,7 +2130,7 @@ const ALL_PRODUCTS = [
     "category": "new business hp",
     "badge": "1 Year Warranty",
     "status": "limited",
-    "img": "images/hp_probook_new.jpg",
+    "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%20440%20G11%20%28Intel%20Core%20Ultra%205%20125U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%20%2F%20D%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2143,7 +2143,7 @@ const ALL_PRODUCTS = [
     "category": "new business lenovo",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/lenovo_thinkpad_new.jpg",
+    "img": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkBook%2014%20G9%20%28Intel%20Core%207-240H%20%2F%208GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%20%2F%20No%20%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2156,7 +2156,7 @@ const ALL_PRODUCTS = [
     "category": "new business hp",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/hp_probook_new.jpg",
+    "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%20460%20G11%20%28Intel%20Core%20Ultra%205%20125U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2016.0\"%20WUXGA%20%2F%20D%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2169,7 +2169,7 @@ const ALL_PRODUCTS = [
     "category": "new business lenovo",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/lenovo_thinkpad_new.jpg",
+    "img": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkBook%2014%20G8%20%28Intel%20Core%20Ultra%207%20255H%20%2F%208GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2182,7 +2182,7 @@ const ALL_PRODUCTS = [
     "category": "new business hp",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/hp_probook_new.jpg",
+    "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%204%20G1i%20%28Intel%20Core%20Ultra%205%20225U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%20%2F%20D%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2195,7 +2195,7 @@ const ALL_PRODUCTS = [
     "category": "new business lenovo",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/lenovo_thinkpad_new.jpg",
+    "img": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkBook%2014%20G8%20%28Intel%20Core%20Ultra%207%20255H%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXG%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2208,7 +2208,7 @@ const ALL_PRODUCTS = [
     "category": "new business lenovo",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/lenovo_thinkpad_new.jpg",
+    "img": "https://images.unsplash.com/photo-1611186871525-ef747b33a9db?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20E14%20G7%20%28Intel%20Core%20Ultra%205%20225U%20%2F%208GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2221,7 +2221,7 @@ const ALL_PRODUCTS = [
     "category": "new business hp",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/hp_probook_new.jpg",
+    "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%20460%20G11%20%28Intel%20Core%20Ultra%207%20155U%20%2F%208GB%20%2F%20512GB%20SSD%20%2F%2016.0\"%20WUXGA%20%2F%20DO%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2234,7 +2234,7 @@ const ALL_PRODUCTS = [
     "category": "new business hp",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/hp_probook_new.jpg",
+    "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%20460%20G11%20%28Intel%20Core%20Ultra%207%20155U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2016.0\"%20WUXGA%20%2F%20D%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2247,7 +2247,7 @@ const ALL_PRODUCTS = [
     "category": "new business dell",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/dell_xps_13_new.jpg",
+    "img": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Pro%2014%20PC14250%20%28Intel%20Core%20Ultra%205%20235U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014\"%20FHD+%20%2F%20Ubun%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2260,7 +2260,7 @@ const ALL_PRODUCTS = [
     "category": "new business lenovo",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/lenovo_thinkpad_new.jpg",
+    "img": "https://images.unsplash.com/photo-1611186871525-ef747b33a9db?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20E16%20G3%20%28Intel%20Core%20Ultra%207%20256V%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2016.0\"%20WUXG%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2273,7 +2273,7 @@ const ALL_PRODUCTS = [
     "category": "new business lenovo",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/lenovo_thinkpad_new.jpg",
+    "img": "https://images.unsplash.com/photo-1611186871525-ef747b33a9db?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20E14%20G7%20%28Intel%20Core%20Ultra%207%20256V%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXG%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2286,7 +2286,7 @@ const ALL_PRODUCTS = [
     "category": "new business dell",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/dell_xps_13_new.jpg",
+    "img": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Pro%2014%20Plus%20PB14250%20%28Intel%20Core%20Ultra%205%20236V%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014\"%20FHD+%20%2F%20Ubun%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2299,7 +2299,7 @@ const ALL_PRODUCTS = [
     "category": "new business dell",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/dell_xps_13_new.jpg",
+    "img": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Pro%2014%20PC14250%20%28Intel%20Core%20Ultra%205%20220U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014\"%20FHD+%20%2F%20Win%20%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2312,7 +2312,7 @@ const ALL_PRODUCTS = [
     "category": "new business dell",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/dell_xps_13_new.jpg",
+    "img": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Pro%2014%20PC14250%20%28Intel%20Core%20Ultra%207%20255U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014\"%20FHD+%20%2F%20Ubun%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2325,7 +2325,7 @@ const ALL_PRODUCTS = [
     "category": "new business dell",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/dell_xps_13_new.jpg",
+    "img": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Pro%2014%20PC14250%20%28Intel%20Core%20Ultra%207%20265U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014\"%20FHD+%20%2F%20Win%20%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2338,7 +2338,7 @@ const ALL_PRODUCTS = [
     "category": "new business lenovo",
     "badge": "1 Year Warranty",
     "status": "available",
-    "img": "images/lenovo_thinkpad_new.jpg",
+    "img": "https://images.unsplash.com/photo-1611186871525-ef747b33a9db?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20T14%20G5%20%28Intel%20Core%20Ultra%207%20155U%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014\"%20WUXGA%20%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2351,7 +2351,7 @@ const ALL_PRODUCTS = [
     "category": "new business lenovo",
     "badge": "1 Year Warranty",
     "status": "limited",
-    "img": "images/lenovo_thinkpad_new.jpg",
+    "img": "https://images.unsplash.com/photo-1611186871525-ef747b33a9db?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20T14%20LNL%20%28Intel%20Core%20Ultra%207%20258V%20%2F%2032GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXG%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
@@ -2364,7 +2364,7 @@ const ALL_PRODUCTS = [
     "category": "new business lenovo",
     "badge": "1 Year Warranty",
     "status": "limited",
-    "img": "images/lenovo_thinkpad_new.jpg",
+    "img": "https://images.unsplash.com/photo-1611186871525-ef747b33a9db?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20X1%20Carbon%20G13%20%28Intel%20Core%20Ultra%207%20255U%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014\"%20WUXGA%20%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   }
