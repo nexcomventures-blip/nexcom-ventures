@@ -5,38 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   <title>iPhones Nairobi | iPhone 7 Plus to iPhone 12 | Nexcom Ventures</title>
   <meta name="description" content="Buy refurbished iPhones in Nairobi CBD — iPhone 7 Plus, 8 Plus, X, 11 & 12. All unlocked, fully tested with warranty. Mama Ngina St. Call 0722 816 001."/>
-  <meta name="keywords" content="iPhone Nairobi, refurbished iPhone Kenya, iPhone 11 Nairobi price, iPhone 12 Nairobi, buy iPhone Nairobi CBD, cheap iPhone Kenya, iPhone X Nairobi, Nexcom Ventures iPhones"/>
+  <meta name="keywords" content="iPhone Nairobi, refurbished iPhone Kenya, iPhone 11 Nairobi price, iPhone 12 Nairobi, buy iPhone Nairobi CBD, Nexcom Ventures iPhones"/>
   <link rel="canonical" href="https://nexcomventures.co.ke/iphones-nairobi.html"/>
   <link rel="icon" type="image/svg+xml" href="logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Space+Grotesk:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1.0.5"/>
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #0f172a; }
-
-    /* NAV */
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(15,23,42,0.96);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-      padding: 0 20px;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 56px;
+    :root {
+      --red: #C5222A;
+      --red-dark: #9E1318;
+      --bg: #f2f4f7;
+      --bg2: #e9ecef;
+      --card: #ffffff;
+      --text: #212529;
+      --gray: #6c757d;
+      --border: rgba(0,0,0,0.07);
+      --wa: #25d366;
     }
-    .nav-logo img { height: 36px; width: auto; }
-    .nav-links-row { display: flex; gap: 20px; align-items: center; }
-    .nav-links-row a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: color 0.2s; }
-    .nav-links-row a:hover, .nav-links-row a.active { color: #fff; }
-    .nav-wa { background: #25d366; color: #fff !important; padding: 7px 16px; border-radius: 20px; font-size: 0.82rem !important; }
-    @media(max-width:640px){ .nav-links-row { display: none; } }
 
-    /* HERO — compact */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); }
+
+    /* ── NAV ── */
+    #navbar { background: var(--card); border-bottom: 1px solid var(--border); }
+
+    /* ── PAGE WRAPPER with grey sidebars ── */
+    .page-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      background: var(--card);
+      box-shadow: 0 0 0 1px var(--border);
+    }
+
+    /* ── HERO ── */
     .hero {
-      background: #0f172a;
-      padding: 48px 20px 36px;
+      background: var(--red);
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+      padding: 36px 24px 30px;
       text-align: center;
       color: white;
       position: relative;
@@ -46,217 +54,246 @@
       content: '';
       position: absolute; inset: 0;
       background: url('media/1780122108749.jpg') center/cover no-repeat;
-      opacity: 0.18;
+      opacity: 0.1;
     }
-    .hero-inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
-    .hero-pill {
+    .hero-inner { position: relative; z-index: 1; }
+    .hero-eyebrow {
       display: inline-block;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      color: rgba(255,255,255,0.85);
-      font-size: 0.75rem; font-weight: 700;
-      padding: 5px 14px; border-radius: 30px;
-      text-transform: uppercase; letter-spacing: 0.8px;
-      margin-bottom: 14px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.72rem; font-weight: 700;
+      padding: 4px 14px; border-radius: 30px;
+      text-transform: uppercase; letter-spacing: 1px;
+      margin-bottom: 12px;
     }
     .hero h1 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.9rem, 5vw, 2.8rem);
-      font-weight: 900; letter-spacing: -1px;
-      margin-bottom: 10px; line-height: 1.1;
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      font-weight: 900; letter-spacing: -0.5px;
+      margin-bottom: 8px; line-height: 1.1;
     }
-    .hero p { font-size: 0.92rem; color: rgba(255,255,255,0.65); margin-bottom: 20px; line-height: 1.5; }
-    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 22px; }
-    .hero-tag { font-size: 0.78rem; color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 5px 12px; border-radius: 20px; }
+    .hero p { font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-bottom: 18px; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 7px; justify-content: center; margin-bottom: 20px; }
+    .hero-tag {
+      font-size: 0.76rem; color: rgba(255,255,255,0.88);
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+      padding: 5px 12px; border-radius: 20px; font-weight: 600;
+    }
     .hero-cta {
       display: inline-flex; align-items: center; gap: 7px;
-      background: #25d366; color: white;
-      padding: 12px 28px; border-radius: 40px;
-      text-decoration: none; font-weight: 800; font-size: 0.92rem;
-      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+      background: white; color: var(--red);
+      padding: 11px 26px; border-radius: 40px;
+      text-decoration: none; font-weight: 800; font-size: 0.9rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
     }
+    .hero-cta:hover { transform: scale(1.03); }
 
-    /* CATALOGUE */
-    .catalogue { max-width: 1100px; margin: 0 auto; padding: 32px 16px 80px; }
-    .cat-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
-    .cat-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 900; color: #0f172a; }
-    .cat-sub { font-size: 0.8rem; color: #94a3b8; }
-
-    /* GRID — compact cards */
-    .iphone-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-    }
-
-    .icard {
-      background: #fff;
-      border-radius: 16px;
-      border: 1px solid #e2e8f0;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .icard:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
-
-    .icard-top {
+    /* ── GREY SPACER BAR ── */
+    .spacer-bar {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 24px;
       display: flex;
       align-items: center;
-      gap: 14px;
-      padding: 16px 16px 12px;
-      background: linear-gradient(135deg, #1a1a2e, #16213e);
-      position: relative;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
     }
-    .icard-img {
-      width: 72px; height: 90px;
-      object-fit: contain;
+    .spacer-bar-title { font-size: 0.8rem; font-weight: 700; color: var(--text); text-transform: uppercase; letter-spacing: 0.8px; }
+    .spacer-bar-sub { font-size: 0.75rem; color: var(--gray); }
+    .spacer-trust { display: flex; gap: 14px; flex-wrap: wrap; }
+    .spacer-trust span { font-size: 0.75rem; color: var(--gray); font-weight: 600; }
+
+    /* ── CARDS ── */
+    .catalogue { padding: 0; }
+
+    .icard {
+      display: flex;
+      align-items: stretch;
+      border-bottom: 1px solid var(--border);
+      background: var(--card);
+      transition: background 0.15s;
+    }
+    .icard:hover { background: #fafafa; }
+
+    /* left image column */
+    .icard-img-col {
+      width: 110px;
       flex-shrink: 0;
-      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+      background: var(--bg);
+      border-right: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 10px;
     }
-    .icard-img-wrap {
-      width: 72px; height: 90px; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .icard-head { flex: 1; color: white; }
-    .icard-brand { font-size: 0.68rem; color: #a78bfa; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 3px; }
-    .icard-name { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 900; line-height: 1.2; margin-bottom: 4px; }
-    .icard-storage { font-size: 0.78rem; color: rgba(255,255,255,0.6); }
-    .icard-badge {
-      position: absolute; top: 10px; right: 10px;
-      background: rgba(167,139,250,0.2); border: 1px solid rgba(167,139,250,0.35);
-      color: #c4b5fd; font-size: 0.65rem; font-weight: 700;
-      padding: 3px 9px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.5px;
+    .icard-img-col img {
+      width: 70px;
+      height: 88px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));
     }
 
-    .icard-body { padding: 14px 16px 16px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
-    .icard-specs { font-size: 0.8rem; color: #64748b; line-height: 1.5; }
-    .icard-price-row { display: flex; align-items: baseline; justify-content: space-between; }
-    .icard-price { font-family: 'Space Grotesk', sans-serif; font-size: 1.45rem; font-weight: 900; color: #0f172a; }
-    .icard-note { font-size: 0.7rem; color: #94a3b8; }
+    /* right content column */
+    .icard-content {
+      flex: 1;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .icard-top-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+    .icard-name { font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; font-weight: 900; color: var(--text); }
+    .icard-storage-badge {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      color: var(--gray);
+      font-size: 0.7rem; font-weight: 700;
+      padding: 3px 9px; border-radius: 10px;
+      white-space: nowrap;
+    }
+    .icard-meta { font-size: 0.78rem; color: var(--gray); line-height: 1.5; }
+    .icard-bottom-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .icard-price {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.3rem; font-weight: 900;
+      color: var(--red);
+    }
     .icard-cta {
-      display: flex; align-items: center; justify-content: center; gap: 6px;
-      background: #25d366; color: white;
-      padding: 10px; border-radius: 10px;
-      text-decoration: none; font-weight: 700; font-size: 0.85rem;
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--wa); color: white;
+      padding: 8px 16px; border-radius: 8px;
+      text-decoration: none; font-weight: 700; font-size: 0.8rem;
       transition: background 0.2s;
-      margin-top: auto;
+      white-space: nowrap;
     }
     .icard-cta:hover { background: #1da851; }
-
-    /* TRUST ROW */
-    .trust-row {
-      display: flex; gap: 0;
-      background: #0f172a;
-      overflow-x: auto;
+    .icard-refurb-tag {
+      display: inline-block;
+      background: #fff3f3; border: 1px solid #fca5a5;
+      color: var(--red); font-size: 0.65rem; font-weight: 700;
+      padding: 2px 8px; border-radius: 8px;
+      text-transform: uppercase; letter-spacing: 0.5px;
     }
-    .trust-item {
-      flex: 1; min-width: 120px;
-      padding: 16px 12px;
-      text-align: center;
-      border-right: 1px solid rgba(255,255,255,0.07);
-    }
-    .trust-item:last-child { border-right: none; }
-    .trust-icon { font-size: 1.3rem; display: block; margin-bottom: 4px; }
-    .trust-text { font-size: 0.72rem; color: #64748b; font-weight: 600; }
 
-    /* FOOTER */
+    /* ── FOOTER ── */
     footer {
-      background: #020617;
-      color: #64748b;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 20px 24px 72px;
       text-align: center;
-      padding: 28px 20px 70px;
-      font-size: 0.82rem;
-      border-top: 1px solid #1e293b;
+      font-size: 0.8rem;
+      color: var(--gray);
     }
-    footer a { color: #94a3b8; text-decoration: none; margin: 0 8px; }
-    footer a:hover { color: white; }
+    footer strong { color: var(--text); }
+    footer a { color: var(--gray); text-decoration: none; margin: 0 6px; }
+    footer a:hover { color: var(--red); }
 
-    /* STICKY */
+    /* ── STICKY ── */
     .sticky-bar {
       position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
-      background: rgba(2,6,23,0.95);
-      backdrop-filter: blur(16px);
-      border-top: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
       padding: 10px 16px;
       display: flex; gap: 10px; justify-content: center;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
     }
     .sticky-bar a {
-      flex: 1; max-width: 200px;
-      text-align: center; padding: 11px 16px;
-      border-radius: 40px; font-weight: 700; font-size: 0.85rem;
-      text-decoration: none;
+      flex: 1; max-width: 200px; text-align: center;
+      padding: 11px 16px; border-radius: 40px;
+      font-weight: 700; font-size: 0.85rem; text-decoration: none;
     }
-    .s-wa { background: #25d366; color: white; }
-    .s-call { background: rgba(255,255,255,0.08); color: white; border: 1px solid rgba(255,255,255,0.15); }
+    .s-wa { background: var(--wa); color: white; }
+    .s-call { background: var(--red); color: white; }
+
+    @media(max-width:500px){
+      .icard-img-col { width: 86px; }
+      .icard-img-col img { width: 56px; height: 70px; }
+      .icard-price { font-size: 1.1rem; }
+    }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="/" class="nav-logo"><img src="logo.svg" alt="Nexcom"></a>
-  <div class="nav-links-row">
-    <a href="index.html#laptops">Laptops</a>
-    <a href="new-laptops-nairobi.html">New</a>
-    <a href="iphones-nairobi.html" class="active">📱 iPhones</a>
-    <a href="repairs.html">Repairs</a>
-    <a href="servers-nairobi.html">Servers</a>
-    <a href="https://wa.me/254722816001" class="nav-wa" target="_blank">WhatsApp</a>
+<!-- NAV (reuse site nav) -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-logo" style="display:flex;align-items:center;text-decoration:none;padding:5px 0;">
+      <img src="logo.svg" alt="Nexcom" style="height:44px;width:auto;">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#laptops">Shop Laptops</a></li>
+      <li><a href="new-laptops-nairobi.html">New Laptops</a></li>
+      <li><a href="iphones-nairobi.html" style="color:var(--primary);">📱 iPhones</a></li>
+      <li><a href="index.html#sell">Sell</a></li>
+      <li><a href="repairs.html">Repairs</a></li>
+      <li><a href="servers-nairobi.html">Servers</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="https://wa.me/254722816001" class="nav-cta">WhatsApp</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-inner">
-    <div class="hero-pill">📱 In Stock · Nairobi CBD</div>
-    <h1>Refurbished iPhones<br>in Nairobi</h1>
-    <p>Unlocked, tested & warranted. From KES 18,499.</p>
-    <div class="hero-tags">
-      <span class="hero-tag">✅ Fully Tested</span>
-      <span class="hero-tag">🔓 All Networks</span>
-      <span class="hero-tag">🛡️ Warranty</span>
-      <span class="hero-tag">⚡ Same-Day</span>
+<!-- PAGE WRAPPER (grey sidebars auto-show on wide screens) -->
+<div class="page-wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">📱 In Stock · Nairobi CBD</div>
+      <h1>Refurbished iPhones<br>in Nairobi</h1>
+      <p>Unlocked · Tested · Warranted — from KES 18,499</p>
+      <div class="hero-tags">
+        <span class="hero-tag">✅ Fully Tested</span>
+        <span class="hero-tag">🔓 All Networks</span>
+        <span class="hero-tag">🛡️ Warranty</span>
+        <span class="hero-tag">⚡ Same-Day Collection</span>
+      </div>
+      <a href="https://wa.me/254722816001?text=Hi%20Nexcom!%20I%27m%20interested%20in%20an%20iPhone." class="hero-cta" target="_blank">
+        💬 WhatsApp to Order
+      </a>
     </div>
-    <a href="https://wa.me/254722816001?text=Hi%20Nexcom!%20I%27m%20interested%20in%20an%20iPhone." class="hero-cta" target="_blank">
-      💬 WhatsApp to Order
-    </a>
-  </div>
-</header>
+  </header>
 
-<!-- TRUST ROW -->
-<div class="trust-row">
-  <div class="trust-item"><span class="trust-icon">📱</span><span class="trust-text">6 Models</span></div>
-  <div class="trust-item"><span class="trust-icon">🔓</span><span class="trust-text">Unlocked</span></div>
-  <div class="trust-item"><span class="trust-icon">🛡️</span><span class="trust-text">Warranty</span></div>
-  <div class="trust-item"><span class="trust-icon">⚡</span><span class="trust-text">Same-Day</span></div>
-  <div class="trust-item"><span class="trust-icon">📍</span><span class="trust-text">Mama Ngina</span></div>
-</div>
-
-<!-- CATALOGUE -->
-<section class="catalogue">
-  <div class="cat-header">
+  <!-- GREY SPACER BAR 1 -->
+  <div class="spacer-bar">
     <div>
-      <div class="cat-title">Available iPhones</div>
-      <div class="cat-sub">WhatsApp to confirm stock before visiting</div>
+      <div class="spacer-bar-title">Available iPhones</div>
+      <div class="spacer-bar-sub">WhatsApp to confirm stock before visiting</div>
+    </div>
+    <div class="spacer-trust">
+      <span>📍 Mama Ngina St</span>
+      <span>📞 0722 816 001</span>
     </div>
   </div>
 
-  <div class="iphone-grid" id="iphoneGrid"></div>
-</section>
+  <!-- PRODUCT LIST -->
+  <div class="catalogue" id="iphoneGrid"></div>
 
-<!-- FOOTER -->
-<footer>
-  <strong style="color:white;">NEXCOM Ventures Ltd</strong><br>
-  Norwich Union House, Mama Ngina St, Nairobi CBD<br><br>
-  <a href="tel:0722816001">📞 0722 816 001</a>
-  <a href="https://wa.me/254722816001" target="_blank">💬 WhatsApp</a>
-  <a href="index.html">Laptops</a>
-  <br><br>
-  <span>&copy; 2026 Nexcom Ventures Ltd</span>
-</footer>
+  <!-- GREY SPACER BAR 2 -->
+  <div class="spacer-bar" style="justify-content:center; gap:20px;">
+    <span style="font-size:0.78rem; color:var(--gray);">🔬 Every unit tested</span>
+    <span style="font-size:0.78rem; color:var(--gray);">🔓 Unlocked for all networks</span>
+    <span style="font-size:0.78rem; color:var(--gray);">🛡️ Warranty on all phones</span>
+  </div>
 
-<!-- STICKY -->
+  <!-- FOOTER -->
+  <footer>
+    <strong>NEXCOM Ventures Ltd</strong> · Norwich Union House, Mama Ngina St, Nairobi CBD<br><br>
+    <a href="tel:0722816001">📞 0722 816 001</a>
+    <a href="https://wa.me/254722816001" target="_blank">💬 WhatsApp</a>
+    <a href="index.html">← Back to Laptops</a><br><br>
+    &copy; 2026 Nexcom Ventures Ltd · All rights reserved.
+  </footer>
+
+</div><!-- /page-wrap -->
+
+<!-- STICKY BAR -->
 <div class="sticky-bar">
   <a href="https://wa.me/254722816001?text=Hi%20Nexcom!%20I%27m%20interested%20in%20an%20iPhone." class="s-wa" target="_blank">💬 WhatsApp Us</a>
   <a href="tel:0722816001" class="s-call">📞 0722 816 001</a>
@@ -264,53 +301,53 @@
 
 <script>
 const iphones = [
-  { name:"iPhone 7 Plus", storage:"128GB", color:"Black / Silver / Gold", price:18499,
+  { name:"iPhone 7 Plus", storage:"128GB", color:"Black / Silver / Gold",             price:18499,
     img:"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-7-plus-select-2019?wid=300&hei=356&fmt=jpeg&qlt=95",
-    fb:"https://images.unsplash.com/photo-1512054502232-10a0a035d672?w=300&q=80" },
-  { name:"iPhone 8 Plus", storage:"64GB",  color:"Space Grey / Silver / Gold", price:19499,
+    fb:"https://images.unsplash.com/photo-1512054502232-10a0a035d672?w=200&q=80" },
+  { name:"iPhone 8 Plus", storage:"64GB",  color:"Space Grey / Silver / Gold",         price:19499,
     img:"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-8-plus-select-2019?wid=300&hei=356&fmt=jpeg&qlt=95",
-    fb:"https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=300&q=80" },
-  { name:"iPhone 8 Plus", storage:"256GB", color:"Space Grey / Silver / Gold", price:21499,
+    fb:"https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=200&q=80" },
+  { name:"iPhone 8 Plus", storage:"256GB", color:"Space Grey / Silver / Gold",         price:21499,
     img:"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-8-plus-select-2019?wid=300&hei=356&fmt=jpeg&qlt=95",
-    fb:"https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=300&q=80" },
-  { name:"iPhone X",      storage:"256GB", color:"Space Grey / Silver", price:24499,
+    fb:"https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=200&q=80" },
+  { name:"iPhone X",      storage:"256GB", color:"Space Grey / Silver",                price:24499,
     img:"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-x-select-2019?wid=300&hei=356&fmt=jpeg&qlt=95",
-    fb:"https://images.unsplash.com/photo-1567581935884-3349723552ca?w=300&q=80" },
+    fb:"https://images.unsplash.com/photo-1567581935884-3349723552ca?w=200&q=80" },
   { name:"iPhone 11",     storage:"128GB", color:"Black / White / Red / Green / Purple", price:27499,
     img:"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-11-black-select-2019?wid=300&hei=356&fmt=jpeg&qlt=95",
-    fb:"https://images.unsplash.com/photo-1574755393849-623942496936?w=300&q=80" },
+    fb:"https://images.unsplash.com/photo-1574755393849-623942496936?w=200&q=80" },
   { name:"iPhone 12",     storage:"256GB", color:"Black / White / Red / Blue / Green / Purple", price:31499,
     img:"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-purple-select-2021?wid=300&hei=356&fmt=jpeg&qlt=95",
-    fb:"https://images.unsplash.com/photo-1611502485725-4a2d9e847d22?w=300&q=80" },
+    fb:"https://images.unsplash.com/photo-1611502485725-4a2d9e847d22?w=200&q=80" },
 ];
 
 document.getElementById('iphoneGrid').innerHTML = iphones.map(p => {
   const wa = encodeURIComponent(`Hi Nexcom! I'm interested in the ${p.name} ${p.storage} at KES ${p.price.toLocaleString()}. Is it available?`);
   return `
   <div class="icard">
-    <div class="icard-top">
-      <span class="icard-badge">Refurbished</span>
-      <div class="icard-img-wrap">
-        <img class="icard-img" src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.src='${p.fb}'">
-      </div>
-      <div class="icard-head">
-        <div class="icard-brand">Apple</div>
-        <div class="icard-name">${p.name}</div>
-        <div class="icard-storage">${p.storage} · Unlocked</div>
-      </div>
+    <div class="icard-img-col">
+      <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.src='${p.fb}'">
     </div>
-    <div class="icard-body">
-      <div class="icard-specs">🎨 ${p.color}<br>🛡️ Warranty Included · All Networks</div>
-      <div class="icard-price-row">
-        <span class="icard-price">KES ${p.price.toLocaleString()}</span>
-        <span class="icard-note">VAT excl.</span>
+    <div class="icard-content">
+      <div class="icard-top-row">
+        <div class="icard-name">${p.name}</div>
+        <span class="icard-storage-badge">${p.storage}</span>
       </div>
-      <a href="https://wa.me/254722816001?text=${wa}" target="_blank" class="icard-cta">
-        💬 Enquire on WhatsApp
-      </a>
+      <div class="icard-meta">
+        🎨 ${p.color}<br>
+        <span class="icard-refurb-tag">Refurbished</span>
+        &nbsp;🛡️ Warranty · 🔓 All Networks
+      </div>
+      <div class="icard-bottom-row">
+        <span class="icard-price">KES ${p.price.toLocaleString()}</span>
+        <a href="https://wa.me/254722816001?text=${wa}" target="_blank" class="icard-cta">
+          💬 Enquire
+        </a>
+      </div>
     </div>
   </div>`;
 }).join('');
 </script>
+
 </body>
 </html>
