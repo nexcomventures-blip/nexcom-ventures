@@ -1,5 +1,53 @@
-const ALL_PRODUCTS = [{
+const ALL_PRODUCTS = [
+  {
     "id": "feat-1",
+    "brand": "Lenovo",
+    "name": "Lenovo T480s I5 8th 8/256Gb Touchscreen",
+    "specs": "lenovo t480s i5 8th 8/256gb touchscreen",
+    "price": 28499,
+    "category": "exuk business lenovo touchscreen featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "feat-2",
+    "brand": "Apple",
+    "name": "Macbook Air M1 2020 8/256Gb",
+    "specs": "macbook air m1  2020 8/256gb",
+    "price": 78000,
+    "category": "exuk apple macbook featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
+    "software": []
+  },
+  {
+    "id": "feat-3",
+    "brand": "Apple",
+    "name": "Macbook Pro 13 2015 I5 8/256Gb",
+    "specs": "macbook pro 13 2015 i5 8/256gb",
+    "price": 38000,
+    "category": "exuk apple macbook featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
+    "software": []
+  },
+  {
+    "id": "feat-4",
+    "brand": "Apple",
+    "name": "Macbook Pro 15 2017 I7 16/512Gb 2Gb Graphics",
+    "specs": "macbook pro 15 2017 i7 16/512gb 2gb graphics",
+    "price": 58000,
+    "category": "exuk apple macbook featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_15_usbc.jpg",
+    "software": []
+  },
+  {
+    "id": "tmp-6576",
     "brand": "Apple",
     "name": "Macbook Pro 15 2017 I7 16/512Gb 4Gb Graphics",
     "specs": "macbook pro 15 2017 i7 16/512gb 4gb graphics",
@@ -9,8 +57,8 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_15_usbc.jpg",
     "software": []
   },
-{
-    "id": "feat-2",
+  {
+    "id": "tmp-1264",
     "brand": "Apple",
     "name": "Macbook Pro 13 I7 2020 32/512Gb",
     "specs": "macbook pro 13 i7 2020 32/512gb",
@@ -20,8 +68,8 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
-    "id": "feat-3",
+  {
+    "id": "tmp-4114",
     "brand": "Dell",
     "name": "Dell Pro Essentials 15 PV15250",
     "specs": "Intel Core i7-1355U / 8GB / 512GB SSD / 15.6\" FHD / Ubuntu",
@@ -33,13 +81,13 @@ const ALL_PRODUCTS = [{
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Pro%20Essentials%2015%20PV15250%20%28Intel%20Core%20i7-1355U%20%2F%208GB%20%2F%20512GB%20SSD%20%2F%2015.6\"%20FHD%20%2F%20Ubuntu%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
-{
+  {
     "id": "tmp-9419",
     "brand": "HP",
     "name": "Hp 830 G6 I5 8Th 8/256Gb Touchscreen",
     "specs": "hp 830 g6 i5 8th 8/256gb touchscreen",
     "price": 26000,
-    "category": "exuk business hp featured",
+    "category": "exuk business hp",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_830_g6.jpg",
     "software": [
@@ -47,7 +95,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-7375",
     "brand": "HP",
     "name": "Hp 1040 G8 I7 11th 16/512Gb X360 Touchscreen",
@@ -61,7 +109,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-8989",
     "brand": "Lenovo",
     "name": "Lenovo T480s I5 8th 8/256Gb",
@@ -75,7 +123,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-9386",
     "brand": "Apple",
     "name": "Macbook Pro 13 2011 I5 8/256Gb",
@@ -86,7 +134,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro_2011.jpg",
     "software": []
   },
-{
+  {
     "id": "tmp-9339",
     "brand": "HP",
     "name": "Hp 830 G8 I7 11Th 8/256Gb Touchscreen",
@@ -100,7 +148,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-5332",
     "brand": "HP",
     "name": "Hp 735 G6 Ryzen 7 8/256Gb 2Gb Graphics Touchscreen",
@@ -114,7 +162,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-2256",
     "brand": "Apple",
     "name": "Macbook Pro 15 2019 I7 16/512Gb 4Gb Graphics",
@@ -125,7 +173,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_15_usbc.jpg",
     "software": []
   },
-{
+  {
     "id": "tmp-2734",
     "brand": "Apple",
     "name": "Macbook Pro 13 2012 I7 8/256Gb",
@@ -136,7 +184,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "tmp-3370",
     "brand": "HP",
     "name": "Hp 845 G7 Ryzen 7 8/256Gb",
@@ -150,7 +198,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-3128",
     "brand": "Apple",
     "name": "Macbook Pro 13 2013 I7 8/256Gb",
@@ -161,7 +209,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "tmp-3727",
     "brand": "Apple",
     "name": "Macbook Air 13 2015 I7 8/256Gb",
@@ -172,7 +220,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
     "software": []
   },
-{
+  {
     "id": "tmp-1517",
     "brand": "Apple",
     "name": "Macbook Air 13 2018 I5 8/256Gb",
@@ -183,7 +231,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
     "software": []
   },
-{
+  {
     "id": "tmp-4667",
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad X1 yoga i7 11th 16/512",
@@ -197,7 +245,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-2467",
     "brand": "Apple",
     "name": "Macbook Pro 13 2019 I5 16/256Gb",
@@ -208,7 +256,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "tmp-8953",
     "brand": "HP",
     "name": "Hp 835 G8 Ryzen 7 8/256Gb",
@@ -222,7 +270,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-8290",
     "brand": "HP",
     "name": "Hp Spectre 15 2 In1 Intel Coi7 10Th Gen 16/512 2Gb Graphics /= Only",
@@ -236,7 +284,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-3667",
     "brand": "HP",
     "name": "Hp 830 G6 I5 8Th 16/512Gb x360 Touchscreen",
@@ -250,7 +298,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-7386",
     "brand": "HP",
     "name": "Hp 840 G5 I5 7Th 8/256Gb Touchscreen",
@@ -264,7 +312,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-5886",
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad X1 yoga i7 12th 16/512",
@@ -278,7 +326,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-8326",
     "brand": "HP",
     "name": "Hp 840 G6 I5 8/256Gb",
@@ -292,7 +340,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-4860",
     "brand": "Apple",
     "name": "Macbook Pro 13 I7 2020 16/512Gb",
@@ -303,7 +351,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "tmp-7814",
     "brand": "Apple",
     "name": "Macbook Air 13 2013 I5 8/128",
@@ -314,7 +362,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
     "software": []
   },
-{
+  {
     "id": "tmp-3392",
     "brand": "HP",
     "name": "Hp 830 G7 I7 11Th 8/256Gb Touchscreen",
@@ -328,7 +376,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-4266",
     "brand": "Apple",
     "name": "Macbook Pro 13 2015 I5 16/256Gb",
@@ -339,7 +387,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "tmp-9530",
     "brand": "Apple",
     "name": "Macbook Air 13 2019 I58/256Gb",
@@ -350,7 +398,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_2019.jpg",
     "software": []
   },
-{
+  {
     "id": "tmp-2958",
     "brand": "Apple",
     "name": "Macbook Air M1 2022 8/256Gb",
@@ -361,7 +409,7 @@ const ALL_PRODUCTS = [{
     "img": "images/macbook_air_m1.jpg",
     "software": []
   },
-{
+  {
     "id": "tmp-9001",
     "brand": "Apple",
     "name": "Macbook Pro 13 2014 I5 8/256Gb",
@@ -372,18 +420,18 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "tmp-2131",
     "brand": "Apple",
     "name": "Macbook Pro 13 2015 I5 16/512Gb",
     "specs": "macbook pro 13  2015 i5 16/512gb",
     "price": 43000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "tmp-2524",
     "brand": "HP",
     "name": "Hp 830 G6 I7 8Th 8/256Gb x360 Touchscreen",
@@ -397,18 +445,18 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-8455",
     "brand": "Apple",
     "name": "Macbook Pro 13 2015 I7 8/256Gb",
     "specs": "macbook pro 13 2015 i7 8/256gb",
     "price": 41000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "tmp-4959",
     "brand": "Lenovo",
     "name": "Lenovo X1 Carbon I7 8Th 16/512Gb.",
@@ -422,7 +470,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-1487",
     "brand": "Dell",
     "name": "Dell 5320 I7 11Th 16/512Gb Touchscreen",
@@ -436,7 +484,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-8197",
     "brand": "Lenovo",
     "name": "Lenovo X13 I7 10Th 16/512Gb",
@@ -451,7 +499,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-7830",
     "brand": "Dell",
     "name": "Dell Xps 15 9570 I7 8Th 16/512Gb 4Gb Graphics",
@@ -465,7 +513,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-9150",
     "brand": "Dell",
     "name": "Dell Xps 13 9305 I7 11Th 16/512Gb",
@@ -479,7 +527,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-8284",
     "brand": "Lenovo",
     "name": "Lenovo X390 I5 8Th 8/256Gb",
@@ -493,7 +541,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-850-g7-i7-10th-16/512gb",
     "brand": "HP",
     "name": "Hp 850 G7 I7 10Th 16/512Gb",
@@ -507,7 +555,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-840-g10-i7-13th-16/512gb",
     "brand": "HP",
     "name": "Hp 840 G10 I7 13Th 16/512Gb",
@@ -521,7 +569,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-840-g8-i5-11th-8/256gb",
     "brand": "HP",
     "name": "Hp 840 G8 I5 11Th 8/256Gb",
@@ -535,7 +583,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-840-g7-i7-10th-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 840 G7 I7 10Th 8/256Gb Touchscreen",
@@ -549,13 +597,13 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-840-g7-i5-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 840 G7 I5 8/256Gb Touchscreen",
     "specs": "hp 840 g7 i5 8/256gb \ntouchscreen",
     "price": 32000,
-    "category": "exuk business hp featured",
+    "category": "exuk business hp",
     "badge": "exuk",
     "img": "images/hp_840_g7_i7_user.jpg",
     "software": [
@@ -563,7 +611,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-840-g7-i5-10th-8/256gb",
     "brand": "HP",
     "name": "Hp 840 G7 I5 10Th 8/256Gb",
@@ -577,7 +625,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-840-g5-i7-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 840 G5 I7 8/256Gb Touchscreen",
@@ -591,7 +639,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-840-g5-i7-8th-8/256gb",
     "brand": "HP",
     "name": "Hp 840 G5 I7 8Th 8/256Gb",
@@ -605,7 +653,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-840-g5-i5-8th-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 840 G5 I5 8Th 8/256Gb Touchscreen",
@@ -619,7 +667,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-840-g1-i5-8/256gb",
     "brand": "HP",
     "name": "Hp 840 G1 I5 8/256Gb",
@@ -633,13 +681,13 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-840-g1-i7-8/256gb",
     "brand": "HP",
     "name": "Hp 840 G1 I7 8/256Gb",
     "specs": "hp 840 g1 i7 8/256gb",
     "price": 17000,
-    "category": "exuk business hp budget featured",
+    "category": "exuk business hp budget",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
@@ -647,7 +695,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-820-g1-i7-8/256gb",
     "brand": "HP",
     "name": "Hp 820 G1 I7 8/256Gb",
@@ -661,7 +709,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-820-g2-i7-8/256gb",
     "brand": "HP",
     "name": "Hp 820 G2 I7 8/256Gb",
@@ -675,7 +723,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-830-g8-i7-11th-16/512gb-x360-touchscreen",
     "brand": "HP",
     "name": "Hp 830 G8 I7 11Th 16/512Gb x360 Touchscreen",
@@ -689,7 +737,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-830-g8-i5-11th-16/512gb-x360-touchscreen",
     "brand": "HP",
     "name": "Hp 830 G8 I5 11Th 16/512Gb x360 Touchscreen",
@@ -703,7 +751,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-830-g8-i5-11th-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 830 G8 I5 11Th 8/256Gb Touchscreen",
@@ -717,7 +765,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-830-g8-i5-11th-8/256gb",
     "brand": "HP",
     "name": "Hp 830 G8 I5 11Th 8/256Gb",
@@ -731,7 +779,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-830-g7-i5-10th-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 830 G7 I5 10Th 8/256Gb Touchscreen",
@@ -745,7 +793,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-830-g7-i5-10th-8/256gb",
     "brand": "HP",
     "name": "Hp 830 G7 I5 10Th 8/256Gb",
@@ -759,7 +807,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-830-g6-i7-8th-16/512gb-touchscreen",
     "brand": "HP",
     "name": "Hp 830 G6 I7 8Th 16/512Gb Touchscreen",
@@ -773,7 +821,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-830-g6-i7-8th-8/256gb-touchscreen",
     "brand": "HP",
     "name": "Hp 830 G6 I7 8Th 8/256Gb Touchscreen",
@@ -787,7 +835,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-830-g6-i7-8th-8/256gb",
     "brand": "HP",
     "name": "Hp 830 G6 I7 8Th 8/256Gb",
@@ -801,7 +849,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-830-g6-i5-8/256gb",
     "brand": "HP",
     "name": "Hp 830 G6 I5 8/256Gb",
@@ -815,7 +863,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-hp-745-ryzen-5-8/256gb-2gb-graphics-touchscreen",
     "brand": "HP",
     "name": "Hp 745 Ryzen 5 8/256Gb 2Gb Graphics Touchscreen",
@@ -829,7 +877,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "apple-macbook-pro-16-m1-2021-32/512gb",
     "brand": "Apple",
     "name": "Macbook Pro 16 M1 2021 32/512Gb",
@@ -840,7 +888,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_16_2019.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-pro-16-i9-32/2tb-with-8gb-graphics",
     "brand": "Apple",
     "name": "Macbook Pro 16 I9 32/2Tb With 8Gb Graphics",
@@ -851,7 +899,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_16_2019.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-pro-16-2019-i9-32/1tb-with-4gn-graphics",
     "brand": "Apple",
     "name": "Macbook Pro 16 2019 I9 32/1Tb With 4Gn Graphics",
@@ -862,7 +910,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_16_2019.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-pro-16-2019-i7-4gb-graphics-32/512gb",
     "brand": "Apple",
     "name": "Macbook Pro 16 2019 I7 4Gb Graphics 32/512Gb",
@@ -873,7 +921,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_16_2019.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-pro-15-2018-i7-16/512gb-4gb-graphics",
     "brand": "Apple",
     "name": "Macbook Pro 15 2018 I7 16/512Gb 4Gb Graphics",
@@ -884,18 +932,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_15_usbc.jpg",
     "software": []
   },
-{
-    "id": "apple-macbook-pro-15-2017-i7-16/512gb-2gb-graphics",
-    "brand": "Apple",
-    "name": "Macbook Pro 15 2017 I7 16/512Gb 2Gb Graphics",
-    "specs": "macbook pro 15 2017 i7 16/512gb 2gb graphics",
-    "price": 58000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_15_usbc.jpg",
-    "software": []
-  },
-{
+  {
     "id": "apple-macbook-pro-15-2015-i7-16/512gb-2gb-graphics",
     "brand": "Apple",
     "name": "Macbook Pro 15 2015 I7 16/512Gb 2Gb Graphics",
@@ -906,7 +943,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_15_usbc.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-pro-13-i7-2020-16/1tb",
     "brand": "Apple",
     "name": "Macbook Pro 13 I7 2020 16/1Tb",
@@ -917,7 +954,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-pro-13-2019-i7-16/1tb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2019 I7 16/1Tb",
@@ -928,7 +965,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-pro-13-2019-i7-16/512gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2019 I7 16/512Gb",
@@ -939,18 +976,18 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-pro-13-2019-i7-16/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2019 I7 16/256Gb",
     "specs": "macbook pro 13 2019 i7 16/256gb",
     "price": 60000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-pro-13-2018-i7-16/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2018 I7 16/256Gb",
@@ -961,7 +998,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-pro-13-2019-i5-8/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2019 I5 8/256Gb",
@@ -972,7 +1009,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-pro-13-2017-i7-16/1tb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2017 I7 16/1Tb",
@@ -983,7 +1020,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-pro-13-2017-i7-16/512gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2017 I7 16/512Gb",
@@ -994,7 +1031,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-pro-13-2017-i5-16/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2017 I5 16/256Gb",
@@ -1005,7 +1042,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-pro-13-2015-i5-8/512gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2015 I5 8/512Gb",
@@ -1016,18 +1053,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
-    "id": "apple-macbook-pro-13-2015-i5-8/256gb",
-    "brand": "Apple",
-    "name": "Macbook Pro 13 2015 I5 8/256Gb",
-    "specs": "macbook pro 13 2015 i5 8/256gb",
-    "price": 38000,
-    "category": "exuk apple macbook featured",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
-    "software": []
-  },
-{
+  {
     "id": "apple-macbook-pro-13-2013-i5-8/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2013 I5 8/256Gb",
@@ -1038,7 +1064,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-pro-13-2012-i5-8/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2012 I5 8/256Gb",
@@ -1049,18 +1075,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
-    "id": "apple-macbook-air-m1-2020-8/256gb",
-    "brand": "Apple",
-    "name": "Macbook Air M1 2020 8/256Gb",
-    "specs": "macbook air m1  2020 8/256gb",
-    "price": 78000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
-    "software": []
-  },
-{
+  {
     "id": "apple-macbook-air-13-2019-i5-16/256gb",
     "brand": "Apple",
     "name": "Macbook Air 13 2019 I5 16/256Gb",
@@ -1071,7 +1086,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_2019.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-air-13-2017-i7-8/256gb",
     "brand": "Apple",
     "name": "Macbook Air 13 2017 I7 8/256Gb",
@@ -1082,18 +1097,18 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-air-13-2017-i5-8/256gb",
     "brand": "Apple",
     "name": "Macbook Air 13 2017 I5 8/256Gb",
     "specs": "macbook air 13 2017 i5 8/256gb",
     "price": 36000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
     "software": []
   },
-{
+  {
     "id": "apple-macbook-air-13-2015-i5-8/256",
     "brand": "Apple",
     "name": "Macbook Air 13 2015 I5 8/256",
@@ -1104,7 +1119,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
     "software": []
   },
-{
+  {
     "id": "lenovo-x1-yoga-i5-11th-16/512",
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad X1 yoga i5 11th 16/512",
@@ -1118,7 +1133,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-2574",
     "brand": "Apple",
     "name": "Macbook Pro 13 M1 8/256Gb",
@@ -1129,7 +1144,7 @@ const ALL_PRODUCTS = [{
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
-{
+  {
     "id": "tmp-3500",
     "brand": "Lenovo",
     "name": "Lenovo T490s I5 8th 16/256Gb Touchscreen",
@@ -1143,7 +1158,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-9712",
     "brand": "Lenovo",
     "name": "Lenovo T490s I5 8th 8/256Gb",
@@ -1157,21 +1172,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
-    "id": "tmp-6928",
-    "brand": "Lenovo",
-    "name": "Lenovo T480s I5 8th 8/256Gb Touchscreen",
-    "specs": "lenovo t480s i5 8th 8/256gb touchscreen",
-    "price": 28499,
-    "category": "exuk business lenovo touchscreen",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
-  },
-{
+  {
     "id": "tmp-5150",
     "brand": "Lenovo",
     "name": "Lenovo T460s I5 6th 8/256Gb Touchscreen",
@@ -1185,7 +1186,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-9897",
     "brand": "Lenovo",
     "name": "Lenovo T460s I5 6th 8/256Gb",
@@ -1199,7 +1200,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-1691",
     "brand": "Lenovo",
     "name": "Lenovo Yoga 9I 14ITL5 I7 11th 16/512Gb",
@@ -1213,7 +1214,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-5557",
     "brand": "Lenovo",
     "name": "Lenovo Yoga X390 I5 8th 16/256Gb",
@@ -1227,7 +1228,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-7677",
     "brand": "Lenovo",
     "name": "Lenovo Yoga X380 I5 8th 16/256Gb",
@@ -1241,7 +1242,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-1737",
     "brand": "Lenovo",
     "name": "Lenovo Yoga X380 I5 8th 8/256Gb",
@@ -1255,7 +1256,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-6432",
     "brand": "HP",
     "name": "Hp 1030 G8 I7 11th 16/512Gb X360 Touchscreen",
@@ -1269,7 +1270,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-7332",
     "brand": "HP",
     "name": "Hp 1030 G8 I5 11th 16/512Gb X360 Touchscreen",
@@ -1283,7 +1284,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-7861",
     "brand": "HP",
     "name": "Hp 1030 G4 I7 8th 16/512Gb X360 Touchscreen",
@@ -1297,7 +1298,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-2133",
     "brand": "HP",
     "name": "Hp 1040 G9 I7 12th 16/512Gb X360 Touchscreen",
@@ -1311,7 +1312,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-9083",
     "brand": "HP",
     "name": "Hp 1040 G9 I5 12th 16/512Gb X360 Touchscreen",
@@ -1325,7 +1326,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-3714",
     "brand": "HP",
     "name": "Hp 1040 G8 I5 11th 16/512Gb X360 Touchscreen",
@@ -1339,7 +1340,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "tmp-7794",
     "brand": "HP",
     "name": "Hp 830 G5 I5 8th 8/256Gb Touchscreen",
@@ -1353,7 +1354,7 @@ const ALL_PRODUCTS = [{
       "Microsoft Office 2024"
     ]
   },
-{
+  {
     "id": "hp-830-g6-i5-8th-8256gb-x360-touchscreen",
     "name": "Hp 830 G6 I5 8Th 8/256Gb X360 Touchscreen",
     "brand": "HP",
@@ -1371,7 +1372,7 @@ const ALL_PRODUCTS = [{
     "featured": false,
     "images": []
   },
-{
+  {
     "id": "hp-840-g3-i5-6th-8-512gb",
     "name": "Hp 840 G3 I5 6Th 8/512Gb",
     "brand": "HP",
@@ -1389,7 +1390,7 @@ const ALL_PRODUCTS = [{
     "featured": false,
     "images": []
   },
-{
+  {
     "id": "lenovo-t14s-i5-10th-8-256gb",
     "name": "Lenovo T14S I5 10Th 8/256Gb",
     "brand": "Lenovo",
@@ -1407,7 +1408,7 @@ const ALL_PRODUCTS = [{
     "featured": false,
     "images": []
   },
-{
+  {
     "id": "lenovo-t480s-i7-8th-8-256gb-touchscreen",
     "name": "Lenovo T480S I7 8Th 8/256Gb Touchscreen",
     "brand": "Lenovo",
@@ -1425,7 +1426,7 @@ const ALL_PRODUCTS = [{
     "featured": false,
     "images": []
   },
-{
+  {
     "id": "lenovo-t480s-i7-8th-8-256gb",
     "name": "Lenovo T480S I7 8Th 8/256Gb",
     "brand": "Lenovo",
@@ -1443,7 +1444,7 @@ const ALL_PRODUCTS = [{
     "featured": false,
     "images": []
   },
-{
+  {
     "id": "lenovo-500w-pentium-8-128gb-x360-touchscreen",
     "name": "Lenovo 500W Pentium 8/128Gb X360 Touchscreen",
     "brand": "Lenovo",
@@ -1461,7 +1462,7 @@ const ALL_PRODUCTS = [{
     "featured": false,
     "images": []
   },
-{
+  {
     "id": "lenovo-d330-2in1-celeron-4-64gb",
     "name": "Lenovo D330 2In1 Celeron 4/64Gb Detachable",
     "brand": "Lenovo",
@@ -1479,7 +1480,7 @@ const ALL_PRODUCTS = [{
     "featured": false,
     "images": []
   },
-{
+  {
     "id": "nec-versa-pro-2in1-i5-7th-8-128gb-stylus",
     "name": "NEC Versa Pro 2In1 I5 7Th 8/128Gb Stylus Detachable",
     "brand": "NEC",
@@ -1497,7 +1498,7 @@ const ALL_PRODUCTS = [{
     "featured": false,
     "images": []
   },
-{
+  {
     "id": "nec-versa-pro-2in1-i5-7th-4-128gb-no-keyboard",
     "name": "NEC Versa Pro 2In1 I5 7Th 4/128Gb No Keyboard",
     "brand": "NEC",
@@ -1515,7 +1516,7 @@ const ALL_PRODUCTS = [{
     "featured": false,
     "images": []
   },
-{
+  {
     "id": "srv-001",
     "name": "Lenovo ST45 V3 AMD EPYC 4124P (4C 3.8GHz 16MB Cache/65W)",
     "category": "servers",
@@ -1531,7 +1532,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST45%20V3%20AMD%20EPYC%204124P%20(4C%203.8GHz%2016MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-002",
     "name": "Lenovo ST45 V3 AMD EPYC 4244P (6C 3.8GHz 32MB Cache/65W)",
     "category": "servers",
@@ -1547,7 +1548,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST45%20V3%20AMD%20EPYC%204244P%20(6C%203.8GHz%2032MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-003",
     "name": "Lenovo ST45 V3 AMD EPYC 4344P (8C 3.8GHz 32MB Cache/65W)",
     "category": "servers",
@@ -1563,7 +1564,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST45%20V3%20AMD%20EPYC%204344P%20(8C%203.8GHz%2032MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-004",
     "name": "Dell Dell PowerEdge T160",
     "category": "servers",
@@ -1579,7 +1580,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/dell-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Dell%20PowerEdge%20T160.%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-005",
     "name": "Lenovo ST50 V3 Xeon E-2434\u00a0 (4C 3.4GHz 12MB Cache/55W)",
     "category": "servers",
@@ -1595,7 +1596,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2434\u00a0%20(4C%203.4GHz%2012MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-006",
     "name": "Dell Dell PowerEdge R360",
     "category": "servers",
@@ -1611,7 +1612,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/dell-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Dell%20PowerEdge%20R360.%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-007",
     "name": "Lenovo ST50 V3 Xeon E-2414\u00a0 (4C 2.6GHz 8MB Cache/55W)",
     "category": "servers",
@@ -1627,7 +1628,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2414\u00a0%20(4C%202.6GHz%208MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-008",
     "name": "Lenovo SR250 V3 Xeon E-2434 (4C 3.4GHz 8MB Cache/55W)",
     "category": "servers",
@@ -1643,7 +1644,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR250%20V3%20Xeon%20E-2434%20(4C%203.4GHz%208MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-009",
     "name": "Lenovo ST50 V3 Xeon E-2434\u00a0 (4C 3.4GHz 8MB Cache/55W)",
     "category": "servers",
@@ -1659,7 +1660,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2434\u00a0%20(4C%203.4GHz%208MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-010",
     "name": "Lenovo SR250 V3 Xeon E-2436 (6C 2.9GHz 12MB Cache/65W)",
     "category": "servers",
@@ -1675,7 +1676,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR250%20V3%20Xeon%20E-2436%20(6C%202.9GHz%2012MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-011",
     "name": "Lenovo ST250 V3 Xeon E-2436 (6C 2.9GHz 12MB Cache/65W)",
     "category": "servers",
@@ -1691,7 +1692,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST250%20V3%20Xeon%20E-2436%20(6C%202.9GHz%2012MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-012",
     "name": "Lenovo SR250 V3 Xeon E-2468 (8C 2.6GHz 16MB Cache/65W)",
     "category": "servers",
@@ -1707,7 +1708,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR250%20V3%20Xeon%20E-2468%20(8C%202.6GHz%2016MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-013",
     "name": "Lenovo ST250 V3 Xeon E-2468 (8C 2.6GHz 16MB Cache/65W)",
     "category": "servers",
@@ -1723,7 +1724,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST250%20V3%20Xeon%20E-2468%20(8C%202.6GHz%2016MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-014",
     "name": "Lenovo SR630 V3 Xeon Silver 4509Y (8C 2.6GHz 22.5MB Cache/125W)",
     "category": "servers",
@@ -1739,7 +1740,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Silver%204509Y%20(8C%202.6GHz%2022.5MB%20Cache/125W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-015",
     "name": "Lenovo SR630 V3 Xeon Silver 4510 (12C 2.4GHz 30MB Cache/150W)",
     "category": "servers",
@@ -1755,7 +1756,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Silver%204510%20(12C%202.4GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-016",
     "name": "Lenovo SR650 V3 Xeon Gold 6426Y (16C 2.5GHz 37.5MB Cache/185W)",
     "category": "servers",
@@ -1771,7 +1772,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Gold%206426Y%20(16C%202.5GHz%2037.5MB%20Cache/185W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-017",
     "name": "Lenovo SR650 V3 Xeon Silver 4509Y (8C 2.6GHz 22.5MB Cache/125W)",
     "category": "servers",
@@ -1787,7 +1788,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Silver%204509Y%20(8C%202.6GHz%2022.5MB%20Cache/125W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-018",
     "name": "Lenovo SR650 V3 Xeon Silver 4510 (12C 2.4GHz 30MB Cache/150W)",
     "category": "servers",
@@ -1803,7 +1804,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Silver%204510%20(12C%202.4GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-019",
     "name": "Lenovo SR630 V3 Xeon Silver 4514Y (16C 2.0GHz 30MB Cache/150W)",
     "category": "servers",
@@ -1819,7 +1820,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Silver%204514Y%20(16C%202.0GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-020",
     "name": "Lenovo SR665 V3 AMD EPYC 9124 (16C 3.0GHz 64MB Cache/200W)",
     "category": "servers",
@@ -1835,7 +1836,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR665%20V3%20AMD%20EPYC%209124%20(16C%203.0GHz%2064MB%20Cache/200W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-021",
     "name": "Lenovo SR650 V3 Xeon Silver 4514Y (16C 2.0GHz 30MB Cache/150W)",
     "category": "servers",
@@ -1851,7 +1852,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Silver%204514Y%20(16C%202.0GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-022",
     "name": "Lenovo SR630 V3 Xeon Gold 6526Y (16C 2.8GHz 37.5MB Cache/195W)",
     "category": "servers",
@@ -1867,7 +1868,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Gold%206526Y%20(16C%202.8GHz%2037.5MB%20Cache/195W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-023",
     "name": "Lenovo ST650 V3 Xeon Silver 4509Y (8C 2.6GHz 22.5MB Cache/125W)",
     "category": "servers",
@@ -1883,7 +1884,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST650%20V3%20Xeon%20Silver%204509Y%20(8C%202.6GHz%2022.5MB%20Cache/125W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-024",
     "name": "Lenovo ST650 V3 Xeon Silver 4510 (12C 2.4GHz 30MB Cache/150W)",
     "category": "servers",
@@ -1899,7 +1900,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST650%20V3%20Xeon%20Silver%204510%20(12C%202.4GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-025",
     "name": "Lenovo SR645 V3 AMD EPYC 9124 (16C 3.0GHz 64MB Cache/200W)",
     "category": "servers",
@@ -1915,7 +1916,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR645%20V3%20AMD%20EPYC%209124%20(16C%203.0GHz%2064MB%20Cache/200W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-026",
     "name": "Lenovo ST650 V3 Xeon Silver 4514Y (16C 2.0GHz 30MB Cache/150W)",
     "category": "servers",
@@ -1931,7 +1932,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST650%20V3%20Xeon%20Silver%204514Y%20(16C%202.0GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-027",
     "name": "Dell Dell PowerEdge R660xs",
     "category": "servers",
@@ -1947,7 +1948,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/dell-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Dell%20PowerEdge%20R660xs.%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-028",
     "name": "Lenovo SR665 V3 AMD EPYC 9174F (16C 4.1GHz 256MB Cache/320W)",
     "category": "servers",
@@ -1963,7 +1964,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR665%20V3%20AMD%20EPYC%209174F%20(16C%204.1GHz%20256MB%20Cache/320W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "srv-029",
     "name": "Lenovo SR665 V3 AMD EPYC 9274F (24C 4.05GHz 256MB Cache/320W)",
     "category": "servers",
@@ -1979,7 +1980,7 @@ const ALL_PRODUCTS = [{
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR665%20V3%20AMD%20EPYC%209274F%20(24C%204.05GHz%20256MB%20Cache/320W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
-{
+  {
     "id": "infinix-71008303116",
     "brand": "Infinix",
     "name": "Infinix XL442",
@@ -1992,7 +1993,7 @@ const ALL_PRODUCTS = [{
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Infinix%20XL442%20%28Intel%20Core%20i7-1255U%20%2F%208GB%20%2F%20512GB%20SSD%20%2F%2014\"%20%2F%20DOS%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
-{
+  {
     "id": "dc15250-rplu-001",
     "brand": "Dell",
     "name": "Dell 15 DC15250",
@@ -2005,7 +2006,7 @@ const ALL_PRODUCTS = [{
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%2015%20DC15250%20%28Intel%20Core%20i5-1334U%20%2F%208GB%20%2F%20512GB%20SSD%20%2F%2015.6\"%20FHD%20%2F%20Ubuntu%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
-{
+  {
     "id": "21sj0000ue",
     "brand": "Lenovo",
     "name": "Lenovo ThinkBook 14 G8",
@@ -2018,7 +2019,7 @@ const ALL_PRODUCTS = [{
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkBook%2014%20G8%20%28Intel%20Core%20Ultra%205%20225U%20%2F%208GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
-{
+  {
     "id": "21uy002cue",
     "brand": "Lenovo",
     "name": "Lenovo ThinkBook 14 G9",
@@ -2031,7 +2032,7 @@ const ALL_PRODUCTS = [{
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkBook%2014%20G9%20%28Intel%20Core%205-210H%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%20%2F%20No%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
-{
+  {
     "id": "ct9p2et",
     "brand": "HP",
     "name": "HP ProBook 440 G11",
@@ -2044,7 +2045,7 @@ const ALL_PRODUCTS = [{
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%20440%20G11%20%28Intel%20Core%20Ultra%205%20125U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%20%2F%20D%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
-{
+  {
     "id": "ct1h7et",
     "brand": "HP",
     "name": "HP ProBook 4 G1i",
@@ -2057,7 +2058,7 @@ const ALL_PRODUCTS = [{
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%204%20G1i%20%28Intel%20Core%20Ultra%205%20225U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%20%2F%20D%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
-{
+  {
     "id": "21sx006cue",
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad E14 G7",
@@ -2070,7 +2071,7 @@ const ALL_PRODUCTS = [{
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20E14%20G7%20%28Intel%20Core%20Ultra%205%20225U%20%2F%208GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
-{
+  {
     "id": "ct9n1et",
     "brand": "HP",
     "name": "HP ProBook 460 G11",
@@ -2083,7 +2084,7 @@ const ALL_PRODUCTS = [{
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%20460%20G11%20%28Intel%20Core%20Ultra%207%20155U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2016.0\"%20WUXGA%20%2F%20D%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
-{
+  {
     "id": "22ay001gue",
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad E16 G3",
@@ -2096,7 +2097,7 @@ const ALL_PRODUCTS = [{
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20E16%20G3%20%28Intel%20Core%20Ultra%207%20256V%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2016.0\"%20WUXG%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
-{
+  {
     "id": "bto211-pb14250-emu5",
     "brand": "Dell",
     "name": "Dell Pro 14 Plus PB14250",
@@ -2109,7 +2110,7 @@ const ALL_PRODUCTS = [{
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Pro%2014%20Plus%20PB14250%20%28Intel%20Core%20Ultra%205%20236V%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014\"%20FHD+%20%2F%20Ubun%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
-{
+  {
     "id": "bto107-pc14250-em-ub",
     "brand": "Dell",
     "name": "Dell Pro 14 PC14250",
@@ -2122,7 +2123,7 @@ const ALL_PRODUCTS = [{
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Pro%2014%20PC14250%20%28Intel%20Core%20Ultra%207%20255U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014\"%20FHD+%20%2F%20Ubun%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
-{
+  {
     "id": "21mls3nv00",
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad T14 G5",
@@ -2135,7 +2136,7 @@ const ALL_PRODUCTS = [{
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20T14%20G5%20%28Intel%20Core%20Ultra%207%20155U%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014\"%20WUXGA%20%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
-{
+  {
     "id": "21qg0055ue",
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad T14 LNL",
@@ -2148,7 +2149,7 @@ const ALL_PRODUCTS = [{
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20T14%20LNL%20%28Intel%20Core%20Ultra%207%20258V%20%2F%2032GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXG%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
-{
+  {
     "id": "21nx001pue",
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad X1 Carbon G13",
@@ -2160,4 +2161,5 @@ const ALL_PRODUCTS = [{
     "img": "https://images.unsplash.com/photo-1611186871525-ef747b33a9db?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20X1%20Carbon%20G13%20%28Intel%20Core%20Ultra%207%20255U%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014\"%20WUXGA%20%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
-  }];;
+  }
+];;
