@@ -1,3 +1,5 @@
+const ALL_PRODUCTS = [...(typeof ALL_PRODUCTS_A !== "undefined" ? ALL_PRODUCTS_A : []), ...(typeof ALL_PRODUCTS_B !== "undefined" ? ALL_PRODUCTS_B : [])];
+
 let currentFilter = 'featured';
 let currentLimit = 8;
 
