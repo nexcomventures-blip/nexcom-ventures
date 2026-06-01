@@ -1,13 +1,13 @@
 const ALL_PRODUCTS = [
   {
     "id": "feat-1",
-    "brand": "HP",
-    "name": "Hp 830 G7 I5 10Th 8/256Gb",
-    "specs": "hp 830 g7 i5 10th 8/256gb",
-    "price": 32000,
-    "category": "exuk business hp featured",
+    "brand": "Lenovo",
+    "name": "Lenovo X1 Carbon I7 8Th 16/512Gb.",
+    "specs": "x1 carbon i7 8th 16/512gb.",
+    "price": 35000,
+    "category": "exuk business lenovo featured",
     "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -15,13 +15,13 @@ const ALL_PRODUCTS = [
   },
   {
     "id": "feat-2",
-    "brand": "HP",
-    "name": "Hp 830 G8 I5 11Th 16/512Gb x360 Touchscreen",
-    "specs": "hp 830 g8 i5 11th  16/512gb \nx360 touchscreen",
-    "price": 45000,
-    "category": "exuk business hp featured",
+    "brand": "Lenovo",
+    "name": "Lenovo Yoga X380 I5 8th 16/256Gb",
+    "specs": "lenovo yoga x380 i5 8th 16/256gb",
+    "price": 34499,
+    "category": "exuk business lenovo yoga touchscreen featured",
     "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_x1_yoga.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -29,6 +29,74 @@ const ALL_PRODUCTS = [
   },
   {
     "id": "feat-3",
+    "brand": "Apple",
+    "name": "Macbook Air 13 2019 I58/256Gb",
+    "specs": "macbook air 13 2019 i58/256gb",
+    "price": 51000,
+    "category": "exuk apple macbook featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_2019.jpg",
+    "software": []
+  },
+  {
+    "id": "feat-4",
+    "brand": "Apple",
+    "name": "Macbook Pro 13 2018 I7 16/256Gb",
+    "specs": "macbook pro 13 2018 i7 16/256gb",
+    "price": 58000,
+    "category": "exuk apple macbook featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
+    "software": []
+  },
+  {
+    "id": "feat-5",
+    "name": "Lenovo ST650 V3 Xeon Silver 4509Y (8C 2.6GHz 22.5MB Cache/125W)",
+    "category": "servers featured",
+    "brand": "lenovo",
+    "price": 832800,
+    "badge": "Tower Server",
+    "specs": {
+      "processor": "32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST650%20V3%20Xeon%20Silver%204509Y%20(8C%202.6GHz%2022.5MB%20Cache/125W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "feat-6",
+    "brand": "HP",
+    "name": "Hp 830 G6 I5 8Th 8/256Gb Touchscreen",
+    "specs": "hp 830 g6 i5 8th 8/256gb touchscreen",
+    "price": 26000,
+    "category": "exuk business hp featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_830_g6.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "feat-7",
+    "name": "Lenovo SR650 V3 Xeon Gold 6426Y (16C 2.5GHz 37.5MB Cache/185W)",
+    "category": "servers featured",
+    "brand": "lenovo",
+    "price": 718169,
+    "badge": "Rack Server",
+    "specs": {
+      "processor": "32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), No Backplane",
+      "availability": "Order / 1-2 weeks"
+    },
+    "featured": false,
+    "inStock": true,
+    "image": "images/servers/lenovo-server.jpg",
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Gold%206426Y%20(16C%202.5GHz%2037.5MB%20Cache/185W).%20Please%20advise%20on%20availability%20and%20pricing."
+  },
+  {
+    "id": "feat-8",
     "brand": "Lenovo",
     "name": "Lenovo T460s I5 6th 8/256Gb Touchscreen",
     "specs": "lenovo t460s i5 6th 8/256gb touchscreen",
@@ -42,12 +110,40 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "feat-4",
+    "id": "p-1",
+    "brand": "HP",
+    "name": "Hp 830 G7 I5 10Th 8/256Gb",
+    "specs": "hp 830 g7 i5 10th 8/256gb",
+    "price": 32000,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "p-2",
+    "brand": "HP",
+    "name": "Hp 830 G8 I5 11Th 16/512Gb x360 Touchscreen",
+    "specs": "hp 830 g8 i5 11th  16/512gb \nx360 touchscreen",
+    "price": 45000,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "p-4",
     "brand": "Lenovo",
     "name": "Lenovo Yoga 9I 14ITL5 I7 11th 16/512Gb",
     "specs": "lenovo yoga 9i 14itl5 i7 11th 16/512gb",
     "price": 85499,
-    "category": "exuk business lenovo yoga touchscreen featured",
+    "category": "exuk business lenovo yoga touchscreen",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_x1_yoga.jpg",
     "software": [
@@ -56,12 +152,12 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "feat-5",
+    "id": "p-5",
     "brand": "HP",
     "name": "Hp 830 G8 I5 11Th 8/256Gb Touchscreen",
     "specs": "hp 830 g8 i5 11th 8/256gb\ntouchscreen",
     "price": 34000,
-    "category": "exuk business hp featured",
+    "category": "exuk business hp",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
@@ -70,12 +166,12 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "feat-6",
+    "id": "p-6",
     "brand": "HP",
     "name": "Hp 1030 G8 I7 11th 16/512Gb X360 Touchscreen",
     "specs": "hp 1030 g8 i7 11th 16/512gb x360 touchscreen",
     "price": 72499,
-    "category": "exuk business hp touchscreen featured",
+    "category": "exuk business hp touchscreen",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
@@ -84,12 +180,12 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "feat-7",
+    "id": "p-7",
     "brand": "HP",
     "name": "Hp 820 G1 I7 8/256Gb",
     "specs": "hp 820 g1   i7 8/256gb",
     "price": 16500,
-    "category": "exuk business hp budget featured",
+    "category": "exuk business hp budget",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
@@ -98,12 +194,12 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "feat-8",
+    "id": "p-8",
     "brand": "Apple",
     "name": "Macbook Pro 15 2017 I7 16/512Gb 2Gb Graphics",
     "specs": "macbook pro 15 2017 i7 16/512gb 2gb graphics",
     "price": 58000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_15_usbc.jpg",
     "software": []
@@ -251,20 +347,6 @@ const ALL_PRODUCTS = [
     "software": []
   },
   {
-    "id": "tmp-2773",
-    "brand": "Lenovo",
-    "name": "Lenovo X1 Carbon I7 8Th 16/512Gb.",
-    "specs": "x1 carbon i7 8th 16/512gb.",
-    "price": 35000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
-  },
-  {
     "id": "tmp-9606",
     "brand": "Lenovo",
     "name": "Lenovo X13 I7 10Th 16/512Gb",
@@ -349,20 +431,6 @@ const ALL_PRODUCTS = [
     "img": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Pro%20Essentials%2015%20PV15250%20%28Intel%20Core%20i7-1355U%20%2F%208GB%20%2F%20512GB%20SSD%20%2F%2015.6\"%20FHD%20%2F%20Ubuntu%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
-  },
-  {
-    "id": "tmp-3796",
-    "brand": "HP",
-    "name": "Hp 830 G6 I5 8Th 8/256Gb Touchscreen",
-    "specs": "hp 830 g6 i5 8th 8/256gb touchscreen",
-    "price": 26000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_830_g6.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
   },
   {
     "id": "tmp-9500",
@@ -602,17 +670,6 @@ const ALL_PRODUCTS = [
       "Windows 11",
       "Microsoft Office 2024"
     ]
-  },
-  {
-    "id": "tmp-8931",
-    "brand": "Apple",
-    "name": "Macbook Air 13 2019 I58/256Gb",
-    "specs": "macbook air 13 2019 i58/256gb",
-    "price": 51000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_2019.jpg",
-    "software": []
   },
   {
     "id": "tmp-3143",
@@ -1041,17 +1098,6 @@ const ALL_PRODUCTS = [
     "software": []
   },
   {
-    "id": "apple-macbook-pro-13-2018-i7-16/256gb",
-    "brand": "Apple",
-    "name": "Macbook Pro 13 2018 I7 16/256Gb",
-    "specs": "macbook pro 13 2018 i7 16/256gb",
-    "price": 58000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
-    "software": []
-  },
-  {
     "id": "apple-macbook-pro-13-2019-i5-8/256gb",
     "brand": "Apple",
     "name": "Macbook Pro 13 2019 I5 8/256Gb",
@@ -1234,20 +1280,6 @@ const ALL_PRODUCTS = [
     "name": "Lenovo Yoga X390 I5 8th 16/256Gb",
     "specs": "lenovo yoga x390 i5 8th 16/256gb",
     "price": 35499,
-    "category": "exuk business lenovo yoga touchscreen",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_x1_yoga.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
-  },
-  {
-    "id": "tmp-6511",
-    "brand": "Lenovo",
-    "name": "Lenovo Yoga X380 I5 8th 16/256Gb",
-    "specs": "lenovo yoga x380 i5 8th 16/256gb",
-    "price": 34499,
     "category": "exuk business lenovo yoga touchscreen",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_x1_yoga.jpg",
@@ -1757,22 +1789,6 @@ const ALL_PRODUCTS = [
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Silver%204510%20(12C%202.4GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
-    "id": "srv-016",
-    "name": "Lenovo SR650 V3 Xeon Gold 6426Y (16C 2.5GHz 37.5MB Cache/185W)",
-    "category": "servers",
-    "brand": "lenovo",
-    "price": 718169,
-    "badge": "Rack Server",
-    "specs": {
-      "processor": "32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), No Backplane",
-      "availability": "Order / 1-2 weeks"
-    },
-    "featured": false,
-    "inStock": true,
-    "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Gold%206426Y%20(16C%202.5GHz%2037.5MB%20Cache/185W).%20Please%20advise%20on%20availability%20and%20pricing."
-  },
-  {
     "id": "srv-017",
     "name": "Lenovo SR650 V3 Xeon Silver 4509Y (8C 2.6GHz 22.5MB Cache/125W)",
     "category": "servers",
@@ -1867,22 +1883,6 @@ const ALL_PRODUCTS = [
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Gold%206526Y%20(16C%202.8GHz%2037.5MB%20Cache/195W).%20Please%20advise%20on%20availability%20and%20pricing."
-  },
-  {
-    "id": "srv-023",
-    "name": "Lenovo ST650 V3 Xeon Silver 4509Y (8C 2.6GHz 22.5MB Cache/125W)",
-    "category": "servers",
-    "brand": "lenovo",
-    "price": 832800,
-    "badge": "Tower Server",
-    "specs": {
-      "processor": "32GB (1x32GB, 4800MHz 1Rx4 DDR5 RDIMM), 8 SAS/SATA",
-      "availability": "Order / 1-2 weeks"
-    },
-    "featured": false,
-    "inStock": true,
-    "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST650%20V3%20Xeon%20Silver%204509Y%20(8C%202.6GHz%2022.5MB%20Cache/125W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-024",
