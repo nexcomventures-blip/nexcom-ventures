@@ -299,8 +299,9 @@
                     <button id="detailCompareBtn" class="w-10 h-10 bg-white/95 dark:bg-slate-800/95 backdrop-blur rounded-full flex items-center justify-center text-slate-700 dark:text-slate-200 shadow-md border border-slate-200/50 dark:border-slate-700/50 hover:bg-blue-600 hover:text-white transition-all transform active:scale-90" title="Add to Compare">
                         <i class="fa-solid fa-scale-balanced text-sm"></i>
                     </button>
-                    <button onclick="closeM()" class="w-10 h-10 bg-white/95 dark:bg-slate-800/95 backdrop-blur rounded-full flex items-center justify-center text-slate-700 dark:text-slate-200 shadow-md border border-slate-200/50 dark:border-slate-700/50 hover:bg-red-600 hover:text-white transition-all transform active:scale-90">
+                    <button onclick="closeM()" class="h-10 px-4 bg-white/95 dark:bg-slate-800/95 backdrop-blur rounded-full flex items-center gap-2 text-slate-700 dark:text-slate-200 shadow-md border border-slate-200/50 dark:border-slate-700/50 hover:bg-red-600 hover:text-white transition-all transform active:scale-95 group">
                         <i class="fa-solid fa-xmark text-sm"></i>
+                        <span class="text-[10px] font-black uppercase tracking-widest hidden sm:inline">Close Detail</span>
                     </button>
                 </div>
             </div>
@@ -465,11 +466,13 @@
                     <i class="fa-solid fa-sparkles mr-1"></i> AI Price Check
                 </button>
                 <div class="flex items-center gap-2">
-                    <button onclick="closePost()" title="Minimize" class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-200 transition">
-                        <i class="fa-solid fa-minus"></i>
+                    <button onclick="closePost()" class="h-8 px-3 bg-slate-100 dark:bg-slate-800 rounded-lg flex items-center gap-1.5 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+                        <i class="fa-solid fa-minus text-[10px]"></i>
+                        <span class="text-[9px] font-black uppercase tracking-tighter">Minimize</span>
                     </button>
-                    <button onclick="closePost()" title="Close" class="w-8 h-8 bg-red-50 rounded-full flex items-center justify-center text-red-500 hover:bg-red-100 transition">
-                        <i class="fa-solid fa-xmark"></i>
+                    <button onclick="closePost()" class="h-8 px-3 bg-red-50 dark:bg-red-900/20 rounded-lg flex items-center gap-1.5 text-red-500 hover:bg-red-100 dark:hover:bg-red-900/40 transition">
+                        <i class="fa-solid fa-xmark text-[10px]"></i>
+                        <span class="text-[9px] font-black uppercase tracking-tighter">Close</span>
                     </button>
                 </div>
             </div>
@@ -502,37 +505,26 @@
                     <div>
                         <label class="block text-[9px] font-black uppercase text-slate-400 mb-1">Category</label>
                         <select id="postCat" onchange="showLaptopFields(this.value)" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-3 rounded-xl text-sm outline-none appearance-none text-slate-900 dark:text-white">
-                            <option value="laptops">Laptops (New)</option>
-                            <option value="laptops">Laptops (Ex-UK)</option>
-                            <option value="laptops">Laptops (Refurbished)</option>
+                            <option value="laptops">Laptops & Computers</option>
                             <option value="phones">Phones & Tablets</option>
                             <option value="electronics">Electronics</option>
-                            <option value="gaming">Video Games</option>
-                            <option value="cameras">Cameras</option>
-                            <option value="computing">Computer Parts</option>
+                            <option value="appliances">Kitchen Appliances</option>
+                            <option value="computing">Computer Hardware</option>
+                            <option value="electrical">Electrical Equipment</option>
                             <option value="vehicles">Vehicles</option>
-                            <option value="bikes">Motorbikes</option>
-                            <option value="parts">Auto Parts</option>
-                            <option value="property-rent">Rentals</option>
-                            <option value="property-sale">Property for Sale</option>
-                            <option value="land">Land & Plots</option>
-                            <option value="furniture">Furniture</option>
-                            <option value="appliances">Home Appliances</option>
-                            <option value="decor">Home & Garden</option>
-                            <option value="fashion-men">Mens Fashion</option>
-                            <option value="fashion-women">Womens Fashion</option>
-                            <option value="watches">Watches</option>
-                            <option value="shoes">Shoes</option>
-                            <option value="beauty">Health & Beauty</option>
-                            <option value="kids">Kids & Toys</option>
-                            <option value="sports">Sports & Gym</option>
-                            <option value="hobbies">Hobbies & Art</option>
-                            <option value="agriculture">Agriculture</option>
-                            <option value="livestock">Livestock</option>
-                            <option value="pets">Pets</option>
+                            <option value="property-sale">Property</option>
+                            <option value="home-furniture">Home, Furniture & Garden</option>
+                            <option value="beauty">Beauty & Personal Care</option>
+                            <option value="fashion">Fashion</option>
+                            <option value="leisure">Leisure, Sport & Hobbies</option>
+                            <option value="cvs">Seeking Work CVs</option>
                             <option value="services">Services</option>
                             <option value="jobs">Jobs</option>
-                            <option value="industrial">Industrial Equipment</option>
+                            <option value="kids">Babies & Kids</option>
+                            <option value="pets">Pets</option>
+                            <option value="agriculture">Agriculture & Food</option>
+                            <option value="industrial">Commercial Equipment & Tools</option>
+                            <option value="construction">Repair & Construction</option>
                             <option value="other">Others</option>
                         </select>
                     </div>
@@ -881,35 +873,27 @@
 
         const CATEGORIES = [
             { id: 'all', name: 'All Items' }, 
-            { id: 'laptops', name: 'Laptops' }, 
-            { id: 'phones', name: 'Phones' },
+            { id: 'trending', name: 'Trending 🔥' },
+            { id: 'laptops', name: 'Laptops & Computers' }, 
+            { id: 'phones', name: 'Phones & Tablets' },
             { id: 'electronics', name: 'Electronics' }, 
-            { id: 'gaming', name: 'Video Games' },
-            { id: 'cameras', name: 'Cameras' },
-            { id: 'computing', name: 'Computer Parts' },
+            { id: 'appliances', name: 'Kitchen Appliances' },
+            { id: 'computing', name: 'Computer Hardware' },
+            { id: 'electrical', name: 'Electrical Equipment' },
             { id: 'vehicles', name: 'Vehicles' },
-            { id: 'bikes', name: 'Motorbikes' },
-            { id: 'parts', name: 'Auto Parts' },
-            { id: 'property-rent', name: 'Rentals' },
-            { id: 'property-sale', name: 'Property for Sale' },
-            { id: 'land', name: 'Land & Plots' },
-            { id: 'furniture', name: 'Furniture' },
-            { id: 'appliances', name: 'Home Appliances' },
-            { id: 'decor', name: 'Home & Garden' },
-            { id: 'fashion-men', name: 'Mens Fashion' },
-            { id: 'fashion-women', name: 'Womens Fashion' },
-            { id: 'watches', name: 'Watches' },
-            { id: 'shoes', name: 'Shoes' },
-            { id: 'beauty', name: 'Health & Beauty' },
-            { id: 'kids', name: 'Kids & Toys' },
-            { id: 'sports', name: 'Sports & Gym' },
-            { id: 'hobbies', name: 'Hobbies & Art' },
-            { id: 'agriculture', name: 'Agriculture' },
-            { id: 'livestock', name: 'Livestock' },
-            { id: 'pets', name: 'Pets' },
+            { id: 'property-sale', name: 'Property' },
+            { id: 'home-furniture', name: 'Home, Furniture & Garden' },
+            { id: 'beauty', name: 'Beauty & Personal Care' },
+            { id: 'fashion', name: 'Fashion' },
+            { id: 'leisure', name: 'Leisure, Sport & Hobbies' },
+            { id: 'cvs', name: 'Seeking Work CVs' },
             { id: 'services', name: 'Services' },
             { id: 'jobs', name: 'Jobs' },
-            { id: 'industrial', name: 'Industrial Equipment' },
+            { id: 'kids', name: 'Babies & Kids' },
+            { id: 'pets', name: 'Pets' },
+            { id: 'agriculture', name: 'Agriculture & Food' },
+            { id: 'industrial', name: 'Commercial Equipment & Tools' },
+            { id: 'construction', name: 'Repair & Construction' },
             { id: 'other', name: 'Others' }
         ];
 
@@ -1109,18 +1093,15 @@
         const TIERS = {
             'laptops': { budget: 30000, value: 80000 },
             'phones': { budget: 15000, value: 45000 },
-            'vehicles': { budget: 800000, value: 2500000 },
-            'bikes': { budget: 150000, value: 500000 },
-            'land': { budget: 500000, value: 2500000 },
-            'property-sale': { budget: 5000000, value: 15000000 },
-            'property-rent': { budget: 20000, value: 70000 },
-            'fashion-men': { budget: 2000, value: 7000 },
-            'fashion-women': { budget: 2000, value: 7000 },
-            'gaming': { budget: 10000, value: 50000 },
+            'electronics': { budget: 10000, value: 50000 },
             'appliances': { budget: 15000, value: 60000 },
-            'electronics': { budget: 5000, value: 30000 },
-            'furniture': { budget: 15000, value: 70000 },
-            'cameras': { budget: 30000, value: 100000 },
+            'vehicles': { budget: 800000, value: 2500000 },
+            'property-sale': { budget: 5000000, value: 15000000 },
+            'home-furniture': { budget: 15000, value: 70000 },
+            'fashion': { budget: 2000, value: 10000 },
+            'computing': { budget: 5000, value: 25000 },
+            'industrial': { budget: 50000, value: 200000 },
+            'agriculture': { budget: 5000, value: 50000 },
             'default': { budget: 30000, value: 80000 }
         };
 
@@ -1651,6 +1632,26 @@
             document.getElementById('postName').value = '';
             document.getElementById('postPrice').value = '';
             document.getElementById('postSpecs').value = '';
+            
+            // Reset additional fields
+            const catSelect = document.getElementById('postCat');
+            if(catSelect) catSelect.value = 'laptops';
+            
+            const ram = document.getElementById('postRam');
+            if(ram) ram.value = '';
+            
+            const storage = document.getElementById('postStorage');
+            if(storage) storage.value = '';
+            
+            const processor = document.getElementById('postProcessor');
+            if(processor) processor.value = '';
+            
+            showLaptopFields('laptops');
+            
+            // Reset conditions
+            const firstCond = document.querySelector('.cond-btn');
+            if(firstCond) setCond(firstCond, 'Refurbished');
+
             uploadedImages = [];
             renderImagePreviews();
             document.getElementById('postModal').classList.remove('hidden'); 
