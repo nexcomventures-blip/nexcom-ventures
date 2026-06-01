@@ -1614,7 +1614,7 @@ const ALL_PRODUCTS = [
   },
   {
     "id": "srv-005",
-    "name": "Lenovo ST50 V3 Xeon E-2434\u00a0 (4C 3.4GHz 12MB Cache/55W)",
+    "name": "Lenovo ST50 V3 Xeon E-2434  (4C 3.4GHz 12MB Cache/55W)",
     "category": "servers",
     "brand": "lenovo",
     "price": 316024,
@@ -1626,7 +1626,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2434\u00a0%20(4C%203.4GHz%2012MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2434 %20(4C%203.4GHz%2012MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-006",
@@ -1646,7 +1646,7 @@ const ALL_PRODUCTS = [
   },
   {
     "id": "srv-007",
-    "name": "Lenovo ST50 V3 Xeon E-2414\u00a0 (4C 2.6GHz 8MB Cache/55W)",
+    "name": "Lenovo ST50 V3 Xeon E-2414  (4C 2.6GHz 8MB Cache/55W)",
     "category": "servers",
     "brand": "lenovo",
     "price": 359822,
@@ -1658,7 +1658,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2414\u00a0%20(4C%202.6GHz%208MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2414 %20(4C%202.6GHz%208MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-008",
@@ -1678,7 +1678,7 @@ const ALL_PRODUCTS = [
   },
   {
     "id": "srv-009",
-    "name": "Lenovo ST50 V3 Xeon E-2434\u00a0 (4C 3.4GHz 8MB Cache/55W)",
+    "name": "Lenovo ST50 V3 Xeon E-2434  (4C 3.4GHz 8MB Cache/55W)",
     "category": "servers",
     "brand": "lenovo",
     "price": 386017,
@@ -1690,7 +1690,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2434\u00a0%20(4C%203.4GHz%208MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2434 %20(4C%203.4GHz%208MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-010",
@@ -1844,7 +1844,7 @@ const ALL_PRODUCTS = [
     "price": 735144,
     "badge": "Rack Server",
     "specs": {
-      "processor": "32GB\u00a0 (1x32GB, 4800MHz 1Rx4\u00a0 DDR5 RDIMM), No Backplane",
+      "processor": "32GB  (1x32GB, 4800MHz 1Rx4  DDR5 RDIMM), No Backplane",
       "availability": "Order / 1-2 weeks"
     },
     "featured": false,
@@ -1956,7 +1956,7 @@ const ALL_PRODUCTS = [
     "price": 1036701,
     "badge": "Rack Server",
     "specs": {
-      "processor": "32GB\u00a0 (1x32GB, 4800MHz 1Rx4\u00a0 DDR5 RDIMM), No Backplane",
+      "processor": "32GB  (1x32GB, 4800MHz 1Rx4  DDR5 RDIMM), No Backplane",
       "availability": "Order / 1-2 weeks"
     },
     "featured": false,
@@ -1972,7 +1972,7 @@ const ALL_PRODUCTS = [
     "price": 1057657,
     "badge": "Rack Server",
     "specs": {
-      "processor": "32GB\u00a0 (1x32GB, 4800MHz 1Rx4\u00a0 DDR5 RDIMM), No Backplane",
+      "processor": "32GB  (1x32GB, 4800MHz 1Rx4  DDR5 RDIMM), No Backplane",
       "availability": "Order / 1-2 weeks"
     },
     "featured": false,
@@ -2161,5 +2161,1665 @@ const ALL_PRODUCTS = [
     "img": "https://images.unsplash.com/photo-1611186871525-ef747b33a9db?w=300&q=80",
     "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20X1%20Carbon%20G13%20%28Intel%20Core%20Ultra%207%20255U%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014\"%20WUXGA%20%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
+  },
+  {
+    "id": "p-ACER-TRAVELMATE-PENTIUM-4-128",
+    "name": "Acer-travelmate-pentium [r] 4gb 128 SSD X360 Touch Screen",
+    "price": 17000,
+    "category": "laptop touchscreen",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "ACER-TRAVELMATE-PENTIUM [R] 4GB 128 SSD X360 TOUCH SCREEN",
+    "sku": "ACER-TRAVELMATE-PENTIUM-4-128",
+    "inStock": true
+  },
+  {
+    "id": "p-dell3390-i5-8th-8-256-x360",
+    "name": "Dell 3390 — I5 8th Gen, 8 / 256 GB — X360 2n1 Touchscreen",
+    "price": 22000,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell 3390 — i5 8th Gen, 8 / 256 GB — x360 2N1 Touchscreen",
+    "sku": "dell3390-i5-8th-8-256-x360",
+    "inStock": true
+  },
+  {
+    "id": "p-dell-5300-i5-8th-16-256-nts",
+    "name": "Dell 5300 I5 8th Gen 8/256 Non Touch-normal",
+    "price": 26000,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell 5300 i5 8th Gen 8/256 non touch-normal",
+    "sku": "dell-5300-i5-8th-16-256-nts",
+    "inStock": true
+  },
+  {
+    "id": "p-dell-5300-i7-8th-8-256-nts",
+    "name": "Dell 5300 I7 8th Gen 8/256 Nontouch",
+    "price": 32500,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell 5300 i7 8th Gen 8/256 NonTouch",
+    "sku": "dell-5300-i7-8th-8-256-nts",
+    "inStock": true
+  },
+  {
+    "id": "p-dell-5300-i5-8th-8-256-x360ts",
+    "name": "Dell 5300-2in1 I5 8th Gen 8/256 Touchscreen X360",
+    "price": 32500,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell 5300-2IN1 i5 8th Gen 8/256 Touchscreen X360",
+    "sku": "dell-5300-i5-8th-8-256-x360ts",
+    "inStock": true
+  },
+  {
+    "id": "p-7270-13inch-i5-6th-8-256",
+    "name": "Dell 7270 — I5 6th Gen, 8/256 GB Nontouch",
+    "price": 21000,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell 7270 — i5 6th Gen, 8/256 GB NonTouch",
+    "sku": "7270-13inch-i5-6th-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-7270-13inch-i5-6th-8-256-NT",
+    "name": "Dell 7270 — I7 6th Gen, 8/256 GB Nontouch",
+    "price": 22000,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell 7270 — i7 6th Gen, 8/256 GB NonTouch",
+    "sku": "7270-13inch-i5-6th-8-256-NT",
+    "inStock": true
+  },
+  {
+    "id": "p-dell-7300-i5-8th-8-256-nts",
+    "name": "Dell 7300 — I5 8th Gen, 8 / 256 GB — Nontouch",
+    "price": 23500,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell 7300 — i5 8th Gen, 8 / 256 GB — Nontouch",
+    "sku": "dell-7300-i5-8th-8-256-nts",
+    "inStock": true
+  },
+  {
+    "id": "p-dell7400-i5-8th-16-512x360-ts",
+    "name": "Dell 7400 — I5 8th Gen, 16 / 512 GB — X360 Touchscreen",
+    "price": 45500,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell 7400 — i5 8th Gen, 16 / 512 GB — x360 Touchscreen",
+    "sku": "dell7400-i5-8th-16-512x360-ts",
+    "inStock": true
+  },
+  {
+    "id": "p-7400-I5-8-256",
+    "name": "Dell 7400 — I5 8th Gen, 8 / 256 GB — X360 Touchscreen",
+    "price": 39000,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell 7400 — i5 8th Gen, 8 / 256 GB — x360 Touchscreen",
+    "sku": "7400-I5-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-dell7400-i7-8th-16-512x360-ts",
+    "name": "Dell 7400 — I7 8th Gen, 16 / 512 GB — X360 Touchscreen",
+    "price": 52000,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell 7400 — i7 8th Gen, 16 / 512 GB — x360 Touchscreen",
+    "sku": "dell7400-i7-8th-16-512x360-ts",
+    "inStock": true
+  },
+  {
+    "id": "p-dell-inspiron-ryzen5",
+    "name": "Dell Inspiron 7375 Ryzen 5 -2 In1 8/256",
+    "price": 34000,
+    "category": "laptop dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell Inspiron 7375 Ryzen 5 -2 IN1 8/256",
+    "sku": "dell-inspiron-ryzen5",
+    "inStock": true
+  },
+  {
+    "id": "p-dell-inspiron-ryzen7",
+    "name": "Dell Inspiron 7375 Ryzen 7 -2 In1 8/256",
+    "price": 39000,
+    "category": "laptop dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell Inspiron 7375 Ryzen 7 -2 IN1 8/256",
+    "sku": "dell-inspiron-ryzen7",
+    "inStock": true
+  },
+  {
+    "id": "p-dell9410-i7-10th-16-512-ts",
+    "name": "Dell Latitude 9410 — I7 10th Gen, 16 / 512 GB — X360 Touchscreen",
+    "price": 58500,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell Latitude 9410 — i7 10th Gen, 16 / 512 GB — x360 Touchscreen",
+    "sku": "dell9410-i7-10th-16-512-ts",
+    "inStock": true
+  },
+  {
+    "id": "p-dell-precision-3561",
+    "name": "Dell Precision 3561 I7 11th Gen, 16 / 512 Nontouch 4 GB GPU",
+    "price": 65000,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell Precision 3561 i7 11th Gen, 16 / 512 Nontouch 4 GB GPU",
+    "sku": "dell-precision-3561",
+    "inStock": true
+  },
+  {
+    "id": "p-dell-precision-5540-i7",
+    "name": "Dell Precision 5540 — I7 9th Gen, 16 / 512 GB — 4gb Nvidia Nontouch",
+    "price": 71500,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell Precision 5540 — i7 9th Gen, 16 / 512 GB — 4GB NVIDIA NonTouch",
+    "sku": "dell-precision-5540-i7",
+    "inStock": true
+  },
+  {
+    "id": "p-dell-precision-5540",
+    "name": "Dell Precision 5540 — I9 9th Gen, 16 / 512 GB — 4gb Nvidia Quadro T2000 Non Touch",
+    "price": 78000,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell Precision 5540 — i9 9th Gen, 16 / 512 GB — 4GB NVIDIA QUADRO T2000 NON TOUCH",
+    "sku": "dell-precision-5540",
+    "inStock": true
+  },
+  {
+    "id": "p-DELL-5540-XEON-16-512-NT",
+    "name": "Dell Precision 5540 — Xeon, 16 / 512 GB — 4gb Nvidia Nontouch",
+    "price": 65000,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell Precision 5540 — XEON, 16 / 512 GB — 4GB NVIDIA NonTouch",
+    "sku": "DELL-5540-XEON-16-512-NT",
+    "inStock": true
+  },
+  {
+    "id": "p-DELL-precision-5550-I7-10TH-16-512-NON",
+    "name": "Dell Precision 5550 — I7 10th Gen, 16 / 512 GB — 4gb Nvidia Non Touch",
+    "price": 91000,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell Precision 5550 — i7 10th Gen, 16 / 512 GB — 4GB NVIDIA NON TOUCH",
+    "sku": "DELL-precision-5550-I7-10TH-16-512-NON",
+    "inStock": true
+  },
+  {
+    "id": "p-dell-xps-7390-i7-10th-16-512-touch",
+    "name": "Dell Xps 13 7390 I7 10th Gen, 16 / 512 Touchscreen",
+    "price": 65000,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell XPS 13 7390 i7 10th Gen, 16 / 512 touchscreen",
+    "sku": "dell-xps-7390-i7-10th-16-512-touch",
+    "inStock": true
+  },
+  {
+    "id": "p-DELL-XPS-13-9310-I7-11TH-16-512-TS-X360",
+    "name": "Dell Xps 13 9310 2-in-1 I7 11th Gen, 16 / 512-touchscreen X360",
+    "price": 84500,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell XPS 13 9310 2-IN-1 i7 11th Gen, 16 / 512-TOUCHSCREEN X360",
+    "sku": "DELL-XPS-13-9310-I7-11TH-16-512-TS-X360",
+    "inStock": true
+  },
+  {
+    "id": "p-dell-xps-9310-i7-11th-16-512-nts",
+    "name": "Dell Xps 13 9310 I7 11th Gen, 16 / 512 Non-touch",
+    "price": 78000,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell XPS 13 9310 i7 11th Gen, 16 / 512 NON-TOUCH",
+    "sku": "dell-xps-9310-i7-11th-16-512-nts",
+    "inStock": true
+  },
+  {
+    "id": "p-DELL-XPS-13-9320-I7-12TH-16-512-NT",
+    "name": "Dell Xps 13 9320 I7 12th Gen,16 / 512 Non Touch",
+    "price": 117000,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell XPS 13 9320 i7 12th Gen,16 / 512 NON TOUCH",
+    "sku": "DELL-XPS-13-9320-I7-12TH-16-512-NT",
+    "inStock": true
+  },
+  {
+    "id": "p-DELL-XPS-13-9320-I7-12TH-16-512TS",
+    "name": "Dell Xps 13 9320 I7 12th Gen,16 / 512 Touchscreen",
+    "price": 123500,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell XPS 13 9320 i7 12th Gen,16 / 512 TOUCHSCREEN",
+    "sku": "DELL-XPS-13-9320-I7-12TH-16-512TS",
+    "inStock": true
+  },
+  {
+    "id": "p-DELL-XPS-13-9320-I7-13TH-16-512-NT",
+    "name": "Dell Xps 13 9320 I7 13th Gen,16 / 512 Non Touch",
+    "price": 136500,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell XPS 13 9320 i7 13th Gen,16 / 512 NON TOUCH",
+    "sku": "DELL-XPS-13-9320-I7-13TH-16-512-NT",
+    "inStock": true
+  },
+  {
+    "id": "p-dell-xps13-9380-i7-8th-16-512",
+    "name": "Dell Xps 13 9380 I7 8th Gen, 16 /512 Nontouch",
+    "price": 56000,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell XPS 13 9380 i7 8th Gen, 16 /512 NONTOUCH",
+    "sku": "dell-xps13-9380-i7-8th-16-512",
+    "inStock": true
+  },
+  {
+    "id": "p-dell-xps-15-9500-15in-i710th-16-512-ts-\n4gpu",
+    "name": "Dell Xps 15 9500 15' I7 10th Gen, 16 / 512 4gb GPU Ndividia Geforce Gtx Non Touch",
+    "price": 91000,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell XPS 15 9500 15' i7 10th Gen, 16 / 512 4GB GPU NDIVIDIA GEFORCE GTX NON TOUCH",
+    "sku": "dell-xps-15-9500-15in-i710th-16-512-ts-\n4gpu",
+    "inStock": true
+  },
+  {
+    "id": "p-DELL-XPS-9510-I9-11TH-16-512-NT",
+    "name": "Dell Xps 15 9510 15' I9 11th Gen, 16 / 512 4gb GPU Ndividia Geforce Rtx Non Touch",
+    "price": 97500,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "Dell XPS 15 9510 15' i9 11th Gen, 16 / 512 4GB GPU NDIVIDIA GEFORCE RTX NON TOUCH",
+    "sku": "DELL-XPS-9510-I9-11TH-16-512-NT",
+    "inStock": true
+  },
+  {
+    "id": "p-dell-7390-i5-2N1-8th-16-512-x360ts",
+    "name": "Dell-7390-i5-2n1-8th-8-256-x360ts",
+    "price": 32500,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "dell-7390-i5-2N1-8th-8-256-x360ts",
+    "sku": "dell-7390-i5-2N1-8th-16-512-x360ts",
+    "inStock": true
+  },
+  {
+    "id": "p-DELL-XPS-9320-I7-13TH-GEN-16GB-512-\nTOUCHSCREEN",
+    "name": "Dell-xps-9320-i7-13th-gen-16gb-512-touchscreen",
+    "price": 143000,
+    "category": "laptop touchscreen dell",
+    "img": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t160/spi/poweredge-server-t160-black-cart-480-left.png",
+    "specs": "DELL-XPS-9320-I7-13TH-GEN-16GB-512-TOUCHSCREEN",
+    "sku": "DELL-XPS-9320-I7-13TH-GEN-16GB-512-\nTOUCHSCREEN",
+    "inStock": true
+  },
+  {
+    "id": "p-HP-430-G7-I5-10TH-8GB-256-NONTOUCH",
+    "name": "Hp 430-g7-i5-10th-8gb-256-nontouch",
+    "price": 34000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP 430-G7-I5-10TH-8GB-256-NONTOUCH",
+    "sku": "HP-430-G7-I5-10TH-8GB-256-NONTOUCH",
+    "inStock": true
+  },
+  {
+    "id": "p-630g8-ts-i5-11th-8-256",
+    "name": "Hp 630 G8 — I5 11th Gen, 8 / 256 GB Touchscreen",
+    "price": 41500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP 630 G8 — i5 11th Gen, 8 / 256 GB TOUCHSCREEN",
+    "sku": "630g8-ts-i5-11th-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-640g2-nts-i5-6th-8-256",
+    "name": "Hp 640 G2 — I5 6th Gen, 8 / 256 GB Nontouch",
+    "price": 22000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP 640 G2 — i5 6th Gen, 8 / 256 GB Nontouch",
+    "sku": "640g2-nts-i5-6th-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-640-G3-I5-7TH-GEN-8GB-256-SSD-NT",
+    "name": "Hp 640-g3-i5-7th-gen-8gb-256-ssd-nt",
+    "price": 24500,
+    "category": "laptop hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP 640-G3-I5-7TH-GEN-8GB-256-SSD-NT",
+    "sku": "640-G3-I5-7TH-GEN-8GB-256-SSD-NT",
+    "inStock": true
+  },
+  {
+    "id": "p-640-G9-I5-12TH-8GB-256-NONTOUCH",
+    "name": "Hp 640-g9-i5-12th-8gb-256-nontouch",
+    "price": 47000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP 640-G9-I5-12TH-8GB-256-NONTOUCH",
+    "sku": "640-G9-I5-12TH-8GB-256-NONTOUCH",
+    "inStock": true
+  },
+  {
+    "id": "p-820-G1-I5-4TH-8GB-256-NON",
+    "name": "Hp 820 G1 I5 4th 8gb 256ssd GB Non Touch",
+    "price": 19500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP 820 G1 I5 4TH 8GB 256SSD GB NON TOUCH",
+    "sku": "820-G1-I5-4TH-8GB-256-NON",
+    "inStock": true
+  },
+  {
+    "id": "p-820g3-nts-i5-6th-8-256",
+    "name": "Hp 820 G3 — I5 6th Gen, 8 / 256 GB Nontouch",
+    "price": 24500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP 820 G3 — i5 6th Gen, 8 / 256 GB Nontouch",
+    "sku": "820g3-nts-i5-6th-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-820-G2-I7-5TH-GEN-8GB-256-SSD-NON",
+    "name": "Hp 820-g2-i7-5th-gen-8gb-256-ssd-non",
+    "price": 23500,
+    "category": "laptop hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP 820-G2-I7-5TH-GEN-8GB-256-SSD-NON",
+    "sku": "820-G2-I7-5TH-GEN-8GB-256-SSD-NON",
+    "inStock": true
+  },
+  {
+    "id": "p-830g7-ts-i5-10th-8-256-X360",
+    "name": "Hp 830 G7 I5 10th Gen 8gb 256 SSD Touchscreen X360",
+    "price": 45500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "hp 830 g7 i5 10th gen 8gb 256 ssd touchscreen x360",
+    "sku": "830g7-ts-i5-10th-8-256-X360",
+    "inStock": true
+  },
+  {
+    "id": "p-840-G2-I5-5TH-8-256-NONTOUCH",
+    "name": "Hp 840 G2 I5 5th 8/56-nontouch",
+    "price": 22000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP 840 G2 I5 5TH 8/56-NONTOUCH",
+    "sku": "840-G2-I5-5TH-8-256-NONTOUCH",
+    "inStock": true
+  },
+  {
+    "id": "p-840-G2-I7-5TH-8-256-NT",
+    "name": "Hp 840 G2 I7 5th 8gb RAM 256 SSD",
+    "price": 24000,
+    "category": "laptop hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP 840 G2 I7 5TH 8GB RAM 256 SSD",
+    "sku": "840-G2-I7-5TH-8-256-NT",
+    "inStock": true
+  },
+  {
+    "id": "p-hp-dragonfly-i7-8th-16-512-x360ts",
+    "name": "Hp Dragonfly I7 8th Gen 16/512 X360 Touchscreen",
+    "price": 65000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP Dragonfly i7 8th Gen 16/512 x360 Touchscreen",
+    "sku": "hp-dragonfly-i7-8th-16-512-x360ts",
+    "inStock": true
+  },
+  {
+    "id": "p-HP-630-G10-I7-13TH-16GB-512-TOUCH",
+    "name": "Hp Elite Book 630 G10 I7 13th Gen 16gb 512 Touchscreen",
+    "price": 71500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP ELITE BOOK 630 G10 I7 13TH GEN 16GB 512 TOUCHSCREEN",
+    "sku": "HP-630-G10-I7-13TH-16GB-512-TOUCH",
+    "inStock": true
+  },
+  {
+    "id": "p-820-G3-I7-8-256",
+    "name": "Hp Elite Book 820 G3 — I7 6th Gen, 8 / 256 GB Nontouch",
+    "price": 27500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP ELITE BOOK 820 G3 — i7 6th Gen, 8 / 256 GB Nontouch",
+    "sku": "820-G3-I7-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-820-g4-i5-7th-8-256-nontouch",
+    "name": "Hp Elite Book 820 G4 I5 7th 8gb RAM 256 SSD",
+    "price": 26000,
+    "category": "laptop hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP ELITE BOOK 820 G4 I5 7TH 8GB RAM 256 SSD",
+    "sku": "820-g4-i5-7th-8-256-nontouch",
+    "inStock": true
+  },
+  {
+    "id": "p-elite-x2-1012-g2-I5-7th-16-512-dtble-ts",
+    "name": "Hp Elite X2 G2 Detachable 1012— I5 7th Gen, 16 GB / 256 GB",
+    "price": 41500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP Elite x2 G2 Detachable 1012— i5 7th Gen, 16 GB / 256 GB",
+    "sku": "elite-x2-1012-g2-I5-7th-16-512-dtble-ts",
+    "inStock": true
+  },
+  {
+    "id": "p-hp1030-g2-i5-7th-8-256",
+    "name": "Hp Elitebook 1030 G2 — I5 7th Gen, 8 GB / 256 GB — X360 Touchscreen",
+    "price": 41500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 1030 G2 — i5 7th Gen, 8 GB / 256 GB — x360 Touchscreen",
+    "sku": "hp1030-g2-i5-7th-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-1030G2-i7-7TH-16-256",
+    "name": "Hp Elitebook 1030 G2 — I7 7th Gen, 16 GB / 256 GB — X360 Touchscreen",
+    "price": 45500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 1030 G2 — i7 7th Gen, 16 GB / 256 GB — x360 Touchscreen",
+    "sku": "1030G2-i7-7TH-16-256",
+    "inStock": true
+  },
+  {
+    "id": "p-HP1030-g3-i5-8th-8-256-x360",
+    "name": "Hp Elitebook 1030 G3 — I5 8th Gen, 8 GB / 256 GB X360 Touchscreen",
+    "price": 43000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 1030 G3 — i5 8th Gen, 8 GB / 256 GB X360 Touchscreen",
+    "sku": "HP1030-g3-i5-8th-8-256-x360",
+    "inStock": true
+  },
+  {
+    "id": "p-1030-g7-i7-10th-16-512-x360",
+    "name": "Hp Elitebook 1030 G7 (intel I7 10th Gen, 16 GB Ram, 512 GB Ssd) X360 Touchscreen",
+    "price": 65000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 1030 G7 (Intel i7 10th Gen, 16 GB RAM, 512 GB SSD) x360 Touchscreen",
+    "sku": "1030-g7-i7-10th-16-512-x360",
+    "inStock": true
+  },
+  {
+    "id": "p-hp1030-g8-i5-11th-16-512-x360",
+    "name": "Hp Elitebook 1030 G8 — I5 11th Gen, 16gb / 512 GB X360 Touchscreen",
+    "price": 61000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 1030 G8 — i5 11th Gen, 16GB / 512 GB X360 Touchscreen",
+    "sku": "hp1030-g8-i5-11th-16-512-x360",
+    "inStock": true
+  },
+  {
+    "id": "p-1040g3-ts-i5-6th-8-256",
+    "name": "Hp Elitebook 1040 G3 — I5 6th Gen, 8 GB / 256 GB Non Touch",
+    "price": 27500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 1040 G3 — i5 6th Gen, 8 GB / 256 GB NON TOUCH",
+    "sku": "1040g3-ts-i5-6th-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-1040g3-nts-i7-6th-16-512",
+    "name": "Hp Elitebook 1040 G3 — I7 6th Gen, 16 GB / 512 GB Non Touch",
+    "price": 32500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 1040 G3 — i7 6th Gen, 16 GB / 512 GB Non touch",
+    "sku": "1040g3-nts-i7-6th-16-512",
+    "inStock": true
+  },
+  {
+    "id": "p-1040g6-ts-i5-8th-16-512-x360x",
+    "name": "Hp Elitebook 1040 G6 (intel I5 8th Gen, 16 GB Ram, 512 GB Ssd) X360 Touchscreen",
+    "price": 47000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 1040 G6 (Intel i5 8th Gen, 16 GB RAM, 512 GB SSD) x360 Touchscreen",
+    "sku": "1040g6-ts-i5-8th-16-512-x360x",
+    "inStock": true
+  },
+  {
+    "id": "p-1040g6-ts-i7-8th-16-512-x360x",
+    "name": "Hp Elitebook 1040 G6 (intel I7 8th Gen, 16 GB Ram, 512 GB Ssd) X360 Touchscreen",
+    "price": 56000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 1040 G6 (Intel i7 8th Gen, 16 GB RAM, 512 GB SSD) x360 Touchscreen",
+    "sku": "1040g6-ts-i7-8th-16-512-x360x",
+    "inStock": true
+  },
+  {
+    "id": "p-1040g7-ts-i7-10th-16-512-x360x",
+    "name": "Hp Elitebook 1040 G7 (intel I7 10th Gen, 16 GB Ram, 512 GB Ssd) X360 Touchscreen",
+    "price": 69000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 1040 G7 (Intel i7 10th Gen, 16 GB RAM, 512 GB SSD) x360 Touchscreen",
+    "sku": "1040g7-ts-i7-10th-16-512-x360x",
+    "inStock": true
+  },
+  {
+    "id": "p-1040G8-ts-i7-11th-8-512-x360",
+    "name": "Hp Elitebook 1040 G8 — I7 11th Gen, 8 GB / 512 GB — X360 Touchscreen",
+    "price": 65000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 1040 G8 — i7 11th Gen, 8 GB / 512 GB — x360 Touchscreen",
+    "sku": "1040G8-ts-i7-11th-8-512-x360",
+    "inStock": true
+  },
+  {
+    "id": "p-430g5-nts-i7-8th-16-512",
+    "name": "Hp Elitebook 430 G5 — I5 8th Gen, 8 GB / 256 GB Nontouch",
+    "price": 28500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 430 G5 — i5 8th Gen, 8 GB / 256 GB NonTouch",
+    "sku": "430g5-nts-i7-8th-16-512",
+    "inStock": true
+  },
+  {
+    "id": "p-745g6ryzen5-745g6-16-256",
+    "name": "Hp Elitebook 745 G6 (amd Ryzen 5, 8 GB Ram, 256 GB Ssd, Touchscreen) 2 GB GPU",
+    "price": 34000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 745 G6 (AMD Ryzen 5, 8 GB RAM, 256 GB SSD, Touchscreen) 2 GB GPU",
+    "sku": "745g6ryzen5-745g6-16-256",
+    "inStock": true
+  },
+  {
+    "id": "p-830g8-ts-i7-11th-16-512x",
+    "name": "Hp Elitebook 830 G8 — I7 11th Gen, 16 GB / 512 GB Touchscreen",
+    "price": 56000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 830 G8 — i7 11th Gen, 16 GB / 512 GB Touchscreen",
+    "sku": "830g8-ts-i7-11th-16-512x",
+    "inStock": true
+  },
+  {
+    "id": "p-840g6-ns-i7-8th-8-256",
+    "name": "Hp Elitebook 840 G6 — I7 8th Gen, 8 GB / 256 GB —non Touch",
+    "price": 36500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 840 G6 — i7 8th Gen, 8 GB / 256 GB —non touch",
+    "sku": "840g6-ns-i7-8th-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-hp840g8-i5-11th-8-256-nt",
+    "name": "Hp Elitebook 840 G8 — 14 ' I5 11th Gen, 8gb /256gb Non Touch",
+    "price": 43000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 840 G8 — 14 ' i5 11th Gen, 8GB /256GB NON TOUCH",
+    "sku": "hp840g8-i5-11th-8-256-nt",
+    "inStock": true
+  },
+  {
+    "id": "p-845g7-ryzen5-ts-i7-th-8-256",
+    "name": "Hp Elitebook 845 G7 Nontuch (amd Ryzen 5, 8 GB Ram, 256 GB Ssd)",
+    "price": 35000,
+    "category": "laptop hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP EliteBook 845 G7 nonTuch (AMD Ryzen 5, 8 GB RAM, 256 GB SSD)",
+    "sku": "845g7-ryzen5-ts-i7-th-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-9470-I5-3TH-8-500",
+    "name": "Hp Folio 9470m I5 3thgen 8/500 Nontouch",
+    "price": 20000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP FOLIO 9470M i5 3thgen 8/500 Nontouch",
+    "sku": "9470-I5-3TH-8-500",
+    "inStock": true
+  },
+  {
+    "id": "p-folio-9480m-8-500",
+    "name": "Hp Folio 9480m I5 4thgen 8/500hdd Nontouch",
+    "price": 19500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP FOLIO 9480M i5 4thgen 8/500HDD Nontouch",
+    "sku": "folio-9480m-8-500",
+    "inStock": true
+  },
+  {
+    "id": "p-FOLIO-9470M-I7-3TH-8GB-500-NONTOUCH",
+    "name": "Hp Folio-9470m-i7-3th-8gb-500-nontouch",
+    "price": 21500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP FOLIO-9470M-I7-3TH-8GB-500-NONTOUCH",
+    "sku": "FOLIO-9470M-I7-3TH-8GB-500-NONTOUCH",
+    "inStock": true
+  },
+  {
+    "id": "p-FOLIO-9480M-I7-4TH-8GB-500-NONTOUCH",
+    "name": "Hp Folio-9480m-i7-4th-8gb-500-nontouch",
+    "price": 23000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP FOLIO-9480M-I7-4TH-8GB-500-NONTOUCH",
+    "sku": "FOLIO-9480M-I7-4TH-8GB-500-NONTOUCH",
+    "inStock": true
+  },
+  {
+    "id": "p-PAVILIONX360-14M-I5-10TH-8-256",
+    "name": "Hp Pavilion 14m X360 ___i5 10th Gen 8gb 256ssd__touch",
+    "price": 45500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP PAVILION 14M X360 ___I5 10TH GEN 8GB 256SSD__TOUCH",
+    "sku": "PAVILIONX360-14M-I5-10TH-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-pavilion-15in-i7-8th-16-512-4gpu-cs1xxx",
+    "name": "Hp Pavilion 15inch I7 8th 16gb 512ssd Non-touch 4gpu Invidia-cs1xx",
+    "price": 65000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP PAVILION 15INCH I7 8TH 16GB 512SSD NON-TOUCH 4GPU INVIDIA-CS1XX",
+    "sku": "pavilion-15in-i7-8th-16-512-4gpu-cs1xxx",
+    "inStock": true
+  },
+  {
+    "id": "p-probook-11-g2-x360",
+    "name": "Hp Probook 11 G2 — I5 7th Gen, 8 GB / 256 GB — X360 Touchscreen",
+    "price": 23500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP ProBook 11 G2 — i5 7th Gen, 8 GB / 256 GB — x360 Touchscreen",
+    "sku": "probook-11-g2-x360",
+    "inStock": true
+  },
+  {
+    "id": "p-hp-probook-11e-g4-i5-8th-8gb-256-x360",
+    "name": "Hp Probook 11e G4 I5 8th Gen 8gb 256 X360 Touch",
+    "price": 26000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP PROBOOK 11E G4 I5 8TH GEN 8GB 256 X360 TOUCH",
+    "sku": "hp-probook-11e-g4-i5-8th-8gb-256-x360",
+    "inStock": true
+  },
+  {
+    "id": "p-430g3-NON-i5-6th-8-256",
+    "name": "Hp Probook 430 G3 — I5 6th Gen, 8 GB / 256 GB — Non Touch",
+    "price": 23500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP ProBook 430 G3 — i5 6th Gen, 8 GB / 256 GB — NON TOUCH",
+    "sku": "430g3-NON-i5-6th-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-440G1-I5-7TH-8-256-TS",
+    "name": "Hp Probook 440 G1 — I5 7th Gen, 8 GB / 256 GB — X360 Touchscreen",
+    "price": 32500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP ProBook 440 G1 — i5 7th Gen, 8 GB / 256 GB — x360 Touchscreen",
+    "sku": "440G1-I5-7TH-8-256-TS",
+    "inStock": true
+  },
+  {
+    "id": "p-HP-PRBOOK44G3-I5-6TH-8-256NT",
+    "name": "Hp Probook 440 G3 — I5 6th Gen, 8 GB / 256 GB — Non Touch",
+    "price": 23500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP ProBook 440 G3 — i5 6th Gen, 8 GB / 256 GB — NON TOUCH",
+    "sku": "HP-PRBOOK44G3-I5-6TH-8-256NT",
+    "inStock": true
+  },
+  {
+    "id": "p-440G3-I5-6TH-8-256-TS",
+    "name": "Hp Probook 440 G3 — I5 6th Gen, 8 GB / 256 GB — Touchscreen",
+    "price": 26000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP ProBook 440 G3 — i5 6th Gen, 8 GB / 256 GB — TOUCHSCREEN",
+    "sku": "440G3-I5-6TH-8-256-TS",
+    "inStock": true
+  },
+  {
+    "id": "p-hp-spectre-convertable-x360-i7-7-16-\n512-15bl0xx-2gb-invidia",
+    "name": "Hp Spectre Convertable X360 I7 7th 16gb/512ssd 15__bl0xx___2gb Invidia",
+    "price": 71500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP SPECTRE CONVERTABLE X360 I7 7TH 16GB/512SSD 15__BL0XX___2GB INVIDIA",
+    "sku": "hp-spectre-convertable-x360-i7-7-16-\n512-15bl0xx-2gb-invidia",
+    "inStock": true
+  },
+  {
+    "id": "p-hp-spectre-convertable-x360-i7-8-16-\n512-15CH0XX-2gb-invidia",
+    "name": "Hp Spectre Convertable X360 I7 8th 16gb/512ssd 15__ch0xx___2gb Invidia",
+    "price": 78000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP SPECTRE CONVERTABLE X360 I7 8TH 16GB/512SSD 15__CH0XX___2GB INVIDIA",
+    "sku": "hp-spectre-convertable-x360-i7-8-16-\n512-15CH0XX-2gb-invidia",
+    "inStock": true
+  },
+  {
+    "id": "p-STREAMLAPTOP-11-ah0xx",
+    "name": "Hp Stream-laptop 11-ah0xx-celeron-4gb-64 SSD",
+    "price": 13000,
+    "category": "laptop hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP STREAM-LAPTOP 11-ah0xx-CELERON-4GB-64 ssd",
+    "sku": "STREAMLAPTOP-11-ah0xx",
+    "inStock": true
+  },
+  {
+    "id": "p-STREAM-NOTBOOK-CELERON-2GB-32-SSD",
+    "name": "Hp Tream-notbook-celeron-2gb-32-ssd",
+    "price": 11000,
+    "category": "laptop hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP TREAM-NOTBOOK-CELERON-2GB-32-SSD",
+    "sku": "STREAM-NOTBOOK-CELERON-2GB-32-SSD",
+    "inStock": true
+  },
+  {
+    "id": "p-ZBOOK15G6-I7-9TH-16-512-NT-4GPU",
+    "name": "Hp Zbook 15 G6 — I7 9th Gen, 16 GB / 512 GB — 4gb GPU Nontouch",
+    "price": 78000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP ZBook 15 G6 — i7 9th Gen, 16 GB / 512 GB — 4GB GPU NonTouch",
+    "sku": "ZBOOK15G6-I7-9TH-16-512-NT-4GPU",
+    "inStock": true
+  },
+  {
+    "id": "p-zbook14-u-g5-nts-i5-8th-8-256",
+    "name": "Hp Zbook 14 G5 — I5 8th Gen, 8 GB / 256 GB Nontouch",
+    "price": 32500,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP ZBook 14 G5 — i5 8th Gen, 8 GB / 256 GB Nontouch",
+    "sku": "zbook14-u-g5-nts-i5-8th-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-ZBOOK-14U-G6-I7-8TH-16-GB-512-4GBU-\nTOUCHSCREEN",
+    "name": "Hp Zbook 14u G6 I7 8th Gen 16gb 512 SSD Touch",
+    "price": 56000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP ZBOOK 14U G6 I7 8TH GEN 16GB 512 SSD TOUCH",
+    "sku": "ZBOOK-14U-G6-I7-8TH-16-GB-512-4GBU-\nTOUCHSCREEN",
+    "inStock": true
+  },
+  {
+    "id": "p-zbook-14u-g6-i7-8-256-ssd-touchscreen",
+    "name": "Hp Zbook 14u G6 I7 8th Gen 16gb 512 SSD Touchscreen",
+    "price": 52000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP ZBOOK 14U G6 I7 8TH GEN 16GB 512 SSD TOUCHSCREEN",
+    "sku": "zbook-14u-g6-i7-8-256-ssd-touchscreen",
+    "inStock": true
+  },
+  {
+    "id": "p-book14-u-g7-nts-i7-10th-32-512-4gpu-ts",
+    "name": "Hp Zbook Firfly 14 G7 Mobile Work Station I7 10th 32/512 4gpu Invidia Graphics Touch Screen",
+    "price": 91000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP ZBOOK FIRFLY 14 G7 MOBILE WORK STATION i7 10TH 32/512 4GPU INVIDIA GRAPHICS TOUCH SCREEN",
+    "sku": "book14-u-g7-nts-i7-10th-32-512-4gpu-ts",
+    "inStock": true
+  },
+  {
+    "id": "p-HP-ENVYX360-LAPTOP-R5-8-256-AM-REDEON",
+    "name": "Hp-envy X360 Laptop-amd Redeon Ryzn5 15-ey0xxx-8-256",
+    "price": 48000,
+    "category": "laptop touchscreen hp",
+    "img": "https://www.hpe.com/content/dam/hpe/shared-publishing/images-norend/marquee-png/ProLiant-DL380-Gen11-L-1200x1056.png",
+    "specs": "HP-ENVY x360 LAPTOP-AMD REDEON RYZN5 15-ey0xxx-8-256",
+    "sku": "HP-ENVYX360-LAPTOP-R5-8-256-AM-REDEON",
+    "inStock": true
+  },
+  {
+    "id": "p-LEN-YOGA-11E-CELERON-4-128-TS",
+    "name": "Lenovo Yoga 11e — Celeron 4gb 128gb Touch X360",
+    "price": 15500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/q4hesqszks5iiok8lnwzbd5byuk2ky489180.png",
+    "specs": "Lenovo YOGA 11E — CELERON 4GB 128GB TOUCH X360",
+    "sku": "LEN-YOGA-11E-CELERON-4-128-TS",
+    "inStock": true
+  },
+  {
+    "id": "p-len-n23s-celeron-4-128",
+    "name": "Lenovo Yoga N23s — Celeron 4gb 128gb SSD X360",
+    "price": 14500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/q4hesqszks5iiok8lnwzbd5byuk2ky489180.png",
+    "specs": "Lenovo YOGA N23S — CELERON 4GB 128GB SSD X360",
+    "sku": "len-n23s-celeron-4-128",
+    "inStock": true
+  },
+  {
+    "id": "p-LEN-11E-CELERON-4-128",
+    "name": "Lenovo 11e — Celeron 4gb 128gb Non Touch",
+    "price": 13000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo 11E — CELERON 4GB 128GB NON TOUCH",
+    "sku": "LEN-11E-CELERON-4-128",
+    "inStock": true
+  },
+  {
+    "id": "p-LEN-11E-COREi3-4-128",
+    "name": "Lenovo 11e — Core{tm} I3 4gb 128gb Non Touch",
+    "price": 17000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo 11E — CORE{TM} i3 4GB 128GB NON TOUCH",
+    "sku": "LEN-11E-COREi3-4-128",
+    "inStock": true
+  },
+  {
+    "id": "p-LEN-11E-COM5-4-128-NT",
+    "name": "Lenovo 11e — Core{tm} M-5 4gb 128gb Non Touch",
+    "price": 18000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo 11E — CORE{TM} M-5 4GB 128GB NON TOUCH",
+    "sku": "LEN-11E-COM5-4-128-NT",
+    "inStock": true
+  },
+  {
+    "id": "p-LEN-11E-COM5-8-128-NT",
+    "name": "Lenovo 11e — Core{tm} M-5 8gb 128gb Non Touch",
+    "price": 19000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo 11E — CORE{TM} M-5 8GB 128GB NON TOUCH",
+    "sku": "LEN-11E-COM5-8-128-NT",
+    "inStock": true
+  },
+  {
+    "id": "p-P15-GEN1-I7-16-512-NT-6GPU",
+    "name": "Lenovo P15 Gen 1 16' — I7 10th Gen, 16 / 512 GB Nontouch 6-gpu Rtx 3000 Invidia Quadro Graphics",
+    "price": 84500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo P15 GEN 1 16' — i7 10th Gen, 16 / 512 GB NonTouch 6-GPU RTX 3000 INVIDIA QUADRO GRAPHICS",
+    "sku": "P15-GEN1-I7-16-512-NT-6GPU",
+    "inStock": true
+  },
+  {
+    "id": "p-P15-GEN1-I7-16-512-NT-4GPU",
+    "name": "Lenovo P15 Gen 1 16' — I7 10th Gen, 16 / 512 GB Nontouch 4-gpu Invidia Quadro T2000 Graphics",
+    "price": 78000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo P15 GEN 1 16' — i7 10th Gen, 16 / 512 GB NonTouch 4-GPU INVIDIA QUADRO T2000 GRAPHICS",
+    "sku": "P15-GEN1-I7-16-512-NT-4GPU",
+    "inStock": true
+  },
+  {
+    "id": "p-P15-GEN1-I7-16-512-NT-4GPU-T1000",
+    "name": "Lenovo P15 Gen 1 16' — I7 10th Gen, 16 / 512 GB Nontouch 4-gpu Invidia Quadro T1000 Graphics",
+    "price": 71500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo P15 GEN 1 16' — i7 10th Gen, 16 / 512 GB NonTouch 4-GPU INVIDIA QUADRO T1000 GRAPHICS",
+    "sku": "P15-GEN1-I7-16-512-NT-4GPU-T1000",
+    "inStock": true
+  },
+  {
+    "id": "p-p15s-i7-10th-16-512-2gpu",
+    "name": "Lenovo P15s 16' — I7 10th Gen, 16 / 512 GB Nontouch 2 GPU Nvidia Quadro P520",
+    "price": 58500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo P15s 16' — i7 10th Gen, 16 / 512 GB NonTouch 2 GPU NVIDIA QUADRO P520",
+    "sku": "p15s-i7-10th-16-512-2gpu",
+    "inStock": true
+  },
+  {
+    "id": "p-P15S-I7-16-512-TS",
+    "name": "Lenovo P15s 16' — I7 10th Gen, 16 / 512 GB Touchscreen 2 GPU Inidia Quadro P520",
+    "price": 62500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo P15s 16' — i7 10th Gen, 16 / 512 GB TOUCHSCREEN 2 GPU INIDIA QUADRO P520",
+    "sku": "P15S-I7-16-512-TS",
+    "inStock": true
+  },
+  {
+    "id": "p-p15-i7-10th-16in-16-512-nts",
+    "name": "Lenovo P15v 16' — I7 10th Gen, 16 / 512 GB Nontouch",
+    "price": 52000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo P15V 16' — i7 10th Gen, 16 / 512 GB NonTouch",
+    "sku": "p15-i7-10th-16in-16-512-nts",
+    "inStock": true
+  },
+  {
+    "id": "p-p50-i7-6th-16in-16-512-4gpu",
+    "name": "Lenovo P50 16' — I7 6th Gen, 16 / 512 GB 4gb GPU Nontouch",
+    "price": 45500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo P50 16' — i7 6th Gen, 16 / 512 GB 4GB GPU Nontouch",
+    "sku": "p50-i7-6th-16in-16-512-4gpu",
+    "inStock": true
+  },
+  {
+    "id": "p-p50-xeon-16-512-4gpu",
+    "name": "Lenovo P50 16' — Xeon, 16 / 512 GB 4gb GPU Nontouch",
+    "price": 45500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo P50 16' — xeon, 16 / 512 GB 4GB GPU Nontouch",
+    "sku": "p50-xeon-16-512-4gpu",
+    "inStock": true
+  },
+  {
+    "id": "p-p51-i7-7th-16in-16-512-4gpu",
+    "name": "Lenovo P51s 16' — I7 7th Gen, 16 / 512 GB 2gb GPU Nontouch",
+    "price": 45500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo P51s 16' — i7 7th Gen, 16 / 512 GB 2GB GPU Nontouch",
+    "sku": "p51-i7-7th-16in-16-512-4gpu",
+    "inStock": true
+  },
+  {
+    "id": "p-P52S-I7-8THTH-16-512-NT",
+    "name": "Lenovo P52s 16' — I7 8th Gen, 16 / 512 GB 2 GPU Nvidia Quadro P500 Nontouch",
+    "price": 58500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo P52S 16' — i7 8th Gen, 16 / 512 GB 2 GPU NVIDIA QUADRO P500 Nontouch",
+    "sku": "P52S-I7-8THTH-16-512-NT",
+    "inStock": true
+  },
+  {
+    "id": "p-P53-I7-9TH-16-512",
+    "name": "Lenovo P53 16' — I7 9th Gen, 16 / 512 GB 4gb GPU Quadro. T2000 Nontouch",
+    "price": 65000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo P53 16' — i7 9th Gen, 16 / 512 GB 4GB GPU QUADRO. T2000 Nontouch",
+    "sku": "P53-I7-9TH-16-512",
+    "inStock": true
+  },
+  {
+    "id": "p-P53S-I7-8TH-16-512",
+    "name": "Lenovo P53s 16' — I7 8th Gen, 16 / 512 GB 2gb GPU Invidia Quadro. P520 Nontouch",
+    "price": 58500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo P53S 16' — i7 8th Gen, 16 / 512 GB 2GB GPU INVIDIA QUADRO. P520 Nontouch",
+    "sku": "P53S-I7-8TH-16-512",
+    "inStock": true
+  },
+  {
+    "id": "p-t14s-i7-10th-8-256-ts",
+    "name": "Lenovo T14s — I7 10th Gen, 8 / 256 GB Touchscreen",
+    "price": 39000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T14s — i7 10th Gen, 8 / 256 GB Touchscreen",
+    "sku": "t14s-i7-10th-8-256-ts",
+    "inStock": true
+  },
+  {
+    "id": "p-own-t15-i7-10th-16-512-ts-2gpu",
+    "name": "Lenovo T15 — I7 10th Gen, 16 / 512 GB 2gb Gpu— Touchscreen",
+    "price": 58500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T15 — i7 10th Gen, 16 / 512 GB 2GB GPU— Touchscreen",
+    "sku": "own-t15-i7-10th-16-512-ts-2gpu",
+    "inStock": true
+  },
+  {
+    "id": "p-T15P-I7-10TH-16-512",
+    "name": "Lenovo T15p — I7 10th Gen, 16 / 512 GB 2gb Invidia Geforce Gtx Graphics— Non Touch",
+    "price": 65000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T15P — i7 10th Gen, 16 / 512 GB 2GB INVIDIA GEFORCE GTX GRAPHICS— NON TOUCH",
+    "sku": "T15P-I7-10TH-16-512",
+    "inStock": true
+  },
+  {
+    "id": "p-t460s-i5-8th-8-5256-nt",
+    "name": "Lenovo T460s — I5 6th Gen, 8 / 256 GB — Non Touch",
+    "price": 23000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T460s — i5 6th Gen, 8 / 256 GB — non touch",
+    "sku": "t460s-i5-8th-8-5256-nt",
+    "inStock": true
+  },
+  {
+    "id": "p-t460s-i5-8th-8-256-ts",
+    "name": "Lenovo T460s — I5 6th Gen, 8 / 256 GB — Touchscreen",
+    "price": 23500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T460s — i5 6th Gen, 8 / 256 GB — Touchscreen",
+    "sku": "t460s-i5-8th-8-256-ts",
+    "inStock": true
+  },
+  {
+    "id": "p-t460-i7-6th-8-256-nontouch",
+    "name": "Lenovo T460s I7 6th 8gb 256ssd-nontouch",
+    "price": 24500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "lenovo t460S i7 6th 8gb 256ssd-nontouch",
+    "sku": "t460-i7-6th-8-256-nontouch",
+    "inStock": true
+  },
+  {
+    "id": "p-t470s-i5-6th-8-256-nt",
+    "name": "Lenovo T470s — I5 6th Gen, 8 / 256 GB — Non Touch",
+    "price": 24000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T470s — i5 6th Gen, 8 / 256 GB — non touch",
+    "sku": "t470s-i5-6th-8-256-nt",
+    "inStock": true
+  },
+  {
+    "id": "p-t470s-i5-7th-8-256-ns",
+    "name": "Lenovo T470s — I5 7th Gen, 8 / 256 GB — Non Touch",
+    "price": 25500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T470s — i5 7th Gen, 8 / 256 GB — non touch",
+    "sku": "t470s-i5-7th-8-256-ns",
+    "inStock": true
+  },
+  {
+    "id": "p-T470S-I5-7TH-8-256-TOUCH",
+    "name": "Lenovo T470s — I5 7th Gen, 8 / 256 GB — Touchscreen",
+    "price": 24500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T470s — i5 7th Gen, 8 / 256 GB — touchscreen",
+    "sku": "T470S-I5-7TH-8-256-TOUCH",
+    "inStock": true
+  },
+  {
+    "id": "p-t470s-i7-6th-8-256-ns",
+    "name": "Lenovo T470s — I7 6th Gen, 8 / 256 GB — Non Touch",
+    "price": 26000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T470s — i7 6th Gen, 8 / 256 GB — NON TOUCH",
+    "sku": "t470s-i7-6th-8-256-ns",
+    "inStock": true
+  },
+  {
+    "id": "p-T470s-i7-6th-8-256-TOUCH",
+    "name": "Lenovo T470s — I7 6th Gen, 8 / 256 GB — Touchscreen",
+    "price": 27500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T470s — i7 6th Gen, 8 / 256 GB — TOUCHSCREEN",
+    "sku": "T470s-i7-6th-8-256-TOUCH",
+    "inStock": true
+  },
+  {
+    "id": "p-t470s-i7-7th-8-256-ns",
+    "name": "Lenovo T470s — I7 7th Gen, 8 / 256 GB — Touch",
+    "price": 28500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T470s — i7 7th Gen, 8 / 256 GB — TOUCH",
+    "sku": "t470s-i7-7th-8-256-ns",
+    "inStock": true
+  },
+  {
+    "id": "p-t480-i5-16-256-nt",
+    "name": "Lenovo T480s — I5 8th Gen, 16 / 256 GB — Non Touch",
+    "price": 35000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T480s — i5 8th Gen, 16 / 256 GB — NON TOUCH",
+    "sku": "t480-i5-16-256-nt",
+    "inStock": true
+  },
+  {
+    "id": "p-T480S-I5-8TH-8-256-NT",
+    "name": "Lenovo T480s — I5 8th Gen, 8 / 256 GB — Non Touch",
+    "price": 28500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T480s — i5 8th Gen, 8 / 256 GB — NON TOUCH",
+    "sku": "T480S-I5-8TH-8-256-NT",
+    "inStock": true
+  },
+  {
+    "id": "p-t480s-i5-8th-8-256-ts",
+    "name": "Lenovo T480s — I5 8th Gen, 8 / 256 GB — Touchscreen",
+    "price": 30000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T480s — i5 8th Gen, 8 / 256 GB — Touchscreen",
+    "sku": "t480s-i5-8th-8-256-ts",
+    "inStock": true
+  },
+  {
+    "id": "p-T480s-i7-8th-16-512-NT",
+    "name": "Lenovo T480s — I7 8th Gen, 16 / 512 GB — Non Touch",
+    "price": 41500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T480s — i7 8th Gen, 16 / 512 GB — NON TOUCH",
+    "sku": "T480s-i7-8th-16-512-NT",
+    "inStock": true
+  },
+  {
+    "id": "p-t480s-i7-8th-16-512-ts",
+    "name": "Lenovo T480s — I7 8th Gen, 16 / 512 GB — Touchscreen",
+    "price": 41500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T480s — i7 8th Gen, 16 / 512 GB — Touchscreen",
+    "sku": "t480s-i7-8th-16-512-ts",
+    "inStock": true
+  },
+  {
+    "id": "p-t490s-i5-8th-16-256-ts",
+    "name": "Lenovo T490s — I5 8th Gen, 16 / 256 GB — Touch Screen",
+    "price": 32500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T490s — i5 8th Gen, 16 / 256 GB — TOUCH SCREEN",
+    "sku": "t490s-i5-8th-16-256-ts",
+    "inStock": true
+  },
+  {
+    "id": "p-len-t490s-i5-8th-8-256-NT",
+    "name": "Lenovo T490s — I5 8th Gen, 8 / 256 GB — Non Touch",
+    "price": 30000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T490s — i5 8th Gen, 8 / 256 GB — NON TOUCH",
+    "sku": "len-t490s-i5-8th-8-256-NT",
+    "inStock": true
+  },
+  {
+    "id": "p-len-t490s-i7-8th-16-512",
+    "name": "Lenovo T490s — I7 8th Gen, 16 / 512 GB — Touchscreen",
+    "price": 45500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo T490s — i7 8th Gen, 16 / 512 GB — Touchscreen",
+    "sku": "len-t490s-i7-8th-16-512",
+    "inStock": true
+  },
+  {
+    "id": "p-leno-t95s-r7-16-256-nt",
+    "name": "Lenovo T495s (amd Ryzen 7, 16 GB Ram, 256 GB Ssd) 2gb GPU Non Touch",
+    "price": 43000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "LENOVO T495S (AMD Ryzen 7, 16 GB RAM, 256 GB SSD) 2GB GPU NON TOUCH",
+    "sku": "leno-t95s-r7-16-256-nt",
+    "inStock": true
+  },
+  {
+    "id": "p-lenovo-thinkbook-13s-g2-itl-i7-11th-16-\n512",
+    "name": "Lenovo Thinkbook 13s G2 Itl— I7 11th Gen, 16 / 512 GB Normal Touchscreen",
+    "price": 65000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "LENOVO THINKBOOK 13S G2 ITL— i7 11th Gen, 16 / 512 GB NORMAL TOUCHSCREEN",
+    "sku": "lenovo-thinkbook-13s-g2-itl-i7-11th-16-\n512",
+    "inStock": true
+  },
+  {
+    "id": "p-LEN-THINKPAD-I5-7TH-8-256",
+    "name": "Lenovo Thinkpad 13 2nd Gen I5 7th 8gb 256ssd Non Touch",
+    "price": 28500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "LENOVO THINKPAD 13 2ND GEN I5 7TH 8GB 256SSD NON TOUCH",
+    "sku": "LEN-THINKPAD-I5-7TH-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-len-x13-i7-10th-16-512-nts",
+    "name": "Lenovo X13 — I7 10th Gen, 16 / 512 GB Nontouch",
+    "price": 41500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo X13 — i7 10th Gen, 16 / 512 GB NonTouch",
+    "sku": "len-x13-i7-10th-16-512-nts",
+    "inStock": true
+  },
+  {
+    "id": "p-len-x250-i7-5th-8-256-nts",
+    "name": "Lenovo X250 — I7 5th Gen, 8 / 256 GB Nontouch",
+    "price": 21000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo X250 — i7 5th Gen, 8 / 256 GB NonTouch",
+    "sku": "len-x250-i7-5th-8-256-nts",
+    "inStock": true
+  },
+  {
+    "id": "p-X260-I7-6TH-8-256",
+    "name": "Lenovo X260 — I7 6th Gen, 8 / 256 GB Nontouch",
+    "price": 22000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo X260 — i7 6th Gen, 8 / 256 GB Nontouch",
+    "sku": "X260-I7-6TH-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-X270-I5-6TH-8-256",
+    "name": "Lenovo X270 — I5 6th Gen, 8 / 256 GB Nontouch",
+    "price": 21000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo X270 — i5 6th Gen, 8 / 256 GB Nontouch",
+    "sku": "X270-I5-6TH-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-X270-I5-7TH-NONTOUCH",
+    "name": "Lenovo X270 — I5 7th Gen, 8 / 256 GB Nontouch",
+    "price": 22000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo X270 — i5 7th Gen, 8 / 256 GB NONTOUCH",
+    "sku": "X270-I5-7TH-NONTOUCH",
+    "inStock": true
+  },
+  {
+    "id": "p-X270-I7-8TH-NONTOUCH",
+    "name": "Lenovo X270 — I7 6th Gen, 8 / 256 GB Nontouch",
+    "price": 23500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo X270 — i7 6th Gen, 8 / 256 GB Nontouch",
+    "sku": "X270-I7-8TH-NONTOUCH",
+    "inStock": true
+  },
+  {
+    "id": "p-X270-I5-7TH-TOUCHSCREEN",
+    "name": "Lenovo X270 I5 7th 8 GB RAM 256 SSD Touchscreen",
+    "price": 23500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "LENOVO X270 I5 7TH 8 GB RAM 256 SSD TOUCHSCREEN",
+    "sku": "X270-I5-7TH-TOUCHSCREEN",
+    "inStock": true
+  },
+  {
+    "id": "p-x280-i3-8th-8-256-NT",
+    "name": "Lenovo X280 — I3 8th Gen 8 / 256 GB Nontouch",
+    "price": 22000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo X280 — i3 8th Gen 8 / 256 GB nonTouch",
+    "sku": "x280-i3-8th-8-256-NT",
+    "inStock": true
+  },
+  {
+    "id": "p-X280-I5-7TH-8-256",
+    "name": "Lenovo X280 — I5 7h Gen 8 / 256 GB Nontouch",
+    "price": 23500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo X280 — i5 7h Gen 8 / 256 GB nonTouch",
+    "sku": "X280-I5-7TH-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-x280-i5-8th-16-256tS",
+    "name": "Lenovo X280 — I5 8th Gen 16 / 256 GB Touchscreen",
+    "price": 28500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo X280 — i5 8th Gen 16 / 256 GB TOUCHSCREEN",
+    "sku": "x280-i5-8th-16-256tS",
+    "inStock": true
+  },
+  {
+    "id": "p-lenx280-i5-8th-8-256",
+    "name": "Lenovo X280 — I5 8th Gen 8 / 256 GB Nontouch",
+    "price": 24500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo X280 — i5 8th Gen 8 / 256 GB nonTouch",
+    "sku": "lenx280-i5-8th-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-x280-i5-8th-8-256-touch",
+    "name": "Lenovo X280 — I5 8th Gen 8 / 256 GB Touch Screen",
+    "price": 26000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo X280 — i5 8th Gen 8 / 256 GB Touch screen",
+    "sku": "x280-i5-8th-8-256-touch",
+    "inStock": true
+  },
+  {
+    "id": "p-lenx280-i5-8th-16-256-NON",
+    "name": "Lenovo X280 — I5 8th Gen, 16/ 256 GB Non Touch",
+    "price": 27500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo X280 — i5 8th Gen, 16/ 256 GB NON TOUCH",
+    "sku": "lenx280-i5-8th-16-256-NON",
+    "inStock": true
+  },
+  {
+    "id": "p-X280-I7-8TH-8GB-256-SSD-NONTOUCH",
+    "name": "Lenovo X280-i7-8th-8gb-256-ssd-nontouch",
+    "price": 30000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "LENOVO X280-I7-8TH-8GB-256-SSD-NONTOUCH",
+    "sku": "X280-I7-8TH-8GB-256-SSD-NONTOUCH",
+    "inStock": true
+  },
+  {
+    "id": "p-len-x390-i5-8th-8-256-nts",
+    "name": "Lenovo X390 — I5 8th Gen, 16 / 256 GB Nontouch Normal",
+    "price": 30000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo X390 — i5 8th Gen, 16 / 256 GB Nontouch NORMAL",
+    "sku": "len-x390-i5-8th-8-256-nts",
+    "inStock": true
+  },
+  {
+    "id": "p-len-x390-i7-8th-16-256-nts",
+    "name": "Lenovo X390 — I7 8th Gen, 16 / 256 GB Nontouch Normal",
+    "price": 32500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "Lenovo X390 — i7 8th Gen, 16 / 256 GB Nontouch NORMAL",
+    "sku": "len-x390-i7-8th-16-256-nts",
+    "inStock": true
+  },
+  {
+    "id": "p-LENOVO-X395-R5-16-256-NT",
+    "name": "Lenovo X395 (amd Ryzen 5, 16 GB Ram, 256 GB Ssd) 2gb GPU Non Touch",
+    "price": 36500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "LENOVO X395 (AMD Ryzen 5, 16 GB RAM, 256 GB SSD) 2GB GPU NON TOUCH",
+    "sku": "LENOVO-X395-R5-16-256-NT",
+    "inStock": true
+  },
+  {
+    "id": "p-LENO-X395-R7-16-256-NT",
+    "name": "Lenovo X395 (amd Ryzen 7, 16 GB Ram, 256 GB Ssd) 2gb GPU Non Touch",
+    "price": 39000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "LENOVO X395 (AMD Ryzen 7, 16 GB RAM, 256 GB SSD) 2GB GPU NON TOUCH",
+    "sku": "LENO-X395-R7-16-256-NT",
+    "inStock": true
+  },
+  {
+    "id": "p-LEn-YOGA9I-i7-11th-16-512-TS",
+    "name": "Lenovo Yoga 9i 14 Itl5 — I7 11th Gen, 16 / 512 GB X360 Touchscreen",
+    "price": 84500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/q4hesqszks5iiok8lnwzbd5byuk2ky489180.png",
+    "specs": "Lenovo Yoga 9i 14 ITL5 — i7 11th Gen, 16 / 512 GB x360 Touchscreen",
+    "sku": "LEn-YOGA9I-i7-11th-16-512-TS",
+    "inStock": true
+  },
+  {
+    "id": "p-yogax370-i5-7th-8-256-x360",
+    "name": "Lenovo Yoga X370 — I5 7th Gen, 8 / 256 GB X360 Touchscreen",
+    "price": 28500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/q4hesqszks5iiok8lnwzbd5byuk2ky489180.png",
+    "specs": "Lenovo Yoga x370 — i5 7th Gen, 8 / 256 GB x360 Touchscreen",
+    "sku": "yogax370-i5-7th-8-256-x360",
+    "inStock": true
+  },
+  {
+    "id": "p-YOGax370-i7-7th-8-256-x360",
+    "name": "Lenovo Yoga X370 — I7 7th Gen, 8 / 256 GB X360 Touchscreen",
+    "price": 30500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/q4hesqszks5iiok8lnwzbd5byuk2ky489180.png",
+    "specs": "Lenovo Yoga x370 — i7 7th Gen, 8 / 256 GB x360 Touchscreen",
+    "sku": "YOGax370-i7-7th-8-256-x360",
+    "inStock": true
+  },
+  {
+    "id": "p-yogax380-i5-8th-16-256-x360",
+    "name": "Lenovo Yoga X380 — I5 8th Gen, 16 / 256 GB X360 Touchscreen",
+    "price": 34000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/q4hesqszks5iiok8lnwzbd5byuk2ky489180.png",
+    "specs": "Lenovo Yoga x380 — i5 8th Gen, 16 / 256 GB x360 Touchscreen",
+    "sku": "yogax380-i5-8th-16-256-x360",
+    "inStock": true
+  },
+  {
+    "id": "p-yogax380-i5-8th-8-256-x360",
+    "name": "Lenovo Yoga X380 — I5 8th Gen, 8 / 256 GB X360 Touchscreen",
+    "price": 32500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/q4hesqszks5iiok8lnwzbd5byuk2ky489180.png",
+    "specs": "Lenovo Yoga x380 — i5 8th Gen, 8 / 256 GB x360 Touchscreen",
+    "sku": "yogax380-i5-8th-8-256-x360",
+    "inStock": true
+  },
+  {
+    "id": "p-yogax390-i5-8th-16-256",
+    "name": "Lenovo Yoga X390 — I5 8th Gen, 16 / 256 GB Touchscreen",
+    "price": 35000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/q4hesqszks5iiok8lnwzbd5byuk2ky489180.png",
+    "specs": "Lenovo Yoga X390 — i5 8th Gen, 16 / 256 GB Touchscreen",
+    "sku": "yogax390-i5-8th-16-256",
+    "inStock": true
+  },
+  {
+    "id": "p-len-x390-i5-8th-8-256-ts",
+    "name": "Lenovo Yoga X390 — I5 8th Gen, 8 / 256 GB Touchscreen",
+    "price": 34000,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/q4hesqszks5iiok8lnwzbd5byuk2ky489180.png",
+    "specs": "Lenovo Yoga X390 — i5 8th Gen, 8 / 256 GB Touchscreen",
+    "sku": "len-x390-i5-8th-8-256-ts",
+    "inStock": true
+  },
+  {
+    "id": "p-yogax390-i7-8th-16-512-x360-touch",
+    "name": "Lenovo Yoga X390 — I7 8th Gen, 16 / 512 GB X360 Touchscreen",
+    "price": 45500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/q4hesqszks5iiok8lnwzbd5byuk2ky489180.png",
+    "specs": "Lenovo Yoga x390 — i7 8th Gen, 16 / 512 GB x360 Touchscreen",
+    "sku": "yogax390-i7-8th-16-512-x360-touch",
+    "inStock": true
+  },
+  {
+    "id": "p-LENOVO-11E-CELERON-8-128-NONTOUCH",
+    "name": "Lenovo-11e-celeron-8-128-nontouch",
+    "price": 14500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/fippvtjl3kk7cihb24upmh3quryf05891581.png",
+    "specs": "LENOVO-11E-CELERON-8-128-NONTOUCH",
+    "sku": "LENOVO-11E-CELERON-8-128-NONTOUCH",
+    "inStock": true
+  },
+  {
+    "id": "p-YOGA-X260-I5-6TH-8-256",
+    "name": "Lenovoyoga X260 I5 6th 8gb 256ssd X360 Touchscreen",
+    "price": 27500,
+    "category": "laptop touchscreen lenovo",
+    "img": "https://p2-ofp.static.pub//fes/cms/2024/11/22/q4hesqszks5iiok8lnwzbd5byuk2ky489180.png",
+    "specs": "lenovoYOGA X260 i5 6th 8gb 256ssd X360 TOUCHSCREEN",
+    "sku": "YOGA-X260-I5-6TH-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-2017air13-i5-8-256",
+    "name": "Macbook Air 14' I5 2017 8 GB RAM 256 GB",
+    "price": 30000,
+    "category": "laptop apple",
+    "img": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=90",
+    "specs": "MACBOOK AIR 14' i5 2017 8 GB RAM 256 GB",
+    "sku": "2017air13-i5-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-2019pro15-i7-32-512-4GPU",
+    "name": "Macbook Pro 15' I7 2019 32 GB RAM 512 GB 4gpu",
+    "price": 84500,
+    "category": "laptop apple",
+    "img": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-select-202301?wid=904&hei=840&fmt=jpeg&qlt=90",
+    "specs": "MACBOOK PRO 15' i7 2019 32 GB RAM 512 GB 4GPU",
+    "sku": "2019pro15-i7-32-512-4GPU",
+    "inStock": true
+  },
+  {
+    "id": "p-MACKBOOKPR0-2020-M1-8-512",
+    "name": "Macbook Pro M1 13' 2020 8 GB RAM 512gb",
+    "price": 110500,
+    "category": "laptop apple",
+    "img": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-select-202301?wid=904&hei=840&fmt=jpeg&qlt=90",
+    "specs": "MACBOOK PRO M1 13' 2020 8 GB RAM 512GB",
+    "sku": "MACKBOOKPR0-2020-M1-8-512",
+    "inStock": true
+  },
+  {
+    "id": "p-2014air15-i5-8-256",
+    "name": "Mackbook Air 2014 I7 8/256",
+    "price": 27500,
+    "category": "laptop",
+    "img": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=90",
+    "specs": "MACKBOOK AIR 2014 I7 8/256",
+    "sku": "2014air15-i5-8-256",
+    "inStock": true
+  },
+  {
+    "id": "p-2015pro13-i7-16-256",
+    "name": "Mackbook Pro 13 2015-i7-16-256",
+    "price": 39000,
+    "category": "laptop",
+    "img": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-select-202301?wid=904&hei=840&fmt=jpeg&qlt=90",
+    "specs": "MACKBOOK PRO 13 2015-i7-16-256",
+    "sku": "2015pro13-i7-16-256",
+    "inStock": true
+  },
+  {
+    "id": "p-surface-pro",
+    "name": "Microsoft Surface Pro Touchscreen Detachable I5 7th Gen 8/256",
+    "price": 45500,
+    "category": "laptop touchscreen tablet",
+    "img": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4OXiy?ver=31c5",
+    "specs": "MICROSOFT SURFACE PRO Touchscreen Detachable i5 7th Gen 8/256",
+    "sku": "surface-pro",
+    "inStock": true
+  },
+  {
+    "id": "p-tb-gt100-ultra-16-512",
+    "name": "Tablet Gt100 Ultra 16/512",
+    "price": 13000,
+    "category": "laptop tablet",
+    "img": "https://p1-ofp.static.pub//fes/cms/2024/11/22/irxsfb9bo2w04hcz0fzxvs5w3r4ji9042825.png",
+    "specs": "TABLET GT100 ULTRA 16/512",
+    "sku": "tb-gt100-ultra-16-512",
+    "inStock": true
+  },
+  {
+    "id": "p-tb-gt40-ultra-16-512",
+    "name": "Tablet Gt40 Ultra 16/512",
+    "price": 12500,
+    "category": "laptop tablet",
+    "img": "https://p1-ofp.static.pub//fes/cms/2024/11/22/irxsfb9bo2w04hcz0fzxvs5w3r4ji9042825.png",
+    "specs": "TABLET GT40 ULTRA 16/512",
+    "sku": "tb-gt40-ultra-16-512",
+    "inStock": true
+  },
+  {
+    "id": "p-19-8-512tablet-m",
+    "name": "Tablet M19 8/512",
+    "price": 13000,
+    "category": "laptop tablet",
+    "img": "https://p1-ofp.static.pub//fes/cms/2024/11/22/irxsfb9bo2w04hcz0fzxvs5w3r4ji9042825.png",
+    "specs": "TABLET M19 8/512",
+    "sku": "19-8-512tablet-m",
+    "inStock": true
+  },
+  {
+    "id": "p-tb-m190-12-512",
+    "name": "Tablet M190 12/512",
+    "price": 13000,
+    "category": "laptop tablet",
+    "img": "https://p1-ofp.static.pub//fes/cms/2024/11/22/irxsfb9bo2w04hcz0fzxvs5w3r4ji9042825.png",
+    "specs": "TABLET M190 12/512",
+    "sku": "tb-m190-12-512",
+    "inStock": true
+  },
+  {
+    "id": "p-tb-m42-8-512",
+    "name": "Tablet M42 8/512",
+    "price": 13000,
+    "category": "laptop tablet",
+    "img": "https://p1-ofp.static.pub//fes/cms/2024/11/22/irxsfb9bo2w04hcz0fzxvs5w3r4ji9042825.png",
+    "specs": "TABLET M42 8/512",
+    "sku": "tb-m42-8-512",
+    "inStock": true
+  },
+  {
+    "id": "p-tb-m92-16-1tb",
+    "name": "Tablet M92 16/1tb",
+    "price": 14500,
+    "category": "laptop tablet",
+    "img": "https://p1-ofp.static.pub//fes/cms/2024/11/22/irxsfb9bo2w04hcz0fzxvs5w3r4ji9042825.png",
+    "specs": "TABLET M92 16/1TB",
+    "sku": "tb-m92-16-1tb",
+    "inStock": true
   }
 ];;
