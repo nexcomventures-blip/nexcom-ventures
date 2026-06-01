@@ -208,13 +208,13 @@
         <div class="content-width h-14 flex items-center justify-between px-4">
             <a href="#" class="logo">
                 <div class="logo-box">S</div>
-                <div class="logo-text">
+                <div class="logo-text hidden sm:block">
                     <span class="logo-top">SOKO</span>
                     <span class="logo-bottom">MPYA</span>
                 </div>
             </a>
-            <div class="flex items-center gap-2">
-                <div id="authNav" class="flex items-center gap-2">
+            <div class="flex items-center gap-1 sm:gap-2">
+                <div id="authNav" class="flex items-center gap-1 sm:gap-2">
                     <button onclick="openAuth('login')" class="text-[10px] font-black uppercase text-slate-500 px-2">Sign In</button>
                     <button onclick="postAd()" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide">Post Ad</button>
                 </div>
@@ -277,9 +277,9 @@
         <!-- Price Tiers -->
         <div class="flex items-center gap-2 mb-2 overflow-x-auto no-scrollbar py-2">
             <button onclick="setPriceTier('all')" id="tier-all" class="tier-btn active">All Prices</button>
-            <button onclick="setPriceTier('budget')" id="tier-budget" class="tier-btn">Budget (<30k)</button>
-            <button onclick="setPriceTier('value')" id="tier-value" class="tier-btn">Value (30-80k)</button>
-            <button onclick="setPriceTier('premium')" id="tier-premium" class="tier-btn">Premium (80k+)</button>
+            <button onclick="setPriceTier('budget')" id="tier-budget" class="tier-btn">Budget</button>
+            <button onclick="setPriceTier('value')" id="tier-value" class="tier-btn">Value</button>
+            <button onclick="setPriceTier('premium')" id="tier-premium" class="tier-btn">Premium</button>
         </div>
 
         <div class="flex items-center justify-between py-4">
@@ -875,6 +875,10 @@
     </div>
 
     <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const shopParam = urlParams.get('shop') || urlParams.get('seller');
+        let activeShop = shopParam ? decodeURIComponent(shopParam) : null;
+
         const CATEGORIES = [
             { id: 'all', name: 'All Items' }, 
             { id: 'laptops', name: 'Laptops' }, 
@@ -909,245 +913,7 @@
             { id: 'other', name: 'Others' }
         ];
 
-        let ADS = [
-{"id": "nx-new-hp-1", "cat": "laptops", "name": "HP EliteBook 840 G10", "price": "KSh 224,000", "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800", "specs": "Intel Core i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 BRAND NEW", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-{"id": "nx-new-hp-2", "cat": "laptops", "name": "HP ZBook Firefly G10", "price": "KSh 235,000", "img": "https://images.unsplash.com/photo-1544006659-f0b21f04cb1d?q=80&w=800", "specs": "i7-1355U \u2022 16GB RAM \u2022 RTX A500 4GB \u2022 BRAND NEW", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-{"id": "nx-new-dell-1", "cat": "laptops", "name": "Dell Latitude 3450 i7", "price": "KSh 198,000", "img": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=800", "specs": "i7-1355U \u2022 16GB RAM \u2022 512GB SSD \u2022 BRAND NEW", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-feat-1", "cat": "laptops", "name": "Dell XPS 13 9330", "price": "KSh 135,000", "img": "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=800", "specs": "Intel Core i7 13th Gen \u2022 16GB RAM \u2022 512GB SSD", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-feat-2", "cat": "laptops", "name": "MacBook Pro 13 M2", "price": "KSh 140,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "Apple M2 Chip \u2022 8GB RAM \u2022 512GB SSD", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": true, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "vh-toyota", "cat": "vehicles", "name": "Toyota Axio 2018", "price": "KSh 1,650,000", "img": "https://images.unsplash.com/photo-1590362891991-f776e747a588?q=80&w=800", "specs": "1500cc \u2022 Silver \u2022 Low Mileage \u2022 Foreign Used", "badge": "Verified", "isBoosted": true, "onFlashSale": false, "seller": "Auto World", "loc": "Mombasa Rd", "phone": "254700000000"},
-            {"id": "land-kajiado", "cat": "land", "name": "50x100 Plot in Kajiado", "price": "KSh 450,000", "img": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800", "specs": "Ready Title Deed \u2022 Water & Electricity Available", "badge": "Title Deed", "isBoosted": false, "onFlashSale": false, "seller": "Prime Lands", "loc": "Kajiado", "phone": "254711111111"},
-            {"id": "fs-suit", "cat": "fashion-men", "name": "Slim Fit Official Suit", "price": "KSh 8,500", "img": "https://images.unsplash.com/photo-1594932224010-74f43a29612c?q=80&w=800", "specs": "Navy Blue \u2022 All Sizes \u2022 Premium Material", "badge": "Hot", "isBoosted": false, "onFlashSale": false, "seller": "Sartorial", "loc": "Nairobi CBD", "phone": "254722222222"},
-            {"id": "vh-bike", "cat": "bikes", "name": "Bajaj Boxer 150", "price": "KSh 145,000", "img": "https://images.unsplash.com/photo-1558981403-c5f91cbba527?q=80&w=800", "specs": "Brand New \u2022 Black \u2022 Fuel Efficient", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Boda Central", "loc": "Nairobi", "phone": "254733333333"},
-            {"id": "hp-fridge", "cat": "appliances", "name": "Samsung Double Door Fridge", "price": "KSh 85,000", "img": "https://images.unsplash.com/photo-1571175432244-904599de7f1f?q=80&w=800", "specs": "350L \u2022 Silver \u2022 Digital Inverter \u2022 10 Year Warranty", "badge": "Premium", "isBoosted": true, "onFlashSale": false, "seller": "Global Electronics", "loc": "Nairobi CBD", "phone": "254744444444"},
-            {"id": "el-iphone15", "cat": "phones", "name": "iPhone 15 Pro Max 256GB", "price": "KSh 185,000", "img": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=800", "specs": "Natural Titanium \u2022 Sealed Box \u2022 Local Warranty", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "iStore KE", "loc": "Westlands", "phone": "254755555555"},
-            {"id": "el-budget-tecno", "cat": "phones", "name": "Tecno Pop 7", "price": "KSh 12,500", "img": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=800", "specs": "2GB RAM \u2022 64GB ROM \u2022 5000mAh", "badge": "Budget", "isBoosted": false, "onFlashSale": false, "seller": "Mobile Hub", "loc": "River Road", "phone": "254766666666"},
-            {"id": "nx-feat-3", "cat": "laptops", "name": "ThinkPad X1 Carbon Gen 10", "price": "KSh 91,000", "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800", "specs": "i7 12th Gen \u2022 16GB RAM \u2022 512GB SSD", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-feat-4", "cat": "laptops", "name": "HP EliteBook 840 G8", "price": "KSh 63,000", "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800", "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": true, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-bud-1", "cat": "laptops", "name": "Lenovo 11E Core M5", "price": "KSh 13,000", "img": "https://images.unsplash.com/photo-1525547718571-03b05761ad91?q=80&w=800", "specs": "8GB RAM \u2022 128GB SSD \u2022 11.6\"", "badge": "Refurbished", "isBoosted": false, "onFlashSale": true, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-bud-2", "cat": "laptops", "name": "Lenovo 11E Celeron", "price": "KSh 10,000", "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800", "specs": "4GB RAM \u2022 128GB SSD \u2022 Rugged", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-bud-3", "cat": "laptops", "name": "Lenovo Yoga N23S", "price": "KSh 12,500", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e520b?q=80&w=800", "specs": "Celeron \u2022 4GB RAM \u2022 128GB SSD \u2022 Touch", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-d-1", "cat": "laptops", "name": "Dell Latitude 5400 i5", "price": "KSh 24,000", "img": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800", "specs": "8th Gen \u2022 8GB \u2022 256GB SSD", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-d-2", "cat": "laptops", "name": "Dell Precision 5550 i7", "price": "KSh 70,000", "img": "https://images.unsplash.com/photo-1661961111184-11317b40adb2?q=80&w=800", "specs": "10th Gen \u2022 16GB \u2022 512GB \u2022 4GB Nvidia", "badge": "Foreign Used", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-d-3", "cat": "laptops", "name": "Dell XPS 13 9310 i7", "price": "KSh 65,000", "img": "https://images.unsplash.com/photo-1661961112134-fbce0fdf3d99?q=80&w=800", "specs": "11th Gen \u2022 16GB \u2022 512GB \u2022 Touch", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-h-1", "cat": "laptops", "name": "HP ProBook 640 G5 i5", "price": "KSh 25,800", "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800", "specs": "8th Gen \u2022 8GB \u2022 256GB SSD", "badge": "Ex-UK", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-h-2", "cat": "laptops", "name": "HP EliteBook 840 G6 i5", "price": "KSh 36,500", "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800", "specs": "8th Gen \u2022 16GB \u2022 256GB SSD", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-l-1", "cat": "laptops", "name": "ThinkPad T490s i5", "price": "KSh 25,000", "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800", "specs": "8th Gen \u2022 8GB \u2022 256GB SSD", "badge": "Ex-UK", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-l-2", "cat": "laptops", "name": "ThinkPad X1 Yoga i7", "price": "KSh 40,000", "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800", "specs": "8th Gen \u2022 16GB \u2022 512GB \u2022 Touch", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-l-new-1", "cat": "laptops", "name": "Lenovo IdeaPad Slim 3", "price": "KSh 48,500", "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800", "specs": "Ryzen 5 \u2022 8GB RAM \u2022 512GB SSD", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-l-new-2", "cat": "laptops", "name": "ThinkPad E14 Gen 2", "price": "KSh 38,000", "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800", "specs": "i5 11th Gen \u2022 8GB RAM \u2022 256GB SSD", "badge": "Ex-UK", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-l-new-3", "cat": "laptops", "name": "Lenovo ThinkBook 15", "price": "KSh 55,000", "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800", "specs": "i7 11th Gen \u2022 16GB RAM \u2022 512GB SSD", "badge": "Ex-UK", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-l-new-4", "cat": "laptops", "name": "ThinkPad L13 Yoga", "price": "KSh 32,000", "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800", "specs": "i5 10th Gen \u2022 8GB RAM \u2022 256GB SSD \u2022 Touch", "badge": "Ex-UK", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-s-1", "cat": "laptops", "name": "PowerEdge T150 Server", "price": "KSh 145,000", "img": "https://images.unsplash.com/photo-1558494949-ef010978911e?q=80&w=800", "specs": "Intel Xeon \u2022 16GB ECC \u2022 2TB HDD", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-s-2", "cat": "laptops", "name": "ProLiant DL380 Gen10", "price": "KSh 280,000", "img": "https://images.unsplash.com/photo-1594065296416-aed7ae708d58?q=80&w=800", "specs": "Dual Xeon \u2022 64GB RAM \u2022 Rack Server", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-m-1", "cat": "laptops", "name": "MacBook Air M1", "price": "KSh 85,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "Apple M1 Chip \u2022 8GB RAM \u2022 256GB SSD \u2022 13.3-inch Retina", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-m-2", "cat": "laptops", "name": "MacBook Pro 14 M3", "price": "KSh 285,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "Apple M3 Chip \u2022 16GB RAM \u2022 512GB SSD \u2022 Liquid Retina XDR", "badge": "Ex-UK", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-100", "cat": "laptops", "name": "macbook pro 16 2019 i9 64/1tb with 8 graphics", "price": "KSh 133,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 16 2019 i9 64/1tb with 8 graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-101", "cat": "laptops", "name": "macbook pro 16 i9 32/2tb with 8gb graphics", "price": "KSh 133,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 16 i9 32/2tb with 8gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-102", "cat": "laptops", "name": "macbook pro 16 2019 i9 32/1tb with 4gn graphics", "price": "KSh 119,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 16 2019 i9 32/1tb with 4gn graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-103", "cat": "laptops", "name": "macbook pro 16 2019 i7 32/512gb", "price": "KSh 98,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 16 2019 i7 32/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-104", "cat": "laptops", "name": "macbook pro 15 2019 i7 16/512gb 4gb graphics", "price": "KSh 88,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 15 2019 i7 16/512gb 4gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-105", "cat": "laptops", "name": "macbook pro 15 2018 i7 16/512gb 4gb graphics", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 15 2018 i7 16/512gb 4gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-106", "cat": "laptops", "name": "macbook pro 15 2017 i7 16/512gb 4gb graphics", "price": "KSh 73,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 15 2017 i7 16/512gb 4gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-107", "cat": "laptops", "name": "macbook pro 15 2017 i7 16/512gb 2gb graphics", "price": "KSh 70,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 15 2017 i7 16/512gb 2gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-108", "cat": "laptops", "name": "macbook pro 15 2015 i7 16/512gb 2gb graphics", "price": "KSh 49,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 15 2015 i7 16/512gb 2gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-109", "cat": "laptops", "name": "macbook pro m1 13 2020 16/512gb", "price": "KSh 140,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro m1 13 2020 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-110", "cat": "laptops", "name": "macbook pro m1 13 2020 8/256gb", "price": "KSh 105,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro m1 13 2020 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-111", "cat": "laptops", "name": "macbook pro 13 i7 2020 16/1tb", "price": "KSh 91,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 i7 2020 16/1tb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-112", "cat": "laptops", "name": "macbook pro 13 i7 2020 32/512gb", "price": "KSh 91,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 i7 2020 32/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-113", "cat": "laptops", "name": "macbook pro 13 i7 2020 16/512gb", "price": "KSh 84,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 i7 2020 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-114", "cat": "laptops", "name": "macbook pro 13 2019 i7 16/1tb", "price": "KSh 98,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2019 i7 16/1tb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-115", "cat": "laptops", "name": "macbook pro 13 2019 i7 16/512gb", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2019 i7 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-116", "cat": "laptops", "name": "macbook pro 13 2019 i7 16/256gb", "price": "KSh 70,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2019 i7 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-117", "cat": "laptops", "name": "macbook pro 13 2019 i5 16/256gb", "price": "KSh 63,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2019 i5 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-118", "cat": "laptops", "name": "macbook pro 13 2019 i5 8/256gb", "price": "KSh 59,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2019 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-119", "cat": "laptops", "name": "macbook pro 13 2018 i7 16/256gb", "price": "KSh 67,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2018 i7 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-120", "cat": "laptops", "name": "macbook pro 13 2017 i7 16/1tb", "price": "KSh 70,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2017 i7 16/1tb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-121", "cat": "laptops", "name": "macbook pro 13 2017 i7 16/512gb", "price": "KSh 63,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2017 i7 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-122", "cat": "laptops", "name": "macbook pro 13 2017 i7 16/256gb", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2017 i7 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-123", "cat": "laptops", "name": "macbook pro 13 2017 i5 8/512gb", "price": "KSh 53,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2017 i5 8/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-124", "cat": "laptops", "name": "macbook pro 13 2017 i5 8/256gb", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2017 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-125", "cat": "laptops", "name": "macbook pro 13 2015 i7 8/256gb", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2015 i7 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-126", "cat": "laptops", "name": "macbook pro 13 2015 i5 16/512gb", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2015 i5 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-127", "cat": "laptops", "name": "macbook pro 13 2015 i5 16/256gb", "price": "KSh 38,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2015 i5 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-128", "cat": "laptops", "name": "macbook pro 13 2015 i5 8/256gb", "price": "KSh 35,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2015 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-129", "cat": "laptops", "name": "macbook pro 13 2014 i5 8/256gb", "price": "KSh 32,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2014 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-130", "cat": "laptops", "name": "macbook pro 13 2013 i5 8/256gb", "price": "KSh 29,500", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2013 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-131", "cat": "laptops", "name": "macbook pro 13 2013 i7 8/256gb", "price": "KSh 35,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2013 i7 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-132", "cat": "laptops", "name": "macbook pro 13 2012 i7 8/256gb", "price": "KSh 26,500", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2012 i7 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-133", "cat": "laptops", "name": "macbook pro 13 2012 i5 8/256gb", "price": "KSh 24,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2012 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-134", "cat": "laptops", "name": "macbook pro 13 2011 i5 8/256gb", "price": "KSh 21,000", "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800", "specs": "macbook pro 13 2011 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-135", "cat": "laptops", "name": "macbook air laptops macbook air m1 2022 8/512gb", "price": "KSh 119,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "macbook air laptops macbook air m1 2022 8/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-136", "cat": "laptops", "name": "macbook air m1 2022 8/256gb", "price": "KSh 112,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "macbook air m1 2022 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-137", "cat": "laptops", "name": "macbook air m1 2020 8/256gb", "price": "KSh 84,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "macbook air m1 2020 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-138", "cat": "laptops", "name": "macbook air 13 2019 i5 16/256gb", "price": "KSh 59,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "macbook air 13 2019 i5 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-139", "cat": "laptops", "name": "macbook air 13 2019 i58/256gb", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "macbook air 13 2019 i58/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-140", "cat": "laptops", "name": "macbook air 13 2018 i5 8/256gb", "price": "KSh 53,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "macbook air 13 2018 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-141", "cat": "laptops", "name": "macbook air 13 2017 i7 8/256gb", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "macbook air 13 2017 i7 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-142", "cat": "laptops", "name": "macbook air 13 2017 i5 8/256gb", "price": "KSh 35,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "macbook air 13 2017 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-143", "cat": "laptops", "name": "MacBook Air 13 2015 i5 8/256", "price": "KSh 31,000", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "MacBook Air 13 2015 i5 8/256", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-144", "cat": "laptops", "name": "MacBook Air 13 2014 i7 8/256", "price": "KSh 29,500", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "MacBook Air 13 2014 i7 8/256", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-145", "cat": "laptops", "name": "MacBook Air 13 2013 i5 8/128", "price": "KSh 26,500", "img": "https://images.unsplash.com/photo-1611186871348-b1ec696e523f?q=80&w=800", "specs": "MacBook Air 13 2013 i5 8/128", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-mb-146", "cat": "laptops", "name": "sam 930 i7 11th 16/512gb", "price": "KSh 84,000", "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=800", "specs": "sam 930 i7 11th 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-500", "cat": "laptops", "name": "hp spectre x360 convertible 15t -df100 i7 10th with 2gb graphics", "price": "KSh 119,000", "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800", "specs": "hp spectre x360 convertible 15t -df100 i7 10th with 2gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-501", "cat": "laptops", "name": "hp spectre x360 convertible 15-df0xxx i7 8th 16/512gb with 2gb graphics", "price": "KSh 84,000", "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800", "specs": "hp spectre x360 convertible 15-df0xxx i7 8th 16/512gb with 2gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-502", "cat": "laptops", "name": "hp. spectre x360 convertible 15-bl0xx i7 7th 16/512gb with 2gb graphics", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?q=80&w=800", "specs": "hp. spectre x360 convertible 15-bl0xx i7 7th 16/512gb with 2gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-503", "cat": "laptops", "name": "hp envy x360 convertible 15m i7 8th 16/512gb", "price": "KSh 70,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp envy x360 convertible 15m i7 8th 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-504", "cat": "laptops", "name": "hp zbook studio 15 g7 mobile workstation i7 10th 32/512gb with 4gb graphics", "price": "KSh 105,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook studio 15 g7 mobile workstation i7 10th 32/512gb with 4gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-505", "cat": "laptops", "name": "hp zbook 15 studio g5 i7 9th 16/512gb with 4gb nvidia Quadro p1000", "price": "KSh 84,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 15 studio g5 i7 9th 16/512gb with 4gb nvidia Quadro p1000", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-506", "cat": "laptops", "name": "hp zbook 15 studio i7 8th 16/512gb with 4gb nvidia Quadro p1000", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 15 studio i7 8th 16/512gb with 4gb nvidia Quadro p1000", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-507", "cat": "laptops", "name": "hp zbook 15 g5 i7 8th 16/512gb with 4gb nvidia Quadro p1000", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 15 g5 i7 8th 16/512gb with 4gb nvidia Quadro p1000", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-508", "cat": "laptops", "name": "hp zbook 15u g6 i7 8th 16/512gb with 4gb AMD Radeon pro wx3200 graphics", "price": "KSh 70,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 15u g6 i7 8th 16/512gb with 4gb AMD Radeon pro wx3200 graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-509", "cat": "laptops", "name": "hp zbook 15 studio g5 i7 8th 16/512gb with 4gb nvidia quadro p1000", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 15 studio g5 i7 8th 16/512gb with 4gb nvidia quadro p1000", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-510", "cat": "laptops", "name": "hp zbook g4 i7 7th 16/512gb with 4gb nvidia quadro m1200", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook g4 i7 7th 16/512gb with 4gb nvidia quadro m1200", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-511", "cat": "laptops", "name": "hp zbook 15 g3 i7 6th 16/512gb with 4gb nvidia Quadro m1200", "price": "KSh 49,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 15 g3 i7 6th 16/512gb with 4gb nvidia Quadro m1200", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-512", "cat": "laptops", "name": "hp zbook 14 firefly g7 mobile workstation 32/512gb with 4gb nvidia graphics touchscreen", "price": "KSh 98,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 14 firefly g7 mobile workstation 32/512gb with 4gb nvidia graphics touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-513", "cat": "laptops", "name": "hp zbook 14u g6 i7 8th 16/512gb with 4gb AMD Radeon pro wx3200 graphics", "price": "KSh 63,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 14u g6 i7 8th 16/512gb with 4gb AMD Radeon pro wx3200 graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-514", "cat": "laptops", "name": "hp zbook 14u i7 8/256gb with 4gb graphics", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 14u i7 8/256gb with 4gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-515", "cat": "laptops", "name": "hp zbook 14u g5 i7 8th 16/512gb with 2gb AMD Radeon pro wx 3100", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp zbook 14u g5 i7 8th 16/512gb with 2gb AMD Radeon pro wx 3100", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-516", "cat": "laptops", "name": "hp 1040 g8 i7 11th 16/512gb", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1040 g8 i7 11th 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-517", "cat": "laptops", "name": "hp 1040 g7 i7 10th 16/512gb x360 touchscreen", "price": "KSh 70,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1040 g7 i7 10th 16/512gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-518", "cat": "laptops", "name": "hp 1040 g6 i7 8th 16/52gb x360 touchscreen", "price": "KSh 60,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1040 g6 i7 8th 16/52gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-519", "cat": "laptops", "name": "hp 1040 g5 i5 8th 16/512gb x360 touchscreen", "price": "KSh 50,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1040 g5 i5 8th 16/512gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-520", "cat": "laptops", "name": "hp 1040 g5 i5 8/256gb x360 touchscreen", "price": "KSh 46,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1040 g5 i5 8/256gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-521", "cat": "laptops", "name": "hp 1040 g3 i5 6th 16/256gb", "price": "KSh 33,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1040 g3 i5 6th 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-522", "cat": "laptops", "name": "hp 1040 g3 i5 6th 8/256gb", "price": "KSh 31,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1040 g3 i5 6th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-523", "cat": "laptops", "name": "hp 1040 g3 i7 6th 16/512gb", "price": "KSh 35,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1040 g3 i7 6th 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-524", "cat": "laptops", "name": "hp 1030 g8 i7 11th 16/512gb x360 touchscreen", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g8 i7 11th 16/512gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-525", "cat": "laptops", "name": "hp 1030 g8 i5 11th 16/512gb x360 touchscreen", "price": "KSh 70,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g8 i5 11th 16/512gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-526", "cat": "laptops", "name": "hp 1030 g3 i7 16/512gb", "price": "KSh 60,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g3 i7 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-527", "cat": "laptops", "name": "hp 1030 g3 i7 8th 16/256gb", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g3 i7 8th 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-528", "cat": "laptops", "name": "hp 1030 g3 i7 8th 8/256gb", "price": "KSh 49,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g3 i7 8th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-529", "cat": "laptops", "name": "hp 1030 g3 i5 8th 16/512gb", "price": "KSh 50,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g3 i5 8th 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-530", "cat": "laptops", "name": "hp 1030 g3 i5 8/256gb", "price": "KSh 46,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g3 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-531", "cat": "laptops", "name": "hp 1030 g2 i7 7th 8/256gb", "price": "KSh 47,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g2 i7 7th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-532", "cat": "laptops", "name": "hp 1030 g2 i5 16/256gb", "price": "KSh 46,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g2 i5 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-533", "cat": "laptops", "name": "hp 1030 g2 i5 7th 8/256gb", "price": "KSh 43,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1030 g2 i5 7th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-534", "cat": "laptops", "name": "hp 1020 g2 i5 7th 16/512gb x360 touchscreen", "price": "KSh 49,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1020 g2 i5 7th 16/512gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-535", "cat": "laptops", "name": "hp 1020 g2 i5 7th 8/256gb touchscreen", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 1020 g2 i5 7th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-536", "cat": "laptops", "name": "hp elite x2 g4 i7 8th touchscreen", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp elite x2 g4 i7 8th touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-537", "cat": "laptops", "name": "hp elite x2 g2 i5 7th 16/256gb", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp elite x2 g2 i5 7th 16/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-538", "cat": "laptops", "name": "hp 840 g10 i7 13th. 16/512gb", "price": "KSh 84,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g10 i7 13th. 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-539", "cat": "laptops", "name": "hp 840 g9 i7 12th 16/512gb", "price": "KSh 77,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g9 i7 12th 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-540", "cat": "laptops", "name": "hp 840 g8 i5 11th 8/256gb touchscreen", "price": "KSh 49,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g8 i5 11th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-541", "cat": "laptops", "name": "hp 840 g8 i5 11th 8/256gb", "price": "KSh 46,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g8 i5 11th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-542", "cat": "laptops", "name": "hp 840 g7 i7 10th 8/256gb touchscreen", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g7 i7 10th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-543", "cat": "laptops", "name": "hp 840 g7 i5 10th 8/256gb touchscreen", "price": "KSh 47,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g7 i5 10th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-544", "cat": "laptops", "name": "hp 840 g7 i5 10th 8/256gb", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g7 i5 10th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-545", "cat": "laptops", "name": "hp 840 g5 i7 8th 8/256gb touchscreen", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g5 i7 8th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-546", "cat": "laptops", "name": "hp 840 g5 i7 8th 8/256gb", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g5 i7 8th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-547", "cat": "laptops", "name": "hp 840 g5 i5 8th 8/256gb touchscreen", "price": "KSh 39,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g5 i5 8th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-548", "cat": "laptops", "name": "hp 840 g5 i5 7th 8/256gb touchscreen", "price": "KSh 38,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g5 i5 7th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-549", "cat": "laptops", "name": "hp 840 g5 i5 8th 8/256gb", "price": "KSh 36,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g5 i5 8th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-550", "cat": "laptops", "name": "hp 840 g5 i5 7th 8/256gb", "price": "KSh 35,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g5 i5 7th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-551", "cat": "laptops", "name": "hp 840 g2 i5 8/500gb", "price": "KSh 20,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g2 i5 8/500gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-552", "cat": "laptops", "name": "hp 840 g1 i7 8/256gb", "price": "KSh 23,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 840 g1 i7 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-553", "cat": "laptops", "name": "hp 830 g8 i7 11th 32/512gb x360 touchscreen", "price": "KSh 80,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g8 i7 11th 32/512gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-554", "cat": "laptops", "name": "hp 830 g8 i7 11th 16/512gb x360 touchscreen", "price": "KSh 74,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g8 i7 11th 16/512gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-555", "cat": "laptops", "name": "hp 830 g8 i5 11th 16/256gb x360 touchscreen", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g8 i5 11th 16/256gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-556", "cat": "laptops", "name": "hp 830 g8 i5 11th 8/256gb x360 touchscreen", "price": "KSh 53,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g8 i5 11th 8/256gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-557", "cat": "laptops", "name": "hp 830 g8 i7 11th 8/256gb touchscreen", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g8 i7 11th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-558", "cat": "laptops", "name": "hp 830 g8 i5 11th 8/256gb touchscreen", "price": "KSh 47,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g8 i5 11th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-559", "cat": "laptops", "name": "hp 830 g8 i5 11th 8/256gb", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g8 i5 11th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-560", "cat": "laptops", "name": "hp 830 g7 i7 8/256gb touchscreen", "price": "KSh 53,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g7 i7 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-561", "cat": "laptops", "name": "hp 830 g7 i7 10th 8/256gb", "price": "KSh 46,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g7 i7 10th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-562", "cat": "laptops", "name": "hp 830 g7 i5 10th 8/256gb touchscreen", "price": "KSh 46,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g7 i5 10th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-563", "cat": "laptops", "name": "hp 830 g7 i5 8/256gb", "price": "KSh 43,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g7 i5 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-564", "cat": "laptops", "name": "hp 830 g6 i7 8th 16/512gb touchscreen", "price": "KSh 50,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g6 i7 8th 16/512gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-565", "cat": "laptops", "name": "hp 830 g5 i7 8th 8/256gb", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g5 i7 8th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-566", "cat": "laptops", "name": "hp 830 g5 i7 8th 8/256gb touchscreen", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g5 i7 8th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-567", "cat": "laptops", "name": "hp 830 g6 i5 8/256gb touchscreen", "price": "KSh 36,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g6 i5 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-568", "cat": "laptops", "name": "hp 830 g5 i5 8th 8/256gb", "price": "KSh 35,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g5 i5 8th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-569", "cat": "laptops", "name": "hp 830 g7 i7 10th 8/256gb x360 touchscreen", "price": "KSh 52,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g7 i7 10th 8/256gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-570", "cat": "laptops", "name": "hp 830 g6 i7 8th 8/256gb x360 touchscreen", "price": "KSh 50,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g6 i7 8th 8/256gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-571", "cat": "laptops", "name": "hp 830 g6 i5 8th 8/256gb x360 touchscreen", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 830 g6 i5 8th 8/256gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-572", "cat": "laptops", "name": "hp 450 g8 i5 11th 8/256gb", "price": "KSh 49,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 450 g8 i5 11th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-573", "cat": "laptops", "name": "hp 850 g8 i5 11th 8/256gb touchscreen", "price": "KSh 59,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 850 g8 i5 11th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-574", "cat": "laptops", "name": "hp 850 g8 i5 11th 8/256gb", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 850 g8 i5 11th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-575", "cat": "laptops", "name": "hp 850 g7 i5 10th 8/256gb", "price": "KSh 49,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 850 g7 i5 10th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-576", "cat": "laptops", "name": "Hp 850 G5 I5 8th 8/256", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "Hp 850 G5 I5 8th 8/256", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-577", "cat": "laptops", "name": "hp dreagonfly i5 8th 16/512gb", "price": "KSh 63,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp dreagonfly i5 8th 16/512gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-578", "cat": "laptops", "name": "hp 845 g7 ryzen ryzen 7 8/256gb", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 845 g7 ryzen ryzen 7 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-579", "cat": "laptops", "name": "hp 835 g8 ryzen 7. 8/256gb", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 835 g8 ryzen 7. 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-580", "cat": "laptops", "name": "Hp 745 G6 Ryzen 7 8/256 2gb graphics", "price": "KSh 39,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "Hp 745 G6 Ryzen 7 8/256 2gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-581", "cat": "laptops", "name": "Hp 745 Ryzen 5 8/256 touchscreen 2gb graphics", "price": "KSh 38,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "Hp 745 Ryzen 5 8/256 touchscreen 2gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-582", "cat": "laptops", "name": "hp 745 g6 ryzen 5 nontouch 8/256gb", "price": "KSh 35,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 745 g6 ryzen 5 nontouch 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-583", "cat": "laptops", "name": "hp 735 g6 ryzen 7 8/256gb 2gb graphics", "price": "KSh 39,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 735 g6 ryzen 7 8/256gb 2gb graphics", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-584", "cat": "laptops", "name": "hp 640 g9 i5 12th 8/256gb", "price": "KSh 56,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp 640 g9 i5 12th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-585", "cat": "laptops", "name": "hp probook 630 g8 i5 11th 8/256gb touchscreen", "price": "KSh 49,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp probook 630 g8 i5 11th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-586", "cat": "laptops", "name": "hp probook 430 g7 i5 10th 8/256gb", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp probook 430 g7 i5 10th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-587", "cat": "laptops", "name": "hp probook 430 g5 i5 8th 8/256gb", "price": "KSh 32,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp probook 430 g5 i5 8th 8/256gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-588", "cat": "laptops", "name": "hp probook g4 i5 8th 8/256gb x360 touchscreen", "price": "KSh 32,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp probook g4 i5 8th 8/256gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-589", "cat": "laptops", "name": "hp probook g2 i5 7th 8/256gb x360 touchscreen", "price": "KSh 27,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp probook g2 i5 7th 8/256gb x360 touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-590", "cat": "laptops", "name": "hp probook 440 g1 i5 7th 8/256gb touchscreen", "price": "KSh 35,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp probook 440 g1 i5 7th 8/256gb touchscreen", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-591", "cat": "laptops", "name": "hp folio 9470 i7 4th 8/500gb", "price": "KSh 23,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp folio 9470 i7 4th 8/500gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-592", "cat": "laptops", "name": "hp folio 9480 i5 5th 8/500gb", "price": "KSh 21,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp folio 9480 i5 5th 8/500gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-593", "cat": "laptops", "name": "hp stream celeron 4/32gb", "price": "KSh 12,500", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp stream celeron 4/32gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "nx-hp-594", "cat": "laptops", "name": "hp stream celeron 2/32gb", "price": "KSh 12,000", "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800", "specs": "hp stream celeron 2/32gb", "badge": "Refurbished", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "ph-1", "cat": "phones", "name": "Samsung Galaxy S24 Ultra", "price": "KSh 145,000", "img": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80&w=800", "specs": "12GB RAM \u2022 256GB \u2022 Titanium Gray", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "ph-2", "cat": "phones", "name": "iPhone 15 Pro Max", "price": "KSh 168,000", "img": "https://images.unsplash.com/photo-1696446701796-da61225697cc?q=80&w=800", "specs": "256GB \u2022 Natural Titanium \u2022 5G", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "ph-3", "cat": "phones", "name": "Google Pixel 8 Pro", "price": "KSh 115,000", "img": "https://images.unsplash.com/photo-1697491560375-456f4d54605f?q=80&w=800", "specs": "12GB RAM \u2022 128GB \u2022 Obsidian", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "ph-4", "cat": "phones", "name": "Xiaomi 14 Ultra", "price": "KSh 130,000", "img": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?q=80&w=800", "specs": "Leica Optics \u2022 16GB RAM \u2022 512GB", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Westlands", "phone": "254700000001"},
-            {"id": "ph-5", "cat": "phones", "name": "OnePlus 12", "price": "KSh 95,000", "img": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80&w=800", "specs": "16GB RAM \u2022 256GB \u2022 Flowy Emerald", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Mombasa", "phone": "254700000002"},
-            {"id": "el-1", "cat": "electronics", "name": "Sony Bravia 65\" 4K UHD", "price": "KSh 125,000", "img": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?q=80&w=800", "specs": "Google TV \u2022 Dolby Vision \u2022 HDR10", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "el-2", "cat": "electronics", "name": "JBL PartyBox 310", "price": "KSh 78,000", "img": "https://images.unsplash.com/photo-1589196748352-674e2761218a?q=80&w=800", "specs": "240W \u2022 Bluetooth \u2022 Battery Powered", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Nairobi", "phone": "254700000003"},
-            {"id": "el-3", "cat": "electronics", "name": "Apple AirPods Pro (2nd Gen)", "price": "KSh 32,000", "img": "https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?q=80&w=800", "specs": "Active Noise Cancelling \u2022 USB-C Case", "badge": "New", "isBoosted": true, "onFlashSale": true, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "el-4", "cat": "electronics", "name": "Sony WH-1000XM5 Headphones", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800", "specs": "Industry Leading Noise Canceling", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Nairobi", "phone": "254700000004"},
-            {"id": "el-5", "cat": "electronics", "name": "Marshall Emberton II Speaker", "price": "KSh 22,000", "img": "https://images.unsplash.com/photo-1619983081563-430f63602796?q=80&w=800", "specs": "Portable \u2022 IP67 Waterproof \u2022 30h Playtime", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Nairobi", "phone": "254700000005"},
-            {"id": "gm-1", "cat": "gaming", "name": "PlayStation 5 Console (Slim)", "price": "KSh 74,000", "img": "https://images.unsplash.com/photo-1606813907291-d86ebb9b7406?q=80&w=800", "specs": "1TB SSD \u2022 4K 120Hz \u2022 Disc Edition", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "gm-2", "cat": "gaming", "name": "Xbox Series X", "price": "KSh 72,000", "img": "https://images.unsplash.com/photo-1621259182978-f09e5e2ca07a?q=80&w=800", "specs": "12 Teraflops \u2022 4K Gaming \u2022 1TB", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Westlands", "phone": "254700000006"},
-            {"id": "gm-3", "cat": "gaming", "name": "Nintendo Switch OLED Edition", "price": "KSh 48,000", "img": "https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?q=80&w=800", "specs": "7\" OLED Screen \u2022 64GB \u2022 Neon Blue/Red", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Nairobi", "phone": "254700000007"},
-            {"id": "gm-4", "cat": "gaming", "name": "ASUS ROG Ally Z1 Extreme", "price": "KSh 92,000", "img": "https://images.unsplash.com/photo-1605462863863-10d9e47e15ee?q=80&w=800", "specs": "Handheld Gaming \u2022 512GB \u2022 120Hz", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "gm-5", "cat": "gaming", "name": "PS5 DualSense Edge Controller", "price": "KSh 28,000", "img": "https://images.unsplash.com/photo-1592840496694-26d035b52b48?q=80&w=800", "specs": "High-performance \u2022 Customizable Controls", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Nairobi", "phone": "254700000008"},
-            {"id": "vh-1", "cat": "vehicles", "name": "Toyota Vanguard 2014", "price": "KSh 2,450,000", "img": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=800", "specs": "2400cc \u2022 Automatic \u2022 White \u2022 Clean", "badge": "Used", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "vh-2", "cat": "vehicles", "name": "Subaru Forester 2015 XT", "price": "KSh 2,100,000", "img": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800", "specs": "Turbocharged \u2022 4WD \u2022 Silver \u2022 Low Mileage", "badge": "Used", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Nairobi", "phone": "254700000009"},
-            {"id": "vh-3", "cat": "vehicles", "name": "Mazda CX-5 2016", "price": "KSh 2,350,000", "img": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=800", "specs": "Diesel \u2022 Pearl White \u2022 Grade 4.5", "badge": "Used", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Mombasa", "phone": "254700000010"},
-            {"id": "vh-4", "cat": "vehicles", "name": "Mercedes Benz C200 2015", "price": "KSh 3,800,000", "img": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800", "specs": "W205 \u2022 AMG Package \u2022 Panoramic Roof", "badge": "Used", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "vh-5", "cat": "vehicles", "name": "Suzuki Swift 2017", "price": "KSh 1,150,000", "img": "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=800", "specs": "1200cc \u2022 New Shape \u2022 Dark Blue", "badge": "Used", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Nairobi", "phone": "254700000011"},
-            {"id": "fn-1", "cat": "furniture", "name": "Modern 7-Seater Sofa Set", "price": "KSh 85,000", "img": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800", "specs": "Gray Fabric \u2022 Solid Wood Frame", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "fn-2", "cat": "furniture", "name": "King Size Bed with Mattress", "price": "KSh 65,000", "img": "https://images.unsplash.com/photo-1505693419148-732386e84ed2?q=80&w=800", "specs": "Teak Wood \u2022 6x6 \u2022 Orthopedic Mattress", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Nairobi", "phone": "254700000012"},
-            {"id": "fn-3", "cat": "furniture", "name": "6-Seater Dining Table Set", "price": "KSh 45,000", "img": "https://images.unsplash.com/photo-1530018607912-eff2df114f11?q=80&w=800", "specs": "Mahogany \u2022 Cushioned Chairs", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Nairobi", "phone": "254700000013"},
-            {"id": "fn-4", "cat": "furniture", "name": "Ergonomic Office Chair", "price": "KSh 18,500", "img": "https://images.unsplash.com/photo-1505843490701-5be5d0b19d58?q=80&w=800", "specs": "High Back \u2022 Mesh \u2022 Adjustable Height", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "fn-5", "cat": "furniture", "name": "Modern TV Stand Cabinet", "price": "KSh 22,000", "img": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=800", "specs": "Glossy White \u2022 LED Lights \u2022 1.8M", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Nairobi", "phone": "254700000014"},
-            {"id": "ap-1", "cat": "appliances", "name": "Samsung Double Door Fridge", "price": "KSh 135,000", "img": "https://images.unsplash.com/photo-1571175484658-51214a533424?q=80&w=800", "specs": "450L \u2022 Digital Inverter \u2022 Silver", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "ap-2", "cat": "appliances", "name": "LG 9KG Front Load Washer", "price": "KSh 88,000", "img": "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?q=80&w=800", "specs": "AI DD \u2022 Steam \u2022 1400 RPM", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Nairobi", "phone": "254700000015"},
-            {"id": "ap-3", "cat": "appliances", "name": "Mika 4-Burner Gas Cooker", "price": "KSh 42,000", "img": "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?q=80&w=800", "specs": "60x60 \u2022 Electric Oven \u2022 Rotisserie", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Nairobi", "phone": "254700000016"},
-            {"id": "ap-4", "cat": "appliances", "name": "Ramtons 25L Microwave", "price": "KSh 14,500", "img": "https://images.unsplash.com/photo-1585659722982-789758793b4c?q=80&w=800", "specs": "Digital \u2022 Grill Function \u2022 Black", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "ap-5", "cat": "appliances", "name": "Nutribullet Blender 900W", "price": "KSh 16,500", "img": "https://images.unsplash.com/photo-1570222094114-d054a817e56b?q=80&w=800", "specs": "High Speed \u2022 9-Piece Set", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Nairobi", "phone": "254700000017"},
-            {"id": "cm-1", "cat": "cameras", "name": "Sony Alpha a7 IV", "price": "KSh 320,000", "img": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=800", "specs": "33MP Full-Frame \u2022 4K 60p \u2022 Body Only", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "cm-2", "cat": "cameras", "name": "Canon EOS R6 Mark II", "price": "KSh 345,000", "img": "https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?q=80&w=800", "specs": "24.2MP \u2022 4K 60p \u2022 Mirrorless", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Nairobi", "phone": "254700000018"},
-            {"id": "cm-3", "cat": "cameras", "name": "DJI Osmo Pocket 3", "price": "KSh 85,000", "img": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=800", "specs": "1-inch CMOS \u2022 4K 120fps \u2022 Gimbal", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "cm-4", "cat": "cameras", "name": "GoPro HERO12 Black", "price": "KSh 58,000", "img": "https://images.unsplash.com/photo-1526170315873-3a98ce50d7a6?q=80&w=800", "specs": "5.3K HDR \u2022 Waterproof \u2022 HyperSmooth 6.0", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Nairobi", "phone": "254700000019"},
-            {"id": "cm-5", "cat": "cameras", "name": "Nikon Z8 Body", "price": "KSh 480,000", "img": "https://images.unsplash.com/photo-1616423641454-996452286782?q=80&w=800", "specs": "45.7MP \u2022 8K Video \u2022 Flagship Features", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Seller", "loc": "Westlands", "phone": "254700000020"},
-            {"id": "fm-1", "cat": "fashion-men", "name": "Slim Fit Navy Blue Suit", "price": "KSh 12,500", "img": "https://images.unsplash.com/photo-1594932224456-7b5d72615fe7?q=80&w=800", "specs": "Premium Wool Blend \u2022 2-Piece", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Fashion Hub", "loc": "Nairobi", "phone": "254700000021"},
-            {"id": "fm-2", "cat": "fashion-men", "name": "Classic Leather Oxford Shoes", "price": "KSh 6,500", "img": "https://images.unsplash.com/photo-1449247704656-1a6df17b1610?q=80&w=800", "specs": "Genuine Leather \u2022 Brown \u2022 Handcrafted", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Fashion Hub", "loc": "Nairobi", "phone": "254700000021"},
-            {"id": "fm-3", "cat": "fashion-men", "name": "Casio G-Shock GA-2100", "price": "KSh 15,500", "img": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=800", "specs": "Carbon Core Guard \u2022 All Black", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Fashion Hub", "loc": "Nairobi", "phone": "254700000021"},
-            {"id": "fm-4", "cat": "fashion-men", "name": "Levi's 501 Original Jeans", "price": "KSh 4,800", "img": "https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=800", "specs": "100% Cotton \u2022 Straight Leg \u2022 Indigo", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Fashion Hub", "loc": "Nairobi", "phone": "254700000021"},
-            {"id": "fw-1", "cat": "fashion-women", "name": "Evening Red Gown", "price": "KSh 8,500", "img": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=800", "specs": "Satin Finish \u2022 Full Length \u2022 Elegant", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Soko Style", "loc": "Nairobi", "phone": "254700000022"},
-            {"id": "fw-2", "cat": "fashion-women", "name": "Michael Kors Handbag", "price": "KSh 24,000", "img": "https://images.unsplash.com/photo-1584917033904-4934ed54bc65?q=80&w=800", "specs": "Jet Set Large Crossbody \u2022 Leather", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Style", "loc": "Westlands", "phone": "254700000022"},
-            {"id": "fw-3", "cat": "fashion-women", "name": "Floral Summer Dress", "price": "KSh 3,200", "img": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=800", "specs": "Lightweight \u2022 Sleeveless \u2022 Breathable", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Style", "loc": "Mombasa", "phone": "254700000022"},
-            {"id": "fw-4", "cat": "fashion-women", "name": "Puma Mayze Stack Sneakers", "price": "KSh 9,500", "img": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800", "specs": "Platform Sole \u2022 White/Pink \u2022 Casual", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Style", "loc": "Nairobi", "phone": "254700000022"},
-            {"id": "fw-5", "cat": "fashion-women", "name": "Sterling Silver Necklace", "price": "KSh 4,500", "img": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=800", "specs": "Pendant Included \u2022 Gift Box", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Style", "loc": "Nairobi", "phone": "254700000022"},
-            {"id": "pr-1", "cat": "property-rent", "name": "2 Bedroom Apartment - Kilimani", "price": "KSh 75,000 /mo", "img": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800", "specs": "Master Ensuite \u2022 Balcony \u2022 Parking", "badge": "For Rent", "isBoosted": true, "onFlashSale": false, "seller": "Nexcom Ventures", "loc": "Nairobi CBD", "phone": "254721585784"},
-            {"id": "pr-2", "cat": "property-sale", "name": "3 Bedroom House - Syokimau", "price": "KSh 12,500,000", "img": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800", "specs": "Gated Community \u2022 Own Compound", "badge": "For Sale", "isBoosted": false, "onFlashSale": false, "seller": "Soko Realty", "loc": "Nairobi", "phone": "254700000023"},
-            {"id": "pr-3", "cat": "property-sale", "name": "1/8 Acre Plot - Kajiado", "price": "KSh 850,000", "img": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800", "specs": "Ready Title Deed \u2022 Water/Electricity", "badge": "For Sale", "isBoosted": false, "onFlashSale": false, "seller": "Soko Realty", "loc": "Nairobi", "phone": "254700000023"},
-            {"id": "pr-4", "cat": "property-rent", "name": "Studio Apartment - Westlands", "price": "KSh 45,000 /mo", "img": "https://images.unsplash.com/photo-1536376074432-bf12177d4f4f?q=80&w=800", "specs": "Fully Furnished \u2022 Gym Access", "badge": "For Rent", "isBoosted": false, "onFlashSale": false, "seller": "Soko Realty", "loc": "Nairobi", "phone": "254700000023"},
-            {"id": "pr-5", "cat": "property-rent", "name": "Modern Office Space - CBD", "price": "KSh 120,000 /mo", "img": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800", "specs": "1500 Sqft \u2022 High Speed Lifts", "badge": "For Rent", "isBoosted": false, "onFlashSale": false, "seller": "Soko Realty", "loc": "Nairobi CBD", "phone": "254700000023"},
-            {"id": "ld-1", "cat": "land", "name": "1/4 Acre Plot - Malindi", "price": "KSh 450,000", "img": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800", "specs": "Ocean View \u2022 Power Connected", "badge": "For Sale", "isBoosted": false, "onFlashSale": false, "seller": "Soko Realty", "loc": "Malindi", "phone": "254700000023"},
-            {"id": "ld-2", "cat": "land", "name": "5 Acres Farmland - Naivasha", "price": "KSh 8,500,000", "img": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800", "specs": "Fertile Soil \u2022 Fenced", "badge": "For Sale", "isBoosted": true, "onFlashSale": false, "seller": "Soko Realty", "loc": "Naivasha", "phone": "254700000023"},
-            {"id": "ld-3", "cat": "land", "name": "Residential Plot - Kamulu", "price": "KSh 1,200,000", "img": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800", "specs": "50x100 \u2022 Developing Area", "badge": "For Sale", "isBoosted": false, "onFlashSale": false, "seller": "Soko Realty", "loc": "Nairobi", "phone": "254700000023"},
-            {"id": "ld-4", "cat": "land", "name": "Commercial Plot - Kitengela", "price": "KSh 3,500,000", "img": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800", "specs": "Near Main Road \u2022 Ready Title", "badge": "For Sale", "isBoosted": false, "onFlashSale": false, "seller": "Soko Realty", "loc": "Nairobi", "phone": "254700000023"},
-            {"id": "bk-1", "cat": "bikes", "name": "Yamaha YZF R6", "price": "KSh 950,000", "img": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=800", "specs": "600cc \u2022 Sport Bike \u2022 Matte Black", "badge": "Used", "isBoosted": true, "onFlashSale": false, "seller": "Soko Motors", "loc": "Nairobi", "phone": "254700000024"},
-            {"id": "bk-2", "cat": "bikes", "name": "TVS HLX 125", "price": "KSh 145,000", "img": "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?q=80&w=800", "specs": "125cc \u2022 Boda Boda Standard", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Motors", "loc": "Nairobi", "phone": "254700000024"},
-            {"id": "bk-3", "cat": "bikes", "name": "Kawasaki Ninja 400", "price": "KSh 680,000", "img": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=800", "specs": "400cc \u2022 Parallel Twin \u2022 Green", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Motors", "loc": "Nairobi", "phone": "254700000024"},
-            {"id": "bk-4", "cat": "bikes", "name": "Honda CB400 SF", "price": "KSh 420,000", "img": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800", "specs": "Classic Look \u2022 VTEC Engine", "badge": "Used", "isBoosted": false, "onFlashSale": false, "seller": "Soko Motors", "loc": "Nairobi", "phone": "254700000024"},
-            {"id": "bk-5", "cat": "bikes", "name": "Boxer 150X", "price": "KSh 162,000", "img": "https://images.unsplash.com/photo-1558981285-6f0c94958bb6?q=80&w=800", "specs": "150cc \u2022 Off-road Ready", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Motors", "loc": "Nairobi", "phone": "254700000024"},
-            {"id": "pt-1", "cat": "parts", "name": "Toyota Vanguard Headlights", "price": "KSh 15,000", "img": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=800", "specs": "Pair \u2022 LED \u2022 Genuine", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Spares", "loc": "Kirinyaga Rd", "phone": "254700000025"},
-            {"id": "pt-2", "cat": "parts", "name": "Car Battery - Chloride Exide", "price": "KSh 8,500", "img": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=800", "specs": "N70 \u2022 Maintenance Free", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Spares", "loc": "Nairobi", "phone": "254700000025"},
-            {"id": "pt-3", "cat": "parts", "name": "Shell Helix Ultra 5W-40", "price": "KSh 6,200", "img": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=800", "specs": "4L Synthetic Oil \u2022 Engine Care", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Soko Spares", "loc": "Nairobi", "phone": "254700000025"},
-            {"id": "pt-4", "cat": "parts", "name": "Brake Pads - Toyota Prado", "price": "KSh 4,500", "img": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=800", "specs": "Ceramic \u2022 Long Lasting", "badge": "New", "isBoosted": false, "onFlashSale": false, "seller": "Soko Spares", "loc": "Nairobi", "phone": "254700000025"},
-            {"id": "pt-5", "cat": "parts", "name": "Android Car Radio 9\"", "price": "KSh 12,000", "img": "https://images.unsplash.com/photo-1549194388-2469d59ec69c?q=80&w=800", "specs": "2GB RAM \u2022 32GB \u2022 WiFi \u2022 GPS", "badge": "New", "isBoosted": true, "onFlashSale": false, "seller": "Soko Spares", "loc": "Nairobi", "phone": "254700000025"}
-        ];
+        let ADS = [];
 
         function updateCompareBar() {
             const bar = document.getElementById('compareBar');
@@ -1180,17 +946,49 @@
             const table = document.getElementById('compareTable');
             const modal = document.getElementById('compareModal');
             
-            // Extract common attributes for row generation
-            const attributes = [
+            // Determine common category for specialized attributes
+            const commonCat = compareItems.every(i => i.cat === compareItems[0].cat) ? compareItems[0].cat : null;
+
+            let attributes = [
                 { label: 'Model', key: 'name', class: 'font-black text-blue-600' },
-                { label: 'Price', key: 'price', class: 'font-bold text-red-600' },
-                { label: 'Display/Inch', key: 'specs', regex: /(\d+(\.\d+)?-?(inch|["”]))/i },
-                { label: 'Processor', key: 'specs', regex: /(i[3579]|M[123]|Ryzen \d+|Celeron|Xeon|Pentium|Apple [M123]|Core [M1235])/i },
-                { label: 'RAM', key: 'specs', regex: /(\d+GB RAM|\d+GB(?= (RAM|DDR)))/i },
-                { label: 'Storage', key: 'specs', regex: /(\d+(GB|TB) (SSD|HDD|ROM|NVMe))/i },
-                { label: 'OS/Version', key: 'specs', regex: /(Windows \d+|macOS|ChromeOS|Linux|Android)/i },
-                { label: 'Full Specs', key: 'specs', format: v => v.replace(/\u2022/g, '<br>•') }
+                { label: 'Price', key: 'price', class: 'font-bold text-red-600' }
             ];
+
+            // Specialized attributes based on category
+            if (commonCat === 'laptops') {
+                attributes.push(
+                    { label: 'Display/Inch', key: 'specs', regex: /(\d+(\.\d+)?-?(inch|["”]))/i },
+                    { label: 'Processor', key: 'specs', regex: /(i[3579]|M[123]|Ryzen \d+|Celeron|Xeon|Pentium|Apple [M123]|Core [M1235])/i },
+                    { label: 'RAM', key: 'specs', regex: /(\d+GB RAM|\d+GB(?= (RAM|DDR)))/i },
+                    { label: 'Storage', key: 'specs', regex: /(\d+(GB|TB) (SSD|HDD|ROM|NVMe))/i },
+                    { label: 'OS/Version', key: 'specs', regex: /(Windows \d+|macOS|ChromeOS|Linux|Android)/i }
+                );
+            } else if (commonCat === 'bikes') {
+                attributes.push(
+                    { label: 'Engine', key: 'specs', regex: /\d+cc/i },
+                    { label: 'Type', key: 'specs', regex: /(Sport Bike|Boda Boda|Cruiser|Off-road|Parallel Twin|Standard)/i },
+                    { label: 'Condition', key: 'specs', regex: /(Brand New|Used|Refurbished|Ex-UK)/i }
+                );
+            } else if (commonCat === 'phones') {
+                attributes.push(
+                    { label: 'Screen', key: 'specs', regex: /\d+(\.\d+)?["”]/i },
+                    { label: 'Storage', key: 'specs', regex: /\d+GB/i },
+                    { label: 'Camera', key: 'specs', regex: /\d+MP/i }
+                );
+            } else if (commonCat === 'vehicles') {
+                attributes.push(
+                    { label: 'Engine', key: 'specs', regex: /\d+cc/i },
+                    { label: 'Fuel', key: 'specs', regex: /(Hybrid|Petrol|Diesel|Electric)/i },
+                    { label: 'Transmission', key: 'specs', regex: /(Automatic|Manual)/i }
+                );
+            } else if (commonCat === 'land') {
+                attributes.push(
+                    { label: 'Size', key: 'specs', regex: /(\d+x\d+ft|\d+ Acre|\d+ Decimal)/i },
+                    { label: 'Status', key: 'specs', regex: /(Titled|Leasehold|Freehold)/i }
+                );
+            }
+
+            attributes.push({ label: 'Full Specs', key: 'specs', format: v => v.replace(/\u2022/g, '<br>•') });
 
             let tableHtml = '<thead class="sticky top-0 bg-white dark:bg-slate-900 z-10">';
             
@@ -1234,11 +1032,6 @@
             modal.classList.remove('hidden');
         }
 
-        function openReviewModal() {
-            alert("Reviewing seller: " + (window.aSeller || 'Nexcom Ventures'));
-            // In a real app, this would open a form to submit stars/text
-        }
-
         function closeCompareTable() {
             document.getElementById('compareModal').classList.add('hidden');
         }
@@ -1253,7 +1046,38 @@
             filter(cur);
         }
 
-        function init() { 
+        async function init() { 
+            try {
+                const response = await fetch('ads.json');
+                const data = await response.json();
+                // Ensure data is array and merge with current ADS (which might have local posts)
+                if (Array.isArray(data)) {
+                    const existingIds = new Set(ADS.map(a => a.id));
+                    const newAds = data.filter(a => !existingIds.has(a.id));
+                    ADS = [...ADS, ...newAds];
+                }
+            } catch (e) {
+                console.log("No external ads loaded or file missing.");
+            }
+
+            if (activeShop) {
+                // Filter ADS by shop
+                const targetShop = activeShop.toLowerCase();
+                ADS = ADS.filter(a => a.seller.toLowerCase().includes(targetShop));
+                
+                // Update UI Header
+                const logoTop = document.querySelector('.logo-top');
+                const logoBottom = document.querySelector('.logo-bottom');
+                if (logoTop) logoTop.innerText = activeShop.toUpperCase();
+                if (logoBottom) logoBottom.innerText = 'STOREFRONT';
+                
+                document.title = `${activeShop} - Storefront`;
+                
+                // Set default seller for new posts
+                const regName = document.getElementById('regName');
+                if (regName) regName.value = activeShop;
+            }
+
             // Add status/views to existing mock data if missing
             ADS.forEach(a => {
                 if(!a.status) a.status = 'active';
@@ -1282,8 +1106,36 @@
             document.getElementById('cats').innerHTML = locFilter + `<div class="flex gap-2 overflow-x-auto no-scrollbar">${catsHtml}</div>`;
         }
 
+        const TIERS = {
+            'laptops': { budget: 30000, value: 80000 },
+            'phones': { budget: 15000, value: 45000 },
+            'vehicles': { budget: 800000, value: 2500000 },
+            'bikes': { budget: 150000, value: 500000 },
+            'land': { budget: 500000, value: 2500000 },
+            'property-sale': { budget: 5000000, value: 15000000 },
+            'property-rent': { budget: 20000, value: 70000 },
+            'fashion-men': { budget: 2000, value: 7000 },
+            'fashion-women': { budget: 2000, value: 7000 },
+            'gaming': { budget: 10000, value: 50000 },
+            'appliances': { budget: 15000, value: 60000 },
+            'electronics': { budget: 5000, value: 30000 },
+            'furniture': { budget: 15000, value: 70000 },
+            'cameras': { budget: 30000, value: 100000 },
+            'default': { budget: 30000, value: 80000 }
+        };
+
+        function updateTierLabels(id) {
+            const t = TIERS[id] || TIERS['default'];
+            const fmt = (v) => v >= 1000000 ? (v/1000000).toFixed(1).replace('.0','') + 'M' : (v/1000).toFixed(0) + 'k';
+            
+            document.getElementById('tier-budget').innerText = `Budget (<${fmt(t.budget)})`;
+            document.getElementById('tier-value').innerText = `Value (${fmt(t.budget)}-${fmt(t.value)})`;
+            document.getElementById('tier-premium').innerText = `Premium (${fmt(t.value)}+)`;
+        }
+
         function filter(id) {
             cur = id; 
+            updateTierLabels(id);
             const q = document.getElementById('qInput').value.toLowerCase();
             const loc = document.getElementById('locFilter').value;
             
@@ -1292,12 +1144,16 @@
                 const mq = a.name.toLowerCase().includes(q) || a.specs.toLowerCase().includes(q);
                 const ml = !loc || a.loc.includes(loc);
 
-                // Price Tier Logic
+                // Category-specific Price Tier Logic
                 const price = parseInt(a.price.replace(/[^0-9]/g, ''));
                 let mt = true;
-                if (currentTier === 'budget') mt = price < 30000;
-                else if (currentTier === 'value') mt = price >= 30000 && price <= 80000;
-                else if (currentTier === 'premium') mt = price > 80000;
+                
+                if (currentTier !== 'all') {
+                    const t = TIERS[a.cat] || TIERS['default'];
+                    if (currentTier === 'budget') mt = price < t.budget;
+                    else if (currentTier === 'value') mt = price >= t.budget && price <= t.value;
+                    else if (currentTier === 'premium') mt = price > t.value;
+                }
 
                 return mc && mq && ml && mt;
             });
@@ -1437,6 +1293,7 @@
         function openM(id) {
             const a = ADS.find(ad => ad.id === id);
             if (!a) return;
+            window.currentAd = a;
             
             // Increment view count locally for demo
             a.views = (a.views || 0) + 1;
@@ -1539,7 +1396,30 @@
 
         let currentRating = 0;
         function openReviewModal() {
-            document.getElementById('r-sellerName').innerText = document.getElementById('m-seller').innerText;
+            const seller = document.getElementById('m-seller').innerText;
+            const category = (window.currentAd && window.currentAd.cat) || 'item';
+            
+            const catDisplay = {
+                'laptops': 'laptop',
+                'phones': 'phone',
+                'vehicles': 'car',
+                'parts': 'part',
+                'land': 'land',
+                'property-rent': 'rental',
+                'property-sale': 'property',
+                'fashion-men': 'item',
+                'fashion-women': 'item',
+                'gaming': 'item',
+                'appliances': 'appliance',
+                'cameras': 'camera',
+                'electronics': 'item',
+                'furniture': 'item',
+                'bikes': 'bike'
+            }[category] || 'item';
+
+            document.getElementById('r-sellerName').innerText = seller;
+            document.getElementById('reviewText').placeholder = `Write your review... (e.g. Fast response, ${catDisplay} was in great condition)`;
+            
             document.getElementById('reviewModal').classList.remove('hidden');
             setRating(0);
         }
@@ -1652,20 +1532,29 @@
             const nav = document.getElementById('authNav');
             if (currentUser) {
                 nav.innerHTML = `
-                    <div class="flex items-center gap-2">
-                        <div class="flex flex-col items-end">
-                            <span class="text-[8px] font-black uppercase text-blue-600">Active Seller</span>
-                            <span class="text-[10px] font-bold">${currentUser.name}</span>
+                    <div class="flex items-center gap-1.5 sm:gap-2">
+                        <div class="hidden sm:flex flex-col items-end leading-tight mr-1">
+                            <span class="text-[7px] font-black uppercase text-blue-600">Active Seller</span>
+                            <span class="text-[9px] font-bold truncate max-w-[60px]">${currentUser.name}</span>
                         </div>
-                        <button onclick="viewMyAds()" class="text-blue-600 px-2 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide border border-blue-100 bg-blue-50">Edit Products</button>
-                        <button onclick="postAd()" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide">Post Ad</button>
-                        <button onclick="logout()" class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-400"><i class="fa-solid fa-right-from-bracket text-xs"></i></button>
+                        <button onclick="viewMyAds()" class="text-blue-600 px-2.5 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide border border-blue-100 bg-blue-50 flex items-center gap-1">
+                            <i class="fa-solid fa-list-check"></i>
+                            <span class="hidden md:inline">Edit Products</span>
+                        </button>
+                        <button onclick="postAd()" class="bg-blue-600 text-white px-3 sm:px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide flex items-center gap-1">
+                            <i class="fa-solid fa-plus"></i>
+                            <span class="hidden sm:inline">Post Ad</span>
+                        </button>
+                        <button onclick="logout()" class="w-8 h-8 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-400"><i class="fa-solid fa-right-from-bracket text-xs"></i></button>
                     </div>
                 `;
             } else {
                 nav.innerHTML = `
                     <button onclick="openAuth('login')" class="text-[10px] font-black uppercase text-slate-500 px-2">Sign In</button>
-                    <button onclick="postAd()" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide">Post Ad</button>
+                    <button onclick="postAd()" class="bg-blue-600 text-white px-3 sm:px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-wide flex items-center gap-1">
+                        <i class="fa-solid fa-plus"></i>
+                        <span class="hidden sm:inline">Post Ad</span>
+                    </button>
                 `;
             }
         }
@@ -1687,7 +1576,7 @@
         }
 
         function quickLoginNexcom() {
-            currentUser = { name: 'Nexcom Ventures', phone: '254721585784', pin: '123456' };
+            currentUser = { name: 'Nexcom Ventures', phone: '254722816001', pin: '123456' };
             localStorage.setItem('sokoUser', JSON.stringify(currentUser));
             updateAuthUI();
             closeAuth();
@@ -1859,7 +1748,7 @@
                     seller: currentUser ? currentUser.name : 'Guest Seller',
                     email: currentUser ? currentUser.email : '',
                     loc: 'Nairobi',
-                    phone: currentUser ? (currentUser.phone || '254721585784') : '254721585784',
+                    phone: currentUser ? (currentUser.phone || '254722816001') : '254722816001',
                     isBoosted: false
                 };
                 ADS.unshift(newAd);
@@ -1881,7 +1770,13 @@
 
         function skipUpgrade() {
             document.getElementById('upgradeModal').classList.add('hidden');
-            alert("Your ad is live! Check the top of the list.");
+            if (ADS.length > 0) {
+                const newAd = ADS[0];
+                const msg = encodeURIComponent(`Hi Admin! I just posted a new ad on Soko Mpya:\nName: ${newAd.name}\nPrice: ${newAd.price}\nCategory: ${newAd.cat}\nSeller: ${newAd.seller}\n\nPlease verify and make it public!`);
+                if(confirm("Ad saved locally! To make it visible to everyone, you need to send a quick verification message to our Admin. Proceed to WhatsApp?")) {
+                    window.location.href = `https://wa.me/254722816001?text=${msg}`;
+                }
+            }
         }
 
         function initMpesaPayment(plan, amount) {
@@ -1891,14 +1786,16 @@
         }
 
         function verifyPayment() {
-            alert("Payment Verified! Your ad is now boosted.");
+            alert("Payment Logged! Your ad is now priority-boosted.");
             closePaymentModal();
             document.getElementById('upgradeModal').classList.add('hidden');
-            // Apply boost to the last added ad
             if (ADS.length > 0) {
-                ADS[0].isBoosted = true;
-                ADS[0].boostLevel = selectedBoost;
+                const newAd = ADS[0];
+                newAd.isBoosted = true;
+                newAd.boostLevel = selectedBoost;
                 filter('all');
+                const msg = encodeURIComponent(`Hi Admin! I just PAID for a ${selectedBoost.toUpperCase()} BOOST on Soko Mpya:\nAd: ${newAd.name}\nPrice: ${newAd.price}\n\nPlease verify and make it live!`);
+                window.location.href = `https://wa.me/254722816001?text=${msg}`;
             }
         }
 
@@ -1947,10 +1844,10 @@
         }
 
         function showSafety() { alert("Protected by Soko Mpya Escrow. Inspect before paying."); }
-        function call() { window.location.href = `tel:${window.aPhone || '254721585784'}`; }
+        function call() { window.location.href = `tel:${window.aPhone || '254722816001'}`; }
         function wpp() { 
             const msg = encodeURIComponent(`Hi! I'm interested in the *${window.aName}* priced at *${window.aPrice}* I saw on Soko. Is it available?`);
-            window.location.href = `https://wa.me/${window.aPhone || '254721585784'}?text=${msg}`; 
+            window.location.href = `https://wa.me/${window.aPhone || '254722816001'}?text=${msg}`; 
         }
 
         init();
