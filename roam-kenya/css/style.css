@@ -10,8 +10,15 @@ img, .reveal, .card-media img, .hero-video-overlay, [class*="image"], [class*="m
 } body { font-family: 'Montserrat', sans-serif; color: var(--text-main); background: var(--bg-light); line-height: 1.6; overflow-x: hidden;
 } h1, h2, h3, .brand { font-family: 'Cormorant Garamond', serif;
 } .container { max-width: 1300px; margin: 0 auto; padding: 0 40px;
-} .brand { font-size: 1.4rem; color: var(--secondary); text-decoration: none; letter-spacing: 3px; font-weight: 600; white-space: nowrap; flex-shrink: 0;
-} .nav-menu { display: flex; list-style: none; gap: 20px; align-items: center; flex-shrink: 1;
+} .brand { text-decoration: none; display: flex; align-items: center; }
+.logo-container { display: flex; align-items: center; gap: 15px; }
+.logo-svg { width: 35px; height: 35px; color: var(--secondary); transition: var(--transition); }
+.logo-text-wrapper { display: flex; flex-direction: column; line-height: 1; }
+.logo-main { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; color: var(--white); letter-spacing: 2px; }
+.logo-sub { font-family: 'Ojuju', sans-serif; font-size: 0.65rem; font-weight: 500; color: var(--secondary); letter-spacing: 4px; margin-top: 2px; text-transform: uppercase; }
+.brand:hover .logo-svg { transform: rotate(15deg) scale(1.1); }
+.brand:hover .logo-main { color: var(--secondary); }
+ .nav-menu { display: flex; list-style: none; gap: 20px; align-items: center; flex-shrink: 1;
 } .nav-menu a { text-decoration: none; color: var(--white); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); white-space: nowrap;
 } .nav-menu a:hover { color: var(--secondary);
 } .nav-cta { border: 1px solid var(--secondary); padding: 8px 15px; border-radius: 2px;
