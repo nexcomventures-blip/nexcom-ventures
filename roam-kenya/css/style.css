@@ -1,17 +1,19 @@
 /* 
-    The Dainty Dik Dik Adventures - "Neo-Luxury" Redesign
-    Concept: High-Fashion Editorial meets Modern Tech.
-    Focus: Deep contrasts, sophisticated typography, and depth.
+    The Dainty Dik Dik Adventures - "Modern Sidebar" Redesign
+    Concept: High-End Architecture & Gallery Navigation.
+    Focus: Permanent grey sidebar, breathable main canvas, and ultra-modern precision.
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
 
 :root {
-    --primary: #0f1410; /* Near Black Forest */
-    --secondary: #d4af37; /* Metallic Gold */
-    --white: #ffffff;
-    --accent: #f4f1ea; /* Champagne Sand */
-    --transition: all 0.7s cubic-bezier(0.85, 0, 0.15, 1);
+    --primary: #0a0a0a;
+    --secondary: #d4af37;
+    --sidebar-bg: #f2f2f2; /* Professional Architectural Grey */
+    --canvas-bg: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #666666;
+    --sidebar-width: 300px;
 }
 
 * {
@@ -22,258 +24,243 @@
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--primary);
-    color: var(--white);
-    line-height: 1.6;
-    overflow-x: hidden;
+    background-color: var(--canvas-bg);
+    color: var(--text-main);
+    display: flex; /* Enables Sidebar Layout */
+    min-height: 100vh;
 }
 
-/* Glassmorphism Navigation */
-.main-nav {
+/* Fixed Modern Sidebar */
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: var(--sidebar-bg);
     position: fixed;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 1400px;
-    background: rgba(15, 20, 16, 0.8);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 20px 40px;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 100px;
-}
-
-.brand {
-    text-decoration: none;
-    color: var(--white);
+    left: 0;
+    top: 0;
+    padding: 60px 40px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #e0e0e0;
+    z-index: 1000;
 }
 
-.logo-main {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-.logo-sub {
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: var(--secondary);
-    margin-top: -5px;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-}
-
-.nav-menu a {
+.sidebar-top .brand {
     text-decoration: none;
-    color: var(--white);
-    font-size: 0.8rem;
-    font-weight: 500;
+    color: var(--primary);
+}
+
+.sidebar-top .logo-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.sidebar-top .logo-sub {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--secondary);
+    margin-top: 5px;
+    display: block;
+}
+
+.sidebar-nav {
+    margin-top: 80px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav li {
+    margin-bottom: 25px;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
+    opacity: 0.5;
     transition: 0.3s;
 }
 
-.nav-menu a:hover {
-    color: var(--secondary);
+.sidebar-nav a:hover, .sidebar-nav a.active {
+    opacity: 1;
+    padding-left: 10px;
 }
 
-/* Immersive Cinematic Hero */
+.sidebar-footer {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+/* Main Content Canvas */
+.main-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    background: var(--canvas-bg);
+}
+
+/* Modern Hero - Clean Canvas */
 .hero-v3 {
     height: 100vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    padding: 0 5%;
-    overflow: hidden;
-}
-
-.hero-video-bg {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: url('https://images.unsplash.com/photo-1523805081730-61444465681b?q=80&w=2000') center/cover;
-    filter: brightness(0.4) contrast(1.1);
-    transform: scale(1.1);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-v3 span {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 1.5rem;
-    color: var(--secondary);
-    display: block;
-    margin-bottom: 20px;
+    padding: 0 10%;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .hero-v3 h1 {
-    font-size: 7rem;
+    font-size: 8rem;
     font-weight: 800;
-    line-height: 0.9;
-    letter-spacing: -2px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
+    line-height: 0.85;
+    letter-spacing: -4px;
+    margin-bottom: 40px;
+    color: var(--primary);
 }
 
-.hero-btn {
+.hero-v3 h1 span {
+    color: var(--secondary);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0;
+}
+
+.hero-cta {
     display: inline-block;
-    padding: 20px 50px;
-    background: var(--secondary);
-    color: var(--primary);
+    padding: 22px 45px;
+    background: var(--primary);
+    color: #fff;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    border-radius: 100px;
-    transition: var(--transition);
+    font-size: 0.8rem;
+    transition: 0.3s;
 }
 
-.hero-btn:hover {
-    transform: scale(1.05);
-    background: var(--white);
+.hero-cta:hover {
+    background: var(--secondary);
 }
 
-/* Luxury Card Section */
-.section-lux {
-    padding: 150px 0;
-    background: var(--primary);
+/* Section Styling */
+.section-main {
+    padding: 120px 10%;
 }
 
-.lux-grid {
+.section-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--secondary);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.section-header h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 60px;
+}
+
+/* Modern Image Cards */
+.journey-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
-    padding: 0 5%;
 }
 
-.lux-card {
-    height: 600px;
+.journey-card {
     position: relative;
+    height: 600px;
     overflow: hidden;
-    border-radius: 30px;
+    background: #eee;
 }
 
-.lux-card img {
+.journey-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: 1s ease-out;
+    transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.lux-card:hover img {
-    transform: scale(1.1);
+.journey-card:hover img {
+    transform: scale(1.05);
 }
 
-.lux-overlay {
+.journey-info {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: #fff;
+    z-index: 2;
+}
+
+.journey-info h3 {
+    font-size: 2.5rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.journey-card::after {
+    content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(15,20,16,0.9), transparent);
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
 }
 
-.lux-overlay h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.lux-overlay p {
-    font-size: 0.9rem;
-    opacity: 0.7;
-}
-
-/* Glass Curation Form */
-.curate-section {
-    padding: 150px 5%;
-    background: var(--accent);
-    color: var(--primary);
-}
-
-.glass-form {
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(0,0,0,0.05);
+/* Modern Form - Minimalist */
+.form-container {
+    background: var(--sidebar-bg);
     padding: 80px;
-    border-radius: 50px;
-    max-width: 1000px;
-    margin: 0 auto;
-    box-shadow: 0 50px 100px rgba(0,0,0,0.05);
+    border-radius: 4px;
 }
 
-.glass-form h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 4rem;
-    text-align: center;
-    margin-bottom: 50px;
+.form-container input, .form-container select, .form-container textarea {
+    width: 100%;
+    padding: 20px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    outline: none;
 }
 
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.glass-form input, .glass-form select, .glass-form textarea {
+.form-container button {
     width: 100%;
     padding: 25px;
-    background: var(--white);
-    border: none;
-    border-radius: 20px;
-    font-family: inherit;
-    font-size: 1rem;
-    margin-bottom: 15px;
-}
-
-.glass-form button {
-    grid-column: span 2;
-    padding: 25px;
     background: var(--primary);
-    color: var(--white);
+    color: #fff;
     border: none;
-    border-radius: 20px;
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-/* Custom Cursor - High End */
-.cursor-main {
-    width: 15px;
-    height: 15px;
+.form-container button:hover {
     background: var(--secondary);
-    position: fixed;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 10001;
-    mix-blend-mode: difference;
 }
 
-@media (max-width: 1024px) {
-    .hero-v3 h1 { font-size: 4rem; }
-    .lux-grid { grid-template-columns: 1fr; }
-    .form-grid { grid-template-columns: 1fr; }
-    .glass-form button { grid-column: 1; }
-    .nav-menu { display: none; }
+/* Mobile Sidebar Adaptation */
+@media (max-width: 1100px) {
+    body { flex-direction: column; }
+    .sidebar { width: 100%; height: auto; position: relative; padding: 30px; border-right: none; border-bottom: 1px solid #e0e0e0; }
+    .sidebar-nav { display: none; }
+    .main-content { margin-left: 0; }
+    .hero-v3 h1 { font-size: 4rem; letter-spacing: -1px; }
+    .journey-grid { grid-template-columns: 1fr; }
 }
