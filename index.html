@@ -314,9 +314,14 @@
 
   <!-- Search & Filter -->
   <div class="shop-controls">
-    <div class="search-wrap">
-      <input type="text" id="productSearch" placeholder="Search HP, Dell, Gaming..." onkeyup="searchProducts()" class="search-input"/>
-      <span class="search-icon">🔍</span>
+        <div class="search-wrap" style="display: flex; gap: 10px; max-width: 600px; width: 100%;">
+      <div style="position: relative; flex: 1;">
+        <input type="text" id="productSearch" placeholder="Search HP, Dell, Gaming..." onkeyup="searchProducts()" class="search-input" style="padding-right: 40px;"/>
+        <span class="search-icon" style="position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); opacity: 0.5;">🔍</span>
+      </div>
+      <button onclick="searchProducts()" style="background: var(--primary); color: white; border: none; padding: 0 25px; border-radius: 12px; font-weight: 700; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; white-space: nowrap;">
+        Search
+      </button>
     </div>
     <div class="filter-tabs">
       <button class="filter-btn active" onclick="renderProducts('featured', this)">Featured</button>
