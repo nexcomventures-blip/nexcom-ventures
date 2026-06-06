@@ -3,81 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Dainty Dik Dik | Modern Boutique Safaris</title>
+    <title>The Dainty Dik Dik | Neo-Luxury Safaris</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="custom-cursor" id="cursor"></div>
+<div class="cursor-main" id="cursor"></div>
 
 <nav class="main-nav">
     <a href="index.html" class="brand">
         <div class="logo-main">DAINTY DIK DIK</div>
-        <div class="logo-sub">Adventures</div>
+        <div class="logo-sub">Boutique Adventures</div>
     </a>
     <ul class="nav-menu">
-        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#journeys">Journeys</a></li>
         <li><a href="#curate">Curation</a></li>
-        <li><a href="https://wa.me/254721585784" class="nav-cta">Inquire</a></li>
+        <li><a href="https://wa.me/254721585784">Concierge</a></li>
     </ul>
 </nav>
 
 <section class="hero-v3">
-    <h1>Wild<br><span>Souls.</span></h1>
-    <p>Bespoke safaris and private expeditions across Kenya's most iconic landscapes.</p>
-</section>
-
-<section id="experiences">
-    <div class="section-header">
-        <h2>Select Journeys</h2>
-    </div>
-    <div class="bento-grid">
-        <div class="bento-item" style="grid-column: span 12; height: 500px;">
-            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1200" alt="Maasai Mara">
-            <div class="bento-overlay">
-                <h4>The Great Migration</h4>
-            </div>
-        </div>
-        <div class="bento-item" style="grid-column: span 6; height: 400px;">
-            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=800" alt="Amboseli">
-            <div class="bento-overlay">
-                <h4>Tuskers of Amboseli</h4>
-            </div>
-        </div>
-        <div class="bento-item" style="grid-column: span 6; height: 400px;">
-            <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=800" alt="Diani">
-            <div class="bento-overlay">
-                <h4>The Swahili Coast</h4>
-            </div>
-        </div>
+    <div class="hero-video-bg"></div>
+    <div class="hero-content">
+        <span>The Art of the Wild</span>
+        <h1>Soulful<br>Journeys.</h1>
+        <a href="#curate" class="hero-btn">Start Your Expedition</a>
     </div>
 </section>
 
-<section id="curate">
-    <div class="curate-form-box">
-        <h2>Curate Your Experience.</h2>
-        <p>Expert design for the curious traveler.</p>
-        <form style="margin-top: 40px;">
+<section id="journeys" class="section-lux">
+    <div class="lux-grid">
+        <div class="lux-card">
+            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1200" alt="Mara">
+            <div class="lux-overlay">
+                <h3>The Great Rift</h3>
+                <p>Private charters over the shifting landscapes of the Mara.</p>
+            </div>
+        </div>
+        <div class="lux-card">
+            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1200" alt="Elephant">
+            <div class="lux-overlay">
+                <h3>Elephant Echoes</h3>
+                <p>Intimate encounters in the heart of Amboseli.</p>
+            </div>
+        </div>
+        <div class="lux-card">
+            <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=1200" alt="Coast">
+            <div class="lux-overlay">
+                <h3>Swahili Soul</h3>
+                <p>Ancient winds and turquoise horizons in Lamu.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="curate" class="curate-section">
+    <div class="glass-form">
+        <h2>Curate My Trip</h2>
+        <form class="form-grid">
             <input type="text" placeholder="Full Name" required>
             <input type="email" placeholder="Email" required>
             <select required>
-                <option value="" disabled selected>Nature of Expedition</option>
-                <option>Safari Honeymoon</option>
-                <option>Private Group</option>
-                <option>Academic Mission</option>
+                <option value="" disabled selected>Select Expedition Type</option>
+                <option>Private Safari</option>
+                <option>Honeymoon</option>
+                <option>Aerial Tour</option>
             </select>
-            <textarea placeholder="Describe your dream journey..." rows="5"></textarea>
-            <button type="submit">Send Proposal Request</button>
+            <input type="text" placeholder="Preferred Dates" required>
+            <textarea placeholder="Your vision for this journey..." rows="4" style="grid-column: span 2;"></textarea>
+            <button type="submit">Submit Request</button>
         </form>
     </div>
 </section>
 
-<footer style="padding: 100px 5%; border-top: 1px solid #f0f0f0; display: flex; justify-content: space-between; align-items: center;">
-    <div class="brand">
-        <div class="logo-main">DAINTY DIK DIK</div>
-        <div class="logo-sub">Boutique Adventures</div>
-    </div>
-    <p style="font-size: 0.8rem; color: #999;">&copy; 2026 The Dainty Dik Dik Adventures.</p>
+<footer style="padding: 100px 5%; background: var(--primary); text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="logo-main" style="color: white; margin-bottom: 20px;">DAINTY DIK DIK</div>
+    <p style="opacity: 0.5; font-size: 0.8rem; letter-spacing: 2px;">THE ART OF SLOW TRAVEL &copy; 2026</p>
 </footer>
 
 <script>
@@ -85,11 +86,6 @@
     document.addEventListener('mousemove', (e) => {
         cursor.style.left = e.clientX + 'px';
         cursor.style.top = e.clientY + 'px';
-    });
-
-    document.querySelectorAll('a, button, .bento-item').forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.classList.add('active'));
-        el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
     });
 </script>
 
