@@ -3,88 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Dainty Dik Dik | Minimalist Sidebar Design</title>
+    <title>Roam Kenya | The Dainty Dik Dik Adventures — The Art of Safari</title>
+    <meta name="description" content="Curated boutique safaris and soulful expeditions across Kenya's most iconic landscapes.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-<aside class="sidebar">
-    <div class="sidebar-top">
-        <a href="index.html" class="brand">
-            <span class="logo-main">DAINTY<br>DIK DIK</span>
-            <span class="logo-sub">Adventures</span>
-        </a>
-        <nav class="sidebar-nav">
-            <ul>
-                <li><a href="#hero" class="active">Home</a></li>
-                <li><a href="#journeys">Journeys</a></li>
-                <li><a href="#curate">Curation</a></li>
-                <li><a href="https://wa.me/254721585784">WhatsApp</a></li>
+<nav class="main-nav">
+    <div class="container">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <div class="logo-wrapper">
+                    <span class="logo-main">ROAM KENYA</span>
+                    <span class="logo-sub">The Dainty Dik Dik Adventures</span>
+                </div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#experiences">Journeys</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#curate">Curate My Trip</a></li>
+                <li><a href="https://wa.me/254721585784" style="color: var(--secondary);">Concierge</a></li>
             </ul>
-        </nav>
-    </div>
-    <div class="sidebar-footer">
-        <p>THE ART OF SLOW TRAVEL</p>
-        <p style="margin-top: 10px;">&copy; 2026</p>
-    </div>
-</aside>
-
-<main class="main-content">
-    <section id="hero" class="hero-v3">
-        <div class="hero-text">
-            <span class="section-title">Boutique Curations</span>
-            <h1>Wild<br><span>Soulful</span><br>Landscapes.</h1>
-            <a href="#curate" class="hero-cta">Start Your Journey</a>
         </div>
-    </section>
+    </div>
+</nav>
 
-    <section id="journeys" class="section-main">
+<section class="hero-v3">
+    <div class="hero-video-overlay"></div>
+    <div class="container">
+        <div class="hero-content">
+            <span>The Slow Safari Philosophy</span>
+            <h1>Karibu — Where the<br>Wild Meets the <em>Soul</em>.</h1>
+            <p>Bespoke safaris and deeply curated private expeditions across Kenya's most iconic landscapes.</p>
+            <a href="#curate" class="hero-cta">Start Your Curation</a>
+        </div>
+    </div>
+</section>
+
+<section id="philosophy" class="method">
+    <div class="container">
+        <div class="method-grid">
+            <div class="method-text">
+                <span class="subtitle">Kipekee — The Art of Slow Travel</span>
+                <h2>Intimate, Dainty, and Deeply Curated.</h2>
+                <p>We move beyond the standard tour, focusing on intimate encounters, hand-picked boutique lodges, and private charters that escape the crowds.</p>
+                <ul class="perks">
+                    <li><i class="fas fa-check"></i> Private 4x4 Custom Fleet</li>
+                    <li><i class="fas fa-check"></i> Silver-Level Expert Guides</li>
+                    <li><i class="fas fa-check"></i> Sustainable Boutique Lodging</li>
+                </ul>
+            </div>
+            <div class="image-stack">
+                <img src="https://images.unsplash.com/photo-1523805081730-61444465681b?q=80&w=1000" alt="Safari" class="img-main">
+                <div class="img-accent"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experiences">
+    <div class="container">
         <div class="section-header">
-            <span class="section-title">Experiences</span>
+            <span class="subtitle">Discovery</span>
             <h2>Select Expeditions.</h2>
         </div>
-        <div class="journey-grid">
-            <div class="journey-card">
-                <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1200" alt="Mara">
-                <div class="journey-info">
-                    <h3>The Rift Valley</h3>
-                </div>
-            </div>
-            <div class="journey-card">
-                <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1200" alt="Amboseli">
-                <div class="journey-info">
-                    <h3>Amboseli Echoes</h3>
-                </div>
-            </div>
+        
+        <div class="portfolio-tabs">
+            <div class="portfolio-tab active" onclick="switchTab('safari')">Safaris</div>
+            <div class="portfolio-tab" onclick="switchTab('coast')">The Coast</div>
+            <div class="portfolio-tab" onclick="switchTab('fleet')">Fleet</div>
         </div>
-    </section>
 
-    <section id="curate" class="section-main" style="background: #fafafa;">
-        <div class="section-header">
-            <span class="section-title">Curation</span>
-            <h2>Request Your Plan.</h2>
+        <div id="tab-safari" class="tab-pane active">
+            <div class="bento-grid">
+                <div class="bento-item" style="grid-column: span 8; grid-row: span 2;">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1200" alt="Mara">
+                    <div class="bento-overlay">
+                        <h4>Maasai Mara Express</h4>
+                        <p>3 Days of cinematic wildlife encounters.</p>
+                    </div>
+                </div>
+                <div class="bento-item" style="grid-column: span 4;">
+                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=800" alt="Amboseli">
+                    <div class="bento-overlay">
+                        <h4>Tuskers of Amboseli</h4>
+                    </div>
+                </div>
+                <div class="bento-item" style="grid-column: span 4;">
+                    <img src="https://images.unsplash.com/photo-1511497584788-8767fe770c55?q=80&w=800" alt="Forest">
+                    <div class="bento-overlay">
+                        <h4>Aberdare Shadows</h4>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="form-container">
+    </div>
+</section>
+
+<section id="curate">
+    <div class="container">
+        <div class="curate-form">
+            <div class="section-header" style="text-align: left;">
+                <span class="subtitle">Concierge</span>
+                <h2 style="color: white;">Request Your Curation.</h2>
+                <p style="color: rgba(255,255,255,0.7);">Our experts will design a bespoke itinerary within 4 hours.</p>
+            </div>
             <form>
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
                 <select required>
-                    <option value="" disabled selected>Expedition Type</option>
-                    <option>Private Safari</option>
-                    <option>Honeymoon</option>
-                    <option>Photography Tour</option>
+                    <option value="" disabled selected>Nature of Expedition</option>
+                    <option>Honeymoon / Couple</option>
+                    <option>Private Group / Family</option>
+                    <option>Academic / Student Group</option>
                 </select>
-                <textarea placeholder="Your vision for this journey..." rows="3"></textarea>
-                <button type="submit">Send Proposal Request</button>
+                <textarea placeholder="Tell us about your dream journey..." rows="5"></textarea>
+                <button type="submit">Request Proposal</button>
             </form>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer style="padding: 60px 10%; border-top: 1px solid #eee; display: flex; justify-content: space-between;">
-        <span style="font-size: 0.8rem; color: #999;">The Dainty Dik Dik Adventures &mdash; Kenya</span>
-        <span style="font-size: 0.8rem; color: #999;">Established 2026</span>
-    </footer>
-</main>
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">ROAM KENYA</div>
+                <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">Curating intimate encounters and soulful expeditions across the Kenyan wilderness.</p>
+            </div>
+            <div class="footer-col">
+                <h4 style="margin-bottom: 20px;">Contact</h4>
+                <p style="font-size: 0.9rem; color: #666;">Nairobi, Kenya</p>
+                <p style="font-size: 0.9rem; color: #666;">+254 721 585 784</p>
+            </div>
+            <div class="footer-col">
+                <h4 style="margin-bottom: 20px;">Social</h4>
+                <div style="display: flex; gap: 20px; font-size: 1.2rem; color: var(--primary);">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 60px; padding-top: 30px; border-top: 1px solid #eee; text-align: center; font-size: 0.8rem; color: #999;">
+            &copy; 2026 Roam Kenya & The Dainty Dik Dik Adventures. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+    function switchTab(tabId) {
+        // Simple tab logic
+        alert('Switching to ' + tabId + '... (Functionality would be added here)');
+    }
+</script>
 
 </body>
 </html>
