@@ -3,91 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Dainty Dik Dik | Neo-Luxury Safaris</title>
+    <title>The Dainty Dik Dik | Minimalist Sidebar Design</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="cursor-main" id="cursor"></div>
-
-<nav class="main-nav">
-    <a href="index.html" class="brand">
-        <div class="logo-main">DAINTY DIK DIK</div>
-        <div class="logo-sub">Boutique Adventures</div>
-    </a>
-    <ul class="nav-menu">
-        <li><a href="#journeys">Journeys</a></li>
-        <li><a href="#curate">Curation</a></li>
-        <li><a href="https://wa.me/254721585784">Concierge</a></li>
-    </ul>
-</nav>
-
-<section class="hero-v3">
-    <div class="hero-video-bg"></div>
-    <div class="hero-content">
-        <span>The Art of the Wild</span>
-        <h1>Soulful<br>Journeys.</h1>
-        <a href="#curate" class="hero-btn">Start Your Expedition</a>
+<aside class="sidebar">
+    <div class="sidebar-top">
+        <a href="index.html" class="brand">
+            <span class="logo-main">DAINTY<br>DIK DIK</span>
+            <span class="logo-sub">Adventures</span>
+        </a>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#journeys">Journeys</a></li>
+                <li><a href="#curate">Curation</a></li>
+                <li><a href="https://wa.me/254721585784">WhatsApp</a></li>
+            </ul>
+        </nav>
     </div>
-</section>
+    <div class="sidebar-footer">
+        <p>THE ART OF SLOW TRAVEL</p>
+        <p style="margin-top: 10px;">&copy; 2026</p>
+    </div>
+</aside>
 
-<section id="journeys" class="section-lux">
-    <div class="lux-grid">
-        <div class="lux-card">
-            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1200" alt="Mara">
-            <div class="lux-overlay">
-                <h3>The Great Rift</h3>
-                <p>Private charters over the shifting landscapes of the Mara.</p>
+<main class="main-content">
+    <section id="hero" class="hero-v3">
+        <div class="hero-text">
+            <span class="section-title">Boutique Curations</span>
+            <h1>Wild<br><span>Soulful</span><br>Landscapes.</h1>
+            <a href="#curate" class="hero-cta">Start Your Journey</a>
+        </div>
+    </section>
+
+    <section id="journeys" class="section-main">
+        <div class="section-header">
+            <span class="section-title">Experiences</span>
+            <h2>Select Expeditions.</h2>
+        </div>
+        <div class="journey-grid">
+            <div class="journey-card">
+                <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1200" alt="Mara">
+                <div class="journey-info">
+                    <h3>The Rift Valley</h3>
+                </div>
+            </div>
+            <div class="journey-card">
+                <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1200" alt="Amboseli">
+                <div class="journey-info">
+                    <h3>Amboseli Echoes</h3>
+                </div>
             </div>
         </div>
-        <div class="lux-card">
-            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1200" alt="Elephant">
-            <div class="lux-overlay">
-                <h3>Elephant Echoes</h3>
-                <p>Intimate encounters in the heart of Amboseli.</p>
-            </div>
+    </section>
+
+    <section id="curate" class="section-main" style="background: #fafafa;">
+        <div class="section-header">
+            <span class="section-title">Curation</span>
+            <h2>Request Your Plan.</h2>
         </div>
-        <div class="lux-card">
-            <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=1200" alt="Coast">
-            <div class="lux-overlay">
-                <h3>Swahili Soul</h3>
-                <p>Ancient winds and turquoise horizons in Lamu.</p>
-            </div>
+        <div class="form-container">
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <select required>
+                    <option value="" disabled selected>Expedition Type</option>
+                    <option>Private Safari</option>
+                    <option>Honeymoon</option>
+                    <option>Photography Tour</option>
+                </select>
+                <textarea placeholder="Your vision for this journey..." rows="3"></textarea>
+                <button type="submit">Send Proposal Request</button>
+            </form>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="curate" class="curate-section">
-    <div class="glass-form">
-        <h2>Curate My Trip</h2>
-        <form class="form-grid">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email" required>
-            <select required>
-                <option value="" disabled selected>Select Expedition Type</option>
-                <option>Private Safari</option>
-                <option>Honeymoon</option>
-                <option>Aerial Tour</option>
-            </select>
-            <input type="text" placeholder="Preferred Dates" required>
-            <textarea placeholder="Your vision for this journey..." rows="4" style="grid-column: span 2;"></textarea>
-            <button type="submit">Submit Request</button>
-        </form>
-    </div>
-</section>
-
-<footer style="padding: 100px 5%; background: var(--primary); text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
-    <div class="logo-main" style="color: white; margin-bottom: 20px;">DAINTY DIK DIK</div>
-    <p style="opacity: 0.5; font-size: 0.8rem; letter-spacing: 2px;">THE ART OF SLOW TRAVEL &copy; 2026</p>
-</footer>
-
-<script>
-    const cursor = document.getElementById('cursor');
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-</script>
+    <footer style="padding: 60px 10%; border-top: 1px solid #eee; display: flex; justify-content: space-between;">
+        <span style="font-size: 0.8rem; color: #999;">The Dainty Dik Dik Adventures &mdash; Kenya</span>
+        <span style="font-size: 0.8rem; color: #999;">Established 2026</span>
+    </footer>
+</main>
 
 </body>
 </html>
