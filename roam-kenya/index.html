@@ -3,156 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Dainty Dik Dik Adventures | Curated Boutique Safaris</title>
+    <title>The Dainty Dik Dik | Modern Boutique Safaris</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
 <div class="custom-cursor" id="cursor"></div>
 
 <nav class="main-nav">
-    <div class="nav-container">
-        <a href="index.html" class="brand">
-            <div class="logo-text-wrapper">
-                <span class="logo-main">THE DAINTY DIK DIK</span>
-                <span class="logo-sub">ADVENTURES</span>
-            </div>
-        </a>
-        <ul class="nav-menu">
-            <li><a href="#portfolio">Journeys</a></li>
-            <li><a href="#experience">Philosophy</a></li>
-            <li><a href="#curate">Curation</a></li>
-        </ul>
-        <div class="nav-extras">
-            <a href="https://wa.me/254721585784" class="nav-cta">WhatsApp</a>
-        </div>
-    </div>
+    <a href="index.html" class="brand">
+        <div class="logo-main">DAINTY DIK DIK</div>
+        <div class="logo-sub">Adventures</div>
+    </a>
+    <ul class="nav-menu">
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#curate">Curation</a></li>
+        <li><a href="https://wa.me/254721585784" class="nav-cta">Inquire</a></li>
+    </ul>
 </nav>
 
 <section class="hero-v3">
-    <div class="hero-content-v3">
-        <span class="subtitle">Boutique Safari Curation</span>
-        <h1>Karibu <em>—</em><br>The Wild<br>Meets Soul.</h1>
-        <p>Bespoke safaris and deeply curated private expeditions for the curious traveler.</p>
-        <div class="hero-actions">
-            <a href="#curate" class="btn-outline-gold">Start Curation</a>
-        </div>
-        <div class="hero-stats">
-            <div class="stat-item">
-                <span class="stat-label">Heritage</span>
-                <span class="stat-val">Kenya</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-label">Est.</span>
-                <span class="stat-val">2026</span>
-            </div>
-        </div>
-    </div>
-    <div class="hero-video-overlay"></div>
+    <h1>Wild<br><span>Souls.</span></h1>
+    <p>Bespoke safaris and private expeditions across Kenya's most iconic landscapes.</p>
 </section>
 
-<section id="experience" class="method">
-    <div class="container">
-        <div class="method-grid">
-            <div class="method-text">
-                <span class="subtitle">Kipekee</span>
-                <h2>The Art of Slow Travel.</h2>
-                <p>We don't just show you the wilderness; we connect you to its soul. Our "Slow Safari" philosophy prioritizes intimate encounters, hand-picked boutique lodges, and private charters that escape the crowds.</p>
-                <ul class="perks">
-                    <li><i class="fas fa-check"></i> Private 4x4 Custom Cruisers</li>
-                    <li><i class="fas fa-check"></i> Boutique Eco-Lodges Only</li>
-                    <li><i class="fas fa-check"></i> Professional Silver-Level Guides</li>
-                </ul>
+<section id="experiences">
+    <div class="section-header">
+        <h2>Select Journeys</h2>
+    </div>
+    <div class="bento-grid">
+        <div class="bento-item" style="grid-column: span 12; height: 500px;">
+            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1200" alt="Maasai Mara">
+            <div class="bento-overlay">
+                <h4>The Great Migration</h4>
             </div>
-            <div class="image-stack">
-                <img src="https://images.unsplash.com/photo-1523805081730-61444465681b?q=80&w=1000" class="img-main" alt="Safari">
-                <div class="img-accent"></div>
+        </div>
+        <div class="bento-item" style="grid-column: span 6; height: 400px;">
+            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=800" alt="Amboseli">
+            <div class="bento-overlay">
+                <h4>Tuskers of Amboseli</h4>
+            </div>
+        </div>
+        <div class="bento-item" style="grid-column: span 6; height: 400px;">
+            <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=800" alt="Diani">
+            <div class="bento-overlay">
+                <h4>The Swahili Coast</h4>
             </div>
         </div>
     </div>
 </section>
 
-<section id="portfolio" class="portfolio-explorer">
-    <div class="container">
-        <div class="portfolio-tabs">
-            <div class="portfolio-tab active" onclick="switchPortfolio('journeys')">Journeys</div>
-            <div class="portfolio-tab" onclick="switchPortfolio('soulful')">Soulful</div>
-            <div class="portfolio-tab" onclick="switchPortfolio('fleet')">Fleet</div>
-        </div>
-
-        <div class="portfolio-content">
-            <div class="portfolio-pane active" id="pane-journeys">
-                <div class="bento-grid">
-                    <div class="bento-item" style="grid-column: span 8; grid-row: span 2;">
-                        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1200" alt="Mara">
-                        <div class="bento-overlay">
-                            <h4>Maasai Mara Express</h4>
-                            <p>3 Days of cinematic wildlife encounters.</p>
-                        </div>
-                    </div>
-                    <div class="bento-item" style="grid-column: span 4;">
-                        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=600" alt="Nakuru">
-                        <div class="bento-overlay">
-                            <h4>Wildlife Heritage</h4>
-                        </div>
-                    </div>
-                    <div class="bento-item" style="grid-column: span 4;">
-                        <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=600" alt="Diani">
-                        <div class="bento-overlay">
-                            <h4>Swahili Coast</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- More panes would go here... -->
-        </div>
+<section id="curate">
+    <div class="curate-form-box">
+        <h2>Curate Your Experience.</h2>
+        <p>Expert design for the curious traveler.</p>
+        <form style="margin-top: 40px;">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <select required>
+                <option value="" disabled selected>Nature of Expedition</option>
+                <option>Safari Honeymoon</option>
+                <option>Private Group</option>
+                <option>Academic Mission</option>
+            </select>
+            <textarea placeholder="Describe your dream journey..." rows="5"></textarea>
+            <button type="submit">Send Proposal Request</button>
+        </form>
     </div>
 </section>
 
-<section id="curate" style="background: var(--primary); color: white;">
-    <div class="container">
-        <div class="method-grid">
-            <div class="image-stack">
-                <img src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=1000" class="img-main" alt="Curation">
-            </div>
-            <div class="curate-form-box">
-                <span class="subtitle">Concierge</span>
-                <h2>Request Your Curation.</h2>
-                <p>Our experts will design a bespoke itinerary within 4 hours.</p>
-                <form class="service-detail-form">
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="Email Address" required>
-                    <select required>
-                        <option value="" disabled selected>Nature of Expedition</option>
-                        <option>Honeymoon</option>
-                        <option>Private Group</option>
-                    </select>
-                    <textarea placeholder="Tell us about your dream journey..." rows="4"></textarea>
-                    <button type="submit">Submit Request</button>
-                </form>
-            </div>
-        </div>
+<footer style="padding: 100px 5%; border-top: 1px solid #f0f0f0; display: flex; justify-content: space-between; align-items: center;">
+    <div class="brand">
+        <div class="logo-main">DAINTY DIK DIK</div>
+        <div class="logo-sub">Boutique Adventures</div>
     </div>
-</section>
-
-<div class="golden-hour-widget">
-    <span>NEXT GOLDEN HOUR: 17:45 EAT</span>
-</div>
+    <p style="font-size: 0.8rem; color: #999;">&copy; 2026 The Dainty Dik Dik Adventures.</p>
+</footer>
 
 <script>
-    function switchPortfolio(paneId) {
-        document.querySelectorAll('.portfolio-pane').forEach(p => p.classList.remove('active'));
-        document.querySelectorAll('.portfolio-tab').forEach(t => t.classList.remove('active'));
-        document.getElementById('pane-' + paneId).classList.add('active');
-        event.currentTarget.classList.add('active');
-    }
-
     const cursor = document.getElementById('cursor');
     document.addEventListener('mousemove', (e) => {
         cursor.style.left = e.clientX + 'px';
         cursor.style.top = e.clientY + 'px';
-        cursor.style.opacity = '1';
+    });
+
+    document.querySelectorAll('a, button, .bento-item').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('active'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
     });
 </script>
 
