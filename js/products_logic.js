@@ -7,9 +7,7 @@ function buildCard(p) {
   const outOfStock = p.inStock === false;
   const shareText = encodeURIComponent(`Hi! Check out this ${p.name} at Nexcom Ventures for KES ${p.price.toLocaleString()}. See details here: https://nexcomventures.co.ke`);
   const shareUrl = `https://wa.me/?text=${shareText}`;
-  const softwareJson = JSON.stringify(p.software || []).replace(/'/g, "\\'");
-
-  // Software pills (Windows 11, Office 2024, etc.)
+  
   const swList = Array.isArray(p.software) ? p.software : [];
   const swPills = swList.map(sw => {
     const isWin = sw.toLowerCase().includes('windows');
@@ -22,7 +20,6 @@ function buildCard(p) {
     return `<span class="sw-pill">${icon}${sw}</span>`;
   }).join('');
 
-  // Badge label text
   const badgeLabels = { exuk: 'EX-UK', new: 'NEW', hot: 'HOT', refurb: 'REFURB', elite: 'ELITE' };
   const badgeHtml = (!outOfStock && p.badge)
     ? `<span class="product-badge ${p.badge}">${badgeLabels[p.badge] || p.badge.toUpperCase()}</span>`
@@ -34,19 +31,25 @@ function buildCard(p) {
     <div class="product-card${outOfStock ? ' out-of-stock' : ''}">
       <div class="product-img" style="${outOfStock ? 'filter:grayscale(60%);opacity:0.8;' : ''}">
         <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.src='https://placehold.co/600x375/003B73/FFFFFF?text=${encodeURIComponent(p.name)}'">
-
       </div>
       <div class="product-info">
         ${badgeHtml}
         <div class="brand">${p.brand}</div>
         <h3 class="name">${p.name}</h3>
         <p class="specs">${p.specs}</p>
+        <div style="display:flex; gap:8px; margin-bottom:10px; opacity:0.8;">
+             <span style="font-size:0.7rem; background:rgba(0,189,214,0.1); color:#00BDD6; padding:2px 8px; border-radius:4px; font-weight:600;">🛡️ 6-MO WARRANTY</span>
+             <span style="font-size:0.7rem; background:rgba(0,189,214,0.1); color:#00BDD6; padding:2px 8px; border-radius:4px; font-weight:600;">🚚 G4S READY</span>
+        </div>
         ${swPills ? `<div class="sw-pills-row">${swPills}</div>` : ''}
         <div class="price-row">
           <span class="price" style="${outOfStock ? 'color:#999;' : ''}">KES ${p.price.toLocaleString()}</span>
           ${outOfStock
             ? `<span class="buy-btn" style="background:#999;cursor:not-allowed;pointer-events:none;">Out of Stock</span>`
-            : `<a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I'm%20interested%20in%20the%20${encodeURIComponent(p.name)}" class="buy-btn">Enquire</a> <a href="' + shareUrl + '" target="_blank" class="share-btn" style="background:rgba(255,255,255,0.05); border:1px solid var(--border); padding:10px; border-radius:10px; display:flex; align-items:center; justify-content:center; color:var(--text-muted);"><i class="ph ph-share-network" style="font-size:1.2rem;"></i></a>`
+            : `<div style="display:flex; gap:8px;">
+                <a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I'm%20interested%20in%20the%20${encodeURIComponent(p.name)}" class="buy-btn">Enquire</a>
+                <a href="${shareUrl}" target="_blank" class="share-btn" style="background:rgba(255,255,255,0.05); border:1px solid var(--border); padding:10px; border-radius:10px; display:flex; align-items:center; justify-content:center; color:var(--text-muted);"><i class="ph ph-share-network" style="font-size:1.2rem;"></i></a>
+               </div>`
           }
         </div>
       </div>
@@ -54,7 +57,6 @@ function buildCard(p) {
   `;
 }
 
-function filterProducts(filter, targetBtn) { renderProducts(filter, targetBtn); }
 function renderProducts(filter = 'featured', targetBtn = null) {
   currentFilter = filter;
   const container = document.getElementById('productsGrid');
@@ -68,7 +70,7 @@ function renderProducts(filter = 'featured', targetBtn = null) {
 
   let filtered = filter === 'all'
     ? ALL_PRODUCTS
-    : ALL_PRODUCTS.filter(p => p.category.includes(filter));
+    : ALL_PRODUCTS.filter(p => (p.category || '').toLowerCase().includes(filter.toLowerCase()));
 
   if (filter === 'featured' && filtered.length === 0) filtered = ALL_PRODUCTS;
 
@@ -85,75 +87,29 @@ function loadMoreProducts() {
 }
 
 function searchProducts() {
-  const input = document.querySelector("#productSearch");
+  const input = document.getElementById('productSearch');
   if (!input) return;
   const query = input.value.toLowerCase().trim();
-  const container = document.getElementById("productsGrid");
-  const loadMoreBtn = document.getElementById("loadMoreBtn");
+  const container = document.getElementById('productsGrid');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
   if (!container) return;
 
   if (!query) { 
-    renderProducts(currentFilter || "featured"); 
-    if (loadMoreBtn) loadMoreBtn.style.display = "block";
+    renderProducts(currentFilter); 
     return; 
   }
 
-  // Filter against ALL_PRODUCTS (the big combined array)
   const filtered = ALL_PRODUCTS.filter(p =>
     (p.name && p.name.toLowerCase().includes(query)) ||
     (p.brand && p.brand.toLowerCase().includes(query)) ||
     (p.specs && p.specs.toLowerCase().includes(query))
   );
 
-  container.innerHTML = filtered.map(buildCard).join("");
-  if (loadMoreBtn) loadMoreBtn.style.display = "none";
-}
-
-  const filtered = ALL_PRODUCTS.filter(p =>
-    p.name.toLowerCase().includes(query) ||
-    p.brand.toLowerCase().includes(query) ||
-    p.specs.toLowerCase().includes(query)
-  );
-
   container.innerHTML = filtered.map(buildCard).join('');
-  
   if (loadMoreBtn) loadMoreBtn.style.display = 'none';
 }
 
-// Auto-run on load
 document.addEventListener('DOMContentLoaded', () => {
-  setupDailySpecial();
+  if (typeof setupDailySpecial === 'function') setupDailySpecial();
   renderProducts('featured');
 });
-
-// Daily Special Logic
-function setupDailySpecial() {
-  const section = document.getElementById("daily-special");
-  if (!section) return;
-
-  const today = new Date();
-  const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
-  const p = ALL_PRODUCTS[dateSeed % ALL_PRODUCTS.length];
-
-  if (p) {
-    section.style.display = 'block';
-    const titleEl = document.getElementById('special-title');
-    const specsEl = document.getElementById('special-specs');
-    const oldPriceEl = document.getElementById('special-old-price');
-    const newPriceEl = document.getElementById('special-new-price');
-    const imgEl = document.getElementById('special-img');
-    const bannerEl = document.getElementById('special-banner');
-
-    if (titleEl) titleEl.innerText = p.name;
-    if (specsEl) specsEl.innerText = p.specs;
-    if (oldPriceEl) oldPriceEl.innerText = `KES ${p.price.toLocaleString()}`;
-    if (newPriceEl) newPriceEl.innerHTML = `KES ${Math.round(p.price * 0.95).toLocaleString()}`;
-    if (imgEl) {
-      imgEl.src = p.img;
-      imgEl.onerror = () => { imgEl.src = `https://placehold.co/600x400/003B73/FFFFFF?text=${encodeURIComponent(p.name)}`; };
-    }
-    if (bannerEl) {
-      bannerEl.onclick = () => window.open(`https://wa.me/254721585784?text=Hi Nexcom! I want to claim the Daily Special: ${encodeURIComponent(p.name)}`, '_blank');
-    }
-  }
-}
