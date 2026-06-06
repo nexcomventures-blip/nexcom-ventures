@@ -2,6 +2,7 @@ const ALL_PRODUCTS = [...(typeof ALL_PRODUCTS_A !== "undefined" ? ALL_PRODUCTS_A
 
 let currentFilter = 'featured';
 let currentLimit = 8;
+let searchTimeout = null;
 
 function buildCard(p) {
   const outOfStock = p.inStock === false;
@@ -28,7 +29,7 @@ function buildCard(p) {
     : '';
 
   return `
-    <div class="product-card${outOfStock ? ' out-of-stock' : ''}">
+    <div class="product-card fade-in ${outOfStock ? ' out-of-stock' : ''}">
       <div class="product-img" style="${outOfStock ? 'filter:grayscale(60%);opacity:0.8;' : ''}">
         <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.src='https://placehold.co/600x375/003B73/FFFFFF?text=${encodeURIComponent(p.name)}'">
       </div>
@@ -86,27 +87,38 @@ function loadMoreProducts() {
   renderProducts(currentFilter);
 }
 
+// Optimized Debounced Search
 function searchProducts() {
-  const input = document.getElementById('productSearch');
-  if (!input) return;
-  const query = input.value.toLowerCase().trim();
-  const container = document.getElementById('productsGrid');
-  const loadMoreBtn = document.getElementById('loadMoreBtn');
-  if (!container) return;
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(() => {
+    const input = document.getElementById('productSearch');
+    if (!input) return;
+    const query = input.value.toLowerCase().trim();
+    const container = document.getElementById('productsGrid');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    if (!container) return;
 
-  if (!query) { 
-    renderProducts(currentFilter); 
-    return; 
-  }
+    if (!query) { 
+      renderProducts(currentFilter); 
+      return; 
+    }
 
-  const filtered = ALL_PRODUCTS.filter(p =>
-    (p.name && p.name.toLowerCase().includes(query)) ||
-    (p.brand && p.brand.toLowerCase().includes(query)) ||
-    (p.specs && p.specs.toLowerCase().includes(query))
-  );
+    const filtered = ALL_PRODUCTS.filter(p =>
+      (p.name && p.name.toLowerCase().includes(query)) ||
+      (p.brand && p.brand.toLowerCase().includes(query)) ||
+      (p.specs && p.specs.toLowerCase().includes(query))
+    );
 
-  container.innerHTML = filtered.map(buildCard).join('');
-  if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+    // Show loading state briefly
+    container.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:50px; opacity:0.5;">Searching...</div>';
+    
+    setTimeout(() => {
+      container.innerHTML = filtered.length > 0 
+        ? filtered.map(buildCard).join('') 
+        : '<div style="grid-column:1/-1; text-align:center; padding:50px; opacity:0.5;">No laptops found matching "' + query + '"</div>';
+      if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+    }, 100);
+  }, 250); // Wait 250ms after typing stops before searching
 }
 
 document.addEventListener('DOMContentLoaded', () => {
