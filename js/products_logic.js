@@ -5,6 +5,8 @@ let currentLimit = 8;
 
 function buildCard(p) {
   const outOfStock = p.inStock === false;
+  const shareText = encodeURIComponent(`Hi! Check out this ${p.name} at Nexcom Ventures for KES ${p.price.toLocaleString()}. See details here: https://nexcomventures.co.ke`);
+  const shareUrl = `https://wa.me/?text=${shareText}`;
   const softwareJson = JSON.stringify(p.software || []).replace(/'/g, "\\'");
 
   // Software pills (Windows 11, Office 2024, etc.)
@@ -44,7 +46,7 @@ function buildCard(p) {
           <span class="price" style="${outOfStock ? 'color:#999;' : ''}">KES ${p.price.toLocaleString()}</span>
           ${outOfStock
             ? `<span class="buy-btn" style="background:#999;cursor:not-allowed;pointer-events:none;">Out of Stock</span>`
-            : `<a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I'm%20interested%20in%20the%20${encodeURIComponent(p.name)}" class="buy-btn">Enquire</a>`
+            : `<a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I'm%20interested%20in%20the%20${encodeURIComponent(p.name)}" class="buy-btn">Enquire</a> <a href="' + shareUrl + '" target="_blank" class="share-btn" style="background:rgba(255,255,255,0.05); border:1px solid var(--border); padding:10px; border-radius:10px; display:flex; align-items:center; justify-content:center; color:var(--text-muted);"><i class="ph ph-share-network" style="font-size:1.2rem;"></i></a>`
           }
         </div>
       </div>
