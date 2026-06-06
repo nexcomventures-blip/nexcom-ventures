@@ -85,12 +85,29 @@ function loadMoreProducts() {
 }
 
 function searchProducts() {
-  const query = document.getElementById('productSearch').value.toLowerCase();
-  const container = document.getElementById('productsGrid');
-  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const input = document.querySelector("#productSearch");
+  if (!input) return;
+  const query = input.value.toLowerCase().trim();
+  const container = document.getElementById("productsGrid");
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
   if (!container) return;
 
-  if (!query) { renderProducts(currentFilter); return; }
+  if (!query) { 
+    renderProducts(currentFilter || "featured"); 
+    if (loadMoreBtn) loadMoreBtn.style.display = "block";
+    return; 
+  }
+
+  // Filter against ALL_PRODUCTS (the big combined array)
+  const filtered = ALL_PRODUCTS.filter(p =>
+    (p.name && p.name.toLowerCase().includes(query)) ||
+    (p.brand && p.brand.toLowerCase().includes(query)) ||
+    (p.specs && p.specs.toLowerCase().includes(query))
+  );
+
+  container.innerHTML = filtered.map(buildCard).join("");
+  if (loadMoreBtn) loadMoreBtn.style.display = "none";
+}
 
   const filtered = ALL_PRODUCTS.filter(p =>
     p.name.toLowerCase().includes(query) ||
