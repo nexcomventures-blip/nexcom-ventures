@@ -97,7 +97,7 @@ function searchProducts() {
   );
 
   container.innerHTML = filtered.map(buildCard).join('');
-  document.getElementById('laptops').scrollIntoView({ behavior: 'smooth' });
+  
   if (loadMoreBtn) loadMoreBtn.style.display = 'none';
 }
 
