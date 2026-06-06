@@ -284,16 +284,36 @@ section { position: relative; }
     transform: translateY(0);
 }
 
-/* Failsafe Layout Fix */
-.method-text * { 
-    transform: none !important; 
-    opacity: 1 !important; 
-    visibility: visible !important; 
-    position: relative; 
-    z-index: 1;
+/* Boutique Cinema Enhancements */
+body { cursor: default; }
+a, button, .service-item, .exp-card, .btn-gold { cursor: pointer; }
+
+/* Subtle Grain for Sections */
+.method, .services-v3, .curation-engine {
+    background-image: url('https://www.transparenttextures.com/patterns/p6.png'); /* Very light subtle grain */
 }
-.method-text h2 { margin-top: 10px; margin-bottom: 25px; display: block; }
-.method-text p { margin-top: 0; display: block; }
+
+/* Custom Selection Color */
+::selection { background: var(--secondary); color: var(--white); }
+
+/* Cinematic vignette for images */
+.method-image::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.3) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Refining the Preloader for a "Studio" feel */
+.preloader { background: var(--primary); display: flex; align-items: center; justify-content: center; position: fixed; inset: 0; z-index: 10000; }
+.preloader-logo { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--secondary); letter-spacing: 5px; animation: breathe 3s ease-in-out infinite; }
+
+@keyframes breathe {
+    0%, 100% { opacity: 0.3; letter-spacing: 5px; }
+    50% { opacity: 1; letter-spacing: 8px; }
+}
 
 /* Cinematic Film Grain Overlay */
 body::before {
