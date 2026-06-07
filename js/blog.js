@@ -42,6 +42,52 @@ const BLOG_POSTS = [
     tag: "Repair Guide",
     img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?q=80&w=800"
   }
+,
+  {
+    id: 10,
+    title: "Top 10 Student Laptops in Nairobi (2026 Edition)",
+    excerpt: "From Lenovo ThinkPads to HP ProBooks, find the most durable and affordable laptops for campus life in Kenya.",
+    content: "University life in Nairobi requires a laptop that is fast, light, and has a long-lasting battery. For 2026, we recommend the Lenovo ThinkPad T480s for its durability, or the HP EliteBook 840 G5 for its premium feel at a student budget. At Nexcom, we offer special student discounts and ensure every laptop comes pre-loaded with Microsoft Office and essential research tools.",
+    date: "June 7, 2026",
+    category: "Buying Guide",
+    image: "https://images.unsplash.com/photo-1523240715630-9918c13bc1ad?q=80&w=800"
+  },
+  {
+    id: 11,
+    title: "HP EliteBook vs Dell Latitude: Which is best for Kenyan Offices?",
+    excerpt: "A deep dive into the two most popular office laptops in Nairobi to help you decide.",
+    content: "Nairobi businesses often debate between HP and Dell. EliteBooks are known for their sleek aluminum design and superior screens, while Dell Latitudes are praised for their robust build and ease of repair. In our experience at Nexcom, EliteBooks are perfect for sales teams and executives, while Latitudes are workhorses for back-office operations. Both offer excellent security features for corporate data.",
+    date: "June 7, 2026",
+    category: "Comparison",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800"
+  },
+  {
+    id: 12,
+    title: "MacBook Air M1 in 2026: Still the king of value in Kenya?",
+    excerpt: "Why the M1 Air remains our top-selling MacBook for remote workers and students in Nairobi.",
+    content: "Even in 2026, the MacBook Air M1 is the best-value Apple laptop you can buy in Kenya. Its battery life easily lasts a full day of meetings or classes, and it runs silent without fans. For designers and writers in Nairobi, it offers professional performance at a fraction of the cost of newer models. We stock pristine Ex-UK M1 units starting from KES 65,000.",
+    date: "June 7, 2026",
+    category: "Apple",
+    image: "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?q=80&w=800"
+  },
+  {
+    id: 13,
+    title: "The Ultimate Coding Laptop Guide for Nairobi Developers",
+    excerpt: "Looking for a machine that handles VS Code, Docker, and Android Studio? Here's what you need.",
+    content: "Kenyan developers need high RAM and fast SSDs. We recommend at least 16GB of RAM for local development. The Lenovo ThinkPad T14 or the MacBook Pro 14-inch are our top picks for devs in Nairobi. They offer the ports you need and the processing power to handle heavy compilations. Visit Nexcom to test our dedicated dev-spec machines.",
+    date: "June 7, 2026",
+    category: "Tech Guide",
+    image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=800"
+  },
+  {
+    id: 14,
+    title: "Best Laptops for Graphic Design & Video Editing in Kenya",
+    excerpt: "High-color accuracy and dedicated GPUs: What to look for in a creative workstation.",
+    content: "Graphic designers in Nairobi shouldn't settle for average screens. You need 100% sRGB color accuracy. We recommend the Dell XPS series or high-end HP ZBooks. For video editors, the MacBook Pro M1/M2 Max remains the industry standard. At Nexcom, we help you find machines with dedicated NVIDIA graphics to speed up your rendering times.",
+    date: "June 7, 2026",
+    category: "Creative",
+    image: "https://images.isson.com/photo-1558655146-d09347e92766?q=80&w=800"
+  }
 ];
 
 function showPost(id) {
