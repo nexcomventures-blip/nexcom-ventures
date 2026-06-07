@@ -32,6 +32,16 @@ const BLOG_POSTS = [
         category: 'Apple', 
         image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800' 
     }
+,
+  {
+    id: 9,
+    title: "Where to get the best Laptop Repairs in Nairobi CBD",
+    excerpt: "Looking for reliable laptop repairs on Mama Ngina St? Learn why Nexcom is the top choice for screen, battery, and motherboard fixes.",
+    content: "When your laptop breaks down in Nairobi, you need a technician you can trust. Located on Mama Ngina Street, Nexcom Ventures offers same-day repairs for MacBook, HP, Dell, and Lenovo. From simple screen replacements to complex motherboard soldering, we use genuine parts and provide a warranty on all fixes. Don't risk your data with unqualified 'fundis'—visit us for professional diagnostic services and transparent pricing.",
+    date: "June 7, 2026",
+    tag: "Repair Guide",
+    img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?q=80&w=800"
+  }
 ];
 
 function showPost(id) {
