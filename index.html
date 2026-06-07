@@ -328,15 +328,12 @@
     </div>
 
   <!-- Search & Filter -->
-  <div class="shop-controls">
-                    <div class="search-wrap" style="position: relative; max-width: 400px; width: 100%; margin: 0 auto; display: block;">
-      <input type="text" id="productSearch" placeholder="Search model (e.g. T480)..." oninput="searchProducts()" onkeyup="searchProducts()" class="search-input" style="width: 100%; padding: 0.8rem 1rem 0.8rem 3rem; border-radius: 50px; background: var(--bg2); border: 1px solid var(--border); color: var(--text); font-size: 0.95rem; display: block;"/>
+    <div class="shop-controls" style="display: flex; justify-content: center; margin-bottom: 20px;">
+    <div class="search-wrap" style="position: relative; max-width: 400px; width: 100%; margin: 0 auto;">
+      <input type="text" id="productSearch" placeholder="Type model, brand or specs..." oninput="searchProducts()" class="search-input" style="width: 100%; padding: 0.8rem 1rem 0.8rem 3rem; border-radius: 50px; background: var(--bg2); border: 1px solid var(--border); color: var(--text); font-size: 0.95rem;"/>
       <span class="search-icon" style="position: absolute; left: 1.2rem; top: 50%; transform: translateY(-50%); font-size: 1rem; opacity: 0.5; pointer-events: none;">🔍</span>
     </div>
-      <button onclick="searchProducts()" style="background: var(--primary); color: white; border: none; padding: 0 25px; border-radius: 12px; font-weight: 700; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; white-space: nowrap;">
-        Search
-      </button>
-    </div>
+  </div>
     <div class="filter-tabs">
       <button class="filter-btn active" onclick="renderProducts('featured', this)">Featured</button>
       <button class="filter-btn" onclick="renderProducts('all', this)">All Items</button>
