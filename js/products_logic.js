@@ -3,7 +3,6 @@ const ALL_PRODUCTS = [...(typeof ALL_PRODUCTS_A !== "undefined" ? ALL_PRODUCTS_A
 let currentFilter = 'featured';
 let currentLimit = 8;
 
-
 function buildCard(p) {
   const outOfStock = p.inStock === false;
   const shareText = encodeURIComponent(`Hi! Check out this ${p.name} at Nexcom Ventures for KES ${p.price.toLocaleString()}. See details here: https://nexcomventures.co.ke`);
@@ -87,7 +86,6 @@ function loadMoreProducts() {
   renderProducts(currentFilter);
 }
 
-// Optimized Debounced Search
 function searchProducts() {
   const input = document.getElementById('productSearch');
   if (!input) return;
@@ -110,27 +108,9 @@ function searchProducts() {
 
   container.innerHTML = filtered.length > 0 
     ? filtered.map(buildCard).join('') 
-    : '<div style="grid-column:1/-1; text-align:center; padding:50px; opacity:0.5;">No laptops found matching "' + query + '"</div>';
+    : `<div style="grid-column:1/-1; text-align:center; padding:50px; opacity:0.5;">No laptops found matching "${query}"</div>`;
   
   if (loadMoreBtn) loadMoreBtn.style.display = 'none';
-}
-
-    const filtered = ALL_PRODUCTS.filter(p =>
-      (p.name && p.name.toLowerCase().includes(query)) ||
-      (p.brand && p.brand.toLowerCase().includes(query)) ||
-      (p.specs && p.specs.toLowerCase().includes(query))
-    );
-
-    // Show loading state briefly
-    container.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:50px; opacity:0.5;">Searching...</div>';
-    
-    setTimeout(() => {
-      container.innerHTML = filtered.length > 0 
-        ? filtered.map(buildCard).join('') 
-        : '<div style="grid-column:1/-1; text-align:center; padding:50px; opacity:0.5;">No laptops found matching "' + query + '"</div>';
-      if (loadMoreBtn) loadMoreBtn.style.display = 'none';
-    }, 100);
-  }, 250); // Wait 250ms after typing stops before searching
 }
 
 document.addEventListener('DOMContentLoaded', () => {
