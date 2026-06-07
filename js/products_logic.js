@@ -1,3 +1,8 @@
+const ALL_PRODUCTS = [
+  ...(typeof ALL_PRODUCTS_A !== "undefined" ? ALL_PRODUCTS_A : []), 
+  ...(typeof ALL_PRODUCTS_B !== "undefined" ? ALL_PRODUCTS_B : [])
+];
+
 let currentFilter = 'featured';
 let currentLimit = 12;
 
@@ -16,7 +21,7 @@ function renderProducts(filter = 'featured', targetBtn = null) {
 
   let filtered = filter === 'all' 
     ? ALL_PRODUCTS 
-    : ALL_PRODUCTS.filter(p => p.category.includes(filter));
+    : ALL_PRODUCTS.filter(p => (p.category || '').toLowerCase().includes(filter.toLowerCase()));
 
   if (filter === 'featured' && filtered.length === 0) {
     filtered = ALL_PRODUCTS;
@@ -32,7 +37,7 @@ function renderProducts(filter = 'featured', targetBtn = null) {
         ${p.badge ? `<span class="badge ${p.badge}">${p.badge}</span>` : ''}
       </div>
       <div class="product-info">
-        <div class="brand">${p.brand}</div>
+        <div class="brand">${p.brand || ''}</div>
         <h3 class="name">${p.name}</h3>
         <p class="specs">${p.specs}</p>
         <div class="price-row">
@@ -67,9 +72,9 @@ function searchProducts() {
 
   container.innerHTML = '';
   const filtered = ALL_PRODUCTS.filter(p => 
-    p.name.toLowerCase().includes(query) || 
-    p.brand.toLowerCase().includes(query) || 
-    p.specs.toLowerCase().includes(query)
+    (p.name && p.name.toLowerCase().includes(query)) || 
+    (p.brand && p.brand.toLowerCase().includes(query)) || 
+    (p.specs && p.specs.toLowerCase().includes(query))
   );
 
   filtered.forEach(p => {
@@ -80,7 +85,7 @@ function searchProducts() {
         ${p.badge ? `<span class="badge ${p.badge}">${p.badge}</span>` : ''}
       </div>
       <div class="product-info">
-        <div class="brand">${p.brand}</div>
+        <div class="brand">${p.brand || ''}</div>
         <h3 class="name">${p.name}</h3>
         <p class="specs">${p.specs}</p>
         <div class="price-row">
@@ -92,7 +97,7 @@ function searchProducts() {
     container.appendChild(card);
   });
 
-  if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+  if (loadMoreBtn) { loadMoreBtn.style.display = 'none'; }
 }
 
 // Auto-run on load
@@ -106,7 +111,8 @@ function setupDailySpecial() {
   const section = document.getElementById("daily-special");
   if (!section) return;
 
-  // Use a rotating deal based on the day
+  if (!ALL_PRODUCTS || ALL_PRODUCTS.length === 0) return;
+
   const today = new Date();
   const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
   const p = ALL_PRODUCTS[dateSeed % ALL_PRODUCTS.length];
@@ -128,7 +134,7 @@ function setupDailySpecial() {
     }
     
     if (imgEl) {
-      if (p.img.includes('placeholder.com')) {
+      if (p.img && p.img.includes('placeholder.com')) {
         const brandImages = {
           'Apple': 'https://www.freepnglogos.com/uploads/macbook-png/macbook-cleanmymac-the-best-mac-cleanup-app-for-macos-get-16.png',
           'HP': 'https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png',
@@ -141,7 +147,6 @@ function setupDailySpecial() {
       }
     }
 
-    
     if (bannerEl) {
       bannerEl.onclick = () => {
         window.open(`https://wa.me/254721585784?text=Hi Nexcom! I want to claim the Daily Special: ${encodeURIComponent(p.name)}`, '_blank');
@@ -149,4 +154,3 @@ function setupDailySpecial() {
     }
   }
 }
-
