@@ -3,6 +3,7 @@
     --secondary: #c29d59;    /* Safari Gold */
     --accent: #5d4037;       /* Earthy Brown */
     --bg-light: #fdfbf7;
+    --bg-frame: #e0e0e0;
     --text-main: #1a1a1a;
     --white: #ffffff;
     --transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
@@ -17,9 +18,22 @@
 body {
     font-family: 'Montserrat', sans-serif;
     color: var(--text-main);
-    background: var(--bg-light);
+    background: var(--bg-frame);
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+#root-wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    background: var(--bg-light);
+    box-shadow: 0 0 100px rgba(0,0,0,0.1);
+    min-height: 100vh;
+}
+
+@media (max-width: 1300px) {
+    #root-wrapper { max-width: 100%; box-shadow: none; }
+    body { background: var(--bg-light); }
 }
 
 h1, h2, h3, .brand {
