@@ -90,6 +90,7 @@ const BLOG_POSTS = [
   }
 ];
 
+
 function showPost(id) {
     const post = BLOG_POSTS.find(p => p.id === id);
     if (!post) return;
@@ -98,13 +99,47 @@ function showPost(id) {
     modal.style = 'position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999; display:flex; align-items:center; justify-content:center; padding:20px; font-family: sans-serif;';
     modal.onclick = () => modal.remove();
     
-    modal.innerHTML = "<div style='background:#1a1a1a; max-width:600px; width:100%; max-height:90vh; overflow-y:auto; border-radius:15px; position:relative; border: 1px solid #333;' onclick='event.stopPropagation()'><img src='" + post.image + "' style='width:100%; height:250px; object-fit:cover;'><div style='padding:30px;'><span style='color:#00BDD6; font-weight:600; text-transform: uppercase; font-size: 0.8rem;'>" + post.category + "</span><h2 style='margin-top:10px; color: #ffffff;'>" + post.title + "</h2><div style='margin-top:20px; line-height:1.6;'>" + post.content + "</div><button onclick='this.parentElement.parentElement.parentElement.remove()' style='margin-top:30px; background:#00BDD6; color:white; border:none; padding:12px 25px; border-radius:8px; cursor:pointer; font-weight: bold; width: 100%;'>Close Reading</button></div></div>";
+    modal.innerHTML = `
+        <div style='background:#1a1a1a; max-width:650px; width:100%; max-height:90vh; overflow-y:auto; border-radius:20px; position:relative; border: 1px solid #333; box-shadow: 0 20px 50px rgba(0,0,0,0.5);' onclick='event.stopPropagation()'>
+            <img src='${post.image || post.img}' style='width:100%; height:300px; object-fit:cover;'>
+            <div style='padding:40px;'>
+                <span style='color:#00BDD6; font-weight:600; text-transform: uppercase; font-size: 0.8rem; letter-spacing:1px;'>${post.category || post.tag}</span>
+                <h2 style='margin-top:10px; color: #ffffff; font-size: 2rem; line-height:1.2;'>${post.title}</h2>
+                <div style='margin-top:25px; line-height:1.8; color: #ddd; font-size:1.05rem;'>${post.content}</div>
+                <button onclick='this.parentElement.parentElement.parentElement.remove()' style='margin-top:40px; background:#C5222A; color:white; border:none; padding:15px 25px; border-radius:10px; cursor:pointer; font-weight: 700; width: 100%; font-size: 1rem; transition: background 0.3s;'>Close Article</button>
+            </div>
+        </div>`;
     document.body.appendChild(modal);
 }
 
-function renderBlog() {
+let blogLimit = 3;
+
+function renderBlog(showAll = false) {
     const g = document.getElementById("blogGrid");
     if (!g) return;
-    g.innerHTML = BLOG_POSTS.map(p => "<div onclick='showPost(" + p.id + ")' style='background: #1a1a1a; border-radius: 12px; overflow: hidden; border: 1px solid #333; cursor:pointer;'><img src='" + p.image + "' style='width: 100%; height: 200px; object-fit: cover; opacity: 0.8;'><div style='padding: 20px;'><span style='color: #00BDD6; font-size: 0.8rem; font-weight: 600; text-transform: uppercase;'>" + p.category + "</span><h3 style='margin: 10px 0; font-size: 1.2rem; color: #ffffff;'>" + p.title + "</h3><p style='color: #aaaaaa; font-size: 0.9rem;'>" + p.excerpt + "</p><p style='color:#00BDD6; font-weight:600; font-size:0.8rem; margin-top:15px;'>READ ARTICLE →</p></div></div>").join('');
+    
+    const postsToDisplay = showAll ? BLOG_POSTS : BLOG_POSTS.slice(0, blogLimit);
+    
+    g.innerHTML = postsToDisplay.map(p => `
+        <div onclick='showPost(${p.id})' style='background: #1a1a1a; border-radius: 12px; overflow: hidden; border: 1px solid #333; cursor:pointer; transition: transform 0.3s ease;' onmouseover='this.style.transform="translateY(-5px)"' onmouseout='this.style.transform="translateY(0)"'>
+            <img src='${p.image || p.img}' style='width: 100%; height: 180px; object-fit: cover; opacity: 0.9;'>
+            <div style='padding: 20px;'>
+                <span style='color: #00BDD6; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;'>${p.category || p.tag || 'Insight'}</span>
+                <h3 style='margin: 10px 0; font-size: 1.1rem; color: #ffffff; line-height: 1.4;'>${p.title}</h3>
+                <p style='color: #aaaaaa; font-size: 0.85rem; line-height: 1.5;'>${p.excerpt}</p>
+                <p style='color:#00BDD6; font-weight:600; font-size:0.8rem; margin-top:15px; display:flex; align-items:center; gap:5px;'>READ ARTICLE <span style="font-size:1.1rem">→</span></p>
+            </div>
+        </div>
+    `).join('');
+
+    const btnWrap = document.getElementById("blogActionWrap");
+    if (btnWrap) {
+        btnWrap.style.display = (showAll || BLOG_POSTS.length <= blogLimit) ? "none" : "flex";
+    }
 }
-document.addEventListener('DOMContentLoaded', renderBlog);
+
+function showAllBlogs() {
+    renderBlog(true);
+}
+
+document.addEventListener('DOMContentLoaded', () => renderBlog(false));
