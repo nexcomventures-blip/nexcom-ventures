@@ -1,61 +1,5 @@
-const ALL_PRODUCTS = [...(typeof ALL_PRODUCTS_A !== "undefined" ? ALL_PRODUCTS_A : []), ...(typeof ALL_PRODUCTS_B !== "undefined" ? ALL_PRODUCTS_B : [])];
-
 let currentFilter = 'featured';
-let currentLimit = 8;
-
-function buildCard(p) {
-  const outOfStock = p.inStock === false;
-  const shareText = encodeURIComponent(`Hi! Check out this ${p.name} at Nexcom Ventures for KES ${p.price.toLocaleString()}. See details here: https://nexcomventures.co.ke`);
-  const shareUrl = `https://wa.me/?text=${shareText}`;
-  
-  const swList = Array.isArray(p.software) ? p.software : [];
-  const swPills = swList.map(sw => {
-    const isWin = sw.toLowerCase().includes('windows');
-    const isOff = sw.toLowerCase().includes('office');
-    const icon = isWin
-      ? `<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>`
-      : isOff
-      ? `<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M22.041 0H9.959A.972.972 0 009 .98v1.04l7 2.06V20l-7 2v1.02c0 .54.435.98.959.98h12.082A.972.972 0 0023 23.02V.98A.972.972 0 0022.041 0zM8 4.12L1.18 6.2A1 1 0 000 7.17v9.66a1 1 0 001.18.97L8 19.88z"/></svg>`
-      : '';
-    return `<span class="sw-pill">${icon}${sw}</span>`;
-  }).join('');
-
-  const badgeLabels = { exuk: 'EX-UK', new: 'NEW', hot: 'HOT', refurb: 'REFURB', elite: 'ELITE' };
-  const badgeHtml = (!outOfStock && p.badge)
-    ? `<span class="product-badge ${p.badge}">${badgeLabels[p.badge] || p.badge.toUpperCase()}</span>`
-    : outOfStock
-    ? `<span class="product-badge" style="background:rgba(150,150,150,0.9);color:#fff">OUT OF STOCK</span>`
-    : '';
-
-  return `
-    <div class="product-card fade-in ${outOfStock ? ' out-of-stock' : ''}">
-      <div class="product-img" style="${outOfStock ? 'filter:grayscale(60%);opacity:0.8;' : ''}">
-        <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.src='https://placehold.co/600x375/003B73/FFFFFF?text=${encodeURIComponent(p.name)}'">
-      </div>
-      <div class="product-info">
-        ${badgeHtml}
-        <div class="brand">${p.brand}</div>
-        <h3 class="name">${p.name}</h3>
-        <p class="specs">${p.specs}</p>
-        <div style="display:flex; gap:8px; margin-bottom:10px; opacity:0.8;">
-             <span style="font-size:0.7rem; background:rgba(0,189,214,0.1); color:#00BDD6; padding:2px 8px; border-radius:4px; font-weight:600;">🛡️ 6-MO WARRANTY</span>
-             <span style="font-size:0.7rem; background:rgba(0,189,214,0.1); color:#00BDD6; padding:2px 8px; border-radius:4px; font-weight:600;">🚚 G4S READY</span>
-        </div>
-        ${swPills ? `<div class="sw-pills-row">${swPills}</div>` : ''}
-        <div class="price-row">
-          <span class="price" style="${outOfStock ? 'color:#999;' : ''}">KES ${p.price.toLocaleString()}</span>
-          ${outOfStock
-            ? `<span class="buy-btn" style="background:#999;cursor:not-allowed;pointer-events:none;">Out of Stock</span>`
-            : `<div style="display:flex; gap:8px;">
-                <a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I'm%20interested%20in%20the%20${encodeURIComponent(p.name)}" class="buy-btn">Enquire</a>
-                <a href="${shareUrl}" target="_blank" class="share-btn" style="background:rgba(255,255,255,0.05); border:1px solid var(--border); padding:10px; border-radius:10px; display:flex; align-items:center; justify-content:center; color:var(--text-muted);"><i class="ph ph-share-network" style="font-size:1.2rem;"></i></a>
-               </div>`
-          }
-        </div>
-      </div>
-    </div>
-  `;
-}
+let currentLimit = 12;
 
 function renderProducts(filter = 'featured', targetBtn = null) {
   currentFilter = filter;
@@ -68,13 +12,37 @@ function renderProducts(filter = 'featured', targetBtn = null) {
     targetBtn.classList.add('active');
   }
 
-  let filtered = filter === 'all'
-    ? ALL_PRODUCTS
-    : ALL_PRODUCTS.filter(p => (p.category || '').toLowerCase().includes(filter.toLowerCase()));
+  container.innerHTML = '';
 
-  if (filter === 'featured' && filtered.length === 0) filtered = ALL_PRODUCTS;
+  let filtered = filter === 'all' 
+    ? ALL_PRODUCTS 
+    : ALL_PRODUCTS.filter(p => p.category.includes(filter));
 
-  container.innerHTML = filtered.slice(0, currentLimit).map(buildCard).join('');
+  if (filter === 'featured' && filtered.length === 0) {
+    filtered = ALL_PRODUCTS;
+  }
+
+  const itemsToShow = filtered.slice(0, currentLimit);
+
+  itemsToShow.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.innerHTML = `
+      <div class="product-img" style="background-image: url('${p.img}')">
+        ${p.badge ? `<span class="badge ${p.badge}">${p.badge}</span>` : ''}
+      </div>
+      <div class="product-info">
+        <div class="brand">${p.brand}</div>
+        <h3 class="name">${p.name}</h3>
+        <p class="specs">${p.specs}</p>
+        <div class="price-row">
+          <span class="price">KES ${p.price.toLocaleString()}</span>
+          <a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I'm%20interested%20in%20the%20${encodeURIComponent(p.name)}" class="buy-btn">Enquire</a>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
 
   if (loadMoreBtn) {
     loadMoreBtn.style.display = currentLimit >= filtered.length ? 'none' : 'block';
@@ -82,38 +50,103 @@ function renderProducts(filter = 'featured', targetBtn = null) {
 }
 
 function loadMoreProducts() {
-  currentLimit += 8;
+  currentLimit += 12;
   renderProducts(currentFilter);
 }
 
 function searchProducts() {
-  const input = document.getElementById('productSearch');
-  if (!input) return;
-  const query = input.value.toLowerCase().trim();
+  const query = document.getElementById('productSearch').value.toLowerCase();
   const container = document.getElementById('productsGrid');
   const loadMoreBtn = document.getElementById('loadMoreBtn');
   if (!container) return;
 
-  if (!query) { 
-    renderProducts(currentFilter); 
-    if (loadMoreBtn) loadMoreBtn.style.display = 'block';
-    return; 
+  if (!query) {
+    renderProducts(currentFilter);
+    return;
   }
 
-  const filtered = ALL_PRODUCTS.filter(p =>
-    (p.name && p.name.toLowerCase().includes(query)) ||
-    (p.brand && p.brand.toLowerCase().includes(query)) ||
-    (p.specs && p.specs.toLowerCase().includes(query))
+  container.innerHTML = '';
+  const filtered = ALL_PRODUCTS.filter(p => 
+    p.name.toLowerCase().includes(query) || 
+    p.brand.toLowerCase().includes(query) || 
+    p.specs.toLowerCase().includes(query)
   );
 
-  container.innerHTML = filtered.length > 0 
-    ? filtered.map(buildCard).join('') 
-    : `<div style="grid-column:1/-1; text-align:center; padding:50px; opacity:0.5;">No laptops found matching "${query}"</div>`;
-  
+  filtered.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.innerHTML = `
+      <div class="product-img" style="background-image: url('${p.img}')">
+        ${p.badge ? `<span class="badge ${p.badge}">${p.badge}</span>` : ''}
+      </div>
+      <div class="product-info">
+        <div class="brand">${p.brand}</div>
+        <h3 class="name">${p.name}</h3>
+        <p class="specs">${p.specs}</p>
+        <div class="price-row">
+          <span class="price">KES ${p.price.toLocaleString()}</span>
+          <a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I'm%20interested%20in%20the%20${encodeURIComponent(p.name)}" class="buy-btn">Enquire</a>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+
   if (loadMoreBtn) loadMoreBtn.style.display = 'none';
 }
 
+// Auto-run on load
 document.addEventListener('DOMContentLoaded', () => {
-  if (typeof setupDailySpecial === 'function') setupDailySpecial();
+  setupDailySpecial();
   renderProducts('featured');
 });
+
+// Daily Special Logic
+function setupDailySpecial() {
+  const section = document.getElementById("daily-special");
+  if (!section) return;
+
+  // Use a rotating deal based on the day
+  const today = new Date();
+  const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+  const p = ALL_PRODUCTS[dateSeed % ALL_PRODUCTS.length];
+
+  if (p) {
+    section.style.display = 'block';
+    const titleEl = document.getElementById('special-title');
+    const specsEl = document.getElementById('special-specs');
+    const oldPriceEl = document.getElementById('special-old-price');
+    const newPriceEl = document.getElementById('special-new-price');
+    const imgEl = document.getElementById('special-img');
+    const bannerEl = document.getElementById('special-banner');
+
+    if (titleEl) titleEl.innerText = p.name;
+    if (specsEl) specsEl.innerText = p.specs;
+    if (oldPriceEl) oldPriceEl.innerText = `KES ${p.price.toLocaleString()}`;
+    if (newPriceEl) {
+      newPriceEl.innerHTML = `KES ${Math.round(p.price * 0.9).toLocaleString()}`;
+    }
+    
+    if (imgEl) {
+      if (p.img.includes('placeholder.com')) {
+        const brandImages = {
+          'Apple': 'https://www.freepnglogos.com/uploads/macbook-png/macbook-cleanmymac-the-best-mac-cleanup-app-for-macos-get-16.png',
+          'HP': 'https://ssl-product-images.www8-hp.com/digfcpc/c08125553/front_900X900.png',
+          'Dell': 'https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9340/media-gallery/laptop-xps-13-9340-platinum-gallery-1.psd?fmt=png-alpha&wid=1000',
+          'Lenovo': 'https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8OTM3NjB8aW1hZ2UvcG5nfGg0Zi9oMmIvMTEwNjE1NzA2NTA2NTQucG5nfDY0ZGUyNTVmZmI1YzI5ZDY4ZDMwYmI0NmIxZDI1Zjk0ZDA0YjRkZGIzYjYyMDllNDNiZDFmZTc3YjcyYWRmMDM/lenovo-laptop-thinkbook-14-gen-2-intel-hero.png'
+        };
+        imgEl.src = brandImages[p.brand] || 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=1200&auto=format&fit=crop';
+      } else {
+        imgEl.src = p.img;
+      }
+    }
+
+    
+    if (bannerEl) {
+      bannerEl.onclick = () => {
+        window.open(`https://wa.me/254721585784?text=Hi Nexcom! I want to claim the Daily Special: ${encodeURIComponent(p.name)}`, '_blank');
+      };
+    }
+  }
+}
+
