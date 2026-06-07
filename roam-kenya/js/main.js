@@ -420,3 +420,15 @@ function handleServiceRequest(e, type) {
     alert('Thank you for your inquiry. A Roam Kenya specialist will contact you shortly with a personalized quote.');
     closeServiceDetail();
 }
+
+function updateNairobiTime() {
+    try {
+        const options = { timeZone: 'Africa/Nairobi', hour: '2-digit', minute: '2-digit', hour12: false };
+        const nairobiTime = new Intl.DateTimeFormat('en-GB', options).format(new Date());
+        const clockEl = document.getElementById('nairobiClock');
+        if(clockEl) clockEl.innerText = 'NAIROBI: ' + nairobiTime;
+    } catch(e) {}
+}
+setInterval(updateNairobiTime, 1000);
+updateNairobiTime();
+
