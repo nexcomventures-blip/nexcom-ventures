@@ -2,7 +2,7 @@ const ALL_PRODUCTS = [...(typeof ALL_PRODUCTS_A !== "undefined" ? ALL_PRODUCTS_A
 
 let currentFilter = 'featured';
 let currentLimit = 8;
-let searchTimeout = null;
+
 
 function buildCard(p) {
   const outOfStock = p.inStock === false;
@@ -89,19 +89,31 @@ function loadMoreProducts() {
 
 // Optimized Debounced Search
 function searchProducts() {
-  clearTimeout(searchTimeout);
-  searchTimeout = setTimeout(() => {
-    const input = document.getElementById('productSearch');
-    if (!input) return;
-    const query = input.value.toLowerCase().trim();
-    const container = document.getElementById('productsGrid');
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
-    if (!container) return;
+  const input = document.getElementById('productSearch');
+  if (!input) return;
+  const query = input.value.toLowerCase().trim();
+  const container = document.getElementById('productsGrid');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  if (!container) return;
 
-    if (!query) { 
-      renderProducts(currentFilter); 
-      return; 
-    }
+  if (!query) { 
+    renderProducts(currentFilter); 
+    if (loadMoreBtn) loadMoreBtn.style.display = 'block';
+    return; 
+  }
+
+  const filtered = ALL_PRODUCTS.filter(p =>
+    (p.name && p.name.toLowerCase().includes(query)) ||
+    (p.brand && p.brand.toLowerCase().includes(query)) ||
+    (p.specs && p.specs.toLowerCase().includes(query))
+  );
+
+  container.innerHTML = filtered.length > 0 
+    ? filtered.map(buildCard).join('') 
+    : '<div style="grid-column:1/-1; text-align:center; padding:50px; opacity:0.5;">No laptops found matching "' + query + '"</div>';
+  
+  if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+}
 
     const filtered = ALL_PRODUCTS.filter(p =>
       (p.name && p.name.toLowerCase().includes(query)) ||
