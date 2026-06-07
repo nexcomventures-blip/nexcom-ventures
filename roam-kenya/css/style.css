@@ -863,3 +863,11 @@ input:focus, textarea:focus { outline: 1px solid var(--secondary); }
     .hero-v3 { text-align: center; justify-content: center; }
     .hero-v3 p { margin: 0 auto 40px; }
 }
+
+section { padding: 80px 0 !important; }
+.hero-v3 { height: 85vh !important; }
+.tag { position: relative; }
+.tag::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: #c29d59; transition: 0.3s; }
+.tag:hover::after { width: 100%; }
+html { scroll-behavior: smooth; }
+
