@@ -3,6 +3,7 @@
     --secondary: #c29d59;    /* Safari Gold */
     --accent: #5d4037;       /* Earthy Brown */
     --bg-light: #fdfbf7;
+    --bg-grey: #f0f0f0;      /* Architectural Grey Frame */
     --text-main: #1a1a1a;
     --white: #ffffff;
     --transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
@@ -17,9 +18,19 @@
 body {
     font-family: 'Montserrat', sans-serif;
     color: var(--text-main);
-    background: var(--bg-light);
+    background: var(--bg-grey); /* Grey sidebar effect */
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+/* ===== ARCHITECTURAL PAGE WRAPPER ===== */
+.page-wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+    background: var(--bg-light);
+    box-shadow: 0 0 80px rgba(0,0,0,0.06);
+    position: relative;
+    min-height: 100vh;
 }
 
 h1, h2, h3, .brand {
