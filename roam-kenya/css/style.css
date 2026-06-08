@@ -615,6 +615,8 @@ h1, h2, h3, .brand {
 }
 
 .cta-v3-box {
+    overflow: hidden;
+    min-height: fit-content;
     background: var(--primary);
     padding: 100px;
     color: var(--white);
@@ -625,6 +627,10 @@ h1, h2, h3, .brand {
 .cta-v3-box p { max-width: 700px; margin: 0 auto 40px; opacity: 0.8; }
 
 .cta-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -845,8 +851,14 @@ input:focus, textarea:focus { outline: 1px solid var(--secondary); }
     .builder-grid { grid-template-columns: 1fr; gap: 15px; }
     .form-row { grid-template-columns: 1fr; }
     
-    .cta-v3-box { padding: 60px 20px; }
-    .cta-btns { flex-direction: column; }
+    .cta-v3-box {
+    overflow: hidden;
+    min-height: fit-content; padding: 60px 20px; }
+    .cta-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; flex-direction: column; }
     .btn-outline-gold, .btn-wa { padding: 15px 25px; text-align: center; }
     
     .method, .services-v3, .expeditions, .logistics-v3, .builder-v3, .curate {
@@ -864,7 +876,7 @@ input:focus, textarea:focus { outline: 1px solid var(--secondary); }
     .hero-v3 p { margin: 0 auto 40px; }
 }
 
-section { padding: 80px 0 !important; }
+section { padding: 60px 0; }
 .hero-v3 { height: 85vh !important; }
 .tag { position: relative; }
 .tag::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: #c29d59; transition: 0.3s; }
