@@ -986,3 +986,14 @@ html { scroll-behavior: smooth; }
     .stack-pager { display: none; }
 }
 
+
+/* Safari Stories Carousel */
+.stories-v3 { background: #f9f9f9; padding: 60px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
+.story-carousel { max-width: 800px; margin: 0 auto; position: relative; text-align: center; min-height: 250px; }
+.story-slide { display: none; padding: 20px; transition: opacity 0.5s ease; }
+.story-slide.active { display: block; animation: fadeIn 1s ease; }
+.story-content h3 { font-size: 1.8rem; color: var(--primary); margin-bottom: 15px; letter-spacing: 1px; text-transform: uppercase; }
+.story-content p { font-size: 1.1rem; line-height: 1.8; color: #555; font-style: italic; }
+.story-nav { margin-top: 30px; display: flex; justify-content: center; gap: 10px; }
+.story-dot { width: 10px; height: 10px; border-radius: 50%; background: #ccc; border: none; cursor: pointer; transition: 0.3s; }
+.story-dot.active { background: var(--secondary); transform: scale(1.3); }
