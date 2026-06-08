@@ -116,7 +116,7 @@ h1, h2, h3, .brand {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 20px;
     align-items: center;
 }
 
@@ -258,7 +258,7 @@ h1, h2, h3, .brand {
     bottom: 50px;
     right: 100px;
     display: flex;
-    gap: 40px;
+    gap: 20px;
     z-index: 2;
 }
 
@@ -347,7 +347,7 @@ h1, h2, h3, .brand {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 20px;
     text-align: center;
 }
 
@@ -452,12 +452,12 @@ h1, h2, h3, .brand {
 .payment-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 15px;
     margin-top: 40px;
 }
 .payment-card {
     background: #0a0a0a;
-    padding: 30px;
+    padding: 20px;
     border-radius: 12px;
     border: 1px solid #222;
     text-align: center;
@@ -513,7 +513,7 @@ h1, h2, h3, .brand {
     text-align: center;
     border-bottom: 5px dashed #fff;
 }
-.ticket-body { padding: 30px; position: relative; }
+.ticket-body { padding: 20px; position: relative; }
 .ticket-info { margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
 .ticket-label { font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
 .ticket-value { font-weight: 700; font-size: 1.1rem; }
@@ -575,7 +575,7 @@ h1, h2, h3, .brand {
 .grid-v3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 15px;
 }
 
 .exp-card {
@@ -590,7 +590,7 @@ h1, h2, h3, .brand {
 }
 
 .card-info {
-    padding: 30px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -821,7 +821,7 @@ input:focus, textarea:focus { outline: 1px solid var(--secondary); }
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 30px;
+        gap: 15px;
         transition: 0.5s ease;
         padding: 40px;
         z-index: 999;
@@ -842,7 +842,7 @@ input:focus, textarea:focus { outline: 1px solid var(--secondary); }
     .section-header h2 { font-size: 2.2rem; }
     
     .services-grid { grid-template-columns: 1fr 1fr; }
-    .builder-grid { grid-template-columns: 1fr; gap: 30px; }
+    .builder-grid { grid-template-columns: 1fr; gap: 15px; }
     .form-row { grid-template-columns: 1fr; }
     
     .cta-v3-box { padding: 60px 20px; }
