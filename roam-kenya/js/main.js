@@ -471,3 +471,27 @@ function nextStory() {
 if (stories.length > 0) {
     setInterval(nextStory, 6000);
 }
+
+// Safari Chronicles Logic
+let currentStoryIndex = 0;
+const storySlides = document.querySelectorAll('.story-slide');
+const storyDots = document.querySelectorAll('.story-dot');
+
+function setStory(index) {
+    if(!storySlides.length) return;
+    storySlides.forEach(s => s.classList.remove('active'));
+    storyDots.forEach(d => d.classList.remove('active'));
+    currentStoryIndex = index;
+    storySlides[currentStoryIndex].classList.add('active');
+    storyDots[currentStoryIndex].classList.add('active');
+}
+
+function rotateStories() {
+    if(!storySlides.length) return;
+    let next = (currentStoryIndex + 1) % storySlides.length;
+    setStory(next);
+}
+
+if(storySlides.length > 0) {
+    setInterval(rotateStories, 7000);
+}
