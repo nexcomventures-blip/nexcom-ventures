@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sip Cycle Card Pay POS</title>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <style>
+        :root { --navy: #003B73; --cyan: #00BDD6; --gray: #f4f7f6; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--gray); margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; }
+        .header { background: var(--navy); color: white; width: 100%; text-align: center; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        .container { width: 95%; max-width: 500px; margin-top: 20px; }
+        
+        #reader { width: 100%; border-radius: 12px; overflow: hidden; border: 3px solid var(--cyan) !important; background: black; }
+        
+        .card-info { background: white; padding: 20px; border-radius: 12px; margin-top: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: none; }
+        .card-id { font-size: 12px; color: #666; margin-bottom: 5px; }
+        .customer-name { font-size: 22px; font-weight: bold; color: var(--navy); }
+        .balance-badge { background: var(--cyan); color: white; padding: 10px 20px; border-radius: 50px; font-size: 24px; font-weight: bold; display: inline-block; margin: 15px 0; }
+        
+        .btn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+        .btn { padding: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 14px; transition: 0.2s; }
+        .btn-pay { background: var(--navy); color: white; }
+        .btn-topup { background: #38a169; color: white; }
+        .btn-cancel { background: #e53e3e; color: white; grid-column: span 2; }
+        .btn:active { transform: scale(0.98); opacity: 0.9; }
+
+        .log-section { margin-top: 30px; width: 100%; }
+        .log-item { background: white; padding: 10px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; font-size: 13px; }
+        
+        .setup-section { background: #fff; padding: 20px; border-radius: 12px; margin-top: 20px; text-align: center; }
+        input { width: 80%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1 style="margin:0; font-size: 20px;">💧 SIP CYCLE CARD PAY</h1>
+    <p style="margin:0; font-size: 12px; opacity:0.8;">Prepaid Customer Management</p>
+</div>
+
+<div class="container">
+    <div id="reader"></div>
+
+    <!-- Card Details View -->
+    <div id="cardView" class="card-info">
+        <div class="card-id" id="displayId">CARD: #---</div>
+        <div class="customer-name" id="displayName">Unknown Customer</div>
+        <div class="balance-badge" id="displayBalance">KES 0</div>
+        
+        <div class="btn-grid">
+            <button class="btn btn-pay" onclick="processPayment(150)">Deduct 150/- (20L)</button>
+            <button class="btn btn-pay" onclick="processPayment(100)">Deduct 100/-</button>
+            <button class="btn btn-topup" onclick="showTopup()">+ Top Up Card</button>
+            <button class="btn btn-topup" style="background:#805ad5" onclick="editCustomer()">Edit Details</button>
+            <button class="btn btn-cancel" onclick="closeCard()">Scan Another Card</button>
+        </div>
+    </div>
+
+    <!-- New Card Registration -->
+    <div id="setupView" class="setup-section" style="display:none;">
+        <h3>Register New Card</h3>
+        <p id="setupId" style="font-family:monospace; color:var(--cyan)"></p>
+        <input type="text" id="newName" placeholder="Customer Name (e.g. Mama Grace)">
+        <input type="number" id="newBalance" placeholder="Initial Top-up (KES)">
+        <button class="btn btn-topup" style="width:85%" onclick="saveNewCard()">Save & Activate Card</button>
+        <button class="btn btn-cancel" style="width:85%; margin-top:10px;" onclick="closeCard()">Cancel</button>
+    </div>
+
+    <div class="log-section">
+        <h4 style="color:var(--navy); margin-left: 10px;">Recent Card Transactions</h4>
+        <div id="transactionLogs"></div>
+    </div>
+    
+    <div style="text-align:center; margin: 20px 0;">
+        <button class="btn" style="background:#cbd5e0; color:#333;" onclick="exportData()">📥 Export Data to Excel</button>
+    </div>
+</div>
+
+<script>
+    let cards = JSON.parse(localStorage.getItem('sipCycleCards')) || {};
+    let logs = JSON.parse(localStorage.getItem('sipCycleCardLogs')) || [];
+    let activeCardId = null;
+
+    const html5QrCode = new Html5Qrcode("reader");
+    const config = { fps: 10, qrbox: { width: 250, height: 250 } };
+
+    function startScanner() {
+        html5QrCode.start({ facingMode: "environment" }, config, onScanSuccess);
+    }
+
+    function onScanSuccess(decodedText) {
+        activeCardId = decodedText;
+        html5QrCode.pause();
+        
+        if (cards[activeCardId]) {
+            showCard(activeCardId);
+        } else {
+            showSetup(activeCardId);
+        }
+    }
+
+    function showCard(id) {
+        document.getElementById('cardView').style.display = 'block';
+        document.getElementById('setupView').style.display = 'none';
+        document.getElementById('displayId').innerText = `CARD: ${id}`;
+        document.getElementById('displayName').innerText = cards[id].name;
+        document.getElementById('displayBalance').innerText = `KES ${cards[id].balance}`;
+    }
+
+    function showSetup(id) {
+        document.getElementById('cardView').style.display = 'none';
+        document.getElementById('setupView').style.display = 'block';
+        document.getElementById('setupId').innerText = id;
+    }
+
+    function saveNewCard() {
+        const name = document.getElementById('newName').value || "Guest Customer";
+        const balance = parseInt(document.getElementById('newBalance').value) || 0;
+        
+        cards[activeCardId] = { name, balance };
+        saveAll();
+        addLog(activeCardId, `Registered - Initial KES ${balance}`);
+        showCard(activeCardId);
+    }
+
+    function processPayment(amount) {
+        if (cards[activeCardId].balance < amount) {
+            alert("Insufficient Balance! Please Top Up.");
+            return;
+        }
+        
+        cards[activeCardId].balance -= amount;
+        saveAll();
+        addLog(activeCardId, `Paid KES ${amount}`);
+        showCard(activeCardId);
+        alert(`Payment of ${amount}/- Successful!`);
+    }
+
+    function showTopup() {
+        const amount = prompt("Enter Top-up Amount (KES):");
+        if (amount && !isNaN(amount)) {
+            cards[activeCardId].balance += parseInt(amount);
+            saveAll();
+            addLog(activeCardId, `Top-up +KES ${amount}`);
+            showCard(activeCardId);
+        }
+    }
+
+    function editCustomer() {
+        const newName = prompt("Edit Customer Name:", cards[activeCardId].name);
+        if (newName) {
+            cards[activeCardId].name = newName;
+            saveAll();
+            showCard(activeCardId);
+        }
+    }
+
+    function closeCard() {
+        document.getElementById('cardView').style.display = 'none';
+        document.getElementById('setupView').style.display = 'none';
+        html5QrCode.resume();
+    }
+
+    function saveAll() {
+        localStorage.setItem('sipCycleCards', JSON.stringify(cards));
+    }
+
+    function addLog(id, action) {
+        const log = {
+            id,
+            name: cards[id].name,
+            action,
+            time: new Date().toLocaleString()
+        };
+        logs.unshift(log);
+        localStorage.setItem('sipCycleCardLogs', JSON.stringify(logs.slice(0, 50)));
+        renderLogs();
+    }
+
+    function renderLogs() {
+        const container = document.getElementById('transactionLogs');
+        container.innerHTML = logs.map(l => `
+            <div class="log-item">
+                <div><strong>${l.name}</strong><br><small>${l.time}</small></div>
+                <div style="color:var(--navy); font-weight:bold;">${l.action}</div>
+            </div>
+        `).join('');
+    }
+
+    function exportData() {
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify({cards, logs}, null, 2));
+        const downloadAnchorNode = document.createElement('a');
+        downloadAnchorNode.setAttribute("href", dataStr);
+        downloadAnchorNode.setAttribute("download", "sip_cycle_card_backup.json");
+        document.body.appendChild(downloadAnchorNode);
+        downloadAnchorNode.click();
+        downloadAnchorNode.remove();
+    }
+
+    window.onload = () => {
+        startScanner();
+        renderLogs();
+    };
+</script>
+
+</body>
+</html>
