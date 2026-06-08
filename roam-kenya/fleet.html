@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Safari Fleet | Roam Kenya</title>
+    <title>Luxury Safari Fleet Nairobi | Land Cruiser & SUV Rentals | Roam Kenya</title>
+    <meta name="description" content="Explore our premium fleet of 4x4 Safari Land Cruisers and luxury SUVs available for rent in Nairobi. Professional chauffeurs and self-drive options.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -15,14 +16,15 @@
             --white: #ffffff;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-dark); }
-        .header { background: var(--primary); padding: 40px 20px; text-align: center; color: var(--white); }
+        body { font-family: 'Inter', sans-serif; letter-spacing: -0.02em; background-color: var(--bg-light); color: var(--text-dark); }
+        .header { background: #1b3022; position: relative; overflow: hidden; padding: 40px 20px; text-align: center; color: var(--white); }
         .header h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px; }
         .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
         .fleet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .fleet-card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
         .fleet-card:hover { transform: translateY(-10px); }
-        .fleet-img { width: 100%; height: 250px; background-size: cover; background-position: center; position: relative; }
+        .fleet-img {
+    transition: transform 0.5s ease; width: 100%; height: 250px; background-size: cover; background-position: center; position: relative; }
         .photo-courtesy { position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.5); color: white; font-size: 0.65rem; padding: 3px 8px; border-radius: 4px; backdrop-filter: blur(2px); }
         .fleet-tag { position: absolute; top: 15px; right: 15px; background: var(--accent); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
         .fleet-info { padding: 25px; }
@@ -31,7 +33,7 @@
         .fleet-features { list-style: none; margin-bottom: 20px; }
         .fleet-features li { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 0.9rem; color: #555; }
         .fleet-features i { color: var(--accent); width: 20px; }
-        .btn-book { display: block; width: 100%; background: var(--primary); color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
+        .btn-book { display: block; width: 100%; background: #1b3022; position: relative; overflow: hidden; color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
         .btn-book:hover { background: #2a4a35; }
         .back-btn { display: inline-block; margin-bottom: 20px; color: var(--accent); text-decoration: none; font-weight: bold; }
     </style>
@@ -47,7 +49,7 @@
         <div class="fleet-grid">
             <!-- Land Cruiser -->
             <div class="fleet-card">
-                <div class="fleet-img" style="background-image: url('images/safari-cruiser.jpg');">
+                <div class="fleet-img" style="background-image: url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=800');">
                     <span class="fleet-tag">Most Popular</span>
                     <span class="photo-courtesy">Photo Courtesy</span>
                 </div>
@@ -67,7 +69,7 @@
 
             <!-- Safari Van -->
             <div class="fleet-card">
-                <div class="fleet-img" style="background-image: url('images/safari-van.jpg');">
+                <div class="fleet-img" style="background-image: url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=800');">
                     <span class="fleet-tag">Best Value</span>
                     <span class="photo-courtesy">Photo Courtesy</span>
                 </div>
@@ -87,7 +89,7 @@
 
             <!-- Overland Truck -->
             <div class="fleet-card">
-                <div class="fleet-img" style="background-image: url('images/overland-truck.jpg');">
+                <div class="fleet-img" style="background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=800');">
                     <span class="fleet-tag">Expedition Ready</span>
                     <span class="photo-courtesy">Photo Courtesy</span>
                 </div>
