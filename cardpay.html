@@ -192,6 +192,29 @@
 
     function saveAll() {
         localStorage.setItem('sipCycleCards', JSON.stringify(cards));
+        syncToGoogleSheets();
+    }
+
+    async function syncToGoogleSheets() {
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbypPMgVi8YBms4kezCWReOkRtpy3-SezPr15BS2L1eE9eE1k8tuafUr791O0GBRitgX-g/exec';
+        const payload = {
+            action: 'sync_cards',
+            data: JSON.stringify(cards),
+            logs: JSON.stringify(logs.slice(0, 10)) // Sync last 10 logs
+        };
+
+        try {
+            await fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                cache: 'no-cache',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            console.log('Syncing to Google Sheets...');
+        } catch (e) {
+            console.error('Sync failed', e);
+        }
     }
 
     function addLog(id, action) {
