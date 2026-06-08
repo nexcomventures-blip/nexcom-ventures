@@ -448,3 +448,26 @@ function handleMainInquiry(e) {
     e.preventDefault();
     showPaymentModal();
 }
+
+// Safari Stories Auto-Rotation
+let currentStory = 0;
+const stories = document.querySelectorAll('.story-slide');
+const dots = document.querySelectorAll('.story-dot');
+
+function setStory(index) {
+    stories.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+    
+    currentStory = index;
+    stories[currentStory].classList.add('active');
+    dots[currentStory].classList.add('active');
+}
+
+function nextStory() {
+    let next = (currentStory + 1) % stories.length;
+    setStory(next);
+}
+
+if (stories.length > 0) {
+    setInterval(nextStory, 6000);
+}
