@@ -359,10 +359,14 @@ h1, h2, h3, .brand {
 
 .tag { cursor: pointer; transition: all 0.3s; position: relative; }
 .tag:hover { border-color: var(--secondary); color: var(--secondary); }
-.tag-wrapper { width: 100%; margin-bottom: 15px; position: relative; }
+.tag-wrapper { width: auto; margin-bottom: 5px; position: relative; display: inline-block; }
 
 /* Package Details Style */
 .package-details {
+    width: 300px;
+    position: absolute;
+    z-index: 50;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     display: none;
     margin-top: 15px;
     text-align: left;
@@ -683,7 +687,8 @@ h1, h2, h3, .brand {
 .tag-cloud {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 15px;
+    align-items: flex-start;
 }
 
 .tag {
@@ -719,7 +724,7 @@ h1, h2, h3, .brand {
         text-transform: none;
         letter-spacing: 0;
         white-space: normal;
-        width: 180px;
+        width: 250px;
         text-align: center;
         opacity: 0;
         visibility: hidden;
