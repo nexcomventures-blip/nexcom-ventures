@@ -43,7 +43,7 @@ h1, h2, h3, .brand {
 .container {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 30px;
 }
 
 /* ===== PRELOADER ===== */
@@ -86,7 +86,7 @@ h1, h2, h3, .brand {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 30px 0;
+    padding: 20px 0;
     transition: var(--transition);
 }
 
@@ -191,7 +191,7 @@ h1, h2, h3, .brand {
 .hero-content-v3 {
     position: relative;
     z-index: 2;
-    padding: 0 100px;
+    padding: 0 50px;
     max-width: 900px;
 }
 
@@ -272,7 +272,7 @@ h1, h2, h3, .brand {
 
 /* ===== METHOD ===== */
 .method {
-    padding: 150px 0;
+    padding: 80px 0;
 }
 
 .method-grid {
@@ -446,7 +446,7 @@ h1, h2, h3, .brand {
 /* Payment & Ticket Styling */
 .payment-section {
     background: var(--primary); color: var(--white);
-    padding: 80px 20px;
+    padding: 50px 20px;
     border-top: 1px solid #1a1a1a;
 }
 .payment-grid {
@@ -618,7 +618,7 @@ h1, h2, h3, .brand {
     overflow: hidden;
     min-height: fit-content;
     background: var(--primary);
-    padding: 100px;
+    padding: 60px 40px;
     color: var(--white);
     text-align: center;
 }
@@ -666,7 +666,7 @@ h1, h2, h3, .brand {
 .builder-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 30px;
     margin-top: 60px;
 }
 
@@ -741,7 +741,7 @@ h1, h2, h3, .brand {
 
 /* ===== CURATE ===== */
 .curate {
-    padding: 150px 0;
+    padding: 80px 0;
     background: var(--white);
 }
 
@@ -879,8 +879,8 @@ input:focus, textarea:focus { outline: 1px solid var(--secondary); }
     .hero-v3 p { margin: 0 auto 40px; }
 }
 
-section { padding: 60px 0; }
-.hero-v3 { height: 85vh !important; }
+section { padding: 20px 0; }
+.hero-v3 { height: 75vh !important; }
 .tag { position: relative; }
 .tag::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: #c29d59; transition: 0.3s; }
 .tag:hover::after { width: 100%; }
