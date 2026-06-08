@@ -417,7 +417,7 @@ function closeServiceDetail() {
 
 function handleServiceRequest(e, type) {
     e.preventDefault();
-    alert('Thank you for your inquiry. A Roam Kenya specialist will contact you shortly with a personalized quote.');
+    showPaymentModal();
     closeServiceDetail();
 }
 
@@ -432,3 +432,19 @@ function updateNairobiTime() {
 setInterval(updateNairobiTime, 1000);
 updateNairobiTime();
 
+
+function showPaymentModal() {
+    closeServiceDetail();
+    document.getElementById('paymentModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closePaymentModal() {
+    document.getElementById('paymentModal').classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+function handleMainInquiry(e) {
+    e.preventDefault();
+    showPaymentModal();
+}
