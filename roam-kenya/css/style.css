@@ -359,7 +359,7 @@ h1, h2, h3, .brand {
 
 .tag { cursor: pointer; transition: all 0.3s; position: relative; }
 .tag:hover { border-color: var(--secondary); color: var(--secondary); }
-.tag-wrapper { width: 100%; margin-bottom: 5px; }
+.tag-wrapper { width: 100%; margin-bottom: 15px; position: relative; }
 
 /* Package Details Style */
 .package-details {
@@ -445,7 +445,7 @@ h1, h2, h3, .brand {
 
 /* Payment & Ticket Styling */
 .payment-section {
-    background: #000;
+    background: var(--primary); color: var(--white);
     padding: 80px 20px;
     border-top: 1px solid #1a1a1a;
 }
@@ -699,12 +699,15 @@ h1, h2, h3, .brand {
 /* Tooltip style - Only for devices with hover capability */
 @media (hover: hover) {
     .tag[data-tip]::after {
+        pointer-events: none;
+        width: 250px;
+        line-height: 1.4;
         content: attr(data-tip);
         position: absolute;
         bottom: 120%;
         left: 50%;
         transform: translateX(-50%) translateY(10px);
-        background: #000;
+        background: var(--primary); color: var(--white);
         color: #fff;
         padding: 10px 15px;
         border-radius: 4px;
@@ -720,7 +723,7 @@ h1, h2, h3, .brand {
         transition: all 0.3s ease;
         border: 1px solid var(--secondary);
         box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        z-index: 999;
+        z-index: 10000;
     }
 
     .tag[data-tip]:hover::after {
@@ -830,7 +833,7 @@ input:focus, textarea:focus { outline: 1px solid var(--secondary); }
         gap: 15px;
         transition: 0.5s ease;
         padding: 40px;
-        z-index: 999;
+        z-index: 10000;
     }
     
     .nav-menu.active {
