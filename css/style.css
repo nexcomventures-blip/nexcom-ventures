@@ -1106,7 +1106,7 @@ section {
 .product-badge.new { background: rgba(16, 185, 129, 0.9); color: white; border: 1px solid rgba(255,255,255,0.1); }
 .product-badge.hot { background: rgba(240, 26, 36, 0.9); color: white; border: 1px solid rgba(255,255,255,0.1); }
 .product-badge.refurb { background: rgba(255, 255, 255, 0.1); color: white; border: 1px solid rgba(255,255,255,0.2); }
-.product-badge.exuk { background: rgba(124, 58, 237, 0.9); color: white; border: 1px solid rgba(255,255,255,0.1); }
+
 .product-badge.elite { 
   background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%); 
   color: #000; 
