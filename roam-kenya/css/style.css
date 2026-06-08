@@ -915,3 +915,56 @@ html { scroll-behavior: smooth; }
     background: var(--secondary);
 }
 
+
+.hero-pagers {
+    display: flex;
+    gap: 10px;
+    margin-right: 40px;
+    padding-right: 40px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+.pager-img {
+    width: 45px;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+    opacity: 0.6;
+}
+.pager-img:hover, .pager-img.active {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+    border-color: var(--secondary);
+}
+@media (max-width: 768px) {
+    .hero-pagers { display: none; }
+}
+
+
+.stack-pager {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    display: flex;
+    gap: 15px;
+    z-index: 5;
+}
+.stack-pager img {
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+.stack-pager img:hover {
+    transform: translateY(-10px);
+}
+@media (max-width: 992px) {
+    .stack-pager { display: none; }
+}
+
