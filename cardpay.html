@@ -46,6 +46,7 @@
     <div id="cardView" class="card-info">
         <div class="card-id" id="displayId">CARD: #---</div>
         <div class="customer-name" id="displayName">Unknown Customer</div>
+        <div id="displayPhone" style="font-size:12px; color:#666; margin-bottom:10px;">Phone: ---</div>
         <div class="balance-badge" id="displayBalance">KES 0</div>
         
         <div class="btn-grid">
@@ -61,7 +62,8 @@
     <div id="setupView" class="setup-section" style="display:none;">
         <h3>Register New Card</h3>
         <p id="setupId" style="font-family:monospace; color:var(--cyan)"></p>
-        <input type="text" id="newName" placeholder="Customer Name (e.g. Mama Grace)">
+        <input type="text" id="newName" placeholder="Customer Name">
+        <input type="text" id="newPhone" placeholder="Phone Number (e.g. 0721...)">
         <input type="number" id="newBalance" placeholder="Initial Top-up (KES)">
         <button class="btn btn-topup" style="width:85%" onclick="saveNewCard()">Save & Activate Card</button>
         <button class="btn btn-cancel" style="width:85%; margin-top:10px;" onclick="closeCard()">Cancel</button>
@@ -105,6 +107,7 @@
         document.getElementById('setupView').style.display = 'none';
         document.getElementById('displayId').innerText = `CARD: ${id}`;
         document.getElementById('displayName').innerText = cards[id].name;
+        document.getElementById('displayPhone').innerText = `Phone: ${cards[id].phone || 'Not Set'}`;
         document.getElementById('displayBalance').innerText = `KES ${cards[id].balance}`;
     }
 
@@ -116,12 +119,14 @@
 
     function saveNewCard() {
         const name = document.getElementById('newName').value || "Guest Customer";
+        const phone = document.getElementById('newPhone').value || "";
         const balance = parseInt(document.getElementById('newBalance').value) || 0;
         
-        cards[activeCardId] = { name, balance };
+        cards[activeCardId] = { name, phone, balance };
         saveAll();
         addLog(activeCardId, `Registered - Initial KES ${balance}`);
         showCard(activeCardId);
+        sendWhatsApp(activeCardId, `Welcome to Sip Cycle! Your card is active with KES ${balance}. Thank you.`);
     }
 
     function processPayment(amount) {
@@ -134,6 +139,7 @@
         saveAll();
         addLog(activeCardId, `Paid KES ${amount}`);
         showCard(activeCardId);
+        sendWhatsApp(activeCardId, `Payment of KES ${amount} successful at Sip Cycle. New Balance: KES ${cards[activeCardId].balance}.`);
         alert(`Payment of ${amount}/- Successful!`);
     }
 
@@ -144,6 +150,28 @@
             saveAll();
             addLog(activeCardId, `Top-up +KES ${amount}`);
             showCard(activeCardId);
+            sendWhatsApp(activeCardId, `Top-up of KES ${amount} received. New Balance: KES ${cards[activeCardId].balance}. Thank you!`);
+        }
+    }
+
+    function sendWhatsApp(id, msg) {
+        const phone = cards[id].phone;
+        if (!phone) return;
+        
+        // Format phone: remove spaces/dash, ensure prefix
+        let cleanPhone = phone.replace(/\D/g,'');
+        if (cleanPhone.startsWith('0')) cleanPhone = '254' + cleanPhone.substring(1);
+        if (!cleanPhone.startsWith('254')) cleanPhone = '254' + cleanPhone;
+
+        const businessPhone = "254721585784";
+        const text = encodeURIComponent(msg);
+        
+        // Open WhatsApp Link for Staff to click
+        const url = `https://wa.me/${cleanPhone}?text=${text}`;
+        
+        // Optional: Also notify business phone via another link or summary
+        if(confirm("Send WhatsApp confirmation to customer?")) {
+            window.open(url, '_blank');
         }
     }
 
