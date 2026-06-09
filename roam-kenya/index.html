@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Roam Kenya | Luxury Safari Curators & Private Field Logistics Nairobi</title>
+    <title>Roam Kenya | Luxury Safari Curators & Private Field Logistics Nairobi</title>
     <meta name="description" content="Bespoke Kenya safari curators for the modern nomad. We specialize in luxury private expeditions, high-stakes academic field logistics, and exclusive coastal escapes.">
     <meta name="keywords" content="luxury safari kenya, private safari nairobi, kenya field logistics, academic research logistics kenya, boutique travel kenya, private land cruiser rental nairobi, maasai mara luxury expeditions, bespoke kenya travel, roam kenya, luxury coastal escapes kenya">
     <meta property="og:type" content="website">
@@ -29,7 +29,7 @@
     }
     </script>
     
-    <link rel="stylesheet" href="css/style.css?v=35.0">
+    <link rel="stylesheet" href="css/style.css?v=36.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,8 +43,8 @@
             <ul class="nav-menu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#collection">Expeditions</a></li>
-                <li><a href="#rhythms">Rhythms</a></li>
-                <li><a href="https://wa.me/254721585784" class="nav-cta">Book an Escape</a></li>
+                <li><a href="#journal">Journal</a></li>
+                <li><a href="javascript:void(0)" onclick="toggleModal()" class="nav-cta">Book an Escape</a></li>
             </ul>
         </div>
     </nav>
@@ -66,6 +66,15 @@
             </div>
         </div>
     </header>
+
+    <div class="trust-strip">
+        <div class="container trust-flex">
+            <div class="trust-item"><i class="fas fa-leaf"></i> Sustainable Travel</div>
+            <div class="trust-item"><i class="fas fa-shield-alt"></i> Private Logistics</div>
+            <div class="trust-item"><i class="fas fa-award"></i> Boutique Quality</div>
+            <div class="trust-item"><i class="fas fa-clock"></i> 24/7 Security</div>
+        </div>
+    </div>
 
     <section id="about" class="about-modern">
         <div class="container">
@@ -91,7 +100,7 @@
                     <div class="card-content">
                         <h3>Lover's Edition</h3>
                         <p>Intimate coastal escapes and sunset savannah dinners curated for two.</p>
-                        <a href="https://wa.me/254721585784" class="card-link">Explore More</a>
+                        <a href="javascript:void(0)" onclick="toggleModal()" class="card-link">Explore More</a>
                     </div>
                 </div>
                 <div class="collection-card reveal">
@@ -101,7 +110,7 @@
                     <div class="card-content">
                         <h3>Field Logistics</h3>
                         <p>High-stakes logistics for researchers and scientific minds in the wild.</p>
-                        <a href="https://wa.me/254721585784" class="card-link">View Logistics</a>
+                        <a href="javascript:void(0)" onclick="toggleModal()" class="card-link">View Logistics</a>
                     </div>
                 </div>
                 <div class="collection-card reveal">
@@ -111,8 +120,26 @@
                     <div class="card-content">
                         <h3>Coastal Heritage</h3>
                         <p>Island heritage and private dhow sails in the cradle of the Swahili coast.</p>
-                        <a href="https://wa.me/254721585784" class="card-link">Discover Now</a>
+                        <a href="javascript:void(0)" onclick="toggleModal()" class="card-link">Discover Now</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journal" class="journal-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="subtitle">Safari Chronicles</span>
+                <h2>The Roam Journal</h2>
+            </div>
+            <div class="journal-grid reveal">
+                <div class="journal-img" style="background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=800');"></div>
+                <div class="journal-text">
+                    <span class="journal-date">June 2026 Edition</span>
+                    <h3>The Cradle of Mankind</h3>
+                    <p>Understanding the deep history of the Rift Valley and how it shapes the migrations of today. A deep dive into Kenya's architectural heritage of the land.</p>
+                    <a href="javascript:void(0)" onclick="toggleModal()" class="card-link" style="margin-top: 20px;">Read Chapter</a>
                 </div>
             </div>
         </div>
@@ -157,6 +184,35 @@
         </div>
     </footer>
 
+    <!-- Inquiry Modal -->
+    <div id="inquiryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="toggleModal()">&times;</span>
+            <div class="section-header" style="margin-bottom: 30px;">
+                <span class="subtitle">Curate My Path</span>
+                <h2>Journey Inquiry</h2>
+            </div>
+            <form class="inquiry-form" onsubmit="handleInquiry(event)">
+                <label>I am interested in:</label>
+                <select id="interest">
+                    <option>Lover's Edition</option>
+                    <option>Field Logistics</option>
+                    <option>Coastal Heritage</option>
+                    <option>Bespoke Expedition</option>
+                </select>
+                <label>My Preferred Month:</label>
+                <select id="month">
+                    <option>January - March (Calving)</option>
+                    <option>July - October (Crossing)</option>
+                    <option>November - December (Bloom)</option>
+                </select>
+                <label>Party Size:</label>
+                <input type="number" id="party" placeholder="Number of guests" required>
+                <button type="submit" class="btn-submit">Send Inquiry to Curator</button>
+            </form>
+        </div>
+    </div>
+
     <a href="https://wa.me/254721585784" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -175,6 +231,21 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        function toggleModal() {
+            const modal = document.getElementById('inquiryModal');
+            modal.classList.toggle('active');
+        }
+
+        function handleInquiry(e) {
+            e.preventDefault();
+            const interest = document.getElementById('interest').value;
+            const month = document.getElementById('month').value;
+            const party = document.getElementById('party').value;
+            
+            const message = `Hi Roam Kenya! I'm interested in the ${interest} for ${party} guests around ${month}. Can we discuss?`;
+            window.location.href = `https://wa.me/254721585784?text=${encodeURIComponent(message)}`;
+        }
     </script>
 </body>
 </html>
