@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sip Cycle | Premium Refill Water Nairobi</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-navy: #003B73;
+            --brand-cyan: #00BDD6;
+            --bg: #F8FAFC;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+        body { background: var(--bg); color: var(--brand-navy); line-height: 1.6; }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--brand-navy) 0%, #002147 100%);
+            color: white;
+            padding: 60px 20px 40px;
+            text-align: center;
+            border-radius: 0 0 40px 40px;
+        }
+        .logo { font-size: 2.5rem; font-weight: 800; margin-bottom: 10px; }
+        .logo span { color: var(--brand-cyan); }
+        .hero p { opacity: 0.9; font-size: 1.1rem; max-width: 300px; margin: 0 auto 30px; }
+
+        .container { max-width: 500px; margin: -30px auto 0; padding: 0 20px 100px; }
+
+        /* Price Card */
+        .card {
+            background: white;
+            border-radius: 25px;
+            padding: 25px;
+            box-shadow: 0 15px 35px rgba(0,59,115,0.1);
+            margin-bottom: 25px;
+        }
+        .section-title { 
+            font-size: 1.2rem; 
+            font-weight: 800; 
+            margin-bottom: 20px; 
+            display: flex; 
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title i { color: var(--brand-cyan); }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #F1F5F9;
+        }
+        .price-row:last-child { border: none; }
+        .item-info b { display: block; font-size: 1.1rem; }
+        .item-info span { font-size: 0.85rem; color: #64748B; }
+        .price-tag { 
+            background: #E0F7FA; 
+            color: var(--brand-navy); 
+            padding: 8px 15px; 
+            border-radius: 12px; 
+            font-weight: 800; 
+            font-size: 1.1rem;
+        }
+
+        /* Delivery Badge */
+        .delivery-zone {
+            background: var(--brand-cyan);
+            color: white;
+            padding: 15px;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        /* Call to Actions */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+        .btn:active { transform: scale(0.98); }
+        
+        .btn-whatsapp { background: #25D366; color: white; box-shadow: 0 10px 20px rgba(37,211,102,0.2); }
+        .btn-call { background: var(--brand-navy); color: white; box-shadow: 0 10px 20px rgba(0,59,115,0.2); }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #94A3B8;
+            font-size: 0.9rem;
+        }
+        .till-box {
+            border: 2px dashed var(--brand-cyan);
+            padding: 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+            color: var(--brand-navy);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="logo">Sip<span>💧</span>Cycle</div>
+        <p>Pure, Refreshing Water Delivered to Your Doorstep.</p>
+    </div>
+
+    <div class="container">
+        
+        <div class="delivery-zone">
+            <i class="fas fa-truck"></i> Delivering to: Zimmerman, Roysambu, Mirema & Surroundings
+        </div>
+
+        <div class="card">
+            <div class="section-title">
+                <i class="fas fa-tint"></i> Refill Prices
+            </div>
+            <div class="price-row">
+                <div class="item-info"><b>20 Litre Refill</b><span>Standard Water Refill</span></div>
+                <div class="price-tag">150/-</div>
+            </div>
+            <div class="price-row">
+                <div class="item-info"><b>10 Litre Refill</b><span>Perfect for small families</span></div>
+                <div class="price-tag">100/-</div>
+            </div>
+            <div class="price-row">
+                <div class="item-info"><b>5 Litre Refill</b><span>Quick top-up</span></div>
+                <div class="price-tag">50/-</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-title">
+                <i class="fas fa-shopping-basket"></i> New Bottles
+            </div>
+            <div class="price-row">
+                <div class="item-info"><b>20L New Soft Bottle</b><span>Includes First Refill</span></div>
+                <div class="price-tag">500/-</div>
+            </div>
+        </div>
+
+        <a href="https://wa.me/254719626363?text=Hello%20Sip%20Cycle,%20I%20would%20like%20to%20order%20a%20refill." class="btn btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> ORDER ON WHATSAPP
+        </a>
+
+        <a href="tel:0719626363" class="btn btn-call">
+            <i class="fas fa-phone-alt"></i> CALL FOR DELIVERY
+        </a>
+
+        <div class="footer">
+            <div class="till-box">
+                Buy Goods Till Number: <br>
+                <b style="font-size: 1.4rem;">3291421</b>
+            </div>
+            <p style="margin-top:20px;">Mon-Sat: 8AM - 11PM | Sun: 10AM - 10PM</p>
+        </div>
+    </div>
+
+</body>
+</html>
