@@ -7,6 +7,7 @@
     --text: #1A1A1A;
     --gray: #666666;
     --border: rgba(0, 0, 0, 0.05);
+    --radius: 25px; /* Sip Cycle inspired curvature */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -15,7 +16,7 @@ body {
     font-family: 'Space Grotesk', sans-serif;
     background-color: var(--bg);
     color: var(--text);
-    line-height: 1.6;
+    line-height: 1.7; /* Airier line height */
     overflow-x: hidden;
 }
 
@@ -66,8 +67,8 @@ h1, h2, h3, h4, .brand {
 .nav-cta {
     background: var(--primary);
     color: var(--white) !important;
-    padding: 10px 22px;
-    border-radius: 4px;
+    padding: 12px 28px;
+    border-radius: 50px; /* Fully rounded buttons like Sip Cycle */
     font-weight: 600;
 }
 
@@ -109,9 +110,9 @@ h1, h2, h3, h4, .brand {
 .hero-image {
     position: relative;
     height: 550px;
-    border-radius: 20px;
+    border-radius: var(--radius); /* Rounded corners */
     overflow: hidden;
-    box-shadow: 20px 20px 60px rgba(0,0,0,0.1);
+    box-shadow: 0 30px 60px rgba(44, 62, 45, 0.1); /* Softer shadow */
 }
 
 .hero-image img {
@@ -123,10 +124,10 @@ h1, h2, h3, h4, .brand {
 .btn-primary {
     background: var(--primary);
     color: var(--white);
-    padding: 16px 35px;
+    padding: 18px 40px;
     text-decoration: none;
     display: inline-block;
-    border-radius: 4px;
+    border-radius: 50px; /* Pill buttons */
     font-weight: 600;
     transition: 0.3s;
 }
@@ -161,7 +162,7 @@ section { padding: 80px 0; }
 
 .collection-card {
     background: var(--white);
-    border-radius: 15px;
+    border-radius: var(--radius); /* Rounded cards */
     overflow: hidden;
     border: 1px solid var(--border);
     transition: 0.4s;
@@ -169,7 +170,7 @@ section { padding: 80px 0; }
 
 .collection-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
 }
 
 .card-img { height: 300px; overflow: hidden; }
@@ -195,7 +196,7 @@ section { padding: 80px 0; }
 .rhythms-section { background: var(--accent); border-radius: 40px; margin: 0 30px; padding: 80px 0; }
 
 .rhythms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-.rhythm-card { text-align: center; background: rgba(255, 255, 255, 0.5); padding: 40px; border-radius: 20px; }
+.rhythm-card { text-align: center; background: rgba(255, 255, 255, 0.8); padding: 40px; border-radius: var(--radius); }
 .rhythm-card h4 { font-size: 1.4rem; margin-bottom: 15px; }
 .rhythm-tag { color: var(--secondary); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px; display: block; }
 
@@ -256,8 +257,9 @@ section { padding: 80px 0; }
     background: var(--bg);
     padding: 50px;
     width: 100%; max-width: 600px;
-    border-radius: 20px;
+    border-radius: var(--radius);
     position: relative;
+    border: 1px solid var(--border);
 }
 .close-modal {
     position: absolute; top: 20px; right: 20px;
@@ -271,13 +273,13 @@ section { padding: 80px 0; }
 }
 .btn-submit {
     width: 100%; background: var(--primary); color: white;
-    padding: 15px; border: none; border-radius: 4px;
+    padding: 18px; border: none; border-radius: 50px;
     font-weight: 700; cursor: pointer; text-transform: uppercase;
 }
 
 /* Journal Entry Style */
 .journal-section { background: white; }
-.journal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch; border: 1px solid var(--border); }
+.journal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
 .journal-img { height: 100%; min-height: 400px; background-size: cover; background-position: center; }
 .journal-text { padding: 80px; display: flex; flex-direction: column; justify-content: center; }
 .journal-date { font-size: 0.8rem; color: var(--secondary); margin-bottom: 15px; font-weight: 700; }
