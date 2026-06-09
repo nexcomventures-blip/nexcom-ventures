@@ -3,611 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roam Kenya | Boutique Safari Curators & Luxury Logistics Nairobi</title>
-    <meta name="description" content="Premium Kenya safari curators specializing in luxury expeditions, academic field labs, and private logistics. Experience the art of slow travel in the Maasai Mara, Amboseli, and beyond.">
-    <meta name="keywords" content="luxury safari kenya, boutique safari nairobi, private safari land cruiser rental, academic field logistics kenya, nairobi airport transfers, luxury travel kenya, maasai mara expeditions">
-    <link rel="stylesheet" href="css/style.css?v=12.0">
+    <title>Roam Kenya | Private Expeditions & Field Logistics</title>
+    <meta name="description" content="Bespoke Kenya safari curators for modern nomads. Luxury expeditions, field logistics, and curated solitude.">
+    
+    <link rel="stylesheet" href="css/style.css?v=32.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TravelAgency",
-      "name": "Roam Kenya",
-      "description": "Boutique Safari Curators specializing in luxury expeditions and field logistics in Kenya.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Mama Ngina St",
-        "addressLocality": "Nairobi",
-        "addressCountry": "KE"
-      },
-      "telephone": "+254 721 585 784",
-      "url": "https://nexcomventures.co.ke/roam-kenya/"
-    }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="root-wrapper">
-    <div class="preloader">
-        <div class="loader-content">
-            <span class="loader-logo">Roam Kenya</span>
-            <div class="loader-line"></div>
-        </div>
-    </div>
     <nav class="main-nav">
-        <div class="nav-container">
+        <div class="container nav-container">
             <a href="#" class="brand">ROAM KENYA</a>
             <ul class="nav-menu">
-                <li><a href="#experience">The Experience</a></li>
-                <li><a href="#expeditions">Expeditions</a></li>
-                <li><a href="#logistics">Logistics</a></li>
-                <li><a href="#curate" class="nav-cta">Curate My Journey</a></li>
+                <li><a href="#ethos">Ethos</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#movement">Movement</a></li>
+                <li><a href="#curate" class="nav-cta">Design My Trip</a></li>
             </ul>
-            <div class="nav-extras"><div class="nairobi-clock" id="nairobiClock" style="font-size: 0.7rem; color: var(--secondary); margin-right: 15px; border-right: 1px solid rgba(0,0,0,0.1); padding-right: 15px;">NAIROBI: --:--</div>
-                <div class="lang-selector">
-                    <span class="active" onclick="setLanguage('en')">EN</span>
-                    <span onclick="setLanguage('es')">ES</span>
-                    <span onclick="setLanguage('zh')">ZH</span>
-                    <span onclick="setLanguage('fr')">FR</span>
-                    <span onclick="setLanguage('de')">DE</span>
-                </div>
-                <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
-            </div>
         </div>
     </nav>
+
     <header class="hero-v3">
-        <div class="hero-video-overlay"></div>
-        <div class="hero-content-v3">
-            <span class="hero-tagline">Boutique Safari Curators</span>
-            <h1>Redefining the <br><em>Wilderness</em> Connection.</h1>
-            <p>Curation for academic minds, romantic souls, and private groups seeking the authentic pulse of Kenya.</p>
+        <div class="container hero-content-v3">
+            <span class="hero-tagline">Private Expeditions & Field Logistics</span>
+            <h1>Travel is a Dialogue. <br><em>Kenya</em> is the Speaker.</h1>
+            <p>Moving beyond the brochure. Bespoke movement and curated solitude for the modern explorer.</p>
             <div class="hero-actions">
-                <a href="#expeditions" class="btn-outline-gold">Explore Expeditions</a>
-                <a href="https://wa.me/254721585784" class="btn-wa"><i class="fab fa-whatsapp"></i> Chat with a Concierge</a>
+                <a href="#collection" class="btn-obsidian">View the Collection</a>
             </div>
         </div>
-        <div class="hero-stats">
-            <div class="hero-pagers">
-                <div class="pager-img active" style="background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=200');"></div>
-                <div class="pager-img" style="background-image: url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=200');"></div>
-                <div class="pager-img" style="background-image: url('https://images.unsplash.com/photo-1523805081730-614449379e7d?q=80&w=200');"></div>
-            </div>
-            <div class="stat-item">
-                <span class="stat-label" id="weather-location">Nairobi</span>
-                <span class="stat-val" id="weather-temp">24°C</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-label" data-i18n="condition">Sunny</span>
-                <span class="stat-val" id="weather-desc"><i class="fas fa-sun"></i></span>
-            </div>
-        </div>
+        <div class="hero-bg-img"></div>
     </header>
-    <section id="experience" class="method">
+
+    <section id="ethos" class="method">
         <div class="container">
             <div class="method-grid">
                 <div class="method-text reveal">
-                    <span class="subtitle">Our Philosophy</span>
-                    <h2>The Art of the Slow Safari.</h2>
-                    <p>We prioritize depth over distance. Our "Slow Safari" method connects you to the heritage and silence of the savannah.</p>
+                    <span class="subtitle">The Roam Ethos</span>
+                    <h2>Depth Over Distance.</h2>
+                    <p>We do not just provide transport; we curate the silence between destinations. Our ethos is built on the belief that travel should be a slow, intentional interaction with the land.</p>
                     <ul class="perks">
-                        <li><i class="fas fa-check"></i> Vetted Private Handlers</li>
-                        <li><i class="fas fa-check"></i> Sustainable Luxury Lodging</li>
-                        <li><i class="fas fa-check"></i> 24/7 Security & Check-ins</li>
+                        <li><i class="fas fa-check"></i> Elite Private Handlers</li>
+                        <li><i class="fas fa-check"></i> Zero-Trace Luxury Lodging</li>
+                        <li><i class="fas fa-check"></i> Real-time Movement Monitoring</li>
                     </ul>
                 </div>
-                <div class="method-image reveal">
-                    <div class="image-stack">
-                        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=800" alt="Safari" class="img-main">
-                        <div class="img-accent"></div>
-                        <div class="stack-pager">
-                            <img src="https://images.unsplash.com/photo-1523805081730-614449379e7d?q=80&w=200" alt="Thumb 1">
-                            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=200" alt="Thumb 2">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="services" class="services-v3">
-        <div class="container">
-            <div class="services-grid">
-                <div class="service-item reveal" onclick="openServiceDetail('transfers')">
-                    <i class="fas fa-plane-arrival"></i>
-                    <h3 data-i18n="service_transfers">Airport Transfers</h3>
-                    <p data-i18n="service_transfers_p">Seamless private arrivals with vetted professional handlers.</p>
-                </div>
-                <div class="service-item reveal" onclick="openServiceDetail('stays')">
-                    <i class="fas fa-hotel"></i>
-                    <h3 data-i18n="service_hotels">Boutique Stays</h3>
-                    <p data-i18n="service_hotels_p">Hand-picked luxury lodges and hidden city gems.</p>
-                </div>
-                <div class="service-item reveal" onclick="openServiceDetail('tickets')">
-                    <i class="fas fa-ticket-alt"></i>
-                    <h3 data-i18n="service_tickets">Air Tickets</h3>
-                    <p data-i18n="service_tickets_p">Hassle-free domestic and international flight curation.</p>
-                </div>
-                <div class="service-item reveal" onclick="openServiceDetail('charters')">
-                    <i class="fas fa-helicopter"></i>
-                    <h3 data-i18n="service_charters">Private Charters</h3>
-                    <p data-i18n="service_charters_p">Exclusive aerial access to remote conservancies.</p>
+                <div class="method-media reveal">
+                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=800" alt="Safari Ethos" style="width: 100%; filter: sepia(20%);">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Service Detail Overlay -->
-    <div id="serviceDetailOverlay" class="service-detail-overlay">
-        <div class="detail-content">
-            <span class="close-detail" onclick="closeServiceDetail()">&times;</span>
-            <div id="serviceDetailInner">
-                <!-- Content injected via JS -->
-            </div>
-        </div>
-    </div>
-
-    <section id="expeditions" class="expeditions">
+    <section id="collection" class="expeditions">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Curated Expeditions</h2>
-                <p>Tailored for specific journeys of the heart and mind.</p>
+            <div class="section-header reveal">
+                <span class="subtitle">Curated Collection</span>
+                <h2>The Journal Chapters</h2>
             </div>
             <div class="grid-v3">
                 <div class="exp-card reveal">
-                    <div class="card-media"><img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=800" alt="Honeymoon"></div>
+                    <div class="card-media"><img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=800" alt="Lover's Edition"></div>
                     <div class="card-info">
-                        <h3 data-i18n="exp_honeymoon">Lover's Edition</h3>
-                        <p data-i18n="exp_honeymoon_p">Intimate coastal escapes and sunset savannah dinners.</p>
-                        <button class="details-btn" onclick="toggleDetails('details-honeymoon')">View Breakdown</button>
-                        <div id="details-honeymoon" class="package-details">
-                            <ul>
-                                <li>Private Sundowners in the Mara</li>
-                                <li>Candlelit Dinners on Diani Beach</li>
-                                <li>Luxury Tented Suite Upgrades</li>
-                                <li>Professional Couples' Photoshoot</li>
-                            </ul>
-                        </div>
-                        <span class="price" data-i18n="price_custom">Custom Curation</span>
-                        <a href="#curate" class="card-btn" data-i18n="btn_explore_card">Explore</a>
+                        <h3>Lover's Edition</h3>
+                        <p>Intimate coastal escapes and sunset savannah dinners curated for two.</p>
+                        <a href="#curate" class="card-btn">Explore Chapter</a>
                     </div>
                 </div>
                 <div class="exp-card reveal">
-                    <div class="card-media"><img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=800" alt="Academic Field Labs"></div>
+                    <div class="card-media"><img src="https://images.unsplash.com/photo-1523805081730-614449379e7d?q=80&w=800" alt="Field Labs"></div>
                     <div class="card-info">
-                        <h3 data-i18n="exp_student">Academic Field Labs</h3>
-                        <p data-i18n="exp_student_p">Vetted logistics for university research and student safety.</p>
-                        <button class="details-btn" onclick="toggleDetails('details-academic')">View Breakdown</button>
-                        <div id="details-academic" class="package-details">
-                            <ul>
-                                <li>Vetted Secure Student Transport</li>
-                                <li>Research Site Permitting Support</li>
-                                <li>Budget-Friendly Group Lodging</li>
-                                <li>24/7 Field Emergency Support</li>
-                            </ul>
-                        </div>
-                        <span class="price" data-i18n="price_group">Group Rates</span>
-                        <a href="#curate" class="card-btn" data-i18n="btn_explore_card">Explore</a>
+                        <h3>Academic Field Labs</h3>
+                        <p>High-stakes logistics for researchers and scientific minds.</p>
+                        <a href="#curate" class="card-btn">View Logistics</a>
                     </div>
                 </div>
                 <div class="exp-card reveal">
-                    <div class="card-media"><img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=800" alt="Family Safari"></div>
-                    <div class="card-info">
-                        <h3 data-i18n="exp_vacation">Curated Vacations</h3>
-                        <p data-i18n="exp_vacation_p">Stress-free family and private group wilderness getaways.</p>
-                        <button class="details-btn" onclick="toggleDetails('details-vacation')">View Breakdown</button>
-                        <div id="details-vacation" class="package-details">
-                            <ul>
-                                <li>Custom Family Itinerary Design</li>
-                                <li>Child-Friendly Safari Activities</li>
-                                <li>Private Professional Guide</li>
-                                <li>All-Inclusive Ground Handling</li>
-                            </ul>
-                        </div>
-                        <span class="price" data-i18n="price_starts">From $250/day</span>
-                        <a href="#curate" class="card-btn" data-i18n="btn_explore_card">Explore</a>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-v3" style="margin-top: 30px;">
-                <div class="exp-card reveal">
-                    <div class="card-media"><img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=800" alt="Northern Frontier"></div>
-                    <div class="card-info">
-                        <h3>Northern Frontier</h3>
-                        <p>Rugged beauty and rare wildlife in Samburu & Meru.</p>
-                        <button class="details-btn" onclick="toggleDetails('details-north')">View Breakdown</button>
-                        <div id="details-north" class="package-details">
-                            <ul>
-                                <li>Samburu 'Special Five' Tracking</li>
-                                <li>Reteti Elephant Sanctuary Visit</li>
-                                <li>Cultural Immersion with Samburu</li>
-                                <li>Luxury Remote Fly-Camping</li>
-                            </ul>
-                        </div>
-                        <span class="price">Tailored Rates</span>
-                        <a href="#curate" class="card-btn">Explore</a>
-                    </div>
-                </div>
-                <div class="exp-card reveal">
-                    <div class="card-media"><img src="https://images.unsplash.com/photo-1489440543227-a12fe2ce40fa?q=80&w=800" alt="Rift Valley"></div>
-                    <div class="card-info">
-                        <h3>Rift Valley Avian</h3>
-                        <p>A bird-watcher's paradise across the pink lakes.</p>
-                        <button class="details-btn" onclick="toggleDetails('details-rift')">View Breakdown</button>
-                        <div id="details-rift" class="package-details">
-                            <ul>
-                                <li>Lake Nakuru Flamingo Search</li>
-                                <li>Naivasha Boat Safaris</li>
-                                <li>Hell's Gate Gorge Hiking</li>
-                                <li>Bespoke Ornithological Guides</li>
-                            </ul>
-                        </div>
-                        <span class="price">From $180/day</span>
-                        <a href="#curate" class="card-btn">Explore</a>
-                    </div>
-                </div>
-                <div class="exp-card reveal">
-                    <div class="card-media"><img src="https://images.unsplash.com/photo-1539667547529-84c607280d20?q=80&w=800" alt="Ancient Swahili Soul">
+                    <div class="card-media"><img src="https://images.unsplash.com/photo-1539667547529-84c607280d20?q=80&w=800" alt="Swahili Soul"></div>
                     <div class="card-info">
                         <h3>Ancient Swahili Soul</h3>
-                        <p>Island heritage and dhow sails in Lamu & Watamu.</p>
-                        <button class="details-btn" onclick="toggleDetails('details-coast')">View Breakdown</button>
-                        <div id="details-coast" class="package-details">
-                            <ul>
-                                <li>UNESCO Heritage Site Tours</li>
-                                <li>Sunset Dhow Sailing</li>
-                                <li>Deep Sea Fishing Expeditions</li>
-                                <li>Private Beach Villa Access</li>
-                            </ul>
-                        </div>
-                        <span class="price">Custom Curation</span>
-                        <a href="#curate" class="card-btn">Explore</a>
+                        <p>Island heritage and dhow sails in the cradle of the coast.</p>
+                        <a href="#curate" class="card-btn">Go Deep</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="logistics" class="logistics-v3">
-        <div class="container">
-            <div class="cta-v3-box">
-                <div class="cta-content">
-                    <h2>Seamless Movement. <br>Reliable Partners.</h2>
-                    <p>Vetted private drivers and boutique fleet management focused on safety and punctuality.</p>
-                    <div class="cta-btns">
-                        <a href="fleet.html" class="btn-gold">View Fleet Pricing</a>
-                        <a href="https://wa.me/254721585784?text=Fleet%20Inquiry" class="btn-outline-white">Join the Fleet</a>
-                        <a href="#curate" class="btn-outline-white">Inquire Logistics</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Custom Journey Builder -->
-    
-    <!-- Safari Stories / Cultural Highlights -->
+
     <section class="stories-v3">
         <div class="container">
             <div class="section-header reveal">
                 <span class="subtitle">Safari Chronicles</span>
-                <h2>Kenya's Living Heritage</h2>
+                <h2>Living History</h2>
             </div>
-            <div class="story-carousel reveal">
-                <div class="story-track">
-                    <div class="story-slide active">
-                        <div class="story-content">
-                            <h3>The Cradle of Mankind</h3>
-                            <p>Lake Turkana's shores hold the secrets of our origins. Known as the Jade Sea, this northern frontier is where the story of humanity began millions of years ago.</p>
-                        </div>
-                    </div>
-                    <div class="story-slide">
-                        <div class="story-content">
-                            <h3>The Swahili Soul</h3>
-                            <p>For centuries, the Kenyan coast has been a melting pot of African, Arabian, and Indian cultures. The narrow alleys of Lamu Old Town tell tales of ancient spice trades and maritime glory.</p>
-                        </div>
-                    </div>
-                    <div class="story-slide">
-                        <div class="story-content">
-                            <h3>The Great Migration</h3>
-                            <p>More than a wildlife event, it is the world's most spectacular natural survival story. Over two million animals brave the Mara River in a timeless cycle of life and renewal.</p>
-                        </div>
-                    </div>
-                    <div class="story-slide">
-                        <div class="story-content">
-                            <h3>The Pride of Kenya</h3>
-                            <p>From the red elephants of Tsavo to the rare Northern Special Five, Kenya's conservation story is one of resilience and a deep-rooted respect for the wild.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="story-nav">
-                    <button class="story-dot active" onclick="setStory(0)"></button>
-                    <button class="story-dot" onclick="setStory(1)"></button>
-                    <button class="story-dot" onclick="setStory(2)"></button>
-                    <button class="story-dot" onclick="setStory(3)"></button>
+            <div class="story-slide active">
+                <div class="story-content">
+                    <span class="story-tag">Wildlife</span>
+                    <h3>The Great Crossing</h3>
+                    <p>"Nature's most intense theater. Over two million animals brave the Mara River in a timeless cycle of life and renewal."</p>
                 </div>
             </div>
         </div>
     </section>
 
-    
-    <!-- Safari Chronicles: Rotating History, Culture & Wildlife -->
-    <section class="stories-v3">
+    <section id="movement" class="wildlife-v3">
         <div class="container">
             <div class="section-header reveal">
-                <span class="subtitle">Safari Chronicles</span>
-                <h2>Kenya's Living Heritage</h2>
+                <span class="subtitle">Natural Rhythms</span>
+                <h2>Movement Timing</h2>
             </div>
-            <div class="story-carousel reveal">
-                <div class="story-track">
-                    <div class="story-slide active">
-                        <div class="story-content">
-                            <div class="story-tag">History</div>
-                            <h3>The Cradle of Mankind</h3>
-                            <p>Lake Turkana's shores hold the secrets of our origins. Known as the Jade Sea, this northern frontier is where the story of humanity began millions of years ago.</p>
-                        </div>
-                    </div>
-                    <div class="story-slide">
-                        <div class="story-content">
-                            <div class="story-tag">Wildlife</div>
-                            <h3>The Great Migration</h3>
-                            <p>More than a wildlife event, it is the world's most spectacular natural survival story. Over two million animals brave the Mara River in a timeless cycle of life and renewal.</p>
-                        </div>
-                    </div>
-                    <div class="story-slide">
-                        <div class="story-content">
-                            <div class="story-tag">Culture</div>
-                            <h3>The Swahili Soul</h3>
-                            <p>For centuries, the Kenyan coast has been a melting pot of cultures. The narrow alleys of Lamu Old Town tell tales of ancient spice trades and maritime glory.</p>
-                        </div>
-                    </div>
-                    <div class="story-slide">
-                        <div class="story-content">
-                            <div class="story-tag">Wildlife</div>
-                            <h3>Conservation Resilience</h3>
-                            <p>From the red elephants of Tsavo to the rare Northern Special Five, Kenya's conservation story is one of resilience and a deep-rooted respect for the wild.</p>
-                        </div>
-                    </div>
+            <div class="wildlife-grid reveal">
+                <div class="wildlife-card">
+                    <div class="w-period">Jan — Mar</div>
+                    <h4>The Calving</h4>
+                    <p>Witness the high-stakes drama of predators and the birth of thousands.</p>
                 </div>
-                <div class="story-nav">
-                    <button class="story-dot active" onclick="setStory(0)"></button>
-                    <button class="story-dot" onclick="setStory(1)"></button>
-                    <button class="story-dot" onclick="setStory(2)"></button>
-                    <button class="story-dot" onclick="setStory(3)"></button>
+                <div class="wildlife-card">
+                    <div class="w-period">Jul — Oct</div>
+                    <h4>The Crossing</h4>
+                    <p>The iconic Mara River theater. Millions surge in a natural survival surge.</p>
+                </div>
+                <div class="wildlife-card">
+                    <div class="w-period">Nov — Dec</div>
+                    <h4>The Bloom</h4>
+                    <p>Emerald landscapes and snow-capped Kilimanjaro peaks.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="custom" class="builder-v3">
+    <footer style="padding: 60px 0; background: var(--primary); color: var(--white); text-align: center;">
         <div class="container">
-            <div class="section-header reveal">
-                <span class="subtitle" data-i18n="builder_subtitle">Bespoke Curation</span>
-                <h2 data-i18n="builder_h2">Design Your Unique Path.</h2>
-                <p data-i18n="builder_p" style="max-width: 600px; margin: 0 auto;">Every soul seeks a different wilderness. Choose your elements, and we'll weave them into a singular Kenyan tapestry.</p>
-            </div>
-            <div class="builder-grid reveal">
-                <div class="builder-column">
-                    <h4 data-i18n="builder_regions">Choose Regions</h4>
-                    <div class="tag-cloud">
-                        <div class="tag-wrapper">
-                            <span class="tag" onclick="toggleDetails('reg-mara')" data-tip="The theater of the Great Migration and world-class Big Five sightings.">Maasai Mara</span>
-                            <div id="reg-mara" class="package-details">
-                                <ul>
-                                    <li>Migration Discovery (Aug-Oct)</li>
-                                    <li>Hot Air Balloon Safaris</li>
-                                    <li>Maasai Cultural Tours</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="tag-wrapper">
-                            <span class="tag" onclick="toggleDetails('reg-coast')" data-tip="Pristine white sands, turquoise waters, and Swahili heritage.">Diani & Coast</span>
-                            <div id="reg-coast" class="package-details">
-                                <ul>
-                                    <li>Watamu Marine Reserve</li>
-                                    <li>Lamu Old Town Heritage</li>
-                                    <li>Deep Sea Fishing Charters</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="tag-wrapper">
-                            <span class="tag" onclick="toggleDetails('reg-north')" data-tip="Rugged landscapes and home to the unique 'Samburu Special 5'.">Samburu & North</span>
-                            <div id="reg-north" class="package-details">
-                                <ul>
-                                    <li>Reteti Elephant Sanctuary</li>
-                                    <li>Camel Trekking Safaris</li>
-                                    <li>Samburu Special 5 Search</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="tag-wrapper">
-                            <span class="tag" onclick="toggleDetails('reg-mtk')" data-tip="Alpine peaks, high-altitude trekking, and luxury mountain lodges.">Mt. Kenya</span>
-                            <div id="reg-mtk" class="package-details">
-                                <ul>
-                                    <li>Ol Pejeta Conservancy</li>
-                                    <li>Mountain Peak Trekking</li>
-                                    <li>Trout Fishing Expeditions</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="tag-wrapper">
-                            <span class="tag" onclick="toggleDetails('reg-amboseli')" data-tip="Spectacular views of Kilimanjaro and legendary large elephant tuskers.">Amboseli</span>
-                            <div id="reg-amboseli" class="package-details">
-                                <ul>
-                                    <li>Kilimanjaro Viewpoints</li>
-                                    <li>Large Tuskers Photography</li>
-                                    <li>Observation Hill Picnic</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="tag-wrapper">
-                            <span class="tag" onclick="toggleDetails('reg-rift')" data-tip="Dramatic escarpments, pink flamingo lakes, and adventure cycling.">Rift Valley</span>
-                            <div id="reg-rift" class="package-details">
-                                <ul>
-                                    <li>Lake Nakuru Flamingos</li>
-                                    <li>Hell's Gate Cycling</li>
-                                    <li>Naivasha Boat Safaris</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="builder-column">
-                    <h4 data-i18n="builder_focus">Focus Areas</h4>
-                    <div class="tag-cloud">
-                        <div class="tag-wrapper">
-                            <span class="tag" onclick="toggleDetails('foc-photo')" data-tip="Master the art of capturing wildlife with expert-led photography sessions.">Wildlife Photography</span>
-                            <div id="foc-photo" class="package-details">
-                                <p>Professional field techniques, night photography, and specialized gear support.</p>
-                            </div>
-                        </div>
-                        <div class="tag-wrapper">
-                            <span class="tag" onclick="toggleDetails('foc-cons')" data-tip="Deep dive into wildlife protection and field monitoring with biologists.">Conservation Research</span>
-                            <div id="foc-cons" class="package-details">
-                                <p>Ranger patrol participation, tracking sessions, and local conservation briefings.</p>
-                            </div>
-                        </div>
-                        <div class="tag-wrapper">
-                            <span class="tag" onclick="toggleDetails('foc-tribal')" data-tip="Meaningful cultural immersion with Kenya's diverse ethnic communities.">Tribal Heritage</span>
-                            <div id="foc-tribal" class="package-details">
-                                <p>Homestays, traditional craft workshops, and authentic oral history sessions.</p>
-                            </div>
-                        </div>
-                        <div class="tag-wrapper">
-                            <span class="tag" onclick="toggleDetails('foc-trek')" data-tip="Guided expeditions to scale the iconic peaks of the East African Rift.">Mountain Trekking</span>
-                            <div id="foc-trek" class="package-details">
-                                <p>Peak ascents, high-altitude logistics, and expert mountain guides.</p>
-                            </div>
-                        </div>
-                        <div class="tag-wrapper">
-                            <span class="tag" onclick="toggleDetails('foc-well')" data-tip="Rejuvenate your spirit with spa treatments and meditation in the wild.">Luxury Wellness</span>
-                            <div id="foc-well" class="package-details">
-                                <p>Bush spas, wilderness meditation, and organic farm-to-table cuisine.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Why Choose Us -->
-    
-
-    <section class="section reveal" style="background: var(--primary); color: white; padding: 100px 0;">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="subtitle" style="color: var(--secondary);">The Roam Distinction</span>
-                <h2 style="color: white;">Why Discerning Explorers <br>Choose Us</h2>
-            </div>
-            <div class="services-grid" style="margin-top: 50px;">
-                <div class="reveal" style="text-align: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 4px;">
-                    <i class="fas fa-shield-check fa-2x" style="color: var(--secondary); margin-bottom: 20px;"></i>
-                    <h3>Safety First</h3>
-                    <p style="opacity: 0.8; font-size: 0.9rem;">Vetted drivers and 24/7 real-time monitoring of all logistics.</p>
-                </div>
-                <div class="reveal" style="text-align: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 4px;">
-                    <i class="fas fa-leaf fa-2x" style="color: var(--secondary); margin-bottom: 20px;"></i>
-                    <h3>Sustainable Impact</h3>
-                    <p style="opacity: 0.8; font-size: 0.9rem;">Supporting local conservancies and community-led tourism.</p>
-                </div>
-                <div class="reveal" style="text-align: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 4px;">
-                    <i class="fas fa-fingerprint fa-2x" style="color: var(--secondary); margin-bottom: 20px;"></i>
-                    <h3>True Curation</h3>
-                    <p style="opacity: 0.8; font-size: 0.9rem;">No cookie-cutter tours. Every itinerary is woven from scratch.</p>
-                </div>
-                <div class="reveal" style="text-align: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 4px;">
-                    <i class="fas fa-crown fa-2x" style="color: var(--secondary); margin-bottom: 20px;"></i>
-                    <h3>Expert Knowledge</h3>
-                    <p style="opacity: 0.8; font-size: 0.9rem;">Guides with decades of experience in Kenyan field logistics.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="curate" class="curate">
-        <div class="container">
-            <div class="curate-wrapper">
-                <div class="curate-info">
-                    <h2>Curate Your <br>Stay.</h2>
-                    <p>Brief us on your vision. We handle the intricacies.</p>
-                    <div class="contact-meta">
-                        <span><i class="fas fa-phone"></i> +254 721 585 784</span>
-                        <span><i class="fas fa-envelope"></i> roamkenya@nexcom.co.ke</span>
-                    </div>
-                </div>
-                <div class="curate-form">
-                    <form id="roamForm">
-                        <div class="form-row">
-                            <input type="text" placeholder="Full Name" required>
-                            <input type="email" placeholder="Email Address" required>
-                        </div>
-                        <select required>
-                            <option value="" disabled selected>Nature of Expedition</option>
-                            <option>Honeymoon / Couple</option>
-                            <option>Academic / Student Group</option>
-                            <option>Nairobi Excursion</option>
-                            <option>Private Fleet Request</option>
-                        </select>
-                        <textarea placeholder="Tell us about your dream journey..." rows="5"></textarea>
-                        <button type="submit" class="btn-gold-full">Request Proposal</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer-v3">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">ROAM KENYA</div>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Roam Kenya. A Nexcom Ventures Partner.</p>
+            <h2 style="color: var(--white); margin-bottom: 20px;">ROAM KENYA</h2>
+            <p style="opacity: 0.6; margin-bottom: 30px;">Mama Ngina St, Nairobi | +254 721 585 784</p>
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <a href="https://wa.me/254721585784" style="color: var(--white);"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" style="color: var(--white);"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
-    <script src="js/main.js"></script>
-    </div>
 
-    <!-- Payment Info Modal (Post-Submission) -->
-    <div id="paymentModal" class="service-detail-overlay">
-        <div class="detail-content" style="max-width: 500px; text-align: center;">
-            <span class="close-detail" onclick="closePaymentModal()">&times;</span>
-            <div class="success-icon" style="color: #27ae60; font-size: 4rem; margin-bottom: 20px;">
-                <i class="fas fa-check-circle"></i>
-            </div>
-            <h2>Inquiry Received.</h2>
-            <p>Your request has been logged. Our concierge team is already weaving your itinerary.</p>
-            
-            <div class="payment-instructions" style="background: #f4f4f4; color: #333; padding: 25px; border-radius: 4px; margin-top: 30px; text-align: left;">
-                <h3 style="margin-top: 0; font-size: 1rem; color: var(--primary);">Secure Your Dates</h3>
-                <p style="font-size: 0.85rem; opacity: 0.8;">To expedite your booking, you can make a deposit via our official channels below. Please use your name as the account reference.</p>
-                
-                <div class="pay-item" style="margin-top: 15px; border-top: 1px solid #ddd; padding-top: 15px;">
-                    <strong>M-PESA Paybill:</strong> <span style="float: right; color: var(--secondary); font-weight: 600;">880100</span>
-                </div>
-                <div class="pay-item" style="margin-top: 10px;">
-                    <strong>Account:</strong> <span style="float: right; color: var(--secondary); font-weight: 600;">816001</span>
-                </div>
-                <div class="pay-item" style="margin-top: 10px; border-top: 1px solid #ddd; padding-top: 15px;">
-                    <strong>M-PESA Till:</strong> <span style="float: right; color: var(--secondary); font-weight: 600;">9346560018</span>
-                </div>
-            </div>
-            
-            <button onclick="closePaymentModal()" class="submit-btn" style="width: 100%; margin-top: 20px;">Close & Continue</button>
-        </div>
-    </div>
+    <a href="https://wa.me/254721585784" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
 
-    <!-- WhatsApp Floating Action -->
-    <a href="https://wa.me/254721585784?text=Hello%20Roam%20Kenya,%20I'm%20planning%20a%20safari..." class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        <span>Chat with a Curator</span>
-    </a>
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.main-nav');
+            if (window.scrollY > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
 
+        // Simple reveal on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
