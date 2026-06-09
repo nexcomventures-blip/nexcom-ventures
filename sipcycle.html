@@ -25,7 +25,8 @@
             margin: 0;
             padding: 0;
             color: #1e293b;
-            padding-bottom: 80px; /* Space for floating button */
+            padding-bottom: 80px;
+            transition: all 0.3s ease;
         }
         .header {
             background: linear-gradient(135deg, var(--brand-navy) 0%, #0056a6 100%);
@@ -35,6 +36,20 @@
             border-bottom-left-radius: 30px;
             border-bottom-right-radius: 30px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .lang-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.3);
         }
         .logo {
             font-size: 2.5rem;
@@ -120,6 +135,10 @@
             color: #64748b;
             margin-bottom: 20px;
             margin-top: 10px;
+            background: white;
+            padding: 12px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
         /* Floating Button */
         .float-wa {
@@ -138,36 +157,75 @@
             box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
             z-index: 1000;
         }
+        .step-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .step-num {
+            background: var(--brand-cyan);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
     </style>
 </head>
 <body>
+    <div class="lang-toggle" onclick="toggleLang()">Swahili</div>
+
     <a href="https://wa.me/254719626363?text=Hi%20Sip%20Cycle,%20I%20would%20like%20to%20order%20a%20refill." class="float-wa">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <div class="header">
-        <!-- Live Status Badge -->
         <div id="status-badge" style="display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 900; margin-bottom: 15px; text-transform: uppercase;">
-            Checking Status...
+            Checking...
         </div>
         <div class="logo">Sip<span>💧</span>Cycle</div>
-        <div class="tagline">PREMIUM REFILL WATER | ZIMMERMAN</div>
+        <div class="tagline" id="tagline">PREMIUM REFILL WATER | ZIMMERMAN</div>
     </div>
 
     <div class="container">
+        <div class="delivery-zone">
+            <i class="fas fa-truck" style="color: var(--brand-cyan);"></i> 
+            <span id="deliv-text">Delivering to: <b>Zimmerman, Roysambu, Mirema, Base, Lumumba Dr. & Surroundings</b></span>
+        </div>
+
+        <!-- How it Works -->
+        <div class="card">
+            <div class="section-title" id="title-how">
+                <i class="fas fa-magic"></i> How to Order
+            </div>
+            <div class="step-item">
+                <div class="step-num">1</div>
+                <div id="step1"><b>Tap WhatsApp:</b> Send your location & bottle size.</div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">2</div>
+                <div id="step2"><b>Pay M-Pesa:</b> Use Till <b>3291421</b>.</div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">3</div>
+                <div id="step3"><b>Enjoy:</b> Fresh water at your door in 30 mins!</div>
+            </div>
+        </div>
+
         <!-- Wallet / Card Balance Access -->
         <div class="card" style="border: 2px solid var(--brand-cyan); background: #f0fdff;">
             <div class="section-title">
                 <i class="fas fa-wallet"></i> Sip Cycle Wallet
             </div>
-            <p style="font-size: 0.9rem; margin-top: 0;">Check your balance or top up your Loyalty Card online.</p>
+            <p style="font-size: 0.9rem; margin-top: 0;" id="wallet-desc">Check your balance or top up your Loyalty Card online.</p>
             <a href="https://site.zapia.com/oidf0y4w" class="btn" style="background: var(--brand-cyan); color: white; margin-bottom: 0;">
-                <i class="fas fa-external-link-alt"></i> CHECK CARD BALANCE
+                <i class="fas fa-external-link-alt"></i> <span id="btn-wallet">CHECK CARD BALANCE</span>
             </a>
-        </div>
-
-        <div class="delivery-zone" style="margin-top: 15px; background: white; padding: 12px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-            <i class="fas fa-truck" style="color: var(--brand-cyan);"></i> Delivering to: <b>Zimmerman, Roysambu, Mirema & Surroundings</b>
         </div>
 
         <!-- Quality & Trust Markers -->
@@ -186,205 +244,148 @@
             </div>
         </div>
 
-        <!-- The Sip Cycle Advantage -->
         <div class="card">
-            <div class="section-title">
-                <i class="fas fa-star"></i> Why Choose Sip Cycle?
+            <div class="section-title" id="title-refill">
+                <i class="fas fa-tint"></i> Refill Prices
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 5px;">
-                <div style="background: #f8fafc; padding: 10px; border-radius: 10px; font-size: 0.85rem;">
-                    <i class="fas fa-leaf" style="color: #22c55e;"></i> <b>Eco-Friendly</b><br>Reused & Recycled
-                </div>
-                <div style="background: #f8fafc; padding: 10px; border-radius: 10px; font-size: 0.85rem;">
-                    <i class="fas fa-shipping-fast" style="color: #f59e0b;"></i> <b>Fast Delivery</b><br>Under 30 Mins
-                </div>
-                <div style="background: #f8fafc; padding: 10px; border-radius: 10px; font-size: 0.85rem; grid-column: span 2;">
-                    <i class="fas fa-check-circle" style="color: var(--brand-cyan);"></i> <b>KEBS Qualified Machine</b><br>Guaranteed 100% Water Safety
-                </div>
+            <div class="price-row">
+                <div class="item-info"><b>20 Litre Refill</b><span id="label-20l">Standard Water Refill</span></div>
+                <div class="price-tag">150/-</div>
+            </div>
+            <div class="price-row">
+                <div class="item-info"><b>10 Litre Refill</b><span id="label-10l">Perfect for small families</span></div>
+                <div class="price-tag">100/-</div>
+            </div>
+            <div class="price-row">
+                <div class="item-info"><b>5 Litre Refill</b><span id="label-5l">Quick top-up</span></div>
+                <div class="price-tag">50/-</div>
             </div>
         </div>
 
         <!-- Payment Info -->
         <div class="card" style="background: linear-gradient(135deg, var(--brand-navy) 0%, #0056a6 100%); color: white;">
             <div class="section-title" style="color: white; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                <i class="fas fa-mobile-alt"></i> How to Pay (M-PESA)
+                <i class="fas fa-mobile-alt"></i> <span id="title-pay">How to Pay (M-PESA)</span>
             </div>
             <div style="padding: 10px; text-align: center;">
-                <div style="font-size: 0.9rem; opacity: 0.9;">Buy Goods Till Number</div>
+                <div style="font-size: 0.9rem; opacity: 0.9;" id="till-label">Buy Goods Till Number</div>
                 <div style="font-size: 2rem; font-weight: 900; letter-spacing: 2px; margin: 5px 0;">3291421</div>
                 <div style="font-size: 0.8rem; font-weight: bold; background: rgba(255,255,255,0.2); display: inline-block; padding: 5px 15px; border-radius: 20px;">SIP CYCLE WATER STATION</div>
             </div>
         </div>
 
         <div class="card">
-            <div class="section-title">
-                <i class="fas fa-tint"></i> Refill Prices
-            </div>
-            <div class="price-row">
-                <div class="item-info"><b>20 Litre Refill</b><span>Standard Water Refill</span></div>
-                <div class="price-tag">150/-</div>
-            </div>
-            <div class="price-row">
-                <div class="item-info"><b>10 Litre Refill</b><span>Perfect for small families</span></div>
-                <div class="price-tag">100/-</div>
-            </div>
-            <div class="price-row">
-                <div class="item-info"><b>5 Litre Refill</b><span>Quick top-up</span></div>
-                <div class="price-tag">50/-</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="section-title">
+            <div class="section-title" id="title-bulk">
                 <i class="fas fa-box"></i> Bulk & Custom Solutions
             </div>
             <div class="price-row">
-                <div class="item-info"><b>Wholesale / Bulk</b><span>Per 20L (Min. order applies)</span></div>
+                <div class="item-info"><b id="label-wholesale">Wholesale / Bulk</b><span id="label-min-order">Per 20L (Min. order applies)</span></div>
                 <div class="price-tag">350/-</div>
             </div>
             <div class="price-row">
-                <div class="item-info"><b>Customized Branding</b><span>Corporate & Events</span></div>
+                <div class="item-info"><b id="label-branding">Customized Branding</b><span id="label-events">Corporate & Events</span></div>
                 <div class="price-tag">420/-</div>
             </div>
         </div>
 
-        <div class="card">
-            <div class="section-title">
-                <i class="fas fa-shopping-basket"></i> New Bottles
-            </div>
-            <div class="price-row">
-                <div class="item-info"><b>20L New Bottle (Soft)</b><span>Premium Bottle Only</span></div>
-                <div class="price-tag">450/-</div>
-            </div>
-            <div class="price-row">
-                <div class="item-info"><b>20L New Bottle (Premium)</b><span>Ultra-Durable Bottle</span></div>
-                <div class="price-tag">1,300/-</div>
-            </div>
-            <div class="price-row">
-                <div class="item-info"><b>10L + New Bottle</b><span>Full Setup</span></div>
-                <div class="price-tag">200/-</div>
-            </div>
-            <div class="price-row">
-                <div class="item-info"><b>5L + New Bottle</b><span>Full Setup</span></div>
-                <div class="price-tag">150/-</div>
-            </div>
-        </div>
-
-        <!-- Hours & Care Tips -->
-        <div class="card">
-            <div class="section-title">
-                <i class="fas fa-clock"></i> Opening Hours
-            </div>
-            <div style="padding: 5px; font-weight: bold; color: var(--brand-navy);">
-                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-                    <span>Mon - Sat:</span> <span>8:00 AM - 11:00 PM</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; opacity: 0.8;">
-                    <span>Sunday:</span> <span>10:00 AM - 10:00 PM</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="section-title">
-                <i class="fas fa-lightbulb"></i> Bottle Care Tips
-            </div>
-            <ul style="margin: 0; padding-left: 20px; font-size: 0.9rem; color: #475569; line-height: 1.6;">
-                <li>Store in a <b>cool, dry place</b> away from sunlight.</li>
-                <li>Ensure your <b>dispenser/pump</b> is cleaned regularly.</li>
-                <li>Rinse the <b>cap & neck</b> before opening.</li>
-            </ul>
-        </div>
-
-        <!-- Loyalty Reward Teaser -->
-        <div class="card" style="background: linear-gradient(135deg, #FFD700 0%, #FDB931 100%); border: none;">
-            <div class="section-title" style="color: #422006; border-bottom: 1px solid rgba(0,0,0,0.1);">
-                <i class="fas fa-gift"></i> Get Rewarded!
-            </div>
-            <div style="padding: 5px; color: #422006; text-align: center;">
-                <p style="margin: 0; font-weight: 700; font-size: 0.95rem;">Ask for your <b>Sip Cycle Loyalty Card</b> at our station.</p>
-                <p style="margin: 10px 0 0; font-size: 0.85rem; opacity: 0.9;">Earn points on every refill and enjoy <b>Free Water</b> & easier payments!</p>
-            </div>
-        </div>
-
-        <!-- Neighbor Reviews -->
-        <div class="card">
-            <div class="section-title">
-                <i class="fas fa-comment-dots"></i> What Your Neighbors Say
-            </div>
-            <div style="font-style: italic; font-size: 0.9rem; color: #475569; border-left: 4px solid var(--brand-cyan); padding-left: 15px; margin-bottom: 15px;">
-                "Cleanest water in Zimmerman and the delivery rider is always polite and fast. Highly recommend!"<br>
-                <b style="font-style: normal; color: var(--brand-navy); font-size: 0.8rem;">— Mary K., Zimmerman</b>
-            </div>
-            <div style="font-style: italic; font-size: 0.9rem; color: #475569; border-left: 4px solid var(--brand-cyan); padding-left: 15px;">
-                "The customized bottles were a hit at our office event. Professional service!"<br>
-                <b style="font-style: normal; color: var(--brand-navy); font-size: 0.8rem;">— James W., Roysambu</b>
-            </div>
-        </div>
-
-        <!-- FAQ -->
-        <div class="card">
-            <div class="section-title">
-                <i class="fas fa-question-circle"></i> Frequently Asked Questions
-            </div>
-            <div style="font-size: 0.9rem; margin-bottom: 15px;">
-                <b style="color: var(--brand-navy); display: block; margin-bottom: 4px;">Is delivery free?</b>
-                <span style="color: #64748b;">Yes! We offer free delivery within Zimmerman and Roysambu for orders of 20L and above.</span>
-            </div>
-            <div style="font-size: 0.9rem; margin-bottom: 15px;">
-                <b style="color: var(--brand-navy); display: block; margin-bottom: 4px;">Do you accept other brand bottles?</b>
-                <span style="color: #64748b;">Yes, we accept all standard 20L bottles as long as they are in good, clean condition.</span>
-            </div>
-            <div style="font-size: 0.9rem;">
-                <b style="color: var(--brand-navy); display: block; margin-bottom: 4px;">Is the water safe for direct drinking?</b>
-                <span style="color: #64748b;">100%. Our KEBS-qualified machine uses RO, UV, and Ozone treatment to ensure premium safety.</span>
-            </div>
-        </div>
-
-        <!-- Refer a Neighbor -->
-        <div class="card" style="background: #fdf2f2; border: 1px dashed #ef4444;">
-            <div class="section-title" style="color: #b91c1c;">
-                <i class="fas fa-users"></i> Refer a Neighbor
-            </div>
-            <p style="font-size: 0.9rem; margin: 0; color: #7f1d1d;">
-                Invite a friend in Zimmerman to try Sip Cycle! If they order, your next refill is only <b>100/-</b>.
-            </p>
-        </div>
-
-        <!-- Google Review CTA -->
-        <div class="card" style="text-align: center;">
-            <div style="font-weight: 800; color: var(--brand-navy); margin-bottom: 10px;">Happy with our service?</div>
-            <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px;">Help us grow by leaving a quick review on Google.</p>
-            <a href="https://g.page/r/Cff7ogxxeBoSEAE/review" target="_blank" style="color: var(--brand-cyan); font-weight: 800; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px;">
-                <i class="fab fa-google"></i> WRITE A REVIEW
-            </a>
-        </div>
-
         <a href="https://wa.me/254719626363?text=Hello%20Sip%20Cycle,%20I%20would%20like%20to%20order%20a%20refill." class="btn btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> ORDER ON WHATSAPP
-        </a>
-
-        <a href="https://wa.me/254719626363?text=Hi%20Sip%20Cycle,%20I%27m%20interested%20in%20Bulk/Wholesale%20delivery%20for%20my%20office/business." class="btn" style="background: white; border: 2px solid var(--brand-navy); color: var(--brand-navy);">
-            <i class="fas fa-building"></i> BULK & CORPORATE INQUIRY
-        </a>
-
-        <a href="https://www.google.com/maps/search/?api=1&query=Sip+Cycle+Water+Station+Zimmerman" class="btn btn-call" target="_blank">
-            <i class="fas fa-map-marker-alt"></i> FIND US ON GOOGLE MAPS
+            <i class="fab fa-whatsapp"></i> <span id="btn-wa">ORDER ON WHATSAPP</span>
         </a>
 
         <a href="tel:0719626363" class="btn btn-call">
-            <i class="fas fa-phone-alt"></i> CALL FOR DELIVERY
+            <i class="fas fa-phone-alt"></i> <span id="btn-call">CALL FOR DELIVERY</span>
         </a>
 
         <div style="text-align: center; font-size: 0.8rem; color: #94a3b8; margin: 20px 0;">
-            © 2026 Sip Cycle Water Station. All Rights Reserved.
+            © 2026 Sip Cycle Water Station.
         </div>
     </div>
+
     <script>
+        let currentLang = 'en';
+        const content = {
+            en: {
+                toggle: 'Swahili',
+                tagline: 'PREMIUM REFILL WATER | ZIMMERMAN',
+                deliv: 'Delivering to: <b>Zimmerman, Roysambu, Mirema, Base, Lumumba Dr. & Surroundings</b>',
+                titleHow: 'How to Order',
+                step1: '<b>Tap WhatsApp:</b> Send your location & bottle size.',
+                step2: '<b>Pay M-Pesa:</b> Use Till <b>3291421</b>.',
+                step3: '<b>Enjoy:</b> Fresh water at your door in 30 mins!',
+                walletDesc: 'Check your balance or top up your Loyalty Card online.',
+                btnWallet: 'CHECK CARD BALANCE',
+                titleRefill: 'Refill Prices',
+                label20l: 'Standard Water Refill',
+                label10l: 'Perfect for small families',
+                label5l: 'Quick top-up',
+                titlePay: 'How to Pay (M-PESA)',
+                tillLabel: 'Buy Goods Till Number',
+                titleBulk: 'Bulk & Custom Solutions',
+                labelWholesale: 'Wholesale / Bulk',
+                labelMinOrder: 'Per 20L (Min. order applies)',
+                labelBranding: 'Customized Branding',
+                labelEvents: 'Corporate & Events',
+                btnWa: 'ORDER ON WHATSAPP',
+                btnCall: 'CALL FOR DELIVERY'
+            },
+            sw: {
+                toggle: 'English',
+                tagline: 'MAJI SAFI YA REFILL | ZIMMERMAN',
+                deliv: 'Tunaleta: <b>Zimmerman, Roysambu, Mirema, Base, Lumumba Dr. na maeneo ya jirani</b>',
+                titleHow: 'Jinsi ya Kuagiza',
+                step1: '<b>Bonyeza WhatsApp:</b> Tuma mahali ulipo na ukubwa wa mtungi.',
+                step2: '<b>Lipa M-Pesa:</b> Tumia Till <b>3291421</b>.',
+                step3: '<b>Furahia:</b> Maji safi mlangoni pako ndani ya dakika 30!',
+                walletDesc: 'Angalia salio au weka pesa kwenye Kadi yako ya Loyalty.',
+                btnWallet: 'ANGALIA SALIO LA KADI',
+                titleRefill: 'Bei za Refill',
+                label20l: 'Refill ya Kawaida ya Maji',
+                label10l: 'Inafaa kwa familia ndogo',
+                label5l: 'Ongeza haraka',
+                titlePay: 'Jinsi ya Kulipa (M-PESA)',
+                tillLabel: 'Nambari ya Till (Buy Goods)',
+                titleBulk: 'Jumla na Huduma Maalum',
+                labelWholesale: 'Bei ya Jumla',
+                labelMinOrder: 'Kwa kila 20L (Kuna kiwango cha chini)',
+                labelBranding: 'Brand Yako Maalum',
+                labelEvents: 'Makampuni na Sherehe',
+                btnWa: 'AGIZA KWA WHATSAPP',
+                btnCall: 'PIGA SIMU KULETEWA'
+            }
+        };
+
+        function toggleLang() {
+            currentLang = currentLang === 'en' ? 'sw' : 'en';
+            const lang = content[currentLang];
+            
+            document.querySelector('.lang-toggle').innerText = lang.toggle;
+            document.getElementById('tagline').innerText = lang.tagline;
+            document.getElementById('deliv-text').innerHTML = lang.deliv;
+            document.getElementById('title-how').innerHTML = '<i class="fas fa-magic"></i> ' + lang.titleHow;
+            document.getElementById('step1').innerHTML = lang.step1;
+            document.getElementById('step2').innerHTML = lang.step2;
+            document.getElementById('step3').innerHTML = lang.step3;
+            document.getElementById('wallet-desc').innerText = lang.walletDesc;
+            document.getElementById('btn-wallet').innerText = lang.btnWallet;
+            document.getElementById('title-refill').innerHTML = '<i class="fas fa-tint"></i> ' + lang.titleRefill;
+            document.getElementById('label-20l').innerText = lang.label20l;
+            document.getElementById('label-10l').innerText = lang.label10l;
+            document.getElementById('label-5l').innerText = lang.label5l;
+            document.getElementById('title-pay').innerText = lang.titlePay;
+            document.getElementById('till-label').innerText = lang.tillLabel;
+            document.getElementById('title-bulk').innerHTML = '<i class="fas fa-box"></i> ' + lang.titleBulk;
+            document.getElementById('label-wholesale').innerText = lang.labelWholesale;
+            document.getElementById('label-min-order').innerText = lang.labelMinOrder;
+            document.getElementById('label-branding').innerText = lang.labelBranding;
+            document.getElementById('label-events').innerText = lang.labelEvents;
+            document.getElementById('btn-wa').innerText = lang.btnWa;
+            document.getElementById('btn-call').innerText = lang.btnCall;
+        }
+
         function updateStatus() {
             const now = new Date();
             const hour = now.getHours();
-            const day = now.getDay(); // 0 = Sunday
+            const day = now.getDay();
             const badge = document.getElementById('status-badge');
             
             let isOpen = false;
@@ -403,15 +404,15 @@
             }
 
             if (closingSoon) {
-                badge.innerText = "Closing Soon (Orders closing)";
+                badge.innerText = currentLang === 'en' ? "Closing Soon" : "Tunafunga hivi punde";
                 badge.style.backgroundColor = "#fef3c7";
                 badge.style.color = "#92400e";
             } else if (isOpen) {
-                badge.innerText = "Open Now • Fast Delivery";
+                badge.innerText = currentLang === 'en' ? "Open Now" : "Tuko Wazi";
                 badge.style.backgroundColor = "#dcfce7";
                 badge.style.color = "#166534";
             } else {
-                badge.innerText = "Currently Closed • Opens at 8 AM";
+                badge.innerText = currentLang === 'en' ? "Currently Closed" : "Tumefunga kwa sasa";
                 badge.style.backgroundColor = "#fee2e2";
                 badge.style.color = "#991b1b";
             }
