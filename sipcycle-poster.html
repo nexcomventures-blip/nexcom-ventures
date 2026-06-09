@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sip Cycle Poster</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        :root {
+            --brand-navy: #003B73;
+            --brand-cyan: #00BDD6;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f0f2f5;
+            font-family: 'Outfit', sans-serif;
+        }
+        .poster {
+            width: 800px;
+            height: 1100px;
+            background: white;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px;
+            box-sizing: border-box;
+            border: 20px solid var(--brand-navy);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            font-size: 80px;
+            font-weight: 900;
+            color: var(--brand-navy);
+            margin-bottom: 10px;
+        }
+        .logo span { color: var(--brand-cyan); }
+        .tagline {
+            font-size: 28px;
+            color: #64748B;
+            font-weight: 700;
+        }
+        .main-action {
+            background: var(--brand-cyan);
+            color: white;
+            padding: 30px 60px;
+            border-radius: 40px;
+            font-size: 45px;
+            font-weight: 900;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        #qrcode {
+            padding: 40px;
+            background: white;
+            border: 10px solid var(--brand-navy);
+            border-radius: 40px;
+            margin-bottom: 40px;
+        }
+        .instructions {
+            text-align: center;
+            font-size: 24px;
+            color: var(--brand-navy);
+            max-width: 500px;
+            line-height: 1.4;
+            margin-bottom: 60px;
+        }
+        .prices {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            border-top: 4px dashed #CBD5E1;
+            padding-top: 40px;
+        }
+        .price-item {
+            text-align: center;
+        }
+        .price-label { font-size: 22px; color: #64748B; font-weight: 700; margin-bottom: 10px;}
+        .price-value { font-size: 45px; font-weight: 900; color: var(--brand-navy); }
+
+        .footer {
+            margin-top: auto;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--brand-navy);
+        }
+    </style>
+</head>
+<body>
+    <div class="poster" id="poster-capture">
+        <div class="header">
+            <div class="logo">Sip<span>💧</span>Cycle</div>
+            <div class="tagline">PREMIUM REFILL WATER</div>
+        </div>
+
+        <div class="main-action">Scan to Order</div>
+
+        <div id="qrcode"></div>
+
+        <div class="instructions">
+            Scan with your phone camera to see our <b>Full Price List</b> and <b>Order via WhatsApp</b>
+        </div>
+
+        <div class="prices">
+            <div class="price-item">
+                <div class="price-label">20L REFILL</div>
+                <div class="price-value">150/-</div>
+            </div>
+            <div class="price-item">
+                <div class="price-label">10L REFILL</div>
+                <div class="price-value">100/-</div>
+            </div>
+            <div class="price-item">
+                <div class="price-label">5L REFILL</div>
+                <div class="price-value">50/-</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            📍 Zimmerman | 📞 0719 62 63 63
+        </div>
+    </div>
+
+    <script>
+        new QRCode(document.getElementById("qrcode"), {
+            text: "https://nexcomventures.co.ke/sipcycle.html",
+            width: 350,
+            height: 350,
+            colorDark : "#003B73",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    </script>
+</body>
+</html>
