@@ -1,11 +1,117 @@
 const ALL_PRODUCTS = [
   {
     "id": "feat-1",
+    "brand": "HP",
+    "name": "Hp 830 G8 I5 11Th 16/512Gb x360 Touchscreen",
+    "specs": "hp 830 g8 i5 11th  16/512gb \nx360 touchscreen",
+    "price": 45000,
+    "category": "exuk business hp featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "feat-2",
+    "brand": "Lenovo",
+    "name": "Lenovo T480s I5 8th 8/256Gb Touchscreen",
+    "specs": "lenovo t480s i5 8th 8/256gb touchscreen",
+    "price": 28499,
+    "category": "exuk business lenovo touchscreen featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "feat-3",
+    "brand": "HP",
+    "name": "Hp 1040 G9 I7 12th 16/512Gb X360 Touchscreen",
+    "specs": "hp 1040 g9 i7 12th 16/512gb x360 touchscreen",
+    "price": 85499,
+    "category": "exuk business hp touchscreen featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_elitebook_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "feat-4",
+    "brand": "Apple",
+    "name": "Macbook Air 13 2015 I5 8/256",
+    "specs": "MacBook Air 13 2015 i5 8/256",
+    "price": 33000,
+    "category": "exuk apple macbook featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
+    "software": []
+  },
+  {
+    "id": "feat-5",
+    "brand": "HP",
+    "name": "Hp 840 G6 I5 8/256Gb",
+    "specs": "hp 840 g6 i5 8/256gb",
+    "price": 25000,
+    "category": "exuk business hp featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g6.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "feat-6",
+    "brand": "HP",
+    "name": "Hp 1030 G8 I7 11th 16/512Gb X360 Touchscreen",
+    "specs": "hp 1030 g8 i7 11th 16/512gb x360 touchscreen",
+    "price": 72499,
+    "category": "exuk business hp touchscreen featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "feat-7",
+    "brand": "Apple",
+    "name": "Macbook Pro 15 2017 I7 16/512Gb 4Gb Graphics",
+    "specs": "macbook pro 15 2017 i7 16/512gb 4gb graphics",
+    "price": 61000,
+    "category": "exuk apple macbook featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_15_usbc.jpg",
+    "software": []
+  },
+  {
+    "id": "feat-8",
+    "brand": "HP",
+    "name": "Hp 840 G7 I7 10Th 8/256Gb Touchscreen",
+    "specs": "hp 840 g7  i7 10th 8/256gb\ntouchscreen",
+    "price": 37000,
+    "category": "exuk business hp featured",
+    "badge": "exuk",
+    "img": "images/hp_840_g7_i7_user.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-1631",
     "brand": "Dell",
     "name": "Dell 5320 I7 11Th 16/512Gb Touchscreen",
     "specs": "5320 i7 11th 16/512gb touchscreen",
     "price": 40000,
-    "category": "exuk business dell featured",
+    "category": "exuk business dell",
     "badge": "exuk",
     "img": "images/dell_xps_13_new.jpg",
     "software": [
@@ -14,12 +120,12 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "feat-2",
+    "id": "tmp-4387",
     "brand": "HP",
     "name": "Hp 840 G8 I5 11Th 8/256Gb",
     "specs": "hp 840 g8 i5 11th 8/256gb",
     "price": 32000,
-    "category": "exuk business hp featured",
+    "category": "exuk business hp",
     "badge": "exuk",
     "img": "images/hp_840_g8.jpg",
     "software": [
@@ -28,23 +134,23 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "feat-3",
+    "id": "tmp-5895",
     "brand": "Apple",
     "name": "Macbook Pro 13 2015 I5 16/512Gb",
     "specs": "macbook pro 13  2015 i5 16/512gb",
     "price": 43000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
-    "id": "feat-4",
+    "id": "tmp-5066",
     "brand": "HP",
     "name": "Hp 830 G6 I7 8Th 16/512Gb Touchscreen",
     "specs": "hp 830 g6 i7 8th 16/512gb\ntouchscreen",
     "price": 36000,
-    "category": "exuk business hp featured",
+    "category": "exuk business hp",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_830_g6.jpg",
     "software": [
@@ -53,12 +159,12 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "feat-5",
+    "id": "tmp-6235",
     "brand": "Lenovo",
     "name": "Lenovo Yoga 9I 14ITL5 I7 11th 16/512Gb",
     "specs": "lenovo yoga 9i 14itl5 i7 11th 16/512gb",
     "price": 85499,
-    "category": "exuk business lenovo yoga touchscreen featured",
+    "category": "exuk business lenovo yoga touchscreen",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_x1_yoga.jpg",
     "software": [
@@ -67,12 +173,12 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "feat-6",
+    "id": "tmp-8799",
     "brand": "Lenovo",
     "name": "Lenovo T490s I5 8th 8/256Gb",
     "specs": "lenovo t490s i5 8th 8/256gb",
     "price": 28499,
-    "category": "exuk business lenovo featured",
+    "category": "exuk business lenovo",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
     "software": [
@@ -81,12 +187,12 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "feat-7",
+    "id": "tmp-7014",
     "brand": "Lenovo",
     "name": "Lenovo X390 I5 8Th 8/256Gb",
     "specs": "x390 i5 8th 8/256gb",
     "price": 32000,
-    "category": "exuk business lenovo featured",
+    "category": "exuk business lenovo",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
     "software": [
@@ -95,12 +201,12 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "feat-8",
+    "id": "tmp-4524",
     "brand": "Apple",
     "name": "Macbook Air 13 2013 I5 8/128",
     "specs": "MacBook Air 13 2013 i5 8/128",
     "price": 30000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
     "software": []
@@ -118,17 +224,6 @@ const ALL_PRODUCTS = [
       "Windows 11",
       "Microsoft Office 2024"
     ]
-  },
-  {
-    "id": "tmp-7356",
-    "brand": "Apple",
-    "name": "Macbook Pro 15 2017 I7 16/512Gb 4Gb Graphics",
-    "specs": "macbook pro 15 2017 i7 16/512gb 4gb graphics",
-    "price": 61000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_15_usbc.jpg",
-    "software": []
   },
   {
     "id": "tmp-1961",
@@ -460,20 +555,6 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "tmp-5537",
-    "brand": "HP",
-    "name": "Hp 1040 G9 I7 12th 16/512Gb X360 Touchscreen",
-    "specs": "hp 1040 g9 i7 12th 16/512gb x360 touchscreen",
-    "price": 85499,
-    "category": "exuk business hp touchscreen",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_elitebook_840_g8.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
-  },
-  {
     "id": "tmp-3562",
     "brand": "HP",
     "name": "Hp 840 G5 I5 8Th 8/256Gb Touchscreen",
@@ -550,34 +631,6 @@ const ALL_PRODUCTS = [
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
-  },
-  {
-    "id": "tmp-8236",
-    "brand": "Lenovo",
-    "name": "Lenovo T480s I5 8th 8/256Gb Touchscreen",
-    "specs": "lenovo t480s i5 8th 8/256gb touchscreen",
-    "price": 28499,
-    "category": "exuk business lenovo touchscreen",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
-  },
-  {
-    "id": "tmp-5171",
-    "brand": "HP",
-    "name": "Hp 840 G7 I7 10Th 8/256Gb Touchscreen",
-    "specs": "hp 840 g7  i7 10th 8/256gb\ntouchscreen",
-    "price": 37000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "images/hp_840_g7_i7_user.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
   },
   {
     "id": "tmp-5286",
@@ -676,40 +729,12 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "p-2",
-    "brand": "HP",
-    "name": "Hp 830 G8 I5 11Th 16/512Gb x360 Touchscreen",
-    "specs": "hp 830 g8 i5 11th  16/512gb \nx360 touchscreen",
-    "price": 45000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
-  },
-  {
     "id": "p-5",
     "brand": "HP",
     "name": "Hp 830 G8 I5 11Th 8/256Gb Touchscreen",
     "specs": "hp 830 g8 i5 11th 8/256gb\ntouchscreen",
     "price": 34000,
     "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
-  },
-  {
-    "id": "p-6",
-    "brand": "HP",
-    "name": "Hp 1030 G8 I7 11th 16/512Gb X360 Touchscreen",
-    "specs": "hp 1030 g8 i7 11th 16/512gb x360 touchscreen",
-    "price": 72499,
-    "category": "exuk business hp touchscreen",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
@@ -939,20 +964,6 @@ const ALL_PRODUCTS = [
     "category": "exuk business hp",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
-  },
-  {
-    "id": "tmp-8642",
-    "brand": "HP",
-    "name": "Hp 840 G6 I5 8/256Gb",
-    "specs": "hp 840 g6 i5 8/256gb",
-    "price": 25000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g6.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -1250,17 +1261,6 @@ const ALL_PRODUCTS = [
     "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_2019.jpg",
-    "software": []
-  },
-  {
-    "id": "apple-macbook-air-13-2015-i5-8/256",
-    "brand": "Apple",
-    "name": "Macbook Air 13 2015 I5 8/256",
-    "specs": "MacBook Air 13 2015 i5 8/256",
-    "price": 33000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
     "software": []
   },
   {
