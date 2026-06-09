@@ -269,9 +269,32 @@
             </div>
             <div style="padding: 10px; text-align: center;">
                 <div style="font-size: 0.9rem; opacity: 0.9;" id="till-label">Buy Goods Till Number</div>
-                <div style="font-size: 2rem; font-weight: 900; letter-spacing: 2px; margin: 5px 0;">3291421</div>
+                <div id="till-number" onclick="copyTill()" style="font-size: 2rem; font-weight: 900; letter-spacing: 2px; margin: 5px 0; cursor: pointer; background: rgba(255,255,255,0.1); border-radius: 10px; padding: 10px; position: relative;">
+                    3291421
+                    <div id="copy-toast" style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: var(--brand-cyan); color: white; font-size: 0.7rem; padding: 2px 8px; border-radius: 5px; display: none;">Copied!</div>
+                </div>
+                <div style="font-size: 0.7rem; opacity: 0.8; margin-bottom: 10px;" id="copy-hint">(Tap number to copy)</div>
                 <div style="font-size: 0.8rem; font-weight: bold; background: rgba(255,255,255,0.2); display: inline-block; padding: 5px 15px; border-radius: 20px;">SIP CYCLE WATER STATION</div>
             </div>
+        </div>
+
+        <!-- Station Gallery (Coming Soon) -->
+        <div class="card">
+            <div class="section-title" id="title-gallery">
+                <i class="fas fa-camera"></i> Our Station
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div style="aspect-ratio: 1/1; background: #f1f5f9; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #cbd5e1; font-size: 0.8rem; text-align: center; padding: 10px;">Photo Coming Soon...</div>
+                <div style="aspect-ratio: 1/1; background: #f1f5f9; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #cbd5e1; font-size: 0.8rem; text-align: center; padding: 10px;">Photo Coming Soon...</div>
+            </div>
+        </div>
+
+        <!-- Share with Neighbor -->
+        <div class="card" style="text-align: center; border: 1px solid #e2e8f0;">
+            <div id="share-text" style="font-size: 0.9rem; font-weight: 700; color: var(--brand-navy); margin-bottom: 10px;">Spread the Word!</div>
+            <a href="whatsapp://send?text=Check out Sip Cycle in Zimmerman for clean, fast water delivery! 💧 https://nexcomventures.co.ke/sipcycle.html" class="btn" style="background: #eef2ff; color: #4338ca; margin-bottom: 0;">
+                <i class="fas fa-share-alt"></i> <span id="btn-share">SHARE WITH A NEIGHBOR</span>
+            </a>
         </div>
 
         <div class="card">
@@ -326,7 +349,13 @@
                 labelBranding: 'Customized Branding',
                 labelEvents: 'Corporate & Events',
                 btnWa: 'ORDER ON WHATSAPP',
-                btnCall: 'CALL FOR DELIVERY'
+                btnCall: 'CALL FOR DELIVERY',
+                titleGallery: 'Our Station',
+                photoSoon: 'Photo Coming Soon...',
+                shareText: 'Spread the Word!',
+                btnShare: 'SHARE WITH A NEIGHBOR',
+                copyHint: '(Tap number to copy)',
+                copied: 'Copied!'
             },
             sw: {
                 toggle: 'English',
@@ -350,9 +379,23 @@
                 labelBranding: 'Brand Yako Maalum',
                 labelEvents: 'Makampuni na Sherehe',
                 btnWa: 'AGIZA KWA WHATSAPP',
-                btnCall: 'PIGA SIMU KULETEWA'
+                btnCall: 'PIGA SIMU KULETEWA',
+                titleGallery: 'Kituo Chetu',
+                photoSoon: 'Picha inakuja hivi punde...',
+                shareText: 'Waambie Wenzako!',
+                btnShare: 'TUMA KWA JIRANI',
+                copyHint: '(Finya namba kunakili)',
+                copied: 'Imenakiliwa!'
             }
         };
+
+        function copyTill() {
+            const till = "3291421";
+            navigator.clipboard.writeText(till);
+            const toast = document.getElementById('copy-toast');
+            toast.style.display = 'block';
+            setTimeout(() => { toast.style.display = 'none'; }, 2000);
+        }
 
         function toggleLang() {
             currentLang = currentLang === 'en' ? 'sw' : 'en';
@@ -380,6 +423,12 @@
             document.getElementById('label-events').innerText = lang.labelEvents;
             document.getElementById('btn-wa').innerText = lang.btnWa;
             document.getElementById('btn-call').innerText = lang.btnCall;
+            document.getElementById('title-gallery').innerHTML = '<i class="fas fa-camera"></i> ' + lang.titleGallery;
+            document.querySelectorAll('[style*="aspect-ratio"]').forEach(el => el.innerText = lang.photoSoon);
+            document.getElementById('share-text').innerText = lang.shareText;
+            document.getElementById('btn-share').innerText = lang.btnShare;
+            document.getElementById('copy-hint').innerText = lang.copyHint;
+            document.getElementById('copy-toast').innerText = lang.copied;
         }
 
         function updateStatus() {
