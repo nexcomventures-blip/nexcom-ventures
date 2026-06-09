@@ -4,122 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sip Cycle | Premium Refill Water Nairobi</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --brand-navy: #003B73;
             --brand-cyan: #00BDD6;
-            --bg: #F8FAFC;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
-        body { background: var(--bg); color: var(--brand-navy); line-height: 1.6; }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--brand-navy) 0%, #002147 100%);
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            color: #1e293b;
+            padding-bottom: 80px; /* Space for floating button */
+        }
+        .header {
+            background: linear-gradient(135deg, var(--brand-navy) 0%, #0056a6 100%);
             color: white;
-            padding: 60px 20px 40px;
+            padding: 40px 20px;
             text-align: center;
-            border-radius: 0 0 40px 40px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
-        .logo { font-size: 2.5rem; font-weight: 800; margin-bottom: 10px; }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 5px;
+            letter-spacing: -1px;
+        }
         .logo span { color: var(--brand-cyan); }
-        .hero p { opacity: 0.9; font-size: 1.1rem; max-width: 300px; margin: 0 auto 30px; }
-
-        .container { max-width: 500px; margin: -30px auto 0; padding: 0 20px 100px; }
-
-        /* Price Card */
+        .tagline {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        .container {
+            max-width: 500px;
+            margin: -20px auto 0;
+            padding: 0 20px;
+        }
         .card {
             background: white;
-            border-radius: 25px;
-            padding: 25px;
-            box-shadow: 0 15px 35px rgba(0,59,115,0.1);
-            margin-bottom: 25px;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: hidden;
         }
-        .section-title { 
-            font-size: 1.2rem; 
-            font-weight: 800; 
-            margin-bottom: 20px; 
-            display: flex; 
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--brand-navy);
+            margin-bottom: 15px;
+            display: flex;
             align-items: center;
             gap: 10px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
         }
-        .section-title i { color: var(--brand-cyan); }
-
         .price-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid #F1F5F9;
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f5f9;
         }
-        .price-row:last-child { border: none; }
-        .item-info b { display: block; font-size: 1.1rem; }
-        .item-info span { font-size: 0.85rem; color: #64748B; }
-        .price-tag { 
-            background: #E0F7FA; 
-            color: var(--brand-navy); 
-            padding: 8px 15px; 
-            border-radius: 12px; 
-            font-weight: 800; 
+        .price-row:last-child { border-bottom: none; }
+        .item-info b { display: block; font-size: 1rem; }
+        .item-info span { font-size: 0.8rem; color: #64748b; }
+        .price-tag {
+            background: #f0f9ff;
+            color: var(--brand-navy);
+            padding: 5px 12px;
+            border-radius: 10px;
+            font-weight: 900;
             font-size: 1.1rem;
         }
-
-        /* Delivery Badge */
-        .delivery-zone {
-            background: var(--brand-cyan);
-            color: white;
-            padding: 15px;
-            border-radius: 20px;
-            text-align: center;
-            font-weight: 600;
-            margin-bottom: 25px;
-        }
-
-        /* Call to Actions */
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            padding: 20px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            transition: transform 0.2s;
-        }
-        .btn:active { transform: scale(0.98); }
-        
-        .btn-whatsapp { background: #25D366; color: white; box-shadow: 0 10px 20px rgba(37,211,102,0.2); }
-        .btn-call { background: var(--brand-navy); color: white; box-shadow: 0 10px 20px rgba(0,59,115,0.2); }
-
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: #94A3B8;
-            font-size: 0.9rem;
-        }
-        .till-box {
-            border: 2px dashed var(--brand-cyan);
+            gap: 10px;
+            width: 100%;
             padding: 15px;
             border-radius: 15px;
+            text-decoration: none;
+            font-weight: 800;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+            box-sizing: border-box;
+        }
+        .btn:active { transform: scale(0.98); }
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+        .btn-call {
+            background-color: var(--brand-navy);
+            color: white;
+        }
+        .delivery-zone {
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 20px;
             margin-top: 10px;
-            color: var(--brand-navy);
+        }
+        /* Floating Button */
+        .float-wa {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
         }
     </style>
 </head>
 <body>
+    <a href="https://wa.me/254719626363?text=Hi%20Sip%20Cycle,%20I%20would%20like%20to%20order%20a%20refill." class="float-wa">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-    <div class="hero">
+    <div class="header">
         <div class="logo">Sip<span>💧</span>Cycle</div>
-        <p>Pure, Refreshing Water Delivered to Your Doorstep.</p>
+        <div class="tagline">PREMIUM REFILL WATER | ZIMMERMAN</div>
     </div>
 
     <div class="container">
-        
         <div class="delivery-zone">
             <i class="fas fa-truck"></i> Delivering to: Zimmerman, Roysambu, Mirema & Surroundings
         </div>
@@ -137,6 +161,36 @@
             <div style="flex: 1;">
                 <i class="fas fa-shield-virus" style="color: var(--brand-cyan); font-size: 1.5rem; margin-bottom: 5px;"></i>
                 <div style="font-size: 0.7rem; font-weight: 800;">OZONE TREATED</div>
+            </div>
+        </div>
+
+        <!-- The Sip Cycle Advantage -->
+        <div class="card">
+            <div class="section-title">
+                <i class="fas fa-star"></i> Why Choose Sip Cycle?
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 5px;">
+                <div style="background: #f8fafc; padding: 10px; border-radius: 10px; font-size: 0.85rem;">
+                    <i class="fas fa-leaf" style="color: #22c55e;"></i> <b>Eco-Friendly</b><br>Reused & Recycled
+                </div>
+                <div style="background: #f8fafc; padding: 10px; border-radius: 10px; font-size: 0.85rem;">
+                    <i class="fas fa-shipping-fast" style="color: #f59e0b;"></i> <b>Fast Delivery</b><br>Under 30 Mins
+                </div>
+                <div style="background: #f8fafc; padding: 10px; border-radius: 10px; font-size: 0.85rem; grid-column: span 2;">
+                    <i class="fas fa-check-circle" style="color: var(--brand-cyan);"></i> <b>KEBS Qualified Machine</b><br>Guaranteed 100% Water Safety
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Info -->
+        <div class="card" style="background: linear-gradient(135deg, var(--brand-navy) 0%, #0056a6 100%); color: white;">
+            <div class="section-title" style="color: white; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                <i class="fas fa-mobile-alt"></i> How to Pay (M-PESA)
+            </div>
+            <div style="padding: 10px; text-align: center;">
+                <div style="font-size: 0.9rem; opacity: 0.9;">Buy Goods Till Number</div>
+                <div style="font-size: 2rem; font-weight: 900; letter-spacing: 2px; margin: 5px 0;">3291421</div>
+                <div style="font-size: 0.8rem; font-weight: bold; background: rgba(255,255,255,0.2); display: inline-block; padding: 5px 15px; border-radius: 20px;">SIP CYCLE WATER STATION</div>
             </div>
         </div>
 
@@ -194,6 +248,32 @@
             </div>
         </div>
 
+        <!-- Hours & Care Tips -->
+        <div class="card">
+            <div class="section-title">
+                <i class="fas fa-clock"></i> Opening Hours
+            </div>
+            <div style="padding: 5px; font-weight: bold; color: var(--brand-navy);">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span>Mon - Sat:</span> <span>8:00 AM - 11:00 PM</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; opacity: 0.8;">
+                    <span>Sunday:</span> <span>10:00 AM - 10:00 PM</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-title">
+                <i class="fas fa-lightbulb"></i> Bottle Care Tips
+            </div>
+            <ul style="margin: 0; padding-left: 20px; font-size: 0.9rem; color: #475569; line-height: 1.6;">
+                <li>Store in a <b>cool, dry place</b> away from sunlight.</li>
+                <li>Ensure your <b>dispenser/pump</b> is cleaned regularly.</li>
+                <li>Rinse the <b>cap & neck</b> before opening.</li>
+            </ul>
+        </div>
+
         <a href="https://wa.me/254719626363?text=Hello%20Sip%20Cycle,%20I%20would%20like%20to%20order%20a%20refill." class="btn btn-whatsapp">
             <i class="fab fa-whatsapp"></i> ORDER ON WHATSAPP
         </a>
@@ -210,14 +290,9 @@
             <i class="fas fa-phone-alt"></i> CALL FOR DELIVERY
         </a>
 
-        <div class="footer">
-            <div class="till-box">
-                Buy Goods Till Number: <br>
-                <b style="font-size: 1.4rem;">3291421</b>
-            </div>
-            <p style="margin-top:20px;">Mon-Sat: 8AM - 11PM | Sun: 10AM - 10PM</p>
+        <div style="text-align: center; font-size: 0.8rem; color: #94a3b8; margin: 20px 0;">
+            © 2026 Sip Cycle Water Station. All Rights Reserved.
         </div>
     </div>
-
 </body>
 </html>
