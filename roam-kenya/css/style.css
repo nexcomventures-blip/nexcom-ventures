@@ -215,9 +215,72 @@ section { padding: 80px 0; }
     .rhythms-section { margin: 0 15px; }
 }
 
-/* Animations */
-.reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
-.reveal.active { opacity: 1; transform: translateY(0); }
+/* Cinematic & Architectural Enhancements */
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: transform 1.5s cubic-bezier(0, 0, 0.2, 1);
+}
+.hero-v4:hover .hero-image img { transform: scale(1); }
+
+/* Structural Grey Strip */
+.trust-strip {
+    background: #F0F0F0;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+.trust-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.5;
+    filter: grayscale(1);
+}
+.trust-item { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+
+/* Modal Inquiry Form */
+.modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(44, 62, 45, 0.95);
+    z-index: 2000;
+    display: none;
+    align-items: center; justify-content: center;
+    opacity: 0; transition: 0.4s;
+}
+.modal.active { display: flex; opacity: 1; }
+.modal-content {
+    background: var(--bg);
+    padding: 50px;
+    width: 100%; max-width: 600px;
+    border-radius: 20px;
+    position: relative;
+}
+.close-modal {
+    position: absolute; top: 20px; right: 20px;
+    font-size: 1.5rem; cursor: pointer; color: var(--primary);
+}
+.inquiry-form label { display: block; margin-bottom: 10px; font-weight: 600; font-size: 0.9rem; }
+.inquiry-form input, .inquiry-form select, .inquiry-form textarea {
+    width: 100%; padding: 12px; margin-bottom: 20px;
+    border: 1px solid var(--border); border-radius: 4px;
+    background: white; font-family: inherit;
+}
+.btn-submit {
+    width: 100%; background: var(--primary); color: white;
+    padding: 15px; border: none; border-radius: 4px;
+    font-weight: 700; cursor: pointer; text-transform: uppercase;
+}
+
+/* Journal Entry Style */
+.journal-section { background: white; }
+.journal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch; border: 1px solid var(--border); }
+.journal-img { height: 100%; min-height: 400px; background-size: cover; background-position: center; }
+.journal-text { padding: 80px; display: flex; flex-direction: column; justify-content: center; }
+.journal-date { font-size: 0.8rem; color: var(--secondary); margin-bottom: 15px; font-weight: 700; }
 
 /* Floating WhatsApp */
 .whatsapp-float {
