@@ -415,13 +415,16 @@
     <div class="hero-tagline">Pure Water. Delivered to Your Door.</div>
     <div style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
       <a href="tel:0719626363" class="hero-cta">📞 Order Now — FREE Delivery</a>
-      <button onclick="openBalanceModal()" style="background: transparent; border: 2px solid white; color: white; padding: 12px 24px; border-radius: 50px; font-weight: 700; cursor: pointer; font-size: 14px;">💳 Check My Balance</button>
+      <div style="display: flex; gap: 8px;">
+        <button onclick="openBalanceModal()" style="background: transparent; border: 2px solid white; color: white; padding: 10px 20px; border-radius: 50px; font-weight: 700; cursor: pointer; font-size: 13px;">💳 Check Balance</button>
+        <button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 10px 20px; border-radius: 50px; font-weight: 700; cursor: pointer; font-size: 13px;">📊 View Prices</button>
+      </div>
     </div>
     <div class="hero-sub">Serving Zimmerman · Roysambu · Mirema · Base · Lumumba Drive</div>
   </div>
 
   <!-- PRICING -->
-  <section class="pricing-section" style="text-align:center;">
+  <section id="pricing" class="pricing-section" style="text-align:center;">
     <div class="section-label">Simple Pricing</div>
     <h2>Affordable Clean Water</h2>
     <p class="sub">Choose refills or buy with a new bottle — same great quality.</p>
@@ -468,6 +471,20 @@
           <div class="price-liters">20<span>L</span></div>
           <div class="price-amount">KSh 1300</div>
           <div class="price-note">Premium Water</div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 16px; color: var(--muted); margin-top: 40px; margin-bottom: 20px;">🏢 Wholesale & Bulk</h3>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-liters">10+<span>Bottles</span></div>
+          <div class="price-amount">KSh 120<span>/ea</span></div>
+          <div class="price-note">20L Refills</div>
+        </div>
+        <div class="price-card featured">
+          <div class="price-liters">Bulk<span>Dispenser</span></div>
+          <div class="price-amount">KSh 350</div>
+          <div class="price-note">Large Events</div>
         </div>
       </div>
     </div>
