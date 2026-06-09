@@ -173,3 +173,44 @@ section { padding: 60px 0; }
     .hero-v3 h1 { font-size: 3rem; }
     .container { padding: 0 20px; }
 }
+
+/* Cinematic Headline Style */
+.cinematic-headline {
+    font-size: 4.5rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: -2px;
+}
+.cinematic-headline span {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 8px;
+    display: block;
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+.cinematic-headline strong {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 7rem;
+    color: var(--primary);
+    display: inline-block;
+    position: relative;
+    line-height: 1;
+}
+.cinematic-headline strong::after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: var(--secondary);
+    z-index: -1;
+    opacity: 0.3;
+}
+@media (max-width: 768px) {
+    .cinematic-headline strong { font-size: 4.5rem; }
+    .cinematic-headline { font-size: 3rem !important; }
+}
