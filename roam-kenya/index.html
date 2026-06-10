@@ -36,7 +36,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="smooth-scroll">
+    <div class="custom-cursor"></div>
     <div class="scroll-progress"></div>
     <nav class="main-nav">
         <div class="container nav-container">
@@ -235,15 +236,35 @@
         </div>
     </section>
 
-    <footer style="padding: 80px 0; background: var(--primary); color: var(--white); text-align: center; margin-top: 80px;">
+    <section class="newsletter-section reveal">
         <div class="container">
-            <h2 style="color: var(--white); margin-bottom: 25px; font-size: 2.2rem;">ROAM KENYA</h2>
-            <p style="opacity: 0.7; margin-bottom: 40px; font-size: 1.1rem;">Mama Ngina St, Nairobi | +254 721 585 784</p>
-            <div style="display: flex; justify-content: center; gap: 25px;">
-                <a href="https://wa.me/254721585784" style="color: var(--white); font-size: 1.5rem;"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" style="color: var(--white); font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+            <span class="subtitle" style="color: var(--secondary);">The Nomad Dispatch</span>
+            <h2 style="color: white;">Stay in the Dialogue.</h2>
+            <p style="opacity: 0.7; max-width: 600px; margin: 20px auto;">Join our curated circle for seasonal dispatches on Kenya’s hidden paths, conservation wins, and expedition invites.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Join</button>
+            </form>
+        </div>
+    </section>
+
+    <footer style="padding: 100px 0; background: #1a1a1a; color: var(--white); text-align: center;">
+        <div class="container">
+            <h2 style="color: var(--white); margin-bottom: 25px; font-size: 2.2rem; letter-spacing: 5px;">ROAM KENYA</h2>
+            <p style="opacity: 0.5; margin-bottom: 40px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;">Curating Kenya’s Deepest Chapters</p>
+            <div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 50px;">
+                <a href="#about" style="color: white; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Ethos</a>
+                <a href="#collection" style="color: white; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Escapes</a>
+                <a href="#journal" style="color: white; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Journal</a>
+                <a href="https://wa.me/254721585784" style="color: white; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Concierge</a>
             </div>
-            <p style="margin-top: 50px; opacity: 0.4; font-size: 0.8rem;">© 2026 Roam Kenya. All rights reserved.</p>
+            <p style="opacity: 0.7; font-size: 1rem; margin-bottom: 10px;">Mama Ngina St, Nairobi</p>
+            <p style="opacity: 0.7; font-size: 1rem; margin-bottom: 40px;">+254 721 585 784 | curate@roamkenya.co.ke</p>
+            <div style="display: flex; justify-content: center; gap: 25px;">
+                <a href="https://wa.me/254721585784" style="color: var(--secondary); font-size: 1.5rem;"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" style="color: var(--secondary); font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p style="margin-top: 80px; opacity: 0.3; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px;">© 2026 Roam Kenya. An Architectural Safari Studio.</p>
         </div>
     </footer>
 
@@ -279,11 +300,18 @@
         </div>
     </div>
 
-    <a href="https://wa.me/254721585784" class="whatsapp-float">
+    <a href="https://wa.me/254721585784" class="concierge-pill">
+        <span>Chat with a Curator</span>
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
+        const cursor = document.querySelector('.custom-cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('.main-nav');
             const progress = document.querySelector('.scroll-progress');
