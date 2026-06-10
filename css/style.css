@@ -2600,27 +2600,25 @@ footer {
 
 /* ===================================================
    LARGE DESKTOP SCALING FIX (screens >= 1400px)
-   Caps ALL section wrappers to 1200px max-width
-   and scales down fonts/spacing on big monitors.
-   Product grid columns are explicitly preserved.
    =================================================== */
 
 @media (min-width: 1400px) {
 
-  /* Base font */
   html { font-size: 14px; }
 
-  /* Universal wrapper cap */
-  .container,
+  /* Cap nav, hero, section headers, footer */
   .nav-container,
   .hero-content,
   .section-header,
   .trust-container,
-  .footer-container,
-  .sell-container,
-  .products-grid,
-  #productsGrid {
+  .footer-container {
     max-width: 1200px !important;
+  }
+
+  /* Cap the page container */
+  .container {
+    max-width: 1280px;
+    padding: 0 2.5rem;
   }
 
   /* Hero */
@@ -2641,28 +2639,18 @@ footer {
     font-size: 2.6rem;
   }
 
-  /* Preserve 4-column product grid at this width */
-  .products-grid,
-  #productsGrid {
-    grid-template-columns: repeat(4, 1fr) !important;
-  }
-
-  /* About, insights, contact inner wrappers */
-  .about-inner,
-  .insights-grid,
-  .contact-inner,
-  .repairs-inner,
-  [class*="-wrap"],
-  [class*="-inner"],
-  [class*="-content"]:not(.hero-content) {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   /* Tighten section padding */
   section {
     padding: 5rem 2rem;
+  }
+
+  /* About / Contact / Insights inner wrappers */
+  .about-inner,
+  .contact-inner,
+  .repairs-inner {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }
@@ -2672,22 +2660,13 @@ footer {
 
   html { font-size: 13px; }
 
-  .container,
   .nav-container,
   .hero-content,
   .section-header,
   .trust-container,
   .footer-container,
-  .sell-container,
-  .products-grid,
-  #productsGrid {
+  .container {
     max-width: 1100px !important;
-  }
-
-  /* Still keep 4-column grid */
-  .products-grid,
-  #productsGrid {
-    grid-template-columns: repeat(4, 1fr) !important;
   }
 
   .hero-content h1 {
