@@ -312,10 +312,31 @@
         </div>
     </div>
 
-    <a href="https://wa.me/254721585784" class="concierge-pill">
-        <span>Chat with a Curator</span>
-        <i class="fab fa-whatsapp"></i>
+    <a href="javascript:void(0)" onclick="toggleAI()" class="concierge-pill">
+        <span>AI Curator Online</span>
+        <i class="fas fa-robot"></i>
     </a>
+
+    <!-- AI Curator Widget -->
+    <div class="ai-widget-container" id="aiWidget">
+        <div class="ai-header">
+            <div class="ai-header-info">
+                <div class="ai-avatar"><i class="fas fa-leaf"></i></div>
+                <div>
+                    <h4>Roam AI Curator</h4>
+                    <p>Always in the Dialogue</p>
+                </div>
+            </div>
+            <button onclick="toggleAI()" style="background:none; border:none; color:white; cursor:pointer; font-size:1.2rem;"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="ai-chat-body" id="aiChatBody">
+            <div class="msg ai">Welcome to Roam Kenya. I am your AI Curator. I can help you find the perfect escape or answer questions about our logistics. What’s on your mind?</div>
+        </div>
+        <div class="ai-chat-footer">
+            <input type="text" id="aiInput" placeholder="Ask me anything..." onkeypress="if(event.key === 'Enter') sendAIMessage()">
+            <button onclick="sendAIMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
 
     <script>
         const cursor = document.querySelector('.custom-cursor');
@@ -323,6 +344,61 @@
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
+
+        function toggleAI() {
+            const widget = document.getElementById('aiWidget');
+            widget.classList.toggle('active');
+        }
+
+        const knowledgeBase = {
+            "lovers": "Our Lover's Edition is an intimate sanctuary for two, featuring moonlit dinners and private coastal escapes. Perfect for honeymoons or deep reconnections.",
+            "coastal": "Coastal Heritage explores the Swahili soul. We use private dhows and stay in ancient stone houses in Lamu or Watamu.",
+            "migration": "The Great Migration is our most epic escape. We secure front-row, private viewing spots away from the crowds.",
+            "peaks": "Solitary Peaks is a high-altitude soul journey on Mt. Kenya. It's for those seeking silence and perspective.",
+            "frontier": "The Northern Frontier is raw and untamed. We explore Samburu and Turkana with rugged luxury.",
+            "logistics": "We provide high-stakes field logistics for academic researchers, scientific expeditions, and private missions across Kenya.",
+            "price": "Our escapes are fully bespoke and curated to your needs. Costs vary based on duration and group size. Shall we start a consultation?",
+            "nairobi": "Our base is on Mama Ngina St, Nairobi, but our office is the entire Kenyan wild.",
+            "contact": "You can reach our human curators at +254 721 585 784 or via the WhatsApp link on this site."
+        };
+
+        function sendAIMessage() {
+            const input = document.getElementById('aiInput');
+            const body = document.getElementById('aiChatBody');
+            const text = input.value.trim().toLowerCase();
+            
+            if (!text) return;
+
+            // Add User Message
+            const userMsg = document.createElement('div');
+            userMsg.className = 'msg user';
+            userMsg.textContent = input.value;
+            body.appendChild(userMsg);
+            input.value = '';
+            body.scrollTop = body.scrollHeight;
+
+            // AI Response Logic
+            setTimeout(() => {
+                const aiMsg = document.createElement('div');
+                aiMsg.className = 'msg ai';
+                
+                let response = "That sounds like a journey worth taking. Would you like me to connect you with a human curator to finalize the details for that?";
+                
+                if (text.includes("love") || text.includes("romantic") || text.includes("honeymoon")) response = knowledgeBase.lovers;
+                else if (text.includes("coast") || text.includes("ocean") || text.includes("sea")) response = knowledgeBase.coastal;
+                else if (text.includes("migration") || text.includes("wildlife") || text.includes("animal")) response = knowledgeBase.migration;
+                else if (text.includes("peak") || text.includes("mountain") || text.includes("trek")) response = knowledgeBase.peaks;
+                else if (text.includes("frontier") || text.includes("north") || text.includes("samburu")) response = knowledgeBase.frontier;
+                else if (text.includes("logistics") || text.includes("research") || text.includes("field")) response = knowledgeBase.logistics;
+                else if (text.includes("price") || text.includes("cost") || text.includes("how much")) response = knowledgeBase.price;
+                else if (text.includes("location") || text.includes("nairobi") || text.includes("office")) response = knowledgeBase.nairobi;
+                else if (text.includes("contact") || text.includes("human") || text.includes("talk to someone")) response = knowledgeBase.contact;
+
+                aiMsg.textContent = response;
+                body.appendChild(aiMsg);
+                body.scrollTop = body.scrollHeight;
+            }, 800);
+        }
 
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('.main-nav');
