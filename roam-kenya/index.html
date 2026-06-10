@@ -29,7 +29,7 @@
     }
     </script>
     
-    <link rel="stylesheet" href="css/style.css?v=36.0">
+    <link rel="stylesheet" href="css/style.css?v=38.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,6 +37,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="scroll-progress"></div>
     <nav class="main-nav">
         <div class="container nav-container">
             <a href="#" class="brand">ROAM KENYA</a>
@@ -73,6 +74,29 @@
             <div class="trust-item"><i class="fas fa-shield-alt"></i> Private Logistics</div>
             <div class="trust-item"><i class="fas fa-award"></i> Boutique Quality</div>
             <div class="trust-item"><i class="fas fa-clock"></i> 24/7 Security</div>
+        </div>
+    </div>
+
+    <div class="stats-strip reveal">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>15+</h3>
+                    <p>Years in Field</p>
+                </div>
+                <div class="stat-item">
+                    <h3>200+</h3>
+                    <p>Private Missions</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Safety Record</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Elite Support</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -172,6 +196,15 @@
         </div>
     </section>
 
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonial-item reveal">
+                <blockquote>"Roam Kenya didn't just show us the land; they invited us into a dialogue with it. The logistics were invisible, the experience was profound."</blockquote>
+                <span class="testimonial-author">— Dr. Sarah M., Lead Researcher</span>
+            </div>
+        </div>
+    </section>
+
     <footer style="padding: 80px 0; background: var(--primary); color: var(--white); text-align: center; margin-top: 80px;">
         <div class="container">
             <h2 style="color: var(--white); margin-bottom: 25px; font-size: 2.2rem;">ROAM KENYA</h2>
@@ -220,6 +253,12 @@
     <script>
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('.main-nav');
+            const progress = document.querySelector('.scroll-progress');
+            const totalHeight = document.body.scrollHeight - window.innerHeight;
+            const progressWidth = (window.scrollY / totalHeight) * 100;
+            
+            progress.style.width = progressWidth + '%';
+
             if (window.scrollY > 50) nav.classList.add('scrolled');
             else nav.classList.remove('scrolled');
         });
