@@ -2600,25 +2600,30 @@ footer {
 
 /* ===================================================
    LARGE DESKTOP SCALING FIX (screens >= 1400px)
-   Prevents layout from becoming oversized on big monitors
-   Targeted fix — does NOT affect product grid rendering
+   Caps ALL section wrappers to 1200px max-width
+   and scales down fonts/spacing on big monitors.
+   Product grid columns are explicitly preserved.
    =================================================== */
 
 @media (min-width: 1400px) {
-  /* Scale down base font slightly */
-  html {
-    font-size: 14px;
+
+  /* Base font */
+  html { font-size: 14px; }
+
+  /* Universal wrapper cap */
+  .container,
+  .nav-container,
+  .hero-content,
+  .section-header,
+  .trust-container,
+  .footer-container,
+  .sell-container,
+  .products-grid,
+  #productsGrid {
+    max-width: 1200px !important;
   }
 
-  /* Cap the nav */
-  .nav-container {
-    max-width: 1280px;
-  }
-
-  /* Hero section — tighter content column */
-  .hero-content {
-    max-width: 1200px;
-  }
+  /* Hero */
   .hero-content h1 {
     font-size: clamp(2.8rem, 3.8vw, 4.4rem);
     letter-spacing: -2px;
@@ -2636,33 +2641,66 @@ footer {
     font-size: 2.6rem;
   }
 
-  /* Cap generic containers but NOT the product grid wrapper */
-  .container {
-    max-width: 1280px;
+  /* Preserve 4-column product grid at this width */
+  .products-grid,
+  #productsGrid {
+    grid-template-columns: repeat(4, 1fr) !important;
   }
 
-  /* Footer */
-  .footer-container {
-    max-width: 1280px;
+  /* About, insights, contact inner wrappers */
+  .about-inner,
+  .insights-grid,
+  .contact-inner,
+  .repairs-inner,
+  [class*="-wrap"],
+  [class*="-inner"],
+  [class*="-content"]:not(.hero-content) {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
+
+  /* Tighten section padding */
+  section {
+    padding: 5rem 2rem;
+  }
+
 }
 
 /* Ultra-wide (>= 1800px) */
 @media (min-width: 1800px) {
-  html {
-    font-size: 13px;
-  }
+
+  html { font-size: 13px; }
+
+  .container,
   .nav-container,
   .hero-content,
-  .container,
-  .footer-container {
-    max-width: 1200px;
+  .section-header,
+  .trust-container,
+  .footer-container,
+  .sell-container,
+  .products-grid,
+  #productsGrid {
+    max-width: 1100px !important;
   }
+
+  /* Still keep 4-column grid */
+  .products-grid,
+  #productsGrid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
   .hero-content h1 {
     font-size: 3.8rem;
     letter-spacing: -2px;
   }
+
   #hero {
     padding: 80px 2rem 20px;
   }
+
+  section {
+    padding: 4rem 2rem;
+  }
+
 }
