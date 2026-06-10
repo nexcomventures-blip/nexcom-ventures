@@ -317,23 +317,23 @@
         <i class="fas fa-robot"></i>
     </a>
 
-    <!-- AI Curator Widget -->
+    <!-- Roam Curator Widget -->
     <div class="ai-widget-container" id="aiWidget">
         <div class="ai-header">
             <div class="ai-header-info">
-                <div class="ai-avatar"><i class="fas fa-leaf"></i></div>
+                <div class="ai-avatar" style="background: url('img/signature-safari.jpg'); background-size: cover; border: 1px solid var(--secondary);"></div>
                 <div>
-                    <h4>Roam AI Curator</h4>
-                    <p>Always in the Dialogue</p>
+                    <h4>Roam Concierge</h4>
+                    <p>Field Curator • Online</p>
                 </div>
             </div>
             <button onclick="toggleAI()" style="background:none; border:none; color:white; cursor:pointer; font-size:1.2rem;"><i class="fas fa-times"></i></button>
         </div>
         <div class="ai-chat-body" id="aiChatBody">
-            <div class="msg ai">Welcome to Roam Kenya. I am your AI Curator. I can help you find the perfect escape or answer questions about our logistics. What’s on your mind?</div>
+            <div class="msg ai">Welcome. I am a curator here at Roam Kenya. Whether you're seeking a quiet coastal sanctuary or a high-stakes field mission, I'm here to help you begin that dialogue. How can I assist you today?</div>
         </div>
         <div class="ai-chat-footer">
-            <input type="text" id="aiInput" placeholder="Ask me anything..." onkeypress="if(event.key === 'Enter') sendAIMessage()">
+            <input type="text" id="aiInput" placeholder="Message our team..." onkeypress="if(event.key === 'Enter') sendAIMessage()">
             <button onclick="sendAIMessage()"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
@@ -351,15 +351,17 @@
         }
 
         const knowledgeBase = {
-            "lovers": "Our Lover's Edition is an intimate sanctuary for two, featuring moonlit dinners and private coastal escapes. Perfect for honeymoons or deep reconnections.",
-            "coastal": "Coastal Heritage explores the Swahili soul. We use private dhows and stay in ancient stone houses in Lamu or Watamu.",
-            "migration": "The Great Migration is our most epic escape. We secure front-row, private viewing spots away from the crowds.",
-            "peaks": "Solitary Peaks is a high-altitude soul journey on Mt. Kenya. It's for those seeking silence and perspective.",
-            "frontier": "The Northern Frontier is raw and untamed. We explore Samburu and Turkana with rugged luxury.",
-            "logistics": "We provide high-stakes field logistics for academic researchers, scientific expeditions, and private missions across Kenya.",
-            "price": "Our escapes are fully bespoke and curated to your needs. Costs vary based on duration and group size. Shall we start a consultation?",
-            "nairobi": "Our base is on Mama Ngina St, Nairobi, but our office is the entire Kenyan wild.",
-            "contact": "You can reach our human curators at +254 721 585 784 or via the WhatsApp link on this site."
+            "lovers": "Our Lover's Edition is an intentional sanctuary. We curate moonlit dinners on the dunes and private coastal escapes for those seeking a deep, quiet connection. It is travel as a whispered secret.",
+            "coastal": "The Coastal Heritage escape is about the soul of the Swahili coast—ancient stone, rhythmic dhow sails, and the heritage of Lamu and Watamu. It's a breath of salt air.",
+            "migration": "The Great Migration is the wild's greatest theater. We provide a front-row, private experience away from the noise, where you can witness nature's rawest roar in total intimacy.",
+            "peaks": "Solitary Peaks is for the soul-seekers. We trek the snow-capped silence of Mt. Kenya's highest points to find perspective where the world falls away.",
+            "frontier": "The Northern Frontier is raw, dusty, and impossibly beautiful. We journey beyond the maps into Samburu and Turkana with a rugged, high-end luxury.",
+            "logistics": "We are experts in high-stakes field logistics. From academic research to private scientific missions, we provide the precision and security required in Kenya's most remote corners.",
+            "price": "Our journeys are architectural—built bespoke for each nomad. While costs vary by curation, we focus on depth and quality. Would you like a human curator to draft a formal quote?",
+            "nairobi": "Our studio is located on Mama Ngina St, Nairobi, though our true work happens in the silent corners of the Kenyan wild.",
+            "contact": "Our senior curators are available directly at +254 721 585 784. Should I have them reach out to you via WhatsApp to finalize your plans?",
+            "dainty": "The Dainty Dik Dik represents our ethos of delicate, intentional movement through the wild. It's part of the deep Roam Kenya experience.",
+            "default": "That is an interesting thought. Every journey we curate is a unique dialogue between the traveler and the land. Would you like to speak with one of our lead curators about that specifically?"
         };
 
         function sendAIMessage() {
@@ -377,27 +379,28 @@
             input.value = '';
             body.scrollTop = body.scrollHeight;
 
-            // AI Response Logic
+            // Curator Response Logic
             setTimeout(() => {
                 const aiMsg = document.createElement('div');
                 aiMsg.className = 'msg ai';
                 
-                let response = "That sounds like a journey worth taking. Would you like me to connect you with a human curator to finalize the details for that?";
+                let response = knowledgeBase.default;
                 
-                if (text.includes("love") || text.includes("romantic") || text.includes("honeymoon")) response = knowledgeBase.lovers;
-                else if (text.includes("coast") || text.includes("ocean") || text.includes("sea")) response = knowledgeBase.coastal;
-                else if (text.includes("migration") || text.includes("wildlife") || text.includes("animal")) response = knowledgeBase.migration;
-                else if (text.includes("peak") || text.includes("mountain") || text.includes("trek")) response = knowledgeBase.peaks;
-                else if (text.includes("frontier") || text.includes("north") || text.includes("samburu")) response = knowledgeBase.frontier;
-                else if (text.includes("logistics") || text.includes("research") || text.includes("field")) response = knowledgeBase.logistics;
-                else if (text.includes("price") || text.includes("cost") || text.includes("how much")) response = knowledgeBase.price;
-                else if (text.includes("location") || text.includes("nairobi") || text.includes("office")) response = knowledgeBase.nairobi;
-                else if (text.includes("contact") || text.includes("human") || text.includes("talk to someone")) response = knowledgeBase.contact;
+                if (text.includes("love") || text.includes("romantic") || text.includes("honeymoon") || text.includes("couple")) response = knowledgeBase.lovers;
+                else if (text.includes("coast") || text.includes("ocean") || text.includes("sea") || text.includes("lamu")) response = knowledgeBase.coastal;
+                else if (text.includes("migration") || text.includes("wildlife") || text.includes("mara")) response = knowledgeBase.migration;
+                else if (text.includes("peak") || text.includes("mountain") || text.includes("trek") || text.includes("kenya")) response = knowledgeBase.peaks;
+                else if (text.includes("frontier") || text.includes("north") || text.includes("samburu") || text.includes("turkana")) response = knowledgeBase.frontier;
+                else if (text.includes("logistics") || text.includes("research") || text.includes("field") || text.includes("academic")) response = knowledgeBase.logistics;
+                else if (text.includes("price") || text.includes("cost") || text.includes("budget") || text.includes("quote")) response = knowledgeBase.price;
+                else if (text.includes("location") || text.includes("nairobi") || text.includes("office") || text.includes("where")) response = knowledgeBase.nairobi;
+                else if (text.includes("human") || text.includes("talk") || text.includes("number") || text.includes("call") || text.includes("contact")) response = knowledgeBase.contact;
+                else if (text.includes("dainty") || text.includes("dik dik")) response = knowledgeBase.dainty;
 
                 aiMsg.textContent = response;
                 body.appendChild(aiMsg);
                 body.scrollTop = body.scrollHeight;
-            }, 800);
+            }, 1200); // Slightly longer delay to feel like a human is typing
         }
 
         window.addEventListener('scroll', () => {
