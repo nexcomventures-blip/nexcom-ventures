@@ -341,11 +341,13 @@
     </div>
 
     <script>
-        const cursor = document.querySelector('.custom-cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
+        const scrollCursor = document.querySelector('.custom-cursor');
+        if (scrollCursor) {
+            document.addEventListener('mousemove', (e) => {
+                scrollCursor.style.left = e.clientX + 'px';
+                scrollCursor.style.top = e.clientY + 'px';
+            });
+        }
 
         function toggleAI() {
             const widget = document.getElementById('aiWidget');
