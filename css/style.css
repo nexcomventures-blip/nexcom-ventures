@@ -2599,52 +2599,67 @@ footer {
 }
 
 /* ===================================================
-   LARGE DESKTOP SCALING FIX (screens > 1400px)
+   LARGE DESKTOP SCALING FIX (screens >= 1400px)
    Prevents layout from becoming oversized on big monitors
+   Targeted fix — does NOT affect product grid rendering
    =================================================== */
 
 @media (min-width: 1400px) {
+  /* Scale down base font slightly */
   html {
     font-size: 14px;
   }
-  .container {
-    max-width: 1200px;
-  }
+
+  /* Cap the nav */
   .nav-container {
-    max-width: 1200px;
+    max-width: 1280px;
   }
+
+  /* Hero section — tighter content column */
   .hero-content {
-    max-width: 1100px;
+    max-width: 1200px;
   }
   .hero-content h1 {
-    font-size: clamp(2.8rem, 4vw, 4.2rem);
+    font-size: clamp(2.8rem, 3.8vw, 4.4rem);
     letter-spacing: -2px;
   }
   .hero-sub {
     font-size: 1rem;
     max-width: 480px;
   }
-  .section-title {
-    font-size: 2.4rem;
-  }
   #hero {
-    min-height: 80vh;
     padding: 90px 2rem 30px;
+  }
+
+  /* Section headings */
+  .section-title {
+    font-size: 2.6rem;
+  }
+
+  /* Cap generic containers but NOT the product grid wrapper */
+  .container {
+    max-width: 1280px;
+  }
+
+  /* Footer */
+  .footer-container {
+    max-width: 1280px;
   }
 }
 
-/* Ultra-wide screens (> 1800px) */
+/* Ultra-wide (>= 1800px) */
 @media (min-width: 1800px) {
   html {
     font-size: 13px;
   }
-  .container,
   .nav-container,
-  .hero-content {
-    max-width: 1100px;
+  .hero-content,
+  .container,
+  .footer-container {
+    max-width: 1200px;
   }
   .hero-content h1 {
-    font-size: 3.6rem;
+    font-size: 3.8rem;
     letter-spacing: -2px;
   }
   #hero {
