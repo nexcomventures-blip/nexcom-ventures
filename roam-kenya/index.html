@@ -39,6 +39,7 @@
 <body class="smooth-scroll">
     <div class="custom-cursor"></div>
     <div class="scroll-progress"></div>
+    <div class="cursor-follower" id="cursor"></div>
     <nav class="main-nav">
         <div class="container nav-container">
             <a href="#" class="brand">ROAM KENYA</a>
@@ -407,6 +408,25 @@
                 body.scrollTop = body.scrollHeight;
             }, 1200); 
         }
+
+        // Custom Cursor Lens
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX - 20 + 'px';
+            cursor.style.top = e.clientY - 20 + 'px';
+        });
+
+        // Interactive Links for Cursor
+        document.querySelectorAll('a, button, .collection-card').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(2)';
+                cursor.style.background = 'rgba(232, 220, 196, 0.1)';
+            });
+            link.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursor.style.background = 'transparent';
+            });
+        });
 
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('.main-nav');
