@@ -2597,3 +2597,57 @@ footer {
   margin-bottom: 0.4rem;
   margin-top: 0.25rem;
 }
+
+/* ===================================================
+   LARGE DESKTOP SCALING FIX (screens > 1400px)
+   Prevents layout from becoming oversized on big monitors
+   =================================================== */
+
+@media (min-width: 1400px) {
+  html {
+    font-size: 14px;
+  }
+  .container {
+    max-width: 1200px;
+  }
+  .nav-container {
+    max-width: 1200px;
+  }
+  .hero-content {
+    max-width: 1100px;
+  }
+  .hero-content h1 {
+    font-size: clamp(2.8rem, 4vw, 4.2rem);
+    letter-spacing: -2px;
+  }
+  .hero-sub {
+    font-size: 1rem;
+    max-width: 480px;
+  }
+  .section-title {
+    font-size: 2.4rem;
+  }
+  #hero {
+    min-height: 80vh;
+    padding: 90px 2rem 30px;
+  }
+}
+
+/* Ultra-wide screens (> 1800px) */
+@media (min-width: 1800px) {
+  html {
+    font-size: 13px;
+  }
+  .container,
+  .nav-container,
+  .hero-content {
+    max-width: 1100px;
+  }
+  .hero-content h1 {
+    font-size: 3.6rem;
+    letter-spacing: -2px;
+  }
+  #hero {
+    padding: 80px 2rem 20px;
+  }
+}
