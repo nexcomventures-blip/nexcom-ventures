@@ -1106,7 +1106,7 @@ section {
 .product-badge.new { background: rgba(16, 185, 129, 0.9); color: white; border: 1px solid rgba(255,255,255,0.1); }
 .product-badge.hot { background: rgba(240, 26, 36, 0.9); color: white; border: 1px solid rgba(255,255,255,0.1); }
 .product-badge.refurb { background: rgba(255, 255, 255, 0.1); color: white; border: 1px solid rgba(255,255,255,0.2); }
-
+.product-badge.exuk { background: rgba(124, 58, 237, 0.9); color: white; border: 1px solid rgba(255,255,255,0.1); }
 .product-badge.elite { 
   background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%); 
   color: #000; 
@@ -1191,11 +1191,12 @@ section {
   flex-direction: column;
 }
 .vat-tag {
-  font-size: 0.65rem;
-  color: var(--primary);
-  font-weight: 700;
+  font-size: 0.68rem;
+  color: #888;
+  font-weight: 500;
   text-transform: uppercase;
-  margin-top: -2px;
+  letter-spacing: 0.03em;
+  margin-top: 1px;
 }
 .price {
   font-family: 'Space Grotesk', sans-serif;
