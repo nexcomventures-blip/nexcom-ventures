@@ -367,14 +367,15 @@
         function sendAIMessage() {
             const input = document.getElementById('aiInput');
             const body = document.getElementById('aiChatBody');
-            const text = input.value.trim().toLowerCase();
+            const userText = input.value.trim();
+            const text = userText.toLowerCase();
             
-            if (!text) return;
+            if (!userText) return;
 
             // Add User Message
             const userMsg = document.createElement('div');
             userMsg.className = 'msg user';
-            userMsg.textContent = input.value;
+            userMsg.textContent = userText;
             body.appendChild(userMsg);
             input.value = '';
             body.scrollTop = body.scrollHeight;
@@ -386,21 +387,24 @@
                 
                 let response = knowledgeBase.default;
                 
-                if (text.includes("love") || text.includes("romantic") || text.includes("honeymoon") || text.includes("couple")) response = knowledgeBase.lovers;
-                else if (text.includes("coast") || text.includes("ocean") || text.includes("sea") || text.includes("lamu")) response = knowledgeBase.coastal;
-                else if (text.includes("migration") || text.includes("wildlife") || text.includes("mara")) response = knowledgeBase.migration;
-                else if (text.includes("peak") || text.includes("mountain") || text.includes("trek") || text.includes("kenya")) response = knowledgeBase.peaks;
-                else if (text.includes("frontier") || text.includes("north") || text.includes("samburu") || text.includes("turkana")) response = knowledgeBase.frontier;
-                else if (text.includes("logistics") || text.includes("research") || text.includes("field") || text.includes("academic")) response = knowledgeBase.logistics;
-                else if (text.includes("price") || text.includes("cost") || text.includes("budget") || text.includes("quote")) response = knowledgeBase.price;
+                if (text.includes("hi") || text.includes("hello") || text.includes("hey") || text.includes("habari")) {
+                    response = "Hello. It's a pleasure to connect with you. Are you looking to explore our journey collection, or do you have a specific field mission in mind?";
+                }
+                else if (text.includes("love") || text.includes("romantic") || text.includes("honeymoon") || text.includes("couple")) response = knowledgeBase.lovers;
+                else if (text.includes("coast") || text.includes("ocean") || text.includes("sea") || text.includes("lamu") || text.includes("watamu")) response = knowledgeBase.coastal;
+                else if (text.includes("migration") || text.includes("wildlife") || text.includes("mara") || text.includes("animal")) response = knowledgeBase.migration;
+                else if (text.includes("peak") || text.includes("mountain") || text.includes("trek") || text.includes("hiking") || text.includes("kenya")) response = knowledgeBase.peaks;
+                else if (text.includes("frontier") || text.includes("north") || text.includes("samburu") || text.includes("turkana") || text.includes("rugged")) response = knowledgeBase.frontier;
+                else if (text.includes("logistics") || text.includes("research") || text.includes("field") || text.includes("academic") || text.includes("mission")) response = knowledgeBase.logistics;
+                else if (text.includes("price") || text.includes("cost") || text.includes("budget") || text.includes("quote") || text.includes("how much")) response = knowledgeBase.price;
                 else if (text.includes("location") || text.includes("nairobi") || text.includes("office") || text.includes("where")) response = knowledgeBase.nairobi;
-                else if (text.includes("human") || text.includes("talk") || text.includes("number") || text.includes("call") || text.includes("contact")) response = knowledgeBase.contact;
+                else if (text.includes("human") || text.includes("talk") || text.includes("number") || text.includes("call") || text.includes("contact") || text.includes("whatsapp")) response = knowledgeBase.contact;
                 else if (text.includes("dainty") || text.includes("dik dik")) response = knowledgeBase.dainty;
 
                 aiMsg.textContent = response;
                 body.appendChild(aiMsg);
                 body.scrollTop = body.scrollHeight;
-            }, 1200); // Slightly longer delay to feel like a human is typing
+            }, 1200); 
         }
 
         window.addEventListener('scroll', () => {
