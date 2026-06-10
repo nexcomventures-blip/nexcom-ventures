@@ -39,7 +39,10 @@ function buildCard(p) {
         <p class="specs">${p.specs}</p>
         ${swPills ? `<div class="sw-pills-row">${swPills}</div>` : ''}
         <div class="price-row">
-          <span class="price" style="${outOfStock ? 'color:#999;' : ''}">KES ${p.price.toLocaleString()}</span>
+          <div class="price-block">
+            <span class="price" style="${outOfStock ? 'color:#999;' : ''}">KES ${p.price.toLocaleString()}</span>
+            <span class="vat-tag">Excl. VAT</span>
+          </div>
           ${outOfStock
             ? `<span class="buy-btn" style="background:#999;cursor:not-allowed;pointer-events:none;">Out of Stock</span>`
             : `<a href="https://wa.me/254721585784?text=Hi%20Nexcom!%20I'm%20interested%20in%20the%20${encodeURIComponent(p.name)}" class="buy-btn">Enquire</a>`
