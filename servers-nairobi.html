@@ -330,11 +330,11 @@ function render(items){
   list.innerHTML = items.map(s => {
     const isRack = s.category === 'Rack Server';
     const wa = encodeURIComponent(`Hi Nexcom! I need a quote for the ${s.model} — ${s.part}. Please send pricing and availability.`);
-    const usdNote = `Profit: KES ${s.profit.toLocaleString()}`;
+    
     return `
     <div class="srow">
       <div class="srow-img">
-        <img src="${getImg(s.brand)}" alt="${s.brand}" loading="lazy">
+        <img src="${getImg(s.brand, s.category)}" alt="${s.brand}" loading="lazy">
       </div>
       <div class="srow-body">
         <div class="srow-top">
@@ -347,7 +347,7 @@ function render(items){
         <div class="srow-bottom">
           <div class="srow-price">
             KES ${s.kes.toLocaleString()}
-            <small>${usdNote}</small>
+            
           </div>
           <a href="https://wa.me/254721585784?text=${wa}" target="_blank" class="srow-cta">💬 Get Quote</a>
         </div>
