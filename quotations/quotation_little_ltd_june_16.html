@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Quotation - Little Ltd</title>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap' rel='stylesheet'>
+    <style>
+        :root {
+            --primary: #C5222A;
+            --text: #212529;
+            --gray: #6c757d;
+            --border: #dee2e6;
+        }
+        body { font-family: 'Inter', sans-serif; color: var(--text); padding: 40px; line-height: 1.6; }
+        .header { display: flex; justify-content: space-between; margin-bottom: 40px; border-bottom: 2px solid var(--primary); padding-bottom: 20px; }
+        .logo-text { font-size: 24px; font-weight: 700; color: var(--primary); }
+        .details { margin-bottom: 30px; }
+        .details h2 { color: var(--primary); font-size: 18px; margin-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th { background: #f8f9fa; text-align: left; padding: 12px; border-bottom: 2px solid var(--border); }
+        td { padding: 12px; border-bottom: 1px solid var(--border); }
+        .total-row { font-weight: 700; background: #f8f9fa; }
+        .footer { margin-top: 50px; font-size: 12px; color: var(--gray); text-align: center; }
+        .print-btn { background: var(--primary); color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-bottom: 20px; font-weight: 600; }
+        @media print { .print-btn { display: none; } }
+    </style>
+</head>
+<body>
+    <button class='print-btn' onclick='window.print()'>Print Quotation</button>
+    <div class='header'>
+        <div>
+            <div class='logo-text'>NEXCOM VENTURES</div>
+            <p>Mama Ngina St, Nairobi CBD<br>0721 585 784 | nexcomventures.co.ke</p>
+        </div>
+        <div style='text-align: right;'>
+            <h1>QUOTATION</h1>
+            <p>Date: June 16, 2026<br>No: QUO-LL-2026-0616</p>
+        </div>
+    </div>
+
+    <div class='details'>
+        <h2>Client Details</h2>
+        <p><strong>To:</strong> Little Ltd<br><strong>Attn:</strong> Procurement Team</p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Item Description</th>
+                <th>Quantity</th>
+                <th>Unit Price (KES)</th>
+                <th>Total (KES)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Battery HP ProBook 430 G3 (Nancy Njeri)</td><td>1</td><td>6,500</td><td>6,500</td></tr>
+            <tr><td>Battery T470S (Peter)</td><td>1</td><td>6,500</td><td>6,500</td></tr>
+            <tr><td>Type C Charger (Rachael)</td><td>1</td><td>3,500</td><td>3,500</td></tr>
+            <tr><td>Ethernet Adapter (Kingsley)</td><td>1</td><td>2,500</td><td>2,500</td></tr>
+            <tr><td>HDMI Adapter 1000mbps (David)</td><td>1</td><td>2,500</td><td>2,500</td></tr>
+            <tr><td>Keyboard Lenovo 81B0 (Kagesha)</td><td>1</td><td>4,500</td><td>4,500</td></tr>
+            <tr><td>Hinge Lenovo 81B0 (Irene)</td><td>1</td><td>3,500</td><td>3,500</td></tr>
+            <tr class='total-row'>
+                <td colspan='3' style='text-align: right;'>GRAND TOTAL</td>
+                <td>KES 29,500</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style='margin-top: 30px;'>
+        <p><strong>Terms & Conditions:</strong></p>
+        <ul style='font-size: 14px;'>
+            <li>Validity: 7 days from the date of quotation.</li>
+            <li>Payment: Upon delivery/collection.</li>
+            <li>Warranty: Subject to product type.</li>
+        </ul>
+    </div>
+
+    <div class='footer'>
+        <p>Nexcom Ventures - Your Premier Partner for Laptop Solutions in Nairobi</p>
+    </div>
+</body>
+</html>
