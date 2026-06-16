@@ -1,22 +1,25 @@
 const ALL_PRODUCTS = [
   {
     "id": "feat-1",
-    "brand": "Apple",
-    "name": "Macbook Air 13 2017 I5 8/256Gb",
-    "specs": "macbook air 13 2017 i5 8/256gb",
-    "price": 36000,
-    "category": "exuk apple macbook featured",
+    "brand": "Lenovo",
+    "name": "Lenovo ThinkPad X1 yoga i5 11th 16/512",
+    "specs": "X1 yoga i5 11th 16/512",
+    "price": 66999,
+    "category": "exuk business lenovo featured",
     "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
-    "software": []
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_x1_yoga.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
   },
   {
     "id": "feat-2",
     "brand": "HP",
-    "name": "Hp 820 G2 I7 8/256Gb",
-    "specs": "hp 820 g2 i7 8/256gb",
-    "price": 17000,
-    "category": "exuk business hp budget featured",
+    "name": "Hp 830 G7 I7 11Th 8/256Gb Touchscreen",
+    "specs": "hp 830 g7 i7 11th 8/256gb\ntouchscreen",
+    "price": 35000,
+    "category": "exuk business hp featured",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
@@ -26,11 +29,61 @@ const ALL_PRODUCTS = [
   },
   {
     "id": "feat-3",
+    "brand": "Apple",
+    "name": "Macbook Pro 13 2012 I7 8/256Gb",
+    "specs": "macbook pro 13 2012 i7 8/256gb",
+    "price": 31000,
+    "category": "exuk apple macbook featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
+    "software": []
+  },
+  {
+    "id": "feat-4",
+    "brand": "HP",
+    "name": "Hp 820 G1 I7 8/256Gb",
+    "specs": "hp 820 g1   i7 8/256gb",
+    "price": 16500,
+    "category": "exuk business hp budget featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-3992",
+    "brand": "Apple",
+    "name": "Macbook Air 13 2017 I5 8/256Gb",
+    "specs": "macbook air 13 2017 i5 8/256gb",
+    "price": 36000,
+    "category": "exuk apple macbook",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
+    "software": []
+  },
+  {
+    "id": "tmp-7853",
+    "brand": "HP",
+    "name": "Hp 820 G2 I7 8/256Gb",
+    "specs": "hp 820 g2 i7 8/256gb",
+    "price": 17000,
+    "category": "exuk business hp budget",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-5612",
     "brand": "Dell",
     "name": "Dell Xps 13 9305 I7 11Th 16/512Gb",
     "specs": "xps 13 9305 i7 11th 16/512gb",
     "price": 60000,
-    "category": "exuk business dell featured",
+    "category": "exuk business dell",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/dell_xps_13_new.jpg",
     "software": [
@@ -39,12 +92,12 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "feat-4",
+    "id": "tmp-2313",
     "brand": "Apple",
     "name": "Macbook Air 13 2019 I5 16/256Gb",
     "specs": "macbook air 13 2019 i5 16/256gb",
     "price": 53000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_2019.jpg",
     "software": []
@@ -136,17 +189,6 @@ const ALL_PRODUCTS = [
     "name": "Macbook Pro 13 2015 I5 8/512Gb",
     "specs": "macbook pro 13 2015 i5 8/512gb",
     "price": 41000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
-    "software": []
-  },
-  {
-    "id": "tmp-3464",
-    "brand": "Apple",
-    "name": "Macbook Pro 13 2012 I7 8/256Gb",
-    "specs": "macbook pro 13 2012 i7 8/256gb",
-    "price": 31000,
     "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
@@ -725,20 +767,6 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "tmp-2341",
-    "brand": "HP",
-    "name": "Hp 830 G7 I7 11Th 8/256Gb Touchscreen",
-    "specs": "hp 830 g7 i7 11th 8/256gb\ntouchscreen",
-    "price": 35000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
-  },
-  {
     "id": "tmp-1782",
     "brand": "Apple",
     "name": "Macbook Pro 13 2014 I5 8/256Gb",
@@ -838,20 +866,6 @@ const ALL_PRODUCTS = [
     "specs": "hp 830 g8 i5 11th 8/256gb\ntouchscreen",
     "price": 34000,
     "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
-  },
-  {
-    "id": "p-7",
-    "brand": "HP",
-    "name": "Hp 820 G1 I7 8/256Gb",
-    "specs": "hp 820 g1   i7 8/256gb",
-    "price": 16500,
-    "category": "exuk business hp budget",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
@@ -1262,20 +1276,6 @@ const ALL_PRODUCTS = [
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
-  },
-  {
-    "id": "lenovo-x1-yoga-i5-11th-16/512",
-    "brand": "Lenovo",
-    "name": "Lenovo ThinkPad X1 yoga i5 11th 16/512",
-    "specs": "X1 yoga i5 11th 16/512",
-    "price": 66999,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_x1_yoga.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
   },
   {
     "id": "tmp-3516",
