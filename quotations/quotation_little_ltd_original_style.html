@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Quotation - Little Ltd</title>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap' rel='stylesheet'>
+    <style>
+        :root {
+            --primary: #C5222A;
+            --secondary: #212529;
+            --border: #dee2e6;
+        }
+        body { font-family: 'Inter', sans-serif; color: var(--secondary); margin: 0; padding: 40px; background: #fff; }
+        .invoice-container { max-width: 800px; margin: auto; padding: 30px; border: 1px solid #eee; }
+        .header { display: flex; justify-content: space-between; margin-bottom: 50px; border-bottom: 3px solid var(--primary); padding-bottom: 20px; }
+        .logo-box h1 { margin: 0; color: var(--primary); font-size: 28px; letter-spacing: 1px; }
+        .header-meta { text-align: right; }
+        .header-meta h2 { margin: 0; font-size: 24px; color: #666; }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .info-block h3 { border-bottom: 1px solid var(--primary); font-size: 14px; margin-bottom: 10px; padding-bottom: 5px; text-transform: uppercase; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+        th { background: #f8f9fa; padding: 12px; text-align: left; border-bottom: 2px solid #ddd; font-size: 13px; }
+        td { padding: 12px; border-bottom: 1px solid #eee; font-size: 14px; }
+        .summary-box { float: right; width: 300px; }
+        .summary-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
+        .summary-row.total { border-top: 2px solid var(--primary); font-weight: 700; color: var(--primary); font-size: 18px; margin-top: 10px; }
+        .bank-details { margin-top: 60px; padding: 20px; background: #fdfdfd; border-radius: 4px; border: 1px dashed #ccc; font-size: 13px; }
+        .footer { margin-top: 50px; text-align: center; font-size: 11px; color: #999; border-top: 1px solid #eee; padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class='invoice-container'>
+        <div class='header'>
+            <div class='logo-box'>
+                <h1>NEXCOM VENTURES</h1>
+                <p style='font-size: 12px;'>Norwich Union House, Mama Ngina St, CBD<br>Nairobi, Kenya | 0721 585 784</p>
+            </div>
+            <div class='header-meta'>
+                <h2>QUOTATION</h2>
+                <p style='font-size: 14px;'>No: <strong>QUO-LL-2026-0617</strong><br>Date: June 17, 2026</p>
+            </div>
+        </div>
+
+        <div class='info-grid'>
+            <div class='info-block'>
+                <h3>QUOTATION TO:</h3>
+                <p><strong>Little Ltd</strong><br>Procurement Department<br>Nairobi, Kenya</p>
+            </div>
+            <div class='info-block'>
+                <h3>PAYMENT TERMS:</h3>
+                <p>M-Pesa / Bank Transfer<br>Due on Delivery</p>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>DESCRIPTION</th>
+                    <th style='text-align: center;'>QTY</th>
+                    <th style='text-align: right;'>PRICE (KES)</th>
+                    <th style='text-align: right;'>TOTAL (KES)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Battery HP PROBOOK 430 G3 (Nancy Njeri)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>6,500.00</td><td style='text-align: right;'>6,500.00</td></tr>
+                <tr><td>Battery Lenovo T470S (Peter)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>6,500.00</td><td style='text-align: right;'>6,500.00</td></tr>
+                <tr><td>Type C Charger (Rachael)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>3,500.00</td><td style='text-align: right;'>3,500.00</td></tr>
+                <tr><td>Ethernet Adapter (Kingsley)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>2,500.00</td><td style='text-align: right;'>2,500.00</td></tr>
+                <tr><td>HDMI Adapter (1000mbps) (David)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>2,500.00</td><td style='text-align: right;'>2,500.00</td></tr>
+                <tr><td>Keyboard Lenovo 81BO (Kagesha)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>4,500.00</td><td style='text-align: right;'>4,500.00</td></tr>
+                <tr><td>Hinge Lenovo 81B0 (Irene)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>3,500.00</td><td style='text-align: right;'>3,500.00</td></tr>
+            </tbody>
+        </table>
+
+        <div style='overflow: hidden;'>
+            <div class='summary-box'>
+                <div class='summary-row'><span>Subtotal</span><span>29,500.00</span></div>
+                <div class='summary-row'><span>VAT (16%)</span><span>4,720.00</span></div>
+                <div class='summary-row total'><span>GRAND TOTAL</span><span>KES 34,220.00</span></div>
+            </div>
+        </div>
+
+        <div class='bank-details'>
+            <strong>BANKING DETAILS:</strong><br>
+            Bank: Standard Chartered<br>
+            Account Name: Nexcom Ventures Ltd<br>
+            Account Number: 010203040506<br>
+            Branch: Mama Ngina Street
+        </div>
+
+        <div class='footer'>
+            <p>Thank you for choosing Nexcom Ventures Ltd. We look forward to your business!</p>
+            <p>Valid for 7 days. Errors and omissions excepted (E&OE).</p>
+        </div>
+    </div>
+</body>
+</html>
