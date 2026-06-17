@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; padding: 50px; line-height: 1.4; }
+        .header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 4px solid #C5222A; padding-bottom: 25px; margin-bottom: 40px; }
+        .logo-text { font-size: 28px; font-weight: 900; color: #212529; letter-spacing: -1px; }
+        .logo-text span { color: #C5222A; }
+        .company-info { text-align: right; font-size: 13px; }
+        .company-info b { color: #C5222A; }
+        .quote-title { font-size: 38px; color: #C5222A; margin: 40px 0 30px 0; text-align: center; font-weight: 900; letter-spacing: 2px; }
+        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .details-box { font-size: 15px; }
+        .details-box h3 { font-size: 14px; text-transform: uppercase; border-bottom: 1px solid #C5222A; padding-bottom: 5px; margin-bottom: 10px; color: #666; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th { background-color: #f8f8f8; border-bottom: 2px solid #C5222A; padding: 15px 12px; text-align: left; font-size: 13px; text-transform: uppercase; }
+        td { padding: 15px 12px; border-bottom: 1px solid #eee; font-size: 14px; }
+        .total-section { margin-top: 40px; float: right; width: 320px; background: #fdfdfd; padding: 20px; border: 1px solid #eee; }
+        .total-row { display: flex; justify-content: space-between; padding: 10px 0; font-size: 15px; }
+        .grand-total { border-top: 3px solid #C5222A; font-weight: bold; font-size: 20px; color: #C5222A; margin-top: 15px; padding-top: 15px; }
+        .bank-details { margin-top: 60px; padding: 25px; background: #fff8f8; border-left: 5px solid #C5222A; font-size: 13px; }
+        .bank-details h3 { margin-top: 0; color: #C5222A; font-size: 15px; }
+        .footer { margin-top: 100px; text-align: center; font-size: 11px; color: #999; border-top: 1px solid #eee; padding-top: 20px; clear: both; }
+    </style>
+</head>
+<body>
+    <div class='header'>
+        <div class='logo-text'>nexcom<span>.</span><br><small style='font-size: 10px; text-transform: uppercase; letter-spacing: 2px;'>VENTURES LTD</small></div>
+        <div class='company-info'>
+            <div style='font-size: 20px; font-weight: bold; color: #C5222A; margin-bottom: 5px;'>NEXCOM VENTURES</div>
+            Mama Ngina St, Norwich Union House, CBD<br>
+            <b>Phone:</b> 0721 585 784<br>
+            <b>Web:</b> nexcomventures.co.ke
+        </div>
+    </div>
+
+    <div class='quote-title'>QUOTATION</div>
+
+    <div class='details-grid'>
+        <div class='details-box'>
+            <h3>QUOTATION TO:</h3>
+            <strong>Little Ltd</strong><br>
+            Procurement Department<br>
+            Nairobi, Kenya
+        </div>
+        <div class='details-box' style='text-align: right;'>
+            <h3>REFERENCE:</h3>
+            <b>Quote No:</b> QUO-LL-2026-0617-P<br>
+            <b>Date:</b> June 17, 2026<br>
+            <b>Validity:</b> 7 Days
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th style='width: 50%;'>Description</th>
+                <th style='text-align: center;'>Qty</th>
+                <th style='text-align: right;'>Unit Price (KES)</th>
+                <th style='text-align: right;'>Total (KES)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Battery HP ProBook 430 G3 (Nancy Njeri)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>6,500.00</td><td style='text-align: right;'>6,500.00</td></tr>
+            <tr><td>Battery Lenovo T470S (Peter)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>6,500.00</td><td style='text-align: right;'>6,500.00</td></tr>
+            <tr><td>Type C Charger (Rachael)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>3,500.00</td><td style='text-align: right;'>3,500.00</td></tr>
+            <tr><td>Ethernet Adapter (Kingsley)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>2,500.00</td><td style='text-align: right;'>2,500.00</td></tr>
+            <tr><td>HDMI Adapter (1000mbps) (David)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>2,500.00</td><td style='text-align: right;'>2,500.00</td></tr>
+            <tr><td>Keyboard - Lenovo 81B0 (Kagesha)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>4,500.00</td><td style='text-align: right;'>4,500.00</td></tr>
+            <tr><td>Hinge Lenovo 81B0 (Irene)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>3,500.00</td><td style='text-align: right;'>3,500.00</td></tr>
+        </tbody>
+    </table>
+
+    <div class='total-section'>
+        <div class='total-row'>
+            <span>Subtotal:</span>
+            <span>29,500.00</span>
+        </div>
+        <div class='total-row'>
+            <span>VAT (16%):</span>
+            <span>4,720.00</span>
+        </div>
+        <div class='total-row grand-total'>
+            <span>GRAND TOTAL:</span>
+            <span>KES 34,220.00</span>
+        </div>
+    </div>
+
+    <div class='bank-details'>
+        <h3>BANKING & PAYMENT DETAILS:</h3>
+        <b>Bank:</b> Standard Chartered Bank<br>
+        <b>Account Name:</b> Nexcom Ventures Ltd<br>
+        <b>Account Number:</b> 010203040506<br>
+        <b>Branch:</b> Mama Ngina Street<br><br>
+        <b>M-Pesa Till No:</b> 92 93 021 (Lipia Biashara)
+    </div>
+
+    <div class='footer'>
+        Professional Laptop Solutions | Quality Refurbished Laptops | Repairs & Accessories<br>
+        Thank you for your business!
+    </div>
+</body>
+</html>
