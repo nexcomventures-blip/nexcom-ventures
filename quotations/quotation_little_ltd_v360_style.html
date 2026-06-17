@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Quotation - Little Ltd</title>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap' rel='stylesheet'>
+    <style>
+        :root {
+            --crimson: #8B0000;
+            --text: #000;
+            --border: #ddd;
+        }
+        body { font-family: 'Inter', sans-serif; color: var(--text); padding: 50px; background: #fff; line-height: 1.2; }
+        .container { max-width: 900px; margin: auto; }
+        
+        .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; }
+        .logo-section { display: flex; align-items: center; gap: 20px; }
+        .logo-circle { width: 100px; height: 100px; background: var(--crimson); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; text-align: center; }
+        .logo-circle .n { font-size: 50px; font-weight: 900; line-height: 0.8; }
+        .logo-circle .v { font-size: 10px; font-weight: 700; text-transform: uppercase; margin-top: -5px; }
+        .invoice-title { font-size: 60px; font-weight: 900; color: var(--crimson); text-transform: uppercase; letter-spacing: -2px; }
+        
+        .company-meta { text-align: right; font-size: 15px; }
+        .company-meta strong { font-size: 20px; color: #000; }
+        
+        .top-divider { border-top: 4px solid var(--crimson); margin: 20px 0; }
+        
+        .invoice-info { display: flex; justify-content: flex-end; gap: 40px; margin-bottom: 30px; font-size: 16px; }
+        .invoice-info div { display: flex; flex-direction: column; text-align: right; }
+        .invoice-info label { font-weight: 900; }
+
+        table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+        thead th { background: var(--crimson); color: #fff; text-align: left; padding: 12px; font-weight: 900; text-transform: uppercase; font-size: 14px; }
+        tbody td { padding: 15px 12px; border-bottom: 1px solid var(--border); font-size: 15px; }
+        
+        .summary { display: flex; flex-direction: column; align-items: flex-end; margin-bottom: 50px; }
+        .summary-row { display: flex; width: 300px; justify-content: space-between; padding: 10px 0; font-weight: 900; font-size: 18px; }
+        .total-due { background: var(--crimson); color: #fff; width: 300px; padding: 15px 10px; display: flex; justify-content: space-between; font-weight: 900; font-size: 20px; }
+
+        .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; margin-top: 50px; }
+        .footer-block h3 { border-bottom: 2px solid #FFD700; display: inline-block; font-size: 16px; margin-bottom: 15px; text-transform: uppercase; font-weight: 900; }
+        .footer-block p { font-size: 14px; margin: 5px 0; }
+        
+        .thanks { margin-top: 100px; text-align: center; color: var(--crimson); font-style: italic; font-weight: 500; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <div class='header'>
+            <div class='logo-section'>
+                <div class='logo-circle'>
+                    <div class='n'>n</div>
+                    <div class='v'>VENTURES</div>
+                </div>
+                <div class='invoice-title'>QUOTATION</div>
+            </div>
+            <div class='company-meta'>
+                <strong>Nexcom Ventures Ltd</strong><br>
+                Mama Ngina St, Nairobi<br>
+                Phone: 0722 816 001<br>
+                Email: nexcomventures@gmail.com<br>
+                PIN: P052456949S
+            </div>
+        </div>
+
+        <div class='top-divider'></div>
+
+        <div class='invoice-info'>
+            <div><label>QUOTATION #:</label><span>NV-QUO-LL-2026-37</span></div>
+            <div><label>DATE:</label><span>17 June, 2026</span></div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>DESCRIPTION</th>
+                    <th style='text-align: center;'>QTY</th>
+                    <th style='text-align: right;'>UNIT PRICE (KSH)</th>
+                    <th style='text-align: right;'>TOTAL (KSH)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Battery HP ProBook 430 G3 (Nancy Njeri)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>6,500</td><td style='text-align: right;'>6,500</td></tr>
+                <tr><td>Battery Lenovo T470S (Peter)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>6,500</td><td style='text-align: right;'>6,500</td></tr>
+                <tr><td>Type C Charger (Rachael)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>3,500</td><td style='text-align: right;'>3,500</td></tr>
+                <tr><td>Ethernet Adapter (Kingsley)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>2,500</td><td style='text-align: right;'>2,500</td></tr>
+                <tr><td>HDMI Adapter (1000mbps) (David)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>2,500</td><td style='text-align: right;'>2,500</td></tr>
+                <tr><td>Keyboard Lenovo 81B0 (Kagesha)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>4,500</td><td style='text-align: right;'>4,500</td></tr>
+                <tr><td>Hinge Lenovo 81B0 (Irene)</td><td style='text-align: center;'>1</td><td style='text-align: right;'>3,500</td><td style='text-align: right;'>3,500</td></tr>
+            </tbody>
+        </table>
+
+        <div class='summary'>
+            <div class='summary-row'>
+                <span>SUBTOTAL</span>
+                <span>KSH 29,500</span>
+            </div>
+            <div class='summary-row'>
+                <span>VAT (16%)</span>
+                <span>KSH 4,720</span>
+            </div>
+            <div class='total-due'>
+                <span>TOTAL DUE</span>
+                <span>KSH 34,220</span>
+            </div>
+        </div>
+
+        <div class='footer-grid'>
+            <div class='footer-block'>
+                <h3>PAYMENT DETAILS</h3>
+                <p>Bank: NCBA Bank | Branch: Mama Ngina</p>
+                <p>Acc Name: Nexcom Ventures Ltd</p>
+                <p>Acc Number: 9346560018</p>
+                <p><strong>M-PESA PAYBILL</strong></p>
+                <p>Paybill: 880100 | Account No: 816001</p>
+            </div>
+            <div class='footer-block'>
+                <h3>TERMS & CONDITIONS</h3>
+                <p>1. 1-year warranty on new laptops.</p>
+                <p>2. Goods once sold are not returnable.</p>
+                <p>3. Payment due upon delivery.</p>
+            </div>
+        </div>
+
+        <div class='thanks'>Thank you for choosing Nexcom Ventures!</div>
+    </div>
+</body>
+</html>
