@@ -1,11 +1,58 @@
 const ALL_PRODUCTS = [
   {
     "id": "feat-1",
+    "brand": "HP",
+    "name": "Hp 840 G7 I5 8/256Gb Touchscreen",
+    "specs": "hp 840 g7 i5 8/256gb \ntouchscreen",
+    "price": 32000,
+    "category": "exuk business hp featured",
+    "badge": "exuk",
+    "img": "images/hp_840_g7_i7_user.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "feat-2",
+    "brand": "Apple",
+    "name": "Macbook Air 13 2015 I5 8/256",
+    "specs": "MacBook Air 13 2015 i5 8/256",
+    "price": 33000,
+    "category": "exuk apple macbook featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
+    "software": []
+  },
+  {
+    "id": "feat-3",
+    "brand": "Apple",
+    "name": "Macbook Air 13 2017 I7 8/256Gb",
+    "specs": "macbook air 13 2017 i7 8/256gb",
+    "price": 40000,
+    "category": "exuk apple macbook featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
+    "software": []
+  },
+  {
+    "id": "feat-4",
+    "brand": "Apple",
+    "name": "Macbook Pro 16 2019 I9 32/1Tb With 4Gn Graphics",
+    "specs": "macbook pro 16 2019 i9 32/1tb  with 4gn graphics",
+    "price": 98000,
+    "category": "exuk apple macbook featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_16_2019.jpg",
+    "software": []
+  },
+  {
+    "id": "tmp-3648",
     "brand": "Lenovo",
     "name": "Lenovo ThinkPad X1 yoga i5 11th 16/512",
     "specs": "X1 yoga i5 11th 16/512",
     "price": 66999,
-    "category": "exuk business lenovo featured",
+    "category": "exuk business lenovo",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_x1_yoga.jpg",
     "software": [
@@ -14,12 +61,12 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "feat-2",
+    "id": "tmp-8509",
     "brand": "HP",
     "name": "Hp 830 G7 I7 11Th 8/256Gb Touchscreen",
     "specs": "hp 830 g7 i7 11th 8/256gb\ntouchscreen",
     "price": 35000,
-    "category": "exuk business hp featured",
+    "category": "exuk business hp",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
@@ -28,23 +75,23 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "feat-3",
+    "id": "tmp-6352",
     "brand": "Apple",
     "name": "Macbook Pro 13 2012 I7 8/256Gb",
     "specs": "macbook pro 13 2012 i7 8/256gb",
     "price": 31000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
-    "id": "feat-4",
+    "id": "tmp-6823",
     "brand": "HP",
     "name": "Hp 820 G1 I7 8/256Gb",
     "specs": "hp 820 g1   i7 8/256gb",
     "price": 16500,
-    "category": "exuk business hp budget featured",
+    "category": "exuk business hp budget",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
     "software": [
@@ -209,20 +256,6 @@ const ALL_PRODUCTS = [
     ]
   },
   {
-    "id": "tmp-1523",
-    "brand": "HP",
-    "name": "Hp 840 G7 I5 8/256Gb Touchscreen",
-    "specs": "hp 840 g7 i5 8/256gb \ntouchscreen",
-    "price": 32000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "images/hp_840_g7_i7_user.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
-  },
-  {
     "id": "tmp-2535",
     "brand": "HP",
     "name": "Hp 840 G8 I5 11Th 8/256Gb",
@@ -344,17 +377,6 @@ const ALL_PRODUCTS = [
       "Windows 11",
       "Microsoft Office 2024"
     ]
-  },
-  {
-    "id": "tmp-4366",
-    "brand": "Apple",
-    "name": "Macbook Air 13 2015 I5 8/256",
-    "specs": "MacBook Air 13 2015 i5 8/256",
-    "price": 33000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
-    "software": []
   },
   {
     "id": "tmp-4606",
@@ -573,28 +595,6 @@ const ALL_PRODUCTS = [
       "Windows 11",
       "Microsoft Office 2024"
     ]
-  },
-  {
-    "id": "tmp-1815",
-    "brand": "Apple",
-    "name": "Macbook Air 13 2017 I7 8/256Gb",
-    "specs": "macbook air 13 2017 i7 8/256gb",
-    "price": 40000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
-    "software": []
-  },
-  {
-    "id": "tmp-5710",
-    "brand": "Apple",
-    "name": "Macbook Pro 16 2019 I9 32/1Tb With 4Gn Graphics",
-    "specs": "macbook pro 16 2019 i9 32/1tb  with 4gn graphics",
-    "price": 98000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_16_2019.jpg",
-    "software": []
   },
   {
     "id": "tmp-8448",
