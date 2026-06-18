@@ -1,13 +1,13 @@
 const ALL_PRODUCTS = [
   {
     "id": "feat-1",
-    "brand": "HP",
-    "name": "Hp 840 G7 I5 8/256Gb Touchscreen",
-    "specs": "hp 840 g7 i5 8/256gb \ntouchscreen",
+    "brand": "Lenovo",
+    "name": "Lenovo X390 I5 8Th 8/256Gb",
+    "specs": "x390 i5 8th 8/256gb",
     "price": 32000,
-    "category": "exuk business hp featured",
+    "category": "exuk business lenovo featured",
     "badge": "exuk",
-    "img": "images/hp_840_g7_i7_user.jpg",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
     "software": [
       "Windows 11",
       "Microsoft Office 2024"
@@ -16,32 +16,85 @@ const ALL_PRODUCTS = [
   {
     "id": "feat-2",
     "brand": "Apple",
-    "name": "Macbook Air 13 2015 I5 8/256",
-    "specs": "MacBook Air 13 2015 i5 8/256",
-    "price": 33000,
+    "name": "Macbook Pro 13 2013 I7 8/256Gb",
+    "specs": "macbook pro 13 2013 i7 8/256gb",
+    "price": 36000,
     "category": "exuk apple macbook featured",
     "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
   },
   {
     "id": "feat-3",
+    "brand": "HP",
+    "name": "Hp 735 G6 Ryzen 7 8/256Gb 2Gb Graphics Touchscreen",
+    "specs": "hp 735 g6 ryzen 7 8/256gb 2gb graphics touchscreen",
+    "price": 26000,
+    "category": "exuk business hp ryzen featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "feat-4",
+    "brand": "HP",
+    "name": "Hp Spectre 15 2 In1 Intel Coi7 10Th Gen 16/512 2Gb Graphics /= Only",
+    "specs": "hp spectre 15\n2 in1\nintel  coi7\n10th gen\n16/512 2gb graphics \n/= only",
+    "price": 125000,
+    "category": "exuk business hp featured",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-4535",
+    "brand": "HP",
+    "name": "Hp 840 G7 I5 8/256Gb Touchscreen",
+    "specs": "hp 840 g7 i5 8/256gb \ntouchscreen",
+    "price": 32000,
+    "category": "exuk business hp",
+    "badge": "exuk",
+    "img": "images/hp_840_g7_i7_user.jpg",
+    "software": [
+      "Windows 11",
+      "Microsoft Office 2024"
+    ]
+  },
+  {
+    "id": "tmp-1571",
     "brand": "Apple",
-    "name": "Macbook Air 13 2017 I7 8/256Gb",
-    "specs": "macbook air 13 2017 i7 8/256gb",
-    "price": 40000,
-    "category": "exuk apple macbook featured",
+    "name": "Macbook Air 13 2015 I5 8/256",
+    "specs": "MacBook Air 13 2015 i5 8/256",
+    "price": 33000,
+    "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
     "software": []
   },
   {
-    "id": "feat-4",
+    "id": "tmp-7330",
+    "brand": "Apple",
+    "name": "Macbook Air 13 2017 I7 8/256Gb",
+    "specs": "macbook air 13 2017 i7 8/256gb",
+    "price": 40000,
+    "category": "exuk apple macbook",
+    "badge": "exuk",
+    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_air_m1.jpg",
+    "software": []
+  },
+  {
+    "id": "tmp-2746",
     "brand": "Apple",
     "name": "Macbook Pro 16 2019 I9 32/1Tb With 4Gn Graphics",
     "specs": "macbook pro 16 2019 i9 32/1tb  with 4gn graphics",
     "price": 98000,
-    "category": "exuk apple macbook featured",
+    "category": "exuk apple macbook",
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/mbp_16_2019.jpg",
     "software": []
@@ -173,20 +226,6 @@ const ALL_PRODUCTS = [
     "badge": "exuk",
     "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
     "software": []
-  },
-  {
-    "id": "tmp-8746",
-    "brand": "Lenovo",
-    "name": "Lenovo X390 I5 8Th 8/256Gb",
-    "specs": "x390 i5 8th 8/256gb",
-    "price": 32000,
-    "category": "exuk business lenovo",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/thinkpad_t490s.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
   },
   {
     "id": "tmp-2559",
@@ -739,20 +778,6 @@ const ALL_PRODUCTS = [
     "software": []
   },
   {
-    "id": "tmp-1337",
-    "brand": "HP",
-    "name": "Hp Spectre 15 2 In1 Intel Coi7 10Th Gen 16/512 2Gb Graphics /= Only",
-    "specs": "hp spectre 15\n2 in1\nintel  coi7\n10th gen\n16/512 2gb graphics \n/= only",
-    "price": 125000,
-    "category": "exuk business hp",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
-  },
-  {
     "id": "tmp-2123",
     "brand": "Lenovo",
     "name": "Lenovo T460s I5 6th 8/256Gb",
@@ -970,20 +995,6 @@ const ALL_PRODUCTS = [
     "software": []
   },
   {
-    "id": "tmp-6360",
-    "brand": "HP",
-    "name": "Hp 735 G6 Ryzen 7 8/256Gb 2Gb Graphics Touchscreen",
-    "specs": "hp 735 g6 ryzen 7 8/256gb 2gb graphics touchscreen",
-    "price": 26000,
-    "category": "exuk business hp ryzen",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/hp_840_g8.jpg",
-    "software": [
-      "Windows 11",
-      "Microsoft Office 2024"
-    ]
-  },
-  {
     "id": "tmp-8933",
     "brand": "Apple",
     "name": "Macbook Pro 15 2019 I7 16/512Gb 4Gb Graphics",
@@ -1007,17 +1018,6 @@ const ALL_PRODUCTS = [
       "Windows 11",
       "Microsoft Office 2024"
     ]
-  },
-  {
-    "id": "tmp-1299",
-    "brand": "Apple",
-    "name": "Macbook Pro 13 2013 I7 8/256Gb",
-    "specs": "macbook pro 13 2013 i7 8/256gb",
-    "price": 36000,
-    "category": "exuk apple macbook",
-    "badge": "exuk",
-    "img": "https://raw.githubusercontent.com/nexcomventures-blip/nexcom-ventures/main/images/macbook_pro.jpg",
-    "software": []
   },
   {
     "id": "tmp-3307",
