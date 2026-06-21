@@ -852,7 +852,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST650%20V3%20Xeon%20Silver%204509Y%20(8C%202.6GHz%2022.5MB%20Cache/125W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST650%20V3%20Xeon%20Silver%204509Y%20(8C%202.6GHz%2022.5MB%20Cache/125W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "tmp-3263",
@@ -868,7 +868,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Gold%206426Y%20(16C%202.5GHz%2037.5MB%20Cache/185W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Gold%206426Y%20(16C%202.5GHz%2037.5MB%20Cache/185W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "tmp-9005",
@@ -980,7 +980,7 @@ const ALL_PRODUCTS = [
     "badge": "1 Year Warranty",
     "status": "limited",
     "img": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=300&q=80",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Pro%20Essentials%2015%20PV15250%20%28Intel%20Core%20i7-1355U%20%2F%208GB%20%2F%20512GB%20SSD%20%2F%2015.6\"%20FHD%20%2F%20Ubuntu%29.%20Please%20confirm%20price%20and%20availability.",
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Pro%20Essentials%2015%20PV15250%20%28Intel%20Core%20i7-1355U%20%2F%208GB%20%2F%20512GB%20SSD%20%2F%2015.6\"%20FHD%20%2F%20Ubuntu%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
   {
@@ -1562,7 +1562,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST45%20V3%20AMD%20EPYC%204124P%20(4C%203.8GHz%2016MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST45%20V3%20AMD%20EPYC%204124P%20(4C%203.8GHz%2016MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-002",
@@ -1578,7 +1578,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST45%20V3%20AMD%20EPYC%204244P%20(6C%203.8GHz%2032MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST45%20V3%20AMD%20EPYC%204244P%20(6C%203.8GHz%2032MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-003",
@@ -1594,7 +1594,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST45%20V3%20AMD%20EPYC%204344P%20(8C%203.8GHz%2032MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST45%20V3%20AMD%20EPYC%204344P%20(8C%203.8GHz%2032MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-004",
@@ -1610,7 +1610,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/dell-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Dell%20PowerEdge%20T160.%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Dell%20PowerEdge%20T160.%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-005",
@@ -1626,7 +1626,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2434\u00a0%20(4C%203.4GHz%2012MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2434\u00a0%20(4C%203.4GHz%2012MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-006",
@@ -1642,7 +1642,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/dell-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Dell%20PowerEdge%20R360.%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Dell%20PowerEdge%20R360.%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-007",
@@ -1658,7 +1658,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2414\u00a0%20(4C%202.6GHz%208MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2414\u00a0%20(4C%202.6GHz%208MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-008",
@@ -1674,7 +1674,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR250%20V3%20Xeon%20E-2434%20(4C%203.4GHz%208MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR250%20V3%20Xeon%20E-2434%20(4C%203.4GHz%208MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-009",
@@ -1690,7 +1690,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2434\u00a0%20(4C%203.4GHz%208MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST50%20V3%20Xeon%20E-2434\u00a0%20(4C%203.4GHz%208MB%20Cache/55W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-010",
@@ -1706,7 +1706,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR250%20V3%20Xeon%20E-2436%20(6C%202.9GHz%2012MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR250%20V3%20Xeon%20E-2436%20(6C%202.9GHz%2012MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-011",
@@ -1722,7 +1722,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST250%20V3%20Xeon%20E-2436%20(6C%202.9GHz%2012MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST250%20V3%20Xeon%20E-2436%20(6C%202.9GHz%2012MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-012",
@@ -1738,7 +1738,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR250%20V3%20Xeon%20E-2468%20(8C%202.6GHz%2016MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR250%20V3%20Xeon%20E-2468%20(8C%202.6GHz%2016MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-013",
@@ -1754,7 +1754,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST250%20V3%20Xeon%20E-2468%20(8C%202.6GHz%2016MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST250%20V3%20Xeon%20E-2468%20(8C%202.6GHz%2016MB%20Cache/65W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-014",
@@ -1770,7 +1770,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Silver%204509Y%20(8C%202.6GHz%2022.5MB%20Cache/125W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Silver%204509Y%20(8C%202.6GHz%2022.5MB%20Cache/125W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-015",
@@ -1786,7 +1786,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Silver%204510%20(12C%202.4GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Silver%204510%20(12C%202.4GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-017",
@@ -1802,7 +1802,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Silver%204509Y%20(8C%202.6GHz%2022.5MB%20Cache/125W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Silver%204509Y%20(8C%202.6GHz%2022.5MB%20Cache/125W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-018",
@@ -1818,7 +1818,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Silver%204510%20(12C%202.4GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Silver%204510%20(12C%202.4GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-019",
@@ -1834,7 +1834,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Silver%204514Y%20(16C%202.0GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Silver%204514Y%20(16C%202.0GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-020",
@@ -1850,7 +1850,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR665%20V3%20AMD%20EPYC%209124%20(16C%203.0GHz%2064MB%20Cache/200W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR665%20V3%20AMD%20EPYC%209124%20(16C%203.0GHz%2064MB%20Cache/200W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-021",
@@ -1866,7 +1866,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Silver%204514Y%20(16C%202.0GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR650%20V3%20Xeon%20Silver%204514Y%20(16C%202.0GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-022",
@@ -1882,7 +1882,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Gold%206526Y%20(16C%202.8GHz%2037.5MB%20Cache/195W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR630%20V3%20Xeon%20Gold%206526Y%20(16C%202.8GHz%2037.5MB%20Cache/195W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-024",
@@ -1898,7 +1898,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST650%20V3%20Xeon%20Silver%204510%20(12C%202.4GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST650%20V3%20Xeon%20Silver%204510%20(12C%202.4GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-025",
@@ -1914,7 +1914,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR645%20V3%20AMD%20EPYC%209124%20(16C%203.0GHz%2064MB%20Cache/200W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR645%20V3%20AMD%20EPYC%209124%20(16C%203.0GHz%2064MB%20Cache/200W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-026",
@@ -1930,7 +1930,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST650%20V3%20Xeon%20Silver%204514Y%20(16C%202.0GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ST650%20V3%20Xeon%20Silver%204514Y%20(16C%202.0GHz%2030MB%20Cache/150W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-027",
@@ -1946,7 +1946,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/dell-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Dell%20PowerEdge%20R660xs.%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Dell%20PowerEdge%20R660xs.%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-028",
@@ -1962,7 +1962,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR665%20V3%20AMD%20EPYC%209174F%20(16C%204.1GHz%20256MB%20Cache/320W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR665%20V3%20AMD%20EPYC%209174F%20(16C%204.1GHz%20256MB%20Cache/320W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "srv-029",
@@ -1978,7 +1978,7 @@ const ALL_PRODUCTS = [
     "featured": false,
     "inStock": true,
     "image": "images/servers/lenovo-server.jpg",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR665%20V3%20AMD%20EPYC%209274F%20(24C%204.05GHz%20256MB%20Cache/320W).%20Please%20advise%20on%20availability%20and%20pricing."
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20SR665%20V3%20AMD%20EPYC%209274F%20(24C%204.05GHz%20256MB%20Cache/320W).%20Please%20advise%20on%20availability%20and%20pricing."
   },
   {
     "id": "infinix-71008303116",
@@ -1990,7 +1990,7 @@ const ALL_PRODUCTS = [
     "badge": "1 Year Warranty",
     "status": "available",
     "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=300&q=80",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Infinix%20XL442%20%28Intel%20Core%20i7-1255U%20%2F%208GB%20%2F%20512GB%20SSD%20%2F%2014\"%20%2F%20DOS%29.%20Please%20confirm%20price%20and%20availability.",
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Infinix%20XL442%20%28Intel%20Core%20i7-1255U%20%2F%208GB%20%2F%20512GB%20SSD%20%2F%2014\"%20%2F%20DOS%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
   {
@@ -2003,7 +2003,7 @@ const ALL_PRODUCTS = [
     "badge": "1 Year Warranty",
     "status": "available",
     "img": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=300&q=80",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%2015%20DC15250%20%28Intel%20Core%20i5-1334U%20%2F%208GB%20%2F%20512GB%20SSD%20%2F%2015.6\"%20FHD%20%2F%20Ubuntu%29.%20Please%20confirm%20price%20and%20availability.",
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%2015%20DC15250%20%28Intel%20Core%20i5-1334U%20%2F%208GB%20%2F%20512GB%20SSD%20%2F%2015.6\"%20FHD%20%2F%20Ubuntu%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
   {
@@ -2016,7 +2016,7 @@ const ALL_PRODUCTS = [
     "badge": "1 Year Warranty",
     "status": "available",
     "img": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&q=80",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkBook%2014%20G8%20%28Intel%20Core%20Ultra%205%20225U%20%2F%208GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%29.%20Please%20confirm%20price%20and%20availability.",
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkBook%2014%20G8%20%28Intel%20Core%20Ultra%205%20225U%20%2F%208GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
   {
@@ -2029,7 +2029,7 @@ const ALL_PRODUCTS = [
     "badge": "1 Year Warranty",
     "status": "available",
     "img": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&q=80",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkBook%2014%20G9%20%28Intel%20Core%205-210H%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%20%2F%20No%29.%20Please%20confirm%20price%20and%20availability.",
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkBook%2014%20G9%20%28Intel%20Core%205-210H%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%20%2F%20No%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
   {
@@ -2042,7 +2042,7 @@ const ALL_PRODUCTS = [
     "badge": "1 Year Warranty",
     "status": "limited",
     "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300&q=80",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%20440%20G11%20%28Intel%20Core%20Ultra%205%20125U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%20%2F%20D%29.%20Please%20confirm%20price%20and%20availability.",
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%20440%20G11%20%28Intel%20Core%20Ultra%205%20125U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%20%2F%20D%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
   {
@@ -2055,7 +2055,7 @@ const ALL_PRODUCTS = [
     "badge": "1 Year Warranty",
     "status": "available",
     "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300&q=80",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%204%20G1i%20%28Intel%20Core%20Ultra%205%20225U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%20%2F%20D%29.%20Please%20confirm%20price%20and%20availability.",
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%204%20G1i%20%28Intel%20Core%20Ultra%205%20225U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%20%2F%20D%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
   {
@@ -2068,7 +2068,7 @@ const ALL_PRODUCTS = [
     "badge": "1 Year Warranty",
     "status": "available",
     "img": "https://images.unsplash.com/photo-1611186871525-ef747b33a9db?w=300&q=80",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20E14%20G7%20%28Intel%20Core%20Ultra%205%20225U%20%2F%208GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%29.%20Please%20confirm%20price%20and%20availability.",
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20E14%20G7%20%28Intel%20Core%20Ultra%205%20225U%20%2F%208GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXGA%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
   {
@@ -2081,7 +2081,7 @@ const ALL_PRODUCTS = [
     "badge": "1 Year Warranty",
     "status": "available",
     "img": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300&q=80",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%20460%20G11%20%28Intel%20Core%20Ultra%207%20155U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2016.0\"%20WUXGA%20%2F%20D%29.%20Please%20confirm%20price%20and%20availability.",
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20HP%20ProBook%20460%20G11%20%28Intel%20Core%20Ultra%207%20155U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2016.0\"%20WUXGA%20%2F%20D%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
   {
@@ -2094,7 +2094,7 @@ const ALL_PRODUCTS = [
     "badge": "1 Year Warranty",
     "status": "available",
     "img": "https://images.unsplash.com/photo-1611186871525-ef747b33a9db?w=300&q=80",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20E16%20G3%20%28Intel%20Core%20Ultra%207%20256V%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2016.0\"%20WUXG%29.%20Please%20confirm%20price%20and%20availability.",
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20E16%20G3%20%28Intel%20Core%20Ultra%207%20256V%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2016.0\"%20WUXG%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
   {
@@ -2107,7 +2107,7 @@ const ALL_PRODUCTS = [
     "badge": "1 Year Warranty",
     "status": "available",
     "img": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=300&q=80",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Pro%2014%20Plus%20PB14250%20%28Intel%20Core%20Ultra%205%20236V%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014\"%20FHD+%20%2F%20Ubun%29.%20Please%20confirm%20price%20and%20availability.",
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Pro%2014%20Plus%20PB14250%20%28Intel%20Core%20Ultra%205%20236V%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014\"%20FHD+%20%2F%20Ubun%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
   {
@@ -2120,7 +2120,7 @@ const ALL_PRODUCTS = [
     "badge": "1 Year Warranty",
     "status": "available",
     "img": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=300&q=80",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Pro%2014%20PC14250%20%28Intel%20Core%20Ultra%207%20255U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014\"%20FHD+%20%2F%20Ubun%29.%20Please%20confirm%20price%20and%20availability.",
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Dell%20Pro%2014%20PC14250%20%28Intel%20Core%20Ultra%207%20255U%20%2F%2016GB%20%2F%20512GB%20SSD%20%2F%2014\"%20FHD+%20%2F%20Ubun%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
   {
@@ -2133,7 +2133,7 @@ const ALL_PRODUCTS = [
     "badge": "1 Year Warranty",
     "status": "available",
     "img": "https://images.unsplash.com/photo-1611186871525-ef747b33a9db?w=300&q=80",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20T14%20G5%20%28Intel%20Core%20Ultra%207%20155U%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014\"%20WUXGA%20%29.%20Please%20confirm%20price%20and%20availability.",
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20T14%20G5%20%28Intel%20Core%20Ultra%207%20155U%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014\"%20WUXGA%20%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
   {
@@ -2146,7 +2146,7 @@ const ALL_PRODUCTS = [
     "badge": "1 Year Warranty",
     "status": "limited",
     "img": "https://images.unsplash.com/photo-1611186871525-ef747b33a9db?w=300&q=80",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20T14%20LNL%20%28Intel%20Core%20Ultra%207%20258V%20%2F%2032GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXG%29.%20Please%20confirm%20price%20and%20availability.",
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20T14%20LNL%20%28Intel%20Core%20Ultra%207%20258V%20%2F%2032GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014.0\"%20WUXG%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
   {
@@ -2159,7 +2159,7 @@ const ALL_PRODUCTS = [
     "badge": "1 Year Warranty",
     "status": "limited",
     "img": "https://images.unsplash.com/photo-1611186871525-ef747b33a9db?w=300&q=80",
-    "whatsapp": "https://wa.me/254722816001?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20X1%20Carbon%20G13%20%28Intel%20Core%20Ultra%207%20255U%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014\"%20WUXGA%20%29.%20Please%20confirm%20price%20and%20availability.",
+    "whatsapp": "https://wa.me/254721585784?text=Hi%2C%20I%27m%20interested%20in%20the%20Lenovo%20ThinkPad%20X1%20Carbon%20G13%20%28Intel%20Core%20Ultra%207%20255U%20%2F%2016GB%20DDR5%20%2F%20512GB%20SSD%20%2F%2014\"%20WUXGA%20%29.%20Please%20confirm%20price%20and%20availability.",
     "software": []
   },
   {
