@@ -269,6 +269,33 @@
         </div>
     </section>
 
+    <section id="fleet" class="fleet-section reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">The Field Labs</span>
+                <h2>The Roam Fleet.</h2>
+                <p>Our custom-built Land Cruisers are engineered for silence, safety, and sensory clarity.</p>
+            </div>
+            <div class="fleet-grid">
+                <div class="fleet-item">
+                    <div class="fleet-icon"><i class="fas fa-truck-monster"></i></div>
+                    <h4>Modified V8 Chassis</h4>
+                    <p>Heavy-duty suspension for the most remote northern tracks.</p>
+                </div>
+                <div class="fleet-item">
+                    <div class="fleet-icon"><i class="fas fa-satellite-dish"></i></div>
+                    <h4>Global Comms</h4>
+                    <p>Integrated Starlink and satellite phones for constant field connection.</p>
+                </div>
+                <div class="fleet-item">
+                    <div class="fleet-icon"><i class="fas fa-solar-panel"></i></div>
+                    <h4>Solar Battery Hub</h4>
+                    <p>Charge high-end camera gear and field equipment on the move.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="newsletter-section reveal">
         <div class="container">
             <span class="subtitle" style="color: var(--secondary);">The Nomad Dispatch</span>
@@ -280,6 +307,12 @@
             </form>
         </div>
     </section>
+
+    <div class="sound-toggle" onclick="toggleSound()">
+        <i class="fas fa-volume-mute" id="soundIcon"></i>
+        <span>Sound of the Mara</span>
+    </div>
+    <audio id="maraAudio" loop src="https://assets.mixkit.co/active_storage/sfx/139/139.wav"></audio>
 
     <footer style="padding: 100px 0; background: #1a1a1a; color: var(--white); text-align: center;">
         <div class="container">
@@ -497,6 +530,18 @@
             
             const message = `Hi Roam Kenya! I'm interested in the ${interest} for ${party} guests around ${month}. Can we discuss?`;
             window.location.href = `https://wa.me/254721585784?text=${encodeURIComponent(message)}`;
+        }
+
+        function toggleSound() {
+            const audio = document.getElementById('maraAudio');
+            const icon = document.getElementById('soundIcon');
+            if (audio.paused) {
+                audio.play();
+                icon.classList.replace('fa-volume-mute', 'fa-volume-up');
+            } else {
+                audio.pause();
+                icon.classList.replace('fa-volume-up', 'fa-volume-mute');
+            }
         }
     </script>
 </body>
