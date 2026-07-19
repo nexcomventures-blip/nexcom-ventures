@@ -189,7 +189,31 @@ section { padding: 80px 0; }
     transform: scale(1.1) rotate(1deg);
 }
 
-/* Stats Counter Strip */
+/* Fleet Section */
+.fleet-section { padding: 100px 0; background: var(--white); }
+.fleet-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px; 
+    margin-top: 60px; 
+}
+.fleet-item { 
+    padding: 40px; 
+    background: var(--bg); 
+    border-radius: var(--radius); 
+    text-align: center; 
+    border: 1px solid var(--border);
+    transition: 0.5s;
+}
+.fleet-item:hover { transform: translateY(-10px); border-color: var(--secondary); }
+.fleet-icon { 
+    font-size: 2.5rem; 
+    color: var(--secondary); 
+    margin-bottom: 25px; 
+}
+.fleet-item h4 { margin-bottom: 15px; font-size: 1.3rem; }
+.fleet-item p { font-size: 0.9rem; opacity: 0.7; }
+@media (max-width: 768px) { .fleet-grid { grid-template-columns: 1fr; } }
 .stats-strip {
     background: var(--primary);
     color: var(--white);
@@ -360,13 +384,42 @@ section { padding: 80px 0; }
 .journal-text { padding: 80px; display: flex; flex-direction: column; justify-content: center; }
 .journal-date { font-size: 0.8rem; color: var(--secondary); margin-bottom: 15px; font-weight: 700; }
 
-/* Parallax & Advanced Reveals */
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.1);
-    transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+/* Sound Toggle */
+.sound-toggle {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: var(--white);
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    cursor: pointer;
+    z-index: 1000;
+    border: 1px solid var(--border);
+    transition: 0.3s;
+}
+.sound-toggle:hover { transform: scale(1.05); }
+.sound-toggle i { color: var(--secondary); }
+
+/* Concierge Pill Refinement */
+.concierge-pill {
+    position: fixed; bottom: 30px; right: 30px;
+    background: var(--white);
+    padding: 12px 28px;
+    border-radius: 50px;
+    display: flex; align-items: center; gap: 15px;
+    box-shadow: 0 15px 45px rgba(44, 62, 45, 0.15);
+    z-index: 1000;
+    text-decoration: none;
+    transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    border: 1px solid var(--border);
 }
 .smooth-scroll .hero-image img { transform: translateY(0) scale(1.1); }
 
