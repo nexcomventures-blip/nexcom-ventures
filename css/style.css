@@ -2683,3 +2683,172 @@ footer {
   }
 
 }
+
+/* =========================================================
+   NEXCOM VENTURES — shared calm light-and-blue theme
+   Applies to the main Nexcom storefront and service pages.
+   ========================================================= */
+:root{
+  --primary:#355f94;--primary-dark:#294d79;--secondary:#6685a9;--accent:#6685a9;
+  --bg:#f5f7fa;--bg1:#f5f7fa;--bg2:#ffffff;--bg3:#edf2f7;--card:#ffffff;--border:#e2e8f0;
+  --text:#172536;--gray:#64748b;--success:#527c67;--gradient:linear-gradient(135deg,#355f94,#6685a9);
+  --glow:none;--radius:18px;--radius-sm:12px;--shadow:0 10px 28px rgba(21,42,70,.07);
+}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{background:#f5f7fa!important;color:#172536!important;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif!important;font-size:15px;line-height:1.55}
+.container{max-width:1240px!important}
+.section-padding{padding:68px 24px!important}
+.section-tag{color:#6684a7!important;font-size:.7rem!important;letter-spacing:.13em!important;font-weight:700!important}
+.section-title{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif!important;color:#172536!important;font-size:clamp(1.8rem,3vw,2.45rem)!important;line-height:1.15!important;letter-spacing:-.8px!important;font-weight:700!important}
+.section-sub{color:#64748b!important;font-size:1rem!important;line-height:1.65!important}
+h1,h2,h3,h4{color:#172536}
+.gradient-text{background:none!important;color:#355f94!important;-webkit-text-fill-color:#355f94!important}
+
+/* Shared navigation */
+#announcement-bar{background:#f0f4f8!important;color:#526479!important;border-bottom:1px solid #e0e7ef!important}
+#announcement-bar .ann-badge{background:#e1eaf3!important;color:#496b95!important;border:0!important}
+#announcement-bar .ann-msg,#announcement-bar .ann-msg strong{color:#526479!important}
+#announcement-bar .ann-cta{color:#355f94!important;border-color:#c6d4e4!important}
+#navbar,#navbar.scrolled{top:0!important;background:rgba(255,255,255,.97)!important;border-top:0!important;border-bottom:1px solid #e2e8f0!important;box-shadow:0 4px 20px rgba(21,42,70,.05)!important}
+.nav-container{max-width:1240px!important;height:72px!important}
+.nav-logo img{height:47px!important}
+.nav-logo:not(:has(img)){color:#24384f!important;font-weight:750!important;letter-spacing:.03em}
+.nav-logo span{color:#557ba5!important}
+.nav-links{gap:clamp(.8rem,1.7vw,1.7rem)!important}
+.nav-links a{color:#43566c!important;font-size:.86rem!important;font-weight:550!important}
+.nav-links a:hover,.nav-links a.active{color:#355f94!important}
+.nav-actions{gap:.75rem!important}
+.cta-nav{background:#355f94!important;color:#fff!important;border:1px solid #355f94!important;border-radius:11px!important;padding:.62rem 1rem!important;box-shadow:none!important;font-size:.82rem!important;font-weight:650!important}
+.cta-nav:hover{background:#294d79!important;transform:translateY(-1px)!important}
+.hamburger span,.menu-btn .bar{background:#41566f!important}
+.mobile-menu{top:72px!important;background:#fff!important;border-bottom:1px solid #e2e8f0!important;box-shadow:0 12px 25px rgba(21,42,70,.08)!important}
+.mobile-menu a{color:#334155!important;border-bottom-color:#edf1f5!important}
+.mobile-menu a:hover{color:#355f94!important}
+.dropdown-content{border-color:#e2e8f0!important;box-shadow:0 12px 28px rgba(21,42,70,.1)!important}
+.dropdown-content a:hover{background:#edf2f8!important;color:#355f94!important}
+
+/* Shared hero treatment */
+#hero{background:#f5f7fa!important;min-height:auto!important;padding:112px 24px 32px!important}
+.hero-bg{display:none!important}
+.hero-content{max-width:1240px!important;background:#fff!important;border:1px solid #edf1f5!important;border-radius:24px!important;box-shadow:0 12px 32px rgba(21,42,70,.07)!important;padding:38px!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:34px!important}
+.hero-text>*{opacity:1!important;transform:none!important;animation:none!important}
+.hero-content h1{font-family:Inter,system-ui,sans-serif!important;color:#172536!important;font-size:clamp(2.6rem,4.5vw,4rem)!important;font-weight:700!important;line-height:1.07!important;letter-spacing:-1.8px!important}
+.hero-badge{background:#edf2f8!important;border:1px solid #e1e8f0!important;color:#567aa5!important;border-radius:99px!important;padding:7px 13px!important;font-size:.72rem!important;letter-spacing:.07em!important;backdrop-filter:none!important}
+.hero-sub{color:#64748b!important;font-size:1rem!important;line-height:1.6!important}
+.btn-primary,.btn-outline{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:.55rem!important;border-radius:11px!important;font-weight:650!important;box-shadow:none!important;transition:background .18s ease,border-color .18s ease,transform .18s ease!important}
+.btn-primary{background:#355f94!important;color:#fff!important;border:1px solid #355f94!important;padding:.84rem 1.25rem!important}
+.btn-primary:hover{background:#294d79!important;border-color:#294d79!important;transform:translateY(-1px)!important}
+.btn-secondary{background:#fff!important;color:#2d4158!important;border:1px solid #dce4ed!important;border-radius:11px!important;padding:.78rem 1.15rem!important;box-shadow:none!important}
+.btn-secondary:hover{background:#f7f9fc!important;color:#355f94!important;border-color:#bdccdc!important}
+.btn-outline{background:#fff!important;color:#355f94!important;border:1px solid #c7d5e4!important;padding:.74rem 1.1rem!important}
+.btn-outline:hover{background:#edf2f8!important;color:#294d79!important;border-color:#aebfd2!important}
+.hero-stats{gap:16px!important}
+.stat span{color:#31465f!important;background:none!important;-webkit-text-fill-color:currentColor!important;text-shadow:none!important}
+.stat p{color:#718096!important}
+.stat-div{background:#dce4ed!important}
+.hero-visual{order:0!important}
+.laptop-card{background:#fff!important;border:1px solid #e2e8f0!important;border-radius:20px!important;box-shadow:0 12px 28px rgba(21,42,70,.1)!important;backdrop-filter:none!important;animation:none!important}
+.laptop-card::after{display:none!important}
+.laptop-img-wrap img{background:#edf2f7!important}
+.price-tag-badge{background:#fff!important;border-top:1px solid #e7ecf2!important}
+.price-tag-badge::before{display:none!important}
+.price-amount{color:#355f94!important;text-shadow:none!important}
+.floating,.floating-badge{animation:none!important}
+.floating-badge{background:#fff!important;border:1px solid #e3e9f0!important;box-shadow:0 8px 22px rgba(21,42,70,.09)!important;backdrop-filter:none!important}
+.badge-icon{background:#edf2f8!important}
+.scroll-indicator{display:none!important}
+
+/* Calm collection, product, service and trust cards */
+.products-grid{max-width:1240px!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:16px!important}
+.product-card,.repair-card,.acc-item-card,.review-card,.contact-card,.commitment-card,.repair-cta,.no-results,.price-card,.info-card,.card{background:#fff!important;color:#26384d!important;border:1px solid #e2e8f0!important;border-radius:17px!important;box-shadow:0 5px 18px rgba(21,42,70,.04)!important}
+.product-card:hover,.repair-card:hover,.acc-item-card:hover{transform:translateY(-2px)!important;border-color:#c8d5e4!important;box-shadow:0 10px 24px rgba(21,42,70,.08)!important}
+.product-img{background:#f2f5f8!important}
+.product-info h3,.repair-card h3,.acc-item-card h3,.contact-card h3,.commitment-card h4{font-family:Inter,system-ui,sans-serif!important;color:#243449!important;font-weight:650!important}
+.product-info p,.repair-card p,.acc-item-card p,.contact-card p,.commitment-card p{color:#64748b!important}
+.product-brand,.product-info .product-brand,.price,.price-tag,.acc-item-card .price{color:#355f94!important}
+.product-footer{border-top-color:#edf1f5!important}
+.filter-btn{background:#fff!important;color:#52647a!important;border-color:#dce4ed!important}
+.filter-btn:hover,.filter-btn.active{background:#355f94!important;border-color:#355f94!important;color:#fff!important}
+.add-cart{background:#355f94!important;color:#fff!important;border-radius:9px!important;box-shadow:none!important}
+.product-badge.refurb,.product-badge.exuk{background:#edf2f8!important;color:#536a85!important;border-color:#dfe7f0!important}
+.product-badge.hot{background:#eef1f5!important;color:#58697c!important;border-color:#e1e6ec!important}
+.product-badge.new{background:#e5efe9!important;color:#4d7360!important;border-color:#d8e5dc!important}
+.product-badge.elite{background:#f2efe3!important;color:#74683e!important;border-color:#e8e1ca!important;box-shadow:none!important}
+.search-input,.form-control,select,textarea{background:#fff!important;color:#26384d!important;border:1px solid #dce4ed!important;border-radius:10px!important}
+.search-input:focus,.form-control:focus,select:focus,textarea:focus{border-color:#7894b4!important;box-shadow:0 0 0 3px rgba(83,119,160,.12)!important;outline:none!important}
+.workspace-grid{gap:12px!important}
+.workspace-card-inner{background:#fff!important;border:1px solid #e2e8f0!important;border-radius:15px!important;box-shadow:0 4px 14px rgba(21,42,70,.04)!important;color:#26384d!important;padding:1rem!important}
+.workspace-card:hover .workspace-card-inner{background:#f3f7fb!important;border-color:#bfd0e1!important;color:#26384d!important;transform:translateY(-2px)!important}
+.workspace-card:hover .workspace-price{color:#64748b!important}
+
+/* Buy-back, repairs, accessories, guides and local landing pages */
+#sell{background:#eaf0f6!important;border-color:transparent!important}
+.sell-container{max-width:1240px!important}
+.sell-header h2{font-family:Inter,system-ui,sans-serif!important;color:#172536!important;font-weight:700!important;letter-spacing:-.8px!important}
+.sell-desc{color:#64748b!important}
+.sell-tags span{background:#f8fafc!important;border:1px solid #dce4ed!important;color:#52647a!important}
+.sell-steps .step,.step-card{background:#fff!important;border:1px solid #dfe6ee!important;border-radius:15px!important;box-shadow:none!important}
+.sell-steps::before{display:none!important}
+.step-num{background:#edf2f8!important;color:#567aa5!important}
+.step-text h4,.step h3{color:#26384d!important}
+.step-text p,.step p{color:#718096!important}
+.btn-whatsapp{background:#527c67!important;color:#fff!important;box-shadow:none!important}
+#repairs-home{background:#f5f7fa!important}
+.repairs-container{max-width:1240px!important;gap:2.5rem!important}
+.repair-item{background:#fff!important;border:1px solid #e2e8f0!important;border-radius:16px!important;box-shadow:0 5px 18px rgba(21,42,70,.04)!important}
+.repair-item:hover{border-color:#c8d5e4!important;box-shadow:0 10px 24px rgba(21,42,70,.08)!important}
+.repair-showcase{background:#fff!important;border:1px solid #e2e8f0!important;box-shadow:0 8px 22px rgba(21,42,70,.06)!important}
+.repairs-hero,.acc-hero{padding:106px 24px 48px!important;background:#f5f7fa!important;text-align:left!important;color:#172536!important}
+.repairs-hero h1,.acc-hero h1{font-family:Inter,system-ui,sans-serif!important;color:#172536!important;font-size:clamp(2.1rem,4vw,3rem)!important;font-weight:700!important;letter-spacing:-1px!important;line-height:1.12!important}
+.repairs-hero .hero-sub,.acc-hero .hero-sub{color:#64748b!important;opacity:1!important;margin-left:0!important;margin-right:0!important}
+.repair-detail-grid,.acc-detail-grid{padding:12px 0 58px!important;gap:16px!important}
+.repair-card,.acc-item-card{padding:24px!important}
+.repair-card[style],.acc-item-card[style]{background:#fff!important;border-color:#e2e8f0!important}
+.repair-card .icon,.acc-item-card .icon-box{color:#567aa5!important}
+.promo-banner{background:#eaf0f6!important;color:#243449!important;border:1px solid #dfe7f0!important;box-shadow:none!important}
+.promo-text h2{color:#243449!important}.promo-text p{color:#64748b!important;opacity:1!important}
+.back-home{color:#60748c!important}.back-home:hover{color:#355f94!important}
+.guide-container,.content-section{color:#334155!important}
+.guide-container h1,.content-section h1,.content-section h2,.content-section h3{font-family:Inter,system-ui,sans-serif!important;color:#172536!important;font-weight:700!important}
+.guide-container h2{color:#355f94!important}
+.checklist,.content-section .card{background:#fff!important;border:1px solid #e2e8f0!important;border-radius:16px!important}
+
+/* Dedicated buy-back guide page */
+.page-hero{background:#eaf0f6!important;color:#172536!important;padding:72px 20px 50px!important;text-align:center!important}
+.page-hero .badge-pill{background:#dfe9f3!important;color:#4d6f96!important}
+.page-hero h1{font-family:Inter,system-ui,sans-serif!important;color:#172536!important;font-weight:700!important;letter-spacing:-.8px!important}
+.page-hero p{color:#5f7085!important;opacity:1!important}
+.trust-bar span{color:#52647a!important;opacity:1!important}
+.page-hero .btn-outline{background:#fff!important;color:#355f94!important;border:1px solid #c7d5e4!important}
+.content-section h2,.content-section h3{color:#243449!important}
+.content-section p{color:#52647a!important}
+.price-section{background:#f5f7fa!important;color:#172536!important;border-top:1px solid #e2e8f0!important;border-bottom:1px solid #e2e8f0!important}
+.price-wrap h2{color:#172536!important}.price-wrap .sub{color:#64748b!important;opacity:1!important}
+.price-table{background:#fff!important;border:1px solid #e2e8f0!important;border-radius:14px!important;overflow:hidden!important}
+.price-table th{background:#eaf0f6!important;color:#496b95!important;border-bottom:1px solid #dce4ed!important}
+.price-table td{color:#334155!important;border-bottom:1px solid #edf1f5!important}
+.price-table tr:hover td{background:#f7f9fc!important}
+.price-note{color:#718096!important;opacity:1!important}
+.steps-section,.areas-section{background:#f5f7fa!important}
+.steps-wrap h2,.reviews-wrap h2,.areas-wrap h2,.faq-wrap h2{color:#172536!important}
+.steps-wrap .step{background:#fff!important;border:1px solid #e2e8f0!important;border-radius:15px!important}
+.steps-wrap .step-num{background:#edf2f8!important;color:#567aa5!important}
+.sticky-cta{background:rgba(255,255,255,.97)!important;border-top:1px solid #e2e8f0!important;box-shadow:0 -5px 18px rgba(21,42,70,.08)!important;backdrop-filter:blur(12px)!important}
+.sticky-call{background:#355f94!important;color:#fff!important}
+nav.top-nav{background:#fff!important;border-bottom:1px solid #e2e8f0!important;box-shadow:0 4px 18px rgba(21,42,70,.05)!important}
+nav.top-nav a.logo{color:#26384d!important}
+nav.top-nav .nav-links-top li a{color:#52647a!important}
+nav.top-nav .nav-links-top li a:hover{color:#355f94!important}
+footer.page-footer{background:#fff!important;color:#64748b!important;border-top:1px solid #e2e8f0!important}
+footer.page-footer a{color:#355f94!important}
+
+/* Footer, FAQ and responsive polish */
+footer{background:#fff!important;color:#64748b!important;border-top:1px solid #e2e8f0!important}
+footer a{color:#355f94!important}
+details{background:#fff!important;border:1px solid #e2e8f0!important;border-radius:12px!important}
+summary{color:#26384d!important}
+details p{color:#64748b!important}
+@media(max-width:1050px){.products-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}.nav-links{gap:.8rem!important}.nav-links a{font-size:.78rem!important}.hero-content{gap:24px!important;padding:30px!important}}
+@media(max-width:992px){.hero-content{grid-template-columns:1fr!important}.hero-text{display:block!important;text-align:left!important;align-items:flex-start!important}.hero-visual{order:0!important}.repairs-container{grid-template-columns:1fr!important;gap:24px!important}}
+@media(max-width:768px){.products-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.section-padding{padding:48px 18px!important}.nav-links{display:none!important}.hamburger,.menu-btn{display:flex!important}.nav-actions{margin-left:auto!important}.repair-detail-grid,.acc-detail-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.repairs-hero,.acc-hero{padding:94px 18px 30px!important}.sell-steps{grid-template-columns:1fr!important}.price-table th,.price-table td{padding:11px 10px!important}}
+@media(max-width:560px){.nav-container{height:64px!important}.nav-logo img{height:42px!important}.mobile-menu{top:64px!important}.hero-content{padding:18px!important;border-radius:18px!important}.hero-content h1{font-size:2.45rem!important;letter-spacing:-1.2px!important}.hero-btns{gap:8px!important}.hero-stats{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}.stat-div{display:none!important}.products-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}.product-info{padding:.8rem!important;min-height:150px!important}.product-info h3{font-size:.78rem!important}.product-info p{font-size:.68rem!important}.product-footer{gap:4px!important}.price{font-size:.9rem!important}.add-cart{font-size:.68rem!important;padding:.4rem .55rem!important}.repair-detail-grid,.acc-detail-grid{grid-template-columns:1fr!important;gap:12px!important}.repair-card,.acc-item-card{padding:20px!important}.promo-banner{padding:22px!important}.page-hero{padding:54px 16px 35px!important}.page-hero p{font-size:.96rem!important}.content-section{margin:38px auto!important;padding:0 16px!important}.price-section,.steps-section,.reviews-section,.faq-section{padding:40px 14px!important}.sticky-cta{gap:8px!important;padding:9px 10px!important}.sticky-cta a{padding:10px 14px!important;font-size:.8rem!important}.guide-container{margin:62px auto!important;padding:18px!important}.guide-container h1{font-size:2.2rem!important}.policy-section{padding:1.4rem!important}}
