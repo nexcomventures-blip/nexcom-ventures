@@ -1557,7 +1557,7 @@
         }
 
         function quickLoginNexcom() {
-            currentUser = { name: 'Nexcom Ventures', phone: '254722816001', pin: '123456' };
+            currentUser = { name: 'Nexcom Ventures', phone: '254721585784', pin: '123456' };
             localStorage.setItem('sokoUser', JSON.stringify(currentUser));
             updateAuthUI();
             closeAuth();
@@ -1749,7 +1749,7 @@
                     seller: currentUser ? currentUser.name : 'Guest Seller',
                     email: currentUser ? currentUser.email : '',
                     loc: 'Nairobi',
-                    phone: currentUser ? (currentUser.phone || '254722816001') : '254722816001',
+                    phone: currentUser ? (currentUser.phone || '254721585784') : '254721585784',
                     isBoosted: false
                 };
                 ADS.unshift(newAd);
@@ -1775,7 +1775,7 @@
                 const newAd = ADS[0];
                 const msg = encodeURIComponent(`Hi Admin! I just posted a new ad on Soko Mpya:\nName: ${newAd.name}\nPrice: ${newAd.price}\nCategory: ${newAd.cat}\nSeller: ${newAd.seller}\n\nPlease verify and make it public!`);
                 if(confirm("Ad saved locally! To make it visible to everyone, you need to send a quick verification message to our Admin. Proceed to WhatsApp?")) {
-                    window.location.href = `https://wa.me/254722816001?text=${msg}`;
+                    window.location.href = `https://wa.me/254721585784?text=${msg}`;
                 }
             }
         }
@@ -1796,7 +1796,7 @@
                 newAd.boostLevel = selectedBoost;
                 filter('all');
                 const msg = encodeURIComponent(`Hi Admin! I just PAID for a ${selectedBoost.toUpperCase()} BOOST on Soko Mpya:\nAd: ${newAd.name}\nPrice: ${newAd.price}\n\nPlease verify and make it live!`);
-                window.location.href = `https://wa.me/254722816001?text=${msg}`;
+                window.location.href = `https://wa.me/254721585784?text=${msg}`;
             }
         }
 
@@ -1845,10 +1845,10 @@
         }
 
         function showSafety() { alert("Protected by Soko Mpya Escrow. Inspect before paying."); }
-        function call() { window.location.href = `tel:${window.aPhone || '254722816001'}`; }
+        function call() { window.location.href = `tel:${window.aPhone || '254721585784'}`; }
         function wpp() { 
             const msg = encodeURIComponent(`Hi! I'm interested in the *${window.aName}* priced at *${window.aPrice}* I saw on Soko. Is it available?`);
-            window.location.href = `https://wa.me/${window.aPhone || '254722816001'}?text=${msg}`; 
+            window.location.href = `https://wa.me/${window.aPhone || '254721585784'}?text=${msg}`; 
         }
 
         init();
